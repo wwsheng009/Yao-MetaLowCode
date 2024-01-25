@@ -1,0 +1,16 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "group": "excelData",
+  "paths": [
+    {
+      "path": "exportExcel",
+      "method": "get",
+      "process": "scripts.excel.exportExcel",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "refFieldQuery",
+      "method": "get",
+      "process": "scripts.curd.refFieldQuery",
+      "in": [
+        "$query.entity",
+        "$query.refField",
+        "$query.pageNo",
+        "$query.pageSize",
+        "$query.queryText",
+        "$query.extraFilter"
+      ],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "formUpdateQuery",
+      "method": "get",
+      "process": "scripts.curd.formUpdateQuery",
+      "in": ["$query.entity", "$query.id"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "saveRecord",
+      "method": "post",
+      "process": "scripts.curd.saveRecord",
+      "in": ["$query.entity", "$query.id", ":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "formCreateQuery",
+      "method": "get",
+      "process": "scripts.curd.formCreateQuery",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "deleteRecord",
+      "method": "post",
+      "process": "scripts.curd.deleteRecord",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "listQuery",
+      "method": "post",
+      "process": "scripts.curd.listQuery",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "checkStatus",
+      "method": "get",
+      "process": "scripts.curd.checkStatus",
+      "in": [""],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "initDataList",
+      "method": "get",
+      "process": "scripts.curd.initDataList",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "queryById",
+      "method": "get",
+      "process": "scripts.curd.queryById",
+      "in": ["$qeury.entityId", "$qeury.fieldNames"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "formCreateQuery",
+      "method": "get",
+      "process": "scripts.curd.formCreateQuery",
+      "in": ["$qeury.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "testEquation",
+      "method": "get",
+      "process": "scripts.curd.testEquation",
+      "in": ["$qeury"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getEntityCodeList",
+      "method": "get",
+      "process": "scripts.curd.getEntityCodeList",
+      "in": ["$query.entityName"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "queryEntityFields",
+      "method": "get",
+      "process": "scripts.curd.queryEntityFields",
+      "in": [
+        "$query.entityCode",
+        "$query.queryReference",
+        "$query.queryReserved",
+        "$query.firstReference"
+      ],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "assignRecord",
+      "method": "post",
+      "process": "scripts.curd.assignRecord",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "shareRecord",
+      "method": "post",
+      "process": "scripts.curd.shareRecord",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "cancelShareRecord",
+      "method": "post",
+      "process": "scripts.curd.cancelShareRecord",
+      "in": [":payload", "$query.userType"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}

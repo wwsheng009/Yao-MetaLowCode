@@ -1,0 +1,426 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "group": "systemManager",
+  "paths": [
+    {
+      "path": "getEntitySet",
+      "method": "get",
+      "process": "scripts.systemmanager.getEntitySet",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "filterEntitySet",
+      "method": "get",
+      "process": "scripts.systemmanager.filterEntitySet",
+      "in": ["$query.keyword"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getFieldSet",
+      "method": "get",
+      "process": "scripts.systemmanager.getFieldSet",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getFieldListOfEntity",
+      "method": "get",
+      "process": "scripts.systemmanager.getFieldListOfEntity",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getMDFieldList",
+      "method": "get",
+      "process": "scripts.systemmanager.getMDFieldList",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getEntityProps",
+      "method": "get",
+      "process": "scripts.systemmanager.getEntityProps",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "hasDetailEntity",
+      "method": "get",
+      "process": "scripts.systemmanager.hasDetailEntity",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getAllTagsOfEntity",
+      "method": "get",
+      "process": "scripts.systemmanager.getAllTagsOfEntity",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "createEntity",
+      "method": "post",
+      "process": "scripts.systemmanager.createEntity",
+      "in": [":payload", "$query.mainEntity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "copyEntity",
+      "method": "post",
+      "process": "scripts.systemmanager.copyEntity",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateEntityLabel",
+      "method": "post",
+      "process": "scripts.systemmanager.updateEntityLabel",
+      "in": ["$query.entity", "$query.entityLabel"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateEntityTags",
+      "method": "post",
+      "process": "scripts.systemmanager.updateEntityTags",
+      "in": ["$query.entity", "$query.tags"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "entityCanBeDeleted",
+      "method": "get",
+      "process": "scripts.systemmanager.entityCanBeDeleted",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "deleteEntity",
+      "method": "post",
+      "process": "scripts.systemmanager.deleteEntity",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getTextFieldListOfEntity",
+      "method": "post",
+      "process": "scripts.systemmanager.getTextFieldListOfEntity",
+      "in": ["$query.entity", "$query.nameField"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateEntityNameField",
+      "method": "post",
+      "process": "scripts.systemmanager.updateEntityNameField",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addField",
+      "method": "post",
+      "process": "scripts.systemmanager.addField",
+      "in": [":payload", "$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateField",
+      "method": "post",
+      "process": "scripts.systemmanager.updateField",
+      "in": [":payload", "$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getFieldListOfFilter",
+      "method": "get",
+      "process": "scripts.systemmanager.getFieldListOfFilter",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "fieldCanBeEdited",
+      "method": "get",
+      "process": "scripts.systemmanager.fieldCanBeEdited",
+      "in": ["$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "fieldCanBeDeleted",
+      "method": "get",
+      "process": "scripts.systemmanager.fieldCanBeDeleted",
+      "in": ["$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "deleteField",
+      "method": "post",
+      "process": "scripts.systemmanager.deleteField",
+      "in": ["$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addOptionField",
+      "method": "post",
+      "process": "scripts.systemmanager.addOptionField",
+      "in": [":payload", "$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateOptionField",
+      "method": "post",
+      "process": "scripts.systemmanager.updateOptionField",
+      "in": [":payload", "$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addTagField",
+      "method": "post",
+      "process": "scripts.systemmanager.addTagField",
+      "in": [":payload", "$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateTagField",
+      "method": "post",
+      "process": "scripts.systemmanager.updateTagField",
+      "in": [":payload", "$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addRefField",
+      "method": "post",
+      "process": "scripts.systemmanager.addRefField",
+      "in": [":payload", "$query.entity", "$query.refEntity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addAnyRefField",
+      "method": "post",
+      "process": "scripts.systemmanager.addAnyRefField",
+      "in": [":payload", "$query.entity", "$query.referTo"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateRefField",
+      "method": "post",
+      "process": "scripts.systemmanager.updateRefField",
+      "in": [":payload", "$query.entity", "$query.refEntity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateAnyRefField",
+      "method": "post",
+      "process": "scripts.systemmanager.updateAnyRefField",
+      "in": [":payload", "$query.entity", "$query.referTo"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getField",
+      "method": "post",
+      "process": "scripts.systemmanager.getField",
+      "in": ["$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getRefFieldExtras",
+      "method": "post",
+      "process": "scripts.systemmanager.getRefFieldExtras",
+      "in": ["$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getOptionFields",
+      "method": "get",
+      "process": "scripts.systemmanager.getOptionFields",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getOptionItems",
+      "method": "get",
+      "process": "scripts.systemmanager.getOptionItems",
+      "in": ["$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "saveOptionItems",
+      "method": "post",
+      "process": "scripts.systemmanager.saveOptionItems",
+      "in": [":payload", "$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getTagFields",
+      "method": "get",
+      "process": "scripts.systemmanager.getTagFields",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getTagItems",
+      "method": "get",
+      "process": "scripts.systemmanager.getTagItems",
+      "in": ["$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "saveTagItems",
+      "method": "post",
+      "process": "scripts.systemmanager.saveTagItems",
+      "in": [":payload", "$query.entity", "$query.field"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "backupDB",
+      "method": "post",
+      "process": "scripts.systemmanager.backupDB",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getNavMenus",
+      "method": "post",
+      "process": "scripts.systemmanager.getNavMenus",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "queryEntityList",
+      "method": "get",
+      "process": "scripts.systemmanager.queryEntityList",
+      "in": [
+        "$query.entityCode",
+        "$query.queryMain",
+        "$query.queryReference",
+        "$query.queryReferenced",
+        "$query.querySystem",
+        "$query.queryBuiltIn"
+      ],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}

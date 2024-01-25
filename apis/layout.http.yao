@@ -1,0 +1,71 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "getNavigationList",
+      "method": "get",
+      "process": "scripts.layout.getNavigationList",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "saveUserLayoutCache",
+      "method": "post",
+      "process": "scripts.layout.saveUserLayoutCache",
+      "in": [":payload", "$query.cacheKey", "$query.cacheValue"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "getLayoutList",
+      "method": "get",
+      "process": "scripts.layout.getLayoutList",
+      "in": ["$query.entityName"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "saveConfig",
+      "method": "post",
+      "process": "scripts.layout.saveConfig",
+      "in": ["$query.recordId", "$query.applyType", ":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "getNavigationList",
+      "method": "get",
+      "process": "scripts.layout.getNavigationList",
+      "in": [],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "saveUserLayoutCache",
+      "method": "post",
+      "process": "scripts.layout.saveUserLayoutCache",
+      "in": ["$query.cacheKey", "$query.cacheKey"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "deleteConfig",
+      "method": "post",
+      "process": "scripts.layout.deleteConfig",
+      "in": ["$query.recordId"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "getLayoutList",
+      "method": "get",
+      "process": "scripts.layout.getLayoutList",
+      "in": ["$query.entityName"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "exportExcel",
+      "method": "post",
+      "process": "scripts.layout.exportExcel",
+      "in": [":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

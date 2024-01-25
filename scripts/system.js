@@ -1,0 +1,11 @@
+function menuList() {}
+function dicTree() {}
+function dicList(query) {}
+function dicGet(query) {}
+function roleList2(query) {}
+function deptList(query) {}
+function userList(query) {}
+function appList(query) {}
+function tableList(query) {}
+function tableInfo(query) {}
+function tasksList(query) {}

@@ -1,0 +1,58 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "getBlankRoleData",
+      "method": "get",
+      "process": "scripts.role.getBlankRoleData",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getRoleData",
+      "method": "get",
+      "process": "scripts.role.getRoleData",
+      "in": ["$query.roleId"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "saveRole",
+      "method": "post",
+      "process": "scripts.role.saveRole",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "listRole",
+      "method": "get",
+      "process": "scripts.role.listRole",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "deleteRole",
+      "method": "post",
+      "process": "scripts.role.deleteRole",
+      "in": ["$query.roleId"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}

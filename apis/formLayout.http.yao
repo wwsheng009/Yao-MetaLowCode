@@ -1,0 +1,30 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "group": "formLayout",
+  "paths": [
+    {
+      "path": "get",
+      "method": "get",
+      "process": "scripts.formLayout.getFormLayout",
+      "in": ["$query.entity"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "previewLayout",
+      "method": "get",
+      "process": "scripts.formLayout.previewLayout",
+      "in": ["$query.entity"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "getOptionFields",
+      "method": "get",
+      "process": "scripts.formLayout.getOptionFields",
+      "in": ["$query.entity"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

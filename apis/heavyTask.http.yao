@@ -1,0 +1,17 @@
+
+{
+    "name": "自定义接口",
+    "version": "1.0.0",
+    "description": "自定义API接口",
+    "guard": "-",
+    "paths": [
+      {
+        "path": "taskState",
+        "method": "get",
+        "process": "scripts.task.taskState",
+        "in": [""],
+        "out": { "status": 200, "type": "application/json" }
+      }
+    ]
+  }
+  

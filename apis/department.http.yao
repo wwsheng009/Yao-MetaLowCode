@@ -1,0 +1,36 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "treeData",
+      "method": "get",
+      "process": "scripts.department.treeData",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "saveDepartment",
+      "method": "post",
+      "process": "scripts.department.saveDepartment",
+      "in": [":payload", "$query.entity", "$query.id"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "deleteDepartment",
+      "method": "post",
+      "process": "scripts.department.deleteDepartment",
+      "in": ["$query.departmentId"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "listDepartment",
+      "method": "get",
+      "process": "scripts.department.listDepartment",
+      "in": ["$query.entity"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

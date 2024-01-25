@@ -1,0 +1,35 @@
+
+ {
+    "name": "自定义接口",
+    "version": "1.0.0",
+    "description": "自定义API接口",
+    "guard": "-",
+    "paths": [
+      {
+        "path": "info",
+        "method": "get",
+        "process": "scripts.setting.info",
+        "in": [""],
+        "out": { "status": 200, "type": "application/json" }
+      },{
+        "path": "queryPublicSetting",
+        "method": "get",
+        "process": "scripts.setting.queryPublicSetting",
+        "in": [""],
+        "out": { "status": 200, "type": "application/json" }
+      },{
+        "path": "updateSysSetting",
+        "method": "post",
+        "process": "scripts.setting.updateSysSetting",
+        "in": [":payload"],
+        "out": { "status": 200, "type": "application/json" }
+      },{
+        "path": "registerLicense",
+        "method": "post",
+        "process": "scripts.setting.registerLicense",
+        "in": [":payload"],
+        "out": { "status": 200, "type": "application/json" }
+      }
+    ]
+  }
+  

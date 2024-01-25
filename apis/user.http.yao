@@ -1,0 +1,108 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "login",
+      "method": "post",
+      "process": "scripts.user.login",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "logout",
+      "method": "post",
+      "process": "scripts.user.logout",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "saveUser",
+      "method": "post",
+      "process": "scripts.user.logout",
+      "in": [":payload", "$query.entity", "$query.id"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "listUser",
+      "method": "get",
+      "process": "scripts.user.listUser",
+      "in": ["$query.entity"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateLoginUser",
+      "method": "post",
+      "process": "scripts.user.updateLoginUser",
+      "in": [":payload", "$query.id"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addUserRole",
+      "method": "post",
+      "process": "scripts.user.addUserRole",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getUserRole",
+      "method": "get",
+      "process": "scripts.user.getUserRole",
+      "in": ["$qeury.userId"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "checkRight",
+      "method": "get",
+      "process": "scripts.user.checkRight",
+      "in": ["$qeury.id", "$qeury.rightType", "$qeury.entityName"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getRightMap",
+      "method": "get",
+      "process": "scripts.user.getRightMap",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "getLoginUser",
+      "method": "get",
+      "process": "scripts.user.getLoginUser",
+      "in": [],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    }
+  ]
+}

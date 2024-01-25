@@ -1,0 +1,85 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/menu/list",
+      "method": "get",
+      "process": "scripts.system.menuList",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/dic/tree",
+      "method": "get",
+      "process": "scripts.system.dicTree",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/dic/list",
+      "method": "get",
+      "process": "scripts.system.dicList",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/dic/get",
+      "method": "get",
+      "process": "scripts.system.dicGet",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/role/list2",
+      "method": "get",
+      "process": "scripts.system.roleList2",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/dept/list",
+      "method": "get",
+      "process": "scripts.system.deptList",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/user/list",
+      "method": "get",
+      "process": "scripts.system.userList",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/app/list",
+      "method": "get",
+      "process": "scripts.system.appList",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/table/list",
+      "method": "get",
+      "process": "scripts.system.tableList",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/table/info",
+      "method": "get",
+      "process": "scripts.system.tableInfo",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/tasks/list",
+      "method": "get",
+      "process": "scripts.system.tasksList",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}
