@@ -5,10 +5,60 @@
   "guard": "-",
   "paths": [
     {
+      "path": "getTeamMembers",
+      "method": "get",
+      "process": "scripts.team.getTeamMembers",
+      "in": ["$query.id"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addTeamMembers",
+      "method": "post",
+      "process": "scripts.team.addTeamMembers",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "delTeamMembers",
+      "method": "post",
+      "process": "scripts.team.delTeamMembers",
+      "in": ["$query.id", "$query.userId"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "delTeam",
+      "method": "get",
+      "process": "scripts.team.delTeam",
+      "in": ["$query.teamId"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
       "path": "listTeam",
       "method": "get",
       "process": "scripts.team.listTeam",
       "in": [":query"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "saveTeam",
+      "method": "post",
+      "process": "scripts.team.saveTeam",
+      "in": ["$query.entity", "$query.entity", ":payload"],
       "out": {
         "status": 200,
         "type": "application/json"

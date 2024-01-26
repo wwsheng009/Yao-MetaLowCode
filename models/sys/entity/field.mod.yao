@@ -1,0 +1,163 @@
+{
+  "columns": [
+    // {
+    //   "comment": "id",
+    //   "label": "id",
+    //   "name": "id",
+    //   "type": "id"
+    // },
+    {
+      "comment": "fieldId",
+      "label": "fieldId",
+      "name": "fieldId",
+      "primary": true,
+      "type": "id"
+    },
+    {
+      "comment": "实体编码",
+      "label": "实体编码",
+      "name": "entityCode",
+      "type": "integer"
+    },
+    {
+      "comment": "字段名称",
+      "label": "字段名称",
+      "name": "name",
+      "type": "string"
+    },
+    {
+      "comment": "显示名称",
+      "label": "显示名称",
+      "name": "label",
+      "type": "string"
+    },
+    {
+      "comment": "数据库字段名",
+      "label": "数据库字段名",
+      "name": "physicalName",
+      "type": "string"
+    },
+    {
+      "comment": "owner",
+      "label": "owner",
+      "name": "owner",
+      "type": "json"
+    },
+    {
+      "comment": "字段类型",
+      "label": "字段类型",
+      "name": "type",
+      "type": "string"
+    },
+    {
+      "comment": "description",
+      "label": "description",
+      "name": "description",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "comment": "显示顺序",
+      "label": "显示顺序",
+      "name": "displayOrder",
+      "type": "integer",
+      "default": 0
+    },
+    {
+      "comment": "是否允许空值",
+      "label": "允许空值",
+      "name": "nullable",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "新建记录时允许修改字段",
+      "label": "新建记录时允许修改字段",
+      "name": "creatable",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "更新记录时允许修改字段",
+      "label": "更新记录时允许修改字段",
+      "name": "updatable",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "主键字段",
+      "label": "主键字段",
+      "name": "idFieldFlag",
+      "type": "boolean",
+      "default": false //主键字段才会设置成true
+    },
+    {
+      "comment": "是否名称字段",
+      "label": "是否名称字段",
+      "name": "nameFieldFlag",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "主从字段",
+      "label": "主从字段",
+      "name": "mainDetailFieldFlag",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "是否在列表中默认显示",
+      "label": "在列表中默认显示",
+      "name": "defaultMemberOfListFlag",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "保留字段",
+      "label": "保留字段",
+      "name": "reserved",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "引用实体",
+      "label": "引用实体",
+      "name": "referTo",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "comment": "字段视图设置",
+      "label": "字段视图设置",
+      "name": "fieldViewModel",
+      "type": "json",
+      "nullable": true
+    },
+    {
+      "comment": "referenceSetting",
+      "label": "referenceSetting",
+      "name": "referenceSetting",
+      "type": "json",
+      "nullable": true
+    },
+    {
+      "comment": "校验器",
+      "label": "校验器",
+      "name": "validators",
+      "type": "json",
+      "nullable": true
+    },
+    {
+      "comment": "选项列表",
+      "label": "选项列表",
+      "name": "optionList",
+      "type": "json",
+      "nullable": true
+    }
+  ],
+  "name": "sys.entity.field",
+  "table": {
+    "name": "sys_entity_field"
+  }
+}
+// yao migrate -n sys.entity.field --reset

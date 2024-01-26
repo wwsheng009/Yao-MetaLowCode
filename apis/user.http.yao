@@ -103,6 +103,16 @@
         "status": 200,
         "type": "application/json"
       }
+    },
+    {
+      "path": "avatar",
+      "method": "get",
+      "process": "scripts.user.avatar",
+      "in": ["$qeury.userId"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
     }
   ]
 }

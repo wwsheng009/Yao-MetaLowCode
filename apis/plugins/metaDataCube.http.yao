@@ -1,0 +1,22 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/chart/queryChartData",
+      "method": "post",
+      "process": "scripts.plugins.queryChartData",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/chart/updateDefault",
+      "method": "post",
+      "process": "scripts.plugins.updateDefault",
+      "in": ["$query.id", "$query.defaultChart"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

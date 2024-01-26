@@ -12,31 +12,10 @@
       "out": { "status": 200, "type": "application/json" }
     },
     {
-      "path": "saveUserLayoutCache",
-      "method": "post",
-      "process": "scripts.layout.saveUserLayoutCache",
-      "in": [":payload", "$query.cacheKey", "$query.cacheValue"],
-      "out": { "status": 200, "type": "application/json" }
-    },
-    {
-      "path": "getLayoutList",
-      "method": "get",
-      "process": "scripts.layout.getLayoutList",
-      "in": ["$query.entityName"],
-      "out": { "status": 200, "type": "application/json" }
-    },
-    {
       "path": "saveConfig",
       "method": "post",
       "process": "scripts.layout.saveConfig",
       "in": ["$query.recordId", "$query.applyType", ":payload"],
-      "out": { "status": 200, "type": "application/json" }
-    },
-    {
-      "path": "getNavigationList",
-      "method": "get",
-      "process": "scripts.layout.getNavigationList",
-      "in": [],
       "out": { "status": 200, "type": "application/json" }
     },
     {

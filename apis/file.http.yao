@@ -3,41 +3,40 @@
   "version": "1.0.0",
   "description": "自定义API接口",
   "guard": "-",
-  "group": "excelData",
   "paths": [
     {
-      "path": "exportExcel",
+      "path": "upload",
+      "method": "post",
+      "process": "scripts.file.post",
+      "in": [":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "uploadFile",
+      "method": "post",
+      "process": "scripts.file.uploadFile",
+      "in": [":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "fileImport",
+      "method": "post",
+      "process": "scripts.file.fileImport",
+      "in": [":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "menu",
       "method": "get",
-      "process": "scripts.excel.exportExcel",
+      "process": "scripts.file.menu",
       "in": [""],
       "out": { "status": 200, "type": "application/json" }
     },
     {
-      "path": "upload",
-      "method": "post",
-      "process": "scripts.excel.upload",
-      "in": [":payload", ":query"],
-      "out": { "status": 200, "type": "application/json" }
-    },
-    {
-      "path": "check-file",
-      "method": "post",
-      "process": "scripts.excel.checkFile",
-      "in": [":payload"],
-      "out": { "status": 200, "type": "application/json" }
-    },
-    {
-      "path": "import-submit",
-      "method": "post",
-      "process": "scripts.excel.begImport",
-      "in": [":payload"],
-      "out": { "status": 200, "type": "application/json" }
-    },
-    {
-      "path": "import-trace",
-      "method": "post",
-      "process": "scripts.excel.importTrace",
-      "in": [":payload"],
+      "path": "list",
+      "method": "get",
+      "process": "scripts.file.list",
+      "in": [":query"],
       "out": { "status": 200, "type": "application/json" }
     }
   ]

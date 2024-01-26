@@ -1,6 +1,9 @@
 // function getLoginUser() {
 //   return { code: 403, error: "请登录", message: "用户未登录", data: "" };
 // }
+function avatar(userId) {
+  
+}
 function logout() {}
 function getLoginUser() {
   return {

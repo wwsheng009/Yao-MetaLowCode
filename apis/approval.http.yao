@@ -1,0 +1,57 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "getFlowDefinitionByConfigId",
+      "method": "get",
+      "process": "scripts.approval.getFlowDefinitionByConfigId",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "saveLastApprovalFlow",
+      "method": "post",
+      "process": "scripts.approval.saveLastApprovalFlow",
+      "in": [""],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "getEntityApprovalConfigList",
+      "method": "get",
+      "process": "scripts.approval.getEntityApprovalConfigList",
+      "in": ["$query.recordId"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "startApproval",
+      "method": "get",
+      "process": "scripts.approval.startApproval",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "getAllApprovalConfigEntity",
+      "method": "get",
+      "process": "scripts.approval.getAllApprovalConfigEntity",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "listQuery",
+      "method": "post",
+      "process": "scripts.approval.listQuery",
+      "in": [":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "getEntityApprovalTaskList",
+      "method": "get",
+      "process": "scripts.approval.getEntityApprovalTaskList",
+      "in": ["$query.entity", "$query.type"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

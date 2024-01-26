@@ -102,16 +102,6 @@
       }
     },
     {
-      "path": "formCreateQuery",
-      "method": "get",
-      "process": "scripts.curd.formCreateQuery",
-      "in": ["$qeury.entity"],
-      "out": {
-        "status": 200,
-        "type": "application/json"
-      }
-    },
-    {
       "path": "testEquation",
       "method": "get",
       "process": "scripts.curd.testEquation",

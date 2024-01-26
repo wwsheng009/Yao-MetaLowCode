@@ -147,9 +147,9 @@
     },
     {
       "path": "getTextFieldListOfEntity",
-      "method": "post",
+      "method": "get",
       "process": "scripts.systemmanager.getTextFieldListOfEntity",
-      "in": ["$query.entity", "$query.nameField"],
+      "in": ["$query.entity"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -159,7 +159,7 @@
       "path": "updateEntityNameField",
       "method": "post",
       "process": "scripts.systemmanager.updateEntityNameField",
-      "in": ["$query.entity"],
+      "in": ["$query.entity", "$query.nameField"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -307,7 +307,7 @@
     },
     {
       "path": "getField",
-      "method": "post",
+      "method": "get",
       "process": "scripts.systemmanager.getField",
       "in": ["$query.entity", "$query.field"],
       "out": {
@@ -317,7 +317,7 @@
     },
     {
       "path": "getRefFieldExtras",
-      "method": "post",
+      "method": "get",
       "process": "scripts.systemmanager.getRefFieldExtras",
       "in": ["$query.entity", "$query.field"],
       "out": {

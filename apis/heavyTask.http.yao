@@ -1,17 +1,22 @@
-
 {
-    "name": "自定义接口",
-    "version": "1.0.0",
-    "description": "自定义API接口",
-    "guard": "-",
-    "paths": [
-      {
-        "path": "taskState",
-        "method": "get",
-        "process": "scripts.task.taskState",
-        "in": [""],
-        "out": { "status": 200, "type": "application/json" }
-      }
-    ]
-  }
-  
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "taskState",
+      "method": "get",
+      "process": "scripts.task.taskState",
+      "in": ["$query.taskId"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "cancel",
+      "method": "get",
+      "process": "scripts.task.taskCancel",
+      "in": ["$query.taskId"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

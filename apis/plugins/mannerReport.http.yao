@@ -1,0 +1,15 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "paths": [
+    {
+      "path": "/getEntityCode",
+      "method": "get",
+      "process": "scripts.plugins.getEntityCode",
+      "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    }
+  ]
+}

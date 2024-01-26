@@ -56,7 +56,7 @@ function getNavigationList() {
 }
 
 function saveUserLayoutCache(formData, cacheKey, cacheValue) {}
-
+// 获取实体布局配置
 function getLayoutList(entityName) {
   return {
     FILTER: [],
@@ -99,8 +99,7 @@ function getNavigationList() {}
 // 切换使用导航
 function saveUserLayoutCache(cacheKey, cacheValue) {}
 // 删除布局配置
-function deleteConfig(layoutConfigId) {}
-// 获取实体布局配置
-function getLayoutList(entityName) {}
+function deleteConfig(recordId) {}
+
 // 数据导出
 function excelDataExcel(formModel) {}
