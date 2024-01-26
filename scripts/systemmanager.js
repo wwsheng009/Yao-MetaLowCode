@@ -2,25 +2,140 @@ const { UnderscoreName } = Require("sys.lib");
 
 /**
  * get all tags of entitys
+ *
+ * yao run scripts.systemmanager.getAllTagsOfEntity
  * @returns
  */
 function getAllTagsOfEntity() {
-  return [
-    "CRM",
-    "ERP(离散制造-MTO）",
-    "HRM人事",
-    "WMS",
-    "车辆租赁管理系统",
-    "进销存",
-    "项目任务管理",
-    "学习",
-    "预算费控",
-  ];
+  const data = Process("models.sys.entity.get", {
+    select: ["tags"],
+    wheres: [
+      {
+        column: "tags",
+        op: "notnull",
+      },
+    ],
+  });
+
+  const uniqueTags = new Set();
+
+  data.forEach((obj) => {
+    let tags = obj.tags.split(",");
+    tags.forEach((tag) => uniqueTags.add(tag));
+  });
+
+  // Convert the Set back to an array
+  const uniqueTagsArray = Array.from(uniqueTags);
+  return uniqueTagsArray;
+  // return [
+  //   "CRM",
+  //   "ERP(离散制造-MTO）",
+  //   "HRM人事",
+  //   "WMS",
+  //   "车辆租赁管理系统",
+  //   "进销存",
+  //   "项目任务管理",
+  //   "学习",
+  //   "预算费控",
+  // ];
 }
 
-function filterEntitySet(keyword) {}
+function filterEntitySet(keyword) {
+  return Process("models.sys.entity.get", {
+    select: [
+      "name",
+      "label",
+      "entityCode",
+      "systemEntityFlag",
+      "detailEntityFlag",
+      "layoutable",
+      "listable",
+      "idFieldName",
+      "internalEntityFlag",
+      "tags",
+    ],
+    wheres: [
+      {
+        column: "name",
+        op: "like",
+        value: `%${keyword}%`,
+      },
+      {
+        method: "orwhere",
+        column: "label",
+        op: "like",
+        value: `%${keyword}%`,
+      },
+    ],
+  });
+  // return [
+  //   {
+  //     name: "User",
+  //     label: "用户",
+  //     entityCode: 21,
+  //     systemEntityFlag: true,
+  //     detailEntityFlag: false,
+  //     layoutable: true,
+  //     listable: true,
+  //     idFieldName: "userId",
+  //     internalEntityFlag: false,
+  //     tags: null,
+  //   },
+  //   {
+  //     name: "Department",
+  //     label: "部门",
+  //     entityCode: 22,
+  //     systemEntityFlag: true,
+  //     detailEntityFlag: false,
+  //     layoutable: true,
+  //     listable: true,
+  //     idFieldName: "departmentId",
+  //     internalEntityFlag: false,
+  //     tags: null,
+  //   },
+  // ];
+}
 
-function getFieldSet(entity) {}
+/**
+ * get field of the entity
+ *
+ * yao run scripts.systemmanager.getFieldSet 'Entity1'
+ * @param {string} entity
+ * @returns
+ */
+function getFieldSet(entity) {
+  const [row] = Process("models.sys.entity.get", {
+    wheres: [
+      {
+        column: "name",
+        value: entity,
+      },
+    ],
+    withs: {
+      fields: {
+        query: {
+          select: ["reserved", "name", "label", "type"],
+        },
+      },
+    },
+  });
+  return row?.fields || [];
+
+  // return [
+  //   {
+  //     reserved: true,
+  //     name: "metaApiId",
+  //     label: "id主键",
+  //     type: "PrimaryKey",
+  //   },
+  //   {
+  //     reserved: true,
+  //     name: "createdOn",
+  //     label: "创建时间",
+  //     type: "DateTime",
+  //   },
+  // ];
+}
 
 /**
  * 实体的字段列表
@@ -211,6 +326,11 @@ function addField(field, entity) {
   if (row == null) {
     throw new Error(`Entity ${entity} 不存在`);
   }
+  const fieldData = getEntityField(field.name, entity);
+  if (fieldData.fieldId) {
+    // return { code: 300, message: `字段：${field.name} 已经存在` };
+    throw new Error(`字段：${field.name} 已经存在`);
+  }
   const entityCode = row.entityCode;
   field.entityCode = entityCode;
   field.physicalName = field.name;
@@ -250,6 +370,38 @@ function addField(field, entity) {
   };
 }
 /**
+ * get field by name
+ * @param {string} field
+ * @param {string} entity
+ * @returns
+ */
+function getEntityField(field, entity) {
+  const [row] = Process("models.sys.entity.get", {
+    wheres: [
+      {
+        column: "name",
+        value: entity,
+      },
+    ],
+    withs: {
+      fields: {
+        query: {
+          wheres: [
+            {
+              column: "name",
+              value: field,
+            },
+          ],
+        },
+      },
+    },
+  });
+  if (row && row.fields?.length) {
+    return row.fields[0];
+  }
+  return {};
+}
+/**
  * update a field definition
  * @param {object} field
  * @param {string} entity
@@ -267,29 +419,9 @@ function updateField(field, entity) {
   //   referenceSetting: [],
   // };
 
-  const [row] = Process("models.sys.entity.get", {
-    wheres: [
-      {
-        column: "name",
-        value: entity,
-      },
-    ],
-    withs: {
-      fields: {
-        query: {
-          wheres: [
-            {
-              column: "name",
-              value: field.name,
-            },
-          ],
-        },
-      },
-    },
-  });
-  if (row && row.fields?.length) {
-    const fieldId = row.fields[0].fieldId;
-    Process("models.sys.entity.field.update", fieldId, field);
+  const Field = getEntityField(field.name, entity);
+  if (Field.fieldId) {
+    Process("models.sys.entity.field.update", Field.fieldId, field);
     return true;
   }
   return false;
@@ -600,7 +732,6 @@ function updateEntityLabel(entity, entityLabel) {
   return true;
 }
 
-function getEntityByName(entity) {}
 /**
  * 更新实体的标签列表
  * @param {string} entity
@@ -741,35 +872,24 @@ function getFieldListOfFilter(entity) {
  * @returns
  */
 function fieldCanBeEdited(entity, field) {
-  const [row] = Process("models.sys.entity.get", {
-    wheres: [
-      {
-        column: "name",
-        value: entity,
-      },
-    ],
-    withs: {
-      fields: {
-        query: {
-          wheres: [
-            {
-              column: "name",
-              value: field,
-            },
-          ],
-        },
-      },
-    },
-  });
-  if (row.fields.length) {
-    return !row.fields[0].reserved;
-  }
-  return false;
+  const fieldData = getField(entity, field);
+  return !fieldData.reserved;
 }
 
-function fieldCanBeDeleted(entity, field) {}
+function fieldCanBeDeleted(entity, field) {
+  const fieldData = getField(entity, field);
+  if (fieldData.reserved) {
+    return false;
+  }
+  return true;
+}
 
-function deleteField(entity, field) {}
+function deleteField(entity, field) {
+  const fieldData = getField(entity, field);
+  if (fieldData) {
+    Process("models.sys.entity.field.delete", fieldData.fieldId);
+  }
+}
 
 function addOptionField({ field, optionList }, entity) {
   // data = {
@@ -814,16 +934,59 @@ function updateOptionField({ field, optionList }, entity) {
   field.optionList = optionList;
   return updateField(field, entity);
 }
+/**
+ * Add new Tag Field
+ * @param {object} param0
+ * @param {string} entity
+ * @returns
+ */
+function addTagField({ field, tagList }, entity) {
+  field.tagList = tagList;
 
-function addTagField({ field, tagList }, entity) {}
+  return addField(field, entity);
+}
 
-function updateTagField({ field, tagList }, entity) {}
+/**
+ * update a Tag Field
+ * @param {object} param0
+ * @param {string} entity
+ * @returns
+ */
+function updateTagField({ field, tagList }, entity) {
+  field.tagList = tagList;
+  return updateField(field, entity);
+}
 
-function addRefField(field, entity, refEntity) {}
+/**
+ * add a reference field
+ * @param {object} field
+ * @param {string} entity
+ * @param {string} refEntity
+ */
+function addRefField(field, entity, refEntity) {
+  // const data = {
+  //   name: "r1",
+  //   label: "r1",
+  //   type: "Reference",
+  //   defaultMemberOfListFlag: true,
+  //   nullable: false,
+  //   creatable: true,
+  //   updatable: true,
+  //   fieldViewModel: { searchDialogWidth: 520, validators: [] },
+  //   referenceSetting: [{ entityName: "User", fieldList: ["modifiedOn"] }],
+  // };
+
+  field.referTo = `${refEntity},`;
+
+  return addField(field, entity);
+}
 
 function addAnyRefField(field, entity, referTo) {}
 
-function updateRefField(field, entity, refEntity) {}
+function updateRefField(field, entity, refEntity) {
+  field.referTo = `${refEntity},`;
+  return updateField(field, entity);
+}
 
 function updateAnyRefField(field, entity, referTo) {}
 
@@ -833,23 +996,103 @@ function updateAnyRefField(field, entity, referTo) {}
  * yao run scripts.systemmanager.getField 'Entity1' 'b1'
  * @param {string} entity
  * @param {string} field
- * @returns
+ * @returns`
  */
 function getField(entity, field) {
-  const [row] = Process("models.sys.entity.get", {
-    wheres: [
-      {
-        column: "name",
-        value: entity,
-      },
-    ],
+  return getEntityField(field, entity);
+}
+
+/**
+ * get the reference field info
+ *
+ * yao run scripts.systemmanager.getRefFieldExtras 'Entity1' 'r1'
+ * @param {string} entity
+ * @param {string} field
+ * @returns
+ */
+function getRefFieldExtras(entity, field) {
+  // entity = "Entity";
+  // field = "r1";
+  const fieldData = getEntityField(field, entity);
+  if (!fieldData) {
+    return;
+  }
+  let referenceSetting = fieldData.referenceSetting[0];
+  // console.log("referenceSetting", referenceSetting);
+  // referenceSetting = [{ entityName: "Entity1", fieldList: ["d1", "time1"] }];
+
+  // let referTo = fieldData.referTo;
+  let refEntityName = referenceSetting.entityName;
+
+  const [referEntity] = Process("models.sys.entity.get", {
+    wheres: [{ column: "name", value: entity }],
     withs: {
       fields: {
         query: {
+          select: ["reserved", "name", "label", "type"],
+        },
+      },
+    },
+  });
+
+  function getLabel(field) {
+    const item = referEntity.fields?.find((f) => f.name == field);
+
+    return item?.label || "";
+  }
+
+  let selectedFieldItems = [];
+  // [
+  //   {
+  //     name: "modifiedOn",
+  //     label: "最近修改时间",
+  //   },
+  //   {
+  //     name: "ownerUser",
+  //     label: "所属用户",
+  //   },
+  // ]
+  let lables = [];
+
+  // console.log("referenceSetting.fieldList", referenceSetting.fieldList);
+  referenceSetting.fieldList.forEach((item) => {
+    let label = getLabel(item);
+    selectedFieldItems.push({
+      name: item,
+      label: getLabel(item),
+    });
+    lables.push(label);
+  });
+
+  return {
+    refEntityAndFields: `${referEntity.label}[${lables.join(",")},]`,
+    selectedFieldItems: selectedFieldItems,
+    refEntityName: refEntityName,
+    refEntityLabel: referEntity.label,
+    refEntityFullName: `${referEntity.label}(${referEntity.name})`,
+    currentRefEntity: refEntityName,
+    fieldItems: referEntity.fields,
+  };
+}
+
+/**
+ * get all fields with options
+ *
+ * yao run scripts.systemmanager.getOptionFields
+ * 单选项管理,列表
+ * @returns
+ */
+function getOptionFields() {
+  const optionList = Process("models.sys.entity.get", {
+    select: ["name", "label"],
+    withs: {
+      fields: {
+        query: {
+          select: ["name", "label"],
           wheres: [
             {
-              column: "name",
-              value: field,
+              column: "optionList",
+              op: "notnull",
             },
           ],
         },
@@ -857,20 +1100,22 @@ function getField(entity, field) {
     },
   });
 
-  if (row.fields.length) {
-    return row.fields[0];
-  }
-  return {};
-}
-
-function getRefFieldExtras(entity, field) {}
-
-/**
- * 单选项管理,列表
- * @returns
- */
-function getOptionFields() {
-  return [];
+  let fieldList = [];
+  optionList.forEach((entity) => {
+    if (entity?.fields.length) {
+      fieldList.push({
+        entityLabel: entity.label,
+        entityName: entity.name,
+        fieldList: entity.fields.map((o) => {
+          return {
+            fieldName: o.name,
+            fieldLabel: o.label,
+          };
+        }),
+      });
+    }
+  });
+  return fieldList;
 }
 
 /**
@@ -883,8 +1128,8 @@ function getOptionItems(entity, field) {
   const fieldDef = getField(entity, field);
 
   let list = [];
-  if (fieldDef?.optionList) {
-    fieldDef?.optionList.forEach((option) => {
+  if (Array.isArray(fieldDef?.optionList)) {
+    fieldDef.optionList.forEach((option) => {
       list.push({
         saved: true,
         label: option.key,
@@ -915,13 +1160,118 @@ function getOptionItems(entity, field) {
   // ];
 }
 
-function saveOptionItems(entity, field, optionItems) {}
+/**
+ *
+ * @param {string} entity
+ * @param {string} field
+ * @param {Array} optionItems
+ */
+function saveOptionItems(entity, field, optionItems) {
+  // optionItems = [
+  //   { label: "a1", saved: true, value: 1 },
+  //   { label: "a2", saved: true, value: 2 },
+  //   { label: "a3", value: 3, saved: false },
+  // ];
+  const Field = getEntityField(field, entity);
+  if (Field.fieldId) {
+    const options = optionItems.items.map((item) => {
+      return {
+        key: item.label,
+        value: item.value,
+      };
+    });
+    Process("models.sys.entity.field.update", Field.fieldId, {
+      optionList: options,
+    });
+    return true;
+  }
+  return false;
+}
 
-function getTagFields(entity) {}
+function getTagFields() {
+  const entityList = Process("models.sys.entity.get", {
+    select: ["name", "label"],
+    withs: {
+      fields: {
+        query: {
+          select: ["name", "label"],
+          wheres: [
+            {
+              column: "tagList",
+              op: "notnull",
+            },
+          ],
+        },
+      },
+    },
+  });
 
-function getTagItems(entity, field) {}
+  let tagList = [];
+  entityList.forEach((entity) => {
+    if (entity?.fields.length) {
+      tagList.push({
+        entityLabel: entity.label,
+        entityName: entity.name,
+        fieldList: entity.fields.map((o) => {
+          return {
+            fieldName: o.name,
+            fieldLabel: o.label,
+          };
+        }),
+      });
+    }
+  });
+  return tagList;
+  // return [
+  //   {
+  //     entityLabel: "用户",
+  //     entityName: "User",
+  //     fieldList: [
+  //       {
+  //         fieldName: "aaaaaa",
+  //         fieldLabel: "aaaaa",
+  //       },
+  //     ],
+  //   },
+  // ];
+}
 
-function saveTagItems(entity, field, tagItems) {}
+function getTagItems(entity, field) {
+  const fieldDef = getField(entity, field);
+
+  let list = [];
+  if (fieldDef?.tagList) {
+    fieldDef.tagList.forEach((tag) => {
+      list.push({
+        saved: true,
+        label: tag,
+        value: tag,
+      });
+    });
+  }
+  return list;
+}
+
+function saveTagItems(entity, field, tagItems) {
+  // tagItems = {
+  //   items: [
+  //     { label: "tag11", saved: true, value: "tag11" },
+  //     { label: "tag22", saved: true, value: "tag22" },
+  //     { label: "tag33", value: "tag33", saved: false },
+  //   ],
+  // };
+  const Field = getEntityField(field, entity);
+  if (Field.fieldId) {
+    const options = tagItems.items.map((item) => {
+      return item.value;
+    });
+    Process("models.sys.entity.field.update", Field.fieldId, {
+      tagList: options,
+    });
+    return true;
+  }
+  return false;
+}
 
 function postBackupDB() {}
 

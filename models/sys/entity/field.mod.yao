@@ -153,8 +153,24 @@
       "name": "optionList",
       "type": "json",
       "nullable": true
+    },
+    {
+      "comment": "标签列表",
+      "label": "标签列表",
+      "name": "tagList",
+      "type": "json",
+      "nullable": true
     }
   ],
+  "relations": {
+    "entity": {
+      "type": "hasOne",
+      "key": "entityCode",
+      "model": "sys.entity",
+      "foreign": "entityCode",
+      "query": {}
+    }
+  },
   "name": "sys.entity.field",
   "table": {
     "name": "sys_entity_field"

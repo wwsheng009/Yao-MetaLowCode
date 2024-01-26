@@ -349,7 +349,7 @@
       "path": "saveOptionItems",
       "method": "post",
       "process": "scripts.systemmanager.saveOptionItems",
-      "in": [":payload", "$query.entity", "$query.field"],
+      "in": ["$query.entity", "$query.field", ":payload"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -379,7 +379,7 @@
       "path": "saveTagItems",
       "method": "post",
       "process": "scripts.systemmanager.saveTagItems",
-      "in": [":payload", "$query.entity", "$query.field"],
+      "in": ["$query.entity", "$query.field", ":payload"],
       "out": {
         "status": 200,
         "type": "application/json"
