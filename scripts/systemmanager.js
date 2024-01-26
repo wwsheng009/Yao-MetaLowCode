@@ -1,5 +1,6 @@
 const { UnderscoreName } = Require("sys.lib");
 
+const { updateEntityToYao } = Require("sys.yao");
 /**
  * get all tags of entitys
  *
@@ -261,7 +262,81 @@ function getFieldListOfEntity(entity) {
   // ];
 }
 
-function getMDFieldList(entity) {}
+function getMDFieldList(entityName) {
+
+  const [entity] = Process("models.sys.entity.get", {
+    select: ["name"],
+    wheres:[{
+      column:"name",
+      value:entityName,
+    }],
+    withs: {
+      fields: {
+        query: {
+          select: ["name", "label","type"],
+        },
+      },
+    },
+  });
+
+  return {
+    subFormList: [],
+    storageSetting: [
+      {
+        cloudStorage: "false",
+      },
+    ],
+    fieldList: entity.fields
+    //  [
+    //   {
+    //     name: "entity2Id",
+    //     label: "id主键",
+    //     type: "PrimaryKey",
+    //     required: "1",
+    //   },
+    //   {
+    //     name: "createdOn",
+    //     label: "创建时间",
+    //     type: "DateTime",
+    //     required: "1",
+    //   },
+    //   {
+    //     searchDialogWidth: "520px",
+    //     name: "createdBy",
+    //     label: "创建用户",
+    //     type: "Reference",
+    //     required: "1",
+    //   },
+    //   {
+    //     name: "modifiedOn",
+    //     label: "最近修改时间",
+    //     type: "DateTime",
+    //     required: "0",
+    //   },
+    //   {
+    //     searchDialogWidth: "520px",
+    //     name: "modifiedBy",
+    //     label: "修改用户",
+    //     type: "Reference",
+    //     required: "0",
+    //   },
+    //   {
+    //     searchDialogWidth: "520px",
+    //     name: "ownerUser",
+    //     label: "所属用户",
+    //     type: "Reference",
+    //     required: "1",
+    //   },
+    //   {
+    //     searchDialogWidth: "520px",
+    //     name: "ownerDepartment",
+    //     label: "所属部门",
+    //     type: "Reference",
+    //     required: "1",
+    //   },
+    // ],
+  };
+}
 
 /**
  * 实体的属性
@@ -340,6 +415,7 @@ function addField(field, entity) {
   };
   const id = Process("models.sys.entity.field.create", field);
 
+  updateEntityToYao(entity);
   // 返回值
   return {
     fieldId: id,
@@ -422,6 +498,7 @@ function updateField(field, entity) {
   const Field = getEntityField(field.name, entity);
   if (Field.fieldId) {
     Process("models.sys.entity.field.update", Field.fieldId, field);
+    updateEntityToYao(entity);
     return true;
   }
   return false;
@@ -668,6 +745,8 @@ function createEntity(entity, mainEntity) {
   if (res?.code && res.message) {
     throw Error(`Exception:${res?.code}|${res.message}`);
   }
+
+  updateEntityToYao(entity.name);
   //
   return {
     ...entity,
@@ -888,6 +967,7 @@ function deleteField(entity, field) {
   const fieldData = getField(entity, field);
   if (fieldData) {
     Process("models.sys.entity.field.delete", fieldData.fieldId);
+    updateEntityToYao(entity);
   }
 }
 

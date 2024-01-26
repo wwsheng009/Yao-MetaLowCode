@@ -6,6 +6,19 @@
   "group": "formLayout",
   "paths": [
     {
+      "path": "save",
+      "method": "post",
+      "process": "scripts.formLayout.createFormLayout",
+      "in": ["$query.entity",":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },{
+      "path": "update",
+      "method": "post",
+      "process": "scripts.formLayout.updateFormLayout",
+      "in": ["$query.layoutId",":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
       "path": "get",
       "method": "get",
       "process": "scripts.formLayout.getFormLayout",

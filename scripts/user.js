@@ -109,7 +109,9 @@ function getUserRole(userId) {}
  * @param {*} entityName 实体Name
  * @returns
  */
-function checkRight(id, rightType, entityName) {}
+function checkRight(id, rightType, entityName) {
+  return true
+}
 
 function getRightMap() {
   return {

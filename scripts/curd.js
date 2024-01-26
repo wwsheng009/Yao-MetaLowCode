@@ -1,3 +1,5 @@
+const { loadEntityToYao } = Require("sys.yao");
+
 /**
  *
  * 通用查询接口
@@ -33,130 +35,167 @@ function listQuery({
   //   pageNo: 1,
   //   sortFields: [{ fieldName: "createdOn", type: "DESC" }],
   // };
+  // const data = {
+  //   mainEntity: "Entity1",
+  //   fieldsList: "test",
+  //   filter: { equation: "AND", items: [] },
+  //   pageSize: 20,
+  //   pageNo: 1,
+  //   sortFields: [{ fieldName: "modifiedOn", type: "DESC" }],
+  //   advFilter: {},
+  //   quickFilter: "",
+  //   builtInFilter: {},
+  //   statistics: [],
+  // };
+
+  loadEntityToYao(mainEntity);
+
+  let queryParam = {
+    select: fieldsList.split(","),
+  };
+
+  let data = Process(
+    `models.${mainEntity}.Paginate`,
+    queryParam,
+    pageNo,
+    pageSize
+  );
+
   return {
-    dataList: [
-      {
-        userId: "0000021-4ad8495b30304b4b944afcbf748d982a",
-        userName: "体验",
-        loginName: "tiyan",
-        jobTitle: {
-          value: 1,
-          label: "员工",
-          displayOrder: 5,
-        },
-        mobilePhone: "",
-        departmentId: {
-          id: "0000022-00000000000000000000000000000001",
-          name: "公司总部",
-        },
-        disabled: false,
-        createdOn: "2024-01-05 14:29:43",
-        createdBy: {
-          id: "0000021-00ec15ca45bc446f9fc36161281733d4",
-          name: "hyf",
-        },
-        modifiedOn: "2024-01-25 18:03:03",
-        modifiedBy: {
-          id: "0000021-00000000000000000000000000000001",
-          name: "系统管理员",
-        },
-        avatar: null,
-        dingTalkUserId: null,
-      },
-      {
-        userId: "0000021-00ec15ca45bc446f9fc36161281733d4",
-        userName: "hyf",
-        loginName: "huyunfang",
-        jobTitle: {
-          value: 1,
-          label: "员工",
-          displayOrder: 5,
-        },
-        mobilePhone: "",
-        departmentId: {
-          id: "0000022-00000000000000000000000000000001",
-          name: "公司总部",
-        },
-        disabled: false,
-        createdOn: "2024-01-02 11:03:24",
-        createdBy: {
-          id: "0000021-00000000000000000000000000000001",
-          name: "系统管理员",
-        },
-        modifiedOn: "2024-01-23 09:39:52",
-        modifiedBy: {
-          id: "0000021-00000000000000000000000000000001",
-          name: "系统管理员",
-        },
-        avatar: null,
-        dingTalkUserId: null,
-      },
-      {
-        userId: "0000021-2909a29a118a4a28b294cd410b460751",
-        userName: "gaoyuhui",
-        loginName: "gaoyuhui",
-        jobTitle: {
-          value: 1,
-          label: "员工",
-          displayOrder: 5,
-        },
-        mobilePhone: "",
-        departmentId: {
-          id: "0000022-00000000000000000000000000000001",
-          name: "公司总部",
-        },
-        disabled: false,
-        createdOn: "2024-01-02 10:55:30",
-        createdBy: {
-          id: "0000021-00000000000000000000000000000001",
-          name: "系统管理员",
-        },
-        modifiedOn: "2024-01-25 15:29:54",
-        modifiedBy: {
-          id: "0000021-00000000000000000000000000000001",
-          name: "系统管理员",
-        },
-        avatar: null,
-        dingTalkUserId: null,
-      },
-      {
-        userId: "0000021-00000000000000000000000000000001",
-        userName: "系统管理员",
-        loginName: "admin",
-        jobTitle: {
-          value: 1,
-          label: "员工",
-          displayOrder: 5,
-        },
-        mobilePhone: "15215478481",
-        departmentId: {
-          id: "0000022-00000000000000000000000000000001",
-          name: "公司总部",
-        },
-        disabled: false,
-        createdOn: "2020-08-24 14:02:44",
-        createdBy: {
-          id: "0000021-00000000000000000000000000000001",
-          name: "系统管理员",
-        },
-        modifiedOn: "2023-11-02 10:26:40",
-        modifiedBy: {
-          id: "0000021-00000000000000000000000000000001",
-          name: "系统管理员",
-        },
-        avatar: null,
-        dingTalkUserId: null,
-      },
-    ],
+    dataList: data.data,
     pagination: {
-      pageSize: 20,
-      pageNo: 1,
-      total: 4,
+      pageSize: data.pagesize,
+      pageNo: data.page,
+      total: data.total,
     },
     columnList: null,
     entityBasicInfo: null,
     statisticsList: null,
   };
+  // return {
+  //   dataList: [
+  //     {
+  //       userId: "0000021-4ad8495b30304b4b944afcbf748d982a",
+  //       userName: "体验",
+  //       loginName: "tiyan",
+  //       jobTitle: {
+  //         value: 1,
+  //         label: "员工",
+  //         displayOrder: 5,
+  //       },
+  //       mobilePhone: "",
+  //       departmentId: {
+  //         id: "0000022-00000000000000000000000000000001",
+  //         name: "公司总部",
+  //       },
+  //       disabled: false,
+  //       createdOn: "2024-01-05 14:29:43",
+  //       createdBy: {
+  //         id: "0000021-00ec15ca45bc446f9fc36161281733d4",
+  //         name: "hyf",
+  //       },
+  //       modifiedOn: "2024-01-25 18:03:03",
+  //       modifiedBy: {
+  //         id: "0000021-00000000000000000000000000000001",
+  //         name: "系统管理员",
+  //       },
+  //       avatar: null,
+  //       dingTalkUserId: null,
+  //     },
+  //     {
+  //       userId: "0000021-00ec15ca45bc446f9fc36161281733d4",
+  //       userName: "hyf",
+  //       loginName: "huyunfang",
+  //       jobTitle: {
+  //         value: 1,
+  //         label: "员工",
+  //         displayOrder: 5,
+  //       },
+  //       mobilePhone: "",
+  //       departmentId: {
+  //         id: "0000022-00000000000000000000000000000001",
+  //         name: "公司总部",
+  //       },
+  //       disabled: false,
+  //       createdOn: "2024-01-02 11:03:24",
+  //       createdBy: {
+  //         id: "0000021-00000000000000000000000000000001",
+  //         name: "系统管理员",
+  //       },
+  //       modifiedOn: "2024-01-23 09:39:52",
+  //       modifiedBy: {
+  //         id: "0000021-00000000000000000000000000000001",
+  //         name: "系统管理员",
+  //       },
+  //       avatar: null,
+  //       dingTalkUserId: null,
+  //     },
+  //     {
+  //       userId: "0000021-2909a29a118a4a28b294cd410b460751",
+  //       userName: "gaoyuhui",
+  //       loginName: "gaoyuhui",
+  //       jobTitle: {
+  //         value: 1,
+  //         label: "员工",
+  //         displayOrder: 5,
+  //       },
+  //       mobilePhone: "",
+  //       departmentId: {
+  //         id: "0000022-00000000000000000000000000000001",
+  //         name: "公司总部",
+  //       },
+  //       disabled: false,
+  //       createdOn: "2024-01-02 10:55:30",
+  //       createdBy: {
+  //         id: "0000021-00000000000000000000000000000001",
+  //         name: "系统管理员",
+  //       },
+  //       modifiedOn: "2024-01-25 15:29:54",
+  //       modifiedBy: {
+  //         id: "0000021-00000000000000000000000000000001",
+  //         name: "系统管理员",
+  //       },
+  //       avatar: null,
+  //       dingTalkUserId: null,
+  //     },
+  //     {
+  //       userId: "0000021-00000000000000000000000000000001",
+  //       userName: "系统管理员",
+  //       loginName: "admin",
+  //       jobTitle: {
+  //         value: 1,
+  //         label: "员工",
+  //         displayOrder: 5,
+  //       },
+  //       mobilePhone: "15215478481",
+  //       departmentId: {
+  //         id: "0000022-00000000000000000000000000000001",
+  //         name: "公司总部",
+  //       },
+  //       disabled: false,
+  //       createdOn: "2020-08-24 14:02:44",
+  //       createdBy: {
+  //         id: "0000021-00000000000000000000000000000001",
+  //         name: "系统管理员",
+  //       },
+  //       modifiedOn: "2023-11-02 10:26:40",
+  //       modifiedBy: {
+  //         id: "0000021-00000000000000000000000000000001",
+  //         name: "系统管理员",
+  //       },
+  //       avatar: null,
+  //       dingTalkUserId: null,
+  //     },
+  //   ],
+  //   pagination: {
+  //     pageSize: 20,
+  //     pageNo: 1,
+  //     total: 4,
+  //   },
+  //   columnList: null,
+  //   entityBasicInfo: null,
+  //   statisticsList: null,
+  // };
 }
 
 function checkStatus() {
@@ -189,7 +228,15 @@ function formCreateQuery(entity) {}
 
 function formUpdateQuery(entity, id) {}
 
-function saveRecord(entity, id, formModel) {}
+function saveRecord(entity, id, formModel) {
+  loadEntityToYao(entity);
+  if (!id) {
+    id = Process(`models.${entity}.Create`, formModel);
+  } else {
+    Process(`models.${entity}.update`, id, formModel);
+  }
+  return id;
+}
 function deleteRecord({ recordIds, cascades }) {}
 function initDataList(entity) {}
 /**

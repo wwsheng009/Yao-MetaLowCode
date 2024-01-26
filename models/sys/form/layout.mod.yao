@@ -1,0 +1,74 @@
+{
+  "name": "sys.form.layout",
+  "table": {
+    "name": "sys_form_layout"
+  },
+  "columns": [
+    {
+      "name": "formLayoutId",
+      "type": "id",
+      "primary": true,
+      "label": "id",
+      "comment": "id"
+    },
+    {
+      "name": "layoutName",
+      "type": "string",
+      "label": "布局名称",
+      "comment": "布局名称"
+    },
+    {
+      "name": "entityCode",
+      "type": "integer",
+      "label": "实体编码",
+      "comment": "实体编码"
+    },
+    {
+      "name": "layoutJson",
+      "type": "json",
+      "label": "布局json",
+      "comment": "布局json",
+      "nullable": true
+    },
+    // {
+    //   "name": "optionData",
+    //   "type": "json",
+    //   "label": "可选数据",
+    //   "comment": "可选数据",
+    //   "nullable": true
+    // },
+    {
+      "name": "formUploadParam",
+      "type": "json",
+      "label": "上传参数",
+      "comment": "上传参数",
+      "nullable": true
+    },
+    {
+      "name": "createdOn",
+      "type": "datetime",
+      "label": "创建日期",
+      "nullable": true
+    },
+    {
+      "name": "modifiedOn",
+      "type": "datetime",
+      "label": "修改日期",
+      "nullable": true
+    },
+    {
+      "name": "createdBy",
+      "type": "integer",
+      "label": "创建人",
+      "nullable": true
+    },
+    {
+      "name": "modifiedBy",
+      "type": "integer",
+      "label": "修改人",
+      "nullable": true
+    }
+  ]
+}
+
+// yao migrate -n sys.form.layout --reset

@@ -56,34 +56,76 @@ function getNavigationList() {
 }
 
 function saveUserLayoutCache(formData, cacheKey, cacheValue) {}
-// 获取实体布局配置
+
+/**
+ * 获取实体布局配置
+ *
+ * yao run scripts.layout.getLayoutList 'Entity1'
+ * @param {*} entityName
+ * @returns
+ */
 function getLayoutList(entityName) {
+  const [entity] = Process("models.sys.entity.get", {
+    wheres: [{ column: "name", value: entityName }],
+    withs: {
+      fields: {},
+    },
+  });
+
+  if (!entity) {
+    throw Error(`Entity:${entityName} not exist`);
+  }
+  // const data = [
+  //   {
+  //     isUpdatable: true,
+  //     fieldName: "xuanzegongyingshang",
+  //     isNameField: false,
+  //     fieldLabel: "选择供应商",
+  //     isNullable: false,
+  //     isCreatable: true,
+  //     fieldType: "Reference",
+  //     referenceName: "Gongyingshangguanli",
+  //   },
+  // ];
+  const fields = entity.fields.map((field) => {
+    return {
+      isUpdatable: field.updatable,
+      fieldName: field.name,
+      isNameField: field.nameFieldFlag,
+      fieldLabel: field.label,
+      isNullable: field.nullable,
+      isCreatable: field.creatable,
+      fieldType: field.type,
+      referenceName: field.referTo?.replace(",", ""),
+    };
+  });
+  // let fieldsTitle = {}
+  // entity.fields.forEach((field) => {
+  //   fieldsTitle[field.name] = 200
+  // });
   return {
     FILTER: [],
-    nameFieldName: "gongyingshangjiagebiaoId",
+    nameFieldName: entity.idFieldName,
     titleWidthForSelf: null,
     quickFilterLabel: "",
     chosenListType: null,
     advFilter: null,
-    idFieldName: "gongyingshangjiagebiaoId",
+    idFieldName: entity.idFieldName,
     LIST: {
       ALL: {
         applyType: "LIST",
-        entityCode: 1027,
+        entityCode: entity.entityCode,
         shareTo: "ALL",
-        config:
-          '[{"isUpdatable":true,"fieldName":"xuanzegongyingshang","isNameField":false,"fieldLabel":"选择供应商","isNullable":false,"isCreatable":true,"fieldType":"Reference","referenceName":"Gongyingshangguanli"},{"isUpdatable":true,"fieldName":"xuanzechanpin","isNameField":false,"fieldLabel":"选择产品","isNullable":false,"isCreatable":true,"fieldType":"Reference","referenceName":"Chanpinxinxi"},{"isUpdatable":true,"fieldName":"biaozhuncaigoudanjia","isNameField":false,"fieldLabel":"标准采购单价(含税)/元","isNullable":false,"isCreatable":true,"fieldType":"Money"},{"isUpdatable":true,"fieldName":"caigoudanjia","isNameField":false,"fieldLabel":"采购单价(含税)/元","isNullable":false,"isCreatable":true,"fieldType":"Money"},{"isUpdatable":true,"fieldName":"caigoudanjia1","isNameField":false,"fieldLabel":"采购单价(不含税)/元","isNullable":true,"isCreatable":true,"fieldType":"Money"}]',
+        config: JSON.stringify(fields),
       },
       SELF: {
         applyType: "LIST",
-        entityCode: 1027,
+        entityCode: entity.entityCode,
         shareTo: "SELF",
-        config:
-          '[{"isUpdatable":true,"fieldName":"xuanzegongyingshang","isNameField":false,"fieldLabel":"选择供应商","isNullable":false,"isCreatable":true,"fieldType":"Reference","referenceName":"Gongyingshangguanli"},{"isUpdatable":true,"fieldName":"xuanzechanpin","isNameField":false,"fieldLabel":"选择产品","isNullable":false,"isCreatable":true,"fieldType":"Reference","referenceName":"Chanpinxinxi"},{"isUpdatable":true,"fieldName":"biaozhuncaigoudanjia","isNameField":false,"fieldLabel":"标准采购单价(含税)/元","isNullable":false,"isCreatable":true,"fieldType":"Money"},{"isUpdatable":true,"fieldName":"caigoudanjia","isNameField":false,"fieldLabel":"采购单价(含税)/元","isNullable":false,"isCreatable":true,"fieldType":"Money"},{"isUpdatable":true,"fieldName":"caigoudanjia1","isNameField":false,"fieldLabel":"采购单价(不含税)/元","isNullable":true,"isCreatable":true,"fieldType":"Money"}]',
+        config: JSON.stringify(fields),
       },
+      titleWidthForAll: null,//JSON.stringify(fieldsTitle),
     },
-    titleWidthForAll:
-      '{"xuanzegongyingshang":251,"biaozhuncaigoudanjia":183,"caigoudanjia":198,"caigoudanjia1":202}',
   };
 }
 /**

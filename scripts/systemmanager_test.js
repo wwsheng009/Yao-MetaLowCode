@@ -4996,38 +4996,938 @@ function getOptionFields() {
  * @returns
  */
 function getOptionItems(entity, field) {
-    entity = "User";
-    field = "jobTitle";
-    return [
-      {
-        saved: true,
-        label: "总监",
-        value: 4,
-      },
-      {
-        saved: true,
-        label: "主管",
-        value: 2,
-      },
-      {
-        saved: true,
-        label: "经理",
-        value: 3,
-      },
-      {
-        saved: true,
-        label: "部长",
-        value: 5,
-      },
-      {
-        saved: true,
-        label: "员工",
-        value: 1,
-      },
-      {
-        saved: true,
-        label: "a",
-        value: 6,
-      },
-    ];
-  }
+  entity = "User";
+  field = "jobTitle";
+  return [
+    {
+      saved: true,
+      label: "总监",
+      value: 4,
+    },
+    {
+      saved: true,
+      label: "主管",
+      value: 2,
+    },
+    {
+      saved: true,
+      label: "经理",
+      value: 3,
+    },
+    {
+      saved: true,
+      label: "部长",
+      value: 5,
+    },
+    {
+      saved: true,
+      label: "员工",
+      value: 1,
+    },
+    {
+      saved: true,
+      label: "a",
+      value: 6,
+    },
+  ];
+}
+
+function getFieldListOfFilter() {
+  return [
+    {
+      name: "str1",
+      label: "str1",
+      type: "Text",
+    },
+    {
+      referTo: "User",
+      name: "b1",
+      label: "b1",
+      type: "Reference",
+    },
+    {
+      name: "o1",
+      optionData: [
+        {
+          value: 1,
+          label: "a1",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "a2",
+          displayOrder: 2,
+        },
+        {
+          value: 3,
+          label: "a3",
+          displayOrder: 3,
+        },
+      ],
+      label: "o1",
+      type: "Option",
+    },
+    {
+      name: "tag1",
+      optionData: [
+        {
+          value: "t1",
+          displayOrder: 1,
+        },
+        {
+          value: "t2",
+          displayOrder: 2,
+        },
+      ],
+      label: "tag1",
+      type: "Tag",
+    },
+    {
+      referTo: "User",
+      name: "r1",
+      label: "r1",
+      type: "Reference",
+    },
+    {
+      name: "createdOn",
+      label: "创建时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "createdBy",
+      label: "创建用户",
+      type: "Reference",
+    },
+    {
+      name: "modifiedOn",
+      label: "最近修改时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "modifiedBy",
+      label: "修改用户",
+      type: "Reference",
+    },
+    {
+      referTo: "User",
+      name: "ownerUser",
+      label: "所属用户",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "ownerDepartment",
+      label: "所属部门",
+      type: "Reference",
+    },
+    {
+      name: "b1.createdOn",
+      label: "b1.创建时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "b1.createdBy",
+      label: "b1.创建用户",
+      type: "Reference",
+    },
+    {
+      name: "b1.modifiedOn",
+      label: "b1.最近修改时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "b1.modifiedBy",
+      label: "b1.修改用户",
+      type: "Reference",
+    },
+    {
+      referTo: "User",
+      name: "b1.ownerUser",
+      label: "b1.所属用户",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "b1.ownerDepartment",
+      label: "b1.所属部门",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "b1.departmentId",
+      label: "b1.部门",
+      type: "Reference",
+    },
+    {
+      name: "b1.userName",
+      label: "b1.用户名称",
+      type: "Text",
+    },
+    {
+      name: "b1.loginName",
+      label: "b1.登录账号名",
+      type: "Text",
+    },
+    {
+      name: "b1.jobTitle",
+      optionData: [
+        {
+          value: 4,
+          label: "总监",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "主管",
+          displayOrder: 2,
+        },
+        {
+          value: 3,
+          label: "经理",
+          displayOrder: 3,
+        },
+        {
+          value: 5,
+          label: "部长",
+          displayOrder: 4,
+        },
+        {
+          value: 1,
+          label: "员工",
+          displayOrder: 5,
+        },
+        {
+          value: 6,
+          label: "a",
+          displayOrder: 6,
+        },
+        {
+          value: 7,
+          label: "测试",
+          displayOrder: 7,
+        },
+      ],
+      label: "b1.职务",
+      type: "Option",
+    },
+    {
+      name: "b1.disabled",
+      label: "b1.是否禁用",
+      type: "Boolean",
+    },
+    {
+      name: "b1.mobilePhone",
+      label: "b1.手机号",
+      type: "Text",
+    },
+    {
+      name: "b1.email",
+      label: "b1.邮箱",
+      type: "Text",
+    },
+    {
+      name: "b1.tatp",
+      label: "b1.状态",
+      type: "Decimal",
+    },
+    {
+      name: "b1.aaaaaa",
+      optionData: [
+        {
+          value: "11",
+          displayOrder: 1,
+        },
+        {
+          value: "222",
+          displayOrder: 2,
+        },
+        {
+          value: "33",
+          displayOrder: 3,
+        },
+        {
+          value: "111",
+          displayOrder: 4,
+        },
+      ],
+      label: "b1.aaaaa",
+      type: "Tag",
+    },
+    {
+      name: "b1.xsxs",
+      label: "b1.xs",
+      type: "Boolean",
+    },
+    {
+      name: "b1.yonghuxingbie",
+      optionData: [
+        {
+          value: 1,
+          label: "男",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "女",
+          displayOrder: 2,
+        },
+      ],
+      label: "b1.用户性别",
+      type: "Option",
+    },
+    {
+      name: "r1.createdOn",
+      label: "r1.创建时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "r1.createdBy",
+      label: "r1.创建用户",
+      type: "Reference",
+    },
+    {
+      name: "r1.modifiedOn",
+      label: "r1.最近修改时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "r1.modifiedBy",
+      label: "r1.修改用户",
+      type: "Reference",
+    },
+    {
+      referTo: "User",
+      name: "r1.ownerUser",
+      label: "r1.所属用户",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "r1.ownerDepartment",
+      label: "r1.所属部门",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "r1.departmentId",
+      label: "r1.部门",
+      type: "Reference",
+    },
+    {
+      name: "r1.userName",
+      label: "r1.用户名称",
+      type: "Text",
+    },
+    {
+      name: "r1.loginName",
+      label: "r1.登录账号名",
+      type: "Text",
+    },
+    {
+      name: "r1.jobTitle",
+      optionData: [
+        {
+          value: 4,
+          label: "总监",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "主管",
+          displayOrder: 2,
+        },
+        {
+          value: 3,
+          label: "经理",
+          displayOrder: 3,
+        },
+        {
+          value: 5,
+          label: "部长",
+          displayOrder: 4,
+        },
+        {
+          value: 1,
+          label: "员工",
+          displayOrder: 5,
+        },
+        {
+          value: 6,
+          label: "a",
+          displayOrder: 6,
+        },
+        {
+          value: 7,
+          label: "测试",
+          displayOrder: 7,
+        },
+      ],
+      label: "r1.职务",
+      type: "Option",
+    },
+    {
+      name: "r1.disabled",
+      label: "r1.是否禁用",
+      type: "Boolean",
+    },
+    {
+      name: "r1.mobilePhone",
+      label: "r1.手机号",
+      type: "Text",
+    },
+    {
+      name: "r1.email",
+      label: "r1.邮箱",
+      type: "Text",
+    },
+    {
+      name: "r1.tatp",
+      label: "r1.状态",
+      type: "Decimal",
+    },
+    {
+      name: "r1.aaaaaa",
+      optionData: [
+        {
+          value: "11",
+          displayOrder: 1,
+        },
+        {
+          value: "222",
+          displayOrder: 2,
+        },
+        {
+          value: "33",
+          displayOrder: 3,
+        },
+        {
+          value: "111",
+          displayOrder: 4,
+        },
+      ],
+      label: "r1.aaaaa",
+      type: "Tag",
+    },
+    {
+      name: "r1.xsxs",
+      label: "r1.xs",
+      type: "Boolean",
+    },
+    {
+      name: "r1.yonghuxingbie",
+      optionData: [
+        {
+          value: 1,
+          label: "男",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "女",
+          displayOrder: 2,
+        },
+      ],
+      label: "r1.用户性别",
+      type: "Option",
+    },
+    {
+      name: "createdBy.createdOn",
+      label: "创建用户.创建时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "createdBy.createdBy",
+      label: "创建用户.创建用户",
+      type: "Reference",
+    },
+    {
+      name: "createdBy.modifiedOn",
+      label: "创建用户.最近修改时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "createdBy.modifiedBy",
+      label: "创建用户.修改用户",
+      type: "Reference",
+    },
+    {
+      referTo: "User",
+      name: "createdBy.ownerUser",
+      label: "创建用户.所属用户",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "createdBy.ownerDepartment",
+      label: "创建用户.所属部门",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "createdBy.departmentId",
+      label: "创建用户.部门",
+      type: "Reference",
+    },
+    {
+      name: "createdBy.userName",
+      label: "创建用户.用户名称",
+      type: "Text",
+    },
+    {
+      name: "createdBy.loginName",
+      label: "创建用户.登录账号名",
+      type: "Text",
+    },
+    {
+      name: "createdBy.jobTitle",
+      optionData: [
+        {
+          value: 4,
+          label: "总监",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "主管",
+          displayOrder: 2,
+        },
+        {
+          value: 3,
+          label: "经理",
+          displayOrder: 3,
+        },
+        {
+          value: 5,
+          label: "部长",
+          displayOrder: 4,
+        },
+        {
+          value: 1,
+          label: "员工",
+          displayOrder: 5,
+        },
+        {
+          value: 6,
+          label: "a",
+          displayOrder: 6,
+        },
+        {
+          value: 7,
+          label: "测试",
+          displayOrder: 7,
+        },
+      ],
+      label: "创建用户.职务",
+      type: "Option",
+    },
+    {
+      name: "createdBy.disabled",
+      label: "创建用户.是否禁用",
+      type: "Boolean",
+    },
+    {
+      name: "createdBy.mobilePhone",
+      label: "创建用户.手机号",
+      type: "Text",
+    },
+    {
+      name: "createdBy.email",
+      label: "创建用户.邮箱",
+      type: "Text",
+    },
+    {
+      name: "createdBy.tatp",
+      label: "创建用户.状态",
+      type: "Decimal",
+    },
+    {
+      name: "createdBy.aaaaaa",
+      optionData: [
+        {
+          value: "11",
+          displayOrder: 1,
+        },
+        {
+          value: "222",
+          displayOrder: 2,
+        },
+        {
+          value: "33",
+          displayOrder: 3,
+        },
+        {
+          value: "111",
+          displayOrder: 4,
+        },
+      ],
+      label: "创建用户.aaaaa",
+      type: "Tag",
+    },
+    {
+      name: "createdBy.xsxs",
+      label: "创建用户.xs",
+      type: "Boolean",
+    },
+    {
+      name: "createdBy.yonghuxingbie",
+      optionData: [
+        {
+          value: 1,
+          label: "男",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "女",
+          displayOrder: 2,
+        },
+      ],
+      label: "创建用户.用户性别",
+      type: "Option",
+    },
+    {
+      name: "modifiedBy.createdOn",
+      label: "修改用户.创建时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "modifiedBy.createdBy",
+      label: "修改用户.创建用户",
+      type: "Reference",
+    },
+    {
+      name: "modifiedBy.modifiedOn",
+      label: "修改用户.最近修改时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "modifiedBy.modifiedBy",
+      label: "修改用户.修改用户",
+      type: "Reference",
+    },
+    {
+      referTo: "User",
+      name: "modifiedBy.ownerUser",
+      label: "修改用户.所属用户",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "modifiedBy.ownerDepartment",
+      label: "修改用户.所属部门",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "modifiedBy.departmentId",
+      label: "修改用户.部门",
+      type: "Reference",
+    },
+    {
+      name: "modifiedBy.userName",
+      label: "修改用户.用户名称",
+      type: "Text",
+    },
+    {
+      name: "modifiedBy.loginName",
+      label: "修改用户.登录账号名",
+      type: "Text",
+    },
+    {
+      name: "modifiedBy.jobTitle",
+      optionData: [
+        {
+          value: 4,
+          label: "总监",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "主管",
+          displayOrder: 2,
+        },
+        {
+          value: 3,
+          label: "经理",
+          displayOrder: 3,
+        },
+        {
+          value: 5,
+          label: "部长",
+          displayOrder: 4,
+        },
+        {
+          value: 1,
+          label: "员工",
+          displayOrder: 5,
+        },
+        {
+          value: 6,
+          label: "a",
+          displayOrder: 6,
+        },
+        {
+          value: 7,
+          label: "测试",
+          displayOrder: 7,
+        },
+      ],
+      label: "修改用户.职务",
+      type: "Option",
+    },
+    {
+      name: "modifiedBy.disabled",
+      label: "修改用户.是否禁用",
+      type: "Boolean",
+    },
+    {
+      name: "modifiedBy.mobilePhone",
+      label: "修改用户.手机号",
+      type: "Text",
+    },
+    {
+      name: "modifiedBy.email",
+      label: "修改用户.邮箱",
+      type: "Text",
+    },
+    {
+      name: "modifiedBy.tatp",
+      label: "修改用户.状态",
+      type: "Decimal",
+    },
+    {
+      name: "modifiedBy.aaaaaa",
+      optionData: [
+        {
+          value: "11",
+          displayOrder: 1,
+        },
+        {
+          value: "222",
+          displayOrder: 2,
+        },
+        {
+          value: "33",
+          displayOrder: 3,
+        },
+        {
+          value: "111",
+          displayOrder: 4,
+        },
+      ],
+      label: "修改用户.aaaaa",
+      type: "Tag",
+    },
+    {
+      name: "modifiedBy.xsxs",
+      label: "修改用户.xs",
+      type: "Boolean",
+    },
+    {
+      name: "modifiedBy.yonghuxingbie",
+      optionData: [
+        {
+          value: 1,
+          label: "男",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "女",
+          displayOrder: 2,
+        },
+      ],
+      label: "修改用户.用户性别",
+      type: "Option",
+    },
+    {
+      name: "ownerUser.createdOn",
+      label: "所属用户.创建时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "ownerUser.createdBy",
+      label: "所属用户.创建用户",
+      type: "Reference",
+    },
+    {
+      name: "ownerUser.modifiedOn",
+      label: "所属用户.最近修改时间",
+      type: "DateTime",
+    },
+    {
+      referTo: "User",
+      name: "ownerUser.modifiedBy",
+      label: "所属用户.修改用户",
+      type: "Reference",
+    },
+    {
+      referTo: "User",
+      name: "ownerUser.ownerUser",
+      label: "所属用户.所属用户",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "ownerUser.ownerDepartment",
+      label: "所属用户.所属部门",
+      type: "Reference",
+    },
+    {
+      referTo: "Department",
+      name: "ownerUser.departmentId",
+      label: "所属用户.部门",
+      type: "Reference",
+    },
+    {
+      name: "ownerUser.userName",
+      label: "所属用户.用户名称",
+      type: "Text",
+    },
+    {
+      name: "ownerUser.loginName",
+      label: "所属用户.登录账号名",
+      type: "Text",
+    },
+    {
+      name: "ownerUser.jobTitle",
+      optionData: [
+        {
+          value: 4,
+          label: "总监",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "主管",
+          displayOrder: 2,
+        },
+        {
+          value: 3,
+          label: "经理",
+          displayOrder: 3,
+        },
+        {
+          value: 5,
+          label: "部长",
+          displayOrder: 4,
+        },
+        {
+          value: 1,
+          label: "员工",
+          displayOrder: 5,
+        },
+        {
+          value: 6,
+          label: "a",
+          displayOrder: 6,
+        },
+        {
+          value: 7,
+          label: "测试",
+          displayOrder: 7,
+        },
+      ],
+      label: "所属用户.职务",
+      type: "Option",
+    },
+    {
+      name: "ownerUser.disabled",
+      label: "所属用户.是否禁用",
+      type: "Boolean",
+    },
+    {
+      name: "ownerUser.mobilePhone",
+      label: "所属用户.手机号",
+      type: "Text",
+    },
+    {
+      name: "ownerUser.email",
+      label: "所属用户.邮箱",
+      type: "Text",
+    },
+    {
+      name: "ownerUser.tatp",
+      label: "所属用户.状态",
+      type: "Decimal",
+    },
+    {
+      name: "ownerUser.aaaaaa",
+      optionData: [
+        {
+          value: "11",
+          displayOrder: 1,
+        },
+        {
+          value: "222",
+          displayOrder: 2,
+        },
+        {
+          value: "33",
+          displayOrder: 3,
+        },
+        {
+          value: "111",
+          displayOrder: 4,
+        },
+      ],
+      label: "所属用户.aaaaa",
+      type: "Tag",
+    },
+    {
+      name: "ownerUser.xsxs",
+      label: "所属用户.xs",
+      type: "Boolean",
+    },
+    {
+      name: "ownerUser.yonghuxingbie",
+      optionData: [
+        {
+          value: 1,
+          label: "男",
+          displayOrder: 1,
+        },
+        {
+          value: 2,
+          label: "女",
+          displayOrder: 2,
+        },
+      ],
+      label: "所属用户.用户性别",
+      type: "Option",
+    },
+    {
+      referTo: "Department",
+      name: "ownerDepartment.parentDepartmentId",
+      label: "所属部门.上级部门",
+      type: "Reference",
+    },
+    {
+      name: "ownerDepartment.departmentName",
+      label: "所属部门.部门名称",
+      type: "Text",
+    },
+    {
+      name: "ownerDepartment.description",
+      label: "所属部门.部门说明",
+      type: "TextArea",
+    },
+    {
+      referTo: "User",
+      name: "ownerDepartment.departmentOwnerUser",
+      label: "所属部门.部门负责人",
+      type: "Reference",
+    },
+  ];
+}

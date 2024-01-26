@@ -76,7 +76,7 @@
     },
     {
       "path": "checkRight",
-      "method": "get",
+      "method": "post",
       "process": "scripts.user.checkRight",
       "in": ["$qeury.id", "$qeury.rightType", "$qeury.entityName"],
       "out": {
