@@ -1,3 +1,5 @@
+const { loadEntityToYao } = Require("sys.yao");
+
 function getNavigationList() {
   return {
     chosenNavigationId: "0000015-e59c4f1910024a68ba545440e9a5971a",
@@ -55,8 +57,6 @@ function getNavigationList() {
   };
 }
 
-function saveUserLayoutCache(formData, cacheKey, cacheValue) {}
-
 /**
  * 获取实体布局配置
  *
@@ -68,26 +68,48 @@ function getLayoutList(entityName) {
   const [entity] = Process("models.sys.entity.get", {
     wheres: [{ column: "name", value: entityName }],
     withs: {
-      fields: {},
+      fieldSet: {},
     },
   });
 
   if (!entity) {
     throw Error(`Entity:${entityName} not exist`);
   }
-  // const data = [
-  //   {
-  //     isUpdatable: true,
-  //     fieldName: "xuanzegongyingshang",
-  //     isNameField: false,
-  //     fieldLabel: "选择供应商",
-  //     isNullable: false,
-  //     isCreatable: true,
-  //     fieldType: "Reference",
-  //     referenceName: "Gongyingshangguanli",
-  //   },
-  // ];
-  const fields = entity.fields.map((field) => {
+  loadEntityToYao("LayoutConfig");
+  let [layoutAllListConfig] = Process("models.layoutconfig.get", {
+    wheres: [
+      {
+        column: "shareTo",
+        value: "ALL",
+      },
+      {
+        column: "applyType",
+        value: "LIST",
+      },
+      {
+        column: "entityCode",
+        value: entity.entityCode,
+      },
+    ],
+  });
+  let [layoutSelfListConfig] = Process("models.layoutconfig.get", {
+    wheres: [
+      {
+        column: "shareTo",
+        value: "SELF",
+      },
+      {
+        column: "applyType",
+        value: "LIST",
+      },
+      {
+        column: "entityCode",
+        value: entity.entityCode,
+      },
+    ],
+  });
+
+  const fields = entity.fieldSet.map((field) => {
     return {
       isUpdatable: field.updatable,
       fieldName: field.name,
@@ -99,10 +121,23 @@ function getLayoutList(entityName) {
       referenceName: field.referTo?.replace(",", ""),
     };
   });
-  // let fieldsTitle = {}
-  // entity.fields.forEach((field) => {
-  //   fieldsTitle[field.name] = 200
-  // });
+  if (!layoutSelfListConfig) {
+    layoutSelfListConfig = {
+      applyType: "LIST",
+      entityCode: entity.entityCode,
+      shareTo: "SELF",
+      config: JSON.stringify(fields),
+    };
+  }
+  if (!layoutAllListConfig) {
+    layoutAllListConfig = {
+      applyType: "LIST",
+      entityCode: entity.entityCode,
+      shareTo: "ALL",
+      config: JSON.stringify(fields),
+    };
+  }
+
   return {
     FILTER: [],
     nameFieldName: entity.idFieldName,
@@ -112,19 +147,9 @@ function getLayoutList(entityName) {
     advFilter: null,
     idFieldName: entity.idFieldName,
     LIST: {
-      ALL: {
-        applyType: "LIST",
-        entityCode: entity.entityCode,
-        shareTo: "ALL",
-        config: JSON.stringify(fields),
-      },
-      SELF: {
-        applyType: "LIST",
-        entityCode: entity.entityCode,
-        shareTo: "SELF",
-        config: JSON.stringify(fields),
-      },
-      titleWidthForAll: null,//JSON.stringify(fieldsTitle),
+      ALL: layoutAllListConfig,
+      SELF: layoutSelfListConfig,
+      titleWidthForAll: null, //JSON.stringify(fieldsTitle),
     },
   };
 }
@@ -134,12 +159,53 @@ function getLayoutList(entityName) {
  * @param {*} applyType
  * @param {*} formModel
  */
-function saveConfig(recordId, applyType, formModel) {}
+function saveConfig(recordId, applyType2, formData) {
+  // applyType=LIST 列表设计
+  let { applyType, config, entityCode, shareTo, configName } = formData;
+  if (!applyType) {
+    applyType = applyType2;
+  }
+  // 自定义列表显示，shareTo = SELF
+  // 默认列表显示，shareTo = ALL
+  const [layoutConfig] = Process("models.layoutconfig.get", {
+    wheres: [
+      {
+        column: "shareTo",
+        value: shareTo,
+      },
+      {
+        column: "applyType",
+        value: applyType,
+      },
+      {
+        column: "entityCode",
+        value: entityCode,
+      },
+    ],
+  });
+  let idstr = null;
+  if (layoutConfig?.layoutConfigId) {
+    idstr = entityCode + "-" + layoutConfig?.layoutConfigId;
+  }
+  const configId = Process("scripts.curd.saveRecord", "LayoutConfig", idstr, {
+    configName,
+    config,
+    applyType,
+    entityCode,
+    shareTo,
+  });
+  // formModel = {"config":"[{\"isUpdatable\":false,\"fieldName\":\"yonghuId\",\"isNameField\":false,\"fieldLabel\":\"id主键\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"PrimaryKey\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]","entityCode":1532,"applyType":"LIST","shareTo":"ALL"}
+  return configId;
+}
 
 // 获取导航配置
 function getNavigationList() {}
 // 切换使用导航
-function saveUserLayoutCache(cacheKey, cacheValue) {}
+function saveUserLayoutCache(cacheKey, cacheValue) {
+  // cacheKey=LIST:TestUser&cacheValue=ALL
+  // cacheKey=LIST:TestUser&cacheValue=SELF
+  // Process("session.")
+}
 // 删除布局配置
 function deleteConfig(recordId) {}
 

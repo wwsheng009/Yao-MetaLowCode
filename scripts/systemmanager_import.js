@@ -1,13 +1,12 @@
-const { getEntityField } = Require("sys.lib");
+const { getEntityField, toCamelCase } = Require("sys.lib");
 const { updateEntityToYao } = Require("sys.yao");
 
 const cookie =
-  "Hm_lvt_ca92074d58ebd132682f48bca00a5176=1706161011; uid=%5Bobject%20Object%5D; JSESSIONID=9BA66CBD62050471881CEC63704EB179";
-
+  "Hm_lvt_ca92074d58ebd132682f48bca00a5176=1706161011; uid=%5Bobject%20Object%5D; JSESSIONID=1454718784EE3D5F1FD8A186C089B72A";
 /**
  * 下载实体定义
  *
- * yao run scripts.systemmanager_import.download
+ * yao run scripts.systemmanager_import.download 'LayoutConfig'
  * yao run scripts.systemmanager_import.download 'User'
  * @param {string|null} entityName
  */
@@ -39,6 +38,9 @@ function download(entityName) {
         name: "ApprovalConfig",
       },
       {
+        name: "LayoutConfig",
+      },
+      {
         name: "MetaApi",
       },
       {
@@ -49,7 +51,7 @@ function download(entityName) {
   console.log(`Entity count: ${list.length}`);
   let index = 0;
 
-  for (const entity of list) {
+  for (let entity of list) {
     const fname = `/entitys/${entity.name}.json`;
     if (Process("fs.system.Exists", fname)) {
       index++;
@@ -60,6 +62,8 @@ function download(entityName) {
 
     const fieldSet = getFieldList(entity.name, cookie);
     Object.assign(entity, { fieldSet: fieldSet });
+
+    entity = updateIdFieldName(entity);
     Process(
       "fs.system.WriteFile",
       `/entitys/${entity.name}.json`,
@@ -70,10 +74,28 @@ function download(entityName) {
     console.log(`${index}/${list.length}:${entity.name} download finished`);
     index++;
   }
-  if (!entityName) {
-    downloadOptionFields();
-    downloadTagFields();
+
+  downloadOptionFields(entityName);
+  downloadTagFields(entityName);
+  importEntity(entityName);
+}
+
+function updateIdFieldName(entity) {
+  if (entity.idFieldName) {
+    return entity;
   }
+  if (!entity.idFieldName) {
+    if (Array.isArray(entity.fieldSet)) {
+      const primaryField = entity.fieldSet.find((f) => f.type == "PrimaryKey");
+      if (primaryField) {
+        entity.idFieldName = primaryField.name;
+      }
+    }
+  }
+  if (!entity.idFieldName) {
+    entity.idFieldName = toCamelCase(entity.name) + "Id";
+  }
+  return entity;
 }
 
 function getEntityProps(entityName, cookie) {
@@ -113,7 +135,7 @@ function getFieldList(entityName, cookie) {
  * yao run scripts.systemmanager_import.downloadOptionFields
  * @returns
  */
-function downloadOptionFields() {
+function downloadOptionFields(entityName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
@@ -125,10 +147,14 @@ function downloadOptionFields() {
   );
   checkRespone(response);
 
-  const optionFields = response.data.data;
+  let optionFields = response.data.data;
   //   console.log("optionFields>>>>>>>>>",optionFields)
   let index = 0;
-
+  if (entityName) {
+    optionFields = optionFields.filter(
+      (option) => option.entityName === entityName
+    );
+  }
   for (const option of optionFields) {
     const fname = `/entitys/${option.entityName}.json`;
     let entityContent = Process("fs.system.ReadFile", fname);
@@ -190,7 +216,7 @@ function getOptionItems(entityName, field) {
  * yao run scripts.systemmanager_import.downloadTagFields
  * @returns
  */
-function downloadTagFields() {
+function downloadTagFields(entityName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
@@ -202,7 +228,11 @@ function downloadTagFields() {
   );
   checkRespone(response);
 
-  const tagFields = response.data.data;
+  let tagFields = response.data.data;
+
+  if (entityName) {
+    tagFields = tagFields.filter((option) => option.entityName === entityName);
+  }
   //   console.log("optionFields>>>>>>>>>",optionFields)
   let index = 0;
 
@@ -292,7 +322,7 @@ function importEntity(entityName) {
 
     let fieldSet = [...entityContent.fieldSet];
 
-    let entity = {...entityContent};
+    let entity = { ...entityContent };
     delete entity.fieldSet;
 
     // console.log("entity>>>>>>>>", entity);
@@ -324,6 +354,7 @@ function importEntity(entityName) {
       entity.mainEntity = entity.mainEntity.name;
     }
     delete entity.entityCode;
+    entity = updateIdFieldName(entity);
     const entityCode = Process("models.sys.entity.create", entity);
     Process("models.sys.entity.field.deletewhere", {
       wheres: [
@@ -348,8 +379,6 @@ function importEntity(entityName) {
       console.log("yaoModel>>>>>>>>>", yaoModel);
     }
     index++;
-    console.log(
-      `${index}/${fileList.length}:${entity.name} imported`
-    );
+    console.log(`${index}/${fileList.length}:${entity.name} imported`);
   }
 }

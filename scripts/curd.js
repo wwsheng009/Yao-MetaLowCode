@@ -57,14 +57,14 @@ function listQuery({
   if (!queryParam.select.includes(entity.idFieldName)) {
     queryParam.select.push(entity.idFieldName);
   }
-  console.log("queryParam data", queryParam);
+  // console.log("queryParam data", queryParam);
   let data = Process(
     `models.${mainEntity}.Paginate`,
     queryParam,
     pageNo || 1,
     pageSize || 10
   );
-  console.log("listQuery data", data);
+  // console.log("listQuery data", data);
   data.data &&
     data.data.forEach((line) => {
       line[entity.idFieldName] = `${entity.entityCode}-${
@@ -247,16 +247,41 @@ function refFieldQuery(
 
 function formUpdateQuery(entity, id) {}
 
+function formatCurrentTime() {
+  var now = new Date();
+  // Convert to ISO string and split into date and time parts
+  var dateTimeParts = now.toISOString().split("T"); // ["YYYY-MM-DD", "HH:MM:SS.sssZ"]
+  var datePart = dateTimeParts[0]; // "YYYY-MM-DD"
+  // Take the time part, remove milliseconds and timezone information, then split
+  var timePart = dateTimeParts[1].split(".")[0]; // "HH:MM:SS"
+  return datePart + " " + timePart;
+}
+
+/**
+ * create or update a entity record
+ *
+ * yao run scripts.curd.saveRecord
+ * @param {string} entityName
+ * @param {string} idstr
+ * @param {object} formModel
+ * @returns
+ */
 function saveRecord(entityName, idstr, formModel) {
+  if (!formModel || !typeof formModel == "object") {
+    throw Error(`更新数据，不正确的数据格式：${entityName}`);
+  }
   // const entity = getEntityByName(entityName);
   loadEntityToYao(entityName);
   if (!idstr) {
+    formModel = { ...formModel, createdOn: formatCurrentTime() };
     idstr = Process(`models.${entityName}.Create`, formModel);
   } else {
     const [entityCode, id] = idstr.split("-");
+    formModel = { ...formModel, modifiedOn: formatCurrentTime() };
+
     Process(`models.${entityName}.update`, id, formModel);
   }
-  return true;
+  return idstr;
   // return `${entity.entityCode}-${id}`;
 }
 function deleteRecord({ recordIds, cascades }) {
@@ -366,6 +391,9 @@ function queryEntityFields(
   queryReserved,
   firstReference
 ) {
+  queryReference = queryReference && queryReference !== "false";
+  queryReserved = queryReserved && queryReserved !== "false";
+  firstReference = firstReference && firstReference !== "false";
   // entityCode=1066&queryReference=true&queryReserved=true&_=1706357808358
   const row = Process("models.sys.entity.find", entityCode, {
     select: ["label", "name"],
@@ -393,19 +421,30 @@ function queryEntityFields(
   if (!row.fieldSet) {
     throw new Error(`实体 ${row.name} 存在异常，没有字段列表`);
   }
+  row.fieldSet = row.fieldSet.filter((field) => {
+    if (field.type === "PrimaryKey") {
+      return false;
+    }
+    if (!queryReserved && field.reserved === true) {
+      if (queryReference && field.type === "Reference") {
+        return true;
+      }
+      return false;
+    }
+    if (!queryReference && field.type === "Reference") {
+      if (queryReserved && field.reserved === true) {
+        return true;
+      }
+      return false;
+    }
+    return true;
+  });
 
-  // 排除保留字段
-  if (!queryReserved) {
-    row.fieldSet = row.fieldSet.filter(
-      (field) => !field.reserved || field.reserved !== true
-    );
-  }
-  // 剔除所有引用字段
-  if (!firstReference) {
-    row.fieldSet = row.fieldSet.filter((field) => field.type !== "Reference");
-  }
+  // console.log(row)
+
   let newFieldSet = row.fieldSet;
-  if (queryReference) {
+  let subFieldSet = [];
+  if (queryReference && queryReserved) {
     row.fieldSet.forEach((field) => {
       if (field.type === "Reference") {
         const entityName = field.referTo.split(",")[0];
@@ -413,31 +452,36 @@ function queryEntityFields(
         if (!entity.fieldSet) {
           throw new Error(`实体 ${entityName} 存在异常，没有字段列表`);
         }
-        console.log("entity>>>>>>>>",entity)
-        // 排除保留字段
-        if (!queryReserved) {
-          entity.fieldSet = entity.fieldSet.filter(
-            (f1) => !f1.reserved || f1.reserved !== true
-          );
-        }
-        // 剔除所有引用字段
-        if (!firstReference) {
-          entity.fieldSet = entity.fieldSet.filter(
-            (f1) => f1.type !== "Reference"
-          );
-        }
+        entity.fieldSet = entity.fieldSet.filter((f1) => {
+          if (field.type === "PrimaryKey") {
+            return false;
+          }
+          if (queryReserved == "false" && f1.reserved === true) {
+            if (queryReference == "true" && f1.type === "Reference") {
+              return true;
+            }
+            return false;
+          }
+          if (queryReference == "false" && f1.type === "Reference") {
+            if (queryReserved == "true" && f1.reserved === true) {
+              return true;
+            }
+            return false;
+          }
+          return true;
+        });
         entity.fieldSet.forEach((f1) => {
           f1.name = `${field.name}.${f1.name}`;
           f1.label = `${field.label}.${f1.label}`;
         });
-        newFieldSet = newFieldSet.concat(entity.fieldSet);
-
-        // const refEntity = getEntityByName(field.referTo.split(",")[0]);
-        // const refFields = queryEntityFields(refEntity.code, queryReference, queryReserved, firstReference);
-        // field.referenceFields = refFields;
+        subFieldSet = subFieldSet.concat(entity.fieldSet);
       }
     });
+    if (!firstReference) {
+      newFieldSet = newFieldSet.filter((f) => f.type !== "Reference");
+    }
   }
+  newFieldSet = newFieldSet.concat(subFieldSet);
 
   let fields = newFieldSet.map((field) => {
     return {
@@ -449,6 +493,7 @@ function queryEntityFields(
       isCreatable: field.creatable,
       fieldType: field.type,
       referenceName: field.referTo ? field.referTo.split(",")[0] : undefined,
+      reserved: field.reserved,
     };
   });
 
