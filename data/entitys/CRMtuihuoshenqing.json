@@ -1,0 +1,220 @@
+{
+    "idFieldName": "cRMtuihuoshenqingId",
+    "internalEntityFlag": false,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "listable": true,
+    "layoutable": true,
+    "tags": "CRM",
+    "name": "CRMtuihuoshenqing",
+    "label": "CRM退货申请",
+    "entityCode": 1194,
+    "assignable": false,
+    "nameField": "退货退款单编号",
+    "shareable": false,
+    "authorizable": true,
+    "mainEntity": null,
+    "physicalName": "t_crmtuihuoshenqing",
+    "fieldSet": [
+        {
+            "physicalName": "cRMtuihuoshenqingId",
+            "reserved": true,
+            "referTo": null,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "name": "cRMtuihuoshenqingId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "createdOn",
+            "idFieldFlag": false,
+            "creatable": false,
+            "name": "createdOn",
+            "updatable": false,
+            "label": "创建时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null
+        },
+        {
+            "updatable": false,
+            "label": "创建用户",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近修改时间"
+        },
+        {
+            "label": "修改用户",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "name": "ownerUser",
+            "updatable": false,
+            "label": "所属用户",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "referTo": "Department,",
+            "idFieldFlag": false
+        },
+        {
+            "label": "关联原合同",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_guanlianyuanhetong",
+            "reserved": false,
+            "name": "guanlianyuanhetong",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "CRMhetongdingdan,"
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_huanhuoyuanyin",
+            "reserved": false,
+            "name": "huanhuoyuanyin",
+            "updatable": true,
+            "label": "退货原因",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "optionList": [
+                {
+                    "key": "产品损坏",
+                    "value": 1
+                },
+                {
+                    "key": "质量问题",
+                    "value": 2
+                },
+                {
+                    "key": "发错产品",
+                    "value": 3
+                },
+                {
+                    "key": "其他",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "huanhuoshenqingshijian",
+            "label": "退货申请时间",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_huanhuoshenqingshijian",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Date"
+        },
+        {
+            "name": "huanhuoshenqingdanbianhao",
+            "label": "退货退款单编号",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_huanhuoshenqingdanbianhao"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_jingbanren",
+            "mainDetailFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "经办人",
+            "creatable": true,
+            "type": "Reference",
+            "reserved": false,
+            "referTo": "User,",
+            "name": "jingbanren"
+        },
+        {
+            "referTo": "Department,",
+            "label": "经办部门",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_jingbanbumen",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "name": "jingbanbumen"
+        },
+        {
+            "referTo": null,
+            "name": "tuihuozongjinuan",
+            "updatable": true,
+            "label": "退货总金额/元",
+            "type": "Money",
+            "nameFieldFlag": false,
+            "physicalName": "c_tuihuozongjinuan",
+            "reserved": false,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

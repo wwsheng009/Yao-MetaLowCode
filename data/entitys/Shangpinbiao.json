@@ -1,0 +1,134 @@
+{
+    "internalEntityFlag": false,
+    "entityCode": 1241,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "shangpinbiaoId",
+    "tags": "",
+    "name": "Shangpinbiao",
+    "label": "商品表",
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "shareable": false,
+    "mainEntity": null,
+    "physicalName": "t_shangpinbiao",
+    "assignable": false,
+    "authorizable": true,
+    "nameField": null,
+    "fieldSet": [
+        {
+            "physicalName": "shangpinbiaoId",
+            "referTo": null,
+            "name": "shangpinbiaoId",
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": true,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "label": "创建时间",
+            "physicalName": "createdOn",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "createdOn"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "creatable": false,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "ownerUser",
+            "updatable": false,
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "name": "ownerDepartment",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "referTo": "Department,",
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "updatable": true,
+            "label": "商品类型",
+            "creatable": true,
+            "type": "Option",
+            "reserved": false,
+            "physicalName": "c_shangpinleixing",
+            "referTo": null,
+            "name": "shangpinleixing",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "服装",
+                    "value": 1
+                },
+                {
+                    "key": "食品",
+                    "value": 2
+                }
+            ]
+        }
+    ]
+}

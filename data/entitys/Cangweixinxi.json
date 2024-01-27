@@ -1,0 +1,1452 @@
+{
+    "listable": true,
+    "name": "Cangweixinxi",
+    "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "idFieldName": "cangweixinxiId",
+    "internalEntityFlag": false,
+    "tags": "进销存",
+    "label": "仓位信息",
+    "entityCode": 1007,
+    "mainEntity": {
+        "detailEntitySet": [
+            {
+                "name": "Cangweixinxi",
+                "label": "仓位信息"
+            }
+        ],
+        "label": "仓库管理",
+        "physicalName": "t_cangkuguanli",
+        "entityCode": 1006,
+        "detailEntityFlag": false,
+        "layoutable": true,
+        "listable": true,
+        "shareable": false,
+        "sortedFieldSet": [
+            {
+                "entityCode": 1006,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "creatable": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-ec19ef1fe28d4415b2ca7dd3cd65d535",
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "type": "PrimaryKey",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "cangkuguanliId",
+                "label": "id主键",
+                "nullable": false,
+                "name": "cangkuguanliId"
+            },
+            {
+                "physicalName": "c_cangkumingcheng",
+                "nameFieldFlag": true,
+                "referTo": null,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "type": "Text",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-8179d474ad7c4403920cdaf3285e889f",
+                "entityCode": 1006,
+                "description": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "name": "cangkumingcheng",
+                "label": "仓库名称",
+                "nullable": false,
+                "idFieldFlag": false
+            },
+            {
+                "label": "仓库编码",
+                "physicalName": "c_cangkubianma",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "nullable": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-309581392b2e45b887b30bbaa5f09a0d",
+                "entityCode": 1006,
+                "type": "Text",
+                "description": null,
+                "defaultMemberOfListFlag": true,
+                "name": "cangkubianma",
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "displayOrder": 0,
+                "updatable": true
+            },
+            {
+                "entityCode": 1006,
+                "owner": {
+                    "label": "仓库管理",
+                    "name": "Cangkuguanli"
+                },
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [],
+                "fieldId": "0000002-5ad3ef6c80b140b3923bc862c73d8044",
+                "description": null,
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                },
+                "label": "仓库地区",
+                "type": "AreaSelect",
+                "nullable": false,
+                "creatable": true,
+                "name": "cangkudizhi",
+                "physicalName": "c_cangkudizhi",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null
+            },
+            {
+                "physicalName": "c_cangkurongliang",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "type": "Text",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-a00e39588f8a4d13aa688bb9dc758d45",
+                "entityCode": 1006,
+                "name": "cangkurongliang",
+                "label": "仓库容量/立方",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": null
+            },
+            {
+                "fieldId": "0000002-351f1a0f3ba045429bb019f839b262c4",
+                "entityCode": 1006,
+                "label": "仓库性质",
+                "physicalName": "c_cangkuxingzhi",
+                "creatable": true,
+                "idFieldFlag": false,
+                "type": "Option",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "cangkuxingzhi",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "nullable": false,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": null
+            },
+            {
+                "type": "Boolean",
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "physicalName": "c_cangkuzhuangtai",
+                "nullable": false,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "displayOrder": 0,
+                "entityCode": 1006,
+                "label": "仓库状态",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-264d249dd531457aa862b5758ee345d6",
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "name": "cangkuzhuangtai"
+            },
+            {
+                "fieldId": "0000002-b2c779f5130946b4976d2a6cc7dc4819",
+                "entityCode": 1006,
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "name": "cangkuzhuguan",
+                "physicalName": "c_cangkuzhuguan",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "description": null,
+                "nullable": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "label": "仓库主管",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "type": "Reference",
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle",
+                            "mobilePhone",
+                            "email"
+                        ],
+                        "entityName": "User"
+                    }
+                ]
+            },
+            {
+                "name": "lianxidianhua",
+                "description": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "label": "联系电话",
+                "type": "Text",
+                "displayOrder": 0,
+                "updatable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-7622bc4d17ad4127bb88271b1d87199b",
+                "entityCode": 1006,
+                "physicalName": "c_lianxidianhua",
+                "creatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                }
+            },
+            {
+                "label": "备注信息",
+                "physicalName": "c_beizhuxinxi",
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-60b0a9708884463cb67f24a199da3831",
+                "entityCode": 1006,
+                "name": "beizhuxinxi",
+                "owner": {
+                    "label": "仓库管理",
+                    "name": "Cangkuguanli"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "type": "TextArea",
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "physicalName": "c_jutidizhi",
+                "description": null,
+                "nullable": false,
+                "updatable": true,
+                "referTo": null,
+                "fieldId": "0000002-f6f5ddc4f95c414ea402ba3f7448f6f8",
+                "entityCode": 1006,
+                "type": "Text",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "jutidizhi",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "label": "具体地址",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "creatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                }
+            },
+            {
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-f5edce12277b48df8bbf725cd9ecf32b",
+                "entityCode": 1006,
+                "name": "zongrukushuliang",
+                "displayOrder": 0,
+                "updatable": true,
+                "referenceSetting": null,
+                "label": "总入库数量",
+                "physicalName": "c_zongrukushuliang",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "type": "Integer",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minValue": -999999999,
+                    "validators": [],
+                    "maxValue": 999999999
+                }
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-fe28c501b9b64b3386af2dc092bf5222",
+                "entityCode": 1006,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "displayOrder": 0,
+                "referTo": null,
+                "name": "zongchukushuliang",
+                "label": "总出库数量",
+                "physicalName": "c_zongchukushuliang",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "type": "Integer",
+                "creatable": true,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "referenceSetting": null,
+                "label": "当前库存数",
+                "physicalName": "c_dangqiankucunshu",
+                "type": "Integer",
+                "entityCode": 1006,
+                "nullable": true,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-4791ccde7d074cb48172f04d098f07ce",
+                "name": "dangqiankucunshu",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                }
+            },
+            {
+                "type": "Integer",
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-85da616bca444858b2dfe6db879e74c3",
+                "name": "kucundongjieshuliang",
+                "label": "库存冻结数量",
+                "referTo": null,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "entityCode": 1006,
+                "physicalName": "c_kucundongjieshuliang",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "updatable": true
+            },
+            {
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "fieldId": "0000002-ec86523ca17846ca800bcbf6fb2141b1",
+                "label": "当前可用库存数量",
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1006,
+                "physicalName": "c_dangqiankeyongkucunshuliang",
+                "updatable": true,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "referTo": null,
+                "description": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "dangqiankeyongkucunshuliang",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "type": "Integer"
+            },
+            {
+                "description": null,
+                "idFieldFlag": false,
+                "name": "createdOn",
+                "physicalName": "createdOn",
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1006,
+                "label": "创建时间",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "type": "DateTime",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-3f2def7d4744436fa998f12276c135ef",
+                "referenceSetting": null
+            },
+            {
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-414d146d02fe45b2b2e4d8bafba6df50",
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "description": null,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "label": "创建用户",
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": false,
+                "fieldViewModel": null,
+                "entityCode": 1006,
+                "nullable": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "name": "createdBy"
+            },
+            {
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "nullable": true,
+                "creatable": false,
+                "updatable": false,
+                "fieldId": "0000002-bba393f31a2e41538800c472bae9afe6",
+                "entityCode": 1006,
+                "type": "DateTime",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "name": "modifiedOn",
+                "label": "最近修改时间",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "physicalName": "modifiedOn",
+                "description": null,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1006,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "mainDetailFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-1a5a54fa96b342fe99a320f0eef092ca",
+                "label": "修改用户",
+                "type": "Reference",
+                "updatable": false,
+                "idFieldFlag": false,
+                "name": "modifiedBy",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-423d5ddc940841be8637a8398e45f76e",
+                "entityCode": 1006,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "physicalName": "ownerUser",
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "name": "ownerUser",
+                "type": "Reference",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "所属用户",
+                "displayOrder": 0
+            },
+            {
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-e20227fa1c494615ba97a6448470be28",
+                "owner": {
+                    "label": "仓库管理",
+                    "name": "Cangkuguanli"
+                },
+                "description": null,
+                "name": "ownerDepartment",
+                "updatable": false,
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "type": "Reference",
+                "entityCode": 1006,
+                "referenceSetting": null
+            }
+        ],
+        "authorizable": true,
+        "fieldSet": [
+            {
+                "label": "id主键",
+                "physicalName": "cangkuguanliId",
+                "type": "PrimaryKey",
+                "creatable": false,
+                "entityCode": 1006,
+                "nullable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-ec19ef1fe28d4415b2ca7dd3cd65d535",
+                "displayOrder": 0,
+                "updatable": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "description": null,
+                "idFieldFlag": true,
+                "referTo": null,
+                "name": "cangkuguanliId"
+            },
+            {
+                "physicalName": "createdOn",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1006,
+                "name": "createdOn",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "nullable": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-3f2def7d4744436fa998f12276c135ef",
+                "label": "创建时间",
+                "description": null,
+                "creatable": false
+            },
+            {
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "label": "创建用户",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "nullable": false,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "name": "createdBy",
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "mainDetailFieldFlag": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-414d146d02fe45b2b2e4d8bafba6df50",
+                "entityCode": 1006,
+                "description": null,
+                "updatable": false
+            },
+            {
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "idFieldFlag": false,
+                "entityCode": 1006,
+                "label": "最近修改时间",
+                "description": null,
+                "referTo": null,
+                "referenceSetting": null,
+                "type": "DateTime",
+                "displayOrder": 0,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-bba393f31a2e41538800c472bae9afe6",
+                "name": "modifiedOn",
+                "physicalName": "modifiedOn",
+                "nullable": true,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "updatable": false,
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "修改用户",
+                "nullable": true,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "type": "Reference",
+                "entityCode": 1006,
+                "name": "modifiedBy",
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-1a5a54fa96b342fe99a320f0eef092ca"
+            },
+            {
+                "entityCode": 1006,
+                "nullable": false,
+                "name": "ownerUser",
+                "physicalName": "ownerUser",
+                "displayOrder": 0,
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-423d5ddc940841be8637a8398e45f76e",
+                "label": "所属用户",
+                "type": "Reference",
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ]
+            },
+            {
+                "entityCode": 1006,
+                "displayOrder": 0,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "physicalName": "ownerDepartment",
+                "description": null,
+                "referenceSetting": null,
+                "label": "所属部门",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "type": "Reference",
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-e20227fa1c494615ba97a6448470be28",
+                "name": "ownerDepartment",
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ]
+            },
+            {
+                "name": "cangkumingcheng",
+                "owner": {
+                    "label": "仓库管理",
+                    "name": "Cangkuguanli"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "fieldId": "0000002-8179d474ad7c4403920cdaf3285e889f",
+                "entityCode": 1006,
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "c_cangkumingcheng",
+                "type": "Text",
+                "description": null,
+                "nameFieldFlag": true,
+                "label": "仓库名称",
+                "nullable": false
+            },
+            {
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1006,
+                "label": "仓库编码",
+                "creatable": true,
+                "updatable": true,
+                "referTo": null,
+                "fieldId": "0000002-309581392b2e45b887b30bbaa5f09a0d",
+                "type": "Text",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "name": "cangkubianma",
+                "physicalName": "c_cangkubianma",
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "referenceSetting": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": [],
+                "fieldId": "0000002-5ad3ef6c80b140b3923bc862c73d8044",
+                "name": "cangkudizhi",
+                "type": "AreaSelect",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "entityCode": 1006,
+                "label": "仓库地区",
+                "physicalName": "c_cangkudizhi",
+                "updatable": true,
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "areaDataType": 2,
+                    "validators": []
+                }
+            },
+            {
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1006,
+                "name": "cangkurongliang",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-a00e39588f8a4d13aa688bb9dc758d45",
+                "label": "仓库容量/立方",
+                "physicalName": "c_cangkurongliang",
+                "displayOrder": 0,
+                "referTo": null,
+                "referenceSetting": null,
+                "type": "Text",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "nullable": false,
+                "fieldViewModel": null,
+                "type": "Option",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "name": "cangkuxingzhi",
+                "label": "仓库性质",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-351f1a0f3ba045429bb019f839b262c4",
+                "physicalName": "c_cangkuxingzhi",
+                "description": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "entityCode": 1006
+            },
+            {
+                "description": null,
+                "nullable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "type": "Boolean",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_cangkuzhuangtai",
+                "entityCode": 1006,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "updatable": true,
+                "fieldId": "0000002-264d249dd531457aa862b5758ee345d6",
+                "label": "仓库状态",
+                "creatable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "name": "cangkuzhuangtai"
+            },
+            {
+                "entityCode": 1006,
+                "label": "仓库主管",
+                "physicalName": "c_cangkuzhuguan",
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-b2c779f5130946b4976d2a6cc7dc4819",
+                "type": "Reference",
+                "owner": {
+                    "label": "仓库管理",
+                    "name": "Cangkuguanli"
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "cangkuzhuguan",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle",
+                            "mobilePhone",
+                            "email"
+                        ]
+                    }
+                ],
+                "description": null
+            },
+            {
+                "entityCode": 1006,
+                "type": "Text",
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "idFieldFlag": false,
+                "fieldId": "0000002-7622bc4d17ad4127bb88271b1d87199b",
+                "name": "lianxidianhua",
+                "label": "联系电话",
+                "physicalName": "c_lianxidianhua",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                }
+            },
+            {
+                "fieldId": "0000002-60b0a9708884463cb67f24a199da3831",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "type": "TextArea",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "beizhuxinxi",
+                "label": "备注信息",
+                "physicalName": "c_beizhuxinxi",
+                "referTo": null,
+                "updatable": true,
+                "referenceSetting": null,
+                "entityCode": 1006,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                }
+            },
+            {
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "fieldId": "0000002-f6f5ddc4f95c414ea402ba3f7448f6f8",
+                "name": "jutidizhi",
+                "physicalName": "c_jutidizhi",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "creatable": true,
+                "nameFieldFlag": false,
+                "entityCode": 1006,
+                "mainDetailFieldFlag": false,
+                "type": "Text",
+                "nullable": false,
+                "updatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "referenceSetting": null,
+                "label": "具体地址"
+            },
+            {
+                "label": "总入库数量",
+                "updatable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "entityCode": 1006,
+                "type": "Integer",
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-f5edce12277b48df8bbf725cd9ecf32b",
+                "name": "zongrukushuliang",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "c_zongrukushuliang",
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "updatable": true,
+                "entityCode": 1006,
+                "physicalName": "c_zongchukushuliang",
+                "nullable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-fe28c501b9b64b3386af2dc092bf5222",
+                "type": "Integer",
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "minValue": -999999999,
+                    "validators": [],
+                    "maxValue": 999999999
+                },
+                "name": "zongchukushuliang",
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "description": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "label": "总出库数量"
+            },
+            {
+                "fieldId": "0000002-4791ccde7d074cb48172f04d098f07ce",
+                "name": "dangqiankucunshu",
+                "label": "当前库存数",
+                "nullable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "c_dangqiankucunshu",
+                "type": "Integer",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1006,
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Cangkuguanli",
+                    "label": "仓库管理"
+                },
+                "creatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-85da616bca444858b2dfe6db879e74c3",
+                "name": "kucundongjieshuliang",
+                "label": "库存冻结数量",
+                "physicalName": "c_kucundongjieshuliang",
+                "type": "Integer",
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "owner": {
+                    "label": "仓库管理",
+                    "name": "Cangkuguanli"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "entityCode": 1006,
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "referenceSetting": null,
+                "physicalName": "c_dangqiankeyongkucunshuliang",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-ec86523ca17846ca800bcbf6fb2141b1",
+                "label": "当前可用库存数量",
+                "nullable": true,
+                "creatable": true,
+                "entityCode": 1006,
+                "name": "dangqiankeyongkucunshuliang",
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referTo": null,
+                "owner": {
+                    "label": "仓库管理",
+                    "name": "Cangkuguanli"
+                },
+                "type": "Integer",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false
+            }
+        ],
+        "virtualFieldSet": [],
+        "entityId": "0000001-e125cf5f782f42bbb26b2c012778e790",
+        "name": "Cangkuguanli",
+        "assignable": false,
+        "idField": {
+            "name": "cangkuguanliId",
+            "label": "id主键"
+        },
+        "nameField": {
+            "name": "cangkumingcheng",
+            "label": "仓库名称"
+        },
+        "tags": "进销存",
+        "mainEntity": null,
+        "mainDetailField": null,
+        "fieldNames": [
+            "cangkuguanliId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "cangkumingcheng",
+            "cangkubianma",
+            "cangkudizhi",
+            "cangkurongliang",
+            "cangkuxingzhi",
+            "cangkuzhuangtai",
+            "cangkuzhuguan",
+            "lianxidianhua",
+            "beizhuxinxi",
+            "jutidizhi",
+            "zongrukushuliang",
+            "zongchukushuliang",
+            "dangqiankucunshu",
+            "kucundongjieshuliang",
+            "dangqiankeyongkucunshuliang"
+        ]
+    },
+    "physicalName": "t_cangweixinxi",
+    "authorizable": false,
+    "shareable": false,
+    "nameField": null,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "label": "id主键",
+            "creatable": false,
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": true,
+            "physicalName": "cangweixinxiId",
+            "reserved": true,
+            "name": "cangweixinxiId",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "createdOn",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false
+        },
+        {
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "createdBy",
+            "reserved": true,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "name": "modifiedOn",
+            "updatable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "type": "DateTime"
+        },
+        {
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "creatable": true,
+            "physicalName": "mdCangkuguanliId",
+            "referTo": "Cangkuguanli,",
+            "name": "mdCangkuguanliId",
+            "updatable": false,
+            "label": "主从关联Id"
+        },
+        {
+            "referTo": null,
+            "updatable": true,
+            "label": "仓位序号",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_cangweixuhao",
+            "reserved": false,
+            "name": "cangweixuhao",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text"
+        },
+        {
+            "name": "cangweirongliang",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "仓位容量/立方",
+            "creatable": true,
+            "type": "Text",
+            "physicalName": "c_cangweirongliang",
+            "referTo": null
+        },
+        {
+            "nameFieldFlag": false,
+            "updatable": true,
+            "label": "仓位备注",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_cangweibeizhu",
+            "reserved": false,
+            "referTo": null,
+            "name": "cangweibeizhu",
+            "idFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "label": "仓位状态",
+            "type": "Option",
+            "physicalName": "c_cangweizhuangtai",
+            "name": "cangweizhuangtai",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "启用",
+                    "value": 1
+                },
+                {
+                    "key": "禁用",
+                    "value": 2
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,467 @@
+{
+    "layoutable": true,
+    "tags": "WMS",
+    "label": "WMS供应商信息",
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "listable": true,
+    "idFieldName": "wMSgongyingshangxinxiId",
+    "internalEntityFlag": false,
+    "name": "WMSgongyingshangxinxi",
+    "entityCode": 1021,
+    "assignable": false,
+    "shareable": false,
+    "nameField": "供应商名称",
+    "authorizable": true,
+    "physicalName": "t_wmsgongyingshangxinxi",
+    "mainEntity": null,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "physicalName": "wMSgongyingshangxinxiId",
+            "reserved": true,
+            "referTo": null,
+            "name": "wMSgongyingshangxinxiId",
+            "idFieldFlag": true,
+            "label": "id主键"
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "physicalName": "createdOn",
+            "reserved": true,
+            "label": "创建时间",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "updatable": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "createdBy"
+        },
+        {
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn"
+        },
+        {
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedBy",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "referTo": "User,"
+        },
+        {
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "ownerUser",
+            "updatable": false,
+            "label": "所属用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerUser"
+        },
+        {
+            "physicalName": "ownerDepartment",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "label": "供应商编码",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "updatable": true,
+            "type": "Text",
+            "physicalName": "c_gongyingshangbianma",
+            "referTo": null,
+            "name": "gongyingshangbianma"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "gongyingshangmingcheng",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_gongyingshangmingcheng",
+            "updatable": true,
+            "label": "供应商名称"
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "label": "供应商分类",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_gongyingshangfenlei",
+            "reserved": false,
+            "name": "gongyingshangfenlei",
+            "updatable": true,
+            "idFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "成品供应商",
+                    "value": 1
+                },
+                {
+                    "key": "零件供应商",
+                    "value": 2
+                },
+                {
+                    "key": "集合供应商",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "updatable": true,
+            "label": "供应商等级",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "gongyingshangdengji",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_gongyingshangdengji",
+            "reserved": false,
+            "idFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "一级供应商",
+                    "value": 1
+                },
+                {
+                    "key": "二级供应商",
+                    "value": 2
+                },
+                {
+                    "key": "三级供应商",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "creatable": true,
+            "type": "Date",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "签约开始日期",
+            "physicalName": "c_qianyuekaishiriqi",
+            "name": "qianyuekaishiriqi",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_qianyuejieshuriqi",
+            "reserved": false,
+            "referTo": null,
+            "name": "qianyuejieshuriqi",
+            "label": "签约结束日期",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Date"
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_jiesuanqixian",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "结算期限",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "jiesuanqixian",
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "月结",
+                    "value": 1
+                },
+                {
+                    "key": "季结",
+                    "value": 2
+                },
+                {
+                    "key": "现结",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Money",
+            "nameFieldFlag": false,
+            "physicalName": "c_xinyongeduyuan",
+            "name": "xinyongeduyuan",
+            "label": "信用额度/元",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_caigoufuzeren",
+            "name": "caigoufuzeren",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": "User,",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "采购负责人"
+        },
+        {
+            "nameFieldFlag": false,
+            "label": "采购归属部门",
+            "mainDetailFieldFlag": false,
+            "type": "Reference",
+            "physicalName": "c_caigouguishubumen",
+            "reserved": false,
+            "referTo": "Department,",
+            "name": "caigouguishubumen",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "合同附件",
+            "physicalName": "c_hetongfujian",
+            "referTo": null,
+            "name": "hetongfujian",
+            "type": "File"
+        },
+        {
+            "physicalName": "c_gongyingshangdizhi",
+            "referTo": null,
+            "label": "供应商地址",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "gongyingshangdizhi",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "AreaSelect",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "creatable": true,
+            "type": "TextArea",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "供应商详细地址",
+            "physicalName": "c_gongyingshangxiangxidizhi",
+            "name": "gongyingshangxiangxidizhi",
+            "updatable": true
+        },
+        {
+            "physicalName": "c_fapiaotaitou",
+            "name": "fapiaotaitou",
+            "type": "Text",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "发票抬头",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false
+        },
+        {
+            "name": "fapiaoshuihao",
+            "creatable": true,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "发票税号",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_fapiaoshuihao"
+        },
+        {
+            "physicalName": "c_shuizhong",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "shuizhong",
+            "updatable": true,
+            "label": "税种",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "增值税专用发票",
+                    "value": 1
+                },
+                {
+                    "key": "增值税普通发票",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "zengzhishuishuil",
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_zengzhishuishuil",
+            "referTo": null,
+            "updatable": true,
+            "label": "增值税税率 %",
+            "type": "Percent"
+        },
+        {
+            "reserved": false,
+            "name": "kaihuyinhang",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_kaihuyinhang",
+            "referTo": null,
+            "updatable": true,
+            "label": "开户银行",
+            "creatable": true,
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "中国银行",
+                    "value": 1
+                },
+                {
+                    "key": "招商银行",
+                    "value": 2
+                },
+                {
+                    "key": "建设银行",
+                    "value": 3
+                },
+                {
+                    "key": "工商银行",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_yinhangzhanghao",
+            "reserved": false,
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "yinhangzhanghao",
+            "idFieldFlag": false,
+            "label": "银行账号",
+            "type": "Text"
+        },
+        {
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_lianxirenxingming",
+            "reserved": false,
+            "updatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "lianxirenxingming",
+            "label": "联系人姓名",
+            "creatable": true
+        },
+        {
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "physicalName": "c_lianxirenshouji",
+            "reserved": false,
+            "referTo": null,
+            "name": "lianxirenshouji",
+            "idFieldFlag": false,
+            "label": "联系人手机",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "label": "联系人职位",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_lianxirenzhiwei",
+            "name": "lianxirenzhiwei",
+            "updatable": true
+        }
+    ]
+}

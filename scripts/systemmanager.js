@@ -1,6 +1,7 @@
-const { UnderscoreName } = Require("sys.lib");
+const { UnderscoreName, toCamelCase,getEntityField } = Require("sys.lib");
 
 const { updateEntityToYao } = Require("sys.yao");
+
 /**
  * get all tags of entitys
  *
@@ -113,14 +114,14 @@ function getFieldSet(entity) {
       },
     ],
     withs: {
-      fields: {
+      fieldSet: {
         query: {
           select: ["reserved", "name", "label", "type"],
         },
       },
     },
   });
-  return row?.fields || [];
+  return row?.fieldSet || [];
 
   // return [
   //   {
@@ -150,18 +151,18 @@ function getFieldListOfEntity(entity) {
   const [row] = Process("models.sys.entity.get", {
     wheres: wheres,
     withs: {
-      fields: {},
+      fieldSet: {},
     },
   });
   if (row == null) {
     throw new Error(`Entity ${entity} 不存在`);
   }
-  // row.fields.forEach((field) => {
+  // row.fieldSet.forEach((field) => {
   //   if (field.referTo) {
   //     field.referTo = JSON.parse(field.referTo);
   //   }
   // });
-  return row.fields;
+  return row.fieldSet;
 
   // /**
   //  * 实体主键由实体名称+Id组成
@@ -263,17 +264,18 @@ function getFieldListOfEntity(entity) {
 }
 
 function getMDFieldList(entityName) {
-
   const [entity] = Process("models.sys.entity.get", {
     select: ["name"],
-    wheres:[{
-      column:"name",
-      value:entityName,
-    }],
+    wheres: [
+      {
+        column: "name",
+        value: entityName,
+      },
+    ],
     withs: {
-      fields: {
+      fieldSet: {
         query: {
-          select: ["name", "label","type"],
+          select: ["name", "label", "type"],
         },
       },
     },
@@ -286,7 +288,7 @@ function getMDFieldList(entityName) {
         cloudStorage: "false",
       },
     ],
-    fieldList: entity.fields
+    fieldSet: entity.fieldSet,
     //  [
     //   {
     //     name: "entity2Id",
@@ -401,7 +403,7 @@ function addField(field, entity) {
   if (row == null) {
     throw new Error(`Entity ${entity} 不存在`);
   }
-  const fieldData = getEntityField(field.name, entity);
+  const fieldData = getEntityField(entity,field.name);
   if (fieldData.fieldId) {
     // return { code: 300, message: `字段：${field.name} 已经存在` };
     throw new Error(`字段：${field.name} 已经存在`);
@@ -409,10 +411,10 @@ function addField(field, entity) {
   const entityCode = row.entityCode;
   field.entityCode = entityCode;
   field.physicalName = field.name;
-  field.owner = {
-    name: row.name,
-    label: row.label,
-  };
+  // field.owner = {
+  //   name: row.name,
+  //   label: row.label,
+  // };
   const id = Process("models.sys.entity.field.create", field);
 
   updateEntityToYao(entity);
@@ -423,10 +425,10 @@ function addField(field, entity) {
     // name: "check",
     // label: "检查",
     // physicalName: "c_check", //用户创建的字段会增加c_的前缀
-    // owner: {
-    //   name: "Abca", //关联的实体名称
-    //   label: "abc", //实体的描述
-    // },
+    owner: {
+      name: row.name,
+      label: row.label,
+    },
     // type: "Boolean",
     description: null,
     displayOrder: 0,
@@ -445,38 +447,7 @@ function addField(field, entity) {
     ...field,
   };
 }
-/**
- * get field by name
- * @param {string} field
- * @param {string} entity
- * @returns
- */
-function getEntityField(field, entity) {
-  const [row] = Process("models.sys.entity.get", {
-    wheres: [
-      {
-        column: "name",
-        value: entity,
-      },
-    ],
-    withs: {
-      fields: {
-        query: {
-          wheres: [
-            {
-              column: "name",
-              value: field,
-            },
-          ],
-        },
-      },
-    },
-  });
-  if (row && row.fields?.length) {
-    return row.fields[0];
-  }
-  return {};
-}
+
 /**
  * update a field definition
  * @param {object} field
@@ -495,7 +466,7 @@ function updateField(field, entity) {
   //   referenceSetting: [],
   // };
 
-  const Field = getEntityField(field.name, entity);
+  const Field = getEntityField(entity,field.name);
   if (Field.fieldId) {
     Process("models.sys.entity.field.update", Field.fieldId, field);
     updateEntityToYao(entity);
@@ -529,6 +500,9 @@ function createEntity(entity, mainEntity) {
   // };
   delete entity.entityCode;
 
+  if (mainEntity) {
+    entity.mainEntity = mainEntity;
+  }
   const entityName = entity.name;
   const entityLabel = entity.label;
 
@@ -544,22 +518,21 @@ function createEntity(entity, mainEntity) {
   if (one != null) {
     return { code: 500, error: "实体已存在!", message: null, data: null };
   }
-  // add default fields
+  // add default fieldSet
   const tableName = UnderscoreName(entity.name);
-  const idFieldName = entity.name.toLowerCase() + "Id";
+  const idFieldName = toCamelCase(entity.name) + "Id";
   const idFieldLabel = "id主键";
 
   entity.idFieldName = idFieldName;
 
   entity.physicalName = tableName;
 
-  const id = Process("models.sys.entity.create", entity);
+  const entityCode = Process("models.sys.entity.create", entity);
 
   const owner = {
     name: entityName,
     label: entityLabel,
   };
-  const entityCode = id;
 
   const idField = {
     // fieldId: null,
@@ -567,7 +540,7 @@ function createEntity(entity, mainEntity) {
     name: idFieldName,
     label: idFieldLabel,
     physicalName: idFieldName,
-    owner,
+    // owner,
     type: "PrimaryKey",
     description: null,
     displayOrder: 0,
@@ -590,7 +563,7 @@ function createEntity(entity, mainEntity) {
     name: "createdOn",
     label: "创建时间",
     physicalName: "createdOn",
-    owner,
+    // owner,
     type: "DateTime",
     description: null,
     displayOrder: 0,
@@ -613,7 +586,7 @@ function createEntity(entity, mainEntity) {
     name: "createdBy",
     label: "创建用户",
     physicalName: "createdBy",
-    owner,
+    // owner,
     type: "Reference",
     description: null,
     displayOrder: 0,
@@ -635,7 +608,7 @@ function createEntity(entity, mainEntity) {
     name: "modifiedOn",
     label: "最近修改时间",
     physicalName: "modifiedOn",
-    owner,
+    // owner,
     type: "DateTime",
     description: null,
     displayOrder: 0,
@@ -657,7 +630,7 @@ function createEntity(entity, mainEntity) {
     name: "modifiedBy",
     label: "修改用户",
     physicalName: "modifiedBy",
-    owner,
+    // owner,
     type: "Reference",
     description: null,
     displayOrder: 0,
@@ -679,7 +652,7 @@ function createEntity(entity, mainEntity) {
     name: "ownerUser",
     label: "所属用户",
     physicalName: "ownerUser",
-    owner,
+    // owner,
     type: "Reference",
     description: null,
     displayOrder: 0,
@@ -702,7 +675,7 @@ function createEntity(entity, mainEntity) {
     name: "ownerDepartment",
     label: "所属部门",
     physicalName: "ownerDepartment",
-    owner,
+    // owner,
     type: "Reference",
     description: null,
     displayOrder: 0,
@@ -747,7 +720,10 @@ function createEntity(entity, mainEntity) {
   }
 
   updateEntityToYao(entity.name);
-  //
+
+  fieldSet.forEach(f=>f.owner=owner)
+  sortedFieldSet.forEach(f=>f.owner=owner)
+
   return {
     ...entity,
     entityId: null,
@@ -868,13 +844,13 @@ function getTextFieldListOfEntity(entity) {
       },
     ],
     withs: {
-      fields: {},
+      fieldSet: {},
     },
   });
 
   let textFields = [];
-  if (row?.fields?.length) {
-    row.fields.forEach((field) => {
+  if (row?.fieldSet?.length) {
+    row.fieldSet.forEach((field) => {
       if (field.type === "Text") {
         textFields.push({
           name: field.name,
@@ -935,6 +911,7 @@ function getEntitySet() {
       "internalEntityFlag",
       "tags",
     ],
+    limit: 10000,
   });
 }
 
@@ -1053,7 +1030,7 @@ function addRefField(field, entity, refEntity) {
   //   creatable: true,
   //   updatable: true,
   //   fieldViewModel: { searchDialogWidth: 520, validators: [] },
-  //   referenceSetting: [{ entityName: "User", fieldList: ["modifiedOn"] }],
+  //   referenceSetting: [{ entityName: "User", fieldSet: ["modifiedOn"] }],
   // };
 
   field.referTo = `${refEntity},`;
@@ -1079,7 +1056,7 @@ function updateAnyRefField(field, entity, referTo) {}
  * @returns`
  */
 function getField(entity, field) {
-  return getEntityField(field, entity);
+  return getEntityField(entity,field);
 }
 
 /**
@@ -1093,13 +1070,13 @@ function getField(entity, field) {
 function getRefFieldExtras(entity, field) {
   // entity = "Entity";
   // field = "r1";
-  const fieldData = getEntityField(field, entity);
+  const fieldData = getEntityField( entity,field);
   if (!fieldData) {
     return;
   }
   let referenceSetting = fieldData.referenceSetting[0];
   // console.log("referenceSetting", referenceSetting);
-  // referenceSetting = [{ entityName: "Entity1", fieldList: ["d1", "time1"] }];
+  // referenceSetting = [{ entityName: "Entity1", fieldSet: ["d1", "time1"] }];
 
   // let referTo = fieldData.referTo;
   let refEntityName = referenceSetting.entityName;
@@ -1107,7 +1084,7 @@ function getRefFieldExtras(entity, field) {
   const [referEntity] = Process("models.sys.entity.get", {
     wheres: [{ column: "name", value: entity }],
     withs: {
-      fields: {
+      fieldSet: {
         query: {
           select: ["reserved", "name", "label", "type"],
         },
@@ -1116,7 +1093,7 @@ function getRefFieldExtras(entity, field) {
   });
 
   function getLabel(field) {
-    const item = referEntity.fields?.find((f) => f.name == field);
+    const item = referEntity.fieldSet?.find((f) => f.name == field);
 
     return item?.label || "";
   }
@@ -1134,8 +1111,8 @@ function getRefFieldExtras(entity, field) {
   // ]
   let lables = [];
 
-  // console.log("referenceSetting.fieldList", referenceSetting.fieldList);
-  referenceSetting.fieldList.forEach((item) => {
+  // console.log("referenceSetting.fieldSet", referenceSetting.fieldSet);
+  referenceSetting.fieldSet.forEach((item) => {
     let label = getLabel(item);
     selectedFieldItems.push({
       name: item,
@@ -1151,12 +1128,12 @@ function getRefFieldExtras(entity, field) {
     refEntityLabel: referEntity.label,
     refEntityFullName: `${referEntity.label}(${referEntity.name})`,
     currentRefEntity: refEntityName,
-    fieldItems: referEntity.fields,
+    fieldItems: referEntity.fieldSet,
   };
 }
 
 /**
- * get all fields with options
+ * get all fieldSet with options
  *
  * yao run scripts.systemmanager.getOptionFields
  * 单选项管理,列表
@@ -1166,7 +1143,7 @@ function getOptionFields() {
   const optionList = Process("models.sys.entity.get", {
     select: ["name", "label"],
     withs: {
-      fields: {
+      fieldSet: {
         query: {
           select: ["name", "label"],
           wheres: [
@@ -1180,13 +1157,13 @@ function getOptionFields() {
     },
   });
 
-  let fieldList = [];
+  let data = [];
   optionList.forEach((entity) => {
-    if (entity?.fields.length) {
-      fieldList.push({
+    if (entity?.fieldSet?.length) {
+      data.push({
         entityLabel: entity.label,
         entityName: entity.name,
-        fieldList: entity.fields.map((o) => {
+        fieldList: entity.fieldSet.map((o) => {
           return {
             fieldName: o.name,
             fieldLabel: o.label,
@@ -1195,7 +1172,7 @@ function getOptionFields() {
       });
     }
   });
-  return fieldList;
+  return data;
 }
 
 /**
@@ -1252,7 +1229,7 @@ function saveOptionItems(entity, field, optionItems) {
   //   { label: "a2", saved: true, value: 2 },
   //   { label: "a3", value: 3, saved: false },
   // ];
-  const Field = getEntityField(field, entity);
+  const Field = getEntityField(entity,field);
   if (Field.fieldId) {
     const options = optionItems.items.map((item) => {
       return {
@@ -1268,11 +1245,16 @@ function saveOptionItems(entity, field, optionItems) {
   return false;
 }
 
+/**
+ * 
+ * yao run scripts.systemmanager.getTagFields
+ * @returns 
+ */
 function getTagFields() {
   const entityList = Process("models.sys.entity.get", {
     select: ["name", "label"],
     withs: {
-      fields: {
+      fieldSet: {
         query: {
           select: ["name", "label"],
           wheres: [
@@ -1286,13 +1268,13 @@ function getTagFields() {
     },
   });
 
-  let tagList = [];
+  let data = [];
   entityList.forEach((entity) => {
-    if (entity?.fields.length) {
-      tagList.push({
+    if (entity?.fieldSet?.length) {
+      data.push({
         entityLabel: entity.label,
         entityName: entity.name,
-        fieldList: entity.fields.map((o) => {
+        fieldList: entity.fieldSet.map((o) => {
           return {
             fieldName: o.name,
             fieldLabel: o.label,
@@ -1301,7 +1283,7 @@ function getTagFields() {
       });
     }
   });
-  return tagList;
+  return data;
   // return [
   //   {
   //     entityLabel: "用户",
@@ -1340,7 +1322,7 @@ function saveTagItems(entity, field, tagItems) {
   //     { label: "tag33", value: "tag33", saved: false },
   //   ],
   // };
-  const Field = getEntityField(field, entity);
+  const Field = getEntityField(entity,field);
   if (Field.fieldId) {
     const options = tagItems.items.map((item) => {
       return item.value;

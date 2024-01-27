@@ -1,0 +1,413 @@
+{
+    "label": "客户管理",
+    "layoutable": true,
+    "listable": true,
+    "tags": "进销存",
+    "name": "Kehuguanli",
+    "entityCode": 1008,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "idFieldName": "kehuguanliId",
+    "internalEntityFlag": false,
+    "physicalName": "t_kehuguanli",
+    "mainEntity": null,
+    "nameField": "客户名称",
+    "authorizable": true,
+    "shareable": false,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "label": "id主键",
+            "mainDetailFieldFlag": false,
+            "physicalName": "kehuguanliId",
+            "reserved": true,
+            "referTo": null,
+            "name": "kehuguanliId",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey"
+        },
+        {
+            "type": "DateTime",
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": false,
+            "reserved": true,
+            "name": "modifiedOn",
+            "updatable": false,
+            "label": "最近修改时间",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference"
+        },
+        {
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "mainDetailFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "name": "ownerUser",
+            "updatable": false
+        },
+        {
+            "referTo": "Department,",
+            "label": "所属部门",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "physicalName": "ownerDepartment",
+            "name": "ownerDepartment"
+        },
+        {
+            "type": "Text",
+            "nameFieldFlag": true,
+            "physicalName": "c_kehumingcheng",
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "客户名称",
+            "creatable": true,
+            "reserved": false,
+            "name": "kehumingcheng",
+            "updatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_kehufenlei",
+            "referTo": null,
+            "name": "kehufenlei",
+            "updatable": true,
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "客户分类",
+            "optionList": [
+                {
+                    "key": "潜在客户",
+                    "value": 1
+                },
+                {
+                    "key": "成交客户",
+                    "value": 2
+                },
+                {
+                    "key": "战略合作",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "客户来源",
+            "type": "Option",
+            "name": "kehulaiyuan",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_kehulaiyuan",
+            "reserved": false,
+            "referTo": null,
+            "optionList": [
+                {
+                    "key": "百度SEM",
+                    "value": 1
+                },
+                {
+                    "key": "转介绍",
+                    "value": 2
+                },
+                {
+                    "key": "官网注册",
+                    "value": 3
+                },
+                {
+                    "key": "销售自拓",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_kehubiaoqian",
+            "reserved": false,
+            "updatable": true,
+            "label": "客户标签",
+            "type": "Tag",
+            "referTo": null,
+            "name": "kehubiaoqian",
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "tagList": [
+                "KA",
+                "重点"
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "jiagedengji",
+            "updatable": true,
+            "idFieldFlag": false,
+            "physicalName": "c_jiagedengji",
+            "reserved": false,
+            "label": "价格等级",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "标准售价",
+                    "value": 1
+                },
+                {
+                    "key": "一级售价",
+                    "value": 2
+                },
+                {
+                    "key": "二级售价",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "idFieldFlag": false,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "name": "jiesuanzhouqi",
+            "referTo": null,
+            "updatable": true,
+            "label": "结算周期",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_jiesuanzhouqi",
+            "reserved": false,
+            "optionList": [
+                {
+                    "key": "月结",
+                    "value": 1
+                },
+                {
+                    "key": "季结",
+                    "value": 2
+                },
+                {
+                    "key": "现结",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "physicalName": "c_kehusuozaidiqu",
+            "name": "kehusuozaidiqu",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "客户所在地区",
+            "type": "AreaSelect",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_jutidizhi",
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "具体地址",
+            "type": "Text",
+            "referTo": null,
+            "name": "jutidizhi",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "fapiaotaitou",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text",
+            "physicalName": "c_fapiaotaitou",
+            "reserved": false,
+            "referTo": null,
+            "label": "发票抬头",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "fapiaoshuihao",
+            "updatable": true,
+            "label": "发票税号",
+            "type": "Text",
+            "physicalName": "c_fapiaoshuihao",
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_shuizhong",
+            "reserved": false,
+            "name": "shuizhong",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "税种",
+            "creatable": true,
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "纸质专票",
+                    "value": 1
+                },
+                {
+                    "key": "纸质普票",
+                    "value": 2
+                },
+                {
+                    "key": "电子专票",
+                    "value": 3
+                },
+                {
+                    "key": "电子普票",
+                    "value": 4
+                },
+                {
+                    "key": "全电专票",
+                    "value": 5
+                },
+                {
+                    "key": "全电普票",
+                    "value": 6
+                },
+                {
+                    "key": "无需开票",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "type": "Percent",
+            "nameFieldFlag": false,
+            "physicalName": "c_zengzhishuishuilv",
+            "reserved": false,
+            "referTo": null,
+            "name": "zengzhishuishuilv",
+            "creatable": true,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "增值税税率",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "name": "kaihudianhua",
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_kaihudianhua",
+            "label": "开户电话",
+            "referTo": null,
+            "idFieldFlag": false
+        },
+        {
+            "creatable": true,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "shoupiaoyouxiang",
+            "updatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_shoupiaoyouxiang",
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "收票邮箱"
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "kaihuyinhang",
+            "idFieldFlag": false,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_kaihuyinhang",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "label": "开户银行",
+            "creatable": true
+        },
+        {
+            "physicalName": "c_yinhangzhanghu",
+            "reserved": false,
+            "referTo": null,
+            "name": "yinhangzhanghu",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "银行账户",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "creatable": true
+        }
+    ]
+}

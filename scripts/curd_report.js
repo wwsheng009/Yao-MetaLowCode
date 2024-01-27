@@ -1,0 +1,243 @@
+function test() {
+  const query = {
+    mainEntity: "ReportConfig",
+    fieldsList:
+      "reportName,entityCode,isDisabled,modifiedOn,modifiedBy,createdOn",
+    filter: {
+      equation: "AND",
+      items: [{ fieldName: "reportName", op: "LK", value: "" }],
+    },
+    pageSize: 20,
+    pageNo: 1,
+    sortFields: [{ fieldName: "createdOn", type: "DESC" }],
+  };
+
+  return {
+    dataList: [
+      {
+        reportConfigId: "0000045-1ef5cc0ff2c94a5791c658b3d4a08f7a",
+        reportName: "oo",
+        entityCode: 1258,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 21:27:33",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-26 21:25:50",
+      },
+      {
+        reportConfigId: "0000045-3f9f19d2ad204b1d98671eddbb0bd254",
+        reportName: "2",
+        entityCode: 1006,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 18:28:08",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-26 18:28:08",
+      },
+      {
+        reportConfigId: "0000045-1c44cca3187847a7a6d1db41768a7671",
+        reportName: "ceshi",
+        entityCode: 1007,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 17:56:11",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-26 17:56:11",
+      },
+      {
+        reportConfigId: "0000045-0580cda22198434c8f31c737b6e0e2e2",
+        reportName: "11",
+        entityCode: 1010,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 21:28:19",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-26 11:22:22",
+      },
+      {
+        reportConfigId: "0000045-23ab3c3ba92f4a8a8b27fbf8c9a74f47",
+        reportName: "111",
+        entityCode: 1001,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 13:12:28",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-25 20:06:19",
+      },
+      {
+        reportConfigId: "0000045-ee032f3a91ce4a2b9945741ae04f53ac",
+        reportName: "23",
+        entityCode: 1006,
+        isDisabled: false,
+        modifiedOn: "2024-01-25 19:48:21",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-25 19:48:17",
+      },
+      {
+        reportConfigId: "0000045-aeb102b14e4b4392976114e5a8dd4db1",
+        reportName: "2222",
+        entityCode: 1001,
+        isDisabled: false,
+        modifiedOn: "2024-01-25 17:49:49",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-25 17:17:57",
+      },
+      {
+        reportConfigId: "0000045-3829d0980c9a40cca159d5972669bd19",
+        reportName: "zw的表",
+        entityCode: 1001,
+        isDisabled: false,
+        modifiedOn: "2024-01-25 16:48:40",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-25 16:42:59",
+      },
+      {
+        reportConfigId: "0000045-bf75d068434940c7b97427e28302b131",
+        reportName: "test",
+        entityCode: 1194,
+        isDisabled: false,
+        modifiedOn: "2024-01-25 11:00:05",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-25 09:35:06",
+      },
+      {
+        reportConfigId: "0000045-8913742611614e458340d3c573342f06",
+        reportName: "合同列表",
+        entityCode: 1247,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 10:23:48",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-25 09:18:39",
+      },
+      {
+        reportConfigId: "0000045-7d96a1e8d22b4244a2da6962452fc996",
+        reportName: "1",
+        entityCode: 1171,
+        isDisabled: false,
+        modifiedOn: "2024-01-25 10:51:58",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-24 13:07:03",
+      },
+      {
+        reportConfigId: "0000045-7bbe2bac186f4c9991d467be9a05e9fb",
+        reportName: "11111111111",
+        entityCode: 1002,
+        isDisabled: false,
+        modifiedOn: "2024-01-25 09:57:27",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-24 10:13:24",
+      },
+      {
+        reportConfigId: "0000045-d4fee42dbc064d72aaef1738dcbcebb1",
+        reportName: "sadfasdf",
+        entityCode: 1001,
+        isDisabled: false,
+        modifiedOn: "2024-01-25 16:00:14",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-23 15:24:01",
+      },
+      {
+        reportConfigId: "0000045-4dee81cfc7bc4fb3ad1efbfe4f064bbf",
+        reportName: "ss",
+        entityCode: 1143,
+        isDisabled: false,
+        modifiedOn: "2024-01-23 14:34:35",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-23 10:19:04",
+      },
+      {
+        reportConfigId: "0000045-039b79adf0b64ac19e9b6c4b91324840",
+        reportName: "2",
+        entityCode: 1142,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 10:57:02",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-22 16:19:02",
+      },
+      {
+        reportConfigId: "0000045-bf3d50d588be404bab9c7a1f8c326e43",
+        reportName: "1",
+        entityCode: 1142,
+        isDisabled: false,
+        modifiedOn: "2024-01-26 11:06:13",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-22 16:18:53",
+      },
+      {
+        reportConfigId: "0000045-e1a78577c20d4d369a46aa58853d4a46",
+        reportName: "33",
+        entityCode: 1203,
+        isDisabled: false,
+        modifiedOn: "2024-01-24 16:01:10",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-22 13:55:43",
+      },
+      {
+        reportConfigId: "0000045-728cd602e8194240a65ab02a52f8993b",
+        reportName: "test-11",
+        entityCode: 1001,
+        isDisabled: false,
+        modifiedOn: "2024-01-22 13:54:34",
+        modifiedBy: {
+          id: "0000021-00000000000000000000000000000001",
+          name: "系统管理员",
+        },
+        createdOn: "2024-01-22 08:49:05",
+      },
+    ],
+    pagination: {
+      pageSize: 20,
+      pageNo: 1,
+      total: 18,
+    },
+    columnList: null,
+    entityBasicInfo: null,
+    statisticsList: null,
+  };
+}

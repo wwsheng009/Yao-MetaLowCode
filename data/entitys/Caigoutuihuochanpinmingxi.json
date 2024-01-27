@@ -1,0 +1,1766 @@
+{
+    "idFieldName": "caigoutuihuochanpinmingxiId",
+    "name": "Caigoutuihuochanpinmingxi",
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "listable": true,
+    "tags": "进销存",
+    "label": "采购退货产品明细",
+    "entityCode": 1042,
+    "systemEntityFlag": false,
+    "internalEntityFlag": false,
+    "mainEntity": {
+        "entityId": "0000001-871dd62685894fdbbb5de667b7456b8a",
+        "physicalName": "t_caigoutuihuo",
+        "entityCode": 1041,
+        "listable": true,
+        "mainEntity": null,
+        "detailEntityFlag": false,
+        "tags": "进销存",
+        "idField": {
+            "label": "id主键",
+            "name": "caigoutuihuoId"
+        },
+        "fieldSet": [
+            {
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "PrimaryKey",
+                "nullable": false,
+                "creatable": false,
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-b70118c9defa426a8d122b8bfb269f8c",
+                "name": "caigoutuihuoId",
+                "description": null,
+                "displayOrder": 0,
+                "updatable": false,
+                "physicalName": "caigoutuihuoId",
+                "mainDetailFieldFlag": false,
+                "entityCode": 1041,
+                "label": "id主键",
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "fieldViewModel": null,
+                "fieldId": "0000002-f050a273567f4206aa3f17023abe83a1",
+                "entityCode": 1041,
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "creatable": false,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "type": "DateTime",
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "createdOn",
+                "displayOrder": 0,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "referenceSetting": null,
+                "name": "createdBy",
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "label": "创建用户",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-25e9474b1df044a6a8a92f57120e00ac",
+                "entityCode": 1041,
+                "displayOrder": 0
+            },
+            {
+                "type": "DateTime",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "nullable": true,
+                "creatable": false,
+                "updatable": false,
+                "fieldId": "0000002-651af5f1766747a1bdf1fcd751c1df65",
+                "name": "modifiedOn",
+                "physicalName": "modifiedOn",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1041,
+                "nameFieldFlag": false,
+                "label": "最近修改时间",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "label": "修改用户",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1041,
+                "displayOrder": 0,
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "physicalName": "modifiedBy",
+                "type": "Reference",
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-5dc44f8a543b45298e4f1d4d73d0fac0",
+                "name": "modifiedBy",
+                "updatable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "type": "Reference",
+                "description": null,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "label": "所属用户",
+                "physicalName": "ownerUser",
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1041,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "updatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-39abda60e41b4d7488009906312111bf",
+                "name": "ownerUser",
+                "displayOrder": 0,
+                "nullable": false
+            },
+            {
+                "name": "ownerDepartment",
+                "physicalName": "ownerDepartment",
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-223cabfc40f14635a0b11f167de21fc3",
+                "entityCode": 1041,
+                "fieldViewModel": null,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "label": "所属部门",
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Reference"
+            },
+            {
+                "displayOrder": 0,
+                "updatable": true,
+                "name": "kehu",
+                "label": "客户名称",
+                "nullable": true,
+                "creatable": true,
+                "referTo": [
+                    {
+                        "name": "Kehuguanli",
+                        "label": "客户管理"
+                    }
+                ],
+                "fieldId": "0000002-1cfa7a9e482c49dbbad9de4885cb7c1c",
+                "entityCode": 1041,
+                "physicalName": "c_kehu",
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Reference",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "Kehuguanli",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian",
+                            "jiagedengji",
+                            "jiesuanzhouqi",
+                            "kehusuozaidiqu",
+                            "jutidizhi"
+                        ]
+                    }
+                ]
+            },
+            {
+                "entityCode": 1041,
+                "nullable": false,
+                "creatable": true,
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-c6bcf6cc5d9d48b08b0d6eabcbbe7ba9",
+                "physicalName": "c_tuihuoshenqingriqi",
+                "type": "Date",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "tuihuoshenqingriqi",
+                "owner": {
+                    "label": "采购退货",
+                    "name": "Caigoutuihuo"
+                },
+                "idFieldFlag": false,
+                "label": "退货申请日期",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "label": "采购退货单编号",
+                "description": null,
+                "nullable": false,
+                "updatable": true,
+                "fieldId": "0000002-f847366910354e06a2ae93b18bcb4a41",
+                "name": "xiaoshoutuihuodanbianhao",
+                "physicalName": "c_xiaoshoutuihuodanbianhao",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Text",
+                "entityCode": 1041,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "nameFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": []
+            },
+            {
+                "fieldId": "0000002-d2632bfe03c04ba799f83d44f3a3a134",
+                "physicalName": "c_tuihuoyuanyin",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "name": "tuihuoyuanyin",
+                "label": "退货原因",
+                "creatable": true,
+                "referTo": null,
+                "entityCode": 1041,
+                "type": "TextArea",
+                "nullable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "description": null,
+                "displayOrder": 0
+            },
+            {
+                "label": "退货仓库",
+                "fieldId": "0000002-97352b2777f04ecaa817d0f91533dc23",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ]
+                    }
+                ],
+                "entityCode": 1041,
+                "name": "tuihuocangku",
+                "physicalName": "c_tuihuocangku",
+                "type": "Reference",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "type": "Integer",
+                "nullable": true,
+                "referenceSetting": [],
+                "fieldId": "0000002-c764d20e7f594ff397b6d5f8c57e1403",
+                "label": "已入库-退货产品总数",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "maxValue": 999999999,
+                    "minValue": -999999999
+                },
+                "name": "yichukutuihuochanpinzongshu",
+                "description": null,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "entityCode": 1041,
+                "physicalName": "c_yichukutuihuochanpinzongshu",
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "creatable": true
+            },
+            {
+                "fieldId": "0000002-3935ebcd50d744159e5dc4bcae7f4dfa",
+                "physicalName": "c_uihuochanpinshoujiazonge",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "entityCode": 1041,
+                "type": "Money",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": [],
+                "label": "已入库-退货产品售价总额(含税)/元",
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "name": "uihuochanpinshoujiazonge"
+            },
+            {
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-a6e4f211ce7447e8a81dffaef4158218",
+                "name": "jingbanren",
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "creatable": true,
+                "entityCode": 1041,
+                "label": "经办人",
+                "physicalName": "c_jingbanren",
+                "description": null
+            },
+            {
+                "fieldId": "0000002-ba6882bd4bfb4228ab7aa835a11810c9",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Caigoudingdan",
+                        "label": "采购订单"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "Caigoudingdan",
+                        "fieldList": [
+                            "caigoudingdan",
+                            "dingdanqiandingriqi",
+                            "caigoudingdanmingcheng",
+                            "dingdanjiaofuriqi",
+                            "caigoufuzeren",
+                            "rukucangku"
+                        ]
+                    }
+                ],
+                "name": "xuanzecaigoudingdan",
+                "label": "选择采购订单",
+                "physicalName": "c_xuanzecaigoudingdan",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1041,
+                "type": "Reference",
+                "description": null,
+                "nullable": false
+            },
+            {
+                "referTo": null,
+                "fieldId": "0000002-91d8f05770f742a39cdb2f0299db191b",
+                "displayOrder": 0,
+                "creatable": true,
+                "type": "Integer",
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1041,
+                "label": "退货产品总数",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "tuihuochanpinzongshu",
+                "physicalName": "c_tuihuochanpinzongshu",
+                "idFieldFlag": false
+            },
+            {
+                "entityCode": 1041,
+                "physicalName": "c_tuihuochanpincaigoujiazonge",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-d68270b85aee4bb78dcb2167c252b654",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minValue": -999999999,
+                    "validators": [],
+                    "precision": 2,
+                    "maxValue": 999999999
+                },
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "name": "tuihuochanpincaigoujiazonge",
+                "type": "Money",
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "label": "退货产品采购价总额(含税)/元"
+            },
+            {
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1041,
+                "name": "chanpintuihuiqueren",
+                "label": "产品退回确认",
+                "type": "Boolean",
+                "nullable": true,
+                "updatable": true,
+                "fieldId": "0000002-02f1bd10b9b94d24853e7733f24b005d",
+                "physicalName": "c_chanpintuihuiqueren",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "referTo": null,
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "entityCode": 1041,
+                "name": "paizhao",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Picture",
+                "nullable": true,
+                "updatable": true,
+                "label": "拍照",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-f12355ff1d3541cbbe824ec750dfed2d",
+                "physicalName": "c_paizhao",
+                "idFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "maxFileCount": 9,
+                    "fileMaxSize": 100,
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": "单张100M以内",
+                    "validators": []
+                }
+            },
+            {
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "physicalName": "c_tuihuochulishijian",
+                "description": null,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "entityCode": 1041,
+                "name": "tuihuochulishijian",
+                "displayOrder": 0,
+                "creatable": true,
+                "type": "DateTime",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-339a430e81cc4a84a535a3eeedd702d4",
+                "label": "退货处理时间",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "nullable": true
+            },
+            {
+                "nameFieldFlag": false,
+                "name": "approvalConfigId",
+                "type": "Reference",
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "ApprovalConfig",
+                        "label": "审批配置"
+                    }
+                ],
+                "fieldId": "0000002-0e908a3c7dd447de8f416f4be8002fb1",
+                "label": "审批流程",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "entityCode": 1041,
+                "physicalName": "approvalConfigId",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-f51d428458454ac7a3b83e669cd22471",
+                "label": "审批状态",
+                "physicalName": "approvalStatus",
+                "nullable": true,
+                "creatable": false,
+                "fieldViewModel": null,
+                "name": "approvalStatus",
+                "type": "Status",
+                "displayOrder": 0,
+                "updatable": false,
+                "referenceSetting": null,
+                "entityCode": 1041,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                }
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-fb2a740996d84bf5bd5358ab2c351c58",
+                "entityCode": 1041,
+                "name": "lastApprovedBy",
+                "idFieldFlag": false,
+                "physicalName": "lastApprovedBy",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "type": "Reference",
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "label": "最近审批人",
+                "nullable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null
+            },
+            {
+                "type": "DateTime",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "lastApprovedOn",
+                "label": "最近审批时间",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-56b14fd2ee494848bc67b63a45816b4d",
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "entityCode": 1041,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "physicalName": "lastApprovedOn"
+            },
+            {
+                "physicalName": "lastApprovalRemark",
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "label": "最近审批批注",
+                "description": null,
+                "nullable": true,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-38f7f2df6dd84df5b6414e2fd9ca3b66",
+                "entityCode": 1041,
+                "type": "TextArea",
+                "name": "lastApprovalRemark",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "creatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null
+            }
+        ],
+        "mainDetailField": null,
+        "virtualFieldSet": [],
+        "label": "采购退货",
+        "layoutable": true,
+        "nameField": {
+            "name": "xiaoshoutuihuodanbianhao",
+            "label": "采购退货单编号"
+        },
+        "sortedFieldSet": [
+            {
+                "fieldId": "0000002-b70118c9defa426a8d122b8bfb269f8c",
+                "description": null,
+                "idFieldFlag": true,
+                "entityCode": 1041,
+                "physicalName": "caigoutuihuoId",
+                "type": "PrimaryKey",
+                "creatable": false,
+                "updatable": false,
+                "name": "caigoutuihuoId",
+                "label": "id主键",
+                "nullable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null
+            },
+            {
+                "physicalName": "c_kehu",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "name": "Kehuguanli",
+                        "label": "客户管理"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Kehuguanli",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian",
+                            "jiagedengji",
+                            "jiesuanzhouqi",
+                            "kehusuozaidiqu",
+                            "jutidizhi"
+                        ]
+                    }
+                ],
+                "description": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "updatable": true,
+                "fieldId": "0000002-1cfa7a9e482c49dbbad9de4885cb7c1c",
+                "entityCode": 1041,
+                "label": "客户名称",
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "kehu",
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "label": "退货申请日期",
+                "displayOrder": 0,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-c6bcf6cc5d9d48b08b0d6eabcbbe7ba9",
+                "entityCode": 1041,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "physicalName": "c_tuihuoshenqingriqi",
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "type": "Date",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "name": "tuihuoshenqingriqi",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                }
+            },
+            {
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-f847366910354e06a2ae93b18bcb4a41",
+                "name": "xiaoshoutuihuodanbianhao",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1041,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": [],
+                "label": "采购退货单编号",
+                "type": "Text",
+                "nullable": false,
+                "updatable": true,
+                "physicalName": "c_xiaoshoutuihuodanbianhao",
+                "description": null
+            },
+            {
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "name": "tuihuoyuanyin",
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1041,
+                "type": "TextArea",
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-d2632bfe03c04ba799f83d44f3a3a134",
+                "label": "退货原因",
+                "physicalName": "c_tuihuoyuanyin",
+                "description": null
+            },
+            {
+                "creatable": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ]
+                    }
+                ],
+                "type": "Reference",
+                "fieldId": "0000002-97352b2777f04ecaa817d0f91533dc23",
+                "entityCode": 1041,
+                "name": "tuihuocangku",
+                "owner": {
+                    "label": "采购退货",
+                    "name": "Caigoutuihuo"
+                },
+                "defaultMemberOfListFlag": false,
+                "physicalName": "c_tuihuocangku",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "仓库管理",
+                        "name": "Cangkuguanli"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "label": "退货仓库",
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "entityCode": 1041,
+                "physicalName": "c_yichukutuihuochanpinzongshu",
+                "type": "Integer",
+                "defaultMemberOfListFlag": false,
+                "updatable": true,
+                "referenceSetting": [],
+                "fieldId": "0000002-c764d20e7f594ff397b6d5f8c57e1403",
+                "name": "yichukutuihuochanpinzongshu",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "label": "已入库-退货产品总数",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": [],
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1041,
+                "name": "uihuochanpinshoujiazonge",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "label": "已入库-退货产品售价总额(含税)/元",
+                "physicalName": "c_uihuochanpinshoujiazonge",
+                "description": null,
+                "updatable": true,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "fieldId": "0000002-3935ebcd50d744159e5dc4bcae7f4dfa",
+                "type": "Money",
+                "creatable": true
+            },
+            {
+                "physicalName": "c_jingbanren",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "idFieldFlag": false,
+                "name": "jingbanren",
+                "displayOrder": 0,
+                "creatable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1041,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "type": "Reference",
+                "label": "经办人",
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-a6e4f211ce7447e8a81dffaef4158218"
+            },
+            {
+                "type": "Reference",
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-ba6882bd4bfb4228ab7aa835a11810c9",
+                "owner": {
+                    "label": "采购退货",
+                    "name": "Caigoutuihuo"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "caigoudingdan",
+                            "dingdanqiandingriqi",
+                            "caigoudingdanmingcheng",
+                            "dingdanjiaofuriqi",
+                            "caigoufuzeren",
+                            "rukucangku"
+                        ],
+                        "entityName": "Caigoudingdan"
+                    }
+                ],
+                "label": "选择采购订单",
+                "physicalName": "c_xuanzecaigoudingdan",
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "xuanzecaigoudingdan",
+                "referTo": [
+                    {
+                        "name": "Caigoudingdan",
+                        "label": "采购订单"
+                    }
+                ],
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1041,
+                "nullable": false
+            },
+            {
+                "label": "退货产品总数",
+                "physicalName": "c_tuihuochanpinzongshu",
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "entityCode": 1041,
+                "name": "tuihuochanpinzongshu",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-91d8f05770f742a39cdb2f0299db191b",
+                "type": "Integer",
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false
+            },
+            {
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "name": "tuihuochanpincaigoujiazonge",
+                "type": "Money",
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "label": "退货产品采购价总额(含税)/元",
+                "physicalName": "c_tuihuochanpincaigoujiazonge",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-d68270b85aee4bb78dcb2167c252b654",
+                "entityCode": 1041,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "updatable": true,
+                "nameFieldFlag": false,
+                "name": "chanpintuihuiqueren",
+                "physicalName": "c_chanpintuihuiqueren",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Boolean",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "entityCode": 1041,
+                "label": "产品退回确认",
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-02f1bd10b9b94d24853e7733f24b005d",
+                "fieldViewModel": {
+                    "validators": []
+                }
+            },
+            {
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Picture",
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "fieldViewModel": {
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": "单张100M以内",
+                    "validators": [],
+                    "maxFileCount": 9,
+                    "fileMaxSize": 100
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-f12355ff1d3541cbbe824ec750dfed2d",
+                "entityCode": 1041,
+                "name": "paizhao",
+                "creatable": true,
+                "idFieldFlag": false,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "label": "拍照",
+                "physicalName": "c_paizhao"
+            },
+            {
+                "physicalName": "c_tuihuochulishijian",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "label": "退货处理时间",
+                "nullable": true,
+                "fieldId": "0000002-339a430e81cc4a84a535a3eeedd702d4",
+                "name": "tuihuochulishijian",
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1041,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "DateTime",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-f050a273567f4206aa3f17023abe83a1",
+                "label": "创建时间",
+                "description": null,
+                "entityCode": 1041,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "physicalName": "createdOn",
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "name": "createdOn",
+                "owner": {
+                    "label": "采购退货",
+                    "name": "Caigoutuihuo"
+                },
+                "type": "DateTime"
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-25e9474b1df044a6a8a92f57120e00ac",
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Reference",
+                "nameFieldFlag": false,
+                "name": "createdBy",
+                "creatable": false,
+                "updatable": false,
+                "entityCode": 1041,
+                "label": "创建用户",
+                "displayOrder": 0,
+                "nullable": false,
+                "referenceSetting": null,
+                "description": null,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null
+            },
+            {
+                "referenceSetting": null,
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-651af5f1766747a1bdf1fcd751c1df65",
+                "displayOrder": 0,
+                "creatable": false,
+                "referTo": null,
+                "name": "modifiedOn",
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "DateTime",
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1041
+            },
+            {
+                "fieldId": "0000002-5dc44f8a543b45298e4f1d4d73d0fac0",
+                "label": "修改用户",
+                "updatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Reference",
+                "nullable": true,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1041,
+                "physicalName": "modifiedBy",
+                "nameFieldFlag": false
+            },
+            {
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1041,
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "name": "ownerUser",
+                "label": "所属用户",
+                "description": null,
+                "updatable": false,
+                "physicalName": "ownerUser",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-39abda60e41b4d7488009906312111bf",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "physicalName": "ownerDepartment",
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-223cabfc40f14635a0b11f167de21fc3",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1041,
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "type": "Reference",
+                "nullable": false,
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "name": "approvalConfigId",
+                "physicalName": "approvalConfigId",
+                "type": "Reference",
+                "creatable": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-0e908a3c7dd447de8f416f4be8002fb1",
+                "referenceSetting": null,
+                "referTo": [
+                    {
+                        "name": "ApprovalConfig",
+                        "label": "审批配置"
+                    }
+                ],
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "label": "审批流程",
+                "description": null,
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1041
+            },
+            {
+                "name": "approvalStatus",
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-f51d428458454ac7a3b83e669cd22471",
+                "entityCode": 1041,
+                "label": "审批状态",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "approvalStatus",
+                "nullable": true,
+                "fieldViewModel": null,
+                "type": "Status",
+                "referTo": null
+            },
+            {
+                "idFieldFlag": false,
+                "fieldId": "0000002-fb2a740996d84bf5bd5358ab2c351c58",
+                "name": "lastApprovedBy",
+                "nullable": true,
+                "fieldViewModel": null,
+                "label": "最近审批人",
+                "description": null,
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "Reference",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1041,
+                "physicalName": "lastApprovedBy",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "creatable": false
+            },
+            {
+                "fieldId": "0000002-56b14fd2ee494848bc67b63a45816b4d",
+                "owner": {
+                    "label": "采购退货",
+                    "name": "Caigoutuihuo"
+                },
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "name": "lastApprovedOn",
+                "physicalName": "lastApprovedOn",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "entityCode": 1041,
+                "label": "最近审批时间",
+                "type": "DateTime",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "entityCode": 1041,
+                "label": "最近审批批注",
+                "description": null,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "nullable": true,
+                "updatable": false,
+                "referTo": null,
+                "name": "lastApprovalRemark",
+                "physicalName": "lastApprovalRemark",
+                "owner": {
+                    "name": "Caigoutuihuo",
+                    "label": "采购退货"
+                },
+                "type": "TextArea",
+                "creatable": false,
+                "fieldId": "0000002-38f7f2df6dd84df5b6414e2fd9ca3b66",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            }
+        ],
+        "name": "Caigoutuihuo",
+        "authorizable": true,
+        "shareable": false,
+        "assignable": false,
+        "detailEntitySet": [
+            {
+                "name": "Caigoutuihuochanpinmingxi",
+                "label": "采购退货产品明细"
+            }
+        ],
+        "fieldNames": [
+            "caigoutuihuoId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "kehu",
+            "tuihuoshenqingriqi",
+            "xiaoshoutuihuodanbianhao",
+            "tuihuoyuanyin",
+            "tuihuocangku",
+            "yichukutuihuochanpinzongshu",
+            "uihuochanpinshoujiazonge",
+            "jingbanren",
+            "xuanzecaigoudingdan",
+            "tuihuochanpinzongshu",
+            "tuihuochanpincaigoujiazonge",
+            "chanpintuihuiqueren",
+            "paizhao",
+            "tuihuochulishijian",
+            "approvalConfigId",
+            "approvalStatus",
+            "lastApprovedBy",
+            "lastApprovedOn",
+            "lastApprovalRemark"
+        ]
+    },
+    "authorizable": false,
+    "shareable": false,
+    "assignable": false,
+    "physicalName": "t_caigoutuihuochanpinmingxi",
+    "nameField": null,
+    "fieldSet": [
+        {
+            "referTo": null,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "caigoutuihuochanpinmingxiId",
+            "updatable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "caigoutuihuochanpinmingxiId"
+        },
+        {
+            "type": "DateTime",
+            "physicalName": "createdOn",
+            "label": "创建时间",
+            "creatable": false,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null
+        },
+        {
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "createdBy",
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "physicalName": "modifiedOn",
+            "updatable": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "label": "修改用户",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "mdCaigoutuihuoId",
+            "reserved": true,
+            "referTo": "Caigoutuihuo,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "name": "mdCaigoutuihuoId",
+            "creatable": true,
+            "mainDetailFieldFlag": true
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_xuanzechanpin",
+            "referTo": "Chanpinxinxi,",
+            "updatable": true,
+            "label": "选择产品",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "name": "xuanzechanpin",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Reference"
+        },
+        {
+            "referTo": null,
+            "name": "tuihuoshuliang",
+            "label": "已入库-退货数量",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_tuihuoshuliang"
+        },
+        {
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "未入库-退货数量",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_weichukutuihuoshuliang",
+            "reserved": false,
+            "name": "weichukutuihuoshuliang",
+            "type": "Integer"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "bencituihuozongshu",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Integer",
+            "physicalName": "c_bencituihuozongshu",
+            "updatable": true,
+            "label": "本次退货总数",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        }
+    ]
+}

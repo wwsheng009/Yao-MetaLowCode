@@ -1,0 +1,250 @@
+{
+    "internalEntityFlag": false,
+    "tags": "项目任务管理",
+    "name": "Feiyongdengji",
+    "entityCode": 1203,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "label": "费用登记",
+    "systemEntityFlag": false,
+    "listable": true,
+    "idFieldName": "feiyongdengjiId",
+    "nameField": "费用编号",
+    "physicalName": "t_feiyongdengji",
+    "authorizable": true,
+    "mainEntity": null,
+    "shareable": false,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "physicalName": "feiyongdengjiId",
+            "name": "feiyongdengjiId",
+            "updatable": false,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": true,
+            "label": "id主键"
+        },
+        {
+            "physicalName": "createdOn",
+            "referTo": null,
+            "name": "createdOn",
+            "label": "创建时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime"
+        },
+        {
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "name": "modifiedBy",
+            "label": "修改用户",
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "name": "ownerUser",
+            "type": "Reference",
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser"
+        },
+        {
+            "reserved": true,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "idFieldFlag": false
+        },
+        {
+            "updatable": true,
+            "label": "费用编号",
+            "type": "Text",
+            "physicalName": "c_feiyongbianhao",
+            "reserved": false,
+            "referTo": null,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "name": "feiyongbianhao",
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "c_feiyongdengjiriqi",
+            "referTo": null,
+            "name": "feiyongdengjiriqi",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Date",
+            "nameFieldFlag": false,
+            "label": "费用登记日期",
+            "mainDetailFieldFlag": false,
+            "reserved": false
+        },
+        {
+            "label": "费用发生日期",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "feiyongfashengriqi",
+            "updatable": true,
+            "type": "Date",
+            "physicalName": "c_feiyongfashengriqi",
+            "reserved": false,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": "Xiangmu,",
+            "idFieldFlag": false,
+            "label": "选择关联项目",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xuanzeguanlianxiangmu",
+            "reserved": false,
+            "name": "xuanzeguanlianxiangmu",
+            "updatable": true,
+            "creatable": true,
+            "type": "Reference"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "feiyongleixing",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_feiyongleixing",
+            "reserved": false,
+            "label": "费用类型",
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "交通费",
+                    "value": 1
+                },
+                {
+                    "key": "餐饮费",
+                    "value": 2
+                },
+                {
+                    "key": "差旅费",
+                    "value": 3
+                },
+                {
+                    "key": "物料费",
+                    "value": 4
+                },
+                {
+                    "key": "租赁费",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "reserved": false,
+            "updatable": true,
+            "creatable": true,
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_feiyongjine",
+            "referTo": null,
+            "name": "feiyongjine",
+            "idFieldFlag": false,
+            "label": "费用金额"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "dengjiren",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_dengjiren",
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "登记人",
+            "creatable": true,
+            "type": "Reference"
+        },
+        {
+            "label": "费用说明",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_feiyongshuoming",
+            "reserved": false,
+            "referTo": null,
+            "name": "feiyongshuoming",
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": true,
+            "type": "TextArea"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_fapiaoshouju",
+            "reserved": false,
+            "name": "fapiaoshouju",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "发票收据",
+            "creatable": true,
+            "type": "File"
+        }
+    ]
+}

@@ -1,0 +1,1576 @@
+{
+    "name": "Gongyingshanglianxiren",
+    "label": "供应商联系人",
+    "entityCode": 1025,
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "systemEntityFlag": false,
+    "listable": true,
+    "idFieldName": "gongyingshanglianxirenId",
+    "internalEntityFlag": false,
+    "tags": "进销存",
+    "mainEntity": {
+        "assignable": false,
+        "tags": "进销存",
+        "fieldSet": [
+            {
+                "label": "id主键",
+                "idFieldFlag": true,
+                "referenceSetting": null,
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1024,
+                "name": "gongyingshangguanliId",
+                "type": "PrimaryKey",
+                "nullable": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-4d9bd69fb15740818a8ef5f2a81a5ca6",
+                "physicalName": "gongyingshangguanliId",
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "referTo": null
+            },
+            {
+                "fieldId": "0000002-8cd2de1ad17d4e02841e01e8928dc17d",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "updatable": false,
+                "nameFieldFlag": false,
+                "entityCode": 1024,
+                "mainDetailFieldFlag": false,
+                "displayOrder": 0,
+                "nullable": false,
+                "referTo": null,
+                "name": "createdOn",
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "type": "DateTime",
+                "description": null,
+                "referenceSetting": null,
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "createdBy",
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "创建用户",
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": false,
+                "fieldId": "0000002-82966de2837546e6958d4cf45b666296",
+                "physicalName": "createdBy",
+                "description": null,
+                "referenceSetting": null,
+                "entityCode": 1024
+            },
+            {
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "label": "最近修改时间",
+                "nullable": true,
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "name": "modifiedOn",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "referenceSetting": null,
+                "physicalName": "modifiedOn",
+                "type": "DateTime",
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-2dfdd6dadddf463ca33481395520d1f6",
+                "entityCode": 1024
+            },
+            {
+                "physicalName": "modifiedBy",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1024,
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-e842f92286c54928821425b2f4f1b40c",
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "updatable": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "entityCode": 1024,
+                "physicalName": "ownerUser",
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "description": null,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "所属用户",
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "type": "Reference",
+                "fieldId": "0000002-6154bd3d1c544203b2a8f01748ee06b0",
+                "name": "ownerUser",
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "displayOrder": 0,
+                "creatable": false,
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1024,
+                "type": "Reference",
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-702a1b32f491441fb1f4c51d07f2d7fb",
+                "name": "ownerDepartment",
+                "description": null,
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ]
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "type": "Text",
+                "nullable": false,
+                "label": "供应商编码",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "referTo": null,
+                "fieldId": "0000002-2bc6aa6bb65d435f9596f7c38ec87dec",
+                "entityCode": 1024,
+                "referenceSetting": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "name": "gongyingshangbianma",
+                "physicalName": "c_gongyingshangbianma"
+            },
+            {
+                "physicalName": "c_gongyingshangmingcheng",
+                "creatable": true,
+                "name": "gongyingshangmingcheng",
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-255e4041ced2464caf58218520a35bd8",
+                "updatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "type": "Text",
+                "label": "供应商名称",
+                "description": null,
+                "nullable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1024
+            },
+            {
+                "nullable": false,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-cbc227b170ae4d378682d70ece860bf2",
+                "label": "供应商分类",
+                "physicalName": "c_gongyingshangfenlei",
+                "fieldViewModel": null,
+                "name": "gongyingshangfenlei",
+                "type": "Option",
+                "description": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "entityCode": 1024,
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "mainDetailFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "entityCode": 1024,
+                "label": "供应商等级",
+                "physicalName": "c_gongyingshangdengji",
+                "description": null,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-226e4af3580945e39652ef6df00397eb",
+                "name": "gongyingshangdengji",
+                "type": "Option",
+                "displayOrder": 0,
+                "nullable": false,
+                "referTo": null,
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "creatable": true,
+                "nameFieldFlag": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "qianyuekaishiriqi",
+                "label": "签约开始日期",
+                "physicalName": "c_qianyuekaishiriqi",
+                "description": null,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-1ea39689b7a844fdbca051bfb9b1b221",
+                "entityCode": 1024,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "creatable": true,
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "type": "Date",
+                "fieldViewModel": {
+                    "validators": []
+                }
+            },
+            {
+                "physicalName": "c_qianyuejieshuriqi",
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-b803edd4d8c14ce3a8117f59d9d41f97",
+                "type": "Date",
+                "nullable": true,
+                "idFieldFlag": false,
+                "entityCode": 1024,
+                "name": "qianyuejieshuriqi",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "label": "签约结束日期",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                }
+            },
+            {
+                "fieldViewModel": null,
+                "fieldId": "0000002-75ae7177d886489ab59701dedd692028",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "label": "结算期限",
+                "physicalName": "c_jiesuanqixian",
+                "type": "Option",
+                "description": null,
+                "creatable": true,
+                "name": "jiesuanqixian",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1024,
+                "nullable": false
+            },
+            {
+                "fieldId": "0000002-e92b44cd98d14c32aa00f99ff9ff2817",
+                "nullable": true,
+                "description": null,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "entityCode": 1024,
+                "name": "xinyongedu",
+                "label": "信用额度/元",
+                "physicalName": "c_xinyongedu",
+                "referTo": null,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Money",
+                "creatable": true,
+                "updatable": true
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId"
+                        ]
+                    }
+                ],
+                "entityCode": 1024,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-9096679a52fe4ccfaab59a7d2e181512",
+                "label": "采购负责人",
+                "physicalName": "c_caigoufuzeren",
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "caigoufuzeren",
+                "creatable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Reference",
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "type": "AreaSelect",
+                "updatable": true,
+                "referenceSetting": null,
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                },
+                "fieldId": "0000002-95b54808434b41b48ca93a3d52f8490c",
+                "label": "供应商地区",
+                "physicalName": "c_gongyingshangdiqu",
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "entityCode": 1024,
+                "name": "gongyingshangdiqu"
+            },
+            {
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "name": "jutidizhi",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-646e16f0d1b646cda373204736f50682",
+                "entityCode": 1024,
+                "label": "具体地址",
+                "physicalName": "c_jutidizhi",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "type": "Text",
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null
+            },
+            {
+                "label": "合同附件",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "File",
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-ab0f40edc0f14acebea1828669c2147d",
+                "nullable": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldViewModel": {
+                    "maxFileCount": 9,
+                    "fileMaxSize": 100,
+                    "uploadFileTypes": [],
+                    "uploadHint": "",
+                    "validators": []
+                },
+                "entityCode": 1024,
+                "name": "hetongfujian",
+                "physicalName": "c_hetongfujian",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "name": "fapiaotaitou",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "idFieldFlag": false,
+                "entityCode": 1024,
+                "updatable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-c4e3afb8ade54241ba1555545a6e1bfa",
+                "physicalName": "c_fapiaotaitou",
+                "type": "Text",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "发票抬头",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                }
+            },
+            {
+                "name": "fapiaoshuihao",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1024,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Text",
+                "nullable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-b8e5f88274ce4c3cbd5dc17cb6b74aa4",
+                "label": "发票税号",
+                "physicalName": "c_fapiaoshuihao",
+                "displayOrder": 0
+            },
+            {
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-cb1b17b1bddd4f9d86b495711311419d",
+                "entityCode": 1024,
+                "name": "shuizhong",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "description": null,
+                "label": "税种",
+                "type": "Option",
+                "displayOrder": 0,
+                "nullable": true,
+                "physicalName": "c_shuizhong",
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "label": "增值税税率%",
+                "type": "Percent",
+                "displayOrder": 0,
+                "creatable": true,
+                "updatable": true,
+                "referTo": null,
+                "entityCode": 1024,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "name": "zengzhishuishuilv",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "validators": [],
+                    "precision": 2
+                },
+                "fieldId": "0000002-c6e75b198e8e43c7be3e8a88850c57e4",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "physicalName": "c_zengzhishuishuilv"
+            },
+            {
+                "fieldId": "0000002-6b4da148bc764970b7429c587aab522c",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "name": "kaihuyinhang",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "label": "开户银行",
+                "physicalName": "c_kaihuyinhang",
+                "type": "Text",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1024
+            },
+            {
+                "type": "Text",
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "yinhangzhanghao",
+                "label": "银行账号",
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-e2c290ebe02c48f5acd2cea0d3263fbd",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "entityCode": 1024,
+                "physicalName": "c_yinhangzhanghao",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true
+            }
+        ],
+        "name": "Gongyingshangguanli",
+        "label": "供应商管理",
+        "physicalName": "t_gongyingshangguanli",
+        "detailEntityFlag": false,
+        "authorizable": true,
+        "virtualFieldSet": [],
+        "entityCode": 1024,
+        "listable": true,
+        "idField": {
+            "label": "id主键",
+            "name": "gongyingshangguanliId"
+        },
+        "entityId": "0000001-aa7c9e9fd3f74cf78c0c8de15c3bb649",
+        "layoutable": true,
+        "detailEntitySet": [
+            {
+                "name": "Gongyingshanglianxiren",
+                "label": "供应商联系人"
+            },
+            {
+                "name": "Gongyingshangzizhi",
+                "label": "供应商资质"
+            }
+        ],
+        "fieldNames": [
+            "gongyingshangguanliId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "gongyingshangbianma",
+            "gongyingshangmingcheng",
+            "gongyingshangfenlei",
+            "gongyingshangdengji",
+            "qianyuekaishiriqi",
+            "qianyuejieshuriqi",
+            "jiesuanqixian",
+            "xinyongedu",
+            "caigoufuzeren",
+            "gongyingshangdiqu",
+            "jutidizhi",
+            "hetongfujian",
+            "fapiaotaitou",
+            "fapiaoshuihao",
+            "shuizhong",
+            "zengzhishuishuilv",
+            "kaihuyinhang",
+            "yinhangzhanghao"
+        ],
+        "shareable": false,
+        "nameField": {
+            "name": "gongyingshangmingcheng",
+            "label": "供应商名称"
+        },
+        "mainEntity": null,
+        "sortedFieldSet": [
+            {
+                "physicalName": "gongyingshangguanliId",
+                "type": "PrimaryKey",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-4d9bd69fb15740818a8ef5f2a81a5ca6",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "description": null,
+                "idFieldFlag": true,
+                "entityCode": 1024,
+                "label": "id主键",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "name": "gongyingshangguanliId",
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "description": null,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-2bc6aa6bb65d435f9596f7c38ec87dec",
+                "entityCode": 1024,
+                "name": "gongyingshangbianma",
+                "label": "供应商编码",
+                "type": "Text",
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "physicalName": "c_gongyingshangbianma",
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "referenceSetting": null,
+                "label": "供应商名称",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Text",
+                "displayOrder": 0,
+                "referTo": null,
+                "name": "gongyingshangmingcheng",
+                "updatable": true,
+                "nameFieldFlag": true,
+                "defaultMemberOfListFlag": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-255e4041ced2464caf58218520a35bd8",
+                "entityCode": 1024,
+                "physicalName": "c_gongyingshangmingcheng",
+                "nullable": false
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "type": "Option",
+                "entityCode": 1024,
+                "name": "gongyingshangfenlei",
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-cbc227b170ae4d378682d70ece860bf2",
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "label": "供应商分类",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "displayOrder": 0,
+                "nullable": false,
+                "nameFieldFlag": false,
+                "physicalName": "c_gongyingshangfenlei"
+            },
+            {
+                "fieldId": "0000002-226e4af3580945e39652ef6df00397eb",
+                "label": "供应商等级",
+                "description": null,
+                "nullable": false,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "defaultMemberOfListFlag": true,
+                "name": "gongyingshangdengji",
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1024,
+                "physicalName": "c_gongyingshangdengji",
+                "type": "Option",
+                "updatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "physicalName": "c_qianyuekaishiriqi",
+                "nullable": true,
+                "referenceSetting": null,
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "qianyuekaishiriqi",
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-1ea39689b7a844fdbca051bfb9b1b221",
+                "entityCode": 1024,
+                "label": "签约开始日期",
+                "type": "Date",
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": []
+                }
+            },
+            {
+                "updatable": true,
+                "referenceSetting": null,
+                "entityCode": 1024,
+                "displayOrder": 0,
+                "nullable": true,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Date",
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-b803edd4d8c14ce3a8117f59d9d41f97",
+                "name": "qianyuejieshuriqi",
+                "physicalName": "c_qianyuejieshuriqi",
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "label": "签约结束日期",
+                "creatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Option",
+                "displayOrder": 0,
+                "creatable": true,
+                "physicalName": "c_jiesuanqixian",
+                "entityCode": 1024,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": null,
+                "fieldId": "0000002-75ae7177d886489ab59701dedd692028",
+                "label": "结算期限",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "jiesuanqixian",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "nullable": false
+            },
+            {
+                "description": null,
+                "updatable": true,
+                "referTo": null,
+                "entityCode": 1024,
+                "label": "信用额度/元",
+                "physicalName": "c_xinyongedu",
+                "type": "Money",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "creatable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-e92b44cd98d14c32aa00f99ff9ff2817",
+                "name": "xinyongedu",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "name": "caigoufuzeren",
+                "updatable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "idFieldFlag": false,
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": false,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1024,
+                "label": "采购负责人",
+                "physicalName": "c_caigoufuzeren",
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-9096679a52fe4ccfaab59a7d2e181512",
+                "description": null,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "fieldId": "0000002-95b54808434b41b48ca93a3d52f8490c",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "entityCode": 1024,
+                "name": "gongyingshangdiqu",
+                "label": "供应商地区",
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_gongyingshangdiqu",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "AreaSelect",
+                "idFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "name": "jutidizhi",
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1024,
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "label": "具体地址",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "updatable": true,
+                "physicalName": "c_jutidizhi",
+                "type": "Text",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-646e16f0d1b646cda373204736f50682"
+            },
+            {
+                "physicalName": "c_hetongfujian",
+                "type": "File",
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "uploadFileTypes": [],
+                    "uploadHint": "",
+                    "validators": [],
+                    "maxFileCount": 9,
+                    "fileMaxSize": 100
+                },
+                "fieldId": "0000002-ab0f40edc0f14acebea1828669c2147d",
+                "entityCode": 1024,
+                "name": "hetongfujian",
+                "label": "合同附件",
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "type": "Text",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "updatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1024,
+                "label": "发票抬头",
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-c4e3afb8ade54241ba1555545a6e1bfa",
+                "physicalName": "c_fapiaotaitou",
+                "nullable": true,
+                "idFieldFlag": false,
+                "name": "fapiaotaitou"
+            },
+            {
+                "entityCode": 1024,
+                "label": "发票税号",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "name": "fapiaoshuihao",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-b8e5f88274ce4c3cbd5dc17cb6b74aa4",
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "physicalName": "c_fapiaoshuihao",
+                "type": "Text",
+                "displayOrder": 0,
+                "updatable": true
+            },
+            {
+                "label": "税种",
+                "updatable": true,
+                "referTo": null,
+                "fieldViewModel": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Option",
+                "description": null,
+                "nullable": true,
+                "fieldId": "0000002-cb1b17b1bddd4f9d86b495711311419d",
+                "physicalName": "c_shuizhong",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1024,
+                "name": "shuizhong",
+                "creatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1024,
+                "updatable": true,
+                "label": "增值税税率%",
+                "physicalName": "c_zengzhishuishuilv",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Percent",
+                "fieldId": "0000002-c6e75b198e8e43c7be3e8a88850c57e4",
+                "name": "zengzhishuishuilv",
+                "creatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "precision": 2,
+                    "maxValue": 100,
+                    "minValue": 0
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false
+            },
+            {
+                "creatable": true,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "physicalName": "c_kaihuyinhang",
+                "type": "Text",
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "kaihuyinhang",
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "entityCode": 1024,
+                "label": "开户银行",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-6b4da148bc764970b7429c587aab522c"
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "label": "银行账号",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "creatable": true,
+                "idFieldFlag": false,
+                "name": "yinhangzhanghao",
+                "type": "Text",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-e2c290ebe02c48f5acd2cea0d3263fbd",
+                "entityCode": 1024,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "physicalName": "c_yinhangzhanghao",
+                "nullable": true,
+                "referenceSetting": null
+            },
+            {
+                "name": "createdOn",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "createdOn",
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1024,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "nullable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldId": "0000002-8cd2de1ad17d4e02841e01e8928dc17d",
+                "label": "创建时间",
+                "type": "DateTime",
+                "description": null,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "label": "创建用户",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "createdBy",
+                "description": null,
+                "nullable": false,
+                "idFieldFlag": false,
+                "displayOrder": 0,
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "fieldId": "0000002-82966de2837546e6958d4cf45b666296",
+                "entityCode": 1024,
+                "name": "createdBy",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "type": "Reference",
+                "mainDetailFieldFlag": false
+            },
+            {
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "updatable": false,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-2dfdd6dadddf463ca33481395520d1f6",
+                "entityCode": 1024,
+                "name": "modifiedOn",
+                "description": null,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "type": "DateTime",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "name": "modifiedBy",
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "physicalName": "modifiedBy",
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": false,
+                "creatable": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-e842f92286c54928821425b2f4f1b40c",
+                "entityCode": 1024,
+                "label": "修改用户",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ]
+            },
+            {
+                "owner": {
+                    "label": "供应商管理",
+                    "name": "Gongyingshangguanli"
+                },
+                "displayOrder": 0,
+                "label": "所属用户",
+                "nullable": false,
+                "referenceSetting": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "name": "ownerUser",
+                "physicalName": "ownerUser",
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-6154bd3d1c544203b2a8f01748ee06b0",
+                "entityCode": 1024,
+                "type": "Reference",
+                "description": null,
+                "idFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1024,
+                "owner": {
+                    "name": "Gongyingshangguanli",
+                    "label": "供应商管理"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "referenceSetting": null,
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": false,
+                "fieldId": "0000002-702a1b32f491441fb1f4c51d07f2d7fb"
+            }
+        ],
+        "mainDetailField": null
+    },
+    "physicalName": "t_gongyingshanglianxiren",
+    "nameField": "联系人姓名",
+    "authorizable": false,
+    "assignable": false,
+    "shareable": false,
+    "fieldSet": [
+        {
+            "label": "id主键",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "gongyingshanglianxirenId",
+            "reserved": true,
+            "referTo": null,
+            "name": "gongyingshanglianxirenId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "createdOn",
+            "updatable": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "label": "创建时间",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "label": "创建用户",
+            "creatable": false
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "name": "modifiedOn",
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "label": "最近修改时间"
+        },
+        {
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy",
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "referTo": "Gongyingshangguanli,",
+            "label": "主从关联Id",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "physicalName": "mdGongyingshangguanliId",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "mdGongyingshangguanliId"
+        },
+        {
+            "physicalName": "c_lianxirenxingming",
+            "name": "lianxirenxingming",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "reserved": false,
+            "referTo": null,
+            "label": "联系人姓名",
+            "creatable": true,
+            "type": "Text"
+        },
+        {
+            "updatable": true,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "lianxirenshouji",
+            "idFieldFlag": false,
+            "label": "联系人手机",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_lianxirenshouji",
+            "referTo": null
+        },
+        {
+            "referTo": null,
+            "label": "联系人职位",
+            "type": "Text",
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_lianxirenzhiwei",
+            "reserved": false,
+            "name": "lianxirenzhiwei",
+            "updatable": true
+        }
+    ]
+}

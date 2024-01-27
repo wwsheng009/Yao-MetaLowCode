@@ -1,0 +1,219 @@
+{
+    "label": "请假申请",
+    "entityCode": 1147,
+    "idFieldName": "qingjiashenqingId",
+    "internalEntityFlag": false,
+    "tags": "HRM人事",
+    "name": "Qingjiashenqing",
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "assignable": false,
+    "mainEntity": null,
+    "nameField": "请假单号",
+    "physicalName": "t_qingjiashenqing",
+    "shareable": false,
+    "authorizable": true,
+    "fieldSet": [
+        {
+            "reserved": true,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "name": "qingjiashenqingId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "qingjiashenqingId",
+            "referTo": null
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "label": "创建时间",
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "referTo": null,
+            "name": "createdOn"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "creatable": false,
+            "type": "Reference",
+            "reserved": true,
+            "name": "createdBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "name": "modifiedOn",
+            "updatable": false,
+            "creatable": false,
+            "type": "DateTime",
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "最近修改时间"
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "label": "修改用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true
+        },
+        {
+            "referTo": "User,",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "ownerUser",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "ownerUser"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "referTo": "Department,",
+            "updatable": false,
+            "type": "Reference"
+        },
+        {
+            "name": "qingjiadanhao",
+            "creatable": true,
+            "physicalName": "c_qingjiadanhao",
+            "reserved": false,
+            "referTo": null,
+            "label": "请假单号",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "qingjialeixing",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_qingjialeixing",
+            "reserved": false,
+            "updatable": true,
+            "label": "请假类型",
+            "optionList": [
+                {
+                    "key": "病假",
+                    "value": 1
+                },
+                {
+                    "key": "事假",
+                    "value": 2
+                },
+                {
+                    "key": "婚假",
+                    "value": 3
+                },
+                {
+                    "key": "年假",
+                    "value": 4
+                },
+                {
+                    "key": "产假",
+                    "value": 5
+                },
+                {
+                    "key": "丧假",
+                    "value": 6
+                },
+                {
+                    "key": "陪产假",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_yuangong",
+            "name": "yuangong",
+            "label": "员工",
+            "updatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": "Yuangongdangan,"
+        },
+        {
+            "creatable": true,
+            "type": "TextArea",
+            "nameFieldFlag": false,
+            "physicalName": "c_qingjiashiyoushuoming",
+            "reserved": false,
+            "name": "qingjiashiyoushuoming",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "label": "请假事由说明"
+        },
+        {
+            "referTo": null,
+            "name": "xiangguanzhengming",
+            "idFieldFlag": false,
+            "label": "相关证明",
+            "creatable": true,
+            "type": "File",
+            "physicalName": "c_xiangguanzhengming",
+            "reserved": false,
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "referTo": null,
+            "updatable": true,
+            "type": "Decimal",
+            "nameFieldFlag": false,
+            "physicalName": "c_hejiqingjiatianshu",
+            "reserved": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "name": "hejiqingjiatianshu",
+            "idFieldFlag": false,
+            "label": "合计请假天数"
+        }
+    ]
+}

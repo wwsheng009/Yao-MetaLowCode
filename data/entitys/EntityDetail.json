@@ -1,0 +1,833 @@
+{
+    "entityCode": 1254,
+    "detailEntityFlag": true,
+    "listable": false,
+    "internalEntityFlag": false,
+    "name": "EntityDetail",
+    "label": "EntityDetail",
+    "systemEntityFlag": false,
+    "layoutable": false,
+    "idFieldName": "entityDetailId",
+    "tags": "",
+    "shareable": false,
+    "nameField": null,
+    "physicalName": "t_entitydetail",
+    "mainEntity": {
+        "nameField": null,
+        "detailEntitySet": [
+            {
+                "name": "EntityDetail",
+                "label": "EntityDetail"
+            }
+        ],
+        "sortedFieldSet": [
+            {
+                "type": "PrimaryKey",
+                "creatable": false,
+                "idFieldFlag": true,
+                "fieldViewModel": null,
+                "fieldId": null,
+                "name": "entityId",
+                "physicalName": "entityId",
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "displayOrder": 0,
+                "entityCode": 1252,
+                "nullable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "label": "id主键",
+                "description": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "fieldId": null,
+                "entityCode": 1252,
+                "label": "str1",
+                "physicalName": "c_str1",
+                "type": "Text",
+                "nameFieldFlag": false,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "str1",
+                "description": null,
+                "nullable": false,
+                "updatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null
+            },
+            {
+                "name": "b1",
+                "nullable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "type": "Reference",
+                "updatable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "email"
+                        ]
+                    }
+                ],
+                "fieldId": null,
+                "entityCode": 1252,
+                "physicalName": "c_b1",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "label": "b1",
+                "creatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "entityCode": 1252,
+                "name": "o1",
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "updatable": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "defaultMemberOfListFlag": true,
+                "label": "o1",
+                "physicalName": "c_o1",
+                "type": "Option",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "nullable": false,
+                "creatable": true,
+                "fieldViewModel": null,
+                "fieldId": null,
+                "description": null,
+                "idFieldFlag": false
+            },
+            {
+                "label": "tag1",
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "name": "tag1",
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "description": null,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": null,
+                "entityCode": 1252,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "physicalName": "c_tag1",
+                "type": "Tag",
+                "referTo": null
+            },
+            {
+                "name": "r1",
+                "nullable": false,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "modifiedOn",
+                            "ownerUser"
+                        ],
+                        "entityName": "User"
+                    }
+                ],
+                "fieldId": null,
+                "label": "r1",
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1252,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "physicalName": "c_r1",
+                "type": "Reference",
+                "creatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "nullable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": null,
+                "description": null,
+                "physicalName": "createdOn",
+                "owner": {
+                    "label": "Entity",
+                    "name": "Entity"
+                },
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "name": "createdOn",
+                "label": "创建时间",
+                "referTo": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1252,
+                "type": "DateTime"
+            },
+            {
+                "physicalName": "createdBy",
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1252,
+                "name": "createdBy",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": null,
+                "fieldId": null,
+                "label": "创建用户",
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "nullable": false,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "idFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": null,
+                "type": "DateTime",
+                "displayOrder": 0,
+                "physicalName": "modifiedOn",
+                "referTo": null,
+                "fieldViewModel": null,
+                "entityCode": 1252,
+                "name": "modifiedOn",
+                "label": "最近修改时间",
+                "description": null,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "nullable": true,
+                "idFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1252,
+                "label": "修改用户",
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": false,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "referenceSetting": null,
+                "fieldId": null,
+                "name": "modifiedBy",
+                "type": "Reference",
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "physicalName": "modifiedBy",
+                "description": null,
+                "creatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "entityCode": 1252,
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": null,
+                "name": "ownerUser",
+                "physicalName": "ownerUser",
+                "owner": {
+                    "label": "Entity",
+                    "name": "Entity"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "referenceSetting": null,
+                "label": "所属用户",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "displayOrder": 0,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1252,
+                "physicalName": "ownerDepartment",
+                "type": "Reference",
+                "label": "所属部门",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "fieldViewModel": null,
+                "fieldId": null,
+                "name": "ownerDepartment",
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "description": null,
+                "nullable": false
+            }
+        ],
+        "entityCode": 1252,
+        "layoutable": true,
+        "listable": true,
+        "shareable": false,
+        "idField": {
+            "name": "entityId",
+            "label": "id主键"
+        },
+        "mainEntity": null,
+        "fieldNames": [
+            "entityId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "str1",
+            "b1",
+            "o1",
+            "tag1",
+            "r1"
+        ],
+        "label": "Entity",
+        "detailEntityFlag": false,
+        "authorizable": true,
+        "fieldSet": [
+            {
+                "fieldId": null,
+                "entityCode": 1252,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": true,
+                "defaultMemberOfListFlag": false,
+                "name": "entityId",
+                "physicalName": "entityId",
+                "type": "PrimaryKey",
+                "referTo": null,
+                "owner": {
+                    "label": "Entity",
+                    "name": "Entity"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "id主键",
+                "nullable": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "owner": {
+                    "label": "Entity",
+                    "name": "Entity"
+                },
+                "displayOrder": 0,
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "createdOn",
+                "entityCode": 1252,
+                "physicalName": "createdOn",
+                "updatable": false,
+                "fieldId": null,
+                "description": null,
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "type": "DateTime",
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "label": "创建时间"
+            },
+            {
+                "entityCode": 1252,
+                "nullable": false,
+                "fieldId": null,
+                "name": "createdBy",
+                "label": "创建用户",
+                "description": null,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "owner": {
+                    "label": "Entity",
+                    "name": "Entity"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "creatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "type": "DateTime",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1252,
+                "name": "modifiedOn",
+                "label": "最近修改时间",
+                "creatable": false,
+                "physicalName": "modifiedOn",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false
+            },
+            {
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "physicalName": "modifiedBy",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1252,
+                "nullable": true,
+                "creatable": false,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "updatable": false,
+                "referenceSetting": null,
+                "fieldId": null,
+                "type": "Reference",
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "updatable": false,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "description": null,
+                "nullable": false,
+                "creatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": null,
+                "type": "Reference",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "physicalName": "ownerUser",
+                "name": "ownerUser",
+                "label": "所属用户",
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1252
+            },
+            {
+                "fieldViewModel": null,
+                "idFieldFlag": false,
+                "fieldId": null,
+                "entityCode": 1252,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "ownerDepartment",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": null,
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "type": "Reference"
+            },
+            {
+                "entityCode": 1252,
+                "nullable": false,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "fieldId": null,
+                "name": "str1",
+                "label": "str1",
+                "physicalName": "c_str1",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "type": "Text",
+                "description": null,
+                "creatable": true
+            },
+            {
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "email"
+                        ]
+                    }
+                ],
+                "nullable": false,
+                "updatable": true,
+                "entityCode": 1252,
+                "name": "b1",
+                "label": "b1",
+                "physicalName": "c_b1",
+                "type": "Reference",
+                "fieldId": null,
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "description": null,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ]
+            },
+            {
+                "owner": {
+                    "label": "Entity",
+                    "name": "Entity"
+                },
+                "label": "o1",
+                "type": "Option",
+                "description": null,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldId": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1252,
+                "physicalName": "c_o1",
+                "nullable": false,
+                "updatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "name": "o1"
+            },
+            {
+                "label": "tag1",
+                "description": null,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "name": "tag1",
+                "physicalName": "c_tag1",
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "type": "Tag",
+                "displayOrder": 0,
+                "creatable": true,
+                "entityCode": 1252,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": null,
+                "nullable": false,
+                "updatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "creatable": true,
+                "name": "r1",
+                "nullable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "physicalName": "c_r1",
+                "displayOrder": 0,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "modifiedOn",
+                            "ownerUser"
+                        ]
+                    }
+                ],
+                "type": "Reference",
+                "entityCode": 1252,
+                "label": "r1",
+                "owner": {
+                    "name": "Entity",
+                    "label": "Entity"
+                },
+                "description": null,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": null
+            }
+        ],
+        "mainDetailField": null,
+        "virtualFieldSet": [],
+        "entityId": null,
+        "name": "Entity",
+        "physicalName": "t_entity",
+        "assignable": false,
+        "tags": ""
+    },
+    "authorizable": false,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "referTo": null,
+            "idFieldFlag": true,
+            "creatable": false,
+            "physicalName": "entityDetailId",
+            "reserved": true,
+            "name": "entityDetailId",
+            "updatable": false,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "updatable": false,
+            "creatable": false,
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false,
+            "label": "创建用户"
+        },
+        {
+            "updatable": false,
+            "label": "最近修改时间",
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "name": "modifiedBy",
+            "updatable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "修改用户"
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "mdEntityId",
+            "referTo": "Entity,",
+            "name": "mdEntityId",
+            "mainDetailFieldFlag": true,
+            "reserved": true,
+            "creatable": true
+        }
+    ]
+}

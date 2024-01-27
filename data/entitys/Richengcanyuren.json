@@ -1,0 +1,919 @@
+{
+    "label": "日程参与人",
+    "entityCode": 1213,
+    "systemEntityFlag": false,
+    "name": "Richengcanyuren",
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "richengcanyurenId",
+    "internalEntityFlag": false,
+    "tags": "项目任务管理",
+    "mainEntity": {
+        "entityId": "0000001-966b617ccf4c4bcb8cac2408f6c66169",
+        "name": "Richeng",
+        "idField": {
+            "name": "richengId",
+            "label": "id主键"
+        },
+        "mainDetailField": null,
+        "detailEntitySet": [
+            {
+                "label": "日程参与人",
+                "name": "Richengcanyuren"
+            }
+        ],
+        "mainEntity": null,
+        "fieldSet": [
+            {
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "richengId",
+                "physicalName": "richengId",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "type": "PrimaryKey",
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "displayOrder": 0,
+                "idFieldFlag": true,
+                "fieldId": "0000002-647f00d9678549b49518122c4660cd8c",
+                "entityCode": 1209,
+                "label": "id主键",
+                "description": null
+            },
+            {
+                "fieldId": "0000002-5ccdb610db6b481889df6383f3fbac44",
+                "label": "创建时间",
+                "description": null,
+                "nameFieldFlag": false,
+                "name": "createdOn",
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1209,
+                "physicalName": "createdOn",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "type": "DateTime",
+                "displayOrder": 0,
+                "creatable": false,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null
+            },
+            {
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "nullable": false,
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1209,
+                "name": "createdBy",
+                "updatable": false,
+                "displayOrder": 0,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-85a00c9f1cba4ac0b098f190ca948963",
+                "label": "创建用户",
+                "type": "Reference"
+            },
+            {
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-7ee8708d9a7c442585d1e3baa5e72988",
+                "entityCode": 1209,
+                "name": "modifiedOn",
+                "referTo": null,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "type": "DateTime",
+                "displayOrder": 0,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "nullable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "description": null
+            },
+            {
+                "label": "修改用户",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "displayOrder": 0,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-e22bbee6ddb649999c6e66b21f89b06f",
+                "entityCode": 1209,
+                "physicalName": "modifiedBy",
+                "type": "Reference",
+                "creatable": false
+            },
+            {
+                "fieldId": "0000002-522e60ae2a304652866c6b594c7d376e",
+                "entityCode": 1209,
+                "physicalName": "ownerUser",
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "creatable": false,
+                "label": "所属用户",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "defaultMemberOfListFlag": false,
+                "name": "ownerUser",
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-bb312e4bec644df59ba98fda857e5ab6",
+                "label": "所属部门",
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1209,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "ownerDepartment",
+                "physicalName": "ownerDepartment",
+                "type": "Reference",
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": null
+            },
+            {
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "description": null,
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "physicalName": "c_richengzhuti",
+                "entityCode": 1209,
+                "type": "Text",
+                "displayOrder": 0,
+                "nullable": true,
+                "fieldId": "0000002-0becaca04d5f42dab3c8b6e2f10bb73a",
+                "nameFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "idFieldFlag": false,
+                "label": "日程主题",
+                "creatable": true,
+                "referTo": null,
+                "name": "richengzhuti"
+            },
+            {
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "description": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-21fcf0d4ad5b469483be910c0f0b53c3",
+                "name": "kaishishijian",
+                "type": "DateTime",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "entityCode": 1209,
+                "physicalName": "c_kaishishijian",
+                "displayOrder": 0,
+                "nullable": true,
+                "referenceSetting": null,
+                "label": "开始时间"
+            },
+            {
+                "name": "jieshushijian",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1209,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "label": "结束时间",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-5a75467d7dc6401c9631954b09698dd3",
+                "physicalName": "c_jieshushijian",
+                "type": "DateTime",
+                "nullable": true
+            },
+            {
+                "label": "日程类型",
+                "owner": {
+                    "label": "日程",
+                    "name": "Richeng"
+                },
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1209,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "richengleixing",
+                "type": "Option",
+                "nullable": false,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-e948a3d1abbe44b791c6057b5d46bdb8",
+                "physicalName": "c_richengleixing",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false
+            },
+            {
+                "nullable": true,
+                "updatable": true,
+                "fieldId": "0000002-de5947d66ea8411fa4506701fb0527b4",
+                "entityCode": 1209,
+                "physicalName": "c_didian",
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "rows": 3,
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 1000
+                },
+                "label": "地点",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "type": "TextArea",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "didian",
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "precision": 1,
+                    "maxValue": 999999999,
+                    "minValue": -999999999
+                },
+                "entityCode": 1209,
+                "name": "shichang",
+                "creatable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "label": "时长",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "type": "Decimal",
+                "description": null,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-d1f2504d2bfa4b6caa8278e6258be03b",
+                "physicalName": "c_shichang",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                }
+            },
+            {
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "name": "richengmiaoshu",
+                "label": "日程描述",
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "c_richengmiaoshu",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "mainDetailFieldFlag": false,
+                "displayOrder": 0,
+                "creatable": true,
+                "type": "TextArea",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-0b3f9c6cb4374ddcb7f7d312e3b86cfd",
+                "entityCode": 1209
+            }
+        ],
+        "fieldNames": [
+            "richengId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "richengzhuti",
+            "kaishishijian",
+            "jieshushijian",
+            "richengleixing",
+            "didian",
+            "shichang",
+            "richengmiaoshu"
+        ],
+        "detailEntityFlag": false,
+        "layoutable": true,
+        "nameField": {
+            "name": "richengzhuti",
+            "label": "日程主题"
+        },
+        "sortedFieldSet": [
+            {
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-647f00d9678549b49518122c4660cd8c",
+                "name": "richengId",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "type": "PrimaryKey",
+                "displayOrder": 0,
+                "physicalName": "richengId",
+                "idFieldFlag": true,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1209,
+                "label": "id主键",
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "updatable": false,
+                "nameFieldFlag": false
+            },
+            {
+                "name": "richengzhuti",
+                "label": "日程主题",
+                "physicalName": "c_richengzhuti",
+                "mainDetailFieldFlag": false,
+                "entityCode": 1209,
+                "type": "Text",
+                "updatable": true,
+                "nameFieldFlag": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-0becaca04d5f42dab3c8b6e2f10bb73a",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "entityCode": 1209,
+                "physicalName": "c_kaishishijian",
+                "defaultMemberOfListFlag": true,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "kaishishijian",
+                "label": "开始时间",
+                "owner": {
+                    "label": "日程",
+                    "name": "Richeng"
+                },
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "description": null,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-21fcf0d4ad5b469483be910c0f0b53c3",
+                "type": "DateTime"
+            },
+            {
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-5a75467d7dc6401c9631954b09698dd3",
+                "entityCode": 1209,
+                "name": "jieshushijian",
+                "type": "DateTime",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "label": "结束时间",
+                "displayOrder": 0,
+                "referenceSetting": null,
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_jieshushijian",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "description": null,
+                "creatable": true
+            },
+            {
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "nullable": false,
+                "updatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1209,
+                "name": "richengleixing",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-e948a3d1abbe44b791c6057b5d46bdb8",
+                "label": "日程类型",
+                "physicalName": "c_richengleixing",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "type": "Option",
+                "creatable": true,
+                "fieldViewModel": null
+            },
+            {
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "type": "TextArea",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "entityCode": 1209,
+                "physicalName": "c_didian",
+                "fieldViewModel": {
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "fieldId": "0000002-de5947d66ea8411fa4506701fb0527b4",
+                "label": "地点",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "didian"
+            },
+            {
+                "label": "时长",
+                "description": null,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "creatable": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-d1f2504d2bfa4b6caa8278e6258be03b",
+                "entityCode": 1209,
+                "physicalName": "c_shichang",
+                "type": "Decimal",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 1,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "name": "shichang",
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "nullable": true,
+                "name": "richengmiaoshu",
+                "entityCode": 1209,
+                "physicalName": "c_richengmiaoshu",
+                "fieldId": "0000002-0b3f9c6cb4374ddcb7f7d312e3b86cfd",
+                "type": "TextArea",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "label": "日程描述",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                }
+            },
+            {
+                "label": "创建时间",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "creatable": false,
+                "referenceSetting": null,
+                "name": "createdOn",
+                "displayOrder": 0,
+                "nullable": false,
+                "entityCode": 1209,
+                "type": "DateTime",
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-5ccdb610db6b481889df6383f3fbac44",
+                "physicalName": "createdOn",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                }
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1209,
+                "name": "createdBy",
+                "type": "Reference",
+                "creatable": false,
+                "fieldId": "0000002-85a00c9f1cba4ac0b098f190ca948963",
+                "physicalName": "createdBy",
+                "description": null,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "label": "创建用户",
+                "displayOrder": 0,
+                "nullable": false
+            },
+            {
+                "fieldId": "0000002-7ee8708d9a7c442585d1e3baa5e72988",
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "type": "DateTime",
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1209,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "modifiedOn",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "physicalName": "modifiedBy",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-e22bbee6ddb649999c6e66b21f89b06f",
+                "name": "modifiedBy",
+                "type": "Reference",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1209,
+                "label": "修改用户",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "nullable": true,
+                "updatable": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-522e60ae2a304652866c6b594c7d376e",
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "description": null,
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1209,
+                "label": "所属用户",
+                "physicalName": "ownerUser",
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "name": "ownerUser",
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "type": "Reference"
+            },
+            {
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Richeng",
+                    "label": "日程"
+                },
+                "type": "Reference",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "ownerDepartment",
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-bb312e4bec644df59ba98fda857e5ab6",
+                "entityCode": 1209,
+                "physicalName": "ownerDepartment",
+                "displayOrder": 0,
+                "nullable": false,
+                "label": "所属部门",
+                "description": null,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null
+            }
+        ],
+        "label": "日程",
+        "physicalName": "t_richeng",
+        "entityCode": 1209,
+        "listable": true,
+        "authorizable": true,
+        "shareable": false,
+        "assignable": false,
+        "tags": "项目任务管理",
+        "virtualFieldSet": []
+    },
+    "nameField": null,
+    "physicalName": "t_richengcanyuren",
+    "shareable": false,
+    "assignable": false,
+    "authorizable": false,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": true,
+            "mainDetailFieldFlag": false,
+            "type": "PrimaryKey",
+            "physicalName": "richengcanyurenId",
+            "referTo": null,
+            "name": "richengcanyurenId",
+            "label": "id主键",
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "type": "DateTime"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy",
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "name": "modifiedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "referTo": "User,",
+            "label": "修改用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true
+        },
+        {
+            "referTo": "Richeng,",
+            "name": "mdRichengId",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false,
+            "physicalName": "mdRichengId",
+            "reserved": true,
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "creatable": true
+        },
+        {
+            "updatable": true,
+            "label": "参与人",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "canyuren",
+            "physicalName": "c_canyuren",
+            "referTo": "User,",
+            "idFieldFlag": false
+        }
+    ]
+}

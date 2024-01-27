@@ -68,7 +68,7 @@
       "path": "getUserRole",
       "method": "get",
       "process": "scripts.user.getUserRole",
-      "in": ["$qeury.userId"],
+      "in": ["$query.userId"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -78,7 +78,7 @@
       "path": "checkRight",
       "method": "post",
       "process": "scripts.user.checkRight",
-      "in": ["$qeury.id", "$qeury.rightType", "$qeury.entityName"],
+      "in": ["$query.id", "$query.rightType", "$query.entityName"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -108,7 +108,7 @@
       "path": "avatar",
       "method": "get",
       "process": "scripts.user.avatar",
-      "in": ["$qeury.userId"],
+      "in": ["$query.userId"],
       "out": {
         "status": 200,
         "type": "application/json"

@@ -1,0 +1,801 @@
+{
+    "label": "公告通知范围",
+    "entityCode": 1208,
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "idFieldName": "gonggaotongzhifanweiId",
+    "tags": "项目任务管理",
+    "name": "Gonggaotongzhifanwei",
+    "detailEntityFlag": true,
+    "listable": true,
+    "internalEntityFlag": false,
+    "assignable": false,
+    "authorizable": false,
+    "physicalName": "t_gonggaotongzhifanwei",
+    "shareable": false,
+    "mainEntity": {
+        "sortedFieldSet": [
+            {
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "name": "fabugonggaoId",
+                "label": "id主键",
+                "owner": {
+                    "label": "发布公告",
+                    "name": "Fabugonggao"
+                },
+                "type": "PrimaryKey",
+                "displayOrder": 0,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-66dda5a85ddf468ba7070374fcd3d953",
+                "physicalName": "fabugonggaoId",
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1206,
+                "creatable": false
+            },
+            {
+                "label": "公告标题",
+                "type": "Text",
+                "displayOrder": 0,
+                "nullable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-ad80d763eca047928b6c6ff0a86be195",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "name": "gonggaobiaoti",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "nameFieldFlag": true,
+                "entityCode": 1206,
+                "physicalName": "c_gonggaobiaoti",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "description": null,
+                "updatable": true
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-d048405cf0fb4b2a9021af4859d880fe",
+                "physicalName": "c_faburiqi",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "creatable": true,
+                "updatable": true,
+                "entityCode": 1206,
+                "type": "Date",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "name": "faburiqi",
+                "label": "发布日期",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null
+            },
+            {
+                "name": "xiajiariqi",
+                "physicalName": "c_xiajiariqi",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-bb0cc147b8974b179568e53eedce83b9",
+                "label": "下架日期",
+                "creatable": true,
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1206,
+                "type": "Date",
+                "displayOrder": 0,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-4123db49b104440ca01f2a87e59cec74",
+                "name": "shifouxiajia",
+                "displayOrder": 0,
+                "updatable": true,
+                "referenceSetting": null,
+                "physicalName": "c_shifouxiajia",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1206,
+                "label": "是否下架",
+                "type": "Option",
+                "description": null,
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "creatable": true,
+                "fieldViewModel": null
+            },
+            {
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "label": "公告内容",
+                "physicalName": "c_gonggaoneirong",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "entityCode": 1206,
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "type": "TextArea",
+                "referenceSetting": null,
+                "fieldId": "0000002-b8333da19db34c6b8bdcfe5c2c0b8465",
+                "name": "gonggaoneirong",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "updatable": false,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1206,
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "displayOrder": 0,
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-c0668a2460d84b6a8c5cc1ee5b8e76d9",
+                "label": "创建时间",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "createdOn",
+                "description": null,
+                "creatable": false,
+                "name": "createdOn",
+                "type": "DateTime",
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "creatable": false,
+                "entityCode": 1206,
+                "name": "createdBy",
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "type": "Reference",
+                "updatable": false,
+                "fieldId": "0000002-6a183bd4155b43df9a97f9d894cbbc24",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "displayOrder": 0,
+                "nullable": false,
+                "fieldViewModel": null,
+                "description": null
+            },
+            {
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-53fff76c755b455592cde8683a15b455",
+                "description": null,
+                "nullable": true,
+                "referTo": null,
+                "name": "modifiedOn",
+                "type": "DateTime",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1206,
+                "label": "最近修改时间",
+                "defaultMemberOfListFlag": false,
+                "physicalName": "modifiedOn",
+                "displayOrder": 0
+            },
+            {
+                "fieldId": "0000002-bc3c30fba7cf45e182e546d4e91f655a",
+                "type": "Reference",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "entityCode": 1206,
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "displayOrder": 0,
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "physicalName": "modifiedBy"
+            },
+            {
+                "label": "所属用户",
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-900f4888c8d0449ca15b9f19439464d8",
+                "entityCode": 1206,
+                "name": "ownerUser",
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "physicalName": "ownerUser",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "description": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "nameFieldFlag": false,
+                "type": "Reference",
+                "creatable": false
+            },
+            {
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "fieldViewModel": null,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "label": "所属部门",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-49e735ef685b47ddab023de4cf92939a",
+                "name": "ownerDepartment",
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1206,
+                "physicalName": "ownerDepartment",
+                "description": null,
+                "nullable": false
+            }
+        ],
+        "label": "发布公告",
+        "detailEntitySet": [
+            {
+                "name": "Gonggaotongzhifanwei",
+                "label": "公告通知范围"
+            }
+        ],
+        "fieldSet": [
+            {
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "creatable": false,
+                "name": "fabugonggaoId",
+                "label": "id主键",
+                "physicalName": "fabugonggaoId",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-66dda5a85ddf468ba7070374fcd3d953",
+                "entityCode": 1206,
+                "description": null,
+                "idFieldFlag": true,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "type": "PrimaryKey",
+                "nullable": false
+            },
+            {
+                "fieldId": "0000002-c0668a2460d84b6a8c5cc1ee5b8e76d9",
+                "name": "createdOn",
+                "label": "创建时间",
+                "nullable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1206,
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "type": "DateTime",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "physicalName": "createdOn",
+                "updatable": false,
+                "referenceSetting": null
+            },
+            {
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1206,
+                "name": "createdBy",
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "fieldViewModel": null,
+                "type": "Reference",
+                "nullable": false,
+                "referenceSetting": null,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-6a183bd4155b43df9a97f9d894cbbc24",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "description": null,
+                "updatable": false,
+                "displayOrder": 0,
+                "creatable": false
+            },
+            {
+                "entityCode": 1206,
+                "physicalName": "modifiedOn",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-53fff76c755b455592cde8683a15b455",
+                "owner": {
+                    "label": "发布公告",
+                    "name": "Fabugonggao"
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "label": "最近修改时间",
+                "type": "DateTime",
+                "description": null,
+                "name": "modifiedOn",
+                "mainDetailFieldFlag": false,
+                "updatable": false
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "nullable": true,
+                "entityCode": 1206,
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "label": "发布公告",
+                    "name": "Fabugonggao"
+                },
+                "type": "Reference",
+                "updatable": false,
+                "fieldId": "0000002-bc3c30fba7cf45e182e546d4e91f655a",
+                "description": null,
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "label": "修改用户"
+            },
+            {
+                "type": "Reference",
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-900f4888c8d0449ca15b9f19439464d8",
+                "physicalName": "ownerUser",
+                "owner": {
+                    "label": "发布公告",
+                    "name": "Fabugonggao"
+                },
+                "creatable": false,
+                "nameFieldFlag": false,
+                "name": "ownerUser",
+                "description": null,
+                "nullable": false,
+                "updatable": false,
+                "referenceSetting": null,
+                "entityCode": 1206,
+                "label": "所属用户",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "name": "ownerDepartment",
+                "nullable": false,
+                "fieldViewModel": null,
+                "entityCode": 1206,
+                "physicalName": "ownerDepartment",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-49e735ef685b47ddab023de4cf92939a",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "label": "所属部门",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "type": "Reference",
+                "creatable": false
+            },
+            {
+                "type": "Text",
+                "displayOrder": 0,
+                "creatable": true,
+                "updatable": true,
+                "entityCode": 1206,
+                "name": "gonggaobiaoti",
+                "owner": {
+                    "label": "发布公告",
+                    "name": "Fabugonggao"
+                },
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-ad80d763eca047928b6c6ff0a86be195",
+                "physicalName": "c_gonggaobiaoti",
+                "nameFieldFlag": true,
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "label": "公告标题",
+                "description": null,
+                "idFieldFlag": false
+            },
+            {
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "creatable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-d048405cf0fb4b2a9021af4859d880fe",
+                "entityCode": 1206,
+                "type": "Date",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "physicalName": "c_faburiqi",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "faburiqi",
+                "label": "发布日期",
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-bb0cc147b8974b179568e53eedce83b9",
+                "displayOrder": 0,
+                "entityCode": 1206,
+                "name": "xiajiariqi",
+                "label": "下架日期",
+                "description": null,
+                "updatable": true,
+                "physicalName": "c_xiajiariqi",
+                "type": "Date",
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "validators": []
+                }
+            },
+            {
+                "label": "是否下架",
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-4123db49b104440ca01f2a87e59cec74",
+                "entityCode": 1206,
+                "physicalName": "c_shifouxiajia",
+                "displayOrder": 0,
+                "creatable": true,
+                "referTo": null,
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "shifouxiajia",
+                "owner": {
+                    "name": "Fabugonggao",
+                    "label": "发布公告"
+                },
+                "type": "Option",
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "name": "gonggaoneirong",
+                "label": "公告内容",
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-b8333da19db34c6b8bdcfe5c2c0b8465",
+                "entityCode": 1206,
+                "type": "TextArea",
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "physicalName": "c_gonggaoneirong",
+                "owner": {
+                    "label": "发布公告",
+                    "name": "Fabugonggao"
+                }
+            }
+        ],
+        "listable": true,
+        "assignable": false,
+        "idField": {
+            "name": "fabugonggaoId",
+            "label": "id主键"
+        },
+        "mainEntity": null,
+        "mainDetailField": null,
+        "entityId": "0000001-64103a44ef8944288cabf88e6f00537a",
+        "detailEntityFlag": false,
+        "layoutable": true,
+        "fieldNames": [
+            "fabugonggaoId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "gonggaobiaoti",
+            "faburiqi",
+            "xiajiariqi",
+            "shifouxiajia",
+            "gonggaoneirong"
+        ],
+        "virtualFieldSet": [],
+        "authorizable": true,
+        "tags": "项目任务管理",
+        "name": "Fabugonggao",
+        "physicalName": "t_fabugonggao",
+        "entityCode": 1206,
+        "shareable": false,
+        "nameField": {
+            "name": "gonggaobiaoti",
+            "label": "公告标题"
+        }
+    },
+    "nameField": null,
+    "fieldSet": [
+        {
+            "reserved": true,
+            "idFieldFlag": true,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "gonggaotongzhifanweiId",
+            "updatable": false,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "gonggaotongzhifanweiId"
+        },
+        {
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "updatable": false,
+            "label": "创建时间",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "name": "createdBy",
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": false
+        },
+        {
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy",
+            "updatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "Fabugonggao,",
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "physicalName": "mdFabugonggaoId",
+            "name": "mdFabugonggaoId",
+            "updatable": false,
+            "creatable": true
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_xuanzechengyuan",
+            "referTo": "User,",
+            "name": "xuanzechengyuan",
+            "idFieldFlag": false,
+            "label": "选择成员",
+            "reserved": false,
+            "updatable": true,
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

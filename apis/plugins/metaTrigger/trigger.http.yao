@@ -3,88 +3,89 @@
   "version": "1.0.0",
   "description": "自定义API接口",
   "guard": "-",
+  "group": "/plugins/metaTrigger/trigger",
   "paths": [
     {
       "path": "/dataUpdate/entityList",
       "method": "get",
-      "process": "scripts.plugins.dataUpdateEntityList",
+      "process": "scripts.plugins.trigger.dataUpdateEntityList",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/dataAutoCreate/entityList",
       "method": "get",
-      "process": "scripts.plugins.dataAutoCreate",
+      "process": "scripts.plugins.trigger.dataAutoCreate",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/aggregation/entityList",
       "method": "get",
-      "process": "scripts.plugins.aggregationEntityList",
+      "process": "scripts.plugins.trigger.aggregationEntityList",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/aviator/validate",
       "method": "post",
-      "process": "scripts.plugins.aviatorValidate",
+      "process": "scripts.plugins.trigger.aviatorValidate",
       "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/save",
       "method": "post",
-      "process": "scripts.plugins.triggerSave",
+      "process": "scripts.plugins.trigger.triggerSave",
       "in": ["$query.id", ":payload"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/executeTrigger",
       "method": "post",
-      "process": "scripts.plugins.execute",
+      "process": "scripts.plugins.trigger.execute",
       "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/callBackTest",
       "method": "post",
-      "process": "scripts.plugins.callBackTest",
+      "process": "scripts.plugins.trigger.callBackTest",
       "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/querySendState",
       "method": "get",
-      "process": "scripts.plugins.querySendState",
+      "process": "scripts.plugins.trigger.querySendState",
       "in": [],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/idToIdName",
       "method": "post",
-      "process": "scripts.plugins.idToIdName",
+      "process": "scripts.plugins.trigger.idToIdName",
       "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/dataDelete/entityList",
       "method": "get",
-      "process": "scripts.plugins.getDataDeleteEntityList",
+      "process": "scripts.plugins.trigger.getDataDeleteEntityList",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/assign/entityList",
       "method": "get",
-      "process": "scripts.plugins.getAssignEntityList",
+      "process": "scripts.plugins.trigger.getAssignEntityList",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "/dataRevoke/entityList",
       "method": "get",
-      "process": "scripts.plugins.getDataRevokeEntityList",
+      "process": "scripts.plugins.trigger.getDataRevokeEntityList",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
     }

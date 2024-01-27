@@ -1,0 +1,228 @@
+{
+    "internalEntityFlag": false,
+    "name": "CRMyingshoujihua",
+    "entityCode": 1173,
+    "detailEntityFlag": false,
+    "listable": true,
+    "idFieldName": "cRMyingshoujihuaId",
+    "label": "CRM应收计划",
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "tags": "CRM",
+    "nameField": "应收计划编号",
+    "assignable": false,
+    "authorizable": true,
+    "physicalName": "t_crmyingshoujihua",
+    "mainEntity": null,
+    "shareable": false,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "cRMyingshoujihuaId",
+            "idFieldFlag": true,
+            "physicalName": "cRMyingshoujihuaId",
+            "updatable": false,
+            "label": "id主键",
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "referTo": null
+        },
+        {
+            "type": "Reference",
+            "physicalName": "createdBy",
+            "updatable": false,
+            "creatable": false,
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,"
+        },
+        {
+            "nameFieldFlag": false,
+            "label": "最近修改时间",
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy"
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "name": "ownerUser",
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_guanliankehu",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "关联客户",
+            "creatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": "CRMgonghaichi,",
+            "name": "guanliankehu"
+        },
+        {
+            "physicalName": "c_guanlianhetongdingdan",
+            "reserved": false,
+            "referTo": "CRMhetongdingdan,",
+            "name": "guanlianhetongdingdan",
+            "updatable": true,
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "label": "关联合同订单",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_jihuahuikuanjineuan",
+            "reserved": false,
+            "updatable": true,
+            "label": "计划回款金额/元",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "jihuahuikuanjineuan",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Money"
+        },
+        {
+            "reserved": false,
+            "name": "jihuahuikuanfangshi",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "计划回款方式",
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_jihuahuikuanfangshi",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "网上转账",
+                    "value": 1
+                },
+                {
+                    "key": "支付宝",
+                    "value": 2
+                },
+                {
+                    "key": "微信支付",
+                    "value": 3
+                },
+                {
+                    "key": "电汇",
+                    "value": 4
+                },
+                {
+                    "key": "现金",
+                    "value": 5
+                },
+                {
+                    "key": "其他",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "referTo": null,
+            "name": "jihuahuikuanriqi",
+            "idFieldFlag": false,
+            "label": "计划回款日期",
+            "creatable": true,
+            "type": "Date",
+            "physicalName": "c_jihuahuikuanriqi",
+            "reserved": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": true
+        },
+        {
+            "idFieldFlag": false,
+            "type": "Text",
+            "reserved": false,
+            "physicalName": "c_yingshoujihuabianhao",
+            "referTo": null,
+            "name": "yingshoujihuabianhao",
+            "updatable": true,
+            "label": "应收计划编号",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true
+        },
+        {
+            "physicalName": "c_beizhu",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "TextArea",
+            "nameFieldFlag": false,
+            "updatable": true,
+            "label": "备注",
+            "mainDetailFieldFlag": false,
+            "name": "beizhu"
+        }
+    ]
+}

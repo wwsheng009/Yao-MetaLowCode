@@ -1,0 +1,1432 @@
+{
+    "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "bOMmingxiId",
+    "tags": "ERP(离散制造-MTO）",
+    "name": "BOMmingxi",
+    "label": "BOM明细",
+    "entityCode": 1191,
+    "internalEntityFlag": false,
+    "nameField": null,
+    "assignable": false,
+    "mainEntity": {
+        "tags": "ERP(离散制造-MTO）",
+        "detailEntitySet": [
+            {
+                "name": "BOMmingxi",
+                "label": "BOM明细"
+            }
+        ],
+        "physicalName": "t_chanpinbom",
+        "shareable": false,
+        "virtualFieldSet": [],
+        "label": "产品BOM",
+        "listable": true,
+        "fieldSet": [
+            {
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-1f666b6bb5e341a0ae48220fa5e7efd1",
+                "name": "chanpinBOMId",
+                "description": null,
+                "creatable": false,
+                "label": "id主键",
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "nullable": false,
+                "updatable": false,
+                "entityCode": 1190,
+                "physicalName": "chanpinBOMId",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "PrimaryKey",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "nullable": false,
+                "updatable": false,
+                "referTo": null,
+                "entityCode": 1190,
+                "name": "createdOn",
+                "description": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-2648dd56b3d94a83b4780b58b0521a1b",
+                "type": "DateTime",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "createdBy",
+                "description": null,
+                "creatable": false,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-2acd5f43602449a78552117b71485bd1",
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "type": "Reference",
+                "entityCode": 1190,
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "displayOrder": 0
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-9f8f91a3cfff47c7a78431487dfedb68",
+                "updatable": false,
+                "type": "DateTime",
+                "description": null,
+                "idFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1190,
+                "name": "modifiedOn",
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "creatable": false,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "nullable": true
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "type": "Reference",
+                "nullable": true,
+                "creatable": false,
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "fieldViewModel": null,
+                "fieldId": "0000002-51a5fb0ebd724bba99870335ec4b49a1",
+                "entityCode": 1190,
+                "label": "修改用户",
+                "defaultMemberOfListFlag": false,
+                "physicalName": "modifiedBy",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "description": null,
+                "updatable": false
+            },
+            {
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "type": "Reference",
+                "description": null,
+                "updatable": false,
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-0e64fa776f6742a58674040ca79bf518",
+                "label": "所属用户",
+                "physicalName": "ownerUser",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1190,
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "nullable": false,
+                "name": "ownerUser",
+                "referenceSetting": null
+            },
+            {
+                "label": "所属部门",
+                "description": null,
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-4b0e3f16fd2e463abf611d36a4c3ccb6",
+                "name": "ownerDepartment",
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1190,
+                "physicalName": "ownerDepartment",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": false
+            },
+            {
+                "label": "选择方案设计",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1190,
+                "name": "xuanzefangansheji",
+                "nameFieldFlag": false,
+                "type": "Reference",
+                "updatable": true,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "Fangansheji",
+                        "fieldList": [
+                            "xuanzebaojiadan",
+                            "tuzhifujian",
+                            "shejiwangongxuqiuriqi"
+                        ]
+                    }
+                ],
+                "physicalName": "c_xuanzefangansheji",
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "Fangansheji",
+                        "label": "方案设计"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-49545e4c8b8c4a9faca87cd0a0315d85",
+                "displayOrder": 0
+            },
+            {
+                "fieldId": "0000002-73d387e2b6a4475d9d36295652b238d4",
+                "label": "选择产品",
+                "physicalName": "c_xuanzechanpin",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "name": "xuanzechanpin",
+                "idFieldFlag": false,
+                "type": "Reference",
+                "nullable": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "ERPchanpinxinxi",
+                        "label": "ERP产品信息"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "ERPchanpinxinxi",
+                        "fieldList": [
+                            "chanpinmingcheng",
+                            "chanpinbianma",
+                            "chanpinshuxing",
+                            "chanpinleixing",
+                            "pinpai",
+                            "guigexinghao"
+                        ]
+                    }
+                ],
+                "entityCode": 1190,
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "referenceSetting": null,
+                "label": "BOM编码",
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "physicalName": "c_bianma",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-df38236b0b7f47d799ebe71d9301d444",
+                "name": "bianma",
+                "type": "Text",
+                "description": null,
+                "displayOrder": 0,
+                "entityCode": 1190,
+                "nullable": false,
+                "nameFieldFlag": true
+            },
+            {
+                "physicalName": "c_xuanzeshengchangongxu",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1190,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "description": null,
+                "label": "选择生产工序",
+                "displayOrder": 0,
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "Shengchangongxu",
+                        "label": "生产工序"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Shengchangongxu",
+                        "fieldList": [
+                            "gongxubianma",
+                            "gongxumingcheng",
+                            "gongxujishufujian",
+                            "shengchanbanzu",
+                            "banzuzhang",
+                            "banzurenshu",
+                            "zhijianyuan"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-3a562658bcd94329a936f4bcb9a5ced0",
+                "type": "Reference",
+                "creatable": true,
+                "name": "xuanzeshengchangongxu"
+            },
+            {
+                "physicalName": "c_gongxubianma",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "name": "gongxubianma",
+                "type": "Text",
+                "displayOrder": 0,
+                "referTo": null,
+                "fieldId": "0000002-4b867cbfcc084325ac211980ca4b5eb0",
+                "label": "工序编码",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "creatable": true,
+                "referenceSetting": null,
+                "entityCode": 1190,
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "referenceSetting": null,
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-36d54a83c1f34b319dee24c3b205a9c3",
+                "label": "工序名称",
+                "type": "Text",
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "entityCode": 1190,
+                "physicalName": "c_gongxumingcheng",
+                "description": null,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "name": "gongxumingcheng",
+                "updatable": true,
+                "referTo": null
+            },
+            {
+                "entityCode": 1190,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "updatable": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-628a4017f34b4201851cc57a86d6e8de",
+                "physicalName": "c_gongxujishufujian",
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "name": "gongxujishufujian",
+                "label": "工序技术附件",
+                "description": null,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "maxFileCount": 9,
+                    "fileMaxSize": 20,
+                    "uploadFileTypes": [],
+                    "uploadHint": "",
+                    "validators": []
+                },
+                "type": "File",
+                "nameFieldFlag": false
+            },
+            {
+                "nullable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Reference",
+                "updatable": true,
+                "referTo": [
+                    {
+                        "name": "Team",
+                        "label": "团队"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Team",
+                        "fieldList": [
+                            "teamName",
+                            "principalId"
+                        ]
+                    }
+                ],
+                "name": "shengchanbanzu",
+                "label": "生产班组",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-061458f305d041f78c757ca69257b9b7",
+                "entityCode": 1190,
+                "physicalName": "c_shengchanbanzu",
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "label": "产品名称",
+                "physicalName": "c_chanpinmingcheng",
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-4afbb41846b34ecc9a15b3cbf834e3ef",
+                "entityCode": 1190,
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "nullable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "name": "chanpinmingcheng",
+                "type": "Text",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-1a15c09f3d2f4e7dabd4b607f0b0e964",
+                "description": null,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "referenceSetting": null,
+                "entityCode": 1190,
+                "name": "chanpinbianma",
+                "physicalName": "c_chanpinbianma",
+                "type": "Text",
+                "label": "产品编码",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referTo": null
+            },
+            {
+                "name": "kehumingcheng",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldId": "0000002-8ed5f13be86e4da487b6b45c1d6d3c3a",
+                "entityCode": 1190,
+                "label": "客户名称",
+                "physicalName": "c_kehumingcheng",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "mainDetailFieldFlag": false,
+                "nullable": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "Kehuguanli",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian"
+                        ]
+                    }
+                ],
+                "type": "Reference",
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Kehuguanli",
+                        "label": "客户管理"
+                    }
+                ]
+            },
+            {
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Text",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "kehubianma",
+                "physicalName": "c_kehubianma",
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1190,
+                "label": "客户编码",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "referTo": null,
+                "fieldId": "0000002-eb68111e966d4ec1a40c16c1f96771ae",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null
+            },
+            {
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1190,
+                "label": "报价单编号",
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "idFieldFlag": false,
+                "fieldId": "0000002-899db4d26d1e44938e227dfe76b89c44",
+                "type": "Text",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "baojiadanbianhao",
+                "physicalName": "c_baojiadanbianhao",
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": false
+            }
+        ],
+        "mainDetailField": null,
+        "fieldNames": [
+            "chanpinBOMId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "xuanzefangansheji",
+            "xuanzechanpin",
+            "bianma",
+            "xuanzeshengchangongxu",
+            "gongxubianma",
+            "gongxumingcheng",
+            "gongxujishufujian",
+            "shengchanbanzu",
+            "chanpinmingcheng",
+            "chanpinbianma",
+            "kehumingcheng",
+            "kehubianma",
+            "baojiadanbianhao"
+        ],
+        "layoutable": true,
+        "assignable": false,
+        "entityCode": 1190,
+        "detailEntityFlag": false,
+        "authorizable": true,
+        "idField": {
+            "name": "chanpinBOMId",
+            "label": "id主键"
+        },
+        "nameField": {
+            "name": "bianma",
+            "label": "BOM编码"
+        },
+        "mainEntity": null,
+        "entityId": "0000001-46d3170171aa467790f2abb317dfca9c",
+        "name": "ChanpinBOM",
+        "sortedFieldSet": [
+            {
+                "label": "id主键",
+                "physicalName": "chanpinBOMId",
+                "nullable": false,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1190,
+                "type": "PrimaryKey",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "updatable": false,
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-1f666b6bb5e341a0ae48220fa5e7efd1",
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "chanpinBOMId"
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "label": "选择方案设计",
+                "entityCode": 1190,
+                "physicalName": "c_xuanzefangansheji",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Reference",
+                "description": null,
+                "nullable": false,
+                "creatable": true,
+                "fieldId": "0000002-49545e4c8b8c4a9faca87cd0a0315d85",
+                "updatable": true,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "xuanzefangansheji",
+                "referTo": [
+                    {
+                        "label": "方案设计",
+                        "name": "Fangansheji"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Fangansheji",
+                        "fieldList": [
+                            "xuanzebaojiadan",
+                            "tuzhifujian",
+                            "shejiwangongxuqiuriqi"
+                        ]
+                    }
+                ],
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "name": "xuanzechanpin",
+                "physicalName": "c_xuanzechanpin",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "ERPchanpinxinxi",
+                        "fieldList": [
+                            "chanpinmingcheng",
+                            "chanpinbianma",
+                            "chanpinshuxing",
+                            "chanpinleixing",
+                            "pinpai",
+                            "guigexinghao"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-73d387e2b6a4475d9d36295652b238d4",
+                "entityCode": 1190,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "name": "ERPchanpinxinxi",
+                        "label": "ERP产品信息"
+                    }
+                ],
+                "nullable": false,
+                "creatable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "label": "选择产品",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                }
+            },
+            {
+                "name": "bianma",
+                "referTo": null,
+                "fieldId": "0000002-df38236b0b7f47d799ebe71d9301d444",
+                "displayOrder": 0,
+                "nameFieldFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "physicalName": "c_bianma",
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "type": "Text",
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1190,
+                "label": "BOM编码",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "label": "选择生产工序",
+                "physicalName": "c_xuanzeshengchangongxu",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "creatable": true,
+                "fieldId": "0000002-3a562658bcd94329a936f4bcb9a5ced0",
+                "entityCode": 1190,
+                "name": "xuanzeshengchangongxu",
+                "description": null,
+                "displayOrder": 0,
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "nullable": false,
+                "updatable": true,
+                "referTo": [
+                    {
+                        "name": "Shengchangongxu",
+                        "label": "生产工序"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Shengchangongxu",
+                        "fieldList": [
+                            "gongxubianma",
+                            "gongxumingcheng",
+                            "gongxujishufujian",
+                            "shengchanbanzu",
+                            "banzuzhang",
+                            "banzurenshu",
+                            "zhijianyuan"
+                        ]
+                    }
+                ],
+                "type": "Reference",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "name": "gongxubianma",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "description": null,
+                "creatable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-4b867cbfcc084325ac211980ca4b5eb0",
+                "entityCode": 1190,
+                "label": "工序编码",
+                "physicalName": "c_gongxubianma",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "type": "Text",
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "nullable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "name": "gongxumingcheng",
+                "entityCode": 1190,
+                "physicalName": "c_gongxumingcheng",
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-36d54a83c1f34b319dee24c3b205a9c3",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "label": "工序名称",
+                "type": "Text",
+                "updatable": true,
+                "referTo": null
+            },
+            {
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "name": "gongxujishufujian",
+                "type": "File",
+                "entityCode": 1190,
+                "fieldViewModel": {
+                    "maxFileCount": 9,
+                    "fileMaxSize": 20,
+                    "uploadFileTypes": [],
+                    "uploadHint": "",
+                    "validators": []
+                },
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-628a4017f34b4201851cc57a86d6e8de",
+                "label": "工序技术附件",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "physicalName": "c_gongxujishufujian",
+                "creatable": true
+            },
+            {
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-061458f305d041f78c757ca69257b9b7",
+                "entityCode": 1190,
+                "name": "shengchanbanzu",
+                "nullable": true,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Team",
+                        "label": "团队"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "Team",
+                        "fieldList": [
+                            "teamName",
+                            "principalId"
+                        ]
+                    }
+                ],
+                "label": "生产班组",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "physicalName": "c_shengchanbanzu",
+                "type": "Reference",
+                "description": null,
+                "updatable": true
+            },
+            {
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "entityCode": 1190,
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-4afbb41846b34ecc9a15b3cbf834e3ef",
+                "name": "chanpinmingcheng",
+                "type": "Text",
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "label": "产品名称",
+                "physicalName": "c_chanpinmingcheng",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                }
+            },
+            {
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "name": "chanpinbianma",
+                "description": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "label": "产品编码",
+                "physicalName": "c_chanpinbianma",
+                "type": "Text",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-1a15c09f3d2f4e7dabd4b607f0b0e964",
+                "entityCode": 1190,
+                "referenceSetting": null
+            },
+            {
+                "fieldId": "0000002-8ed5f13be86e4da487b6b45c1d6d3c3a",
+                "name": "kehumingcheng",
+                "physicalName": "c_kehumingcheng",
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "label": "客户名称",
+                "description": null,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1190,
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "nullable": true,
+                "referTo": [
+                    {
+                        "name": "Kehuguanli",
+                        "label": "客户管理"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian"
+                        ],
+                        "entityName": "Kehuguanli"
+                    }
+                ]
+            },
+            {
+                "entityCode": 1190,
+                "label": "客户编码",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "kehubianma",
+                "physicalName": "c_kehubianma",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "displayOrder": 0,
+                "creatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "fieldId": "0000002-eb68111e966d4ec1a40c16c1f96771ae",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Text",
+                "nullable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "baojiadanbianhao",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-899db4d26d1e44938e227dfe76b89c44",
+                "type": "Text",
+                "referenceSetting": null,
+                "label": "报价单编号",
+                "referTo": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1190,
+                "physicalName": "c_baojiadanbianhao"
+            },
+            {
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "createdOn",
+                "label": "创建时间",
+                "type": "DateTime",
+                "nullable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-2648dd56b3d94a83b4780b58b0521a1b",
+                "entityCode": 1190,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "physicalName": "createdOn",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "creatable": false,
+                "updatable": false
+            },
+            {
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "创建用户",
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-2acd5f43602449a78552117b71485bd1",
+                "referenceSetting": null,
+                "entityCode": 1190,
+                "name": "createdBy",
+                "physicalName": "createdBy",
+                "description": null,
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "entityCode": 1190,
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "modifiedOn",
+                "owner": {
+                    "label": "产品BOM",
+                    "name": "ChanpinBOM"
+                },
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-9f8f91a3cfff47c7a78431487dfedb68",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "nullable": true,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "type": "DateTime"
+            },
+            {
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "entityCode": 1190,
+                "label": "修改用户",
+                "description": null,
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-51a5fb0ebd724bba99870335ec4b49a1",
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "nameFieldFlag": false,
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "ownerUser",
+                "entityCode": 1190,
+                "name": "ownerUser",
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "referenceSetting": null,
+                "fieldId": "0000002-0e64fa776f6742a58674040ca79bf518",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "label": "所属用户"
+            },
+            {
+                "description": null,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "ownerDepartment",
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-4b0e3f16fd2e463abf611d36a4c3ccb6",
+                "entityCode": 1190,
+                "label": "所属部门",
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "ChanpinBOM",
+                    "label": "产品BOM"
+                },
+                "type": "Reference",
+                "nullable": false,
+                "name": "ownerDepartment",
+                "idFieldFlag": false
+            }
+        ]
+    },
+    "authorizable": false,
+    "shareable": false,
+    "physicalName": "t_bommingxi",
+    "fieldSet": [
+        {
+            "physicalName": "bOMmingxiId",
+            "referTo": null,
+            "name": "bOMmingxiId",
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "updatable": false,
+            "label": "id主键",
+            "mainDetailFieldFlag": false,
+            "reserved": true
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "label": "创建时间",
+            "type": "DateTime"
+        },
+        {
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,"
+        },
+        {
+            "updatable": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "reserved": true,
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "creatable": true,
+            "physicalName": "mdChanpinBOMId",
+            "name": "mdChanpinBOMId",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "ChanpinBOM,"
+        },
+        {
+            "physicalName": "c_biaozhunyongliang",
+            "referTo": null,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "biaozhunyongliang",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "标准用量",
+            "creatable": true,
+            "type": "Text"
+        },
+        {
+            "reserved": false,
+            "name": "chanpin",
+            "label": "选择产品",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_chanpin",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "referTo": "ERPchanpinxinxi,",
+            "updatable": true
+        }
+    ]
+}

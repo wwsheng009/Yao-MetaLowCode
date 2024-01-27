@@ -1,0 +1,203 @@
+{
+    "entityCode": 1205,
+    "systemEntityFlag": false,
+    "idFieldName": "mubiaoId",
+    "internalEntityFlag": false,
+    "name": "Mubiao",
+    "label": "目标",
+    "listable": true,
+    "tags": "项目任务管理",
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "mainEntity": null,
+    "nameField": "目标名称",
+    "assignable": false,
+    "authorizable": true,
+    "shareable": false,
+    "physicalName": "t_mubiao",
+    "fieldSet": [
+        {
+            "physicalName": "mubiaoId",
+            "referTo": null,
+            "label": "id主键",
+            "creatable": false,
+            "idFieldFlag": true,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "mubiaoId",
+            "updatable": false
+        },
+        {
+            "name": "createdOn",
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "name": "modifiedOn",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy",
+            "label": "修改用户",
+            "type": "Reference"
+        },
+        {
+            "label": "所属用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "name": "ownerUser",
+            "updatable": false,
+            "idFieldFlag": false,
+            "referTo": "User,",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "label": "所属部门",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": true,
+            "reserved": false,
+            "referTo": null,
+            "name": "mubiaomingcheng",
+            "label": "目标名称",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_mubiaomingcheng",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "reserved": false,
+            "name": "mubiaoleixing",
+            "type": "Option",
+            "physicalName": "c_mubiaoleixing",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "目标类型",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "公司",
+                    "value": 1
+                },
+                {
+                    "key": "部门",
+                    "value": 2
+                },
+                {
+                    "key": "个人",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "type": "Reference",
+            "name": "mubiaosuoshubumen",
+            "updatable": true,
+            "label": "目标所属部门",
+            "creatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_mubiaosuoshubumen",
+            "reserved": false,
+            "referTo": "Department,"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_fuzeren",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": "User,",
+            "name": "fuzeren",
+            "updatable": true,
+            "label": "负责人",
+            "creatable": true
+        },
+        {
+            "name": "mubiaozhouqi",
+            "idFieldFlag": false,
+            "label": "目标周期",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "Mubiaozhouqi,",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_mubiaozhouqi",
+            "reserved": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "label": "总进度",
+            "type": "Percent",
+            "physicalName": "c_zongjindu",
+            "referTo": null,
+            "name": "zongjindu",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

@@ -131,7 +131,8 @@
     }
   ],
   "relations": {
-    "fields": {
+    "fieldSet": {
+      "label": "字段列表",
       "type": "hasMany",
       "key": "entityCode",
       "model": "sys.entity.field",

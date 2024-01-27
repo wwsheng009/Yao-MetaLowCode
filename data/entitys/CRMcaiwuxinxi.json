@@ -1,0 +1,260 @@
+{
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "cRMcaiwuxinxiId",
+    "internalEntityFlag": false,
+    "tags": "CRM",
+    "entityCode": 1174,
+    "label": "CRM财务信息",
+    "systemEntityFlag": false,
+    "name": "CRMcaiwuxinxi",
+    "shareable": false,
+    "assignable": false,
+    "physicalName": "t_crmcaiwuxinxi",
+    "authorizable": true,
+    "nameField": "税号",
+    "mainEntity": null,
+    "fieldSet": [
+        {
+            "label": "id主键",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "cRMcaiwuxinxiId",
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "physicalName": "cRMcaiwuxinxiId",
+            "referTo": null,
+            "updatable": false
+        },
+        {
+            "physicalName": "createdOn",
+            "label": "创建时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "name": "createdBy",
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "name": "modifiedOn",
+            "updatable": false,
+            "creatable": false,
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "最近修改时间"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "reserved": true,
+            "updatable": false,
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "ownerUser",
+            "creatable": false
+        },
+        {
+            "idFieldFlag": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": "Department,"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_guanliankehu",
+            "referTo": "CRMgonghaichi,",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "reserved": false,
+            "name": "guanliankehu",
+            "label": "关联客户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "name": "shoujihao",
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_shoujihao",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "手机号",
+            "nameFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "抬头类型",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_taitouleixing",
+            "name": "taitouleixing",
+            "updatable": true,
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "个人",
+                    "value": 1
+                },
+                {
+                    "key": "单位",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "kaipiaotaitou",
+            "idFieldFlag": false,
+            "label": "开票抬头",
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "physicalName": "c_kaipiaotaitou",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": true,
+            "physicalName": "c_shuihao",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "shuihao",
+            "idFieldFlag": false,
+            "label": "税号",
+            "type": "Text"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "kaihuyinhang",
+            "updatable": true,
+            "type": "Option",
+            "physicalName": "c_kaihuyinhang",
+            "idFieldFlag": false,
+            "label": "开户银行",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "中国银行",
+                    "value": 1
+                },
+                {
+                    "key": "中国建设银行",
+                    "value": 2
+                },
+                {
+                    "key": "中国工商银行",
+                    "value": 3
+                },
+                {
+                    "key": "中国农业银行",
+                    "value": 4
+                },
+                {
+                    "key": "中国邮政储蓄银行",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "yinhangzhanghao",
+            "label": "银行账号",
+            "type": "Text",
+            "physicalName": "c_yinhangzhanghao",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "label": "客户地址",
+            "creatable": true,
+            "type": "AreaSelect",
+            "physicalName": "c_kehudizhi",
+            "referTo": null,
+            "name": "kehudizhi",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "name": "xiangxidizhi",
+            "idFieldFlag": false,
+            "label": "详细地址",
+            "type": "TextArea",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xiangxidizhi",
+            "referTo": null,
+            "updatable": true,
+            "creatable": true,
+            "nameFieldFlag": false
+        }
+    ]
+}

@@ -1,0 +1,254 @@
+{
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "internalEntityFlag": false,
+    "name": "WMSfukuandan",
+    "label": "WMS付款单",
+    "listable": true,
+    "idFieldName": "wMSfukuandanId",
+    "tags": "WMS",
+    "entityCode": 1062,
+    "detailEntityFlag": false,
+    "physicalName": "t_wmsfukuandan",
+    "shareable": false,
+    "authorizable": true,
+    "mainEntity": null,
+    "nameField": "付款单号",
+    "assignable": false,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "physicalName": "wMSfukuandanId",
+            "reserved": true,
+            "referTo": null,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "name": "wMSfukuandanId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "DateTime",
+            "physicalName": "createdOn",
+            "referTo": null,
+            "name": "createdOn",
+            "updatable": false,
+            "label": "创建时间",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,"
+        },
+        {
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "updatable": false
+        },
+        {
+            "label": "修改用户",
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "name": "ownerUser",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,"
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": "Department,",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "updatable": true,
+            "label": "选择对账单",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_duizhangdan",
+            "reserved": false,
+            "referTo": "WMSzhangkuanduizhang,",
+            "name": "duizhangdan",
+            "idFieldFlag": false
+        },
+        {
+            "nameFieldFlag": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "付款单号",
+            "mainDetailFieldFlag": false,
+            "type": "Text",
+            "physicalName": "c_fukuandanhao",
+            "reserved": false,
+            "name": "fukuandanhao",
+            "updatable": true,
+            "creatable": true
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": "WMSjinxiangfapiao,",
+            "name": "xuanzejinxiangfapiao",
+            "idFieldFlag": false,
+            "label": "选择进项发票",
+            "creatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "c_xuanzejinxiangfapiao",
+            "reserved": false,
+            "updatable": true
+        },
+        {
+            "physicalName": "c_bencifukuanjinehejiuan",
+            "reserved": false,
+            "updatable": true,
+            "creatable": true,
+            "type": "Money",
+            "nameFieldFlag": false,
+            "name": "bencifukuanjinehejiuan",
+            "idFieldFlag": false,
+            "label": "本次付款金额合计/元",
+            "mainDetailFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "type": "Option",
+            "nameFieldFlag": false,
+            "name": "fukuanfangshi",
+            "updatable": true,
+            "creatable": true,
+            "label": "付款方式",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_fukuanfangshi",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "银行转账",
+                    "value": 1
+                },
+                {
+                    "key": "现金支付",
+                    "value": 2
+                },
+                {
+                    "key": "支付宝支付",
+                    "value": 3
+                },
+                {
+                    "key": "微信支付",
+                    "value": 4
+                },
+                {
+                    "key": "银行支票",
+                    "value": 5
+                },
+                {
+                    "key": "其他",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "creatable": true,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "付款时间",
+            "physicalName": "c_fukuanshijian",
+            "name": "fukuanshijian",
+            "updatable": true
+        },
+        {
+            "reserved": false,
+            "name": "yinhangfukuanhuidan",
+            "idFieldFlag": false,
+            "label": "银行付款回单",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_yinhangfukuanhuidan",
+            "referTo": null,
+            "updatable": true,
+            "type": "File"
+        },
+        {
+            "referTo": "User,",
+            "name": "jingbanren",
+            "idFieldFlag": false,
+            "label": "经办人",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_jingbanren",
+            "updatable": true
+        },
+        {
+            "idFieldFlag": false,
+            "label": "经办人归属部门",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "c_jingbanrenguishubumen",
+            "reserved": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": "Department,",
+            "name": "jingbanrenguishubumen",
+            "updatable": true
+        }
+    ]
+}

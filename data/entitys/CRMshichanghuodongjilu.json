@@ -1,0 +1,297 @@
+{
+    "listable": true,
+    "idFieldName": "cRMshichanghuodongjiluId",
+    "tags": "CRM",
+    "name": "CRMshichanghuodongjilu",
+    "entityCode": 1142,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "label": "CRM市场活动记录",
+    "layoutable": true,
+    "internalEntityFlag": false,
+    "shareable": false,
+    "assignable": false,
+    "authorizable": true,
+    "physicalName": "t_crmshichanghuodongjilu",
+    "mainEntity": null,
+    "nameField": "活动名称",
+    "fieldSet": [
+        {
+            "reserved": true,
+            "referTo": null,
+            "name": "cRMshichanghuodongjiluId",
+            "updatable": false,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "mainDetailFieldFlag": false,
+            "physicalName": "cRMshichanghuodongjiluId"
+        },
+        {
+            "creatable": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "label": "创建时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "name": "modifiedOn",
+            "creatable": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "name": "modifiedBy",
+            "creatable": false,
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy"
+        },
+        {
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "ownerUser",
+            "label": "所属用户",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "referTo": "Department,",
+            "updatable": false,
+            "label": "所属部门",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "updatable": true,
+            "label": "活动名称",
+            "reserved": false,
+            "name": "huodongmingcheng",
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_huodongmingcheng"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "活动开始时间",
+            "nameFieldFlag": false,
+            "physicalName": "c_huodongkaishishijian",
+            "name": "huodongkaishishijian",
+            "updatable": true,
+            "creatable": true,
+            "type": "Date",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "活动结束时间",
+            "creatable": true,
+            "type": "Date",
+            "physicalName": "c_huodongjieshushijian",
+            "referTo": null,
+            "name": "huodongjieshushijian",
+            "updatable": true
+        },
+        {
+            "label": "活动类型",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": true,
+            "referTo": null,
+            "name": "huodongleixing",
+            "idFieldFlag": false,
+            "physicalName": "c_huodongleixing",
+            "reserved": false,
+            "optionList": [
+                {
+                    "key": "品牌活动",
+                    "value": 1
+                },
+                {
+                    "key": "互联网广告",
+                    "value": 2
+                },
+                {
+                    "key": "会议营销",
+                    "value": 3
+                },
+                {
+                    "key": "线下展会",
+                    "value": 4
+                },
+                {
+                    "key": "直播",
+                    "value": 5
+                },
+                {
+                    "key": "生态伙伴",
+                    "value": 6
+                },
+                {
+                    "key": "其他",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "physicalName": "c_zerenren",
+            "referTo": "User,",
+            "name": "zerenren",
+            "label": "责任人",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false
+        },
+        {
+            "name": "zerenbumen",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "责任部门",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_zerenbumen",
+            "reserved": false,
+            "creatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "Department,"
+        },
+        {
+            "referTo": null,
+            "name": "yujitouruchengben",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "type": "Money",
+            "nameFieldFlag": false,
+            "physicalName": "c_yujitouruchengben",
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "预计投入成本"
+        },
+        {
+            "physicalName": "c_yujichanchuxiansuoshu",
+            "name": "yujichanchuxiansuoshu",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "预计产出线索数",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "type": "Integer",
+            "reserved": false
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "huodongjihua",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "活动计划",
+            "physicalName": "c_huodongjihua",
+            "referTo": null,
+            "type": "TextArea"
+        },
+        {
+            "updatable": true,
+            "label": "实际投入成本",
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "shijitouruchengben",
+            "creatable": true,
+            "physicalName": "c_shijitouruchengben",
+            "referTo": null,
+            "idFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_huodongzongjie",
+            "label": "活动总结",
+            "type": "TextArea",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "huodongzongjie",
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xinshichangwenben",
+            "reserved": false,
+            "updatable": true,
+            "label": "新市场文本",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "xinshichangwenben",
+            "idFieldFlag": false,
+            "type": "Text"
+        }
+    ]
+}

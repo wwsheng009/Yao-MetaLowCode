@@ -1,3 +1,7 @@
+
+const { getEntityByName, getEntityByCode } = Require("sys.lib");
+
+
 function updateFormLayout(layoutId, layoutJson) {
 
   Process("models.sys.form.layout.update",layoutId,{
@@ -261,7 +265,7 @@ function getFormLayout(entityName) {
     },
   });
   if (!entity) {
-    throw Error(`Entity ${entityName} not exists`)
+    throw Error(`实体 ${entityName} 不存在`)
   }
   const [formLayout] = Process("models.sys.form.layout.get", {
     wheres: [

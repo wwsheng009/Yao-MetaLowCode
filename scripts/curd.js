@@ -1,5 +1,6 @@
 const { loadEntityToYao } = Require("sys.yao");
 
+const { getEntityByName, getEntityByCode } = Require("sys.lib");
 /**
  *
  * 通用查询接口
@@ -47,19 +48,29 @@ function listQuery({
   //   builtInFilter: {},
   //   statistics: [],
   // };
-
+  const entity = getEntityByName(mainEntity);
   loadEntityToYao(mainEntity);
 
   let queryParam = {
     select: fieldsList.split(","),
   };
-
+  if (!queryParam.select.includes(entity.idFieldName)) {
+    queryParam.select.push(entity.idFieldName);
+  }
+  console.log("queryParam data", queryParam);
   let data = Process(
     `models.${mainEntity}.Paginate`,
     queryParam,
-    pageNo,
-    pageSize
+    pageNo || 1,
+    pageSize || 10
   );
+  console.log("listQuery data", data);
+  data.data &&
+    data.data.forEach((line) => {
+      line[entity.idFieldName] = `${entity.entityCode}-${
+        line[entity.idFieldName]
+      }`;
+    });
 
   return {
     dataList: data.data,
@@ -202,10 +213,20 @@ function checkStatus() {
   return { noteCount: 3 };
 }
 
-function formCreateQuery(entity) {
+function formCreateQuery(entityName) {
+  const entity = getEntityByName(entityName);
+
+  const [formLayout] = Process("models.sys.form.layout.get", {
+    wheres: [
+      {
+        column: "entityCode",
+        value: entity.entityCode,
+      },
+    ],
+  });
+
   return {
-    layoutJson:
-      '{"widgetList":[{"key":40463,"type":"grid","alias":"column-2-grid","category":"container","icon":"column-2-grid","cols":[{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[{"type":"input","alias":"","icon":"text-field","formItemFlag":true,"options":{"name":"departmentName","keyNameEnabled":false,"keyName":"","label":"部门名称","labelAlign":"","type":"text","defaultValue":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"readonly":false,"disabled":false,"hidden":false,"clearable":true,"showPassword":false,"required":true,"requiredHint":"","validation":"","validationHint":"","customClass":[],"labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"minLength":null,"maxLength":null,"showWordLimit":false,"prefixIcon":"","suffixIcon":"","appendButton":false,"appendButtonDisabled":false,"buttonIcon":"custom-search","onCreated":"","onMounted":"","onInput":"","onChange":"","onFocus":"","onBlur":"","onValidate":"","onAppendButtonClick":""},"nameReadonly":true,"id":"input99603"}],"options":{"name":"gridCol94789","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":""},"id":"grid-col-94789"},{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[{"type":"reference","alias":"","icon":"reference-field","formItemFlag":true,"options":{"name":"parentDepartmentId","keyNameEnabled":false,"keyName":"","label":"上级部门","labelAlign":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"disabled":false,"hidden":false,"required":true,"requiredHint":"","validation":"","validationHint":"","newTest":"","customClass":[],"labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"prefixIcon":"","suffixIcon":"","buttonIcon":"Search","onCreated":"","onMounted":"","onChange":"","onValidate":""},"nameReadonly":true,"id":"reference28286"}],"options":{"name":"gridCol20275","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":[]},"id":"grid-col-20275"}],"options":{"name":"grid91283","hidden":false,"gutter":12,"colHeight":null,"customClass":[]},"id":"grid91283"},{"key":52901,"type":"grid","alias":"column-2-grid","category":"container","icon":"column-2-grid","cols":[{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[{"type":"reference","alias":"","icon":"reference-field","formItemFlag":true,"options":{"name":"departmentOwnerUser","keyNameEnabled":false,"keyName":"","label":"部门负责人","labelAlign":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"disabled":false,"hidden":false,"required":false,"requiredHint":"","validation":"","validationHint":"","newTest":"","customClass":[],"labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"prefixIcon":"","suffixIcon":"","buttonIcon":"Search","onCreated":"","onMounted":"","onChange":"","onValidate":""},"nameReadonly":true,"id":"reference95876"}],"options":{"name":"gridCol79602","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":""},"id":"grid-col-79602"},{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[],"options":{"name":"gridCol73374","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":""},"id":"grid-col-73374"}],"options":{"name":"grid72233","hidden":false,"gutter":12,"colHeight":null,"customClass":[]},"id":"grid72233"},{"type":"textarea","icon":"textarea-field","formItemFlag":true,"options":{"name":"description","keyNameEnabled":false,"keyName":"","label":"部门说明","labelAlign":"","rows":3,"autosize":false,"defaultValue":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"readonly":false,"disabled":false,"hidden":false,"required":false,"requiredHint":"","validation":"","validationHint":"","customClass":"","labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"minLength":null,"maxLength":null,"showWordLimit":false,"onCreated":"","onMounted":"","onInput":"","onChange":"","onFocus":"","onBlur":"","onValidate":""},"nameReadonly":true,"id":"textarea89661"}],"formConfig":{"modelName":"formData","refName":"vForm","rulesName":"rules","labelWidth":80,"labelPosition":"left","size":"","labelAlign":"label-left-align","cssCode":"","customClass":[],"functions":"","layoutType":"PC","jsonVersion":3,"dataSources":[],"onFormCreated":"","onFormMounted":"","onFormDataChange":"","onFormValidate":""}}',
+    layoutJson: formLayout ? JSON.stringify(formLayout) : null,
     fieldPropsMap: {},
     formData: {},
     labelData: {},
@@ -224,33 +245,114 @@ function refFieldQuery(
   extraFilter
 ) {}
 
-function formCreateQuery(entity) {}
-
 function formUpdateQuery(entity, id) {}
 
-function saveRecord(entity, id, formModel) {
-  loadEntityToYao(entity);
-  if (!id) {
-    id = Process(`models.${entity}.Create`, formModel);
+function saveRecord(entityName, idstr, formModel) {
+  // const entity = getEntityByName(entityName);
+  loadEntityToYao(entityName);
+  if (!idstr) {
+    idstr = Process(`models.${entityName}.Create`, formModel);
   } else {
-    Process(`models.${entity}.update`, id, formModel);
+    const [entityCode, id] = idstr.split("-");
+    Process(`models.${entityName}.update`, id, formModel);
   }
-  return id;
+  return true;
+  // return `${entity.entityCode}-${id}`;
 }
-function deleteRecord({ recordIds, cascades }) {}
+function deleteRecord({ recordIds, cascades }) {
+  // data = { recordIds: [3], cascades: [] };
+  // data = { recordIds: [2, 3], cascades: [] };
+  recordIds &&
+    recordIds.forEach((idstr) => {
+      const [entityCode, id] = idstr.split("-");
+      const model = getEntityByCode(entityCode).name;
+      // Process("yao.model.Delete", model, id);
+      Process(`models.${model}.Delete`, id);
+    });
+}
 function initDataList(entity) {}
 /**
  * 通用获取实体列表接口（实体+列表页面的实体列表）
  * @param {*} entityName 实体名称
  */
-function getEntityCodeList(entityName) {}
+function getEntityCodeList(entityName) {
+  // entityName = "ReportConfig";
+  const entityList = Process("models.sys.entity.get", {});
+  return entityList.map((entity) => {
+    return {
+      entityCode: entity.entityCode,
+      entityName: entity.name,
+    };
+  });
+}
+
+// /**
+//  * 通用获取实体列表接口（实体+列表页面的实体列表）
+//  * @param {*} entityName 实体名称
+//  */
+// function getEntityCodeList(entityName) {}
+//   return [
+//     {
+//         "entityCode": 1001,
+//         "entityName": "Chanpinxinxi"
+//     },
+//     {
+//         "entityCode": 1002,
+//         "entityName": "Chanpinxiaoshoujiagebiao"
+//     }]
+// }
 /**
  * 通用查询详情接口
+ *
+ * yao run scripts.curd.queryById '1-7'
  * @param {*} entityId 实体ID
  * @param {*} fieldNames 需要获取的字段名称
  */
-function queryById(entityId, fieldNames) {}
+function queryById(entityId, fieldNames) {
+  const [entityCode, id] = entityId.split("-");
+  const entity = getEntityByCode(entityCode);
+  loadEntityToYao(entity.name);
+  let query = {};
+  if (fieldNames) {
+    query.select = fieldNames.split(",");
+  }
+  console.log(`queryById:${id} ${typeof id}`);
+  const data = Process(`models.${entity.name}.Find`, id, fieldNames);
+  return data;
+}
 
+function getEntityFields(entityName) {
+  const [row] = Process("models.sys.entity.get", {
+    select: ["label", "name"],
+    wheres: [
+      {
+        column: "name",
+        value: entityName,
+      },
+    ],
+    withs: {
+      fieldSet: {
+        query: {
+          select: [
+            "updatable",
+            "name",
+            "type",
+            "nameFieldFlag",
+            "label",
+            "nullable",
+            "creatable",
+            "reserved",
+            "referTo",
+          ],
+        },
+      },
+    },
+  });
+  if (row == null) {
+    throw new Error(`实体 ${entity} 不存在`);
+  }
+  return row;
+}
 /**
  * 通用查询-获取实体字段
  * @param {*} entityCode 实体
@@ -263,7 +365,1150 @@ function queryEntityFields(
   queryReference,
   queryReserved,
   firstReference
-) {}
+) {
+  // entityCode=1066&queryReference=true&queryReserved=true&_=1706357808358
+  const row = Process("models.sys.entity.find", entityCode, {
+    select: ["label", "name"],
+    withs: {
+      fieldSet: {
+        query: {
+          select: [
+            "updatable",
+            "name",
+            "type",
+            "nameFieldFlag",
+            "label",
+            "nullable",
+            "creatable",
+            "reserved",
+            "referTo",
+          ],
+        },
+      },
+    },
+  });
+  if (row == null) {
+    throw new Error(`实体 ${entity} 不存在`);
+  }
+  if (!row.fieldSet) {
+    throw new Error(`实体 ${row.name} 存在异常，没有字段列表`);
+  }
+
+  // 排除保留字段
+  if (!queryReserved) {
+    row.fieldSet = row.fieldSet.filter(
+      (field) => !field.reserved || field.reserved !== true
+    );
+  }
+  // 剔除所有引用字段
+  if (!firstReference) {
+    row.fieldSet = row.fieldSet.filter((field) => field.type !== "Reference");
+  }
+  let newFieldSet = row.fieldSet;
+  if (queryReference) {
+    row.fieldSet.forEach((field) => {
+      if (field.type === "Reference") {
+        const entityName = field.referTo.split(",")[0];
+        const entity = getEntityFields(entityName);
+        if (!entity.fieldSet) {
+          throw new Error(`实体 ${entityName} 存在异常，没有字段列表`);
+        }
+        console.log("entity>>>>>>>>",entity)
+        // 排除保留字段
+        if (!queryReserved) {
+          entity.fieldSet = entity.fieldSet.filter(
+            (f1) => !f1.reserved || f1.reserved !== true
+          );
+        }
+        // 剔除所有引用字段
+        if (!firstReference) {
+          entity.fieldSet = entity.fieldSet.filter(
+            (f1) => f1.type !== "Reference"
+          );
+        }
+        entity.fieldSet.forEach((f1) => {
+          f1.name = `${field.name}.${f1.name}`;
+          f1.label = `${field.label}.${f1.label}`;
+        });
+        newFieldSet = newFieldSet.concat(entity.fieldSet);
+
+        // const refEntity = getEntityByName(field.referTo.split(",")[0]);
+        // const refFields = queryEntityFields(refEntity.code, queryReference, queryReserved, firstReference);
+        // field.referenceFields = refFields;
+      }
+    });
+  }
+
+  let fields = newFieldSet.map((field) => {
+    return {
+      isUpdatable: field.updatable,
+      fieldName: field.name,
+      isNameField: field.nameFieldFlag,
+      fieldLabel: field.label,
+      isNullable: field.nullable,
+      isCreatable: field.creatable,
+      fieldType: field.type,
+      referenceName: field.referTo ? field.referTo.split(",")[0] : undefined,
+    };
+  });
+
+  return fields;
+  return [
+    {
+      isUpdatable: true,
+      fieldName: "xiaoshouyuanjiazonge",
+      isNameField: false,
+      fieldLabel: "销售原价总额(含税)/元",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Money",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "youhuijine",
+      isNameField: false,
+      fieldLabel: "优惠金额/元",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Money",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "zhengdanzhekoulv",
+      isNameField: false,
+      fieldLabel: "整单折扣率%",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Percent",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xiaoshoudingdanjine",
+      isNameField: false,
+      fieldLabel: "销售订单金额(含税)/元",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Money",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "baojiamaolilv",
+      isNameField: false,
+      fieldLabel: "报价毛利率%",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Percent",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "baojiadanbianhao",
+      isNameField: true,
+      fieldLabel: "报价单编号",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "baojiariqi",
+      isNameField: false,
+      fieldLabel: "报价日期",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Date",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chengbenzongjia",
+      isNameField: false,
+      fieldLabel: "成本总价",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Money",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "createdOn",
+      isNameField: false,
+      fieldLabel: "创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "modifiedOn",
+      isNameField: false,
+      fieldLabel: "最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "approvalStatus",
+      isNameField: false,
+      fieldLabel: "审批状态",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "Status",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "lastApprovedOn",
+      isNameField: false,
+      fieldLabel: "最近审批时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "lastApprovalRemark",
+      isNameField: false,
+      fieldLabel: "最近审批批注",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "TextArea",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "xuanzekehu.createdOn",
+      isNameField: false,
+      fieldLabel: "选择客户.创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "xuanzekehu.modifiedOn",
+      isNameField: false,
+      fieldLabel: "选择客户.最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.kehumingcheng",
+      isNameField: true,
+      fieldLabel: "选择客户.客户名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.kehufenlei",
+      isNameField: false,
+      fieldLabel: "选择客户.客户分类",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.kehulaiyuan",
+      isNameField: false,
+      fieldLabel: "选择客户.客户来源",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.kehubiaoqian",
+      isNameField: false,
+      fieldLabel: "选择客户.客户标签",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Tag",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.jiagedengji",
+      isNameField: false,
+      fieldLabel: "选择客户.价格等级",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.jiesuanzhouqi",
+      isNameField: false,
+      fieldLabel: "选择客户.结算周期",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.kehusuozaidiqu",
+      isNameField: false,
+      fieldLabel: "选择客户.客户所在地区",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "AreaSelect",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.jutidizhi",
+      isNameField: false,
+      fieldLabel: "选择客户.具体地址",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.fapiaotaitou",
+      isNameField: false,
+      fieldLabel: "选择客户.发票抬头",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.fapiaoshuihao",
+      isNameField: false,
+      fieldLabel: "选择客户.发票税号",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.shuizhong",
+      isNameField: false,
+      fieldLabel: "选择客户.税种",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.zengzhishuishuilv",
+      isNameField: false,
+      fieldLabel: "选择客户.增值税税率",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Percent",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.kaihudianhua",
+      isNameField: false,
+      fieldLabel: "选择客户.开户电话",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.shoupiaoyouxiang",
+      isNameField: false,
+      fieldLabel: "选择客户.收票邮箱",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.kaihuyinhang",
+      isNameField: false,
+      fieldLabel: "选择客户.开户银行",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "xuanzekehu.yinhangzhanghu",
+      isNameField: false,
+      fieldLabel: "选择客户.银行账户",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "chukucangku.createdOn",
+      isNameField: false,
+      fieldLabel: "出库仓库.创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "chukucangku.modifiedOn",
+      isNameField: false,
+      fieldLabel: "出库仓库.最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.cangkumingcheng",
+      isNameField: true,
+      fieldLabel: "出库仓库.仓库名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.cangkubianma",
+      isNameField: false,
+      fieldLabel: "出库仓库.仓库编码",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.cangkudizhi",
+      isNameField: false,
+      fieldLabel: "出库仓库.仓库地区",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "AreaSelect",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.cangkurongliang",
+      isNameField: false,
+      fieldLabel: "出库仓库.仓库容量/立方",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.cangkuxingzhi",
+      isNameField: false,
+      fieldLabel: "出库仓库.仓库性质",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.cangkuzhuangtai",
+      isNameField: false,
+      fieldLabel: "出库仓库.仓库状态",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.lianxidianhua",
+      isNameField: false,
+      fieldLabel: "出库仓库.联系电话",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.beizhuxinxi",
+      isNameField: false,
+      fieldLabel: "出库仓库.备注信息",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "TextArea",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.jutidizhi",
+      isNameField: false,
+      fieldLabel: "出库仓库.具体地址",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.zongrukushuliang",
+      isNameField: false,
+      fieldLabel: "出库仓库.总入库数量",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.zongchukushuliang",
+      isNameField: false,
+      fieldLabel: "出库仓库.总出库数量",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.dangqiankucunshu",
+      isNameField: false,
+      fieldLabel: "出库仓库.当前库存数",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.kucundongjieshuliang",
+      isNameField: false,
+      fieldLabel: "出库仓库.库存冻结数量",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "chukucangku.dangqiankeyongkucunshuliang",
+      isNameField: false,
+      fieldLabel: "出库仓库.当前可用库存数量",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "createdBy.createdOn",
+      isNameField: false,
+      fieldLabel: "创建用户.创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "createdBy.modifiedOn",
+      isNameField: false,
+      fieldLabel: "创建用户.最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.userName",
+      isNameField: true,
+      fieldLabel: "创建用户.用户名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.loginPwd",
+      isNameField: false,
+      fieldLabel: "创建用户.登录密码",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Password",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.loginName",
+      isNameField: false,
+      fieldLabel: "创建用户.登录账号名",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.jobTitle",
+      isNameField: false,
+      fieldLabel: "创建用户.职务",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.disabled",
+      isNameField: false,
+      fieldLabel: "创建用户.是否禁用",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.mobilePhone",
+      isNameField: false,
+      fieldLabel: "创建用户.手机号",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.email",
+      isNameField: false,
+      fieldLabel: "创建用户.邮箱",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.avatar",
+      isNameField: false,
+      fieldLabel: "创建用户.头像",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Picture",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.dingTalkUserId",
+      isNameField: false,
+      fieldLabel: "创建用户.钉钉用户ID",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.tatp",
+      isNameField: false,
+      fieldLabel: "创建用户.状态",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Decimal",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.aaaaaa",
+      isNameField: false,
+      fieldLabel: "创建用户.aaaaa",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Tag",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.xsxs",
+      isNameField: false,
+      fieldLabel: "创建用户.xs",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "createdBy.yonghuxingbie",
+      isNameField: false,
+      fieldLabel: "创建用户.用户性别",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "modifiedBy.createdOn",
+      isNameField: false,
+      fieldLabel: "修改用户.创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "modifiedBy.modifiedOn",
+      isNameField: false,
+      fieldLabel: "修改用户.最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.userName",
+      isNameField: true,
+      fieldLabel: "修改用户.用户名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.loginPwd",
+      isNameField: false,
+      fieldLabel: "修改用户.登录密码",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Password",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.loginName",
+      isNameField: false,
+      fieldLabel: "修改用户.登录账号名",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.jobTitle",
+      isNameField: false,
+      fieldLabel: "修改用户.职务",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.disabled",
+      isNameField: false,
+      fieldLabel: "修改用户.是否禁用",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.mobilePhone",
+      isNameField: false,
+      fieldLabel: "修改用户.手机号",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.email",
+      isNameField: false,
+      fieldLabel: "修改用户.邮箱",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.avatar",
+      isNameField: false,
+      fieldLabel: "修改用户.头像",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Picture",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.dingTalkUserId",
+      isNameField: false,
+      fieldLabel: "修改用户.钉钉用户ID",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.tatp",
+      isNameField: false,
+      fieldLabel: "修改用户.状态",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Decimal",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.aaaaaa",
+      isNameField: false,
+      fieldLabel: "修改用户.aaaaa",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Tag",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.xsxs",
+      isNameField: false,
+      fieldLabel: "修改用户.xs",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "modifiedBy.yonghuxingbie",
+      isNameField: false,
+      fieldLabel: "修改用户.用户性别",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "ownerUser.createdOn",
+      isNameField: false,
+      fieldLabel: "所属用户.创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "ownerUser.modifiedOn",
+      isNameField: false,
+      fieldLabel: "所属用户.最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.userName",
+      isNameField: true,
+      fieldLabel: "所属用户.用户名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.loginPwd",
+      isNameField: false,
+      fieldLabel: "所属用户.登录密码",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Password",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.loginName",
+      isNameField: false,
+      fieldLabel: "所属用户.登录账号名",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.jobTitle",
+      isNameField: false,
+      fieldLabel: "所属用户.职务",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.disabled",
+      isNameField: false,
+      fieldLabel: "所属用户.是否禁用",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.mobilePhone",
+      isNameField: false,
+      fieldLabel: "所属用户.手机号",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.email",
+      isNameField: false,
+      fieldLabel: "所属用户.邮箱",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.avatar",
+      isNameField: false,
+      fieldLabel: "所属用户.头像",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Picture",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.dingTalkUserId",
+      isNameField: false,
+      fieldLabel: "所属用户.钉钉用户ID",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.tatp",
+      isNameField: false,
+      fieldLabel: "所属用户.状态",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Decimal",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.aaaaaa",
+      isNameField: false,
+      fieldLabel: "所属用户.aaaaa",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Tag",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.xsxs",
+      isNameField: false,
+      fieldLabel: "所属用户.xs",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerUser.yonghuxingbie",
+      isNameField: false,
+      fieldLabel: "所属用户.用户性别",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerDepartment.departmentName",
+      isNameField: true,
+      fieldLabel: "所属部门.部门名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerDepartment.description",
+      isNameField: false,
+      fieldLabel: "所属部门.部门说明",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "TextArea",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "ownerDepartment.dingDepartmentId",
+      isNameField: false,
+      fieldLabel: "所属部门.钉钉部门ID",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "approvalConfigId.entityCode",
+      isNameField: false,
+      fieldLabel: "审批流程.实体Code",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "approvalConfigId.flowName",
+      isNameField: true,
+      fieldLabel: "审批流程.流程名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "approvalConfigId.isDisabled",
+      isNameField: false,
+      fieldLabel: "审批流程.是否禁用",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "approvalConfigId.createdOn",
+      isNameField: false,
+      fieldLabel: "审批流程.创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "approvalConfigId.modifiedOn",
+      isNameField: false,
+      fieldLabel: "审批流程.最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "approvalConfigId.runningTotal",
+      isNameField: false,
+      fieldLabel: "审批流程.运行中的流程统计",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "approvalConfigId.completeTotal",
+      isNameField: false,
+      fieldLabel: "审批流程.结束的流程统计",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Integer",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "lastApprovedBy.createdOn",
+      isNameField: false,
+      fieldLabel: "最近审批人.创建时间",
+      isNullable: false,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: false,
+      fieldName: "lastApprovedBy.modifiedOn",
+      isNameField: false,
+      fieldLabel: "最近审批人.最近修改时间",
+      isNullable: true,
+      isCreatable: false,
+      fieldType: "DateTime",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.userName",
+      isNameField: true,
+      fieldLabel: "最近审批人.用户名称",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.loginPwd",
+      isNameField: false,
+      fieldLabel: "最近审批人.登录密码",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Password",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.loginName",
+      isNameField: false,
+      fieldLabel: "最近审批人.登录账号名",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.jobTitle",
+      isNameField: false,
+      fieldLabel: "最近审批人.职务",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.disabled",
+      isNameField: false,
+      fieldLabel: "最近审批人.是否禁用",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.mobilePhone",
+      isNameField: false,
+      fieldLabel: "最近审批人.手机号",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.email",
+      isNameField: false,
+      fieldLabel: "最近审批人.邮箱",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.avatar",
+      isNameField: false,
+      fieldLabel: "最近审批人.头像",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Picture",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.dingTalkUserId",
+      isNameField: false,
+      fieldLabel: "最近审批人.钉钉用户ID",
+      isNullable: true,
+      isCreatable: true,
+      fieldType: "Text",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.tatp",
+      isNameField: false,
+      fieldLabel: "最近审批人.状态",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Decimal",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.aaaaaa",
+      isNameField: false,
+      fieldLabel: "最近审批人.aaaaa",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Tag",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.xsxs",
+      isNameField: false,
+      fieldLabel: "最近审批人.xs",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Boolean",
+    },
+    {
+      isUpdatable: true,
+      fieldName: "lastApprovedBy.yonghuxingbie",
+      isNameField: false,
+      fieldLabel: "最近审批人.用户性别",
+      isNullable: false,
+      isCreatable: true,
+      fieldType: "Option",
+    },
+  ];
+}
 
 /**
  * 分配

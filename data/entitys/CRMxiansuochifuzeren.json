@@ -1,0 +1,1118 @@
+{
+    "label": "CRM线索池负责人",
+    "layoutable": true,
+    "name": "CRMxiansuochifuzeren",
+    "entityCode": 1156,
+    "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "listable": true,
+    "idFieldName": "cRMxiansuochifuzerenId",
+    "internalEntityFlag": false,
+    "tags": "CRM",
+    "mainEntity": {
+        "name": "CRMxiansuochi",
+        "authorizable": true,
+        "assignable": false,
+        "entityId": "0000001-fa9a2da02ee149f5a086a96ba2993541",
+        "label": "CRM线索池",
+        "listable": true,
+        "mainEntity": null,
+        "virtualFieldSet": [],
+        "fieldNames": [
+            "cRMxiansuochiId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "kehumingcheng",
+            "shoujihao",
+            "lianxiren",
+            "bumen",
+            "zhiwu",
+            "xiansuochi",
+            "xiansuolaiyuan",
+            "xiansuoxiangqing",
+            "xiansuorenling",
+            "xiansuo66666666"
+        ],
+        "physicalName": "t_crmxiansuochi",
+        "entityCode": 1143,
+        "shareable": false,
+        "tags": "CRM",
+        "idField": {
+            "label": "id主键",
+            "name": "cRMxiansuochiId"
+        },
+        "fieldSet": [
+            {
+                "name": "cRMxiansuochiId",
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "cRMxiansuochiId",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "description": null,
+                "label": "id主键",
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-4e499fdd28844cad89aa2755c900773d",
+                "entityCode": 1143,
+                "type": "PrimaryKey",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "entityCode": 1143,
+                "description": null,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "label": "创建时间",
+                "creatable": false,
+                "physicalName": "createdOn",
+                "type": "DateTime",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-6abbd92f418e46aaa1cf5cace201abef",
+                "name": "createdOn",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "type": "Reference",
+                "description": null,
+                "name": "createdBy",
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "nullable": false,
+                "updatable": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-7066f950742e48ada03a6c11ccbc5b4b",
+                "entityCode": 1143,
+                "displayOrder": 0
+            },
+            {
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1143,
+                "type": "DateTime",
+                "displayOrder": 0,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-530030afa65f4a159cff1339cb42230a",
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "name": "modifiedOn",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "description": null,
+                "nullable": true,
+                "creatable": false
+            },
+            {
+                "fieldId": "0000002-46909a75400a46be93b1f2c4f4ae19b4",
+                "label": "修改用户",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "description": null,
+                "nullable": true,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1143,
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "nameFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-9cfc8a1baea74bde80bdbe4c111d6f04",
+                "name": "ownerUser",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "updatable": false,
+                "entityCode": 1143,
+                "nullable": false,
+                "referenceSetting": null,
+                "label": "所属用户",
+                "physicalName": "ownerUser",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldId": "0000002-c0683c4a762248ed973ec9d9706df0b3",
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "creatable": false,
+                "updatable": false,
+                "entityCode": 1143,
+                "physicalName": "ownerDepartment",
+                "displayOrder": 0,
+                "nullable": false,
+                "fieldViewModel": null,
+                "mainDetailFieldFlag": false,
+                "type": "Reference",
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "kehumingcheng",
+                "type": "Text",
+                "description": null,
+                "updatable": true,
+                "physicalName": "c_kehumingcheng",
+                "creatable": true,
+                "nameFieldFlag": true,
+                "referenceSetting": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1143,
+                "label": "客户名称",
+                "owner": {
+                    "label": "CRM线索池",
+                    "name": "CRMxiansuochi"
+                },
+                "displayOrder": 0,
+                "fieldId": "0000002-e08877a5bb06438ba331f926130fe063"
+            },
+            {
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1143,
+                "name": "shoujihao",
+                "displayOrder": 0,
+                "nullable": true,
+                "referenceSetting": null,
+                "label": "手机号",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "creatable": true,
+                "description": null,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-3f652e4a3dfb40b0a575f02973ce997e",
+                "physicalName": "c_shoujihao",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "type": "Text"
+            },
+            {
+                "entityCode": 1143,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "label": "联系人",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "idFieldFlag": false,
+                "fieldId": "0000002-1e751a500c4245eb8c7f940eab97e088",
+                "type": "Text",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "name": "lianxiren",
+                "physicalName": "c_lianxiren",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "label": "部门",
+                "entityCode": 1143,
+                "name": "bumen",
+                "referenceSetting": null,
+                "fieldId": "0000002-0e7dd18b56d345baaa9a4c43930ecaf5",
+                "displayOrder": 0,
+                "updatable": true,
+                "description": null,
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "type": "Text",
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_bumen",
+                "referTo": null
+            },
+            {
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "label": "职务",
+                "physicalName": "c_zhiwu",
+                "type": "Text",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1143,
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "referTo": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-cb47bb3d970c488a8b1b01e3cf4f2cbd",
+                "name": "zhiwu"
+            },
+            {
+                "type": "Option",
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1143,
+                "name": "xiansuochi",
+                "label": "线索池",
+                "nameFieldFlag": false,
+                "fieldId": "0000002-2be9cfef5043406a96f15890534361e6",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "physicalName": "c_xiansuochi",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "displayOrder": 0,
+                "updatable": true,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "label": "线索来源",
+                "nullable": true,
+                "idFieldFlag": false,
+                "creatable": true,
+                "referTo": null,
+                "entityCode": 1143,
+                "owner": {
+                    "label": "CRM线索池",
+                    "name": "CRMxiansuochi"
+                },
+                "displayOrder": 0,
+                "description": null,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-867af91e78f546158a33660fe657ce28",
+                "name": "xiansuolaiyuan",
+                "physicalName": "c_xiansuolaiyuan",
+                "type": "Option",
+                "mainDetailFieldFlag": false
+            },
+            {
+                "name": "xiansuoxiangqing",
+                "type": "TextArea",
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-73560d19c7ed4807941fee8f22e17ad3",
+                "entityCode": 1143,
+                "label": "线索详情",
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "physicalName": "c_xiansuoxiangqing",
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "description": null,
+                "updatable": true
+            },
+            {
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-024af043804e465588199037f6e2ce5d",
+                "name": "xiansuorenling",
+                "physicalName": "c_xiansuorenling",
+                "description": null,
+                "nullable": true,
+                "type": "Reference",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "CRMxiansuo",
+                        "label": "CRM线索"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMxiansuo",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "shoujihao",
+                            "lianxiren",
+                            "bumen",
+                            "zhiwu",
+                            "xiansuochi",
+                            "xiansuolaiyuan",
+                            "xiansuoxiangqing"
+                        ]
+                    }
+                ],
+                "entityCode": 1143,
+                "label": "线索认领",
+                "updatable": true,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "description": null,
+                "referenceSetting": null,
+                "fieldId": null,
+                "name": "xiansuo66666666",
+                "physicalName": "c_xiansuo66666666",
+                "owner": {
+                    "label": "CRM线索池",
+                    "name": "CRMxiansuochi"
+                },
+                "type": "Boolean",
+                "displayOrder": 0,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1143,
+                "label": "xiansuo66666666",
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "nullable": false,
+                "mainDetailFieldFlag": false
+            }
+        ],
+        "sortedFieldSet": [
+            {
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "type": "PrimaryKey",
+                "description": null,
+                "displayOrder": 0,
+                "fieldId": "0000002-4e499fdd28844cad89aa2755c900773d",
+                "name": "cRMxiansuochiId",
+                "nullable": false,
+                "updatable": false,
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "label": "CRM线索池",
+                    "name": "CRMxiansuochi"
+                },
+                "creatable": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "entityCode": 1143,
+                "label": "id主键",
+                "physicalName": "cRMxiansuochiId"
+            },
+            {
+                "name": "kehumingcheng",
+                "type": "Text",
+                "description": null,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-e08877a5bb06438ba331f926130fe063",
+                "entityCode": 1143,
+                "label": "客户名称",
+                "physicalName": "c_kehumingcheng",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "nullable": true
+            },
+            {
+                "displayOrder": 0,
+                "updatable": true,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "fieldId": "0000002-3f652e4a3dfb40b0a575f02973ce997e",
+                "entityCode": 1143,
+                "defaultMemberOfListFlag": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "nullable": true,
+                "creatable": true,
+                "name": "shoujihao",
+                "label": "手机号",
+                "physicalName": "c_shoujihao",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "type": "Text",
+                "description": null,
+                "idFieldFlag": false
+            },
+            {
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-1e751a500c4245eb8c7f940eab97e088",
+                "name": "lianxiren",
+                "physicalName": "c_lianxiren",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "referenceSetting": null,
+                "label": "联系人",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1143,
+                "type": "Text",
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                }
+            },
+            {
+                "entityCode": 1143,
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "type": "Text",
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-0e7dd18b56d345baaa9a4c43930ecaf5",
+                "name": "bumen",
+                "nullable": true,
+                "creatable": true,
+                "referenceSetting": null,
+                "label": "部门",
+                "physicalName": "c_bumen",
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "zhiwu",
+                "physicalName": "c_zhiwu",
+                "mainDetailFieldFlag": false,
+                "entityCode": 1143,
+                "displayOrder": 0,
+                "type": "Text",
+                "creatable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-cb47bb3d970c488a8b1b01e3cf4f2cbd",
+                "label": "职务",
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "nullable": true
+            },
+            {
+                "label": "线索池",
+                "type": "Option",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1143,
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "displayOrder": 0,
+                "physicalName": "c_xiansuochi",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "name": "xiansuochi",
+                "description": null,
+                "updatable": true,
+                "fieldId": "0000002-2be9cfef5043406a96f15890534361e6"
+            },
+            {
+                "entityCode": 1143,
+                "description": null,
+                "idFieldFlag": false,
+                "name": "xiansuolaiyuan",
+                "owner": {
+                    "label": "CRM线索池",
+                    "name": "CRMxiansuochi"
+                },
+                "nullable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-867af91e78f546158a33660fe657ce28",
+                "physicalName": "c_xiansuolaiyuan",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": null,
+                "label": "线索来源",
+                "type": "Option",
+                "creatable": true,
+                "updatable": true,
+                "referTo": null
+            },
+            {
+                "displayOrder": 0,
+                "creatable": true,
+                "referTo": null,
+                "physicalName": "c_xiansuoxiangqing",
+                "type": "TextArea",
+                "name": "xiansuoxiangqing",
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-73560d19c7ed4807941fee8f22e17ad3",
+                "entityCode": 1143,
+                "fieldViewModel": {
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "label": "线索详情",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "updatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "CRMxiansuo",
+                        "label": "CRM线索"
+                    }
+                ],
+                "fieldId": "0000002-024af043804e465588199037f6e2ce5d",
+                "label": "线索认领",
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": true,
+                "updatable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMxiansuo",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "shoujihao",
+                            "lianxiren",
+                            "bumen",
+                            "zhiwu",
+                            "xiansuochi",
+                            "xiansuolaiyuan",
+                            "xiansuoxiangqing"
+                        ]
+                    }
+                ],
+                "entityCode": 1143,
+                "name": "xiansuorenling",
+                "physicalName": "c_xiansuorenling",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "description": null,
+                "nullable": true
+            },
+            {
+                "entityCode": 1143,
+                "physicalName": "c_xiansuo66666666",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": null,
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "type": "Boolean",
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "label": "xiansuo66666666",
+                "referTo": null,
+                "mainDetailFieldFlag": false,
+                "description": null,
+                "nullable": false,
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "name": "xiansuo66666666"
+            },
+            {
+                "name": "createdOn",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "fieldId": "0000002-6abbd92f418e46aaa1cf5cace201abef",
+                "type": "DateTime",
+                "description": null,
+                "referTo": null,
+                "referenceSetting": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1143,
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "name": "createdBy",
+                "owner": {
+                    "label": "CRM线索池",
+                    "name": "CRMxiansuochi"
+                },
+                "description": null,
+                "fieldId": "0000002-7066f950742e48ada03a6c11ccbc5b4b",
+                "nullable": false,
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "entityCode": 1143
+            },
+            {
+                "name": "modifiedOn",
+                "creatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1143,
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "updatable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "label": "最近修改时间",
+                "type": "DateTime",
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-530030afa65f4a159cff1339cb42230a",
+                "nullable": true
+            },
+            {
+                "label": "修改用户",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-46909a75400a46be93b1f2c4f4ae19b4",
+                "name": "modifiedBy",
+                "type": "Reference",
+                "nameFieldFlag": false,
+                "description": null,
+                "displayOrder": 0,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1143,
+                "physicalName": "modifiedBy",
+                "nullable": true,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ]
+            },
+            {
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1143,
+                "nullable": false,
+                "creatable": false,
+                "fieldViewModel": null,
+                "physicalName": "ownerUser",
+                "description": null,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "fieldId": "0000002-9cfc8a1baea74bde80bdbe4c111d6f04",
+                "label": "所属用户",
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "updatable": false,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "name": "ownerUser",
+                "type": "Reference",
+                "displayOrder": 0
+            },
+            {
+                "fieldId": "0000002-c0683c4a762248ed973ec9d9706df0b3",
+                "type": "Reference",
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "creatable": false,
+                "idFieldFlag": false,
+                "description": null,
+                "updatable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1143,
+                "owner": {
+                    "name": "CRMxiansuochi",
+                    "label": "CRM线索池"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            }
+        ],
+        "detailEntityFlag": false,
+        "layoutable": true,
+        "nameField": {
+            "label": "客户名称",
+            "name": "kehumingcheng"
+        },
+        "detailEntitySet": [
+            {
+                "name": "CRMxiansuochifuzeren",
+                "label": "CRM线索池负责人"
+            }
+        ],
+        "mainDetailField": null
+    },
+    "nameField": null,
+    "authorizable": false,
+    "shareable": false,
+    "assignable": false,
+    "physicalName": "t_crmxiansuochifuzeren",
+    "fieldSet": [
+        {
+            "name": "cRMxiansuochifuzerenId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "physicalName": "cRMxiansuochifuzerenId",
+            "reserved": true,
+            "referTo": null,
+            "label": "id主键"
+        },
+        {
+            "name": "createdOn",
+            "updatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false
+        },
+        {
+            "referTo": "User,",
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "createdBy",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "createdBy"
+        },
+        {
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "label": "最近修改时间",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false,
+            "label": "修改用户",
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "mdCRMxiansuochiId",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "creatable": true,
+            "mainDetailFieldFlag": true,
+            "reserved": true,
+            "referTo": "CRMxiansuochi,",
+            "name": "mdCRMxiansuochiId",
+            "type": "Reference"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "creatable": true,
+            "type": "Reference",
+            "idFieldFlag": false,
+            "label": "协作人",
+            "physicalName": "c_xiezuoren",
+            "reserved": false,
+            "name": "xiezuoren",
+            "updatable": true
+        }
+    ]
+}

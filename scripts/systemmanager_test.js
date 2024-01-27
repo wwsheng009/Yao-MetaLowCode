@@ -18,6 +18,7 @@ function getEntitySet() {
       "internalEntityFlag",
       "tags",
     ],
+    limit: 10000,
   });
 
   // return [

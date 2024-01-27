@@ -95,7 +95,7 @@
       "path": "queryById",
       "method": "get",
       "process": "scripts.curd.queryById",
-      "in": ["$qeury.entityId", "$qeury.fieldNames"],
+      "in": ["$query.entityId", "$query.fieldNames"],
       "out": {
         "status": 200,
         "type": "application/json"
@@ -105,7 +105,7 @@
       "path": "testEquation",
       "method": "get",
       "process": "scripts.curd.testEquation",
-      "in": ["$qeury"],
+      "in": ["$query"],
       "out": {
         "status": 200,
         "type": "application/json"

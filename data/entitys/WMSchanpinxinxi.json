@@ -1,0 +1,300 @@
+{
+    "entityCode": 1012,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "idFieldName": "wMSchanpinxinxiId",
+    "tags": "WMS",
+    "name": "WMSchanpinxinxi",
+    "label": "WMS产品信息",
+    "layoutable": true,
+    "listable": true,
+    "internalEntityFlag": false,
+    "assignable": false,
+    "nameField": "产品编号",
+    "authorizable": true,
+    "shareable": false,
+    "mainEntity": null,
+    "physicalName": "t_wmschanpinxinxi",
+    "fieldSet": [
+        {
+            "label": "id主键",
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "idFieldFlag": true,
+            "referTo": null,
+            "name": "wMSchanpinxinxiId",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "wMSchanpinxinxiId"
+        },
+        {
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false,
+            "creatable": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "modifiedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "referTo": null,
+            "label": "最近修改时间",
+            "type": "DateTime"
+        },
+        {
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "ownerUser",
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "label": "所属部门",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text",
+            "physicalName": "c_chanpinbianhao",
+            "name": "chanpinbianhao",
+            "referTo": null,
+            "updatable": true,
+            "label": "产品编号",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "reserved": false
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "label": "产品属性",
+            "physicalName": "c_chanpinshuxing",
+            "reserved": false,
+            "referTo": null,
+            "name": "chanpinshuxing",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "辅料",
+                    "value": 1
+                },
+                {
+                    "key": "主料",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chanpinleixing",
+            "updatable": true,
+            "idFieldFlag": false,
+            "name": "chanpinleixing",
+            "label": "产品类型",
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "optionList": [
+                {
+                    "key": "均热板",
+                    "value": 1
+                },
+                {
+                    "key": "GPU芯片",
+                    "value": 2
+                },
+                {
+                    "key": "PCB电路板",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chanpinmingcheng",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "产品名称",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "chanpinmingcheng",
+            "creatable": true
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_pinpai",
+            "name": "pinpai",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "品牌",
+            "creatable": true,
+            "type": "Text"
+        },
+        {
+            "physicalName": "c_guigexinghao",
+            "reserved": false,
+            "referTo": null,
+            "name": "guigexinghao",
+            "idFieldFlag": false,
+            "label": "规格型号",
+            "nameFieldFlag": false,
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "type": "Option",
+            "name": "danwei",
+            "idFieldFlag": false,
+            "label": "单位",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_danwei",
+            "reserved": false,
+            "optionList": [
+                {
+                    "key": "颗",
+                    "value": 1
+                },
+                {
+                    "key": "根",
+                    "value": 2
+                },
+                {
+                    "key": "件",
+                    "value": 3
+                },
+                {
+                    "key": "个",
+                    "value": 4
+                },
+                {
+                    "key": "盒",
+                    "value": 5
+                },
+                {
+                    "key": "箱",
+                    "value": 6
+                },
+                {
+                    "key": "片",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "name": "caigoudanjiahanshuiyuan",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "label": "采购单价(含税)/元",
+            "physicalName": "c_caigoudanjiahanshuiyuan",
+            "referTo": null
+        },
+        {
+            "physicalName": "c_chanpintupian",
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Picture",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "chanpintupian",
+            "label": "产品图片",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_chanpinquanxian",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "label": "产品权限",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Tag",
+            "name": "chanpinquanxian",
+            "tagList": [
+                "生成",
+                "采购",
+                "赠送"
+            ]
+        }
+    ]
+}

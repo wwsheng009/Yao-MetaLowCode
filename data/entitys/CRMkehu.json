@@ -1,0 +1,336 @@
+{
+    "internalEntityFlag": false,
+    "tags": "CRM",
+    "entityCode": 1162,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "cRMkehuId",
+    "name": "CRMkehu",
+    "label": "CRM公海池",
+    "systemEntityFlag": false,
+    "mainEntity": null,
+    "authorizable": true,
+    "assignable": false,
+    "shareable": false,
+    "nameField": "客户名称",
+    "physicalName": "t_crmkehu",
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "physicalName": "cRMkehuId",
+            "reserved": true,
+            "name": "cRMkehuId",
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": true,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "name": "createdOn",
+            "label": "创建时间"
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "label": "最近修改时间",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedBy",
+            "updatable": false,
+            "label": "修改用户",
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "name": "ownerUser",
+            "updatable": false,
+            "label": "所属用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "updatable": false,
+            "reserved": true,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": null,
+            "name": "kehumingcheng",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_kehumingcheng",
+            "reserved": false,
+            "updatable": true,
+            "label": "客户名称"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "label": "客户编号",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_kehubianhao",
+            "name": "kehubianhao",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Text",
+            "nameFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "label": "手机号",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_shoujihao",
+            "referTo": null,
+            "name": "shoujihao"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_kehulaiyuan",
+            "reserved": false,
+            "referTo": null,
+            "label": "客户来源",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "name": "kehulaiyuan",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Text"
+        },
+        {
+            "physicalName": "c_kehuzhuangtai",
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "客户状态",
+            "type": "Option",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "kehuzhuangtai",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "潜在客户",
+                    "value": 1
+                },
+                {
+                    "key": "成交客户",
+                    "value": 2
+                },
+                {
+                    "key": "无意向",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "reserved": false,
+            "creatable": true,
+            "label": "客户级别",
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_kehujibie",
+            "referTo": null,
+            "name": "kehujibie",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "重要客户",
+                    "value": 1
+                },
+                {
+                    "key": "一般客户",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "physicalName": "c_suoshugonghai",
+            "reserved": false,
+            "name": "suoshugonghai",
+            "label": "所属公海",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "上海公海池",
+                    "value": 1
+                },
+                {
+                    "key": "北京公海池",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "idFieldFlag": false,
+            "label": "所属行业",
+            "creatable": true,
+            "name": "suoshuhangye",
+            "updatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_suoshuhangye",
+            "reserved": false,
+            "referTo": null,
+            "optionList": [
+                {
+                    "key": "制造业",
+                    "value": 1
+                },
+                {
+                    "key": "建筑业",
+                    "value": 2
+                },
+                {
+                    "key": "金融业",
+                    "value": 3
+                },
+                {
+                    "key": "房地产业",
+                    "value": 4
+                },
+                {
+                    "key": "交通运输业",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_kehuyouxiang",
+            "reserved": false,
+            "referTo": null,
+            "name": "kehuyouxiang",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "客户邮箱",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "label": "客户地址",
+            "creatable": true,
+            "type": "AreaSelect",
+            "physicalName": "c_kehudizhi",
+            "name": "kehudizhi",
+            "updatable": true
+        },
+        {
+            "creatable": true,
+            "type": "TextArea",
+            "nameFieldFlag": false,
+            "physicalName": "c_xiangxidizhi",
+            "reserved": false,
+            "referTo": null,
+            "name": "xiangxidizhi",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "详细地址",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "TextArea",
+            "nameFieldFlag": false,
+            "physicalName": "c_kehuxiangqing",
+            "reserved": false,
+            "name": "kehuxiangqing",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "客户详情"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_kehurenling",
+            "name": "kehurenling",
+            "updatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": "CRMgonghaichi,",
+            "idFieldFlag": false,
+            "label": "客户认领",
+            "creatable": true
+        }
+    ]
+}

@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "description": "自定义API接口",
   "guard": "-",
+  "group": "/plugins/mannerReport",
   "paths": [
     {
       "path": "/getEntityCode",
       "method": "get",
-      "process": "scripts.plugins.getEntityCode",
+      "process": "scripts.plugins.report.getEntityCode",
       "in": [":query"],
+      "out": { "status": 200, "type": "application/json" }
+    },{
+      "path": "/getEntityList",
+      "method": "get",
+      "process": "scripts.plugins.report.getEntityList",
+      "in": ["$query.reportConfigId"],
       "out": { "status": 200, "type": "application/json" }
     }
   ]

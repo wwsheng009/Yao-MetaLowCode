@@ -1,0 +1,1032 @@
+{
+    "label": "CRM退货产品明细",
+    "entityCode": 1195,
+    "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "name": "CRMtuihuochanpinmingxi",
+    "listable": true,
+    "idFieldName": "cRMtuihuochanpinmingxiId",
+    "internalEntityFlag": false,
+    "tags": "CRM",
+    "layoutable": true,
+    "assignable": false,
+    "authorizable": false,
+    "physicalName": "t_crmtuihuochanpinmingxi",
+    "nameField": null,
+    "mainEntity": {
+        "idField": {
+            "label": "id主键",
+            "name": "cRMtuihuoshenqingId"
+        },
+        "physicalName": "t_crmtuihuoshenqing",
+        "entityCode": 1194,
+        "detailEntityFlag": false,
+        "listable": true,
+        "authorizable": true,
+        "detailEntitySet": [
+            {
+                "name": "CRMtuihuochanpinmingxi",
+                "label": "CRM退货产品明细"
+            }
+        ],
+        "sortedFieldSet": [
+            {
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "label": "id主键",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "nullable": false,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-3e94b326cb3944369b0b820dffd0fd56",
+                "type": "PrimaryKey",
+                "description": null,
+                "updatable": false,
+                "entityCode": 1194,
+                "name": "cRMtuihuoshenqingId",
+                "physicalName": "cRMtuihuoshenqingId"
+            },
+            {
+                "entityCode": 1194,
+                "label": "关联原合同",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "CRMhetongdingdan",
+                        "label": "CRM合同订单"
+                    }
+                ],
+                "name": "guanlianyuanhetong",
+                "physicalName": "c_guanlianyuanhetong",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-6271cb6aff794572b04605bdb9cb24dd",
+                "creatable": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMhetongdingdan",
+                        "fieldList": [
+                            "hetongbiaoti",
+                            "hetongdingdanbianhao"
+                        ]
+                    }
+                ],
+                "type": "Reference",
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                }
+            },
+            {
+                "type": "Option",
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "退货原因",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "updatable": true,
+                "entityCode": 1194,
+                "name": "huanhuoyuanyin",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-ad90ed37334f4d80beb7c1ac2024e111",
+                "physicalName": "c_huanhuoyuanyin",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null
+            },
+            {
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "referTo": null,
+                "referenceSetting": [],
+                "fieldId": "0000002-836c564b59054e47a28dbf1cb401ce1d",
+                "entityCode": 1194,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "label": "退货申请时间",
+                "type": "Date",
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "nameFieldFlag": false,
+                "name": "huanhuoshenqingshijian",
+                "physicalName": "c_huanhuoshenqingshijian"
+            },
+            {
+                "idFieldFlag": false,
+                "entityCode": 1194,
+                "owner": {
+                    "label": "CRM退货申请",
+                    "name": "CRMtuihuoshenqing"
+                },
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "label": "退货退款单编号",
+                "nameFieldFlag": true,
+                "referTo": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": [],
+                "fieldId": "0000002-0db9201a97af45458bdffb3c637a7e43",
+                "name": "huanhuoshenqingdanbianhao",
+                "physicalName": "c_huanhuoshenqingdanbianhao",
+                "type": "Text",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "creatable": true,
+                "idFieldFlag": false,
+                "entityCode": 1194,
+                "physicalName": "c_jingbanren",
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-6fd7b2e9c7d8446d8b657682845feff5",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "type": "Reference",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "name": "jingbanren",
+                "label": "经办人"
+            },
+            {
+                "name": "jingbanbumen",
+                "physicalName": "c_jingbanbumen",
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-18e3733a25f341219800114b8af810f9",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ],
+                "description": null,
+                "label": "经办部门",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "Reference",
+                "mainDetailFieldFlag": false,
+                "entityCode": 1194,
+                "updatable": true,
+                "nullable": true
+            },
+            {
+                "nullable": true,
+                "creatable": true,
+                "referTo": null,
+                "fieldId": "0000002-8e3b8ec0bb1f4128b4cef13b9c0a7b06",
+                "name": "tuihuozongjinuan",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "idFieldFlag": false,
+                "entityCode": 1194,
+                "physicalName": "c_tuihuozongjinuan",
+                "description": null,
+                "referenceSetting": null,
+                "label": "退货总金额/元",
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "type": "Money",
+                "displayOrder": 0,
+                "updatable": true
+            },
+            {
+                "updatable": false,
+                "nameFieldFlag": false,
+                "physicalName": "createdOn",
+                "name": "createdOn",
+                "label": "创建时间",
+                "nullable": false,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1194,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "idFieldFlag": false,
+                "owner": {
+                    "label": "CRM退货申请",
+                    "name": "CRMtuihuoshenqing"
+                },
+                "type": "DateTime",
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-3d6e2c8cc1c049fcb17e8168e58da637"
+            },
+            {
+                "entityCode": 1194,
+                "label": "创建用户",
+                "type": "Reference",
+                "description": null,
+                "nullable": false,
+                "updatable": false,
+                "fieldId": "0000002-5af8b2ec9b1b4697b54a759fe08254d7",
+                "physicalName": "createdBy",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "createdBy",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "creatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "description": null,
+                "updatable": false,
+                "idFieldFlag": false,
+                "name": "modifiedOn",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "type": "DateTime",
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "physicalName": "modifiedOn",
+                "entityCode": 1194,
+                "label": "最近修改时间",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-341423d84a6c4d6a8910e0899bcc090a"
+            },
+            {
+                "fieldId": "0000002-2d83b1c088594e51bebb04732676a0f3",
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "type": "Reference",
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1194,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "description": null,
+                "updatable": false,
+                "label": "修改用户",
+                "physicalName": "modifiedBy",
+                "fieldViewModel": null
+            },
+            {
+                "fieldViewModel": null,
+                "fieldId": "0000002-c87e2bded21b469fb3e729689f2e8ca0",
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "physicalName": "ownerUser",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1194,
+                "label": "所属用户",
+                "mainDetailFieldFlag": false,
+                "name": "ownerUser",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "nullable": false
+            },
+            {
+                "fieldId": "0000002-4bd46a0288e14f5db4961b4cf4fd13b8",
+                "type": "Reference",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "ownerDepartment",
+                "physicalName": "ownerDepartment",
+                "description": null,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "creatable": false,
+                "entityCode": 1194,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "displayOrder": 0,
+                "nullable": false,
+                "label": "所属部门",
+                "mainDetailFieldFlag": false
+            }
+        ],
+        "name": "CRMtuihuoshenqing",
+        "tags": "CRM",
+        "nameField": {
+            "name": "huanhuoshenqingdanbianhao",
+            "label": "退货退款单编号"
+        },
+        "mainEntity": null,
+        "fieldSet": [
+            {
+                "fieldId": "0000002-3e94b326cb3944369b0b820dffd0fd56",
+                "physicalName": "cRMtuihuoshenqingId",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "label": "id主键",
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "PrimaryKey",
+                "description": null,
+                "updatable": false,
+                "entityCode": 1194,
+                "name": "cRMtuihuoshenqingId",
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "fieldViewModel": null
+            },
+            {
+                "description": null,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "nullable": false,
+                "updatable": false,
+                "displayOrder": 0,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-3d6e2c8cc1c049fcb17e8168e58da637",
+                "entityCode": 1194,
+                "physicalName": "createdOn",
+                "defaultMemberOfListFlag": false,
+                "name": "createdOn",
+                "label": "创建时间",
+                "type": "DateTime"
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-5af8b2ec9b1b4697b54a759fe08254d7",
+                "type": "Reference",
+                "description": null,
+                "nullable": false,
+                "idFieldFlag": false,
+                "entityCode": 1194,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "name": "createdBy",
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "fieldId": "0000002-341423d84a6c4d6a8910e0899bcc090a",
+                "physicalName": "modifiedOn",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "referTo": null,
+                "entityCode": 1194,
+                "name": "modifiedOn",
+                "label": "最近修改时间",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "description": null,
+                "nullable": true,
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "referenceSetting": null,
+                "nullable": true,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "nameFieldFlag": false,
+                "fieldId": "0000002-2d83b1c088594e51bebb04732676a0f3",
+                "entityCode": 1194,
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "description": null
+            },
+            {
+                "creatable": false,
+                "nameFieldFlag": false,
+                "entityCode": 1194,
+                "description": null,
+                "displayOrder": 0,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "Reference",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-c87e2bded21b469fb3e729689f2e8ca0",
+                "name": "ownerUser",
+                "label": "所属用户",
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "physicalName": "ownerUser",
+                "updatable": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-4bd46a0288e14f5db4961b4cf4fd13b8",
+                "type": "Reference",
+                "creatable": false,
+                "name": "ownerDepartment",
+                "physicalName": "ownerDepartment",
+                "owner": {
+                    "label": "CRM退货申请",
+                    "name": "CRMtuihuoshenqing"
+                },
+                "description": null,
+                "nullable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1194,
+                "label": "所属部门",
+                "displayOrder": 0
+            },
+            {
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "CRMhetongdingdan",
+                        "label": "CRM合同订单"
+                    }
+                ],
+                "name": "guanlianyuanhetong",
+                "label": "关联原合同",
+                "physicalName": "c_guanlianyuanhetong",
+                "owner": {
+                    "label": "CRM退货申请",
+                    "name": "CRMtuihuoshenqing"
+                },
+                "creatable": true,
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-6271cb6aff794572b04605bdb9cb24dd",
+                "entityCode": 1194,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMhetongdingdan",
+                        "fieldList": [
+                            "hetongbiaoti",
+                            "hetongdingdanbianhao"
+                        ]
+                    }
+                ]
+            },
+            {
+                "physicalName": "c_huanhuoyuanyin",
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "huanhuoyuanyin",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "Option",
+                "displayOrder": 0,
+                "fieldId": "0000002-ad90ed37334f4d80beb7c1ac2024e111",
+                "entityCode": 1194,
+                "label": "退货原因",
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "physicalName": "c_huanhuoshenqingshijian",
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": [],
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "Date",
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-836c564b59054e47a28dbf1cb401ce1d",
+                "entityCode": 1194,
+                "name": "huanhuoshenqingshijian",
+                "label": "退货申请时间",
+                "description": null
+            },
+            {
+                "entityCode": 1194,
+                "label": "退货退款单编号",
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "fieldId": "0000002-0db9201a97af45458bdffb3c637a7e43",
+                "name": "huanhuoshenqingdanbianhao",
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "Text",
+                "nullable": true,
+                "creatable": true,
+                "physicalName": "c_huanhuoshenqingdanbianhao",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "idFieldFlag": false,
+                "referenceSetting": []
+            },
+            {
+                "name": "jingbanren",
+                "nameFieldFlag": false,
+                "description": null,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-6fd7b2e9c7d8446d8b657682845feff5",
+                "entityCode": 1194,
+                "label": "经办人",
+                "physicalName": "c_jingbanren",
+                "nullable": true,
+                "updatable": true
+            },
+            {
+                "fieldId": "0000002-18e3733a25f341219800114b8af810f9",
+                "name": "jingbanbumen",
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1194,
+                "label": "经办部门",
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "name": "CRMtuihuoshenqing",
+                    "label": "CRM退货申请"
+                },
+                "type": "Reference",
+                "description": null,
+                "creatable": true,
+                "physicalName": "c_jingbanbumen",
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "tuihuozongjinuan",
+                "type": "Money",
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-8e3b8ec0bb1f4128b4cef13b9c0a7b06",
+                "physicalName": "c_tuihuozongjinuan",
+                "owner": {
+                    "label": "CRM退货申请",
+                    "name": "CRMtuihuoshenqing"
+                },
+                "nameFieldFlag": false,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "entityCode": 1194,
+                "label": "退货总金额/元",
+                "displayOrder": 0,
+                "creatable": true
+            }
+        ],
+        "mainDetailField": null,
+        "fieldNames": [
+            "cRMtuihuoshenqingId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "guanlianyuanhetong",
+            "huanhuoyuanyin",
+            "huanhuoshenqingshijian",
+            "huanhuoshenqingdanbianhao",
+            "jingbanren",
+            "jingbanbumen",
+            "tuihuozongjinuan"
+        ],
+        "virtualFieldSet": [],
+        "layoutable": true,
+        "label": "CRM退货申请",
+        "shareable": false,
+        "assignable": false,
+        "entityId": "0000001-06dd7058a05e4cf9b28db9b39c382a89"
+    },
+    "shareable": false,
+    "fieldSet": [
+        {
+            "physicalName": "cRMtuihuochanpinmingxiId",
+            "reserved": true,
+            "referTo": null,
+            "name": "cRMtuihuochanpinmingxiId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "label": "id主键",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "referTo": null,
+            "label": "创建时间",
+            "creatable": false
+        },
+        {
+            "physicalName": "createdBy",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "creatable": false,
+            "reserved": true
+        },
+        {
+            "idFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "updatable": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedOn"
+        },
+        {
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": "CRMtuihuoshenqing,",
+            "name": "mdCRMtuihuoshenqingId",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": true,
+            "label": "主从关联Id",
+            "creatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "mdCRMtuihuoshenqingId",
+            "reserved": true,
+            "updatable": false
+        },
+        {
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "选择产品",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "physicalName": "c_xuanzechanpin",
+            "referTo": "CRMchanpinmingxi,",
+            "name": "xuanzechanpin",
+            "creatable": true,
+            "nameFieldFlag": false
+        },
+        {
+            "name": "huanhuoshuliang",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "label": "退货数量",
+            "physicalName": "c_huanhuoshuliang",
+            "reserved": false
+        },
+        {
+            "label": "退货小计/元",
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "tuihuoxiaojiuan",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_tuihuoxiaojiuan",
+            "referTo": null
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_zhekou",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "Percent",
+            "name": "zhekou",
+            "updatable": true,
+            "label": "折扣",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

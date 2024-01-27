@@ -1,0 +1,273 @@
+{
+    "name": "CRMchanpinmingxi",
+    "label": "CRM产品明细",
+    "entityCode": 1168,
+    "layoutable": true,
+    "tags": "CRM",
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "listable": true,
+    "idFieldName": "cRMchanpinmingxiId",
+    "internalEntityFlag": false,
+    "shareable": false,
+    "mainEntity": null,
+    "assignable": false,
+    "authorizable": true,
+    "physicalName": "t_crmchanpinmingxi",
+    "nameField": "产品名称",
+    "fieldSet": [
+        {
+            "reserved": true,
+            "label": "id主键",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "cRMchanpinmingxiId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "cRMchanpinmingxiId"
+        },
+        {
+            "physicalName": "createdOn",
+            "referTo": null,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "label": "创建时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "updatable": false,
+            "label": "修改用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "name": "ownerUser",
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,",
+            "label": "所属用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "referTo": "Department,",
+            "updatable": false
+        },
+        {
+            "reserved": false,
+            "name": "chanpinmingcheng",
+            "updatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "creatable": true,
+            "nameFieldFlag": true,
+            "physicalName": "c_chanpinmingcheng",
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "产品名称"
+        },
+        {
+            "name": "pinpai",
+            "idFieldFlag": false,
+            "label": "品牌",
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_pinpai",
+            "referTo": null
+        },
+        {
+            "reserved": false,
+            "label": "规格型号",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_guigexinghao",
+            "referTo": null,
+            "name": "guigexinghao",
+            "updatable": true
+        },
+        {
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_danwei",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "name": "danwei",
+            "idFieldFlag": false,
+            "label": "单位",
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "个",
+                    "value": 1
+                },
+                {
+                    "key": "枚",
+                    "value": 2
+                },
+                {
+                    "key": "台",
+                    "value": 3
+                },
+                {
+                    "key": "套",
+                    "value": 4
+                },
+                {
+                    "key": "件",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "成本价格/元",
+            "creatable": true,
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_chengbenjiageyuan",
+            "reserved": false,
+            "name": "chengbenjiageyuan",
+            "updatable": true
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "biaozhunjiageyuan",
+            "type": "Money",
+            "nameFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "标准价格/元",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_biaozhunjiageyuan"
+        },
+        {
+            "type": "Option",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "shifoushangjia",
+            "updatable": true,
+            "label": "是否上架",
+            "physicalName": "c_shifoushangjia",
+            "reserved": false,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "已上架",
+                    "value": 1
+                },
+                {
+                    "key": "已下架",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "name": "chanpintupian",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "产品图片",
+            "type": "Picture",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chanpintupian",
+            "reserved": false,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "reserved": false,
+            "name": "chanpinfujian",
+            "updatable": true,
+            "label": "产品附件",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chanpinfujian",
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "File",
+            "nameFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "技术参数",
+            "creatable": true,
+            "type": "TextArea",
+            "nameFieldFlag": false,
+            "name": "jishucanshu",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_jishucanshu"
+        }
+    ]
+}

@@ -1,0 +1,424 @@
+{
+    "detailEntityFlag": false,
+    "idFieldName": "chanpinxinxiId",
+    "internalEntityFlag": false,
+    "tags": "进销存",
+    "entityCode": 1001,
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "name": "Chanpinxinxi",
+    "label": "产品信息",
+    "mainEntity": null,
+    "shareable": false,
+    "assignable": false,
+    "nameField": "产品名称",
+    "authorizable": true,
+    "physicalName": "t_chanpinxinxi",
+    "fieldSet": [
+        {
+            "physicalName": "chanpinxinxiId",
+            "name": "chanpinxinxiId",
+            "updatable": false,
+            "label": "id主键",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey"
+        },
+        {
+            "reserved": true,
+            "referTo": null,
+            "label": "创建时间",
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn"
+        },
+        {
+            "nameFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "createdBy"
+        },
+        {
+            "referTo": null,
+            "label": "最近修改时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "name": "modifiedOn"
+        },
+        {
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "updatable": false
+        },
+        {
+            "physicalName": "ownerUser",
+            "referTo": "User,",
+            "name": "ownerUser",
+            "updatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chanpinbianma",
+            "reserved": false,
+            "name": "chanpinbianma",
+            "label": "产品编码",
+            "type": "Text",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chanpinshuxing",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "chanpinshuxing",
+            "label": "产品属性",
+            "optionList": [
+                {
+                    "key": "成品",
+                    "value": 1
+                },
+                {
+                    "key": "零件",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "label": "产品类型",
+            "physicalName": "c_chanpinleixing",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "chanpinleixing",
+            "creatable": true,
+            "optionList": [
+                {
+                    "key": "办公用品",
+                    "value": 1
+                },
+                {
+                    "key": "固定资产",
+                    "value": 2
+                },
+                {
+                    "key": "礼品",
+                    "value": 3
+                },
+                {
+                    "key": "路由器",
+                    "value": 4
+                },
+                {
+                    "key": "交换机",
+                    "value": 5
+                },
+                {
+                    "key": "网关",
+                    "value": 6
+                },
+                {
+                    "key": "网关CPU芯片",
+                    "value": 7
+                },
+                {
+                    "key": "交换机电源",
+                    "value": 8
+                }
+            ]
+        },
+        {
+            "physicalName": "c_chanpinmingcheng",
+            "reserved": false,
+            "referTo": null,
+            "label": "产品名称",
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": true,
+            "name": "chanpinmingcheng",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": true,
+            "label": "品牌",
+            "name": "pinpai",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text",
+            "physicalName": "c_pinpai",
+            "reserved": false,
+            "referTo": null
+        },
+        {
+            "physicalName": "c_guigexinghao",
+            "referTo": null,
+            "name": "guigexinghao",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "规格型号",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "reserved": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_danwei",
+            "reserved": false,
+            "referTo": null,
+            "name": "danwei",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "单位",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "台",
+                    "value": 1
+                },
+                {
+                    "key": "套",
+                    "value": 2
+                },
+                {
+                    "key": "件",
+                    "value": 3
+                },
+                {
+                    "key": "个",
+                    "value": 4
+                },
+                {
+                    "key": "盒",
+                    "value": 5
+                },
+                {
+                    "key": "箱",
+                    "value": 6
+                },
+                {
+                    "key": "片",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "referTo": null,
+            "name": "chengben",
+            "idFieldFlag": false,
+            "label": "成本（单价/元）",
+            "type": "Money",
+            "nameFieldFlag": false,
+            "physicalName": "c_chengben",
+            "reserved": false,
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_biaozhunshoujia",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "标准售价(含税)/元",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "biaozhunshoujia"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_chanpinquanxian",
+            "reserved": false,
+            "referTo": null,
+            "creatable": true,
+            "name": "chanpinquanxian",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "产品权限",
+            "type": "Tag",
+            "mainDetailFieldFlag": false,
+            "tagList": [
+                "销售",
+                "采购",
+                "赠送"
+            ]
+        },
+        {
+            "type": "Picture",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "referTo": null,
+            "name": "chanpintupian",
+            "idFieldFlag": false,
+            "label": "产品图片",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_chanpintupian"
+        },
+        {
+            "type": "Integer",
+            "nameFieldFlag": false,
+            "physicalName": "c_dangqiankucunshu",
+            "referTo": null,
+            "name": "dangqiankucunshu",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "当前库存数",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "creatable": true
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "Integer",
+            "nameFieldFlag": false,
+            "physicalName": "c_keyongkucunshu",
+            "label": "可用库存数",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "name": "keyongkucunshu",
+            "updatable": true
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "审批流程",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "approvalConfigId",
+            "name": "approvalConfigId",
+            "reserved": true,
+            "referTo": "ApprovalConfig,",
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "creatable": false,
+            "physicalName": "approvalStatus",
+            "name": "approvalStatus",
+            "idFieldFlag": false,
+            "label": "审批状态",
+            "type": "Status",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "name": "lastApprovedBy",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "lastApprovedBy",
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "最近审批人",
+            "creatable": false,
+            "nameFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "lastApprovedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近审批时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "lastApprovedOn"
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近审批批注",
+            "type": "TextArea",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "lastApprovalRemark",
+            "name": "lastApprovalRemark",
+            "creatable": false,
+            "reserved": true,
+            "referTo": null
+        }
+    ]
+}

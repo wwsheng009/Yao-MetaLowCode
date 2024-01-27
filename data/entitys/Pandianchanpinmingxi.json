@@ -1,0 +1,1489 @@
+{
+    "internalEntityFlag": false,
+    "tags": "进销存",
+    "label": "盘点产品明细",
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "pandianchanpinmingxiId",
+    "name": "Pandianchanpinmingxi",
+    "entityCode": 1056,
+    "detailEntityFlag": true,
+    "shareable": false,
+    "mainEntity": {
+        "physicalName": "t_kucunpandian",
+        "entityCode": 1055,
+        "tags": "进销存",
+        "virtualFieldSet": [],
+        "mainDetailField": null,
+        "listable": true,
+        "assignable": false,
+        "nameField": {
+            "name": "pandiandanbianhao",
+            "label": "盘点单编号"
+        },
+        "mainEntity": null,
+        "fieldSet": [
+            {
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-2a298ff68a934a88b25213acaa73a6a4",
+                "physicalName": "kucunpandianId",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "id主键",
+                "entityCode": 1055,
+                "name": "kucunpandianId",
+                "type": "PrimaryKey",
+                "description": null,
+                "creatable": false,
+                "idFieldFlag": true
+            },
+            {
+                "entityCode": 1055,
+                "label": "创建时间",
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "referTo": null,
+                "fieldId": "0000002-63acb303c92142b18ce2db915ea65bfa",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "createdOn",
+                "physicalName": "createdOn",
+                "owner": {
+                    "label": "库存盘点",
+                    "name": "Kucunpandian"
+                },
+                "type": "DateTime",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "physicalName": "createdBy",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-a05fd1ebe5e04321a4ca547d3ae2125d",
+                "type": "Reference",
+                "nullable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "创建用户",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "entityCode": 1055,
+                "name": "createdBy",
+                "creatable": false,
+                "updatable": false,
+                "referenceSetting": null
+            },
+            {
+                "fieldId": "0000002-0cc6dca348b34f22815aa11f0eee6c15",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "nameFieldFlag": false,
+                "entityCode": 1055,
+                "name": "modifiedOn",
+                "type": "DateTime",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "nullable": true,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null
+            },
+            {
+                "fieldId": "0000002-d15d349f86544e3c81c1b21755a4ccff",
+                "entityCode": 1055,
+                "referenceSetting": null,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "physicalName": "modifiedBy",
+                "type": "Reference",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "modifiedBy",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "label": "修改用户",
+                "description": null,
+                "nullable": true,
+                "creatable": false,
+                "idFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "idFieldFlag": false,
+                "entityCode": 1055,
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-e201a31133614ce59eb4611993b3b744",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "updatable": false,
+                "label": "所属用户",
+                "physicalName": "ownerUser",
+                "type": "Reference",
+                "nullable": false,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "ownerUser",
+                "referenceSetting": null
+            },
+            {
+                "name": "ownerDepartment",
+                "type": "Reference",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-fb8a366eeb6640efa425605b4fd0f141",
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "updatable": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "entityCode": 1055,
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "nullable": false,
+                "nameFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-9da2ffa48671426f841f67524c9c5638",
+                "entityCode": 1055,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "label": "盘点类型",
+                "nameFieldFlag": false,
+                "name": "pandianleixing",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "physicalName": "c_pandianleixing",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "type": "Option",
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "name": "pandiandanbianhao",
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "type": "Text",
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1055,
+                "label": "盘点单编号",
+                "physicalName": "c_pandiandanbianhao",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "fieldId": "0000002-66b8dac6c9f548c7a4c3138c82ef6f99",
+                "updatable": true,
+                "nameFieldFlag": true
+            },
+            {
+                "description": null,
+                "creatable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1055,
+                "name": "pandiankaishiriqi",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "label": "盘点开始日期",
+                "type": "Date",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "physicalName": "c_pandiankaishiriqi",
+                "nullable": false,
+                "updatable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-b0ee77a176724d5fbcf7c47dc667bd56",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                }
+            },
+            {
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-932db41890df4bdd97a5fef480f4728d",
+                "physicalName": "c_pandianjieshuriqi",
+                "description": null,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "name": "pandianjieshuriqi",
+                "type": "Date",
+                "nullable": false,
+                "idFieldFlag": false,
+                "owner": {
+                    "label": "库存盘点",
+                    "name": "Kucunpandian"
+                },
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1055,
+                "label": "盘点结束日期"
+            },
+            {
+                "physicalName": "c_pandianyuan",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "type": "Reference",
+                "fieldId": "0000002-292dfa37aa7a4e8ea4667016bbb6f6e9",
+                "entityCode": 1055,
+                "name": "pandianyuan",
+                "label": "盘点员",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName"
+                        ]
+                    }
+                ],
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "label": "仓库管理",
+                        "name": "Cangkuguanli"
+                    }
+                ],
+                "name": "pandiancangku",
+                "idFieldFlag": false,
+                "label": "盘点仓库",
+                "type": "Reference",
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-e1b2f42b173b48419e39104c8d1469df",
+                "entityCode": 1055,
+                "nullable": false,
+                "creatable": true,
+                "physicalName": "c_pandiancangku",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "description": null,
+                "displayOrder": 0
+            },
+            {
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "type": "Integer",
+                "idFieldFlag": false,
+                "fieldId": "0000002-c7d6148a3f0043acb6cc7531556cccc7",
+                "entityCode": 1055,
+                "physicalName": "c_pankuichanpinzongshu",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "name": "pankuichanpinzongshu",
+                "label": "盘亏产品总数",
+                "nullable": true,
+                "updatable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "type": "Money",
+                "nullable": true,
+                "idFieldFlag": false,
+                "physicalName": "c_pankuichanpinshoujiazonge",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "pankuichanpinshoujiazonge",
+                "updatable": true,
+                "referTo": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "fieldId": "0000002-87fcf40cbc234bd78ab157111b695e17",
+                "entityCode": 1055,
+                "label": "盘亏产品售价总额(含税)/元",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "referenceSetting": null
+            },
+            {
+                "creatable": true,
+                "updatable": true,
+                "name": "panyingchanpinzongshu",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "type": "Integer",
+                "nullable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "maxValue": 999999999,
+                    "minValue": -999999999
+                },
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "label": "盘盈产品总数",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-6a65e9110fb34647928eb25e7801b2eb",
+                "physicalName": "c_panyingchanpinzongshu",
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-8fc8411ed88243228f8bf739d03b5bf8",
+                "type": "Money",
+                "description": null,
+                "updatable": true,
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1055,
+                "label": "盘盈产品售价总额(含税)/元",
+                "physicalName": "c_panyingchanpinshoujiazonge",
+                "nullable": true,
+                "name": "panyingchanpinshoujiazonge",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null
+            },
+            {
+                "label": "审批流程",
+                "type": "Reference",
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-0efcc49995d746c68be24e5aec3b6ed8",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "ApprovalConfig",
+                        "label": "审批配置"
+                    }
+                ],
+                "fieldViewModel": null,
+                "entityCode": 1055,
+                "name": "approvalConfigId",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "physicalName": "approvalConfigId",
+                "description": null,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "type": "Status",
+                "creatable": false,
+                "updatable": false,
+                "fieldViewModel": null,
+                "description": null,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "label": "审批状态",
+                "referTo": null,
+                "referenceSetting": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-aec179849f0346c6ae2db2fb5de61b63",
+                "entityCode": 1055,
+                "name": "approvalStatus",
+                "physicalName": "approvalStatus",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "mainDetailFieldFlag": false
+            },
+            {
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "type": "Reference",
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "fieldId": "0000002-9dffb1a6e6354d7b9ac010c961ba23cf",
+                "label": "最近审批人",
+                "physicalName": "lastApprovedBy",
+                "owner": {
+                    "label": "库存盘点",
+                    "name": "Kucunpandian"
+                },
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "name": "lastApprovedBy",
+                "description": null,
+                "updatable": false
+            },
+            {
+                "entityCode": 1055,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "creatable": false,
+                "idFieldFlag": false,
+                "referTo": null,
+                "name": "lastApprovedOn",
+                "label": "最近审批时间",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "referenceSetting": null,
+                "type": "DateTime",
+                "updatable": false,
+                "fieldId": "0000002-22ddb1f0630141c9b993a1b227da6312",
+                "physicalName": "lastApprovedOn",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "displayOrder": 0,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-75aad6a36a4842aeb10b93f50bb34691",
+                "physicalName": "lastApprovalRemark",
+                "type": "TextArea",
+                "nameFieldFlag": false,
+                "name": "lastApprovalRemark",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "label": "最近审批批注",
+                "nullable": true,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null
+            }
+        ],
+        "idField": {
+            "name": "kucunpandianId",
+            "label": "id主键"
+        },
+        "sortedFieldSet": [
+            {
+                "fieldId": "0000002-2a298ff68a934a88b25213acaa73a6a4",
+                "type": "PrimaryKey",
+                "nullable": false,
+                "updatable": false,
+                "idFieldFlag": true,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1055,
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "kucunpandianId",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "creatable": false,
+                "nameFieldFlag": false,
+                "label": "id主键",
+                "physicalName": "kucunpandianId"
+            },
+            {
+                "label": "盘点类型",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "name": "pandianleixing",
+                "physicalName": "c_pandianleixing",
+                "fieldId": "0000002-9da2ffa48671426f841f67524c9c5638",
+                "updatable": true,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "type": "Option"
+            },
+            {
+                "name": "pandiandanbianhao",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "updatable": true,
+                "nameFieldFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-66b8dac6c9f548c7a4c3138c82ef6f99",
+                "physicalName": "c_pandiandanbianhao",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "creatable": true,
+                "referTo": null,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "label": "盘点单编号",
+                "type": "Text"
+            },
+            {
+                "entityCode": 1055,
+                "physicalName": "c_pandiankaishiriqi",
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "idFieldFlag": false,
+                "label": "盘点开始日期",
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-b0ee77a176724d5fbcf7c47dc667bd56",
+                "name": "pandiankaishiriqi",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "type": "Date",
+                "nullable": false,
+                "creatable": true,
+                "updatable": true
+            },
+            {
+                "nullable": false,
+                "idFieldFlag": false,
+                "physicalName": "c_pandianjieshuriqi",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1055,
+                "type": "Date",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "label": "盘点结束日期",
+                "name": "pandianjieshuriqi",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-932db41890df4bdd97a5fef480f4728d"
+            },
+            {
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-292dfa37aa7a4e8ea4667016bbb6f6e9",
+                "entityCode": 1055,
+                "type": "Reference",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "physicalName": "c_pandianyuan",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "pandianyuan",
+                "displayOrder": 0,
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName"
+                        ]
+                    }
+                ],
+                "label": "盘点员",
+                "description": null
+            },
+            {
+                "name": "pandiancangku",
+                "label": "盘点仓库",
+                "physicalName": "c_pandiancangku",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "fieldId": "0000002-e1b2f42b173b48419e39104c8d1469df",
+                "entityCode": 1055,
+                "type": "Reference",
+                "nullable": false,
+                "creatable": true,
+                "displayOrder": 0,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ]
+                    }
+                ]
+            },
+            {
+                "nameFieldFlag": false,
+                "physicalName": "c_pankuichanpinzongshu",
+                "description": null,
+                "creatable": true,
+                "type": "Integer",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "fieldId": "0000002-c7d6148a3f0043acb6cc7531556cccc7",
+                "entityCode": 1055,
+                "label": "盘亏产品总数",
+                "referenceSetting": null,
+                "name": "pankuichanpinzongshu",
+                "idFieldFlag": false,
+                "referTo": null,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "displayOrder": 0,
+                "nullable": true
+            },
+            {
+                "fieldId": "0000002-87fcf40cbc234bd78ab157111b695e17",
+                "label": "盘亏产品售价总额(含税)/元",
+                "physicalName": "c_pankuichanpinshoujiazonge",
+                "updatable": true,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "referTo": null,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "pankuichanpinshoujiazonge",
+                "type": "Money",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "updatable": true,
+                "fieldViewModel": {
+                    "minValue": -999999999,
+                    "validators": [],
+                    "maxValue": 999999999
+                },
+                "physicalName": "c_panyingchanpinzongshu",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "displayOrder": 0,
+                "label": "盘盈产品总数",
+                "type": "Integer",
+                "defaultMemberOfListFlag": false,
+                "name": "panyingchanpinzongshu",
+                "entityCode": 1055,
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-6a65e9110fb34647928eb25e7801b2eb"
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": [],
+                    "precision": 2
+                },
+                "type": "Money",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-8fc8411ed88243228f8bf739d03b5bf8",
+                "name": "panyingchanpinshoujiazonge",
+                "description": null,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "creatable": true,
+                "updatable": true,
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "label": "盘盈产品售价总额(含税)/元",
+                "physicalName": "c_panyingchanpinshoujiazonge"
+            },
+            {
+                "physicalName": "createdOn",
+                "fieldId": "0000002-63acb303c92142b18ce2db915ea65bfa",
+                "entityCode": 1055,
+                "description": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "createdOn",
+                "label": "创建时间",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "type": "DateTime",
+                "nullable": false,
+                "creatable": false
+            },
+            {
+                "fieldId": "0000002-a05fd1ebe5e04321a4ca547d3ae2125d",
+                "label": "创建用户",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "creatable": false,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1055,
+                "name": "createdBy",
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "type": "Reference",
+                "nullable": false
+            },
+            {
+                "label": "最近修改时间",
+                "type": "DateTime",
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-0cc6dca348b34f22815aa11f0eee6c15",
+                "owner": {
+                    "label": "库存盘点",
+                    "name": "Kucunpandian"
+                },
+                "description": null,
+                "nullable": true,
+                "updatable": false,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "name": "modifiedOn",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1055,
+                "physicalName": "modifiedOn",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "name": "modifiedBy",
+                "displayOrder": 0,
+                "updatable": false,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "nullable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "fieldId": "0000002-d15d349f86544e3c81c1b21755a4ccff",
+                "entityCode": 1055,
+                "label": "修改用户",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "physicalName": "modifiedBy",
+                "type": "Reference",
+                "creatable": false,
+                "nameFieldFlag": false
+            },
+            {
+                "label": "所属用户",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-e201a31133614ce59eb4611993b3b744",
+                "name": "ownerUser",
+                "physicalName": "ownerUser",
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "updatable": false,
+                "referenceSetting": null,
+                "entityCode": 1055,
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                }
+            },
+            {
+                "nameFieldFlag": false,
+                "name": "ownerDepartment",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "nullable": false,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "entityCode": 1055,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-fb8a366eeb6640efa425605b4fd0f141",
+                "description": null,
+                "type": "Reference",
+                "creatable": false,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "label": "所属部门",
+                "physicalName": "ownerDepartment"
+            },
+            {
+                "physicalName": "approvalConfigId",
+                "type": "Reference",
+                "description": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "ApprovalConfig",
+                        "label": "审批配置"
+                    }
+                ],
+                "referenceSetting": null,
+                "fieldId": "0000002-0efcc49995d746c68be24e5aec3b6ed8",
+                "nullable": true,
+                "creatable": false,
+                "entityCode": 1055,
+                "label": "审批流程",
+                "fieldViewModel": null,
+                "updatable": false,
+                "idFieldFlag": false,
+                "name": "approvalConfigId",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "displayOrder": 0
+            },
+            {
+                "fieldId": "0000002-aec179849f0346c6ae2db2fb5de61b63",
+                "entityCode": 1055,
+                "name": "approvalStatus",
+                "type": "Status",
+                "referTo": null,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "mainDetailFieldFlag": false,
+                "label": "审批状态",
+                "physicalName": "approvalStatus",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "name": "lastApprovedBy",
+                "updatable": false,
+                "fieldId": "0000002-9dffb1a6e6354d7b9ac010c961ba23cf",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "physicalName": "lastApprovedBy",
+                "type": "Reference",
+                "creatable": false,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "label": "最近审批人",
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1055
+            },
+            {
+                "label": "最近审批时间",
+                "referTo": null,
+                "entityCode": 1055,
+                "name": "lastApprovedOn",
+                "referenceSetting": null,
+                "type": "DateTime",
+                "updatable": false,
+                "creatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "physicalName": "lastApprovedOn",
+                "nullable": true,
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-22ddb1f0630141c9b993a1b227da6312",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                }
+            },
+            {
+                "fieldId": "0000002-75aad6a36a4842aeb10b93f50bb34691",
+                "owner": {
+                    "name": "Kucunpandian",
+                    "label": "库存盘点"
+                },
+                "displayOrder": 0,
+                "creatable": false,
+                "fieldViewModel": null,
+                "entityCode": 1055,
+                "physicalName": "lastApprovalRemark",
+                "description": null,
+                "nullable": true,
+                "referTo": null,
+                "name": "lastApprovalRemark",
+                "type": "TextArea",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "最近审批批注",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null
+            }
+        ],
+        "fieldNames": [
+            "kucunpandianId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "pandianleixing",
+            "pandiandanbianhao",
+            "pandiankaishiriqi",
+            "pandianjieshuriqi",
+            "pandianyuan",
+            "pandiancangku",
+            "pankuichanpinzongshu",
+            "pankuichanpinshoujiazonge",
+            "panyingchanpinzongshu",
+            "panyingchanpinshoujiazonge",
+            "approvalConfigId",
+            "approvalStatus",
+            "lastApprovedBy",
+            "lastApprovedOn",
+            "lastApprovalRemark"
+        ],
+        "entityId": "0000001-d6f94cac356f480ebec3ef0d8b765fd4",
+        "name": "Kucunpandian",
+        "detailEntityFlag": false,
+        "layoutable": true,
+        "authorizable": true,
+        "label": "库存盘点",
+        "shareable": false,
+        "detailEntitySet": [
+            {
+                "label": "盘点产品明细",
+                "name": "Pandianchanpinmingxi"
+            }
+        ]
+    },
+    "nameField": null,
+    "assignable": false,
+    "authorizable": false,
+    "physicalName": "t_pandianchanpinmingxi",
+    "fieldSet": [
+        {
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "creatable": false,
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "physicalName": "pandianchanpinmingxiId",
+            "name": "pandianchanpinmingxiId",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "label": "创建时间",
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false,
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedBy",
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "creatable": true,
+            "physicalName": "mdKucunpandianId",
+            "referTo": "Kucunpandian,",
+            "name": "mdKucunpandianId"
+        },
+        {
+            "label": "选择产品",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": true,
+            "referTo": "Chanpinxinxi,",
+            "name": "xuanzechanpin",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "physicalName": "c_xuanzechanpin",
+            "reserved": false
+        },
+        {
+            "name": "bencirukushuliang",
+            "label": "本次盘点数量",
+            "creatable": true,
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_bencirukushuliang",
+            "referTo": null,
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "c_xiaoshoudanjia",
+            "reserved": false,
+            "referTo": null,
+            "name": "xiaoshoudanjia",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Money",
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "label": "销售单价(含税)/元",
+            "updatable": true
+        },
+        {
+            "physicalName": "c_chengbendanjia",
+            "reserved": false,
+            "referTo": null,
+            "label": "成本单价",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "chengbendanjia",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Money"
+        },
+        {
+            "type": "Integer",
+            "physicalName": "c_panyingshuliang",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "label": "盘盈数量",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "panyingshuliang"
+        },
+        {
+            "label": "盘亏数量",
+            "creatable": true,
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "pankuishuliang",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "physicalName": "c_pankuishuliang",
+            "reserved": false
+        },
+        {
+            "referTo": null,
+            "label": "现库存数量",
+            "nameFieldFlag": false,
+            "physicalName": "c_kucunshuliang",
+            "reserved": false,
+            "creatable": true,
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "name": "kucunshuliang",
+            "updatable": true,
+            "idFieldFlag": false
+        }
+    ]
+}

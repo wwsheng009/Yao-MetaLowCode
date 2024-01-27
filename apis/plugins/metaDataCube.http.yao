@@ -3,16 +3,17 @@
   "version": "1.0.0",
   "description": "自定义API接口",
   "guard": "-",
+  "group": "/plugins/metaDataCube/chart",
   "paths": [
     {
-      "path": "/chart/queryChartData",
+      "path": "/queryChartData",
       "method": "post",
-      "process": "scripts.plugins.queryChartData",
-      "in": [""],
+      "process": "scripts.plugins.chart.queryChartData",
+      "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
-      "path": "/chart/updateDefault",
+      "path": "/updateDefault",
       "method": "post",
       "process": "scripts.plugins.updateDefault",
       "in": ["$query.id", "$query.defaultChart"],

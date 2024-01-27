@@ -1,0 +1,168 @@
+{
+    "name": "FollowUp",
+    "label": "跟进",
+    "listable": true,
+    "tags": null,
+    "entityCode": 54,
+    "systemEntityFlag": true,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "idFieldName": "followUpId",
+    "internalEntityFlag": false,
+    "assignable": false,
+    "authorizable": false,
+    "physicalName": "t_follow_up",
+    "mainEntity": null,
+    "shareable": false,
+    "nameField": "跟进内容",
+    "fieldSet": [
+        {
+            "physicalName": "attachment",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "updatable": true,
+            "label": "附件上传",
+            "type": "File",
+            "mainDetailFieldFlag": false,
+            "name": "attachment"
+        },
+        {
+            "creatable": true,
+            "physicalName": "content",
+            "reserved": false,
+            "referTo": null,
+            "name": "content",
+            "type": "TextArea",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "跟进内容"
+        },
+        {
+            "referTo": "User,",
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "physicalName": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "name": "createdOn",
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false
+        },
+        {
+            "idFieldFlag": true,
+            "creatable": false,
+            "name": "followUpId",
+            "updatable": false,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "physicalName": "followUpId",
+            "reserved": true,
+            "referTo": null,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "type": "Reference"
+        },
+        {
+            "updatable": false,
+            "creatable": false,
+            "reserved": true,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "picture",
+            "referTo": null,
+            "name": "picture",
+            "updatable": true,
+            "creatable": true,
+            "type": "Picture",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "图片"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "recordId",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "关联记录",
+            "reserved": false,
+            "name": "recordId",
+            "creatable": true,
+            "type": "AnyReference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "wayType",
+            "idFieldFlag": false,
+            "updatable": true,
+            "label": "跟进方式",
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "wayType",
+            "optionList": [
+                {
+                    "key": "微信",
+                    "value": 1
+                },
+                {
+                    "key": "电话",
+                    "value": 2
+                },
+                {
+                    "key": "面对面",
+                    "value": 3
+                },
+                {
+                    "key": "邮件",
+                    "value": 4
+                }
+            ]
+        }
+    ]
+}

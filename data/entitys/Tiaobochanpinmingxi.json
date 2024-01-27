@@ -1,0 +1,1245 @@
+{
+    "detailEntityFlag": true,
+    "internalEntityFlag": false,
+    "tags": "进销存",
+    "idFieldName": "tiaobochanpinmingxiId",
+    "name": "Tiaobochanpinmingxi",
+    "label": "调拨产品明细",
+    "entityCode": 1051,
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "physicalName": "t_tiaobochanpinmingxi",
+    "mainEntity": {
+        "mainEntity": null,
+        "fieldSet": [
+            {
+                "label": "id主键",
+                "physicalName": "kucuntiaoboId",
+                "description": null,
+                "referenceSetting": null,
+                "name": "kucuntiaoboId",
+                "type": "PrimaryKey",
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-c76e6137cd0443e99a863b7c9e02feca",
+                "entityCode": 1050,
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": true,
+                "referTo": null
+            },
+            {
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-0188f8fea90644faaa9d19f6a43ac9bf",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "creatable": false,
+                "referenceSetting": null,
+                "entityCode": 1050,
+                "name": "createdOn",
+                "label": "创建时间",
+                "description": null,
+                "owner": {
+                    "label": "库存调拨",
+                    "name": "Kucuntiaobo"
+                },
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "createdOn",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "fieldId": "0000002-c2c286c213414d1dbe03f8752f0518fd",
+                "description": null,
+                "creatable": false,
+                "label": "创建用户",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "type": "Reference",
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1050,
+                "name": "createdBy",
+                "physicalName": "createdBy",
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "name": "modifiedOn",
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "referenceSetting": null,
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "fieldId": "0000002-9f37551b1c0749ab9dc6814ae9201ba9",
+                "entityCode": 1050,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "type": "DateTime",
+                "nameFieldFlag": false
+            },
+            {
+                "name": "modifiedBy",
+                "physicalName": "modifiedBy",
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "fieldId": "0000002-17ad28d56d774b04b377d7405fa4aaa0",
+                "label": "修改用户",
+                "description": null,
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1050,
+                "nameFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "name": "ownerUser",
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "referenceSetting": null,
+                "fieldId": "0000002-23445a12f6314d839841c5a725501464",
+                "physicalName": "ownerUser",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1050,
+                "label": "所属用户",
+                "type": "Reference",
+                "nullable": false,
+                "idFieldFlag": false
+            },
+            {
+                "entityCode": 1050,
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-63612e6aa49341578976ea4359addd69",
+                "label": "所属部门",
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "name": "ownerDepartment",
+                "physicalName": "ownerDepartment",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "type": "Reference",
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "physicalName": "c_tiaoboleixing",
+                "type": "Option",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "name": "tiaoboleixing",
+                "label": "调拨类型",
+                "fieldViewModel": null,
+                "fieldId": "0000002-f5df8eab52604705802300747d5d0102",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "updatable": true,
+                "entityCode": 1050,
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "nullable": false
+            },
+            {
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "nameFieldFlag": false,
+                "referTo": null,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "type": "Date",
+                "displayOrder": 0,
+                "label": "调拨申请日期",
+                "physicalName": "c_tiaoboshenqingriqi",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-44c0a628c70f427b925cc3b4c28e3528",
+                "entityCode": 1050,
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "name": "tiaoboshenqingriqi",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                }
+            },
+            {
+                "description": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "label": "期望到货日期",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "physicalName": "c_qiwangdaohuoriqi",
+                "nullable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-e344b5e530b64bf29b73728fdb28eca1",
+                "name": "qiwangdaohuoriqi",
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1050,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "type": "Date",
+                "creatable": true
+            },
+            {
+                "fieldId": "0000002-f5e0a4bf84f9434791c6b50a8ca6eb30",
+                "name": "shenqingren",
+                "physicalName": "c_shenqingren",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1050,
+                "type": "Reference",
+                "label": "申请人",
+                "description": null,
+                "nullable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName"
+                        ]
+                    }
+                ]
+            },
+            {
+                "entityCode": 1050,
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": true,
+                "fieldId": "0000002-7b7835c5c034425f99986e24289bd545",
+                "type": "Text",
+                "updatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "label": "调拨单编号",
+                "physicalName": "c_tiaobodanbianhao",
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "name": "tiaobodanbianhao",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "description": null,
+                "idFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-bc698f3b72af414591dca842c2ae0806",
+                "entityCode": 1050,
+                "name": "tiaochucangku",
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "physicalName": "c_tiaochucangku",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "nullable": false,
+                "updatable": true,
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ],
+                        "entityName": "Cangkuguanli"
+                    }
+                ],
+                "type": "Reference",
+                "label": "调出仓库",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "fieldId": "0000002-3aab242dfebb421ebf3758404e9baca2",
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "entityCode": 1050,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "type": "Reference",
+                "creatable": true,
+                "updatable": true,
+                "name": "tiaorucangku",
+                "label": "调入仓库",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ]
+                    }
+                ],
+                "physicalName": "c_tiaorucangku",
+                "description": null,
+                "displayOrder": 0
+            },
+            {
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "label": "调拨产品总数",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1050,
+                "physicalName": "c_tiaobochanpinzongshu",
+                "type": "Integer",
+                "nullable": true,
+                "fieldViewModel": {
+                    "minValue": -999999999,
+                    "validators": [],
+                    "maxValue": 999999999
+                },
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-356b261b4b8c4cb8810e5ea7bb1c2395",
+                "name": "tiaobochanpinzongshu",
+                "description": null,
+                "updatable": true
+            },
+            {
+                "idFieldFlag": false,
+                "referTo": null,
+                "updatable": true,
+                "name": "tiaobochanpinshoujiazonge",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "nullable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999
+                },
+                "fieldId": "0000002-eaafb6d44f9f480098cb7f1768a46b08",
+                "referenceSetting": null,
+                "label": "调拨产品售价总额(含税)/元",
+                "physicalName": "c_tiaobochanpinshoujiazonge",
+                "type": "Money",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1050
+            },
+            {
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "physicalName": "c_tiaobochanpinchengbenzonge",
+                "description": null,
+                "type": "Money",
+                "displayOrder": 0,
+                "creatable": true,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "fieldId": "0000002-8915839943be4d25b0a1118163eaebe2",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "label": "调拨产品成本总额/元",
+                "entityCode": 1050,
+                "name": "tiaobochanpinchengbenzonge",
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "nullable": true,
+                "idFieldFlag": false
+            }
+        ],
+        "mainDetailField": null,
+        "physicalName": "t_kucuntiaobo",
+        "authorizable": true,
+        "assignable": false,
+        "tags": "进销存",
+        "idField": {
+            "name": "kucuntiaoboId",
+            "label": "id主键"
+        },
+        "name": "Kucuntiaobo",
+        "detailEntityFlag": false,
+        "shareable": false,
+        "entityId": "0000001-f73290df9ac24b6cb70bc668d7565d0f",
+        "label": "库存调拨",
+        "listable": true,
+        "nameField": {
+            "name": "tiaobodanbianhao",
+            "label": "调拨单编号"
+        },
+        "sortedFieldSet": [
+            {
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "nullable": false,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "updatable": false,
+                "fieldId": "0000002-c76e6137cd0443e99a863b7c9e02feca",
+                "entityCode": 1050,
+                "name": "kucuntiaoboId",
+                "label": "id主键",
+                "physicalName": "kucuntiaoboId",
+                "type": "PrimaryKey",
+                "displayOrder": 0,
+                "idFieldFlag": true,
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "label": "调拨类型",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1050,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "type": "Option",
+                "nullable": false,
+                "idFieldFlag": false,
+                "name": "tiaoboleixing",
+                "physicalName": "c_tiaoboleixing",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-f5df8eab52604705802300747d5d0102"
+            },
+            {
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "label": "调拨申请日期",
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "physicalName": "c_tiaoboshenqingriqi",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-44c0a628c70f427b925cc3b4c28e3528",
+                "displayOrder": 0,
+                "creatable": true,
+                "type": "Date",
+                "referenceSetting": null,
+                "entityCode": 1050,
+                "name": "tiaoboshenqingriqi",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                }
+            },
+            {
+                "name": "qiwangdaohuoriqi",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-e344b5e530b64bf29b73728fdb28eca1",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "label": "期望到货日期",
+                "physicalName": "c_qiwangdaohuoriqi",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "entityCode": 1050,
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "type": "Date"
+            },
+            {
+                "fieldId": "0000002-f5e0a4bf84f9434791c6b50a8ca6eb30",
+                "physicalName": "c_shenqingren",
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName"
+                        ]
+                    }
+                ],
+                "entityCode": 1050,
+                "label": "申请人",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "shenqingren",
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "type": "Reference",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ]
+            },
+            {
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "physicalName": "c_tiaobodanbianhao",
+                "nameFieldFlag": true,
+                "defaultMemberOfListFlag": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "tiaobodanbianhao",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "creatable": true,
+                "entityCode": 1050,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "fieldId": "0000002-7b7835c5c034425f99986e24289bd545",
+                "label": "调拨单编号",
+                "type": "Text"
+            },
+            {
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "tiaochucangku",
+                "physicalName": "c_tiaochucangku",
+                "type": "Reference",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "description": null,
+                "fieldId": "0000002-bc698f3b72af414591dca842c2ae0806",
+                "nullable": false,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "entityCode": 1050,
+                "label": "调出仓库",
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "tiaorucangku",
+                "label": "调入仓库",
+                "description": null,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_tiaorucangku",
+                "updatable": true,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-3aab242dfebb421ebf3758404e9baca2",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "entityCode": 1050,
+                "type": "Reference",
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "label": "调拨产品总数",
+                "owner": {
+                    "label": "库存调拨",
+                    "name": "Kucuntiaobo"
+                },
+                "fieldId": "0000002-356b261b4b8c4cb8810e5ea7bb1c2395",
+                "entityCode": 1050,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "tiaobochanpinzongshu",
+                "description": null,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "c_tiaobochanpinzongshu",
+                "type": "Integer",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                }
+            },
+            {
+                "type": "Money",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1050,
+                "creatable": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "tiaobochanpinshoujiazonge",
+                "physicalName": "c_tiaobochanpinshoujiazonge",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "label": "调拨产品售价总额(含税)/元",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "fieldId": "0000002-eaafb6d44f9f480098cb7f1768a46b08"
+            },
+            {
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "referTo": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-8915839943be4d25b0a1118163eaebe2",
+                "updatable": true,
+                "idFieldFlag": false,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "label": "调拨产品成本总额/元",
+                "type": "Money",
+                "displayOrder": 0,
+                "description": null,
+                "nullable": true,
+                "referenceSetting": null,
+                "entityCode": 1050,
+                "name": "tiaobochanpinchengbenzonge",
+                "physicalName": "c_tiaobochanpinchengbenzonge"
+            },
+            {
+                "name": "createdOn",
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "description": null,
+                "fieldViewModel": null,
+                "referTo": null,
+                "referenceSetting": null,
+                "entityCode": 1050,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "creatable": false,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-0188f8fea90644faaa9d19f6a43ac9bf",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "nullable": false
+            },
+            {
+                "fieldId": "0000002-c2c286c213414d1dbe03f8752f0518fd",
+                "name": "createdBy",
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "entityCode": 1050,
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "description": null,
+                "updatable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "label": "创建用户",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "nullable": true,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1050,
+                "name": "modifiedOn",
+                "type": "DateTime",
+                "description": null,
+                "fieldViewModel": null,
+                "label": "最近修改时间",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "creatable": false,
+                "referTo": null,
+                "fieldId": "0000002-9f37551b1c0749ab9dc6814ae9201ba9",
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "idFieldFlag": false
+            },
+            {
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-17ad28d56d774b04b377d7405fa4aaa0",
+                "entityCode": 1050,
+                "label": "修改用户",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "type": "Reference",
+                "nullable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "modifiedBy",
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "label": "库存调拨",
+                    "name": "Kucuntiaobo"
+                },
+                "referenceSetting": null,
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false
+            },
+            {
+                "fieldId": "0000002-23445a12f6314d839841c5a725501464",
+                "name": "ownerUser",
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "description": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1050,
+                "label": "所属用户",
+                "physicalName": "ownerUser",
+                "nullable": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "updatable": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-63612e6aa49341578976ea4359addd69",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "entityCode": 1050,
+                "name": "ownerDepartment",
+                "description": null,
+                "nullable": false,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "owner": {
+                    "name": "Kucuntiaobo",
+                    "label": "库存调拨"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            }
+        ],
+        "entityCode": 1050,
+        "layoutable": true,
+        "detailEntitySet": [
+            {
+                "name": "Tiaobochanpinmingxi",
+                "label": "调拨产品明细"
+            }
+        ],
+        "fieldNames": [
+            "kucuntiaoboId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "tiaoboleixing",
+            "tiaoboshenqingriqi",
+            "qiwangdaohuoriqi",
+            "shenqingren",
+            "tiaobodanbianhao",
+            "tiaochucangku",
+            "tiaorucangku",
+            "tiaobochanpinzongshu",
+            "tiaobochanpinshoujiazonge",
+            "tiaobochanpinchengbenzonge"
+        ],
+        "virtualFieldSet": []
+    },
+    "shareable": false,
+    "nameField": null,
+    "authorizable": false,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "idFieldFlag": true,
+            "type": "PrimaryKey",
+            "name": "tiaobochanpinmingxiId",
+            "updatable": false,
+            "label": "id主键",
+            "creatable": false,
+            "physicalName": "tiaobochanpinmingxiId",
+            "reserved": true,
+            "referTo": null
+        },
+        {
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "referTo": null,
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "reserved": true
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "updatable": false,
+            "label": "最近修改时间",
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy",
+            "label": "修改用户",
+            "type": "Reference",
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "name": "mdKucuntiaoboId",
+            "physicalName": "mdKucuntiaoboId",
+            "reserved": true,
+            "referTo": "Kucuntiaobo,",
+            "nameFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "referTo": "Chanpinxinxi,",
+            "idFieldFlag": false,
+            "label": "选择产品",
+            "creatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "c_xuanzechanpin",
+            "mainDetailFieldFlag": false,
+            "name": "xuanzechanpin",
+            "updatable": true
+        },
+        {
+            "idFieldFlag": false,
+            "type": "Integer",
+            "label": "本次调拨数量",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_bencirukushuliang",
+            "reserved": false,
+            "referTo": null,
+            "name": "bencirukushuliang",
+            "updatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "xiaoshoudanjia",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xiaoshoudanjia",
+            "reserved": false,
+            "referTo": null,
+            "label": "销售单价(含税)/元",
+            "creatable": true,
+            "type": "Money"
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "成本单价",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chengbendanjia",
+            "reserved": false,
+            "name": "chengbendanjia",
+            "updatable": true,
+            "type": "Money"
+        },
+        {
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chanpinshoujiaheji",
+            "referTo": null,
+            "name": "chanpinshoujiaheji",
+            "updatable": true,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "产品售价合计(含税)/元"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_chanpinchengbenheji",
+            "referTo": null,
+            "name": "chanpinchengbenheji",
+            "mainDetailFieldFlag": false,
+            "type": "Money",
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "产品成本合计/元",
+            "creatable": true
+        }
+    ]
+}

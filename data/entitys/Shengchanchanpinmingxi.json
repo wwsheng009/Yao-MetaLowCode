@@ -1,0 +1,1151 @@
+{
+    "name": "Shengchanchanpinmingxi",
+    "label": "生产产品明细",
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "shengchanchanpinmingxiId",
+    "tags": "ERP(离散制造-MTO）",
+    "entityCode": 1193,
+    "systemEntityFlag": false,
+    "internalEntityFlag": false,
+    "mainEntity": {
+        "entityId": "0000001-571b03a9d2ff4301b44dbeb5cf0b0e7e",
+        "name": "Shengchanjihua",
+        "physicalName": "t_shengchanjihua",
+        "layoutable": true,
+        "idField": {
+            "name": "shengchanjihuaId",
+            "label": "id主键"
+        },
+        "detailEntitySet": [
+            {
+                "name": "Shengchanchanpinmingxi",
+                "label": "生产产品明细"
+            }
+        ],
+        "sortedFieldSet": [
+            {
+                "entityCode": 1192,
+                "physicalName": "shengchanjihuaId",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "name": "shengchanjihuaId",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-3c2a02071cc04c82ace11d41458237cd",
+                "label": "id主键",
+                "displayOrder": 0,
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "type": "PrimaryKey",
+                "creatable": false,
+                "updatable": false
+            },
+            {
+                "type": "Reference",
+                "description": null,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "销售订单",
+                        "name": "Xiaoshoudingdan"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Xiaoshoudingdan",
+                        "fieldList": [
+                            "xuanzekehu",
+                            "dingdanqiandingriqi",
+                            "dingdanjiaofuriqi",
+                            "xiaoshouguishubumen",
+                            "chukucangku"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-4238d9f7978b4fe6b2d7f1516a045927",
+                "nullable": false,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "name": "xuanzexiaoshoudingdan",
+                "label": "选择销售订单",
+                "physicalName": "c_xuanzexiaoshoudingdan",
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1192,
+                "idFieldFlag": false,
+                "displayOrder": 0
+            },
+            {
+                "referTo": null,
+                "referenceSetting": null,
+                "physicalName": "c_xiaoshoudingdanmingcheng",
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1192,
+                "name": "xiaoshoudingdanmingcheng",
+                "type": "Text",
+                "creatable": true,
+                "owner": {
+                    "label": "生产计划",
+                    "name": "Shengchanjihua"
+                },
+                "nameFieldFlag": false,
+                "idFieldFlag": false,
+                "fieldId": "0000002-b40c00f534904855b6b8abe37e5f342c",
+                "label": "销售订单名称",
+                "displayOrder": 0,
+                "updatable": true
+            },
+            {
+                "type": "Text",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "label": "销售订单编号",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "referenceSetting": null,
+                "name": "xiaoshoudingdanbianhao",
+                "physicalName": "c_xiaoshoudingdanbianhao",
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-7df0bb56eb404b729b1944e51284bb97",
+                "entityCode": 1192,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "label": "客户名称",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "label": "客户管理",
+                        "name": "Kehuguanli"
+                    }
+                ],
+                "fieldId": "0000002-3b77833bb8c9435fabc91b40e7547ef3",
+                "entityCode": 1192,
+                "name": "kehumingcheng",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "physicalName": "c_kehumingcheng",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "referenceSetting": [
+                    {
+                        "entityName": "Kehuguanli",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian"
+                        ]
+                    }
+                ],
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "nameFieldFlag": true,
+                "fieldId": "0000002-4952eba28a0c46e6ad1d6a685cd7f56b",
+                "entityCode": 1192,
+                "name": "shengchanjihuamingcheng",
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "label": "生产计划名称",
+                "physicalName": "c_shengchanjihuamingcheng",
+                "type": "Text",
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "displayOrder": 0,
+                "updatable": true,
+                "referTo": null,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "nullable": false,
+                "creatable": true
+            },
+            {
+                "entityCode": 1192,
+                "type": "Date",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "label": "计划开始日期",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "jihuakaishiriqi",
+                "physicalName": "c_jihuakaishiriqi",
+                "description": null,
+                "creatable": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-ef401c146aa245e4a6b2c0b42ed6ed56",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "updatable": true,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "referTo": null,
+                "name": "jihuawangongriqi",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "type": "Date",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "physicalName": "c_jihuawangongriqi",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-603d3e202ec24abd944b436ab8cb8d82",
+                "label": "计划完工日期",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1192,
+                "nullable": true
+            },
+            {
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "name": "lingliaocangku",
+                "physicalName": "c_lingliaocangku",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-f7c961f99d1549f48d31714aec3a6292",
+                "type": "Reference",
+                "nullable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1192,
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "description": null,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "label": "领料仓库",
+                "updatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-748239534066477dad11a46d172428a4",
+                "name": "shengchanjihuabianhao",
+                "label": "生产计划编号",
+                "displayOrder": 0,
+                "creatable": true,
+                "referenceSetting": null,
+                "physicalName": "c_shengchanjihuabianhao",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1192,
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "type": "Text",
+                "description": null,
+                "nullable": true
+            },
+            {
+                "entityCode": 1192,
+                "name": "createdOn",
+                "physicalName": "createdOn",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "nullable": false,
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "label": "创建时间",
+                "description": null,
+                "updatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-e563b94bd0e5415bae722ed29cd53d5f",
+                "creatable": false,
+                "nameFieldFlag": false
+            },
+            {
+                "entityCode": 1192,
+                "owner": {
+                    "label": "生产计划",
+                    "name": "Shengchanjihua"
+                },
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-db550f20e1ca47588abab0ef6bcda79d",
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "name": "createdBy",
+                "type": "Reference",
+                "creatable": false,
+                "referenceSetting": null,
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ]
+            },
+            {
+                "name": "modifiedOn",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "fieldId": "0000002-e379b3db7a8c4f228434db9965e6da69",
+                "entityCode": 1192,
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-8f15fd21148347c99ca2878918652c78",
+                "entityCode": 1192,
+                "owner": {
+                    "label": "生产计划",
+                    "name": "Shengchanjihua"
+                },
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "type": "Reference",
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "modifiedBy",
+                "physicalName": "modifiedBy",
+                "updatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "label": "修改用户",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "label": "所属用户",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "physicalName": "ownerUser",
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1192,
+                "name": "ownerUser",
+                "nullable": false,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-8a5307a876454431bd8da29506e000b6",
+                "description": null,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null
+            },
+            {
+                "nullable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "ownerDepartment",
+                "entityCode": 1192,
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-c8e2d976a2ec466b839d3397c464ffb1",
+                "fieldViewModel": null,
+                "defaultMemberOfListFlag": false,
+                "type": "Reference",
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": null,
+                "description": null
+            }
+        ],
+        "fieldNames": [
+            "shengchanjihuaId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "xuanzexiaoshoudingdan",
+            "xiaoshoudingdanmingcheng",
+            "xiaoshoudingdanbianhao",
+            "kehumingcheng",
+            "shengchanjihuamingcheng",
+            "jihuakaishiriqi",
+            "jihuawangongriqi",
+            "lingliaocangku",
+            "shengchanjihuabianhao"
+        ],
+        "label": "生产计划",
+        "tags": "ERP(离散制造-MTO）",
+        "nameField": {
+            "name": "shengchanjihuamingcheng",
+            "label": "生产计划名称"
+        },
+        "mainEntity": null,
+        "fieldSet": [
+            {
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "name": "shengchanjihuaId",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-3c2a02071cc04c82ace11d41458237cd",
+                "displayOrder": 0,
+                "nullable": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "entityCode": 1192,
+                "label": "id主键",
+                "type": "PrimaryKey",
+                "nameFieldFlag": false,
+                "physicalName": "shengchanjihuaId",
+                "description": null
+            },
+            {
+                "updatable": false,
+                "referTo": null,
+                "label": "创建时间",
+                "type": "DateTime",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-e563b94bd0e5415bae722ed29cd53d5f",
+                "physicalName": "createdOn",
+                "creatable": false,
+                "nullable": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1192,
+                "name": "createdOn",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                }
+            },
+            {
+                "type": "Reference",
+                "nullable": false,
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-db550f20e1ca47588abab0ef6bcda79d",
+                "name": "createdBy",
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "referenceSetting": null,
+                "label": "创建用户",
+                "description": null,
+                "updatable": false,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1192,
+                "idFieldFlag": false
+            },
+            {
+                "nullable": true,
+                "fieldViewModel": null,
+                "name": "modifiedOn",
+                "label": "最近修改时间",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-e379b3db7a8c4f228434db9965e6da69",
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1192,
+                "description": null,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "physicalName": "modifiedBy",
+                "entityCode": 1192,
+                "label": "修改用户",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "modifiedBy",
+                "type": "Reference",
+                "nullable": true,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "fieldId": "0000002-8f15fd21148347c99ca2878918652c78",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "entityCode": 1192,
+                "name": "ownerUser",
+                "label": "所属用户",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-8a5307a876454431bd8da29506e000b6",
+                "referenceSetting": null,
+                "mainDetailFieldFlag": false,
+                "creatable": false,
+                "type": "Reference",
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "displayOrder": 0,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "ownerUser"
+            },
+            {
+                "entityCode": 1192,
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-c8e2d976a2ec466b839d3397c464ffb1",
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": null,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "label": "生产计划",
+                    "name": "Shengchanjihua"
+                },
+                "type": "Reference",
+                "mainDetailFieldFlag": false
+            },
+            {
+                "label": "选择销售订单",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1192,
+                "name": "xuanzexiaoshoudingdan",
+                "nullable": false,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Xiaoshoudingdan",
+                        "label": "销售订单"
+                    }
+                ],
+                "physicalName": "c_xuanzexiaoshoudingdan",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "Xiaoshoudingdan",
+                        "fieldList": [
+                            "xuanzekehu",
+                            "dingdanqiandingriqi",
+                            "dingdanjiaofuriqi",
+                            "xiaoshouguishubumen",
+                            "chukucangku"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-4238d9f7978b4fe6b2d7f1516a045927",
+                "owner": {
+                    "label": "生产计划",
+                    "name": "Shengchanjihua"
+                },
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "label": "销售订单名称",
+                "type": "Text",
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "updatable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-b40c00f534904855b6b8abe37e5f342c",
+                "entityCode": 1192,
+                "name": "xiaoshoudingdanmingcheng",
+                "physicalName": "c_xiaoshoudingdanmingcheng",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "name": "xiaoshoudingdanbianhao",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "type": "Text",
+                "updatable": true,
+                "fieldId": "0000002-7df0bb56eb404b729b1944e51284bb97",
+                "entityCode": 1192,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "description": null,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "label": "销售订单编号",
+                "physicalName": "c_xiaoshoudingdanbianhao",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "referenceSetting": null,
+                "nullable": true,
+                "creatable": true
+            },
+            {
+                "label": "客户名称",
+                "updatable": true,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Kehuguanli",
+                        "label": "客户管理"
+                    }
+                ],
+                "physicalName": "c_kehumingcheng",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "fieldId": "0000002-3b77833bb8c9435fabc91b40e7547ef3",
+                "name": "kehumingcheng",
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "Kehuguanli",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian"
+                        ]
+                    }
+                ],
+                "entityCode": 1192,
+                "type": "Reference",
+                "description": null,
+                "creatable": true
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "label": "生产计划",
+                    "name": "Shengchanjihua"
+                },
+                "nullable": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "physicalName": "c_shengchanjihuamingcheng",
+                "label": "生产计划名称",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-4952eba28a0c46e6ad1d6a685cd7f56b",
+                "referenceSetting": null,
+                "name": "shengchanjihuamingcheng",
+                "type": "Text",
+                "updatable": true,
+                "entityCode": 1192
+            },
+            {
+                "entityCode": 1192,
+                "label": "计划开始日期",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "displayOrder": 0,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-ef401c146aa245e4a6b2c0b42ed6ed56",
+                "name": "jihuakaishiriqi",
+                "physicalName": "c_jihuakaishiriqi",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "type": "Date",
+                "idFieldFlag": false
+            },
+            {
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "physicalName": "c_jihuawangongriqi",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "creatable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-603d3e202ec24abd944b436ab8cb8d82",
+                "entityCode": 1192,
+                "type": "Date",
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "name": "jihuawangongriqi",
+                "label": "计划完工日期",
+                "description": null,
+                "referenceSetting": null
+            },
+            {
+                "label": "领料仓库",
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "entityCode": 1192,
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "Cangkuguanli",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-f7c961f99d1549f48d31714aec3a6292",
+                "mainDetailFieldFlag": false,
+                "nullable": true,
+                "physicalName": "c_lingliaocangku",
+                "description": null,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "name": "lingliaocangku"
+            },
+            {
+                "entityCode": 1192,
+                "physicalName": "c_shengchanjihuabianhao",
+                "owner": {
+                    "name": "Shengchanjihua",
+                    "label": "生产计划"
+                },
+                "displayOrder": 0,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "label": "生产计划编号",
+                "nullable": true,
+                "referTo": null,
+                "type": "Text",
+                "creatable": true,
+                "fieldId": "0000002-748239534066477dad11a46d172428a4",
+                "name": "shengchanjihuabianhao",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                }
+            }
+        ],
+        "mainDetailField": null,
+        "authorizable": true,
+        "shareable": false,
+        "assignable": false,
+        "entityCode": 1192,
+        "detailEntityFlag": false,
+        "listable": true,
+        "virtualFieldSet": []
+    },
+    "assignable": false,
+    "authorizable": false,
+    "shareable": false,
+    "nameField": null,
+    "physicalName": "t_shengchanchanpinmingxi",
+    "fieldSet": [
+        {
+            "physicalName": "shengchanchanpinmingxiId",
+            "name": "shengchanchanpinmingxiId",
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "idFieldFlag": true,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "updatable": false
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "createdOn",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn",
+            "referTo": null
+        },
+        {
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "label": "最近修改时间",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "name": "modifiedBy",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false,
+            "physicalName": "mdShengchanjihuaId",
+            "referTo": "Shengchanjihua,",
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "creatable": true,
+            "type": "Reference",
+            "reserved": true,
+            "name": "mdShengchanjihuaId",
+            "updatable": false
+        },
+        {
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "referTo": "ERPchanpinxinxi,",
+            "name": "chanpinmingcheng",
+            "label": "产品名称",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_chanpinmingcheng"
+        },
+        {
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "type": "Decimal",
+            "mainDetailFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_jihuashengchanshuliang",
+            "reserved": false,
+            "referTo": null,
+            "name": "jihuashengchanshuliang",
+            "updatable": true,
+            "label": "计划生产数量"
+        },
+        {
+            "reserved": false,
+            "name": "shengchanbanzu",
+            "idFieldFlag": false,
+            "label": "生产班组",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_shengchanbanzu",
+            "referTo": "Team,",
+            "updatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

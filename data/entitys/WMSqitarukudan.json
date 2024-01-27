@@ -1,0 +1,262 @@
+{
+    "idFieldName": "wMSqitarukudanId",
+    "internalEntityFlag": false,
+    "name": "WMSqitarukudan",
+    "label": "WMS其他入库单",
+    "entityCode": 1120,
+    "listable": true,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "tags": "WMS",
+    "shareable": false,
+    "nameField": "其他入库单编号",
+    "physicalName": "t_wmsqitarukudan",
+    "mainEntity": null,
+    "assignable": false,
+    "authorizable": true,
+    "fieldSet": [
+        {
+            "creatable": false,
+            "type": "PrimaryKey",
+            "name": "wMSqitarukudanId",
+            "idFieldFlag": true,
+            "label": "id主键",
+            "referTo": null,
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "wMSqitarukudanId",
+            "reserved": true
+        },
+        {
+            "name": "createdOn",
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn"
+        },
+        {
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy"
+        },
+        {
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "修改用户"
+        },
+        {
+            "physicalName": "ownerUser",
+            "referTo": "User,",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "ownerUser",
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "type": "Reference"
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": true,
+            "reserved": false,
+            "referTo": null,
+            "name": "rukuleixing",
+            "updatable": true,
+            "label": "入库类型",
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_rukuleixing",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "销售退货入库",
+                    "value": 1
+                },
+                {
+                    "key": "报溢入库",
+                    "value": 2
+                },
+                {
+                    "key": "借入入库",
+                    "value": 3
+                },
+                {
+                    "key": "期初入库",
+                    "value": 4
+                },
+                {
+                    "key": "盘盈入库",
+                    "value": 5
+                },
+                {
+                    "key": "调拨入库",
+                    "value": 6
+                },
+                {
+                    "key": "供应商受赠入库",
+                    "value": 7
+                },
+                {
+                    "key": "其他",
+                    "value": 8
+                }
+            ]
+        },
+        {
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "其他入库单编号",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "reserved": false,
+            "name": "qitarukudanbianhao",
+            "updatable": true,
+            "physicalName": "c_qitarukudanbianhao"
+        },
+        {
+            "name": "rukuchanpinzongshu",
+            "updatable": true,
+            "label": "入库产品总数",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_rukuchanpinzongshu",
+            "referTo": null,
+            "type": "Integer",
+            "reserved": false,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "physicalName": "c_rukuchanpinchengbenzonge",
+            "referTo": null,
+            "name": "rukuchanpinchengbenzonge",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "入库产品成本总额/元",
+            "type": "Money"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "label": "入库确认",
+            "type": "Boolean",
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_rukuqueren",
+            "reserved": false,
+            "name": "rukuqueren",
+            "updatable": true
+        },
+        {
+            "reserved": false,
+            "label": "拍照",
+            "type": "Picture",
+            "name": "paizhao",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_paizhao",
+            "referTo": null
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "rukushijian",
+            "updatable": true,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "c_rukushijian",
+            "idFieldFlag": false,
+            "label": "入库时间",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "name": "kuguanguishubumen",
+            "idFieldFlag": false,
+            "label": "库管归属部门",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "physicalName": "c_kuguanguishubumen",
+            "referTo": "Department,",
+            "updatable": true,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "rukucangku",
+            "label": "入库仓库",
+            "type": "Reference",
+            "physicalName": "c_rukucangku",
+            "reserved": false,
+            "referTo": "WMScangkuxinxi,",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

@@ -1,0 +1,334 @@
+{
+    "entityCode": 1177,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "internalEntityFlag": false,
+    "name": "CRMhuikuandan",
+    "label": "CRM回款单",
+    "systemEntityFlag": false,
+    "idFieldName": "cRMhuikuandanId",
+    "tags": "CRM,ERP(离散制造-MTO）,HRM人事,WMS,车辆租赁管理系统,进销存,项目任务管理,预算费控",
+    "nameField": "回款单编号",
+    "physicalName": "t_crmhuikuandan",
+    "shareable": false,
+    "mainEntity": null,
+    "assignable": false,
+    "authorizable": true,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "physicalName": "cRMhuikuandanId",
+            "updatable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "cRMhuikuandanId",
+            "idFieldFlag": true,
+            "label": "id主键",
+            "type": "PrimaryKey"
+        },
+        {
+            "referTo": null,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "name": "createdOn"
+        },
+        {
+            "type": "Reference",
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "reserved": true,
+            "name": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy"
+        },
+        {
+            "reserved": true,
+            "referTo": null,
+            "physicalName": "modifiedOn",
+            "name": "modifiedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": "User,",
+            "name": "ownerUser",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "label": "所属用户",
+            "creatable": false,
+            "reserved": true,
+            "idFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": false,
+            "type": "Reference",
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "referTo": "Department,"
+        },
+        {
+            "name": "guanliankehu",
+            "label": "关联客户",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_guanliankehu",
+            "reserved": false,
+            "referTo": "CRMgonghaichi,",
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "referTo": "CRMyingshoujihua,",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_guanlianyingshoujihua",
+            "reserved": false,
+            "name": "guanlianyingshoujihua",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "关联应收计划",
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_bencihuikuanjineuan",
+            "referTo": null,
+            "name": "bencihuikuanjineuan",
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "本次回款金额/元",
+            "creatable": true
+        },
+        {
+            "label": "回款方式",
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_huikuanfangshi",
+            "referTo": null,
+            "name": "huikuanfangshi",
+            "updatable": true,
+            "idFieldFlag": false,
+            "reserved": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "网上转账",
+                    "value": 1
+                },
+                {
+                    "key": "支付宝",
+                    "value": 2
+                },
+                {
+                    "key": "微信支付",
+                    "value": 3
+                },
+                {
+                    "key": "电汇",
+                    "value": 4
+                },
+                {
+                    "key": "现金",
+                    "value": 5
+                },
+                {
+                    "key": "其他",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "label": "回款日期",
+            "type": "Date",
+            "nameFieldFlag": false,
+            "physicalName": "c_huikuanriqi",
+            "reserved": false,
+            "referTo": null,
+            "name": "huikuanriqi",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "updatable": true,
+            "creatable": true
+        },
+        {
+            "nameFieldFlag": true,
+            "idFieldFlag": false,
+            "label": "回款单编号",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_huikuandanbianhao",
+            "reserved": false,
+            "referTo": null,
+            "name": "huikuandanbianhao",
+            "updatable": true,
+            "type": "Text"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_huikuanzhuangtai",
+            "referTo": null,
+            "name": "huikuanzhuangtai",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "回款状态",
+            "creatable": true,
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "已回款",
+                    "value": 1
+                },
+                {
+                    "key": "作废",
+                    "value": 2
+                },
+                {
+                    "key": "待进行",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "reserved": false,
+            "name": "kaipiaozhuangtai",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_kaipiaozhuangtai",
+            "referTo": null,
+            "updatable": true,
+            "label": "开票状态",
+            "creatable": true,
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "已开票",
+                    "value": 1
+                },
+                {
+                    "key": "作废",
+                    "value": 2
+                },
+                {
+                    "key": "待进行",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "审批流程",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "ApprovalConfig,",
+            "name": "approvalConfigId",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "approvalConfigId"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "approvalStatus",
+            "reserved": true,
+            "referTo": null,
+            "name": "approvalStatus",
+            "creatable": false,
+            "type": "Status",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "审批状态",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": "User,",
+            "label": "最近审批人",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "lastApprovedBy",
+            "reserved": true,
+            "name": "lastApprovedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference"
+        },
+        {
+            "physicalName": "lastApprovedOn",
+            "updatable": false,
+            "label": "最近审批时间",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "lastApprovedOn"
+        },
+        {
+            "physicalName": "lastApprovalRemark",
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "lastApprovalRemark",
+            "updatable": false,
+            "label": "最近审批批注",
+            "type": "TextArea"
+        }
+    ]
+}

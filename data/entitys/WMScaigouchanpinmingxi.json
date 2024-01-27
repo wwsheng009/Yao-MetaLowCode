@@ -1,0 +1,1338 @@
+{
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "wMScaigouchanpinmingxiId",
+    "internalEntityFlag": false,
+    "tags": "WMS",
+    "name": "WMScaigouchanpinmingxi",
+    "entityCode": 1046,
+    "detailEntityFlag": true,
+    "label": "WMS采购产品明细",
+    "systemEntityFlag": false,
+    "assignable": false,
+    "nameField": "产品名称",
+    "authorizable": false,
+    "mainEntity": {
+        "mainEntity": null,
+        "fieldSet": [
+            {
+                "name": "wMScaigoushenqingId",
+                "description": null,
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-4b16e21c101a48aa93198fd668d3f761",
+                "entityCode": 1045,
+                "physicalName": "wMScaigoushenqingId",
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "label": "id主键",
+                "type": "PrimaryKey"
+            },
+            {
+                "type": "DateTime",
+                "description": null,
+                "nullable": false,
+                "entityCode": 1045,
+                "physicalName": "createdOn",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-ac55ce025a0a4e55a916ef33acbc39ae",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "createdOn",
+                "label": "创建时间",
+                "displayOrder": 0,
+                "creatable": false,
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-f627ca6cd7094da2813c868a1c1f8f31",
+                "name": "createdBy",
+                "label": "创建用户",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "referenceSetting": null,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1045,
+                "type": "Reference",
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "physicalName": "createdBy",
+                "description": null,
+                "displayOrder": 0
+            },
+            {
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-b5b47eeb22f44fb7bdcceb3fc402852c",
+                "name": "modifiedOn",
+                "physicalName": "modifiedOn",
+                "description": null,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "type": "DateTime",
+                "label": "最近修改时间",
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1045,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "type": "Reference",
+                "description": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-556ce271dd9c4e109c9b4b571d909707",
+                "updatable": false,
+                "entityCode": 1045,
+                "creatable": false
+            },
+            {
+                "physicalName": "ownerUser",
+                "description": null,
+                "displayOrder": 0,
+                "name": "ownerUser",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "type": "Reference",
+                "nullable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "所属用户",
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "fieldId": "0000002-70f215fac2944d42922f09873c5d3c7b",
+                "entityCode": 1045,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "physicalName": "ownerDepartment",
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldId": "0000002-264073a6cbd5413681b82274a50d33e3",
+                "label": "所属部门",
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "name": "ownerDepartment",
+                "type": "Reference",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "nullable": false,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1045,
+                "description": null
+            },
+            {
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "physicalName": "c_caigoushenqingbianhao",
+                "updatable": true,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-cf4f9877f9da43ab94db11cf99a8963a",
+                "entityCode": 1045,
+                "type": "Text",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "name": "caigoushenqingbianhao",
+                "label": "采购申请编号",
+                "referenceSetting": null,
+                "creatable": true,
+                "nameFieldFlag": true
+            },
+            {
+                "name": "shenqingren",
+                "physicalName": "c_shenqingren",
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "nullable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "owner": {
+                    "label": "WMS采购申请",
+                    "name": "WMScaigoushenqing"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-b8c20c61d9a94e7bbaa935f6b1f4ee86",
+                "entityCode": 1045,
+                "label": "申请人",
+                "description": null,
+                "updatable": true
+            },
+            {
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-aa419daf3f6846918c73fe96f67248ad",
+                "entityCode": 1045,
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "name": "shenqingrenguishubumen",
+                "label": "申请人归属部门",
+                "creatable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "physicalName": "c_shenqingrenguishubumen",
+                "nullable": true,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ]
+            },
+            {
+                "label": "申请日期",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "shenqingriqi",
+                "type": "Date",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1045,
+                "nullable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-43545e9cdee74d0eaf3d6cf66d8a3eb2",
+                "physicalName": "c_shenqingriqi",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "creatable": true
+            },
+            {
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "physicalName": "c_jihuadaohuoriqi",
+                "type": "Date",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "fieldId": "0000002-d3b006ede60347f1a5e0d06595949c6e",
+                "displayOrder": 0,
+                "creatable": true,
+                "referTo": null,
+                "name": "jihuadaohuoriqi",
+                "label": "计划到货日期",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "entityCode": 1045
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "name": "xuqiulaiyuan",
+                "creatable": true,
+                "idFieldFlag": false,
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "entityCode": 1045,
+                "label": "需求来源",
+                "type": "Option",
+                "fieldViewModel": null,
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-9292f762edfb4f80b8d61ac0bd9feb81",
+                "physicalName": "c_xuqiulaiyuan",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                }
+            },
+            {
+                "nameFieldFlag": false,
+                "fieldId": "0000002-6db894421e6f4ff2ae0c42ca31956b65",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "updatable": true,
+                "physicalName": "c_rukucangku",
+                "type": "Reference",
+                "nullable": true,
+                "creatable": true,
+                "referTo": [
+                    {
+                        "name": "WMScangkuxinxi",
+                        "label": "WMS仓库信息"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "rukucangku",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "WMScangkuxinxi",
+                        "fieldList": [
+                            "cangkumingcheng"
+                        ]
+                    }
+                ],
+                "entityCode": 1045,
+                "label": "入库仓库",
+                "idFieldFlag": false
+            },
+            {
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                },
+                "entityCode": 1045,
+                "name": "daohuodizhi",
+                "physicalName": "c_daohuodizhi",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "label": "到货地址",
+                "type": "AreaSelect",
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-53328ada7475454c9f143b1e210758ee",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                }
+            },
+            {
+                "physicalName": "c_xiangxidizhi",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3
+                },
+                "referTo": null,
+                "referenceSetting": null,
+                "entityCode": 1045,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "type": "TextArea",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-69c0144fc3dc4b509581426cc1d47d3d",
+                "name": "xiangxidizhi",
+                "label": "详细地址",
+                "displayOrder": 0,
+                "updatable": true,
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "entityCode": 1045,
+                "label": "备注",
+                "type": "TextArea",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "physicalName": "c_beizhu",
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-80e279445a364dffafdb47161cad7e95",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "displayOrder": 0,
+                "updatable": true,
+                "name": "beizhu",
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "name": "xuqiujutimiaoshu",
+                "label": "需求具体描述",
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "physicalName": "c_xuqiujutimiaoshu",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-ae514190c2514f1daf43781317387d8e",
+                "entityCode": 1045,
+                "type": "TextArea",
+                "updatable": true
+            }
+        ],
+        "physicalName": "t_wmscaigoushenqing",
+        "authorizable": true,
+        "assignable": false,
+        "tags": "WMS",
+        "idField": {
+            "name": "wMScaigoushenqingId",
+            "label": "id主键"
+        },
+        "nameField": {
+            "name": "caigoushenqingbianhao",
+            "label": "采购申请编号"
+        },
+        "fieldNames": [
+            "wMScaigoushenqingId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "caigoushenqingbianhao",
+            "shenqingren",
+            "shenqingrenguishubumen",
+            "shenqingriqi",
+            "jihuadaohuoriqi",
+            "xuqiulaiyuan",
+            "rukucangku",
+            "daohuodizhi",
+            "xiangxidizhi",
+            "beizhu",
+            "xuqiujutimiaoshu"
+        ],
+        "entityId": "0000001-ee4a8cac21cd424ebdb3f9135e46d6a4",
+        "name": "WMScaigoushenqing",
+        "label": "WMS采购申请",
+        "entityCode": 1045,
+        "layoutable": true,
+        "mainDetailField": null,
+        "listable": true,
+        "sortedFieldSet": [
+            {
+                "nullable": false,
+                "updatable": false,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "description": null,
+                "creatable": false,
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-4b16e21c101a48aa93198fd668d3f761",
+                "entityCode": 1045,
+                "referTo": null,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "wMScaigoushenqingId",
+                "type": "PrimaryKey",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "wMScaigoushenqingId",
+                "label": "id主键"
+            },
+            {
+                "type": "Text",
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": true,
+                "fieldId": "0000002-cf4f9877f9da43ab94db11cf99a8963a",
+                "entityCode": 1045,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "defaultMemberOfListFlag": true,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "name": "caigoushenqingbianhao",
+                "label": "采购申请编号",
+                "physicalName": "c_caigoushenqingbianhao",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "updatable": true,
+                "referenceSetting": null
+            },
+            {
+                "entityCode": 1045,
+                "name": "shenqingren",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-b8c20c61d9a94e7bbaa935f6b1f4ee86",
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "description": null,
+                "physicalName": "c_shenqingren",
+                "type": "Reference",
+                "idFieldFlag": false,
+                "label": "申请人",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "displayOrder": 0
+            },
+            {
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "type": "Reference",
+                "entityCode": 1045,
+                "label": "申请人归属部门",
+                "physicalName": "c_shenqingrenguishubumen",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-aa419daf3f6846918c73fe96f67248ad",
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ],
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "shenqingrenguishubumen"
+            },
+            {
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-43545e9cdee74d0eaf3d6cf66d8a3eb2",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1045,
+                "nullable": true,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "name": "shenqingriqi",
+                "physicalName": "c_shenqingriqi",
+                "creatable": true,
+                "updatable": true,
+                "referTo": null,
+                "label": "申请日期",
+                "type": "Date"
+            },
+            {
+                "entityCode": 1045,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "physicalName": "c_jihuadaohuoriqi",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "name": "jihuadaohuoriqi",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-d3b006ede60347f1a5e0d06595949c6e",
+                "label": "计划到货日期",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "type": "Date",
+                "description": null,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "idFieldFlag": false,
+                "referTo": null,
+                "type": "Option",
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "entityCode": 1045,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "description": null,
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-9292f762edfb4f80b8d61ac0bd9feb81",
+                "name": "xuqiulaiyuan",
+                "label": "需求来源",
+                "physicalName": "c_xuqiulaiyuan",
+                "displayOrder": 0,
+                "creatable": true,
+                "updatable": true
+            },
+            {
+                "entityCode": 1045,
+                "name": "rukucangku",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-6db894421e6f4ff2ae0c42ca31956b65",
+                "description": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "WMScangkuxinxi",
+                        "fieldList": [
+                            "cangkumingcheng"
+                        ]
+                    }
+                ],
+                "label": "入库仓库",
+                "nullable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "physicalName": "c_rukucangku",
+                "referTo": [
+                    {
+                        "name": "WMScangkuxinxi",
+                        "label": "WMS仓库信息"
+                    }
+                ],
+                "idFieldFlag": false
+            },
+            {
+                "updatable": true,
+                "referenceSetting": null,
+                "type": "AreaSelect",
+                "nullable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                },
+                "entityCode": 1045,
+                "displayOrder": 0,
+                "physicalName": "c_daohuodizhi",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "daohuodizhi",
+                "label": "到货地址",
+                "description": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-53328ada7475454c9f143b1e210758ee",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                }
+            },
+            {
+                "fieldId": "0000002-69c0144fc3dc4b509581426cc1d47d3d",
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "name": "xiangxidizhi",
+                "label": "详细地址",
+                "physicalName": "c_xiangxidizhi",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "entityCode": 1045,
+                "type": "TextArea",
+                "description": null,
+                "nullable": true,
+                "updatable": true
+            },
+            {
+                "entityCode": 1045,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "type": "TextArea",
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "c_beizhu",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-80e279445a364dffafdb47161cad7e95",
+                "name": "beizhu",
+                "label": "备注",
+                "description": null
+            },
+            {
+                "physicalName": "c_xuqiujutimiaoshu",
+                "description": null,
+                "nameFieldFlag": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "name": "xuqiujutimiaoshu",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-ae514190c2514f1daf43781317387d8e",
+                "entityCode": 1045,
+                "nullable": true,
+                "label": "需求具体描述",
+                "type": "TextArea"
+            },
+            {
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1045,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "type": "DateTime",
+                "nullable": false,
+                "fieldId": "0000002-ac55ce025a0a4e55a916ef33acbc39ae",
+                "name": "createdOn",
+                "description": null,
+                "updatable": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "fieldId": "0000002-f627ca6cd7094da2813c868a1c1f8f31",
+                "type": "Reference",
+                "description": null,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1045,
+                "physicalName": "createdBy",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "name": "createdBy",
+                "label": "创建用户",
+                "updatable": false,
+                "nameFieldFlag": false
+            },
+            {
+                "nullable": true,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1045,
+                "label": "最近修改时间",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-b5b47eeb22f44fb7bdcceb3fc402852c",
+                "type": "DateTime",
+                "updatable": false,
+                "idFieldFlag": false,
+                "referTo": null,
+                "name": "modifiedOn",
+                "owner": {
+                    "label": "WMS采购申请",
+                    "name": "WMScaigoushenqing"
+                },
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "modifiedOn"
+            },
+            {
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "displayOrder": 0,
+                "entityCode": 1045,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-556ce271dd9c4e109c9b4b571d909707",
+                "label": "修改用户",
+                "physicalName": "modifiedBy",
+                "description": null,
+                "fieldViewModel": null,
+                "name": "modifiedBy",
+                "type": "Reference",
+                "updatable": false,
+                "idFieldFlag": false
+            },
+            {
+                "type": "Reference",
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-70f215fac2944d42922f09873c5d3c7b",
+                "entityCode": 1045,
+                "name": "ownerUser",
+                "physicalName": "ownerUser",
+                "description": null,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "displayOrder": 0,
+                "nullable": false,
+                "fieldViewModel": null,
+                "label": "所属用户"
+            },
+            {
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "type": "Reference",
+                "physicalName": "ownerDepartment",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "label": "所属部门",
+                "description": null,
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1045,
+                "name": "ownerDepartment",
+                "owner": {
+                    "name": "WMScaigoushenqing",
+                    "label": "WMS采购申请"
+                },
+                "fieldId": "0000002-264073a6cbd5413681b82274a50d33e3"
+            }
+        ],
+        "virtualFieldSet": [],
+        "detailEntityFlag": false,
+        "shareable": false,
+        "detailEntitySet": [
+            {
+                "name": "WMScaigouchanpinmingxi",
+                "label": "WMS采购产品明细"
+            }
+        ]
+    },
+    "physicalName": "t_wmscaigouchanpinmingxi",
+    "shareable": false,
+    "fieldSet": [
+        {
+            "label": "id主键",
+            "creatable": false,
+            "type": "PrimaryKey",
+            "physicalName": "wMScaigouchanpinmingxiId",
+            "name": "wMScaigouchanpinmingxiId",
+            "idFieldFlag": true,
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "updatable": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "label": "创建时间"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false
+        },
+        {
+            "type": "Reference",
+            "name": "mdWMScaigoushenqingId",
+            "updatable": false,
+            "label": "主从关联Id",
+            "referTo": "WMScaigoushenqing,",
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false,
+            "physicalName": "mdWMScaigoushenqingId",
+            "reserved": true
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "chanpinmingcheng",
+            "idFieldFlag": false,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "updatable": true,
+            "label": "产品名称",
+            "creatable": true,
+            "physicalName": "c_chanpinmingcheng"
+        },
+        {
+            "physicalName": "c_chanpinbianma",
+            "name": "chanpinbianma",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "产品编码",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "type": "Text"
+        },
+        {
+            "creatable": true,
+            "type": "Text",
+            "reserved": false,
+            "referTo": null,
+            "name": "pinpai",
+            "label": "品牌",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_pinpai",
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "guigexinghao",
+            "idFieldFlag": false,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_guigexinghao",
+            "updatable": true,
+            "label": "规格型号",
+            "creatable": true,
+            "nameFieldFlag": false
+        },
+        {
+            "physicalName": "c_danwei",
+            "updatable": true,
+            "label": "单位",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "danwei",
+            "idFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "颗",
+                    "value": 1
+                },
+                {
+                    "key": "根",
+                    "value": 2
+                },
+                {
+                    "key": "件",
+                    "value": 3
+                },
+                {
+                    "key": "个",
+                    "value": 4
+                },
+                {
+                    "key": "盒",
+                    "value": 5
+                },
+                {
+                    "key": "箱",
+                    "value": 6
+                },
+                {
+                    "key": "片",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "updatable": true,
+            "creatable": true,
+            "reserved": false,
+            "physicalName": "c_dangqiankeyongkucunshuliang",
+            "referTo": null,
+            "name": "dangqiankeyongkucunshuliang",
+            "idFieldFlag": false,
+            "label": "当前可用库存数量",
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "referTo": null,
+            "name": "caigoushuliangxuqiu",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Integer",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "label": "采购数量需求",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_caigoushuliangxuqiu",
+            "updatable": true
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_xuqiuchi",
+            "reserved": false,
+            "referTo": "WMScaigouxuqiuchi,",
+            "idFieldFlag": false,
+            "name": "xuqiuchi",
+            "updatable": true,
+            "label": "需求池",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

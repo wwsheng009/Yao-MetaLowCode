@@ -1,0 +1,190 @@
+{
+    "idFieldName": "mubiaozhouqiId",
+    "name": "Mubiaozhouqi",
+    "entityCode": 1204,
+    "detailEntityFlag": false,
+    "listable": true,
+    "internalEntityFlag": false,
+    "tags": "项目任务管理",
+    "label": "目标周期",
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "physicalName": "t_mubiaozhouqi",
+    "nameField": "周期名称",
+    "shareable": false,
+    "assignable": false,
+    "mainEntity": null,
+    "authorizable": true,
+    "fieldSet": [
+        {
+            "creatable": false,
+            "updatable": false,
+            "label": "id主键",
+            "reserved": true,
+            "referTo": null,
+            "name": "mubiaozhouqiId",
+            "idFieldFlag": true,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "mubiaozhouqiId"
+        },
+        {
+            "name": "createdOn",
+            "updatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "createdBy",
+            "reserved": true,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "updatable": false,
+            "label": "最近修改时间",
+            "reserved": true,
+            "name": "modifiedOn"
+        },
+        {
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy",
+            "updatable": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "ownerUser",
+            "creatable": false,
+            "physicalName": "ownerUser",
+            "referTo": "User,",
+            "updatable": false
+        },
+        {
+            "physicalName": "ownerDepartment",
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "Department,",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "reserved": true
+        },
+        {
+            "creatable": true,
+            "nameFieldFlag": true,
+            "idFieldFlag": false,
+            "label": "周期名称",
+            "name": "zhouqimingcheng",
+            "updatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_zhouqimingcheng",
+            "reserved": false,
+            "referTo": null
+        },
+        {
+            "physicalName": "c_kaishishijian",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "label": "开始时间",
+            "type": "Date",
+            "nameFieldFlag": false,
+            "name": "kaishishijian",
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "Date",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_jieshushijian",
+            "name": "jieshushijian",
+            "updatable": true,
+            "label": "结束时间",
+            "creatable": true,
+            "nameFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "周期状态",
+            "type": "Option",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "zhouqizhuangtai",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_zhouqizhuangtai",
+            "referTo": null,
+            "optionList": [
+                {
+                    "key": "未结束",
+                    "value": 1
+                },
+                {
+                    "key": "已结束",
+                    "value": 2
+                },
+                {
+                    "key": "已删除",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "label": "被提醒人",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_beitixingren",
+            "referTo": "User,",
+            "name": "beitixingren",
+            "updatable": true,
+            "idFieldFlag": false
+        }
+    ]
+}

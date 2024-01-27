@@ -1,0 +1,284 @@
+{
+    "label": "进项发票",
+    "entityCode": 1076,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "idFieldName": "jinxiangfapiaoId",
+    "tags": "进销存",
+    "name": "Jinxiangfapiao",
+    "layoutable": true,
+    "listable": true,
+    "internalEntityFlag": false,
+    "shareable": false,
+    "mainEntity": null,
+    "nameField": "进项发票编号",
+    "assignable": false,
+    "authorizable": true,
+    "physicalName": "t_jinxiangfapiao",
+    "fieldSet": [
+        {
+            "creatable": false,
+            "type": "PrimaryKey",
+            "physicalName": "jinxiangfapiaoId",
+            "referTo": null,
+            "name": "jinxiangfapiaoId",
+            "updatable": false,
+            "label": "id主键",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "idFieldFlag": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "creatable": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy",
+            "label": "创建用户",
+            "creatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false
+        },
+        {
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "label": "所属用户",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "name": "ownerUser"
+        },
+        {
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": true,
+            "physicalName": "c_xiaoxiangfapiaobianhao",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Text",
+            "reserved": false,
+            "name": "xiaoxiangfapiaobianhao",
+            "label": "进项发票编号",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "name": "fapiaojine",
+            "updatable": true,
+            "label": "发票金额(含税)/元",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_fapiaojine",
+            "reserved": false,
+            "referTo": null,
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "type": "Money"
+        },
+        {
+            "nameFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_fapiaoleixing",
+            "reserved": false,
+            "referTo": null,
+            "name": "fapiaoleixing",
+            "label": "发票类型",
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "纸质专票",
+                    "value": 1
+                },
+                {
+                    "key": "纸质普票",
+                    "value": 2
+                },
+                {
+                    "key": "电子专票",
+                    "value": 3
+                },
+                {
+                    "key": "电子普票",
+                    "value": 4
+                },
+                {
+                    "key": "全电专票",
+                    "value": 5
+                },
+                {
+                    "key": "全电普票",
+                    "value": 6
+                },
+                {
+                    "key": "无需开票",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "referTo": null,
+            "name": "fapiaotaitou",
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "发票抬头",
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "physicalName": "c_fapiaotaitou",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_fapiaoshuihao",
+            "idFieldFlag": false,
+            "label": "发票税号",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "fapiaoshuihao",
+            "updatable": true,
+            "creatable": true,
+            "type": "Text"
+        },
+        {
+            "type": "Text",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "税种",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_shuizhong",
+            "name": "shuizhong",
+            "updatable": true
+        },
+        {
+            "name": "zengzhishuishuilv",
+            "idFieldFlag": false,
+            "label": "增值税税率%",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "type": "Percent",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_zengzhishuishuilv"
+        },
+        {
+            "idFieldFlag": false,
+            "label": "选择应付账款-对账单",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "duizhangdan",
+            "updatable": true,
+            "physicalName": "c_duizhangdan",
+            "referTo": "Yingfuzhangkuan,",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_gongyingshangmingcheng",
+            "reserved": false,
+            "referTo": "Gongyingshangguanli,",
+            "label": "供应商名称",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "gongyingshangmingcheng",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "name": "fapiaohaoma",
+            "referTo": null,
+            "updatable": true,
+            "label": "发票号码",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_fapiaohaoma",
+            "reserved": false
+        },
+        {
+            "name": "shoupiaoshijian",
+            "updatable": true,
+            "creatable": true,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "label": "收票时间",
+            "nameFieldFlag": false,
+            "physicalName": "c_shoupiaoshijian",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false
+        }
+    ]
+}

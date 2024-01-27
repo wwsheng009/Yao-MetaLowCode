@@ -1,0 +1,203 @@
+{
+    "layoutable": true,
+    "internalEntityFlag": false,
+    "tags": "HRM人事",
+    "idFieldName": "gongzuoriliId",
+    "name": "Gongzuorili",
+    "label": "工作日历",
+    "entityCode": 1111,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "listable": true,
+    "shareable": false,
+    "physicalName": "t_gongzuorili",
+    "authorizable": true,
+    "mainEntity": null,
+    "nameField": "星期",
+    "assignable": false,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "physicalName": "gongzuoriliId",
+            "referTo": null,
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "reserved": true,
+            "name": "gongzuoriliId",
+            "updatable": false,
+            "label": "id主键",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "referTo": null,
+            "label": "创建时间",
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "updatable": false,
+            "referTo": "User,",
+            "name": "createdBy",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "updatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference"
+        },
+        {
+            "nameFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "ownerUser",
+            "label": "所属用户",
+            "creatable": false
+        },
+        {
+            "reserved": true,
+            "updatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "referTo": "Department,",
+            "name": "ownerDepartment"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "riqishijian",
+            "updatable": true,
+            "creatable": true,
+            "type": "Date",
+            "nameFieldFlag": false,
+            "physicalName": "c_riqishijian",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "label": "日期时间"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "xingqi",
+            "label": "星期",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_xingqi",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text"
+        },
+        {
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_gongzuozhuangtai",
+            "referTo": null,
+            "name": "gongzuozhuangtai",
+            "label": "工作状态",
+            "optionList": [
+                {
+                    "key": "工作日",
+                    "value": 1
+                },
+                {
+                    "key": "公休日",
+                    "value": 2
+                },
+                {
+                    "key": "节假日",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "physicalName": "c_xiangqing",
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "xiangqing",
+            "label": "详情",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "name": "jieri",
+            "label": "节日",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_jieri",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "jiejiarijiabanbuchangguiding",
+            "label": "节假日加班补偿规定",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_jiejiarijiabanbuchangguiding",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        }
+    ]
+}

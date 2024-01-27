@@ -1,0 +1,1229 @@
+{
+    "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "listable": true,
+    "idFieldName": "cRMshangjimingxiId",
+    "tags": "CRM",
+    "name": "CRMshangjimingxi",
+    "label": "CRM商机明细",
+    "entityCode": 1167,
+    "layoutable": true,
+    "internalEntityFlag": false,
+    "shareable": false,
+    "physicalName": "t_crmshangjimingxi",
+    "nameField": null,
+    "authorizable": false,
+    "mainEntity": {
+        "entityCode": 1166,
+        "layoutable": true,
+        "tags": "CRM",
+        "mainEntity": null,
+        "mainDetailField": null,
+        "virtualFieldSet": [],
+        "detailEntityFlag": false,
+        "listable": true,
+        "fieldSet": [
+            {
+                "fieldId": "0000002-c7f414b2202041abbaf12c79f605b22d",
+                "name": "cRMshangjiId",
+                "updatable": false,
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "owner": {
+                    "label": "CRM商机",
+                    "name": "CRMshangji"
+                },
+                "type": "PrimaryKey",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1166,
+                "label": "id主键",
+                "physicalName": "cRMshangjiId",
+                "idFieldFlag": true,
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "label": "创建时间",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-8fd332c71b27415d9e9a427e340ccc27",
+                "nullable": false,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "name": "createdOn",
+                "physicalName": "createdOn",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1166,
+                "description": null,
+                "idFieldFlag": false,
+                "type": "DateTime"
+            },
+            {
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "fieldId": "0000002-d0fc143954dc4449acc4fddda32a2ff3",
+                "entityCode": 1166,
+                "name": "createdBy",
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null
+            },
+            {
+                "entityCode": 1166,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "label": "最近修改时间",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "fieldId": "0000002-821c5b0b5b634a65adb3c60417bf9a8f",
+                "name": "modifiedOn",
+                "type": "DateTime",
+                "description": null,
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "physicalName": "modifiedOn",
+                "nullable": true,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1166,
+                "physicalName": "modifiedBy",
+                "type": "Reference",
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-7dcb6240deba4697b5ade9a6f3c9c436"
+            },
+            {
+                "name": "ownerUser",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "description": null,
+                "nullable": false,
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1166,
+                "label": "所属用户",
+                "physicalName": "ownerUser",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-60e82ffa9d9145a98d56a78687863a52",
+                "defaultMemberOfListFlag": false,
+                "type": "Reference",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "displayOrder": 0
+            },
+            {
+                "referenceSetting": null,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "label": "所属部门",
+                "displayOrder": 0,
+                "description": null,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-2e6d4547f598448381c43bef7ed5d333",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "physicalName": "ownerDepartment",
+                "type": "Reference",
+                "nullable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "entityCode": 1166,
+                "name": "ownerDepartment",
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ]
+            },
+            {
+                "entityCode": 1166,
+                "physicalName": "c_guanliankehu",
+                "referTo": [
+                    {
+                        "name": "CRMgonghaichi",
+                        "label": "CRM客户"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-d0ed21c111164eeba602ada1187f43dc",
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMgonghaichi",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehubianhao"
+                        ]
+                    }
+                ],
+                "label": "关联客户",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "name": "guanliankehu",
+                "type": "Reference",
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "CRMlianxiren",
+                        "label": "CRM联系人"
+                    }
+                ],
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "physicalName": "c_guanlianlianxiren",
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMlianxiren",
+                        "fieldList": [
+                            "xingming",
+                            "shoujihao"
+                        ]
+                    }
+                ],
+                "creatable": true,
+                "entityCode": 1166,
+                "name": "guanlianlianxiren",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-fb5e2f0e9b2d42e5af3361fe657b630b",
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "label": "关联联系人"
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1166,
+                "name": "shangjimingcheng",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "displayOrder": 0,
+                "label": "商机名称",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": true,
+                "fieldId": "0000002-341119190ff044b3a8d45f598606ad9b",
+                "physicalName": "c_shangjimingcheng",
+                "type": "Text",
+                "description": null,
+                "updatable": true,
+                "referenceSetting": null
+            },
+            {
+                "physicalName": "c_shangjibianhao",
+                "type": "Text",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-140c6e5b875a4d51b71aada3ce636377",
+                "entityCode": 1166,
+                "label": "商机编号",
+                "description": null,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "defaultMemberOfListFlag": true,
+                "name": "shangjibianhao",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "creatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-e382c2a414f44c0b9fb3bd38b92f1ca9",
+                "physicalName": "c_xiaoshoujieduan",
+                "description": null,
+                "updatable": true,
+                "fieldViewModel": null,
+                "entityCode": 1166,
+                "name": "xiaoshoujieduan",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "label": "销售阶段",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "Option",
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "label": "赢率",
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "validators": []
+                },
+                "physicalName": "c_yingl",
+                "type": "Percent",
+                "description": null,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-3fe6b2a132a246f3825f736c5b91ecdb",
+                "referTo": null,
+                "referenceSetting": null,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1166,
+                "name": "yingl",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "entityCode": 1166,
+                "name": "fuzeren",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "label": "负责人",
+                "physicalName": "c_fuzeren",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "fieldId": "0000002-a709d0097ec74af0919982b90276e145",
+                "type": "Reference",
+                "updatable": true,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "name": "guishubumen",
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "Reference",
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-984c15d6eef5466bb58098cf7187411b",
+                "physicalName": "c_guishubumen",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "entityCode": 1166,
+                "label": "归属部门",
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ]
+            },
+            {
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "name": "yuceshangjijineyuan",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "idFieldFlag": false,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-4ea1913db59140c1951b20dcde14015a",
+                "type": "Money",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "label": "预测商机金额/元",
+                "physicalName": "c_yuceshangjijineyuan",
+                "description": null,
+                "entityCode": 1166,
+                "displayOrder": 0,
+                "creatable": true
+            },
+            {
+                "referTo": null,
+                "referenceSetting": null,
+                "physicalName": "c_yujichengjiaoriqi",
+                "updatable": true,
+                "name": "yujichengjiaoriqi",
+                "idFieldFlag": false,
+                "fieldId": "0000002-b8ea86e555a3481385278e2da63fabde",
+                "entityCode": 1166,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "Date",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "label": "预计成交日期",
+                "description": null
+            }
+        ],
+        "entityId": "0000001-93f5411ca3324a69b8cb6a92d9cecff1",
+        "physicalName": "t_crmshangji",
+        "idField": {
+            "name": "cRMshangjiId",
+            "label": "id主键"
+        },
+        "nameField": {
+            "name": "shangjimingcheng",
+            "label": "商机名称"
+        },
+        "detailEntitySet": [
+            {
+                "name": "CRMshangjimingxi",
+                "label": "CRM商机明细"
+            }
+        ],
+        "sortedFieldSet": [
+            {
+                "fieldId": "0000002-c7f414b2202041abbaf12c79f605b22d",
+                "entityCode": 1166,
+                "label": "id主键",
+                "updatable": false,
+                "name": "cRMshangjiId",
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "physicalName": "cRMshangjiId",
+                "type": "PrimaryKey",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "creatable": false,
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "CRMgonghaichi",
+                        "label": "CRM客户"
+                    }
+                ],
+                "description": null,
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "type": "Reference",
+                "creatable": true,
+                "updatable": true,
+                "fieldId": "0000002-d0ed21c111164eeba602ada1187f43dc",
+                "name": "guanliankehu",
+                "label": "关联客户",
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMgonghaichi",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehubianhao"
+                        ]
+                    }
+                ],
+                "physicalName": "c_guanliankehu",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "displayOrder": 0,
+                "entityCode": 1166,
+                "idFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "label": "CRM联系人",
+                        "name": "CRMlianxiren"
+                    }
+                ],
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "nameFieldFlag": false,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "CRMlianxiren",
+                        "fieldList": [
+                            "xingming",
+                            "shoujihao"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-fb5e2f0e9b2d42e5af3361fe657b630b",
+                "name": "guanlianlianxiren",
+                "label": "关联联系人",
+                "physicalName": "c_guanlianlianxiren",
+                "entityCode": 1166,
+                "creatable": true
+            },
+            {
+                "referenceSetting": null,
+                "creatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "updatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "description": null,
+                "nullable": true,
+                "label": "商机名称",
+                "type": "Text",
+                "displayOrder": 0,
+                "nameFieldFlag": true,
+                "referTo": null,
+                "entityCode": 1166,
+                "name": "shangjimingcheng",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-341119190ff044b3a8d45f598606ad9b",
+                "physicalName": "c_shangjimingcheng"
+            },
+            {
+                "label": "商机编号",
+                "description": null,
+                "creatable": true,
+                "nullable": true,
+                "updatable": true,
+                "fieldId": "0000002-140c6e5b875a4d51b71aada3ce636377",
+                "entityCode": 1166,
+                "name": "shangjibianhao",
+                "physicalName": "c_shangjibianhao",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "Text",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "name": "xiaoshoujieduan",
+                "type": "Option",
+                "mainDetailFieldFlag": false,
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1166,
+                "label": "销售阶段",
+                "physicalName": "c_xiaoshoujieduan",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-e382c2a414f44c0b9fb3bd38b92f1ca9",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "description": null,
+                "referTo": null
+            },
+            {
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "label": "赢率",
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-3fe6b2a132a246f3825f736c5b91ecdb",
+                "name": "yingl",
+                "type": "Percent",
+                "entityCode": 1166,
+                "physicalName": "c_yingl"
+            },
+            {
+                "owner": {
+                    "label": "CRM商机",
+                    "name": "CRMshangji"
+                },
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-a709d0097ec74af0919982b90276e145",
+                "label": "负责人",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "type": "Reference",
+                "creatable": true,
+                "physicalName": "c_fuzeren",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "departmentId",
+                            "userName",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "entityCode": 1166,
+                "name": "fuzeren",
+                "nullable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "description": null,
+                "displayOrder": 0
+            },
+            {
+                "type": "Reference",
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ],
+                "owner": {
+                    "label": "CRM商机",
+                    "name": "CRMshangji"
+                },
+                "updatable": true,
+                "nameFieldFlag": false,
+                "physicalName": "c_guishubumen",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "entityCode": 1166,
+                "name": "guishubumen",
+                "label": "归属部门",
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-984c15d6eef5466bb58098cf7187411b"
+            },
+            {
+                "fieldId": "0000002-4ea1913db59140c1951b20dcde14015a",
+                "entityCode": 1166,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "creatable": true,
+                "referenceSetting": null,
+                "physicalName": "c_yuceshangjijineyuan",
+                "description": null,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999
+                },
+                "type": "Money",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "yuceshangjijineyuan",
+                "label": "预测商机金额/元",
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "physicalName": "c_yujichengjiaoriqi",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "description": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1166,
+                "creatable": true,
+                "idFieldFlag": false,
+                "type": "Date",
+                "displayOrder": 0,
+                "referTo": null,
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-b8ea86e555a3481385278e2da63fabde",
+                "name": "yujichengjiaoriqi",
+                "label": "预计成交日期"
+            },
+            {
+                "fieldId": "0000002-8fd332c71b27415d9e9a427e340ccc27",
+                "name": "createdOn",
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "displayOrder": 0,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "DateTime",
+                "referTo": null,
+                "fieldViewModel": null,
+                "entityCode": 1166,
+                "nullable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-d0fc143954dc4449acc4fddda32a2ff3",
+                "entityCode": 1166,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "name": "createdBy",
+                "label": "创建用户",
+                "description": null,
+                "nullable": false
+            },
+            {
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "nullable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "label": "最近修改时间",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1166,
+                "description": null,
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldId": "0000002-821c5b0b5b634a65adb3c60417bf9a8f",
+                "name": "modifiedOn",
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "label": "修改用户",
+                "type": "Reference",
+                "nullable": true,
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "modifiedBy",
+                "description": null,
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-7dcb6240deba4697b5ade9a6f3c9c436",
+                "entityCode": 1166,
+                "name": "modifiedBy",
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null
+            },
+            {
+                "referenceSetting": null,
+                "fieldId": "0000002-60e82ffa9d9145a98d56a78687863a52",
+                "nullable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1166,
+                "name": "ownerUser",
+                "displayOrder": 0,
+                "description": null,
+                "creatable": false,
+                "physicalName": "ownerUser",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "type": "Reference",
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "label": "所属用户",
+                "updatable": false,
+                "nameFieldFlag": false
+            },
+            {
+                "entityCode": 1166,
+                "physicalName": "ownerDepartment",
+                "nullable": false,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "label": "所属部门",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "updatable": false,
+                "referenceSetting": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-2e6d4547f598448381c43bef7ed5d333",
+                "name": "ownerDepartment",
+                "owner": {
+                    "name": "CRMshangji",
+                    "label": "CRM商机"
+                },
+                "creatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            }
+        ],
+        "fieldNames": [
+            "cRMshangjiId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "guanliankehu",
+            "guanlianlianxiren",
+            "shangjimingcheng",
+            "shangjibianhao",
+            "xiaoshoujieduan",
+            "yingl",
+            "fuzeren",
+            "guishubumen",
+            "yuceshangjijineyuan",
+            "yujichengjiaoriqi"
+        ],
+        "name": "CRMshangji",
+        "label": "CRM商机",
+        "authorizable": true,
+        "shareable": false,
+        "assignable": false
+    },
+    "assignable": false,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "name": "cRMshangjimingxiId",
+            "idFieldFlag": true,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "physicalName": "cRMshangjimingxiId",
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "DateTime",
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "name": "createdOn",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "Reference",
+            "updatable": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "label": "修改用户",
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false
+        },
+        {
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "CRMshangji,",
+            "name": "mdCRMshangjiId",
+            "creatable": true,
+            "mainDetailFieldFlag": true,
+            "physicalName": "mdCRMshangjiId"
+        },
+        {
+            "label": "选择产品",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "CRMchanpinmingxi,",
+            "updatable": true,
+            "idFieldFlag": false,
+            "physicalName": "c_xuanzechanpin",
+            "reserved": false,
+            "name": "xuanzechanpin"
+        },
+        {
+            "idFieldFlag": false,
+            "label": "数量",
+            "creatable": true,
+            "type": "Integer",
+            "nameFieldFlag": false,
+            "physicalName": "c_shuliang",
+            "reserved": false,
+            "name": "shuliang",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "updatable": true
+        },
+        {
+            "physicalName": "c_zhekou",
+            "name": "zhekou",
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "label": "折扣",
+            "creatable": true,
+            "type": "Percent",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "xiaoji",
+            "idFieldFlag": false,
+            "physicalName": "c_xiaoji",
+            "updatable": true,
+            "label": "小计",
+            "creatable": true,
+            "type": "Money",
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

@@ -1,0 +1,281 @@
+{
+    "entityCode": 1143,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "internalEntityFlag": false,
+    "tags": "CRM",
+    "name": "CRMxiansuochi",
+    "label": "CRM线索池",
+    "listable": true,
+    "idFieldName": "cRMxiansuochiId",
+    "shareable": false,
+    "assignable": false,
+    "physicalName": "t_crmxiansuochi",
+    "mainEntity": null,
+    "authorizable": true,
+    "nameField": "客户名称",
+    "fieldSet": [
+        {
+            "name": "cRMxiansuochiId",
+            "updatable": false,
+            "type": "PrimaryKey",
+            "reserved": true,
+            "physicalName": "cRMxiansuochiId",
+            "referTo": null,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "referTo": null,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true
+        },
+        {
+            "label": "创建用户",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "modifiedOn",
+            "updatable": false,
+            "type": "DateTime",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "最近修改时间"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "creatable": false,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "type": "Reference",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "ownerUser"
+        },
+        {
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "referTo": "Department,"
+        },
+        {
+            "reserved": false,
+            "type": "Text",
+            "nameFieldFlag": true,
+            "physicalName": "c_kehumingcheng",
+            "referTo": null,
+            "name": "kehumingcheng",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "客户名称",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "shoujihao",
+            "physicalName": "c_shoujihao",
+            "idFieldFlag": false,
+            "label": "手机号",
+            "type": "Text"
+        },
+        {
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "referTo": null,
+            "name": "lianxiren",
+            "updatable": true,
+            "label": "联系人",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_lianxiren",
+            "reserved": false
+        },
+        {
+            "referTo": null,
+            "name": "bumen",
+            "updatable": true,
+            "label": "部门",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "physicalName": "c_bumen"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "physicalName": "c_zhiwu",
+            "referTo": null,
+            "name": "zhiwu",
+            "idFieldFlag": false,
+            "label": "职务",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "线索池",
+            "type": "Option",
+            "referTo": null,
+            "name": "xiansuochi",
+            "reserved": false,
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_xiansuochi",
+            "optionList": [
+                {
+                    "key": "上海线索池",
+                    "value": 1
+                },
+                {
+                    "key": "山西线索池",
+                    "value": 2
+                },
+                {
+                    "key": "北京线索池",
+                    "value": 3
+                },
+                {
+                    "key": "江苏线索池",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "physicalName": "c_xiansuolaiyuan",
+            "reserved": false,
+            "referTo": null,
+            "name": "xiansuolaiyuan",
+            "updatable": true,
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "label": "线索来源",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "百度SEM",
+                    "value": 1
+                },
+                {
+                    "key": "百度SEO",
+                    "value": 2
+                },
+                {
+                    "key": "发布会直播",
+                    "value": 3
+                },
+                {
+                    "key": "抖音信息流",
+                    "value": 4
+                },
+                {
+                    "key": "线下沙龙",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "xiansuoxiangqing",
+            "reserved": false,
+            "updatable": true,
+            "label": "线索详情",
+            "creatable": true,
+            "type": "TextArea",
+            "nameFieldFlag": false,
+            "physicalName": "c_xiansuoxiangqing"
+        },
+        {
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "线索认领",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_xiansuorenling",
+            "reserved": false,
+            "referTo": "CRMxiansuo,",
+            "name": "xiansuorenling"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "label": "xiansuo66666666",
+            "type": "Boolean",
+            "nameFieldFlag": false,
+            "physicalName": "c_xiansuo66666666",
+            "name": "xiansuo66666666",
+            "updatable": true,
+            "idFieldFlag": false
+        }
+    ]
+}

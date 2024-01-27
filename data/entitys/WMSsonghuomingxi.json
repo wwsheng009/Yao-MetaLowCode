@@ -1,0 +1,1441 @@
+{
+    "layoutable": true,
+    "idFieldName": "wMSsonghuomingxiId",
+    "internalEntityFlag": false,
+    "tags": "WMS",
+    "label": "WMS送货明细",
+    "entityCode": 1090,
+    "systemEntityFlag": false,
+    "name": "WMSsonghuomingxi",
+    "detailEntityFlag": true,
+    "listable": true,
+    "shareable": false,
+    "nameField": null,
+    "mainEntity": {
+        "authorizable": true,
+        "nameField": {
+            "name": "songhuodanbianhao",
+            "label": "送货单编号"
+        },
+        "fieldSet": [
+            {
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1089,
+                "type": "PrimaryKey",
+                "referTo": null,
+                "physicalName": "wMSgonghuoshangsonghuodanId",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "label": "id主键",
+                "name": "wMSgonghuoshangsonghuodanId",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-b2b5872bcd844cf789fb900c85a9e5b4"
+            },
+            {
+                "description": null,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "updatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-a886db13733349f69b5c7b023837cd30",
+                "name": "createdOn",
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1089,
+                "type": "DateTime",
+                "displayOrder": 0
+            },
+            {
+                "referenceSetting": null,
+                "entityCode": 1089,
+                "type": "Reference",
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "name": "createdBy",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "label": "创建用户",
+                "description": null,
+                "nullable": false,
+                "fieldId": "0000002-dd5526a4b6ca429dab9c6fa4db716851",
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "fieldViewModel": null
+            },
+            {
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "name": "modifiedOn",
+                "physicalName": "modifiedOn",
+                "type": "DateTime",
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-827a7ce168ff4064bfb33c3d16cd89b2",
+                "label": "最近修改时间",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "nullable": true,
+                "referenceSetting": null,
+                "entityCode": 1089
+            },
+            {
+                "entityCode": 1089,
+                "type": "Reference",
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "description": null,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "displayOrder": 0,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-e2600b70e83a4939ac58002599abd0c5",
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "physicalName": "modifiedBy",
+                "nullable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "creatable": false,
+                "referenceSetting": null,
+                "entityCode": 1089,
+                "physicalName": "ownerUser",
+                "type": "Reference",
+                "updatable": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-a7dc403494154c7f8756c01e6408957d",
+                "description": null,
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "ownerUser",
+                "label": "所属用户",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "type": "Reference",
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "nullable": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "name": "ownerDepartment",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-29dc85323427456cb27e5a6dc0da6ef1",
+                "description": null,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1089
+            },
+            {
+                "label": "选择采购订单",
+                "type": "Reference",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "displayOrder": 0,
+                "fieldId": "0000002-1e6d54b897004fd18375f2d78cccc7c9",
+                "entityCode": 1089,
+                "nullable": true,
+                "updatable": true,
+                "referTo": [
+                    {
+                        "name": "WMScaigoudingdan",
+                        "label": "WMS采购订单"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "WMScaigoudingdan",
+                        "fieldList": [
+                            "xuanzegongyingshang",
+                            "caigoudingdanmingcheng",
+                            "caigoudingdanbianhao"
+                        ]
+                    }
+                ],
+                "name": "xuanzecaigoudingdan",
+                "physicalName": "c_xuanzecaigoudingdan",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": true,
+                "fieldId": "0000002-e9b673aa4740409e891c6a8ab8783dae",
+                "entityCode": 1089,
+                "physicalName": "c_songhuodanbianhao",
+                "type": "Text",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "name": "songhuodanbianhao",
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "nullable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "label": "送货单编号",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "updatable": true
+            },
+            {
+                "name": "dingdanqiandingshijian",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1089,
+                "physicalName": "c_dingdanqiandingshijian",
+                "type": "DateTime",
+                "referenceSetting": null,
+                "fieldId": "0000002-fd08ea4b248443f1aa617a0542b555fa",
+                "creatable": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "label": "订单签订时间",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "description": null,
+                "nullable": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "entityCode": 1089,
+                "name": "gongyingshangsonghuoshijian",
+                "physicalName": "c_gongyingshangsonghuoshijian",
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-8aa272fee5df4cfb889c5194b2286c26",
+                "label": "供应商送货时间",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "Date",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "displayOrder": 0,
+                "nullable": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-4af697e6a49740a2b205495c5857ce49",
+                "name": "gongyingshangyujidaohuoshijian",
+                "physicalName": "c_gongyingshangyujidaohuoshijian",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1089,
+                "label": "供应商预计到货时间",
+                "type": "DateTime",
+                "description": null,
+                "creatable": true,
+                "referTo": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "fieldId": "0000002-4ff5c62808ee47098660e65b6fb68e52",
+                "label": "选择送货信息",
+                "description": null,
+                "physicalName": "c_xuanzesonghuoxinxi",
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "WMSgongyingshangsonghuoxinxi",
+                        "label": "WMS供应商送货信息"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1089,
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "WMSgongyingshangsonghuoxinxi",
+                        "fieldList": [
+                            "gongyingshangmingcheng",
+                            "fahuorenxingming",
+                            "fahuorenlianxifangshi",
+                            "sijixingming",
+                            "fahuodizhi",
+                            "xiangxidizhi",
+                            "sijilianxifangshi",
+                            "songhuochepaihao"
+                        ]
+                    }
+                ],
+                "name": "xuanzesonghuoxinxi",
+                "type": "Reference",
+                "updatable": true
+            },
+            {
+                "label": "收货仓库",
+                "physicalName": "c_shouhuocangku",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "Reference",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "entityCode": 1089,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "WMScangkuxinxi",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma"
+                        ]
+                    }
+                ],
+                "updatable": true,
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "name": "shouhuocangku",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "WMScangkuxinxi",
+                        "label": "WMS仓库信息"
+                    }
+                ],
+                "fieldId": "0000002-c7ca4fce51b14444bdebe1a4d0cc2b07"
+            },
+            {
+                "name": "shouhuorenlianxifangshi",
+                "label": "收货人联系方式",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "Text",
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1089,
+                "creatable": true,
+                "referenceSetting": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "idFieldFlag": false,
+                "physicalName": "c_shouhuorenlianxifangshi",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-654054ac41a4402cb60b6f45a904dcbc"
+            },
+            {
+                "fieldId": "0000002-097ea0a82b6c4e5f87fad949b02a46f4",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "nullable": true,
+                "nameFieldFlag": false,
+                "entityCode": 1089,
+                "physicalName": "c_shouhuorenxingming",
+                "type": "Reference",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "name": "shouhuorenxingming",
+                "displayOrder": 0,
+                "label": "收货人姓名",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle"
+                        ]
+                    }
+                ]
+            },
+            {
+                "referenceSetting": null,
+                "fieldId": "0000002-5aa6cc654abd464eb71948bfacceb618",
+                "label": "送达确认",
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": null,
+                "name": "songdaqueren",
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1089,
+                "physicalName": "c_songdaqueren",
+                "description": null,
+                "idFieldFlag": false,
+                "referTo": null,
+                "type": "Option",
+                "displayOrder": 0,
+                "creatable": true
+            },
+            {
+                "entityCode": 1089,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "label": "送达时间",
+                "type": "DateTime",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "physicalName": "c_songdashijian",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-50bb0697f2cc41f3bafacef106cdd359",
+                "name": "songdashijian",
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "nullable": true
+            },
+            {
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "physicalName": "c_paizhao",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "maxFileCount": 1,
+                    "fileMaxSize": 5,
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": "",
+                    "validators": []
+                },
+                "referTo": null,
+                "entityCode": 1089,
+                "name": "paizhao",
+                "label": "拍照",
+                "type": "Picture",
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-41cfa7731479445da8f0e8bb41111421",
+                "displayOrder": 0,
+                "nullable": true
+            },
+            {
+                "name": "shouhuorendizhi",
+                "physicalName": "c_shouhuorendizhi",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "entityCode": 1089,
+                "label": "收货人地址",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-e576dd9491df42c8bff522db6e2fc62d",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "AreaSelect",
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                }
+            },
+            {
+                "entityCode": 1089,
+                "label": "详细地址",
+                "physicalName": "c_xiangxidizhi",
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "name": "xiangxidizhi",
+                "description": null,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-fe877bb66e974582aa3c1cba74bd0763",
+                "type": "TextArea",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 1000,
+                    "rows": 3,
+                    "validators": []
+                }
+            }
+        ],
+        "name": "WMSgonghuoshangsonghuodan",
+        "physicalName": "t_wmsgonghuoshangsonghuodan",
+        "layoutable": true,
+        "idField": {
+            "name": "wMSgonghuoshangsonghuodanId",
+            "label": "id主键"
+        },
+        "mainEntity": null,
+        "fieldNames": [
+            "wMSgonghuoshangsonghuodanId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "xuanzecaigoudingdan",
+            "songhuodanbianhao",
+            "dingdanqiandingshijian",
+            "gongyingshangsonghuoshijian",
+            "gongyingshangyujidaohuoshijian",
+            "xuanzesonghuoxinxi",
+            "shouhuocangku",
+            "shouhuorenlianxifangshi",
+            "shouhuorenxingming",
+            "songdaqueren",
+            "songdashijian",
+            "paizhao",
+            "shouhuorendizhi",
+            "xiangxidizhi"
+        ],
+        "entityCode": 1089,
+        "listable": true,
+        "assignable": false,
+        "sortedFieldSet": [
+            {
+                "defaultMemberOfListFlag": false,
+                "displayOrder": 0,
+                "updatable": false,
+                "referTo": null,
+                "label": "id主键",
+                "physicalName": "wMSgonghuoshangsonghuodanId",
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1089,
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "PrimaryKey",
+                "description": null,
+                "nullable": false,
+                "creatable": false,
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-b2b5872bcd844cf789fb900c85a9e5b4",
+                "name": "wMSgonghuoshangsonghuodanId"
+            },
+            {
+                "fieldId": "0000002-1e6d54b897004fd18375f2d78cccc7c9",
+                "name": "xuanzecaigoudingdan",
+                "label": "选择采购订单",
+                "physicalName": "c_xuanzecaigoudingdan",
+                "referTo": [
+                    {
+                        "label": "WMS采购订单",
+                        "name": "WMScaigoudingdan"
+                    }
+                ],
+                "description": null,
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "xuanzegongyingshang",
+                            "caigoudingdanmingcheng",
+                            "caigoudingdanbianhao"
+                        ],
+                        "entityName": "WMScaigoudingdan"
+                    }
+                ],
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1089,
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "creatable": true,
+                "nameFieldFlag": true,
+                "defaultMemberOfListFlag": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-e9b673aa4740409e891c6a8ab8783dae",
+                "entityCode": 1089,
+                "name": "songhuodanbianhao",
+                "label": "送货单编号",
+                "type": "Text",
+                "nullable": true,
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "referenceSetting": null,
+                "physicalName": "c_songhuodanbianhao",
+                "mainDetailFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-fd08ea4b248443f1aa617a0542b555fa",
+                "entityCode": 1089,
+                "nullable": true,
+                "name": "dingdanqiandingshijian",
+                "physicalName": "c_dingdanqiandingshijian",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "displayOrder": 0,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "label": "订单签订时间",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "type": "DateTime",
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "name": "gongyingshangsonghuoshijian",
+                "physicalName": "c_gongyingshangsonghuoshijian",
+                "type": "Date",
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1089,
+                "label": "供应商送货时间",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-8aa272fee5df4cfb889c5194b2286c26",
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "label": "供应商预计到货时间",
+                "displayOrder": 0,
+                "fieldId": "0000002-4af697e6a49740a2b205495c5857ce49",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "description": null,
+                "physicalName": "c_gongyingshangyujidaohuoshijian",
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "name": "gongyingshangyujidaohuoshijian",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "DateTime",
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "entityCode": 1089
+            },
+            {
+                "entityCode": 1089,
+                "creatable": true,
+                "physicalName": "c_xuanzesonghuoxinxi",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-4ff5c62808ee47098660e65b6fb68e52",
+                "name": "xuanzesonghuoxinxi",
+                "label": "选择送货信息",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "WMSgongyingshangsonghuoxinxi",
+                        "fieldList": [
+                            "gongyingshangmingcheng",
+                            "fahuorenxingming",
+                            "fahuorenlianxifangshi",
+                            "sijixingming",
+                            "fahuodizhi",
+                            "xiangxidizhi",
+                            "sijilianxifangshi",
+                            "songhuochepaihao"
+                        ]
+                    }
+                ],
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "label": "WMS供应商送货信息",
+                        "name": "WMSgongyingshangsonghuoxinxi"
+                    }
+                ]
+            },
+            {
+                "type": "Reference",
+                "nullable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "fieldId": "0000002-c7ca4fce51b14444bdebe1a4d0cc2b07",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "WMScangkuxinxi",
+                        "label": "WMS仓库信息"
+                    }
+                ],
+                "physicalName": "c_shouhuocangku",
+                "displayOrder": 0,
+                "label": "收货仓库",
+                "description": null,
+                "updatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "WMScangkuxinxi",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma"
+                        ]
+                    }
+                ],
+                "entityCode": 1089,
+                "name": "shouhuocangku"
+            },
+            {
+                "label": "收货人联系方式",
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1089,
+                "physicalName": "c_shouhuorenlianxifangshi",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "fieldId": "0000002-654054ac41a4402cb60b6f45a904dcbc",
+                "name": "shouhuorenlianxifangshi",
+                "type": "Text",
+                "description": null,
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "updatable": true,
+                "referenceSetting": null
+            },
+            {
+                "nullable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "physicalName": "c_shouhuorenxingming",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "name": "shouhuorenxingming",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "updatable": true,
+                "fieldId": "0000002-097ea0a82b6c4e5f87fad949b02a46f4",
+                "label": "收货人姓名",
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "entityCode": 1089,
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "physicalName": "c_songdaqueren",
+                "type": "Option",
+                "description": null,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1089,
+                "label": "送达确认",
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "referTo": null,
+                "fieldId": "0000002-5aa6cc654abd464eb71948bfacceb618",
+                "name": "songdaqueren",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "creatable": true,
+                "idFieldFlag": false
+            },
+            {
+                "nameFieldFlag": false,
+                "entityCode": 1089,
+                "label": "送达时间",
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "name": "songdashijian",
+                "physicalName": "c_songdashijian",
+                "fieldId": "0000002-50bb0697f2cc41f3bafacef106cdd359",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "DateTime",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null
+            },
+            {
+                "description": null,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "maxFileCount": 1,
+                    "fileMaxSize": 5,
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": ""
+                },
+                "physicalName": "c_paizhao",
+                "label": "拍照",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1089,
+                "name": "paizhao",
+                "displayOrder": 0,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-41cfa7731479445da8f0e8bb41111421",
+                "nameFieldFlag": false,
+                "type": "Picture"
+            },
+            {
+                "entityCode": 1089,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "areaDataType": 2,
+                    "validators": []
+                },
+                "label": "收货人地址",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "physicalName": "c_shouhuorendizhi",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "description": null,
+                "referenceSetting": null,
+                "creatable": true,
+                "fieldId": "0000002-e576dd9491df42c8bff522db6e2fc62d",
+                "name": "shouhuorendizhi",
+                "type": "AreaSelect"
+            },
+            {
+                "label": "详细地址",
+                "type": "TextArea",
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "name": "xiangxidizhi",
+                "physicalName": "c_xiangxidizhi",
+                "description": null,
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-fe877bb66e974582aa3c1cba74bd0763",
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "entityCode": 1089,
+                "fieldViewModel": {
+                    "rows": 3,
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 1000
+                },
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                }
+            },
+            {
+                "fieldId": "0000002-a886db13733349f69b5c7b023837cd30",
+                "displayOrder": 0,
+                "creatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "创建时间",
+                "type": "DateTime",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1089,
+                "physicalName": "createdOn",
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "nameFieldFlag": false,
+                "referTo": null,
+                "name": "createdOn",
+                "description": null,
+                "nullable": false,
+                "updatable": false,
+                "fieldViewModel": null
+            },
+            {
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "label": "创建用户",
+                "description": null,
+                "nullable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "physicalName": "createdBy",
+                "creatable": false,
+                "referenceSetting": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-dd5526a4b6ca429dab9c6fa4db716851",
+                "entityCode": 1089,
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": false,
+                "name": "createdBy",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "fieldId": "0000002-827a7ce168ff4064bfb33c3d16cd89b2",
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1089,
+                "type": "DateTime",
+                "idFieldFlag": false,
+                "name": "modifiedOn",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "nullable": true,
+                "creatable": false,
+                "fieldId": "0000002-e2600b70e83a4939ac58002599abd0c5",
+                "name": "modifiedBy",
+                "mainDetailFieldFlag": false,
+                "description": null,
+                "nameFieldFlag": false,
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1089,
+                "label": "修改用户",
+                "referenceSetting": null,
+                "fieldViewModel": null
+            },
+            {
+                "nullable": false,
+                "idFieldFlag": false,
+                "physicalName": "ownerUser",
+                "type": "Reference",
+                "label": "所属用户",
+                "description": null,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-a7dc403494154c7f8756c01e6408957d",
+                "entityCode": 1089,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "label": "WMS供货商送货单",
+                    "name": "WMSgonghuoshangsonghuodan"
+                },
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "name": "ownerUser",
+                "creatable": false
+            },
+            {
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "physicalName": "ownerDepartment",
+                "description": null,
+                "owner": {
+                    "name": "WMSgonghuoshangsonghuodan",
+                    "label": "WMS供货商送货单"
+                },
+                "type": "Reference",
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "entityCode": 1089,
+                "idFieldFlag": false,
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldId": "0000002-29dc85323427456cb27e5a6dc0da6ef1",
+                "displayOrder": 0
+            }
+        ],
+        "virtualFieldSet": [],
+        "entityId": "0000001-f90bd419a79243b39b38b220714c740e",
+        "label": "WMS供货商送货单",
+        "shareable": false,
+        "mainDetailField": null,
+        "detailEntityFlag": false,
+        "tags": "WMS",
+        "detailEntitySet": [
+            {
+                "name": "WMSsonghuomingxi",
+                "label": "WMS送货明细"
+            }
+        ]
+    },
+    "assignable": false,
+    "authorizable": false,
+    "physicalName": "t_wmssonghuomingxi",
+    "fieldSet": [
+        {
+            "reserved": true,
+            "referTo": null,
+            "name": "wMSsonghuomingxiId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "wMSsonghuomingxiId",
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "label": "创建时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "DateTime",
+            "referTo": null,
+            "name": "createdOn"
+        },
+        {
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "creatable": false,
+            "type": "DateTime"
+        },
+        {
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "label": "修改用户",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy"
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "referTo": "WMSgonghuoshangsonghuodan,",
+            "physicalName": "mdWMSgonghuoshangsonghuodanId",
+            "reserved": true,
+            "name": "mdWMSgonghuoshangsonghuodanId",
+            "label": "主从关联Id",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": "WMSchanpinxinxi,",
+            "name": "xuanzemingxi",
+            "physicalName": "c_xuanzemingxi",
+            "updatable": true,
+            "label": "选择明细",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_songhuoshuliang",
+            "referTo": null,
+            "name": "songhuoshuliang",
+            "label": "送货数量",
+            "type": "Integer",
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

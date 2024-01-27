@@ -1,0 +1,1478 @@
+{
+    "name": "Chanpingongyiluxian",
+    "label": "产品工艺路线",
+    "entityCode": 1186,
+    "layoutable": true,
+    "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "listable": true,
+    "idFieldName": "chanpingongyiluxianId",
+    "internalEntityFlag": false,
+    "tags": "ERP(离散制造-MTO）",
+    "mainEntity": {
+        "entityId": "0000001-1e0f0f8e6c1e42cba934a6a552852809",
+        "listable": true,
+        "sortedFieldSet": [
+            {
+                "nameFieldFlag": false,
+                "fieldViewModel": null,
+                "entityCode": 1185,
+                "nullable": false,
+                "idFieldFlag": true,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "eRPchanpinxinxiId",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "type": "PrimaryKey",
+                "referTo": null,
+                "label": "id主键",
+                "displayOrder": 0,
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-a3e3e50ab745459fbaf81bd5d11e02ef",
+                "name": "eRPchanpinxinxiId",
+                "description": null
+            },
+            {
+                "label": "产品编码",
+                "physicalName": "c_chanpinbianma",
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1185,
+                "creatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "fieldId": "0000002-6b859d0c05e8483799b7d8eb66e46b08",
+                "name": "chanpinbianma",
+                "type": "Text",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "referenceSetting": null
+            },
+            {
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "entityCode": 1185,
+                "type": "Option",
+                "label": "产品属性",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldId": "0000002-5371e8f5697d46e0a03641e49a890b3f",
+                "name": "chanpinshuxing",
+                "creatable": true,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "physicalName": "c_chanpinshuxing",
+                "nullable": false
+            },
+            {
+                "fieldId": "0000002-0fe5ec1c2368493388fd5f9c5b3596b4",
+                "physicalName": "c_chanpinleixing",
+                "nullable": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": null,
+                "entityCode": 1185,
+                "label": "产品类型",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "fieldViewModel": null,
+                "type": "Option",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "name": "chanpinleixing",
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false
+            },
+            {
+                "name": "chanpinmingcheng",
+                "label": "产品名称",
+                "idFieldFlag": false,
+                "nameFieldFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-91f66d47a1514857820eecc7ad080d59",
+                "entityCode": 1185,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "defaultMemberOfListFlag": true,
+                "physicalName": "c_chanpinmingcheng",
+                "displayOrder": 0,
+                "creatable": true,
+                "type": "Text",
+                "nullable": false,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "description": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-d7a99c94ac5b4a8db47a7b31f2672467",
+                "label": "品牌",
+                "physicalName": "c_pinpai",
+                "referTo": null,
+                "entityCode": 1185,
+                "name": "pinpai",
+                "displayOrder": 0,
+                "nullable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "type": "Text",
+                "nameFieldFlag": false,
+                "creatable": true,
+                "updatable": true
+            },
+            {
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "fieldId": "0000002-e62a0c619f8449ffa06b461a8045cdf6",
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "referenceSetting": null,
+                "label": "规格型号",
+                "type": "Text",
+                "nullable": false,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1185,
+                "name": "guigexinghao",
+                "physicalName": "c_guigexinghao",
+                "description": null,
+                "idFieldFlag": false
+            },
+            {
+                "description": null,
+                "nullable": false,
+                "fieldId": "0000002-f2097f9d43d04ff6a63e40f15ee17584",
+                "entityCode": 1185,
+                "type": "Option",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "label": "单位",
+                "physicalName": "c_danwei",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "danwei",
+                "idFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "updatable": true,
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "physicalName": "c_chengben",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "label": "成本（单价/元）",
+                "type": "Money",
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-086b2e0a47a3466db27b9f338951b228",
+                "entityCode": 1185,
+                "referenceSetting": null,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "chengben",
+                "referTo": null
+            },
+            {
+                "type": "Money",
+                "creatable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "entityCode": 1185,
+                "name": "biaozhunshoujia",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "referTo": null,
+                "label": "标准售价(含税)/元",
+                "physicalName": "c_biaozhunshoujia",
+                "displayOrder": 0,
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-1f7f8551adfe4d1e959b0f6756046fe6",
+                "nullable": true,
+                "updatable": true
+            },
+            {
+                "entityCode": 1185,
+                "physicalName": "c_chanpinquanxian",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-5e7cc50bbf1e4a28bda300abbbbe7f9f",
+                "updatable": true,
+                "nullable": false,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "label": "产品权限",
+                "type": "Tag",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "chanpinquanxian"
+            },
+            {
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-b9520477a7624809b8c0a6f4a5f69129",
+                "entityCode": 1185,
+                "name": "chanpintupian",
+                "physicalName": "c_chanpintupian",
+                "displayOrder": 0,
+                "updatable": true,
+                "label": "产品图片",
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "maxFileCount": 1,
+                    "fileMaxSize": 20,
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": "单张20M以内",
+                    "validators": []
+                },
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "type": "Picture",
+                "nullable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "fieldId": "0000002-7baedf18e57e4769a938119078631de8",
+                "label": "当前库存数",
+                "physicalName": "c_dangqiankucunshu",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "name": "dangqiankucunshu",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "type": "Integer",
+                "entityCode": 1185,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                }
+            },
+            {
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "displayOrder": 0,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "entityCode": 1185,
+                "name": "keyongkucunshu",
+                "label": "可用库存数",
+                "physicalName": "c_keyongkucunshu",
+                "type": "Integer",
+                "nullable": true,
+                "description": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-de6307c3c73844c2a134a48744ccc2bc",
+                "creatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "referenceSetting": [
+                    {
+                        "entityName": "Fangansheji",
+                        "fieldList": [
+                            "xuanzebaojiadan",
+                            "tuzhifujian",
+                            "shejiwangongxuqiuriqi"
+                        ]
+                    }
+                ],
+                "entityCode": 1185,
+                "description": null,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-26a24aad60394413acdd5082aa112f0f",
+                "type": "Reference",
+                "nullable": false,
+                "referTo": [
+                    {
+                        "label": "方案设计",
+                        "name": "Fangansheji"
+                    }
+                ],
+                "name": "xuanzefangansheji",
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "label": "选择方案设计",
+                "physicalName": "c_xuanzefangansheji",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "displayOrder": 0
+            },
+            {
+                "displayOrder": 0,
+                "referTo": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "type": "File",
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "physicalName": "c_chanpinjishufujian",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldViewModel": {
+                    "maxFileCount": 9,
+                    "fileMaxSize": 20,
+                    "uploadFileTypes": [],
+                    "uploadHint": "单个20M以内",
+                    "validators": []
+                },
+                "fieldId": "0000002-3457d5516a7740f8a1f06b998464e268",
+                "entityCode": 1185,
+                "name": "chanpinjishufujian",
+                "label": "产品技术附件",
+                "idFieldFlag": false
+            },
+            {
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-a2423a7ed8314d05ac184648758b5e40",
+                "label": "获取方式",
+                "description": null,
+                "entityCode": 1185,
+                "idFieldFlag": false,
+                "type": "Option",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "name": "huoqufangshi",
+                "physicalName": "c_huoqufangshi",
+                "owner": {
+                    "label": "ERP产品信息",
+                    "name": "ERPchanpinxinxi"
+                },
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-6a97e68fa60c46cd967492171e6bd68c",
+                "name": "createdOn",
+                "label": "创建时间",
+                "description": null,
+                "nullable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "displayOrder": 0,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1185,
+                "physicalName": "createdOn",
+                "type": "DateTime",
+                "updatable": false,
+                "owner": {
+                    "label": "ERP产品信息",
+                    "name": "ERPchanpinxinxi"
+                },
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "type": "Reference",
+                "idFieldFlag": false,
+                "fieldId": "0000002-99d9f20eafe44e7ebd4eaf9e353bf30a",
+                "entityCode": 1185,
+                "label": "创建用户",
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "createdBy",
+                "description": null,
+                "nullable": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "physicalName": "createdBy",
+                "displayOrder": 0,
+                "creatable": false
+            },
+            {
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "label": "最近修改时间",
+                "nullable": true,
+                "owner": {
+                    "label": "ERP产品信息",
+                    "name": "ERPchanpinxinxi"
+                },
+                "creatable": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-6d786b7a3d7c46c68c5be32a43ee45cb",
+                "entityCode": 1185,
+                "description": null,
+                "physicalName": "modifiedOn",
+                "type": "DateTime",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "name": "modifiedOn",
+                "displayOrder": 0
+            },
+            {
+                "label": "修改用户",
+                "physicalName": "modifiedBy",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-1e20b740cab24c9b9744dfcdb1b7786a",
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1185,
+                "type": "Reference",
+                "creatable": false,
+                "updatable": false,
+                "name": "modifiedBy",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "displayOrder": 0
+            },
+            {
+                "physicalName": "ownerUser",
+                "type": "Reference",
+                "description": null,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "referenceSetting": null,
+                "name": "ownerUser",
+                "displayOrder": 0,
+                "creatable": false,
+                "updatable": false,
+                "entityCode": 1185,
+                "label": "所属用户",
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-c926272509f740569c885ef96a3a67e5",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "idFieldFlag": false
+            },
+            {
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-dfd7bb22e4c0403289fce00fdba016f6",
+                "description": null,
+                "displayOrder": 0,
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "entityCode": 1185,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "name": "ownerDepartment",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "nullable": false
+            }
+        ],
+        "fieldNames": [
+            "eRPchanpinxinxiId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "chanpinbianma",
+            "chanpinshuxing",
+            "chanpinleixing",
+            "chanpinmingcheng",
+            "pinpai",
+            "guigexinghao",
+            "danwei",
+            "chengben",
+            "biaozhunshoujia",
+            "chanpinquanxian",
+            "chanpintupian",
+            "dangqiankucunshu",
+            "keyongkucunshu",
+            "xuanzefangansheji",
+            "chanpinjishufujian",
+            "huoqufangshi"
+        ],
+        "assignable": false,
+        "tags": "ERP(离散制造-MTO）",
+        "idField": {
+            "label": "id主键",
+            "name": "eRPchanpinxinxiId"
+        },
+        "fieldSet": [
+            {
+                "physicalName": "eRPchanpinxinxiId",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "displayOrder": 0,
+                "name": "eRPchanpinxinxiId",
+                "label": "id主键",
+                "type": "PrimaryKey",
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-a3e3e50ab745459fbaf81bd5d11e02ef",
+                "description": null,
+                "nullable": false,
+                "creatable": false,
+                "idFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1185,
+                "referTo": null,
+                "nameFieldFlag": false
+            },
+            {
+                "idFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "entityCode": 1185,
+                "name": "createdOn",
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "label": "创建时间",
+                "displayOrder": 0,
+                "fieldId": "0000002-6a97e68fa60c46cd967492171e6bd68c",
+                "physicalName": "createdOn",
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "label": "ERP产品信息",
+                    "name": "ERPchanpinxinxi"
+                },
+                "type": "DateTime",
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "description": null,
+                "displayOrder": 0,
+                "fieldId": "0000002-99d9f20eafe44e7ebd4eaf9e353bf30a",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "idFieldFlag": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "physicalName": "createdBy",
+                "name": "createdBy",
+                "label": "创建用户",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "type": "Reference",
+                "nullable": false,
+                "creatable": false,
+                "referenceSetting": null,
+                "entityCode": 1185
+            },
+            {
+                "label": "最近修改时间",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-6d786b7a3d7c46c68c5be32a43ee45cb",
+                "name": "modifiedOn",
+                "type": "DateTime",
+                "displayOrder": 0,
+                "nullable": true,
+                "entityCode": 1185,
+                "physicalName": "modifiedOn",
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "name": "modifiedBy",
+                "referenceSetting": null,
+                "type": "Reference",
+                "description": null,
+                "fieldViewModel": null,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1185,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-1e20b740cab24c9b9744dfcdb1b7786a",
+                "label": "修改用户",
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                }
+            },
+            {
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1185,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "fieldId": "0000002-c926272509f740569c885ef96a3a67e5",
+                "name": "ownerUser",
+                "physicalName": "ownerUser",
+                "nameFieldFlag": false,
+                "label": "所属用户",
+                "updatable": false,
+                "idFieldFlag": false
+            },
+            {
+                "label": "所属部门",
+                "updatable": false,
+                "referenceSetting": null,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldId": "0000002-dfd7bb22e4c0403289fce00fdba016f6",
+                "entityCode": 1185,
+                "physicalName": "ownerDepartment",
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "ownerDepartment",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "creatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "physicalName": "c_chanpinbianma",
+                "type": "Text",
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "name": "chanpinbianma",
+                "label": "产品编码",
+                "description": null,
+                "nullable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-6b859d0c05e8483799b7d8eb66e46b08",
+                "updatable": true,
+                "idFieldFlag": false,
+                "owner": {
+                    "label": "ERP产品信息",
+                    "name": "ERPchanpinxinxi"
+                },
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "entityCode": 1185
+            },
+            {
+                "name": "chanpinshuxing",
+                "nameFieldFlag": false,
+                "referTo": null,
+                "nullable": false,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": null,
+                "label": "产品属性",
+                "physicalName": "c_chanpinshuxing",
+                "type": "Option",
+                "description": null,
+                "referenceSetting": null,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-5371e8f5697d46e0a03641e49a890b3f",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "entityCode": 1185,
+                "creatable": true
+            },
+            {
+                "fieldViewModel": null,
+                "type": "Option",
+                "idFieldFlag": false,
+                "label": "产品类型",
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1185,
+                "name": "chanpinleixing",
+                "referenceSetting": null,
+                "nullable": false,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "owner": {
+                    "label": "ERP产品信息",
+                    "name": "ERPchanpinxinxi"
+                },
+                "description": null,
+                "fieldId": "0000002-0fe5ec1c2368493388fd5f9c5b3596b4",
+                "physicalName": "c_chanpinleixing"
+            },
+            {
+                "physicalName": "c_chanpinmingcheng",
+                "type": "Text",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "referTo": null,
+                "entityCode": 1185,
+                "name": "chanpinmingcheng",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "idFieldFlag": false,
+                "nameFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldId": "0000002-91f66d47a1514857820eecc7ad080d59",
+                "label": "产品名称",
+                "nullable": false,
+                "updatable": true
+            },
+            {
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-d7a99c94ac5b4a8db47a7b31f2672467",
+                "name": "pinpai",
+                "type": "Text",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "label": "品牌",
+                "nullable": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "entityCode": 1185,
+                "physicalName": "c_pinpai",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                }
+            },
+            {
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1185,
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "label": "规格型号",
+                "physicalName": "c_guigexinghao",
+                "referenceSetting": null,
+                "type": "Text",
+                "description": null,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-e62a0c619f8449ffa06b461a8045cdf6",
+                "name": "guigexinghao"
+            },
+            {
+                "entityCode": 1185,
+                "label": "单位",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "nameFieldFlag": false,
+                "physicalName": "c_danwei",
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "name": "danwei",
+                "type": "Option",
+                "description": null,
+                "nullable": false,
+                "creatable": true,
+                "referTo": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-f2097f9d43d04ff6a63e40f15ee17584",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "entityCode": 1185,
+                "physicalName": "c_chengben",
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "name": "chengben",
+                "type": "Money",
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-086b2e0a47a3466db27b9f338951b228",
+                "label": "成本（单价/元）",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "updatable": true
+            },
+            {
+                "label": "标准售价(含税)/元",
+                "physicalName": "c_biaozhunshoujia",
+                "type": "Money",
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "name": "biaozhunshoujia",
+                "updatable": true,
+                "referTo": null,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-1f7f8551adfe4d1e959b0f6756046fe6",
+                "entityCode": 1185,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "nullable": true,
+                "creatable": true,
+                "description": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "label": "产品权限",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-5e7cc50bbf1e4a28bda300abbbbe7f9f",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1185,
+                "type": "Tag",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "name": "chanpinquanxian",
+                "physicalName": "c_chanpinquanxian",
+                "displayOrder": 0,
+                "nullable": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": []
+                }
+            },
+            {
+                "entityCode": 1185,
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-b9520477a7624809b8c0a6f4a5f69129",
+                "physicalName": "c_chanpintupian",
+                "nullable": true,
+                "name": "chanpintupian",
+                "label": "产品图片",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "type": "Picture",
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxFileCount": 1,
+                    "fileMaxSize": 20,
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": "单张20M以内",
+                    "validators": []
+                }
+            },
+            {
+                "fieldId": "0000002-7baedf18e57e4769a938119078631de8",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1185,
+                "type": "Integer",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "label": "当前库存数",
+                "physicalName": "c_dangqiankucunshu",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "name": "dangqiankucunshu",
+                "nullable": true,
+                "updatable": true,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                }
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minValue": -999999999,
+                    "validators": [],
+                    "maxValue": 999999999
+                },
+                "label": "可用库存数",
+                "nullable": true,
+                "creatable": true,
+                "referenceSetting": null,
+                "physicalName": "c_keyongkucunshu",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "defaultMemberOfListFlag": false,
+                "description": null,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-de6307c3c73844c2a134a48744ccc2bc",
+                "entityCode": 1185,
+                "type": "Integer",
+                "name": "keyongkucunshu",
+                "displayOrder": 0,
+                "idFieldFlag": false
+            },
+            {
+                "entityCode": 1185,
+                "label": "选择方案设计",
+                "type": "Reference",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-26a24aad60394413acdd5082aa112f0f",
+                "owner": {
+                    "label": "ERP产品信息",
+                    "name": "ERPchanpinxinxi"
+                },
+                "description": null,
+                "nullable": false,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "Fangansheji",
+                        "fieldList": [
+                            "xuanzebaojiadan",
+                            "tuzhifujian",
+                            "shejiwangongxuqiuriqi"
+                        ]
+                    }
+                ],
+                "name": "xuanzefangansheji",
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_xuanzefangansheji",
+                "referTo": [
+                    {
+                        "name": "Fangansheji",
+                        "label": "方案设计"
+                    }
+                ]
+            },
+            {
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "name": "chanpinjishufujian",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "type": "File",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "uploadFileTypes": [],
+                    "uploadHint": "单个20M以内",
+                    "validators": [],
+                    "maxFileCount": 9,
+                    "fileMaxSize": 20
+                },
+                "entityCode": 1185,
+                "nullable": true,
+                "physicalName": "c_chanpinjishufujian",
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-3457d5516a7740f8a1f06b998464e268",
+                "label": "产品技术附件"
+            },
+            {
+                "referTo": null,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "ERPchanpinxinxi",
+                    "label": "ERP产品信息"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "nullable": false,
+                "creatable": true,
+                "fieldViewModel": null,
+                "fieldId": "0000002-a2423a7ed8314d05ac184648758b5e40",
+                "entityCode": 1185,
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_huoqufangshi",
+                "type": "Option",
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "name": "huoqufangshi",
+                "label": "获取方式",
+                "idFieldFlag": false
+            }
+        ],
+        "entityCode": 1185,
+        "authorizable": true,
+        "shareable": false,
+        "mainDetailField": null,
+        "name": "ERPchanpinxinxi",
+        "label": "ERP产品信息",
+        "physicalName": "t_erpchanpinxinxi",
+        "detailEntityFlag": false,
+        "layoutable": true,
+        "nameField": {
+            "name": "chanpinmingcheng",
+            "label": "产品名称"
+        },
+        "detailEntitySet": [
+            {
+                "name": "Chanpingongyiluxian",
+                "label": "产品工艺路线"
+            }
+        ],
+        "mainEntity": null,
+        "virtualFieldSet": []
+    },
+    "physicalName": "t_chanpingongyiluxian",
+    "nameField": null,
+    "authorizable": false,
+    "shareable": false,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "referTo": null,
+            "name": "chanpingongyiluxianId",
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "physicalName": "chanpingongyiluxianId",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "nameFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "referTo": null,
+            "name": "createdOn",
+            "label": "创建时间",
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "type": "Reference"
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "idFieldFlag": false,
+            "label": "最近修改时间"
+        },
+        {
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "label": "修改用户"
+        },
+        {
+            "reserved": true,
+            "referTo": "ERPchanpinxinxi,",
+            "updatable": false,
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false,
+            "physicalName": "mdERPchanpinxinxiId",
+            "name": "mdERPchanpinxinxiId",
+            "idFieldFlag": false,
+            "label": "主从关联Id"
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "updatable": true,
+            "referTo": null,
+            "name": "danweishengchanshuliang",
+            "idFieldFlag": false,
+            "label": "单位生产数量",
+            "type": "Integer",
+            "physicalName": "c_danweishengchanshuliang",
+            "reserved": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_shengchanbanzu",
+            "reserved": false,
+            "referTo": "Team,",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "name": "shengchanbanzu",
+            "updatable": true,
+            "label": "生产班组",
+            "creatable": true
+        },
+        {
+            "type": "Reference",
+            "idFieldFlag": false,
+            "label": "工序名称",
+            "nameFieldFlag": false,
+            "physicalName": "c_gongxumingcheng",
+            "reserved": false,
+            "referTo": "Shengchangongxu,",
+            "name": "gongxumingcheng",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

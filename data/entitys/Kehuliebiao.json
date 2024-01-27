@@ -1,0 +1,343 @@
+{
+    "label": "客户列表",
+    "entityCode": 1232,
+    "tags": "车辆租赁管理系统",
+    "name": "Kehuliebiao",
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "kehuliebiaoId",
+    "internalEntityFlag": false,
+    "systemEntityFlag": false,
+    "shareable": false,
+    "mainEntity": null,
+    "physicalName": "t_kehuliebiao",
+    "nameField": null,
+    "assignable": false,
+    "authorizable": true,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "creatable": false,
+            "physicalName": "kehuliebiaoId",
+            "reserved": true,
+            "referTo": null,
+            "name": "kehuliebiaoId",
+            "updatable": false
+        },
+        {
+            "reserved": true,
+            "name": "createdOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "referTo": null,
+            "label": "创建时间",
+            "creatable": false,
+            "type": "DateTime"
+        },
+        {
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn",
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "type": "DateTime"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "label": "修改用户",
+            "type": "Reference"
+        },
+        {
+            "reserved": true,
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "mainDetailFieldFlag": false,
+            "name": "ownerUser",
+            "updatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "referTo": "Department,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "reserved": true,
+            "name": "ownerDepartment",
+            "label": "所属部门",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "label": "客户名称",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_kehumingcheng",
+            "referTo": null,
+            "name": "kehumingcheng",
+            "updatable": true,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "type": "Text"
+        },
+        {
+            "type": "Text",
+            "nameFieldFlag": false,
+            "physicalName": "c_shoujihao",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "手机号",
+            "name": "shoujihao",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_zhengjianleixing",
+            "label": "证件类型",
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "zhengjianleixing",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "optionList": [
+                {
+                    "key": "居民身份证",
+                    "value": 1
+                },
+                {
+                    "key": "护照",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "idFieldFlag": false,
+            "label": "证件号码",
+            "creatable": true,
+            "referTo": null,
+            "physicalName": "c_zhengjianhaoma",
+            "reserved": false,
+            "name": "zhengjianhaoma",
+            "updatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_jiashizhengleixing",
+            "reserved": false,
+            "referTo": null,
+            "label": "驾驶证类型",
+            "creatable": true,
+            "name": "jiashizhengleixing",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "A1",
+                    "value": 1
+                },
+                {
+                    "key": "A2",
+                    "value": 2
+                },
+                {
+                    "key": "A3",
+                    "value": 3
+                },
+                {
+                    "key": "B1",
+                    "value": 4
+                },
+                {
+                    "key": "B2",
+                    "value": 5
+                },
+                {
+                    "key": "B3",
+                    "value": 6
+                },
+                {
+                    "key": "C1",
+                    "value": 7
+                },
+                {
+                    "key": "C2",
+                    "value": 8
+                },
+                {
+                    "key": "C3",
+                    "value": 9
+                },
+                {
+                    "key": "C4",
+                    "value": 10
+                },
+                {
+                    "key": "D",
+                    "value": 11
+                },
+                {
+                    "key": "E",
+                    "value": 12
+                },
+                {
+                    "key": "F",
+                    "value": 13
+                },
+                {
+                    "key": "M",
+                    "value": 14
+                },
+                {
+                    "key": "N",
+                    "value": 15
+                },
+                {
+                    "key": "P",
+                    "value": 16
+                }
+            ]
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "驾驶证号码",
+            "type": "Text",
+            "updatable": true,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_jiashizhenghaoma",
+            "reserved": false,
+            "name": "jiashizhenghaoma"
+        },
+        {
+            "referTo": null,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "physicalName": "c_zhengjiantupianzheng",
+            "name": "zhengjiantupianzheng",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "证件图片（正）",
+            "type": "Picture",
+            "nameFieldFlag": false
+        },
+        {
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "zhengjiantupianfan",
+            "idFieldFlag": false,
+            "label": "证件图片（反）",
+            "type": "Picture",
+            "physicalName": "c_zhengjiantupianfan"
+        },
+        {
+            "type": "Picture",
+            "mainDetailFieldFlag": false,
+            "label": "驾驶证图片（正）",
+            "nameFieldFlag": false,
+            "physicalName": "c_jiashizhengtupianzheng",
+            "reserved": false,
+            "referTo": null,
+            "name": "jiashizhengtupianzheng",
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "physicalName": "c_jiashizhengtupianfan",
+            "reserved": false,
+            "name": "jiashizhengtupianfan",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "驾驶证图片（反）",
+            "type": "Picture",
+            "nameFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "name": "jiashizhengshixiaoriqi",
+            "updatable": true,
+            "label": "驾驶证失效日期",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_jiashizhengshixiaoriqi",
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "Date"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_beizhu",
+            "reserved": false,
+            "name": "beizhu",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "TextArea",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "label": "备注"
+        }
+    ]
+}

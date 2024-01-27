@@ -1,0 +1,173 @@
+{
+    "label": "补卡申请",
+    "entityCode": 1146,
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "tags": "HRM人事",
+    "name": "Kaoqindaka",
+    "listable": true,
+    "idFieldName": "kaoqindakaId",
+    "internalEntityFlag": false,
+    "detailEntityFlag": false,
+    "mainEntity": null,
+    "physicalName": "t_kaoqindaka",
+    "assignable": false,
+    "shareable": false,
+    "nameField": "补签事由说明",
+    "authorizable": true,
+    "fieldSet": [
+        {
+            "reserved": true,
+            "referTo": null,
+            "label": "id主键",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "kaoqindakaId",
+            "name": "kaoqindakaId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "type": "DateTime"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "name": "createdBy",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户"
+        },
+        {
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "label": "最近修改时间",
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "idFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "idFieldFlag": false,
+            "updatable": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "name": "modifiedBy"
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "ownerUser",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "referTo": "User,",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "referTo": "Department,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "creatable": false,
+            "name": "ownerDepartment",
+            "label": "所属部门"
+        },
+        {
+            "label": "姓名",
+            "type": "Reference",
+            "physicalName": "c_xingming",
+            "name": "xingming",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": "Yuangongdangan,",
+            "creatable": true
+        },
+        {
+            "type": "Date",
+            "nameFieldFlag": false,
+            "physicalName": "c_buqianriqi",
+            "updatable": true,
+            "creatable": true,
+            "label": "补签日期",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "buqianriqi",
+            "idFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_buqianshijianduan",
+            "referTo": null,
+            "name": "buqianshijianduan",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "补签时间段",
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "上班签到",
+                    "value": 1
+                },
+                {
+                    "key": "下班签退",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "label": "补签事由说明",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "name": "buqianshiyoushuoming",
+            "updatable": true,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "type": "TextArea",
+            "nameFieldFlag": true,
+            "physicalName": "c_buqianshiyoushuoming"
+        }
+    ]
+}

@@ -1,0 +1,271 @@
+{
+    "name": "CRMshangji",
+    "label": "CRM商机",
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "internalEntityFlag": false,
+    "tags": "CRM",
+    "entityCode": 1166,
+    "idFieldName": "cRMshangjiId",
+    "nameField": "商机名称",
+    "assignable": false,
+    "physicalName": "t_crmshangji",
+    "shareable": false,
+    "mainEntity": null,
+    "authorizable": true,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "physicalName": "cRMshangjiId",
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "cRMshangjiId",
+            "updatable": false,
+            "label": "id主键"
+        },
+        {
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "createdOn",
+            "label": "创建时间",
+            "creatable": false,
+            "physicalName": "createdOn",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "name": "createdBy",
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "createdBy"
+        },
+        {
+            "referTo": null,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime"
+        },
+        {
+            "physicalName": "modifiedBy",
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,"
+        },
+        {
+            "reserved": true,
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "ownerUser",
+            "updatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerUser"
+        },
+        {
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "name": "ownerDepartment",
+            "updatable": false,
+            "label": "所属部门",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "Department,",
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": "CRMgonghaichi,",
+            "name": "guanliankehu",
+            "updatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "c_guanliankehu",
+            "idFieldFlag": false,
+            "label": "关联客户"
+        },
+        {
+            "referTo": "CRMlianxiren,",
+            "name": "guanlianlianxiren",
+            "updatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_guanlianlianxiren",
+            "reserved": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "label": "关联联系人",
+            "creatable": true
+        },
+        {
+            "idFieldFlag": false,
+            "label": "商机名称",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_shangjimingcheng",
+            "referTo": null,
+            "name": "shangjimingcheng",
+            "creatable": true,
+            "nameFieldFlag": true,
+            "reserved": false,
+            "updatable": true
+        },
+        {
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "name": "shangjibianhao",
+            "label": "商机编号",
+            "creatable": true,
+            "idFieldFlag": false,
+            "physicalName": "c_shangjibianhao",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true
+        },
+        {
+            "label": "销售阶段",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "referTo": null,
+            "name": "xiaoshoujieduan",
+            "updatable": true,
+            "physicalName": "c_xiaoshoujieduan",
+            "reserved": false,
+            "optionList": [
+                {
+                    "key": "需求发现",
+                    "value": 1
+                },
+                {
+                    "key": "需求确认",
+                    "value": 2
+                },
+                {
+                    "key": "方案报价",
+                    "value": 3
+                },
+                {
+                    "key": "商务谈判",
+                    "value": 4
+                },
+                {
+                    "key": "赢单",
+                    "value": 5
+                },
+                {
+                    "key": "输单",
+                    "value": 6
+                },
+                {
+                    "key": "无效",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_yingl",
+            "reserved": false,
+            "referTo": null,
+            "name": "yingl",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "赢率",
+            "creatable": true,
+            "type": "Percent",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "Reference",
+            "physicalName": "c_fuzeren",
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "负责人",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "fuzeren"
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "guishubumen",
+            "idFieldFlag": false,
+            "label": "归属部门",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_guishubumen",
+            "reserved": false,
+            "referTo": "Department,",
+            "updatable": true,
+            "creatable": true,
+            "type": "Reference"
+        },
+        {
+            "type": "Money",
+            "referTo": null,
+            "creatable": true,
+            "reserved": false,
+            "name": "yuceshangjijineyuan",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "预测商机金额/元",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_yuceshangjijineyuan"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_yujichengjiaoriqi",
+            "name": "yujichengjiaoriqi",
+            "label": "预计成交日期",
+            "creatable": true,
+            "type": "Date"
+        }
+    ]
+}

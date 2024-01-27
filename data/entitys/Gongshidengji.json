@@ -1,0 +1,263 @@
+{
+    "entityCode": 1202,
+    "layoutable": true,
+    "idFieldName": "gongshidengjiId",
+    "tags": "项目任务管理",
+    "label": "工时登记",
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "listable": true,
+    "internalEntityFlag": false,
+    "name": "Gongshidengji",
+    "physicalName": "t_gongshidengji",
+    "shareable": false,
+    "authorizable": true,
+    "mainEntity": null,
+    "nameField": "流水号",
+    "assignable": false,
+    "fieldSet": [
+        {
+            "physicalName": "gongshidengjiId",
+            "reserved": true,
+            "referTo": null,
+            "name": "gongshidengjiId",
+            "idFieldFlag": true,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "updatable": false,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "name": "createdBy",
+            "updatable": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "referTo": "User,"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "updatable": false,
+            "label": "修改用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false
+        },
+        {
+            "referTo": "User,",
+            "name": "ownerUser",
+            "label": "所属用户",
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "reserved": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false
+        },
+        {
+            "label": "所属部门",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "physicalName": "ownerDepartment",
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "updatable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_liushuihao",
+            "reserved": false,
+            "referTo": null,
+            "name": "liushuihao",
+            "idFieldFlag": false,
+            "label": "流水号",
+            "creatable": true,
+            "nameFieldFlag": true,
+            "updatable": true,
+            "type": "Text"
+        },
+        {
+            "referTo": "Xiangmu,",
+            "idFieldFlag": false,
+            "label": "选择项目",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "xuanzexiangmu",
+            "updatable": true,
+            "creatable": true,
+            "physicalName": "c_xuanzexiangmu"
+        },
+        {
+            "reserved": false,
+            "name": "xuanzerenwu",
+            "label": "选择任务",
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_xuanzerenwu",
+            "referTo": "Renwu,",
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "referTo": "Zirenwu,",
+            "updatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_xuanzezirenwu",
+            "reserved": false,
+            "name": "xuanzezirenwu",
+            "idFieldFlag": false,
+            "label": "选择子任务",
+            "creatable": true
+        },
+        {
+            "idFieldFlag": false,
+            "label": "开始时间",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_kaishishijian",
+            "referTo": null,
+            "name": "kaishishijian",
+            "type": "Date",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "updatable": true
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "jieshushijian",
+            "updatable": true,
+            "physicalName": "c_jieshushijian",
+            "idFieldFlag": false,
+            "label": "结束时间",
+            "creatable": true,
+            "type": "Date",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_gongzuoshichang",
+            "referTo": null,
+            "name": "gongzuoshichang",
+            "label": "工作时长",
+            "type": "Decimal",
+            "nameFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false
+        },
+        {
+            "updatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_gongshileibie",
+            "reserved": false,
+            "referTo": null,
+            "name": "gongshileibie",
+            "idFieldFlag": false,
+            "label": "工时类别",
+            "creatable": true,
+            "optionList": [
+                {
+                    "key": "设计",
+                    "value": 1
+                },
+                {
+                    "key": "研发",
+                    "value": 2
+                },
+                {
+                    "key": "文档",
+                    "value": 3
+                },
+                {
+                    "key": "测试",
+                    "value": 4
+                },
+                {
+                    "key": "其他",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "type": "TextArea",
+            "updatable": true,
+            "label": "工时描述",
+            "creatable": true,
+            "referTo": null,
+            "name": "gongshimiaoshu",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_gongshimiaoshu",
+            "reserved": false
+        },
+        {
+            "nameFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_dengjiren",
+            "reserved": false,
+            "referTo": "User,",
+            "name": "dengjiren",
+            "label": "登记人"
+        }
+    ]
+}

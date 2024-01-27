@@ -1,0 +1,679 @@
+{
+    "detailEntityFlag": false,
+    "listable": true,
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "idFieldName": "yuangongdanganId",
+    "internalEntityFlag": false,
+    "tags": "HRM人事",
+    "name": "Yuangongdangan",
+    "label": "员工档案",
+    "entityCode": 1099,
+    "physicalName": "t_yuangongdangan",
+    "authorizable": true,
+    "shareable": false,
+    "mainEntity": null,
+    "nameField": "姓名",
+    "assignable": false,
+    "fieldSet": [
+        {
+            "updatable": false,
+            "idFieldFlag": true,
+            "label": "id主键",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "yuangongdanganId",
+            "reserved": true,
+            "name": "yuangongdanganId",
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "type": "DateTime",
+            "referTo": null,
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "updatable": false,
+            "label": "创建时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "reserved": true
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "name": "createdBy",
+            "updatable": false,
+            "type": "Reference",
+            "label": "创建用户",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "idFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "name": "modifiedOn",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "nameFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false
+        },
+        {
+            "physicalName": "ownerUser",
+            "referTo": "User,",
+            "type": "Reference",
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "ownerUser",
+            "updatable": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "referTo": "Department,",
+            "updatable": false,
+            "creatable": false,
+            "type": "Reference",
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_gonghao",
+            "reserved": false,
+            "referTo": null,
+            "name": "gonghao",
+            "updatable": true,
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "label": "工号",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_xingming",
+            "name": "xingming",
+            "idFieldFlag": false,
+            "label": "姓名",
+            "type": "Text"
+        },
+        {
+            "reserved": false,
+            "referTo": "Department,",
+            "name": "bumen",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_bumen",
+            "idFieldFlag": false,
+            "label": "部门",
+            "creatable": true,
+            "type": "Reference"
+        },
+        {
+            "label": "岗位",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "gangwei",
+            "idFieldFlag": false,
+            "updatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "physicalName": "c_gangwei",
+            "reserved": false
+        },
+        {
+            "reserved": false,
+            "referTo": "User,",
+            "name": "yuangongchengyuan",
+            "idFieldFlag": false,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_yuangongchengyuan",
+            "updatable": true,
+            "label": "员工成员",
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "name": "shenfenzhenghao",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "label": "身份证号",
+            "nameFieldFlag": false,
+            "physicalName": "c_shenfenzhenghao",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_xingbie",
+            "referTo": null,
+            "name": "xingbie",
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "label": "性别",
+            "optionList": [
+                {
+                    "key": "男",
+                    "value": 1
+                },
+                {
+                    "key": "女",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "出生日期",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_chushengriqi",
+            "name": "chushengriqi",
+            "creatable": true,
+            "type": "Date"
+        },
+        {
+            "idFieldFlag": false,
+            "label": "籍贯",
+            "creatable": true,
+            "type": "AreaSelect",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_jiguan",
+            "reserved": false,
+            "name": "jiguan",
+            "updatable": true,
+            "nameFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "hujisuozaidi",
+            "label": "户籍所在地",
+            "nameFieldFlag": false,
+            "physicalName": "c_hujisuozaidi",
+            "idFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_hujileixing",
+            "reserved": false,
+            "name": "hujileixing",
+            "label": "户籍类型",
+            "optionList": [
+                {
+                    "key": "城镇",
+                    "value": 1
+                },
+                {
+                    "key": "农村",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "physicalName": "c_minzu",
+            "reserved": false,
+            "referTo": null,
+            "name": "minzu",
+            "idFieldFlag": false,
+            "label": "民族",
+            "type": "Text",
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "creatable": true,
+            "updatable": true
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "creatable": true,
+            "type": "Option",
+            "physicalName": "c_hunyinzhuangtai",
+            "reserved": false,
+            "name": "hunyinzhuangtai",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "婚姻状态",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "已婚",
+                    "value": 1
+                },
+                {
+                    "key": "未婚",
+                    "value": 2
+                },
+                {
+                    "key": "已婚已育",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "physicalName": "c_zhengzhimianmao",
+            "reserved": false,
+            "referTo": null,
+            "name": "zhengzhimianmao",
+            "updatable": true,
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "label": "政治面貌",
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "群众",
+                    "value": 1
+                },
+                {
+                    "key": "中国党员",
+                    "value": 2
+                },
+                {
+                    "key": "共青团员",
+                    "value": 3
+                },
+                {
+                    "key": "民主党派",
+                    "value": 4
+                },
+                {
+                    "key": "其他",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "referTo": null,
+            "updatable": true,
+            "label": "员工照片",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Picture",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_yuangongzhaopian",
+            "reserved": false,
+            "name": "yuangongzhaopian"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "physicalName": "c_pinyongxingshi",
+            "name": "pinyongxingshi",
+            "idFieldFlag": false,
+            "label": "聘用形式",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "全职",
+                    "value": 1
+                },
+                {
+                    "key": "实习",
+                    "value": 2
+                },
+                {
+                    "key": "兼职",
+                    "value": 3
+                },
+                {
+                    "key": "劳务派遣",
+                    "value": 4
+                },
+                {
+                    "key": "其他",
+                    "value": 5
+                }
+            ]
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "label": "员工状态",
+            "creatable": true,
+            "type": "Option",
+            "updatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_yuangongzhuangtai",
+            "reserved": false,
+            "name": "yuangongzhuangtai",
+            "optionList": [
+                {
+                    "key": "在职",
+                    "value": 1
+                },
+                {
+                    "key": "待转正",
+                    "value": 2
+                },
+                {
+                    "key": "已离职",
+                    "value": 3
+                },
+                {
+                    "key": "其他",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "type": "Date",
+            "physicalName": "c_canjiagongzuoriqi",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "参加工作日期",
+            "nameFieldFlag": false,
+            "name": "canjiagongzuoriqi",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "入职日期",
+            "type": "Date",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_ruzhiriqi",
+            "name": "ruzhiriqi",
+            "creatable": true,
+            "reserved": false,
+            "referTo": null
+        },
+        {
+            "reserved": false,
+            "name": "shiyongqitianshu",
+            "updatable": true,
+            "label": "试用期天数（天）",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_shiyongqitianshu"
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_zhuanzhengriqi",
+            "reserved": false,
+            "name": "zhuanzhengriqi",
+            "label": "转正日期",
+            "creatable": true,
+            "type": "Date"
+        },
+        {
+            "reserved": false,
+            "name": "shiyongqixinzi",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "试用期薪资",
+            "type": "Money",
+            "physicalName": "c_shiyongqixinzi"
+        },
+        {
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "name": "zhengshixinzi",
+            "physicalName": "c_zhengshixinzi",
+            "reserved": false,
+            "referTo": null,
+            "label": "正式薪资",
+            "type": "Money",
+            "nameFieldFlag": false
+        },
+        {
+            "physicalName": "c_zhijieshangji",
+            "reserved": false,
+            "referTo": "User,",
+            "name": "zhijieshangji",
+            "label": "直接上级",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "updatable": true
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_fuzeHR",
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Reference",
+            "reserved": false,
+            "name": "fuzeHR",
+            "updatable": true,
+            "label": "负责HR"
+        },
+        {
+            "type": "Text",
+            "idFieldFlag": false,
+            "label": "社保账号",
+            "nameFieldFlag": false,
+            "physicalName": "c_shebaozhanghao",
+            "reserved": false,
+            "referTo": null,
+            "name": "shebaozhanghao",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_gongjijinzhanghao",
+            "reserved": false,
+            "referTo": null,
+            "name": "gongjijinzhanghao",
+            "idFieldFlag": false,
+            "type": "Text",
+            "updatable": true,
+            "label": "公积金账号",
+            "creatable": true
+        },
+        {
+            "name": "yinhangkahao",
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "physicalName": "c_yinhangkahao",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "银行卡号",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_kaihuxing",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "开户行",
+            "nameFieldFlag": false,
+            "name": "kaihuxing",
+            "updatable": true,
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_shoujihao",
+            "name": "shoujihao",
+            "updatable": true,
+            "label": "手机号",
+            "creatable": true,
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "reserved": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_changzhudizhi",
+            "name": "changzhudizhi",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "常住地址",
+            "type": "AreaSelect"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "jutidizhi",
+            "type": "Text",
+            "physicalName": "c_jutidizhi",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "具体地址",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "zuigaoxueli",
+            "updatable": true,
+            "idFieldFlag": false,
+            "physicalName": "c_zuigaoxueli",
+            "label": "最高学历",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "博士",
+                    "value": 1
+                },
+                {
+                    "key": "硕士",
+                    "value": 2
+                },
+                {
+                    "key": "本科",
+                    "value": 3
+                },
+                {
+                    "key": "大专、高职",
+                    "value": 4
+                },
+                {
+                    "key": "高中、中专、中技",
+                    "value": 5
+                },
+                {
+                    "key": "初中",
+                    "value": 6
+                },
+                {
+                    "key": "小学",
+                    "value": 7
+                }
+            ]
+        },
+        {
+            "name": "biyeshijian",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "毕业时间",
+            "creatable": true,
+            "type": "Date",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_biyeshijian",
+            "reserved": false,
+            "referTo": null
+        }
+    ]
+}

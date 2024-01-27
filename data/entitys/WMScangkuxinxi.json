@@ -1,0 +1,265 @@
+{
+    "entityCode": 1017,
+    "layoutable": true,
+    "idFieldName": "wMScangkuxinxiId",
+    "detailEntityFlag": false,
+    "listable": true,
+    "internalEntityFlag": false,
+    "tags": "WMS",
+    "name": "WMScangkuxinxi",
+    "label": "WMS仓库信息",
+    "systemEntityFlag": false,
+    "shareable": false,
+    "nameField": "仓库名称",
+    "physicalName": "t_wmscangkuxinxi",
+    "authorizable": true,
+    "mainEntity": null,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "physicalName": "wMScangkuxinxiId",
+            "referTo": null,
+            "label": "id主键",
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "wMScangkuxinxiId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "name": "createdOn",
+            "physicalName": "createdOn",
+            "reserved": true,
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "type": "DateTime"
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "physicalName": "createdBy",
+            "reserved": true,
+            "name": "createdBy",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "label": "创建用户",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "DateTime",
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "physicalName": "modifiedBy",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true
+        },
+        {
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "name": "ownerUser",
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "referTo": "User,"
+        },
+        {
+            "reserved": true,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "type": "Reference"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "label": "仓库名称",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "name": "cangkumingcheng",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Text",
+            "physicalName": "c_cangkumingcheng"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "idFieldFlag": false,
+            "label": "仓库编码",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_cangkubianma",
+            "referTo": null,
+            "name": "cangkubianma",
+            "updatable": true,
+            "creatable": true,
+            "type": "Text"
+        },
+        {
+            "reserved": false,
+            "name": "cangkudizhi",
+            "creatable": true,
+            "type": "AreaSelect",
+            "label": "仓库地址",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_cangkudizhi",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "reserved": false,
+            "name": "xiangxidizhi",
+            "type": "TextArea",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xiangxidizhi",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "详细地址",
+            "creatable": true,
+            "nameFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "仓库容量/立方",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_cangkuronglianglifang",
+            "reserved": false,
+            "name": "cangkuronglianglifang",
+            "updatable": true,
+            "type": "Decimal",
+            "nameFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_cangkuxingzhi",
+            "type": "Option",
+            "idFieldFlag": false,
+            "label": "仓库性质",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "cangkuxingzhi",
+            "updatable": true,
+            "optionList": [
+                {
+                    "key": "存货仓",
+                    "value": 1
+                },
+                {
+                    "key": "废品仓",
+                    "value": 2
+                },
+                {
+                    "key": "现场仓",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "仓库状态",
+            "type": "Option",
+            "reserved": false,
+            "name": "cangkuzhuangtai",
+            "referTo": null,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_cangkuzhuangtai",
+            "optionList": [
+                {
+                    "key": "启用",
+                    "value": 1
+                },
+                {
+                    "key": "停用",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "nameFieldFlag": false,
+            "name": "cangkuzhuguan",
+            "type": "Reference",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "仓库主管",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_cangkuzhuguan",
+            "reserved": false,
+            "referTo": "User,"
+        },
+        {
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "kuguanguishubumen",
+            "idFieldFlag": false,
+            "type": "Reference",
+            "physicalName": "c_kuguanguishubumen",
+            "referTo": "Department,",
+            "updatable": true,
+            "label": "库管归属部门"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "联系电话",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "c_lianxidianhua",
+            "name": "lianxidianhua",
+            "type": "Text",
+            "mainDetailFieldFlag": false
+        }
+    ]
+}

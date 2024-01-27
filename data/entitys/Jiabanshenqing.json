@@ -1,0 +1,203 @@
+{
+    "tags": "HRM人事",
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "internalEntityFlag": false,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "jiabanshenqingId",
+    "name": "Jiabanshenqing",
+    "label": "加班申请",
+    "entityCode": 1149,
+    "nameField": "加班单号",
+    "authorizable": true,
+    "mainEntity": null,
+    "shareable": false,
+    "assignable": false,
+    "physicalName": "t_jiabanshenqing",
+    "fieldSet": [
+        {
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "jiabanshenqingId",
+            "updatable": false,
+            "physicalName": "jiabanshenqingId",
+            "idFieldFlag": true,
+            "label": "id主键",
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "referTo": null,
+            "name": "createdOn",
+            "creatable": false,
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "physicalName": "createdOn"
+        },
+        {
+            "reserved": true,
+            "label": "创建用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "name": "createdBy",
+            "updatable": false
+        },
+        {
+            "physicalName": "modifiedOn",
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false,
+            "creatable": false,
+            "reserved": true
+        },
+        {
+            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "label": "修改用户",
+            "creatable": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false
+        },
+        {
+            "name": "ownerUser",
+            "updatable": false,
+            "idFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser"
+        },
+        {
+            "reserved": true,
+            "updatable": false,
+            "type": "Reference",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "idFieldFlag": false,
+            "label": "所属部门"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "label": "加班单号",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_qingjiadanhao",
+            "name": "qingjiadanhao",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Text"
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "qingjialeixing",
+            "label": "加班类型",
+            "creatable": true,
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_qingjialeixing",
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "optionList": [
+                {
+                    "key": "工作日",
+                    "value": 1
+                },
+                {
+                    "key": "周末",
+                    "value": 2
+                },
+                {
+                    "key": "法定节假日",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "creatable": true,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "c_yuangong",
+            "referTo": "Yuangongdangan,",
+            "name": "yuangong",
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "员工"
+        },
+        {
+            "reserved": false,
+            "creatable": true,
+            "physicalName": "c_qingjiashiyoushuoming",
+            "referTo": null,
+            "name": "qingjiashiyoushuoming",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "加班事由说明",
+            "type": "TextArea",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_xiangguanzhengming",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "相关证明",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "name": "xiangguanzhengming",
+            "updatable": true,
+            "type": "File"
+        },
+        {
+            "physicalName": "c_hejiqingjiatianshu",
+            "reserved": false,
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Decimal",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "hejiqingjiatianshu",
+            "updatable": true,
+            "label": "加班总天数"
+        }
+    ]
+}

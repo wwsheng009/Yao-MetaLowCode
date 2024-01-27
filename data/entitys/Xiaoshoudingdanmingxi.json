@@ -1,0 +1,1601 @@
+{
+    "label": "销售订单明细",
+    "entityCode": 1014,
+    "listable": true,
+    "idFieldName": "xiaoshoudingdanmingxiId",
+    "internalEntityFlag": false,
+    "name": "Xiaoshoudingdanmingxi",
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "tags": "进销存",
+    "systemEntityFlag": false,
+    "authorizable": false,
+    "physicalName": "t_xiaoshoudingdanmingxi",
+    "shareable": false,
+    "nameField": null,
+    "mainEntity": {
+        "mainEntity": null,
+        "fieldSet": [
+            {
+                "name": "xiaoshoudingdanId",
+                "owner": {
+                    "label": "销售订单",
+                    "name": "Xiaoshoudingdan"
+                },
+                "type": "PrimaryKey",
+                "displayOrder": 0,
+                "entityCode": 1013,
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "label": "id主键",
+                "description": null,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldViewModel": null,
+                "fieldId": "0000002-8162deb667114d208353b4ce80cfd561",
+                "physicalName": "xiaoshoudingdanId",
+                "idFieldFlag": true,
+                "defaultMemberOfListFlag": false,
+                "referTo": null
+            },
+            {
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "description": null,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-b3c92975b44d4e3fbc77a3c0f6e569fa",
+                "entityCode": 1013,
+                "name": "createdOn",
+                "type": "DateTime",
+                "creatable": false,
+                "displayOrder": 0,
+                "nullable": false,
+                "referenceSetting": null,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "updatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-dfeecc44146d4aecb31b47ed999c122b",
+                "type": "Reference",
+                "displayOrder": 0,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "physicalName": "createdBy",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "entityCode": 1013,
+                "label": "创建用户",
+                "defaultMemberOfListFlag": false,
+                "name": "createdBy",
+                "idFieldFlag": false
+            },
+            {
+                "label": "最近修改时间",
+                "description": null,
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1013,
+                "name": "modifiedOn",
+                "type": "DateTime",
+                "nullable": true,
+                "updatable": false,
+                "fieldId": "0000002-a582eba01fd24d84a2f0e524f9ad9e75",
+                "physicalName": "modifiedOn",
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "label": "销售订单",
+                    "name": "Xiaoshoudingdan"
+                },
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "type": "Reference",
+                "creatable": false,
+                "updatable": false,
+                "fieldViewModel": null,
+                "label": "修改用户",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "physicalName": "modifiedBy",
+                "nullable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-1df9965c3cb04f0d8548e8193bed64aa",
+                "name": "modifiedBy",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "entityCode": 1013
+            },
+            {
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null,
+                "label": "所属用户",
+                "type": "Reference",
+                "description": null,
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-3241b89063414ac88a9c09c40a1cb0b2",
+                "name": "ownerUser",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "creatable": false,
+                "entityCode": 1013,
+                "physicalName": "ownerUser",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "fieldId": "0000002-49f4d32b1bc2480f8b6d9538c140675d",
+                "displayOrder": 0,
+                "entityCode": 1013,
+                "description": null,
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "所属部门",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "ownerDepartment",
+                "physicalName": "ownerDepartment",
+                "type": "Reference",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "referenceSetting": null
+            },
+            {
+                "displayOrder": 0,
+                "nullable": false,
+                "mainDetailFieldFlag": false,
+                "name": "xuanzekehu",
+                "label": "选择客户",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Kehuguanli",
+                        "label": "客户管理"
+                    }
+                ],
+                "entityCode": 1013,
+                "type": "Reference",
+                "description": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "fieldId": "0000002-024d97f6e65245f78fb551ed3f647161",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "physicalName": "c_xuanzekehu",
+                "referenceSetting": [
+                    {
+                        "entityName": "Kehuguanli",
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian",
+                            "jiagedengji",
+                            "jiesuanzhouqi",
+                            "kehusuozaidiqu",
+                            "jutidizhi"
+                        ]
+                    }
+                ]
+            },
+            {
+                "creatable": true,
+                "idFieldFlag": false,
+                "label": "订单签订日期",
+                "physicalName": "c_dingdanqiandingriqi",
+                "fieldId": "0000002-04e52bdbb6ac4c369b24c7cefe1e4905",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "nullable": false,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1013,
+                "name": "dingdanqiandingriqi",
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "referenceSetting": null,
+                "type": "Date",
+                "description": null
+            },
+            {
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-9044349bf3664c8982041cf50714ff52",
+                "physicalName": "c_dingdanjiaofuriqi",
+                "type": "Date",
+                "description": null,
+                "nullable": false,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "name": "dingdanjiaofuriqi",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1013,
+                "label": "订单交付日期",
+                "updatable": true,
+                "nameFieldFlag": false
+            },
+            {
+                "entityCode": 1013,
+                "displayOrder": 0,
+                "nullable": true,
+                "mainDetailFieldFlag": false,
+                "label": "销售归属部门",
+                "type": "Reference",
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser",
+                            "parentDepartmentId"
+                        ]
+                    }
+                ],
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "idFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "fieldId": "0000002-856cf735851f450f81990f8c3833b08a",
+                "name": "xiaoshouguishubumen",
+                "physicalName": "c_xiaoshouguishubumen",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null
+            },
+            {
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "entityCode": 1013,
+                "type": "Reference",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ],
+                        "entityName": "Cangkuguanli"
+                    }
+                ],
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-ae011ccbf9964fdf9cb07e6c28ddb7e2",
+                "name": "chukucangku",
+                "label": "出库仓库",
+                "physicalName": "c_chukucangku",
+                "creatable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": [],
+                    "precision": 2
+                },
+                "label": "销售原价总额(含税)/元",
+                "physicalName": "c_xiaoshouyuanjiazonge",
+                "updatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "name": "xiaoshouyuanjiazonge",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "displayOrder": 0,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-8c9a344bcce04da1b23fb7e872717d8d",
+                "entityCode": 1013,
+                "description": null,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "type": "Money",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "type": "Money",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "name": "youhuijine",
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "fieldId": "0000002-39afe240932f4576b810143915d6419a",
+                "label": "优惠金额/元",
+                "physicalName": "c_youhuijine",
+                "description": null,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "entityCode": 1013
+            },
+            {
+                "fieldId": "0000002-25a27b355bd74f97886261be21d9a275",
+                "entityCode": 1013,
+                "name": "zhengdanzhekoulv",
+                "type": "Percent",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "physicalName": "c_zhengdanzhekoulv",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "label": "整单折扣率 %",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "referTo": null
+            },
+            {
+                "entityCode": 1013,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-7617f39f99744afcb8f674f278794237",
+                "label": "销售订单金额(含税)/元",
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "name": "xiaoshoudingdanjine",
+                "physicalName": "c_xiaoshoudingdanjine",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "Money",
+                "description": null,
+                "referTo": null,
+                "nullable": true,
+                "creatable": true,
+                "fieldViewModel": {
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": [],
+                    "precision": 2
+                },
+                "referenceSetting": null
+            },
+            {
+                "fieldId": "0000002-3ea4b591fbe742ef80a39db266f50e6d",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "physicalName": "c_dingdanmaolilv",
+                "updatable": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minValue": 0,
+                    "validators": [],
+                    "precision": 2,
+                    "maxValue": 100
+                },
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1013,
+                "label": "订单毛利率%",
+                "description": null,
+                "nullable": false,
+                "creatable": true,
+                "name": "dingdanmaolilv",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "Percent",
+                "referenceSetting": null
+            },
+            {
+                "type": "File",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "owner": {
+                    "label": "销售订单",
+                    "name": "Xiaoshoudingdan"
+                },
+                "description": null,
+                "referTo": null,
+                "fieldViewModel": {
+                    "maxFileCount": 9,
+                    "fileMaxSize": 100,
+                    "uploadFileTypes": [],
+                    "uploadHint": "单个文件100M以内",
+                    "validators": []
+                },
+                "physicalName": "c_hetongfujianshangchuan",
+                "name": "hetongfujianshangchuan",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "entityCode": 1013,
+                "label": "合同附件上传",
+                "nullable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-407cab9fc45b45e8b596b3bff1111271"
+            },
+            {
+                "fieldId": "0000002-6eec2e7dd8df4e2189a5cbeb7c962493",
+                "referTo": null,
+                "entityCode": 1013,
+                "physicalName": "c_songhuodiqu",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                },
+                "referenceSetting": null,
+                "defaultMemberOfListFlag": false,
+                "name": "songhuodiqu",
+                "label": "送货地区",
+                "type": "AreaSelect",
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "description": null,
+                "idFieldFlag": false
+            },
+            {
+                "entityCode": 1013,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "owner": {
+                    "label": "销售订单",
+                    "name": "Xiaoshoudingdan"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "type": "Text",
+                "nullable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-51837a0349c24eceb5e30205c606d35a",
+                "label": "具体地址",
+                "physicalName": "c_jutidizhi",
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "jutidizhi",
+                "creatable": true,
+                "updatable": true
+            },
+            {
+                "physicalName": "c_jiesuanqixian",
+                "type": "Text",
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-d2f077b3995f4c33aa11b2c71c1703b3",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "entityCode": 1013,
+                "name": "jiesuanqixian",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "label": "结算期限",
+                "nameFieldFlag": false
+            },
+            {
+                "type": "Text",
+                "description": null,
+                "idFieldFlag": false,
+                "entityCode": 1013,
+                "label": "销售订单名称",
+                "nameFieldFlag": false,
+                "name": "xiaoshoudingdanmingcheng",
+                "physicalName": "c_xiaoshoudingdanmingcheng",
+                "referTo": null,
+                "fieldId": "0000002-d2096afd1ac14b86b82962a759ddccb5",
+                "mainDetailFieldFlag": false,
+                "nullable": false,
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "owner": {
+                    "label": "销售订单",
+                    "name": "Xiaoshoudingdan"
+                },
+                "displayOrder": 0
+            },
+            {
+                "nullable": true,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "referTo": null,
+                "entityCode": 1013,
+                "name": "chanpinchengbenzongjia",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "label": "产品成本总价",
+                "displayOrder": 0,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-391b883950b5483983e485421346cfb2",
+                "physicalName": "c_chanpinchengbenzongjia",
+                "type": "Money",
+                "creatable": true
+            }
+        ],
+        "label": "销售订单",
+        "physicalName": "t_xiaoshoudingdan",
+        "entityCode": 1013,
+        "layoutable": true,
+        "authorizable": true,
+        "shareable": false,
+        "virtualFieldSet": [],
+        "assignable": false,
+        "nameField": null,
+        "sortedFieldSet": [
+            {
+                "label": "id主键",
+                "physicalName": "xiaoshoudingdanId",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "type": "PrimaryKey",
+                "description": null,
+                "fieldViewModel": null,
+                "entityCode": 1013,
+                "name": "xiaoshoudingdanId",
+                "nullable": false,
+                "creatable": false,
+                "idFieldFlag": true,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-8162deb667114d208353b4ce80cfd561",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "updatable": false,
+                "referTo": null
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Kehuguanli",
+                        "label": "客户管理"
+                    }
+                ],
+                "physicalName": "c_xuanzekehu",
+                "entityCode": 1013,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-024d97f6e65245f78fb551ed3f647161",
+                "displayOrder": 0,
+                "nullable": false,
+                "updatable": true,
+                "description": null,
+                "label": "选择客户",
+                "type": "Reference",
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "kehumingcheng",
+                            "kehufenlei",
+                            "kehulaiyuan",
+                            "kehubiaoqian",
+                            "jiagedengji",
+                            "jiesuanzhouqi",
+                            "kehusuozaidiqu",
+                            "jutidizhi"
+                        ],
+                        "entityName": "Kehuguanli"
+                    }
+                ],
+                "name": "xuanzekehu"
+            },
+            {
+                "label": "订单签订日期",
+                "referTo": null,
+                "mainDetailFieldFlag": false,
+                "name": "dingdanqiandingriqi",
+                "physicalName": "c_dingdanqiandingriqi",
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": true,
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "Date",
+                "description": null,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "fieldId": "0000002-04e52bdbb6ac4c369b24c7cefe1e4905",
+                "entityCode": 1013,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "entityCode": 1013,
+                "physicalName": "c_dingdanjiaofuriqi",
+                "type": "Date",
+                "displayOrder": 0,
+                "referenceSetting": null,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "name": "dingdanjiaofuriqi",
+                "nullable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldId": "0000002-9044349bf3664c8982041cf50714ff52",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "referTo": null,
+                "label": "订单交付日期",
+                "creatable": true,
+                "updatable": true,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "type": "Reference",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser",
+                            "parentDepartmentId"
+                        ]
+                    }
+                ],
+                "name": "xiaoshouguishubumen",
+                "owner": {
+                    "label": "销售订单",
+                    "name": "Xiaoshoudingdan"
+                },
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1013,
+                "nullable": true,
+                "updatable": true,
+                "description": null,
+                "label": "销售归属部门",
+                "physicalName": "c_xiaoshouguishubumen",
+                "creatable": true,
+                "fieldId": "0000002-856cf735851f450f81990f8c3833b08a"
+            },
+            {
+                "description": null,
+                "displayOrder": 0,
+                "nullable": false,
+                "creatable": true,
+                "idFieldFlag": false,
+                "fieldId": "0000002-ae011ccbf9964fdf9cb07e6c28ddb7e2",
+                "name": "chukucangku",
+                "physicalName": "c_chukucangku",
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "entityCode": 1013,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Cangkuguanli",
+                        "label": "仓库管理"
+                    }
+                ],
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma",
+                            "cangkudizhi",
+                            "cangkurongliang",
+                            "cangkuxingzhi",
+                            "cangkuzhuangtai",
+                            "cangkuzhuguan"
+                        ],
+                        "entityName": "Cangkuguanli"
+                    }
+                ],
+                "updatable": true,
+                "nameFieldFlag": false,
+                "label": "出库仓库",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "Reference"
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "name": "xiaoshouyuanjiazonge",
+                "label": "销售原价总额(含税)/元",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "type": "Money",
+                "displayOrder": 0,
+                "creatable": true,
+                "idFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1013,
+                "fieldId": "0000002-8c9a344bcce04da1b23fb7e872717d8d",
+                "physicalName": "c_xiaoshouyuanjiazonge",
+                "description": null,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                }
+            },
+            {
+                "fieldId": "0000002-39afe240932f4576b810143915d6419a",
+                "displayOrder": 0,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "name": "youhuijine",
+                "physicalName": "c_youhuijine",
+                "type": "Money",
+                "nullable": true,
+                "referenceSetting": null,
+                "entityCode": 1013,
+                "label": "优惠金额/元",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "creatable": true,
+                "updatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-25a27b355bd74f97886261be21d9a275",
+                "owner": {
+                    "label": "销售订单",
+                    "name": "Xiaoshoudingdan"
+                },
+                "description": null,
+                "name": "zhengdanzhekoulv",
+                "nullable": true,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1013,
+                "label": "整单折扣率 %",
+                "type": "Percent",
+                "fieldViewModel": {
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "validators": [],
+                    "precision": 2
+                },
+                "physicalName": "c_zhengdanzhekoulv",
+                "nameFieldFlag": false,
+                "referTo": null
+            },
+            {
+                "nullable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999
+                },
+                "entityCode": 1013,
+                "physicalName": "c_xiaoshoudingdanjine",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "Money",
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-7617f39f99744afcb8f674f278794237",
+                "name": "xiaoshoudingdanjine",
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "label": "销售订单金额(含税)/元",
+                "updatable": true,
+                "creatable": true,
+                "referenceSetting": null
+            },
+            {
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "nullable": false,
+                "physicalName": "c_dingdanmaolilv",
+                "displayOrder": 0,
+                "creatable": true,
+                "referenceSetting": null,
+                "fieldId": "0000002-3ea4b591fbe742ef80a39db266f50e6d",
+                "name": "dingdanmaolilv",
+                "description": null,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "precision": 2,
+                    "maxValue": 100,
+                    "minValue": 0,
+                    "validators": []
+                },
+                "entityCode": 1013,
+                "type": "Percent",
+                "referTo": null,
+                "label": "订单毛利率%",
+                "updatable": true
+            },
+            {
+                "label": "合同附件上传",
+                "creatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldId": "0000002-407cab9fc45b45e8b596b3bff1111271",
+                "name": "hetongfujianshangchuan",
+                "type": "File",
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "maxFileCount": 9,
+                    "fileMaxSize": 100,
+                    "uploadFileTypes": [],
+                    "uploadHint": "单个文件100M以内",
+                    "validators": []
+                },
+                "referenceSetting": null,
+                "entityCode": 1013,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "physicalName": "c_hetongfujianshangchuan",
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "description": null
+            },
+            {
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": {
+                    "validators": [],
+                    "areaDataType": 2
+                },
+                "type": "AreaSelect",
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "name": "songhuodiqu",
+                "label": "送货地区",
+                "physicalName": "c_songhuodiqu",
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-6eec2e7dd8df4e2189a5cbeb7c962493",
+                "entityCode": 1013
+            },
+            {
+                "fieldId": "0000002-51837a0349c24eceb5e30205c606d35a",
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1013,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "defaultMemberOfListFlag": false,
+                "name": "jutidizhi",
+                "label": "具体地址",
+                "physicalName": "c_jutidizhi",
+                "type": "Text",
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "referenceSetting": null
+            },
+            {
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "updatable": true,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "fieldId": "0000002-d2f077b3995f4c33aa11b2c71c1703b3",
+                "entityCode": 1013,
+                "label": "结算期限",
+                "physicalName": "c_jiesuanqixian",
+                "type": "Text",
+                "referenceSetting": null,
+                "name": "jiesuanqixian",
+                "nullable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false
+            },
+            {
+                "displayOrder": 0,
+                "updatable": true,
+                "fieldViewModel": {
+                    "minLength": 0,
+                    "maxLength": 200,
+                    "validators": []
+                },
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "Text",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "xiaoshoudingdanmingcheng",
+                "physicalName": "c_xiaoshoudingdanmingcheng",
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "nullable": false,
+                "creatable": true,
+                "label": "销售订单名称",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-d2096afd1ac14b86b82962a759ddccb5",
+                "entityCode": 1013
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "entityCode": 1013,
+                "name": "chanpinchengbenzongjia",
+                "label": "产品成本总价",
+                "nullable": true,
+                "creatable": true,
+                "referenceSetting": null,
+                "displayOrder": 0,
+                "fieldViewModel": {
+                    "validators": [],
+                    "precision": 2,
+                    "maxValue": 999999999,
+                    "minValue": -999999999
+                },
+                "physicalName": "c_chanpinchengbenzongjia",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "Money",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-391b883950b5483983e485421346cfb2",
+                "description": null,
+                "updatable": true
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "physicalName": "createdOn",
+                "description": null,
+                "nullable": false,
+                "creatable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1013,
+                "label": "创建时间",
+                "referTo": null,
+                "name": "createdOn",
+                "displayOrder": 0,
+                "type": "DateTime",
+                "fieldViewModel": null,
+                "fieldId": "0000002-b3c92975b44d4e3fbc77a3c0f6e569fa",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                }
+            },
+            {
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "label": "创建用户",
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-dfeecc44146d4aecb31b47ed999c122b",
+                "name": "createdBy",
+                "creatable": false,
+                "referenceSetting": null,
+                "entityCode": 1013
+            },
+            {
+                "fieldId": "0000002-a582eba01fd24d84a2f0e524f9ad9e75",
+                "name": "modifiedOn",
+                "nullable": true,
+                "creatable": false,
+                "referTo": null,
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "label": "最近修改时间",
+                "physicalName": "modifiedOn",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1013,
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "type": "DateTime",
+                "updatable": false,
+                "idFieldFlag": false
+            },
+            {
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-1df9965c3cb04f0d8548e8193bed64aa",
+                "name": "modifiedBy",
+                "type": "Reference",
+                "nullable": true,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "label": "修改用户",
+                "physicalName": "modifiedBy",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "description": null,
+                "creatable": false,
+                "idFieldFlag": false,
+                "entityCode": 1013,
+                "displayOrder": 0
+            },
+            {
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "nullable": false,
+                "creatable": false,
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-3241b89063414ac88a9c09c40a1cb0b2",
+                "entityCode": 1013,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "description": null,
+                "nameFieldFlag": false,
+                "idFieldFlag": false,
+                "displayOrder": 0,
+                "updatable": false,
+                "physicalName": "ownerUser",
+                "type": "Reference",
+                "defaultMemberOfListFlag": false,
+                "name": "ownerUser",
+                "label": "所属用户"
+            },
+            {
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "fieldId": "0000002-49f4d32b1bc2480f8b6d9538c140675d",
+                "label": "所属部门",
+                "owner": {
+                    "name": "Xiaoshoudingdan",
+                    "label": "销售订单"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "mainDetailFieldFlag": false,
+                "physicalName": "ownerDepartment",
+                "updatable": false,
+                "defaultMemberOfListFlag": false,
+                "name": "ownerDepartment",
+                "referTo": [
+                    {
+                        "label": "部门",
+                        "name": "Department"
+                    }
+                ],
+                "fieldViewModel": null,
+                "entityCode": 1013,
+                "type": "Reference",
+                "nullable": false,
+                "referenceSetting": null
+            }
+        ],
+        "name": "Xiaoshoudingdan",
+        "detailEntityFlag": false,
+        "listable": true,
+        "idField": {
+            "name": "xiaoshoudingdanId",
+            "label": "id主键"
+        },
+        "detailEntitySet": [
+            {
+                "name": "Xiaoshoudingdanmingxi",
+                "label": "销售订单明细"
+            },
+            {
+                "name": "Songhuojihua",
+                "label": "送货计划"
+            },
+            {
+                "name": "Shoukuanjihua",
+                "label": "收款计划"
+            }
+        ],
+        "entityId": "0000001-b74a9a5b5cb9496e9f37896ac537e636",
+        "tags": "进销存",
+        "mainDetailField": null,
+        "fieldNames": [
+            "xiaoshoudingdanId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "xuanzekehu",
+            "dingdanqiandingriqi",
+            "dingdanjiaofuriqi",
+            "xiaoshouguishubumen",
+            "chukucangku",
+            "xiaoshouyuanjiazonge",
+            "youhuijine",
+            "zhengdanzhekoulv",
+            "xiaoshoudingdanjine",
+            "dingdanmaolilv",
+            "hetongfujianshangchuan",
+            "songhuodiqu",
+            "jutidizhi",
+            "jiesuanqixian",
+            "xiaoshoudingdanmingcheng",
+            "chanpinchengbenzongjia"
+        ]
+    },
+    "assignable": false,
+    "fieldSet": [
+        {
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "xiaoshoudingdanmingxiId",
+            "label": "id主键",
+            "creatable": false,
+            "type": "PrimaryKey",
+            "referTo": null,
+            "name": "xiaoshoudingdanmingxiId"
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "createdOn",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn",
+            "referTo": null,
+            "updatable": false,
+            "label": "创建时间"
+        },
+        {
+            "idFieldFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "name": "createdBy"
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "reserved": true,
+            "name": "modifiedOn",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "label": "最近修改时间"
+        },
+        {
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "referTo": "User,",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": "Xiaoshoudingdan,",
+            "mainDetailFieldFlag": true,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "creatable": true,
+            "type": "Reference",
+            "physicalName": "mdXiaoshoudingdanId",
+            "name": "mdXiaoshoudingdanId"
+        },
+        {
+            "updatable": true,
+            "label": "选择产品",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": "Chanpinxinxi,",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xuanzechanpin",
+            "name": "xuanzechanpin",
+            "idFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "xiaoshoushuliang",
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xiaoshoushuliang",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "销售数量",
+            "creatable": true
+        },
+        {
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_xiaoshoudanjia",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "name": "xiaoshoudanjia",
+            "idFieldFlag": false,
+            "label": "销售单价(含税)/元",
+            "creatable": true
+        },
+        {
+            "physicalName": "c_chanpinchengbendanjia",
+            "reserved": false,
+            "idFieldFlag": false,
+            "creatable": true,
+            "label": "产品成本单价",
+            "type": "Money",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "chanpinchengbendanjia",
+            "updatable": true
+        },
+        {
+            "physicalName": "c_chanpinchengbenxiaoji",
+            "referTo": null,
+            "mainDetailFieldFlag": false,
+            "creatable": true,
+            "type": "Money",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "chanpinchengbenxiaoji",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "产品成本小计"
+        }
+    ]
+}

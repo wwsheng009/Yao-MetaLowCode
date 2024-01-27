@@ -1,0 +1,233 @@
+{
+    "listable": true,
+    "internalEntityFlag": false,
+    "entityCode": 1188,
+    "systemEntityFlag": false,
+    "layoutable": true,
+    "idFieldName": "cRMhuanhuoshenqingId",
+    "tags": "CRM",
+    "name": "CRMhuanhuoshenqing",
+    "label": "CRM换货申请",
+    "detailEntityFlag": false,
+    "authorizable": true,
+    "physicalName": "t_crmhuanhuoshenqing",
+    "nameField": "换货申请单编号",
+    "shareable": false,
+    "mainEntity": null,
+    "assignable": false,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "physicalName": "cRMhuanhuoshenqingId",
+            "reserved": true,
+            "name": "cRMhuanhuoshenqingId",
+            "updatable": false,
+            "label": "id主键"
+        },
+        {
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "创建时间",
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "updatable": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "name": "createdOn"
+        },
+        {
+            "physicalName": "createdBy",
+            "reserved": true,
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference"
+        },
+        {
+            "referTo": null,
+            "updatable": false,
+            "label": "最近修改时间",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedOn"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "referTo": "User,",
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "label": "修改用户",
+            "type": "Reference",
+            "reserved": true,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "ownerUser",
+            "referTo": "User,",
+            "updatable": false,
+            "reserved": true,
+            "name": "ownerUser",
+            "idFieldFlag": false,
+            "label": "所属用户",
+            "creatable": false,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "label": "所属部门",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "mainDetailFieldFlag": false,
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "label": "关联原合同",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "updatable": true,
+            "referTo": "CRMhetongdingdan,",
+            "name": "guanlianyuanhetong",
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_guanlianyuanhetong",
+            "reserved": false
+        },
+        {
+            "physicalName": "c_huanhuoyuanyin",
+            "reserved": false,
+            "idFieldFlag": false,
+            "updatable": true,
+            "label": "换货原因",
+            "creatable": true,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "huanhuoyuanyin",
+            "optionList": [
+                {
+                    "key": "产品损坏",
+                    "value": 1
+                },
+                {
+                    "key": "质量问题",
+                    "value": 2
+                },
+                {
+                    "key": "发错产品",
+                    "value": 3
+                },
+                {
+                    "key": "其他",
+                    "value": 4
+                }
+            ]
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "label": "换货申请时间",
+            "creatable": true,
+            "type": "Date",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_huanhuoshenqingshijian",
+            "name": "huanhuoshenqingshijian",
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "label": "换货申请单编号",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_huanhuoshenqingdanbianhao",
+            "reserved": false,
+            "updatable": true,
+            "referTo": null,
+            "name": "huanhuoshenqingdanbianhao",
+            "idFieldFlag": false,
+            "type": "Text"
+        },
+        {
+            "updatable": true,
+            "label": "寄送地址",
+            "creatable": true,
+            "reserved": false,
+            "physicalName": "c_jisongdizhi",
+            "referTo": null,
+            "name": "jisongdizhi",
+            "idFieldFlag": false,
+            "type": "AreaSelect",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_xiangxidizhi",
+            "name": "xiangxidizhi",
+            "updatable": true,
+            "label": "详细地址",
+            "type": "TextArea"
+        },
+        {
+            "physicalName": "c_jingbanren",
+            "referTo": "User,",
+            "updatable": true,
+            "label": "经办人",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "jingbanren",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Reference"
+        },
+        {
+            "label": "经办部门",
+            "creatable": true,
+            "type": "Reference",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_jingbanbumen",
+            "reserved": false,
+            "referTo": "Department,",
+            "name": "jingbanbumen",
+            "updatable": true
+        }
+    ]
+}

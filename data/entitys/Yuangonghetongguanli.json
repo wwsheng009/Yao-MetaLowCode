@@ -1,0 +1,388 @@
+{
+    "name": "Yuangonghetongguanli",
+    "label": "员工合同管理",
+    "layoutable": true,
+    "idFieldName": "yuangonghetongguanliId",
+    "entityCode": 1134,
+    "systemEntityFlag": false,
+    "detailEntityFlag": false,
+    "listable": true,
+    "internalEntityFlag": false,
+    "tags": "HRM人事",
+    "physicalName": "t_yuangonghetongguanli",
+    "assignable": false,
+    "authorizable": true,
+    "mainEntity": null,
+    "shareable": false,
+    "nameField": "合同编号",
+    "fieldSet": [
+        {
+            "idFieldFlag": true,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "physicalName": "yuangonghetongguanliId",
+            "name": "yuangonghetongguanliId",
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "label": "id主键",
+            "type": "PrimaryKey"
+        },
+        {
+            "reserved": true,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "DateTime",
+            "updatable": false,
+            "label": "创建时间",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "createdOn",
+            "referTo": null,
+            "name": "createdOn"
+        },
+        {
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "reserved": true,
+            "updatable": false,
+            "label": "创建用户",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "User,"
+        },
+        {
+            "physicalName": "modifiedOn",
+            "name": "modifiedOn",
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "updatable": false
+        },
+        {
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "reserved": true,
+            "name": "modifiedBy",
+            "label": "修改用户",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "reserved": true,
+            "referTo": "User,",
+            "updatable": false,
+            "idFieldFlag": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "name": "ownerUser",
+            "label": "所属用户",
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerUser"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "ownerDepartment",
+            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "Department,",
+            "name": "ownerDepartment",
+            "label": "所属部门"
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_yuangongxingming",
+            "reserved": false,
+            "referTo": "Yuangongdangan,",
+            "name": "yuangongxingming",
+            "updatable": true,
+            "type": "Reference",
+            "idFieldFlag": false,
+            "label": "员工姓名",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "Date",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_ruzhishijian",
+            "reserved": false,
+            "name": "ruzhishijian",
+            "label": "入职时间",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "physicalName": "c_yuangongzhuangtai",
+            "reserved": false,
+            "name": "yuangongzhuangtai",
+            "label": "员工状态",
+            "creatable": true,
+            "type": "Text",
+            "nameFieldFlag": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "gangwei",
+            "idFieldFlag": false,
+            "creatable": true,
+            "physicalName": "c_gangwei",
+            "reserved": false,
+            "updatable": true,
+            "label": "岗位",
+            "type": "Text",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_pinyongxingshi",
+            "referTo": null,
+            "name": "pinyongxingshi",
+            "label": "聘用形式",
+            "type": "Text",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false,
+            "updatable": true,
+            "idFieldFlag": false,
+            "creatable": true
+        },
+        {
+            "name": "hetongbianhao",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": true,
+            "physicalName": "c_hetongbianhao",
+            "reserved": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "合同编号",
+            "type": "Text"
+        },
+        {
+            "type": "Boolean",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "name": "zhuhetong",
+            "label": "主合同",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_zhuhetong",
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "label": "合同类型",
+            "type": "Option",
+            "nameFieldFlag": false,
+            "physicalName": "c_hetongleixing",
+            "name": "hetongleixing",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "creatable": true,
+            "optionList": [
+                {
+                    "key": "固定期限劳动合同",
+                    "value": 1
+                },
+                {
+                    "key": "无固定期限劳动合同",
+                    "value": 2
+                },
+                {
+                    "key": "实习协议",
+                    "value": 3
+                },
+                {
+                    "key": "劳务合同",
+                    "value": 4
+                },
+                {
+                    "key": "劳务派遣合同",
+                    "value": 5
+                },
+                {
+                    "key": "其他",
+                    "value": 6
+                }
+            ]
+        },
+        {
+            "name": "hetongkaishiriqi",
+            "type": "Date",
+            "physicalName": "c_hetongkaishiriqi",
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "合同开始日期",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "name": "hetongjieshuriqi",
+            "idFieldFlag": false,
+            "creatable": true,
+            "type": "Date",
+            "physicalName": "c_hetongjieshuriqi",
+            "reserved": false,
+            "updatable": true,
+            "label": "合同结束日期",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "physicalName": "c_hetongqiandingriqi",
+            "reserved": false,
+            "name": "hetongqiandingriqi",
+            "updatable": true,
+            "creatable": true,
+            "type": "Date",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "idFieldFlag": false,
+            "label": "合同签订日期",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "c_hetongqixian",
+            "name": "hetongqixian",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "label": "合同期限",
+            "creatable": true,
+            "type": "Option",
+            "optionList": [
+                {
+                    "key": "1年",
+                    "value": 1
+                },
+                {
+                    "key": "2年",
+                    "value": 2
+                },
+                {
+                    "key": "3年",
+                    "value": 3
+                },
+                {
+                    "key": "4年",
+                    "value": 4
+                },
+                {
+                    "key": "5年",
+                    "value": 5
+                },
+                {
+                    "key": "6年",
+                    "value": 6
+                },
+                {
+                    "key": "7年",
+                    "value": 7
+                },
+                {
+                    "key": "8年",
+                    "value": 8
+                },
+                {
+                    "key": "9年",
+                    "value": 9
+                },
+                {
+                    "key": "10年",
+                    "value": 10
+                },
+                {
+                    "key": "无期限",
+                    "value": 11
+                }
+            ]
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "name": "hetongzhuti",
+            "updatable": true,
+            "idFieldFlag": false,
+            "type": "Option",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_hetongzhuti",
+            "label": "合同主体",
+            "creatable": true,
+            "optionList": [
+                {
+                    "key": "上海极昇数科数字科技有限公司",
+                    "value": 1
+                },
+                {
+                    "key": "美乐低代码",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "label": "合同附件",
+            "type": "File",
+            "physicalName": "c_hetongfujian",
+            "idFieldFlag": false,
+            "referTo": null,
+            "name": "hetongfujian",
+            "updatable": true,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": false
+        },
+        {
+            "reserved": false,
+            "referTo": null,
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "合同备注",
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "physicalName": "c_hetongbeizhu",
+            "name": "hetongbeizhu",
+            "type": "TextArea"
+        }
+    ]
+}

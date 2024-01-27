@@ -1,0 +1,1112 @@
+{
+    "tags": "WMS",
+    "entityCode": 1105,
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "listable": true,
+    "idFieldName": "wMSjianpeimingxiId",
+    "name": "WMSjianpeimingxi",
+    "label": "WMS拣配明细",
+    "systemEntityFlag": false,
+    "internalEntityFlag": false,
+    "mainEntity": {
+        "detailEntityFlag": false,
+        "listable": true,
+        "mainEntity": null,
+        "sortedFieldSet": [
+            {
+                "fieldId": "0000002-95349392513746f2b7c858fa9ec51417",
+                "physicalName": "wMSjianpeibeiliaodanId",
+                "creatable": false,
+                "defaultMemberOfListFlag": false,
+                "name": "wMSjianpeibeiliaodanId",
+                "type": "PrimaryKey",
+                "idFieldFlag": true,
+                "entityCode": 1104,
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "nullable": false,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": null,
+                "label": "id主键",
+                "description": null,
+                "displayOrder": 0,
+                "referTo": null,
+                "referenceSetting": null
+            },
+            {
+                "label": "选择备料通知单",
+                "physicalName": "c_xuanzebeiliaotongzhidan",
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "beiliaotongzhidanbianhao",
+                            "beiliaofuzeren",
+                            "beiliaotongzhishijian"
+                        ],
+                        "entityName": "WMSbeiliaotongzhidan"
+                    }
+                ],
+                "idFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": true,
+                "entityCode": 1104,
+                "name": "xuanzebeiliaotongzhidan",
+                "fieldId": "0000002-0fdb39db29884d35af06c430dcdf2453",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "label": "WMS备料通知单",
+                        "name": "WMSbeiliaotongzhidan"
+                    }
+                ]
+            },
+            {
+                "physicalName": "c_jianpeibeiliaodanbianhao",
+                "displayOrder": 0,
+                "updatable": true,
+                "referTo": null,
+                "label": "拣配备料单编号",
+                "referenceSetting": null,
+                "nullable": true,
+                "entityCode": 1104,
+                "type": "Text",
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "maxLength": 200,
+                    "validators": [],
+                    "minLength": 0
+                },
+                "fieldId": "0000002-855a6d55f99c4e81987a88e4e6cecaf6",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "description": null,
+                "idFieldFlag": false,
+                "nameFieldFlag": true,
+                "mainDetailFieldFlag": false,
+                "name": "jianpeibeiliaodanbianhao"
+            },
+            {
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "WMScangkuxinxi",
+                        "label": "WMS仓库信息"
+                    }
+                ],
+                "fieldId": "0000002-6b4f47e886ec43b2911f043c2c9099fd",
+                "name": "beiliaocangku",
+                "label": "备料仓库",
+                "description": null,
+                "updatable": true,
+                "physicalName": "c_beiliaocangku",
+                "owner": {
+                    "label": "WMS拣配备料单",
+                    "name": "WMSjianpeibeiliaodan"
+                },
+                "nullable": true,
+                "creatable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "referenceSetting": [
+                    {
+                        "entityName": "WMScangkuxinxi",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma"
+                        ]
+                    }
+                ],
+                "entityCode": 1104,
+                "type": "Reference",
+                "displayOrder": 0,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false
+            },
+            {
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "Option",
+                "fieldViewModel": null,
+                "fieldId": "0000002-4393050edf76448694fa0bfc0fb7b856",
+                "name": "chanpinjianpeiqueren",
+                "referenceSetting": null,
+                "description": null,
+                "updatable": true,
+                "defaultMemberOfListFlag": true,
+                "label": "产品拣配确认",
+                "idFieldFlag": false,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": null,
+                "entityCode": 1104,
+                "physicalName": "c_chanpinjianpeiqueren"
+            },
+            {
+                "updatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1104,
+                "name": "jianpeibeiliaoshijian",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "displayOrder": 0,
+                "referenceSetting": null,
+                "fieldId": "0000002-2af70a7e362e411cb40c49dfd1148f7f",
+                "physicalName": "c_jianpeibeiliaoshijian",
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "label": "拣配备料时间",
+                "type": "DateTime",
+                "nullable": true,
+                "referTo": null,
+                "description": null,
+                "creatable": true
+            },
+            {
+                "type": "Picture",
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-995d4257168f4e53b2416ecd1ba98c5c",
+                "name": "paizhao",
+                "label": "拍照",
+                "physicalName": "c_paizhao",
+                "description": null,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "maxFileCount": 1,
+                    "fileMaxSize": 5,
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": "",
+                    "validators": []
+                },
+                "entityCode": 1104,
+                "owner": {
+                    "label": "WMS拣配备料单",
+                    "name": "WMSjianpeibeiliaodan"
+                },
+                "nullable": true,
+                "updatable": true,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "displayOrder": 0,
+                "creatable": true,
+                "referenceSetting": null
+            },
+            {
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldId": "0000002-0e6fac5fe2e5445fbd19afcea53cfa52",
+                "entityCode": 1104,
+                "nullable": true,
+                "physicalName": "c_jianpeifuzeren",
+                "description": null,
+                "defaultMemberOfListFlag": true,
+                "referenceSetting": [
+                    {
+                        "entityName": "User",
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle"
+                        ]
+                    }
+                ],
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "name": "jianpeifuzeren",
+                "label": "拣配负责人",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "updatable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "physicalName": "c_jianpeifuzebumen",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "name": "jianpeifuzebumen",
+                "label": "拣配负责部门",
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldId": "0000002-7f6ec99c4f1a4854a8653616fb70f0f8",
+                "type": "Reference",
+                "idFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ],
+                "entityCode": 1104,
+                "updatable": true,
+                "fieldViewModel": {
+                    "validators": [],
+                    "searchDialogWidth": 520
+                },
+                "description": null
+            },
+            {
+                "nullable": false,
+                "displayOrder": 0,
+                "referTo": null,
+                "description": null,
+                "entityCode": 1104,
+                "name": "createdOn",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "updatable": false,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldId": "0000002-66d23f6b57d24d709e86fa1c42704a03",
+                "fieldViewModel": null,
+                "physicalName": "createdOn",
+                "type": "DateTime",
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "label": "创建时间"
+            },
+            {
+                "name": "createdBy",
+                "physicalName": "createdBy",
+                "type": "Reference",
+                "description": null,
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1104,
+                "nullable": false,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "creatable": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-ee0680f805244d538049b6902c56cd53",
+                "label": "创建用户",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ]
+            },
+            {
+                "referenceSetting": null,
+                "description": null,
+                "creatable": false,
+                "updatable": false,
+                "physicalName": "modifiedOn",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1104,
+                "name": "modifiedOn",
+                "label": "最近修改时间",
+                "nameFieldFlag": false,
+                "fieldId": "0000002-dee3433c89b64c0cbc37e11322e7a525",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldViewModel": null,
+                "type": "DateTime",
+                "nullable": true,
+                "referTo": null
+            },
+            {
+                "type": "Reference",
+                "referTo": [
+                    {
+                        "label": "用户",
+                        "name": "User"
+                    }
+                ],
+                "displayOrder": 0,
+                "nullable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "entityCode": 1104,
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "description": null,
+                "fieldViewModel": null,
+                "creatable": false,
+                "fieldId": "0000002-c965a646522246b3a52c923a52399d60",
+                "name": "modifiedBy",
+                "label": "修改用户",
+                "referenceSetting": null,
+                "physicalName": "modifiedBy",
+                "updatable": false,
+                "nameFieldFlag": false
+            },
+            {
+                "name": "ownerUser",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "description": null,
+                "nullable": false,
+                "updatable": false,
+                "fieldId": "0000002-a6a197fa817742f9bc10c4b7aeb7dde1",
+                "physicalName": "ownerUser",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "fieldViewModel": null,
+                "type": "Reference",
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1104,
+                "label": "所属用户",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1104,
+                "nullable": false,
+                "updatable": false,
+                "displayOrder": 0,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "name": "ownerDepartment",
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "fieldId": "0000002-71bd633acd64454fb20619318ad9d792",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "Reference"
+            }
+        ],
+        "fieldSet": [
+            {
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "creatable": false,
+                "physicalName": "wMSjianpeibeiliaodanId",
+                "entityCode": 1104,
+                "description": null,
+                "displayOrder": 0,
+                "fieldViewModel": null,
+                "fieldId": "0000002-95349392513746f2b7c858fa9ec51417",
+                "nullable": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "label": "id主键",
+                "type": "PrimaryKey",
+                "updatable": false,
+                "idFieldFlag": true,
+                "referTo": null,
+                "name": "wMSjianpeibeiliaodanId"
+            },
+            {
+                "entityCode": 1104,
+                "idFieldFlag": false,
+                "description": null,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "type": "DateTime",
+                "displayOrder": 0,
+                "referTo": null,
+                "fieldId": "0000002-66d23f6b57d24d709e86fa1c42704a03",
+                "name": "createdOn",
+                "label": "创建时间",
+                "physicalName": "createdOn",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "referenceSetting": null,
+                "nullable": false,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null
+            },
+            {
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "nullable": false,
+                "creatable": false,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "fieldId": "0000002-ee0680f805244d538049b6902c56cd53",
+                "entityCode": 1104,
+                "name": "createdBy",
+                "label": "创建用户",
+                "type": "Reference",
+                "displayOrder": 0,
+                "physicalName": "createdBy",
+                "description": null,
+                "updatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": null
+            },
+            {
+                "referTo": null,
+                "fieldId": "0000002-dee3433c89b64c0cbc37e11322e7a525",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "DateTime",
+                "description": null,
+                "creatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "name": "modifiedOn",
+                "physicalName": "modifiedOn",
+                "displayOrder": 0,
+                "nullable": true,
+                "updatable": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1104,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "fieldViewModel": null,
+                "label": "最近修改时间"
+            },
+            {
+                "mainDetailFieldFlag": false,
+                "referenceSetting": null,
+                "name": "modifiedBy",
+                "updatable": false,
+                "idFieldFlag": false,
+                "fieldId": "0000002-c965a646522246b3a52c923a52399d60",
+                "defaultMemberOfListFlag": false,
+                "type": "Reference",
+                "description": null,
+                "nullable": true,
+                "creatable": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "entityCode": 1104,
+                "label": "修改用户",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "fieldViewModel": null,
+                "physicalName": "modifiedBy",
+                "displayOrder": 0,
+                "nameFieldFlag": false
+            },
+            {
+                "fieldId": "0000002-a6a197fa817742f9bc10c4b7aeb7dde1",
+                "physicalName": "ownerUser",
+                "description": null,
+                "updatable": false,
+                "nameFieldFlag": false,
+                "referenceSetting": null,
+                "entityCode": 1104,
+                "name": "ownerUser",
+                "displayOrder": 0,
+                "nullable": false,
+                "defaultMemberOfListFlag": false,
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "type": "Reference",
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "label": "所属用户",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "creatable": false,
+                "fieldViewModel": null
+            },
+            {
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null,
+                "type": "Reference",
+                "nullable": false,
+                "updatable": false,
+                "idFieldFlag": false,
+                "displayOrder": 0,
+                "fieldId": "0000002-71bd633acd64454fb20619318ad9d792",
+                "entityCode": 1104,
+                "name": "ownerDepartment",
+                "owner": {
+                    "label": "WMS拣配备料单",
+                    "name": "WMSjianpeibeiliaodan"
+                },
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "fieldViewModel": null,
+                "label": "所属部门",
+                "physicalName": "ownerDepartment",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "creatable": false
+            },
+            {
+                "fieldId": "0000002-0fdb39db29884d35af06c430dcdf2453",
+                "label": "选择备料通知单",
+                "description": null,
+                "mainDetailFieldFlag": false,
+                "physicalName": "c_xuanzebeiliaotongzhidan",
+                "creatable": true,
+                "referTo": [
+                    {
+                        "name": "WMSbeiliaotongzhidan",
+                        "label": "WMS备料通知单"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "entityName": "WMSbeiliaotongzhidan",
+                        "fieldList": [
+                            "beiliaotongzhidanbianhao",
+                            "beiliaofuzeren",
+                            "beiliaotongzhishijian"
+                        ]
+                    }
+                ],
+                "entityCode": 1104,
+                "name": "xuanzebeiliaotongzhidan",
+                "updatable": true,
+                "idFieldFlag": false,
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "nullable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                }
+            },
+            {
+                "label": "拣配备料单编号",
+                "nullable": true,
+                "idFieldFlag": false,
+                "referenceSetting": null,
+                "fieldId": "0000002-855a6d55f99c4e81987a88e4e6cecaf6",
+                "entityCode": 1104,
+                "creatable": true,
+                "defaultMemberOfListFlag": true,
+                "referTo": null,
+                "fieldViewModel": {
+                    "validators": [],
+                    "minLength": 0,
+                    "maxLength": 200
+                },
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "description": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "name": "jianpeibeiliaodanbianhao",
+                "physicalName": "c_jianpeibeiliaodanbianhao",
+                "type": "Text",
+                "nameFieldFlag": true
+            },
+            {
+                "entityCode": 1104,
+                "nameFieldFlag": false,
+                "referenceSetting": [
+                    {
+                        "entityName": "WMScangkuxinxi",
+                        "fieldList": [
+                            "cangkumingcheng",
+                            "cangkubianma"
+                        ]
+                    }
+                ],
+                "fieldId": "0000002-6b4f47e886ec43b2911f043c2c9099fd",
+                "physicalName": "c_beiliaocangku",
+                "nullable": true,
+                "defaultMemberOfListFlag": true,
+                "label": "备料仓库",
+                "description": null,
+                "displayOrder": 0,
+                "updatable": true,
+                "idFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "WMScangkuxinxi",
+                        "label": "WMS仓库信息"
+                    }
+                ],
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "Reference",
+                "creatable": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "name": "beiliaocangku"
+            },
+            {
+                "label": "产品拣配确认",
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "referTo": null,
+                "fieldViewModel": null,
+                "referenceSetting": null,
+                "entityCode": 1104,
+                "physicalName": "c_chanpinjianpeiqueren",
+                "displayOrder": 0,
+                "creatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "description": null,
+                "updatable": true,
+                "fieldId": "0000002-4393050edf76448694fa0bfc0fb7b856",
+                "name": "chanpinjianpeiqueren",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "Option",
+                "nullable": true
+            },
+            {
+                "nameFieldFlag": false,
+                "fieldViewModel": {
+                    "validators": []
+                },
+                "entityCode": 1104,
+                "physicalName": "c_jianpeibeiliaoshijian",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "fieldId": "0000002-2af70a7e362e411cb40c49dfd1148f7f",
+                "label": "拣配备料时间",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "DateTime",
+                "description": null,
+                "referTo": null,
+                "referenceSetting": null,
+                "name": "jianpeibeiliaoshijian",
+                "nullable": true,
+                "creatable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "defaultMemberOfListFlag": true
+            },
+            {
+                "name": "paizhao",
+                "label": "拍照",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "creatable": true,
+                "idFieldFlag": false,
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "entityCode": 1104,
+                "physicalName": "c_paizhao",
+                "type": "Picture",
+                "description": null,
+                "nullable": true,
+                "fieldViewModel": {
+                    "maxFileCount": 1,
+                    "fileMaxSize": 5,
+                    "uploadFileTypes": [
+                        "jpeg",
+                        "png",
+                        "gif"
+                    ],
+                    "uploadHint": "",
+                    "validators": []
+                },
+                "referTo": null,
+                "fieldId": "0000002-995d4257168f4e53b2416ecd1ba98c5c",
+                "displayOrder": 0,
+                "updatable": true,
+                "defaultMemberOfListFlag": false,
+                "referenceSetting": null
+            },
+            {
+                "name": "jianpeifuzeren",
+                "description": null,
+                "nullable": true,
+                "updatable": true,
+                "mainDetailFieldFlag": false,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-0e6fac5fe2e5445fbd19afcea53cfa52",
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "type": "Reference",
+                "displayOrder": 0,
+                "idFieldFlag": false,
+                "creatable": true,
+                "nameFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "entityCode": 1104,
+                "label": "拣配负责人",
+                "physicalName": "c_jianpeifuzeren",
+                "referTo": [
+                    {
+                        "name": "User",
+                        "label": "用户"
+                    }
+                ],
+                "referenceSetting": [
+                    {
+                        "fieldList": [
+                            "userName",
+                            "departmentId",
+                            "jobTitle"
+                        ],
+                        "entityName": "User"
+                    }
+                ]
+            },
+            {
+                "description": null,
+                "displayOrder": 0,
+                "nullable": true,
+                "creatable": true,
+                "idFieldFlag": false,
+                "defaultMemberOfListFlag": true,
+                "fieldViewModel": {
+                    "searchDialogWidth": 520,
+                    "validators": []
+                },
+                "fieldId": "0000002-7f6ec99c4f1a4854a8653616fb70f0f8",
+                "physicalName": "c_jianpeifuzebumen",
+                "nameFieldFlag": false,
+                "mainDetailFieldFlag": false,
+                "referTo": [
+                    {
+                        "name": "Department",
+                        "label": "部门"
+                    }
+                ],
+                "name": "jianpeifuzebumen",
+                "type": "Reference",
+                "referenceSetting": [
+                    {
+                        "entityName": "Department",
+                        "fieldList": [
+                            "departmentName",
+                            "departmentOwnerUser"
+                        ]
+                    }
+                ],
+                "owner": {
+                    "name": "WMSjianpeibeiliaodan",
+                    "label": "WMS拣配备料单"
+                },
+                "label": "拣配负责部门",
+                "updatable": true,
+                "entityCode": 1104
+            }
+        ],
+        "virtualFieldSet": [],
+        "entityId": "0000001-1ebbca68b6914a90829d5a477725217d",
+        "entityCode": 1104,
+        "layoutable": true,
+        "tags": "WMS",
+        "shareable": false,
+        "assignable": false,
+        "detailEntitySet": [
+            {
+                "name": "WMSjianpeimingxi",
+                "label": "WMS拣配明细"
+            }
+        ],
+        "idField": {
+            "name": "wMSjianpeibeiliaodanId",
+            "label": "id主键"
+        },
+        "nameField": {
+            "name": "jianpeibeiliaodanbianhao",
+            "label": "拣配备料单编号"
+        },
+        "mainDetailField": null,
+        "fieldNames": [
+            "wMSjianpeibeiliaodanId",
+            "createdOn",
+            "createdBy",
+            "modifiedOn",
+            "modifiedBy",
+            "ownerUser",
+            "ownerDepartment",
+            "xuanzebeiliaotongzhidan",
+            "jianpeibeiliaodanbianhao",
+            "beiliaocangku",
+            "chanpinjianpeiqueren",
+            "jianpeibeiliaoshijian",
+            "paizhao",
+            "jianpeifuzeren",
+            "jianpeifuzebumen"
+        ],
+        "name": "WMSjianpeibeiliaodan",
+        "label": "WMS拣配备料单",
+        "physicalName": "t_wmsjianpeibeiliaodan",
+        "authorizable": true
+    },
+    "physicalName": "t_wmsjianpeimingxi",
+    "shareable": false,
+    "assignable": false,
+    "authorizable": false,
+    "nameField": null,
+    "fieldSet": [
+        {
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "wMSjianpeimingxiId",
+            "idFieldFlag": true,
+            "creatable": false,
+            "type": "PrimaryKey",
+            "mainDetailFieldFlag": false,
+            "physicalName": "wMSjianpeimingxiId",
+            "referTo": null,
+            "updatable": false,
+            "label": "id主键"
+        },
+        {
+            "creatable": false,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn",
+            "name": "createdOn",
+            "label": "创建时间",
+            "updatable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": null
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdBy",
+            "referTo": "User,",
+            "label": "创建用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "name": "createdBy",
+            "updatable": false,
+            "idFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "physicalName": "modifiedOn",
+            "creatable": false,
+            "type": "DateTime",
+            "idFieldFlag": false,
+            "label": "最近修改时间",
+            "mainDetailFieldFlag": false,
+            "reserved": true,
+            "referTo": null,
+            "name": "modifiedOn",
+            "updatable": false
+        },
+        {
+            "label": "修改用户",
+            "creatable": false,
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "reserved": true,
+            "referTo": "User,",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "name": "modifiedBy",
+            "updatable": false
+        },
+        {
+            "updatable": false,
+            "name": "mdWMSjianpeibeiliaodanId",
+            "idFieldFlag": false,
+            "label": "主从关联Id",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "physicalName": "mdWMSjianpeibeiliaodanId",
+            "reserved": true,
+            "referTo": "WMSjianpeibeiliaodan,",
+            "type": "Reference",
+            "mainDetailFieldFlag": true
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": "WMSchanpinxinxi,",
+            "idFieldFlag": false,
+            "label": "选择产品",
+            "creatable": true,
+            "physicalName": "c_xuanzechanpin",
+            "reserved": false,
+            "name": "xuanzechanpin",
+            "updatable": true,
+            "type": "Reference",
+            "mainDetailFieldFlag": false
+        },
+        {
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": null,
+            "name": "beiliaoshuliang",
+            "updatable": true,
+            "type": "Integer",
+            "physicalName": "c_beiliaoshuliang",
+            "idFieldFlag": false,
+            "label": "本次拣配数量",
+            "creatable": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "creatable": true,
+            "type": "Reference",
+            "physicalName": "c_suoshukuwei",
+            "name": "suoshukuwei",
+            "updatable": true,
+            "idFieldFlag": false,
+            "label": "所属库位",
+            "nameFieldFlag": false,
+            "reserved": false,
+            "referTo": "WMScangweixinxi,",
+            "mainDetailFieldFlag": false
+        }
+    ]
+}
