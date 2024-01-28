@@ -2,7 +2,7 @@ const { getEntityField, toCamelCase } = Require("sys.lib");
 const { updateEntityToYao } = Require("sys.yao");
 
 const cookie =
-  "Hm_lvt_ca92074d58ebd132682f48bca00a5176=1706161011; uid=%5Bobject%20Object%5D; JSESSIONID=1454718784EE3D5F1FD8A186C089B72A";
+  "Hm_lvt_ca92074d58ebd132682f48bca00a5176=1706161011; uid=%5Bobject%20Object%5D; JSESSIONID=8E0E4117E05EBBE15E567E1036E5C8E7";
 /**
  * 下载实体定义
  *
@@ -30,23 +30,21 @@ function download(entityName) {
     );
     checkRespone(response);
     list = response.data.data;
-    list.push(
-      {
-        name: "ReportConfig",
-      },
-      {
-        name: "ApprovalConfig",
-      },
-      {
-        name: "LayoutConfig",
-      },
-      {
-        name: "MetaApi",
-      },
-      {
-        name: "Chart",
-      }
-    );
+    // 系统模型
+    [
+      "ReportConfig",
+      "ApprovalConfig",
+      "LayoutConfig",
+      "TriggerConfig",
+      "FollowUp",
+      "TodoTask",
+      "MetaApi",
+      "Chart",
+      "User",
+      "Department",
+      "Role",
+      "Team",
+    ].forEach((key) => list.push({ name: key }));
   }
   console.log(`Entity count: ${list.length}`);
   let index = 0;
@@ -345,6 +343,7 @@ function importEntity(entityName) {
         ],
       });
     }
+    
 
     if (
       typeof entity.mainEntity === "object" &&
@@ -353,9 +352,19 @@ function importEntity(entityName) {
     ) {
       entity.mainEntity = entity.mainEntity.name;
     }
-    delete entity.entityCode;
+   
     entity = updateIdFieldName(entity);
-    const entityCode = Process("models.sys.entity.create", entity);
+    // check if is the system entity
+    delete entity.entityCode;
+    let entityCode = getSystemEntityCode(entity.name);
+    if (entityCode) {
+      entity.entityCode = entityCode;
+    }
+    entityCode = Process("models.sys.entity.create", entity);
+    if (!entityCode) {
+      throw Error(`创建失败:${entity.name}`)
+    }
+    //防止存在同名的字段列表
     Process("models.sys.entity.field.deletewhere", {
       wheres: [
         {
@@ -381,4 +390,27 @@ function importEntity(entityName) {
     index++;
     console.log(`${index}/${fileList.length}:${entity.name} imported`);
   }
+}
+
+
+function getSystemEntityMap() {
+  //由于前端部分权限检查的代码绑定了实体的代码，实体名称和实体代码的映射关系保持一致
+  return {
+    ReportConfig: 45,
+    ApprovalConfig: 30,
+    LayoutConfig: 15, //布局，系统级别的实体
+    TriggerConfig: 48,
+    FollowUp: 54,
+    TodoTask: 55,
+    MetaApi: 51,
+    Chart: 52,
+    User: 21,
+    Department: 22,
+    Role: 23,
+    Team: 24,
+  };
+}
+
+function getSystemEntityCode(entityName) {
+  return getSystemEntityMap()[entityName];
 }

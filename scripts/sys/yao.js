@@ -32,10 +32,10 @@ function entityToYaoModel(entityName) {
   });
 
   if (!entity) {
-    throw Error(`Entity:${entityName} not exist`);
+    throw Error(`实体:${entityName} 不存在`);
   }
   if (!entity.fieldSet) {
-    console.log(`${entityName} has no fields!!!!!!`)
+    console.log(`实体 ${entityName} 没有字段列表!!!!!!`)
   }
   let yaoModel = {
     name: entity.name,
