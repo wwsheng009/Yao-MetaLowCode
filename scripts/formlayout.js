@@ -134,14 +134,14 @@ function createFormLayout(entityName, layoutJson) {
     layoutName: "默认表单布局",
     layoutJson,
     entityCode: entity.entityCode,
-    formUploadParam: {
-      cloudStorage: "false",
-      cloudUploadToken: "",
-      picUploadURL: "DSV['uploadServer'] + '/picture/upload'",
-      fileUploadURL: "DSV['uploadServer'] + '/file/upload'",
-      picDownloadPrefix: "/picture/get/",
-      fileDownloadPrefix: "/file/get/",
-    },
+    // formUploadParam: {
+    //   cloudStorage: "false",
+    //   cloudUploadToken: "",
+    //   picUploadURL: "DSV['uploadServer'] + '/picture/upload'",
+    //   fileUploadURL: "DSV['uploadServer'] + '/file/upload'",
+    //   picDownloadPrefix: "/picture/get/",
+    //   fileDownloadPrefix: "/file/get/",
+    // },
   });
   return formLayoutId;
 //   layoutJson = {
@@ -276,7 +276,7 @@ function getFormLayout(entityName) {
     ],
   });
   if (formLayout == null) {
-    return {
+    formLayout= {
       formLayoutId: null,
       layoutName: null,
       entityCode: null,
@@ -286,14 +286,6 @@ function getFormLayout(entityName) {
       modifiedOn: null,
       modifiedBy: null,
       optionData: {},
-      formUploadParam: {
-        cloudStorage: "false",
-        cloudUploadToken: "",
-        picUploadURL: "DSV['uploadServer'] + '/picture/upload'",
-        fileUploadURL: "DSV['uploadServer'] + '/file/upload'",
-        picDownloadPrefix: "/picture/get/",
-        fileDownloadPrefix: "/file/get/",
-      },
       entityRecord: {
         layoutJson: null,
       },
@@ -321,6 +313,14 @@ function getFormLayout(entityName) {
       }
     });
 
+    formLayout.formUploadParam ={
+      cloudStorage: "false",
+      cloudUploadToken: "",
+      picUploadURL: "DSV['uploadServer'] + '/picture/upload'",
+      fileUploadURL: "DSV['uploadServer'] + '/file/upload'",
+      picDownloadPrefix: "/picture/get/",
+      fileDownloadPrefix: "/file/get/",
+    }
     return {
       ...formLayout,
       entityRecord: formLayout,

@@ -1,8 +1,13 @@
-const { getEntityField, toCamelCase } = Require("sys.lib");
+const { getEntityField, toCamelCase, getEntityByName } = Require("sys.lib");
 const { updateEntityToYao } = Require("sys.yao");
 
-const cookie =
-  "Hm_lvt_ca92074d58ebd132682f48bca00a5176=1706161011; uid=%5Bobject%20Object%5D; JSESSIONID=8E0E4117E05EBBE15E567E1036E5C8E7";
+function getCookie() {
+  const cookie = Process("utils.env.Get", "METALOWCODE_COOKIE");
+  if (!cookie) {
+    throw Error("请维护环境变量：METALOWCODE_COOKIE");
+  }
+  return cookie;
+}
 /**
  * 下载实体定义
  *
@@ -25,7 +30,7 @@ function download(entityName) {
       `http://web1.demo.melecode.com/systemManager/getEntitySet?_=${currentTimestamp}`,
       {},
       {
-        Cookie: cookie,
+        Cookie: getCookie(),
       }
     );
     checkRespone(response);
@@ -55,10 +60,10 @@ function download(entityName) {
       index++;
       continue;
     }
-    const props = getEntityProps(entity.name, cookie);
+    const props = getEntityProps(entity.name, getCookie());
     Object.assign(entity, props);
 
-    const fieldSet = getFieldList(entity.name, cookie);
+    const fieldSet = getFieldList(entity.name, getCookie());
     Object.assign(entity, { fieldSet: fieldSet });
 
     entity = updateIdFieldName(entity);
@@ -103,7 +108,7 @@ function getEntityProps(entityName, cookie) {
     `http://web1.demo.melecode.com/systemManager/getEntityProps?entity=${entityName}&_=${currentTimestamp}`,
     {},
     {
-      Cookie: cookie,
+      Cookie: getCookie(),
     }
   );
   checkRespone(response);
@@ -122,7 +127,7 @@ function getFieldList(entityName, cookie) {
     `http://web1.demo.melecode.com/systemManager/getFieldListOfEntity?entity=${entityName}&_=${currentTimestamp}`,
     {},
     {
-      Cookie: cookie,
+      Cookie: getCookie(),
     }
   );
   checkRespone(response);
@@ -140,7 +145,7 @@ function downloadOptionFields(entityName) {
     `http://web1.demo.melecode.com/systemManager/getOptionFields?_=${currentTimestamp}`,
     {},
     {
-      Cookie: cookie,
+      Cookie: getCookie(),
     }
   );
   checkRespone(response);
@@ -203,7 +208,7 @@ function getOptionItems(entityName, field) {
     `http://web1.demo.melecode.com/systemManager/getOptionItems?entity=${entityName}&field=${field}&_=${currentTimestamp}`,
     {},
     {
-      Cookie: cookie,
+      Cookie: getCookie(),
     }
   );
   checkRespone(response);
@@ -221,7 +226,7 @@ function downloadTagFields(entityName) {
     `http://web1.demo.melecode.com/systemManager/getTagFields?_=${currentTimestamp}`,
     {},
     {
-      Cookie: cookie,
+      Cookie: getCookie(),
     }
   );
   checkRespone(response);
@@ -274,11 +279,11 @@ function downloadTagFields(entityName) {
 function getTagItems(entityName, field) {
   var currentTimestamp = new Date().getTime();
 
-  const response = http.Get(
+  const response = http.post(
     `http://web1.demo.melecode.com/systemManager/getTagItems?entity=${entityName}&field=${field}&_=${currentTimestamp}`,
     {},
     {
-      Cookie: cookie,
+      Cookie: getCookie(),
     }
   );
   checkRespone(response);
@@ -292,8 +297,9 @@ function checkRespone(response) {
   }
 
   if (response.data.code !== 200) {
-    const message = response.data.message || response.data.error;
-    console.log(message);
+    const message =
+      response.data.message || response.data.error || response.statusText;
+    console.log(response);
 
     throw Error(message);
   }
@@ -343,7 +349,6 @@ function importEntity(entityName) {
         ],
       });
     }
-    
 
     if (
       typeof entity.mainEntity === "object" &&
@@ -352,7 +357,7 @@ function importEntity(entityName) {
     ) {
       entity.mainEntity = entity.mainEntity.name;
     }
-   
+
     entity = updateIdFieldName(entity);
     // check if is the system entity
     delete entity.entityCode;
@@ -362,7 +367,7 @@ function importEntity(entityName) {
     }
     entityCode = Process("models.sys.entity.create", entity);
     if (!entityCode) {
-      throw Error(`创建失败:${entity.name}`)
+      throw Error(`创建失败:${entity.name}`);
     }
     //防止存在同名的字段列表
     Process("models.sys.entity.field.deletewhere", {
@@ -392,7 +397,6 @@ function importEntity(entityName) {
   }
 }
 
-
 function getSystemEntityMap() {
   //由于前端部分权限检查的代码绑定了实体的代码，实体名称和实体代码的映射关系保持一致
   return {
@@ -402,6 +406,7 @@ function getSystemEntityMap() {
     TriggerConfig: 48,
     FollowUp: 54,
     TodoTask: 55,
+    FormLayout: 8,
     MetaApi: 51,
     Chart: 52,
     User: 21,
@@ -413,4 +418,182 @@ function getSystemEntityMap() {
 
 function getSystemEntityCode(entityName) {
   return getSystemEntityMap()[entityName];
+}
+
+/**
+ * yao run scripts.systemmanager_import.downloadFormLayout
+ * @param {string|null} entityName
+ */
+function downloadFormLayout(entityName) {
+  let entiyList = [];
+  if (entityName) {
+    entiyList.push(entityName);
+  } else {
+    const list = Process("models.sys.entity.get", {
+      select: ["name"],
+      limit: 10000,
+    });
+    list.forEach((l) => entiyList.push(l.name));
+  }
+
+  let index = 0;
+  entiyList.forEach((name) => {
+    getFormLayout(name);
+
+    index++;
+    console.log(`${index}/${entiyList.length}:${name} form layout downlaod`);
+    Process("utils.time.Sleep", 1000);
+  });
+}
+/**
+ * yao run scripts.systemmanager_import.getFormLayout 'User'
+ * @param {string} entityName
+ * @returns
+ */
+function getFormLayout(entityName) {
+  var currentTimestamp = new Date().getTime();
+  const entity = getEntityByName(entityName);
+  if (!entity) {
+    throw Error(`实体${entityName}不存在`);
+  }
+  const response = http.Get(
+    `http://web1.demo.melecode.com/formLayout/get?entity=${entityName}&_=${currentTimestamp}`,
+    {},
+    {
+      Cookie: getCookie(),
+    }
+  );
+  checkRespone(response);
+  const layoutData = response.data.data;
+  // console.log(layoutData);
+  if (!layoutData || typeof layoutData !== "object" || !layoutData.layoutJson) {
+    return;
+  }
+  Process("models.sys.form.layout.deletewhere", {
+    wheres: [
+      {
+        column: "entityCode",
+        value: entity.entityCode,
+      },
+    ],
+  });
+  const layoutForm = {
+    layoutName: layoutData.layoutName,
+    entityCode: entity.entityCode,
+    layoutJson: layoutData.layoutJson,
+  };
+
+  Process("models.sys.form.layout.save", layoutForm);
+  const fname = `/formlayout/${entityName}.json`;
+
+  layoutForm.entityLabel = entity.label;
+  // for good view
+  // layoutForm.layoutJson = JSON.parse(layoutForm.layoutJson)
+  Process("fs.system.WriteFile", fname, JSON.stringify(layoutForm, null, 4));
+
+
+  // let data = {
+  //   formLayoutId: "0000008-8c49a51e848f4421b24d86ed29f6db10",
+  //   layoutName: "默认表单布局",
+  //   entityCode: 21,
+  //   layoutJson:'',
+  //   createdOn: "2023-10-12 13:32:22",
+  //   createdBy: "0000021-00000000000000000000000000000001",
+  //   modifiedOn: "2023-10-17 11:35:36",
+  //   modifiedBy: "0000021-00000000000000000000000000000001",
+  //   optionData: {
+  //     jobTitle: [
+  //       {
+  //         value: 4,
+  //         label: "总监",
+  //         displayOrder: 1,
+  //       },
+  //       {
+  //         value: 2,
+  //         label: "主管",
+  //         displayOrder: 2,
+  //       },
+  //       {
+  //         value: 3,
+  //         label: "经理",
+  //         displayOrder: 3,
+  //       },
+  //       {
+  //         value: 5,
+  //         label: "部长",
+  //         displayOrder: 4,
+  //       },
+  //       {
+  //         value: 1,
+  //         label: "员工",
+  //         displayOrder: 5,
+  //       },
+  //       {
+  //         value: 6,
+  //         label: "a",
+  //         displayOrder: 6,
+  //       },
+  //       {
+  //         value: 7,
+  //         label: "测试",
+  //         displayOrder: 7,
+  //       },
+  //     ],
+  //     aaaaaa: [
+  //       {
+  //         value: 1,
+  //         label: "11",
+  //         displayOrder: 1,
+  //       },
+  //       {
+  //         value: 2,
+  //         label: "222",
+  //         displayOrder: 2,
+  //       },
+  //       {
+  //         value: 3,
+  //         label: "33",
+  //         displayOrder: 3,
+  //       },
+  //       {
+  //         value: 4,
+  //         label: "111",
+  //         displayOrder: 4,
+  //       },
+  //     ],
+  //     yonghuxingbie: [
+  //       {
+  //         value: 1,
+  //         label: "男",
+  //         displayOrder: 1,
+  //       },
+  //       {
+  //         value: 2,
+  //         label: "女",
+  //         displayOrder: 2,
+  //       },
+  //     ],
+  //   },
+  //   formUploadParam: {
+  //     cloudStorage: "false",
+  //     cloudUploadToken: "",
+  //     picUploadURL: "DSV['uploadServer'] + '/picture/upload'",
+  //     fileUploadURL: "DSV['uploadServer'] + '/file/upload'",
+  //     picDownloadPrefix: "/picture/get/",
+  //     fileDownloadPrefix: "/file/get/",
+  //   },
+  //   entityRecord: {
+  //     modifiedOn: "2023-10-17 11:35:36",
+  //     entityCode: 21,
+  //     formLayoutId: "0000008-8c49a51e848f4421b24d86ed29f6db10",
+  //     createdBy: "0000021-00000000000000000000000000000001",
+  //     modifiedBy: "0000021-00000000000000000000000000000001",
+  //     layoutJson:
+  //       '',
+  //     createdOn: "2023-10-12 13:32:22",
+  //     layoutName: "默认表单布局",
+  //   },
+  // };
+
+  // return response.data.data;
 }
