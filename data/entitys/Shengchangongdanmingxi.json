@@ -1,1067 +1,243 @@
 {
-    "entityCode": 1214,
-    "systemEntityFlag": false,
-    "detailEntityFlag": true,
-    "idFieldName": "shengchangongdanmingxiId",
-    "internalEntityFlag": false,
-    "tags": "ERP(离散制造-MTO）",
     "name": "Shengchangongdanmingxi",
     "label": "生产工单明细",
+    "entityCode": 1214,
+    "detailEntityFlag": true,
+    "idFieldName": "shengchangongdanmingxiId",
+    "systemEntityFlag": false,
     "layoutable": true,
     "listable": true,
+    "internalEntityFlag": false,
+    "tags": "ERP(离散制造-MTO）",
+    "authorizable": false,
+    "shareable": false,
+    "mainEntity": "ERPshengchangongdan",
+    "physicalName": "t_shengchangongdanmingxi",
     "nameField": null,
     "assignable": false,
-    "shareable": false,
-    "physicalName": "t_shengchangongdanmingxi",
-    "mainEntity": {
-        "assignable": false,
-        "fieldSet": [
-            {
-                "fieldId": "0000002-27ca0590bd6c476a8b1a828a4ac0259d",
-                "name": "eRPshengchangongdanId",
-                "physicalName": "eRPshengchangongdanId",
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "entityCode": 1200,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "id主键",
-                "type": "PrimaryKey",
-                "description": null,
-                "referTo": null
-            },
-            {
-                "idFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1200,
-                "name": "createdOn",
-                "type": "DateTime",
-                "description": null,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-b5b4dd495b0d41289acac05edf963449",
-                "physicalName": "createdOn",
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "label": "创建时间",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "nullable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "entityCode": 1200,
-                "label": "创建用户",
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-14fdeb5ee90d42cf9d65dfa5f7fe3577",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "nullable": false,
-                "physicalName": "createdBy",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "type": "Reference",
-                "creatable": false,
-                "name": "createdBy"
-            },
-            {
-                "displayOrder": 0,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "description": null,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-947cda5bd5ad4d8e990138207a94dd4d",
-                "entityCode": 1200,
-                "label": "最近修改时间",
-                "physicalName": "modifiedOn",
-                "type": "DateTime",
-                "nameFieldFlag": false,
-                "name": "modifiedOn",
-                "nullable": true,
-                "creatable": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "referenceSetting": null
-            },
-            {
-                "nullable": true,
-                "creatable": false,
-                "referenceSetting": null,
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "physicalName": "modifiedBy",
-                "type": "Reference",
-                "description": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-44d2078d0ae748b4b6d2030a1a55a2b5",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1200,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null
-            },
-            {
-                "description": null,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "fieldId": "0000002-9db2b6c242964185921fb59907fce5d8",
-                "entityCode": 1200,
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "name": "ownerUser",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "referenceSetting": null,
-                "updatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-132a7019ed774eee8f6a46d703cb20b8",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "type": "Reference",
-                "updatable": false,
-                "fieldViewModel": null,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1200,
-                "label": "所属部门",
-                "description": null,
-                "nullable": false,
-                "name": "ownerDepartment",
-                "physicalName": "ownerDepartment",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "name": "xuanzeshengchanjihua",
-                "description": null,
-                "displayOrder": 0,
-                "entityCode": 1200,
-                "label": "选择生产计划",
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "referTo": [
-                    {
-                        "name": "Shengchanjihua",
-                        "label": "生产计划"
-                    }
-                ],
-                "fieldId": "0000002-d94504b6f2e64098863c0b4ec3d1e662",
-                "physicalName": "c_xuanzeshengchanjihua",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "type": "Reference",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Shengchanjihua",
-                        "fieldList": [
-                            "xuanzexiaoshoudingdan",
-                            "xiaoshoudingdanmingcheng",
-                            "xiaoshoudingdanbianhao",
-                            "kehumingcheng",
-                            "shengchanjihuamingcheng",
-                            "jihuakaishiriqi",
-                            "jihuawangongriqi"
-                        ]
-                    }
-                ]
-            },
-            {
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "Team",
-                        "label": "团队"
-                    }
-                ],
-                "fieldId": "0000002-dce7eed2e40e45e190271a1a76a723fe",
-                "entityCode": 1200,
-                "label": "生产班组",
-                "description": null,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Team",
-                        "fieldList": [
-                            "teamName",
-                            "principalId"
-                        ]
-                    }
-                ],
-                "name": "shengchanbanzu",
-                "physicalName": "c_shengchanbanzu",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false
-            },
-            {
-                "updatable": true,
-                "referTo": null,
-                "name": "gongdankaishiriqi",
-                "description": null,
-                "displayOrder": 0,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-618cc66d2b0047e6bab2f8c4c90aa25b",
-                "label": "工单开始日期",
-                "physicalName": "c_gongdankaishiriqi",
-                "referenceSetting": null,
-                "defaultMemberOfListFlag": true,
-                "type": "Date",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "entityCode": 1200
-            },
-            {
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "type": "Date",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "physicalName": "c_gongdanwangongriqi",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "nullable": true,
-                "fieldId": "0000002-2270003b68b349969493be1b12fb7719",
-                "entityCode": 1200,
-                "label": "工单完工日期",
-                "referTo": null,
-                "name": "gongdanwangongriqi",
-                "displayOrder": 0,
-                "creatable": true
-            },
-            {
-                "type": "Option",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldViewModel": null,
-                "entityCode": 1200,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "physicalName": "c_gongdanzhuangtai",
-                "updatable": true,
-                "description": null,
-                "idFieldFlag": false,
-                "fieldId": "0000002-bbcf4afdf4a84fd7a178739d1acf4ad4",
-                "name": "gongdanzhuangtai",
-                "nullable": false,
-                "creatable": true,
-                "referenceSetting": null,
-                "label": "工单状态",
-                "displayOrder": 0
-            },
-            {
-                "fieldId": "0000002-d950c5266ae54bbd926d0114054371da",
-                "description": null,
-                "idFieldFlag": false,
-                "name": "shengchangongdanmingcheng",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [],
-                "entityCode": 1200,
-                "label": "生产工单名称",
-                "physicalName": "c_shengchangongdanmingcheng",
-                "nameFieldFlag": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "type": "Text",
-                "nullable": false,
-                "creatable": true,
-                "updatable": true
-            },
-            {
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "label": "生产工单编号",
-                "physicalName": "c_shengchangongdanbianhao",
-                "referTo": null,
-                "entityCode": 1200,
-                "nullable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-3a0799f0153e4fa0b9454dc326ff0f55",
-                "name": "shengchangongdanbianhao",
-                "type": "Text",
-                "description": null,
-                "creatable": true,
-                "updatable": true
-            },
-            {
-                "creatable": true,
-                "nameFieldFlag": false,
-                "name": "chanchengpinpicihao",
-                "physicalName": "c_chanchengpinpicihao",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "fieldId": "0000002-905514707ad2475686650bc737ba5e11",
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1200,
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "label": "产成品批次号",
-                "type": "Text",
-                "displayOrder": 0
-            }
-        ],
-        "shareable": false,
-        "mainEntity": null,
-        "fieldNames": [
-            "eRPshengchangongdanId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "xuanzeshengchanjihua",
-            "shengchanbanzu",
-            "gongdankaishiriqi",
-            "gongdanwangongriqi",
-            "gongdanzhuangtai",
-            "shengchangongdanmingcheng",
-            "shengchangongdanbianhao",
-            "chanchengpinpicihao"
-        ],
-        "entityId": "0000001-9dddf263e4604260ab05056983cd052c",
-        "detailEntityFlag": false,
-        "layoutable": true,
-        "authorizable": true,
-        "mainDetailField": null,
-        "virtualFieldSet": [],
-        "name": "ERPshengchangongdan",
-        "physicalName": "t_erpshengchangongdan",
-        "listable": true,
-        "tags": "ERP(离散制造-MTO）",
-        "detailEntitySet": [
-            {
-                "name": "Shengchangongdanmingxi",
-                "label": "生产工单明细"
-            }
-        ],
-        "sortedFieldSet": [
-            {
-                "description": null,
-                "nullable": false,
-                "label": "id主键",
-                "physicalName": "eRPshengchangongdanId",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-27ca0590bd6c476a8b1a828a4ac0259d",
-                "name": "eRPshengchangongdanId",
-                "displayOrder": 0,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "type": "PrimaryKey",
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1200,
-                "idFieldFlag": true
-            },
-            {
-                "type": "Reference",
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Shengchanjihua",
-                        "fieldList": [
-                            "xuanzexiaoshoudingdan",
-                            "xiaoshoudingdanmingcheng",
-                            "xiaoshoudingdanbianhao",
-                            "kehumingcheng",
-                            "shengchanjihuamingcheng",
-                            "jihuakaishiriqi",
-                            "jihuawangongriqi"
-                        ]
-                    }
-                ],
-                "entityCode": 1200,
-                "label": "选择生产计划",
-                "physicalName": "c_xuanzeshengchanjihua",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "description": null,
-                "fieldId": "0000002-d94504b6f2e64098863c0b4ec3d1e662",
-                "name": "xuanzeshengchanjihua",
-                "referTo": [
-                    {
-                        "name": "Shengchanjihua",
-                        "label": "生产计划"
-                    }
-                ]
-            },
-            {
-                "fieldId": "0000002-dce7eed2e40e45e190271a1a76a723fe",
-                "entityCode": 1200,
-                "mainDetailFieldFlag": false,
-                "physicalName": "c_shengchanbanzu",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "nullable": true,
-                "updatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Team",
-                        "fieldList": [
-                            "teamName",
-                            "principalId"
-                        ]
-                    }
-                ],
-                "name": "shengchanbanzu",
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "label": "生产班组",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Team",
-                        "label": "团队"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "label": "工单开始日期",
-                "description": null,
-                "displayOrder": 0,
-                "referTo": null,
-                "fieldId": "0000002-618cc66d2b0047e6bab2f8c4c90aa25b",
-                "physicalName": "c_gongdankaishiriqi",
-                "nameFieldFlag": false,
-                "type": "Date",
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "entityCode": 1200,
-                "name": "gongdankaishiriqi",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            },
-            {
-                "physicalName": "c_gongdanwangongriqi",
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "description": null,
-                "entityCode": 1200,
-                "label": "工单完工日期",
-                "type": "Date",
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-2270003b68b349969493be1b12fb7719",
-                "name": "gongdanwangongriqi",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "updatable": true,
-                "referTo": null
-            },
-            {
-                "label": "工单状态",
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-bbcf4afdf4a84fd7a178739d1acf4ad4",
-                "updatable": true,
-                "idFieldFlag": false,
-                "nullable": false,
-                "physicalName": "c_gongdanzhuangtai",
-                "type": "Option",
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1200,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "name": "gongdanzhuangtai"
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [],
-                "entityCode": 1200,
-                "name": "shengchangongdanmingcheng",
-                "label": "生产工单名称",
-                "physicalName": "c_shengchangongdanmingcheng",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "creatable": true,
-                "updatable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "fieldId": "0000002-d950c5266ae54bbd926d0114054371da",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": true,
-                "referTo": null,
-                "type": "Text"
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-3a0799f0153e4fa0b9454dc326ff0f55",
-                "entityCode": 1200,
-                "label": "生产工单编号",
-                "physicalName": "c_shengchangongdanbianhao",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "nullable": false,
-                "name": "shengchangongdanbianhao",
-                "type": "Text",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "idFieldFlag": false,
-                "referTo": null,
-                "description": null,
-                "displayOrder": 0,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                }
-            },
-            {
-                "entityCode": 1200,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "mainDetailFieldFlag": false,
-                "name": "chanchengpinpicihao",
-                "physicalName": "c_chanchengpinpicihao",
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-905514707ad2475686650bc737ba5e11",
-                "type": "Text",
-                "nullable": true,
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "label": "产成品批次号",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false
-            },
-            {
-                "label": "创建时间",
-                "type": "DateTime",
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-b5b4dd495b0d41289acac05edf963449",
-                "physicalName": "createdOn",
-                "name": "createdOn",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldViewModel": null,
-                "entityCode": 1200,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "nullable": false,
-                "creatable": false,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "entityCode": 1200,
-                "label": "创建用户",
-                "displayOrder": 0,
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "name": "createdBy",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "type": "Reference",
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-14fdeb5ee90d42cf9d65dfa5f7fe3577",
-                "physicalName": "createdBy",
-                "nameFieldFlag": false,
-                "updatable": false,
-                "referenceSetting": null
-            },
-            {
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1200,
-                "name": "modifiedOn",
-                "nullable": true,
-                "creatable": false,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-947cda5bd5ad4d8e990138207a94dd4d",
-                "physicalName": "modifiedOn",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "label": "最近修改时间",
-                "type": "DateTime",
-                "mainDetailFieldFlag": false
-            },
-            {
-                "physicalName": "modifiedBy",
-                "type": "Reference",
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "name": "modifiedBy",
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "nullable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1200,
-                "label": "修改用户",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-44d2078d0ae748b4b6d2030a1a55a2b5",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null
-            },
-            {
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "ownerUser",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-9db2b6c242964185921fb59907fce5d8",
-                "entityCode": 1200,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "type": "Reference",
-                "description": null,
-                "updatable": false,
-                "nullable": false,
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "fieldId": "0000002-132a7019ed774eee8f6a46d703cb20b8",
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1200,
-                "owner": {
-                    "name": "ERPshengchangongdan",
-                    "label": "ERP生产工单"
-                },
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "type": "Reference",
-                "description": null,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "physicalName": "ownerDepartment",
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            }
-        ],
-        "label": "ERP生产工单",
-        "entityCode": 1200,
-        "idField": {
-            "name": "eRPshengchangongdanId",
-            "label": "id主键"
-        },
-        "nameField": {
-            "name": "shengchangongdanmingcheng",
-            "label": "生产工单名称"
-        }
-    },
-    "authorizable": false,
     "fieldSet": [
         {
+            "referTo": null,
+            "displayOrder": 0,
+            "updatable": false,
             "idFieldFlag": true,
-            "label": "id主键",
-            "creatable": false,
-            "type": "PrimaryKey",
-            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-3834ecbcbe704ed1a904904870f60c06",
+            "entityCode": 1214,
             "physicalName": "shengchangongdanmingxiId",
-            "reserved": true,
-            "referTo": null,
-            "name": "shengchangongdanmingxiId",
-            "updatable": false,
-            "mainDetailFieldFlag": false
-        },
-        {
-            "physicalName": "createdOn",
-            "name": "createdOn",
-            "label": "创建时间",
-            "type": "DateTime",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "type": "PrimaryKey",
+            "description": null,
             "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
-            "updatable": false,
-            "idFieldFlag": false
+            "nullable": false,
+            "creatable": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "name": "shengchangongdanmingxiId",
+            "label": "id主键"
         },
         {
+            "label": "创建时间",
+            "defaultMemberOfListFlag": false,
+            "displayOrder": 0,
             "updatable": false,
+            "referTo": null,
+            "entityCode": 1214,
+            "physicalName": "createdOn",
+            "description": null,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "name": "createdOn",
+            "nullable": false,
             "creatable": false,
             "mainDetailFieldFlag": false,
-            "reserved": true,
-            "physicalName": "createdBy",
-            "referTo": "User,",
-            "name": "createdBy",
-            "idFieldFlag": false,
-            "label": "创建用户",
-            "type": "Reference",
+            "fieldId": "0000002-9cacac4b8fed43158cfa4012c7e74989",
+            "type": "DateTime",
             "nameFieldFlag": false
         },
         {
             "creatable": false,
-            "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
+            "displayOrder": 0,
+            "nullable": false,
             "updatable": false,
-            "label": "最近修改时间",
-            "physicalName": "modifiedOn",
-            "name": "modifiedOn",
-            "idFieldFlag": false
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "fieldId": "0000002-ce726ef04f74405fa975ec565ec77eb1",
+            "entityCode": 1214,
+            "name": "createdBy",
+            "type": "Reference",
+            "description": null,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "label": "创建用户",
+            "physicalName": "createdBy",
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null
         },
         {
+            "type": "DateTime",
             "creatable": false,
-            "mainDetailFieldFlag": false,
-            "physicalName": "modifiedBy",
-            "reserved": true,
-            "referTo": "User,",
-            "name": "modifiedBy",
-            "type": "Reference",
-            "nameFieldFlag": false,
             "updatable": false,
             "idFieldFlag": false,
-            "label": "修改用户"
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "name": "modifiedOn",
+            "physicalName": "modifiedOn",
+            "referenceSetting": null,
+            "entityCode": 1214,
+            "referTo": null,
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-7ea043852d9d4dab87fa2d2f0360210b",
+            "label": "最近修改时间"
+        },
+        {
+            "fieldViewModel": null,
+            "name": "modifiedBy",
+            "displayOrder": 0,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "type": "Reference",
+            "creatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1214,
+            "description": null,
+            "nullable": true,
+            "updatable": false,
+            "fieldId": "0000002-380e76803be6493fa64c10f7d6ec2a88",
+            "label": "修改用户",
+            "physicalName": "modifiedBy"
         },
         {
             "label": "主从关联Id",
-            "creatable": true,
-            "mainDetailFieldFlag": true,
-            "name": "mdERPshengchangongdanId",
-            "updatable": false,
-            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
             "referTo": "ERPshengchangongdan,",
-            "type": "Reference",
-            "nameFieldFlag": false,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-ff01e99a922045f99f5955555da8a998",
+            "name": "mdERPshengchangongdanId",
+            "description": null,
+            "creatable": true,
+            "referenceSetting": null,
             "physicalName": "mdERPshengchangongdanId",
-            "reserved": true
-        },
-        {
-            "updatable": true,
-            "label": "产品名称",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "reserved": false,
-            "physicalName": "c_chanpinmingcheng",
-            "referTo": "ERPchanpinxinxi,",
-            "name": "chanpinmingcheng",
-            "idFieldFlag": false,
+            "nullable": false,
+            "updatable": false,
+            "mainDetailFieldFlag": true,
+            "entityCode": 1214,
             "type": "Reference",
-            "nameFieldFlag": false
+            "displayOrder": 0
         },
         {
-            "referTo": null,
+            "creatable": true,
             "updatable": true,
-            "label": "本次派工数量",
-            "mainDetailFieldFlag": false,
+            "referenceSetting": [
+                {
+                    "entityName": "ERPchanpinxinxi",
+                    "fieldList": [
+                        "chanpinmingcheng",
+                        "chanpinbianma",
+                        "chanpinleixing",
+                        "chanpinshuxing",
+                        "pinpai",
+                        "guigexinghao"
+                    ]
+                }
+            ],
+            "label": "产品名称",
+            "type": "Reference",
+            "description": null,
+            "nullable": false,
             "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "entityCode": 1214,
+            "name": "chanpinmingcheng",
+            "physicalName": "c_chanpinmingcheng",
+            "displayOrder": 0,
+            "fieldId": "0000002-2b1362e0aad94abf83b9ea8ddb78a595",
+            "defaultMemberOfListFlag": true,
+            "referTo": "ERPchanpinxinxi,",
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            }
+        },
+        {
+            "fieldId": "0000002-6ccbd4509a494fb79a4f614eb6cc653f",
+            "entityCode": 1214,
             "physicalName": "c_bencipaigongshuliang",
-            "reserved": false,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": true,
             "name": "bencipaigongshuliang",
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "Integer"
-        },
-        {
-            "reserved": false,
-            "name": "kaigongshijian",
-            "label": "开工时间",
-            "creatable": true,
+            "description": null,
             "nameFieldFlag": false,
-            "physicalName": "c_kaigongshijian",
-            "idFieldFlag": false,
-            "type": "Date",
+            "label": "本次派工数量",
+            "type": "Integer",
+            "displayOrder": 0,
             "mainDetailFieldFlag": false,
-            "referTo": null,
-            "updatable": true
-        },
-        {
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_wangongshijian",
-            "reserved": false,
-            "referTo": null,
-            "idFieldFlag": false,
-            "label": "完工时间",
-            "type": "Date",
-            "nameFieldFlag": false,
-            "name": "wangongshijian",
+            "nullable": false,
+            "creatable": true,
             "updatable": true,
-            "creatable": true
+            "referTo": null,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "referenceSetting": null
+        },
+        {
+            "creatable": true,
+            "referTo": null,
+            "type": "Date",
+            "displayOrder": 0,
+            "nullable": true,
+            "fieldViewModel": {
+                "validators": []
+            },
+            "fieldId": "0000002-e30a673436b04c9c9641d62f8fdae8a4",
+            "entityCode": 1214,
+            "physicalName": "c_kaigongshijian",
+            "name": "kaigongshijian",
+            "mainDetailFieldFlag": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referenceSetting": [],
+            "label": "开工时间",
+            "description": null,
+            "updatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "type": "Date",
+            "updatable": true,
+            "description": null,
+            "nullable": true,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "validators": []
+            },
+            "fieldId": "0000002-47c2d183ce104b54aa750cf14129e308",
+            "entityCode": 1214,
+            "label": "完工时间",
+            "displayOrder": 0,
+            "defaultMemberOfListFlag": true,
+            "name": "wangongshijian",
+            "physicalName": "c_wangongshijian",
+            "creatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "referenceSetting": null
         }
     ]
 }

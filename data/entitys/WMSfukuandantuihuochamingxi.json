@@ -1,1150 +1,197 @@
 {
-    "entityCode": 1084,
-    "systemEntityFlag": false,
     "internalEntityFlag": false,
     "tags": "WMS",
     "name": "WMSfukuandantuihuochamingxi",
     "label": "WMS付款单退货产品明细",
+    "entityCode": 1084,
+    "systemEntityFlag": false,
+    "idFieldName": "wMSfukuandantuihuochamingxiId",
     "detailEntityFlag": true,
     "layoutable": true,
     "listable": true,
-    "idFieldName": "wMSfukuandantuihuochamingxiId",
     "nameField": null,
+    "authorizable": false,
+    "shareable": false,
+    "mainEntity": "WMSfukuandan",
     "assignable": false,
     "physicalName": "t_wmsfukuandantuihuochamingxi",
-    "shareable": false,
-    "mainEntity": {
-        "nameField": {
-            "name": "fukuandanhao",
-            "label": "付款单号"
-        },
-        "label": "WMS付款单",
-        "listable": true,
-        "virtualFieldSet": [],
-        "idField": {
-            "name": "wMSfukuandanId",
-            "label": "id主键"
-        },
-        "sortedFieldSet": [
-            {
-                "displayOrder": 0,
-                "nullable": false,
-                "physicalName": "wMSfukuandanId",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "type": "PrimaryKey",
-                "name": "wMSfukuandanId",
-                "referTo": null,
-                "description": null,
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-7723a869d04c47528c2b83a173ed4aca",
-                "entityCode": 1062,
-                "label": "id主键",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "creatable": false,
-                "idFieldFlag": true,
-                "nameFieldFlag": false
-            },
-            {
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "WMSzhangkuanduizhang",
-                        "label": "WMS账款对账"
-                    }
-                ],
-                "fieldId": "0000002-1d6fbabed968408d8ad5e131114df74d",
-                "entityCode": 1062,
-                "name": "duizhangdan",
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": true,
-                "physicalName": "c_duizhangdan",
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSzhangkuanduizhang",
-                        "fieldList": [
-                            "gongyingshangmingcheng"
-                        ]
-                    }
-                ],
-                "label": "选择对账单",
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "fieldId": "0000002-87f0bafff6114c02b198df9b8d81da51",
-                "type": "Text",
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "fukuandanhao",
-                "label": "付款单号",
-                "displayOrder": 0,
-                "nameFieldFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referTo": null,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1062,
-                "physicalName": "c_fukuandanhao",
-                "referenceSetting": null
-            },
-            {
-                "label": "选择进项发票",
-                "nullable": true,
-                "referTo": [
-                    {
-                        "name": "WMSjinxiangfapiao",
-                        "label": "WMS进项发票"
-                    }
-                ],
-                "fieldId": "0000002-7aa406b7e359475db14f32bb9bed4f5f",
-                "entityCode": 1062,
-                "defaultMemberOfListFlag": true,
-                "description": null,
-                "updatable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSjinxiangfapiao",
-                        "fieldList": [
-                            "fapiaofujianshangchuan",
-                            "fapiaojineanshuuan"
-                        ]
-                    }
-                ],
-                "physicalName": "c_xuanzejinxiangfapiao",
-                "displayOrder": 0,
-                "type": "Reference",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "name": "xuanzejinxiangfapiao",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                }
-            },
-            {
-                "label": "本次付款金额合计/元",
-                "type": "Money",
-                "nullable": true,
-                "creatable": true,
-                "referTo": null,
-                "fieldId": "0000002-a861d6e218534e0ebc659e0a1baf462f",
-                "name": "bencifukuanjinehejiuan",
-                "physicalName": "c_bencifukuanjinehejiuan",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "entityCode": 1062,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999
-                }
-            },
-            {
-                "fieldId": "0000002-80a21ce713084331a523f726c6fe84b6",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "referenceSetting": null,
-                "name": "fukuanfangshi",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1062,
-                "physicalName": "c_fukuanfangshi",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "label": "付款方式",
-                "type": "Option",
-                "description": null,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": null
-            },
-            {
-                "physicalName": "c_fukuanshijian",
-                "type": "DateTime",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-b18d656311d24e7aa0fe8a9f62706dc0",
-                "nullable": true,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1062,
-                "label": "付款时间",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "name": "fukuanshijian",
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            },
-            {
-                "fieldId": "0000002-045d1243c72944a989cb9d984959afdb",
-                "physicalName": "c_yinhangfukuanhuidan",
-                "type": "File",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1062,
-                "nullable": true,
-                "updatable": true,
-                "fieldViewModel": {
-                    "uploadHint": "",
-                    "validators": [],
-                    "maxFileCount": 3,
-                    "fileMaxSize": 5,
-                    "uploadFileTypes": []
-                },
-                "name": "yinhangfukuanhuidan",
-                "label": "银行付款回单",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "displayOrder": 0,
-                "creatable": true,
-                "referenceSetting": null
-            },
-            {
-                "name": "jingbanren",
-                "physicalName": "c_jingbanren",
-                "description": null,
-                "creatable": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "fieldId": "0000002-a63b00609ca0425aaae0775bbf5b873e",
-                "entityCode": 1062,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "label": "经办人",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId",
-                            "jobTitle"
-                        ]
-                    }
-                ]
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "name": "jingbanrenguishubumen",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-380b4e6ed640436ba5ece583541b4bb8",
-                "physicalName": "c_jingbanrenguishubumen",
-                "type": "Reference",
-                "updatable": true,
-                "label": "经办人归属部门",
-                "nullable": true,
-                "creatable": true,
-                "entityCode": 1062,
-                "description": null
-            },
-            {
-                "fieldId": "0000002-281df8a3bb9b44e3b5147aed5702de24",
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "type": "DateTime",
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "name": "createdOn",
-                "nullable": false,
-                "creatable": false,
-                "entityCode": 1062,
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null
-            },
-            {
-                "physicalName": "createdBy",
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-c27c3954437a4610a541a9ad18532bd2",
-                "entityCode": 1062,
-                "label": "创建用户",
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "name": "createdBy",
-                "type": "Reference",
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "referenceSetting": null
-            },
-            {
-                "displayOrder": 0,
-                "nullable": true,
-                "referenceSetting": null,
-                "entityCode": 1062,
-                "physicalName": "modifiedOn",
-                "type": "DateTime",
-                "label": "最近修改时间",
-                "referTo": null,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-1637c9da1e9c4a6596bf410a8b7b7251",
-                "name": "modifiedOn",
-                "idFieldFlag": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "creatable": false
-            },
-            {
-                "type": "Reference",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-0694274baaf649a2b7ff2939fe79a541",
-                "physicalName": "modifiedBy",
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "nullable": true,
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "label": "修改用户",
-                "description": null,
-                "creatable": false,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1062,
-                "name": "modifiedBy"
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "type": "Reference",
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "所属用户",
-                "nullable": false,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-e3e787bff040427dac1ffa6593b1fda6",
-                "physicalName": "ownerUser",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1062,
-                "name": "ownerUser"
-            },
-            {
-                "fieldId": "0000002-4ade6746887143e481e61073c9117aa0",
-                "label": "所属部门",
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "type": "Reference",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "ownerDepartment",
-                "physicalName": "ownerDepartment",
-                "mainDetailFieldFlag": false,
-                "entityCode": 1062,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "nullable": false,
-                "updatable": false,
-                "nameFieldFlag": false
-            }
-        ],
-        "entityCode": 1062,
-        "detailEntityFlag": false,
-        "assignable": false,
-        "mainEntity": null,
-        "entityId": "0000001-f0cd19ef305b45a7bd56d9300e964608",
-        "name": "WMSfukuandan",
-        "authorizable": true,
-        "shareable": false,
-        "tags": "WMS",
-        "detailEntitySet": [
-            {
-                "name": "WMSfukuandanrukuchanpinmingxi",
-                "label": "WMS付款单入库产品明细"
-            },
-            {
-                "name": "WMSfukuandantuihuochamingxi",
-                "label": "WMS付款单退货产品明细"
-            }
-        ],
-        "fieldSet": [
-            {
-                "fieldId": "0000002-7723a869d04c47528c2b83a173ed4aca",
-                "label": "id主键",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "nullable": false,
-                "updatable": false,
-                "referenceSetting": null,
-                "physicalName": "wMSfukuandanId",
-                "type": "PrimaryKey",
-                "description": null,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1062,
-                "name": "wMSfukuandanId",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "idFieldFlag": true
-            },
-            {
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "description": null,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "updatable": false,
-                "referenceSetting": null,
-                "name": "createdOn",
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "type": "DateTime",
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1062,
-                "displayOrder": 0,
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-281df8a3bb9b44e3b5147aed5702de24"
-            },
-            {
-                "physicalName": "createdBy",
-                "description": null,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-c27c3954437a4610a541a9ad18532bd2",
-                "updatable": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1062,
-                "name": "createdBy",
-                "label": "创建用户",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false
-            },
-            {
-                "entityCode": 1062,
-                "name": "modifiedOn",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "最近修改时间",
-                "type": "DateTime",
-                "fieldId": "0000002-1637c9da1e9c4a6596bf410a8b7b7251",
-                "physicalName": "modifiedOn",
-                "description": null,
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false
-            },
-            {
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "type": "Reference",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-0694274baaf649a2b7ff2939fe79a541",
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1062,
-                "physicalName": "modifiedBy",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "nullable": false,
-                "fieldId": "0000002-e3e787bff040427dac1ffa6593b1fda6",
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1062,
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "creatable": false,
-                "updatable": false,
-                "name": "ownerUser",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1062,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "type": "Reference",
-                "nullable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-4ade6746887143e481e61073c9117aa0",
-                "creatable": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "physicalName": "ownerDepartment"
-            },
-            {
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSzhangkuanduizhang",
-                        "fieldList": [
-                            "gongyingshangmingcheng"
-                        ]
-                    }
-                ],
-                "name": "duizhangdan",
-                "label": "选择对账单",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "entityCode": 1062,
-                "type": "Reference",
-                "displayOrder": 0,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "WMSzhangkuanduizhang",
-                        "label": "WMS账款对账"
-                    }
-                ],
-                "fieldId": "0000002-1d6fbabed968408d8ad5e131114df74d",
-                "physicalName": "c_duizhangdan",
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "fieldId": "0000002-87f0bafff6114c02b198df9b8d81da51",
-                "entityCode": 1062,
-                "name": "fukuandanhao",
-                "physicalName": "c_fukuandanhao",
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "description": null,
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "label": "付款单号",
-                "type": "Text",
-                "nullable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                }
-            },
-            {
-                "entityCode": 1062,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "type": "Reference",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "WMSjinxiangfapiao",
-                        "label": "WMS进项发票"
-                    }
-                ],
-                "fieldId": "0000002-7aa406b7e359475db14f32bb9bed4f5f",
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSjinxiangfapiao",
-                        "fieldList": [
-                            "fapiaofujianshangchuan",
-                            "fapiaojineanshuuan"
-                        ]
-                    }
-                ],
-                "name": "xuanzejinxiangfapiao",
-                "label": "选择进项发票",
-                "physicalName": "c_xuanzejinxiangfapiao",
-                "updatable": true
-            },
-            {
-                "referenceSetting": null,
-                "entityCode": 1062,
-                "label": "本次付款金额合计/元",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "description": null,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2
-                },
-                "fieldId": "0000002-a861d6e218534e0ebc659e0a1baf462f",
-                "name": "bencifukuanjinehejiuan",
-                "displayOrder": 0,
-                "nullable": true,
-                "type": "Money",
-                "updatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "physicalName": "c_bencifukuanjinehejiuan",
-                "creatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "creatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "entityCode": 1062,
-                "physicalName": "c_fukuanfangshi",
-                "type": "Option",
-                "nullable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "label": "付款方式",
-                "displayOrder": 0,
-                "fieldId": "0000002-80a21ce713084331a523f726c6fe84b6",
-                "name": "fukuanfangshi",
-                "description": null,
-                "nameFieldFlag": false
-            },
-            {
-                "name": "fukuanshijian",
-                "nameFieldFlag": false,
-                "type": "DateTime",
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "entityCode": 1062,
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-b18d656311d24e7aa0fe8a9f62706dc0",
-                "label": "付款时间",
-                "physicalName": "c_fukuanshijian",
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null
-            },
-            {
-                "type": "File",
-                "nameFieldFlag": false,
-                "fieldId": "0000002-045d1243c72944a989cb9d984959afdb",
-                "name": "yinhangfukuanhuidan",
-                "label": "银行付款回单",
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "physicalName": "c_yinhangfukuanhuidan",
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1062,
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": [],
-                    "maxFileCount": 3,
-                    "fileMaxSize": 5
-                }
-            },
-            {
-                "entityCode": 1062,
-                "owner": {
-                    "label": "WMS付款单",
-                    "name": "WMSfukuandan"
-                },
-                "nullable": true,
-                "creatable": true,
-                "label": "经办人",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "jingbanren",
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-a63b00609ca0425aaae0775bbf5b873e",
-                "physicalName": "c_jingbanren",
-                "type": "Reference",
-                "description": null
-            },
-            {
-                "name": "jingbanrenguishubumen",
-                "physicalName": "c_jingbanrenguishubumen",
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "label": "经办人归属部门",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "owner": {
-                    "name": "WMSfukuandan",
-                    "label": "WMS付款单"
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-380b4e6ed640436ba5ece583541b4bb8",
-                "entityCode": 1062,
-                "type": "Reference",
-                "description": null,
-                "mainDetailFieldFlag": false
-            }
-        ],
-        "mainDetailField": null,
-        "physicalName": "t_wmsfukuandan",
-        "layoutable": true,
-        "fieldNames": [
-            "wMSfukuandanId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "duizhangdan",
-            "fukuandanhao",
-            "xuanzejinxiangfapiao",
-            "bencifukuanjinehejiuan",
-            "fukuanfangshi",
-            "fukuanshijian",
-            "yinhangfukuanhuidan",
-            "jingbanren",
-            "jingbanrenguishubumen"
-        ]
-    },
-    "authorizable": false,
     "fieldSet": [
         {
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-c1cc79d8a709451db0775ae2d302e556",
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "referenceSetting": null,
+            "entityCode": 1084,
+            "displayOrder": 0,
+            "nullable": false,
+            "idFieldFlag": true,
+            "fieldViewModel": null,
+            "creatable": false,
+            "updatable": false,
             "name": "wMSfukuandantuihuochamingxiId",
             "label": "id主键",
-            "creatable": false,
-            "type": "PrimaryKey",
-            "mainDetailFieldFlag": false,
             "physicalName": "wMSfukuandantuihuochamingxiId",
-            "reserved": true,
-            "updatable": false,
-            "idFieldFlag": true,
-            "nameFieldFlag": false,
-            "referTo": null
+            "type": "PrimaryKey",
+            "description": null
         },
         {
-            "name": "createdOn",
-            "updatable": false,
-            "idFieldFlag": false,
-            "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
             "physicalName": "createdOn",
-            "reserved": true,
-            "referTo": null,
-            "label": "创建时间",
-            "creatable": false
-        },
-        {
-            "updatable": false,
-            "idFieldFlag": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
+            "description": null,
+            "defaultMemberOfListFlag": false,
             "nameFieldFlag": false,
-            "referTo": "User,",
-            "name": "createdBy",
-            "label": "创建用户",
-            "creatable": false,
-            "physicalName": "createdBy",
-            "reserved": true
-        },
-        {
-            "creatable": false,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "name": "createdOn",
             "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": true,
+            "creatable": false,
+            "displayOrder": 0,
+            "nullable": false,
             "updatable": false,
-            "idFieldFlag": false,
-            "physicalName": "modifiedOn",
+            "mainDetailFieldFlag": false,
             "referTo": null,
-            "name": "modifiedOn",
-            "label": "最近修改时间"
+            "fieldId": "0000002-3ccb367eb63849d687701ba773e666b6",
+            "entityCode": 1084,
+            "label": "创建时间",
+            "referenceSetting": null
         },
         {
+            "displayOrder": 0,
+            "nullable": false,
             "nameFieldFlag": false,
-            "physicalName": "modifiedBy",
+            "fieldViewModel": null,
+            "name": "createdBy",
+            "description": null,
+            "creatable": false,
             "idFieldFlag": false,
+            "referenceSetting": null,
+            "label": "创建用户",
+            "physicalName": "createdBy",
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-ad51a6286e47449bb6694a1879a0e7c1",
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "entityCode": 1084,
+            "type": "Reference"
+        },
+        {
+            "fieldId": "0000002-c06ef499f1964f3d80ee5bc9348a794a",
+            "label": "最近修改时间",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": null,
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "type": "DateTime",
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true,
+            "referenceSetting": null,
+            "entityCode": 1084,
+            "name": "modifiedOn",
+            "physicalName": "modifiedOn",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "type": "Reference",
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
             "label": "修改用户",
+            "displayOrder": 0,
+            "physicalName": "modifiedBy",
             "creatable": false,
             "mainDetailFieldFlag": false,
-            "reserved": true,
             "referTo": "User,",
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "entityCode": 1084,
             "name": "modifiedBy",
+            "description": null,
+            "nullable": true,
             "updatable": false,
-            "type": "Reference"
-        },
-        {
-            "reserved": true,
-            "name": "mdWMSfukuandanId",
-            "idFieldFlag": false,
-            "label": "主从关联Id",
-            "mainDetailFieldFlag": true,
             "nameFieldFlag": false,
-            "physicalName": "mdWMSfukuandanId",
-            "referTo": "WMSfukuandan,",
-            "updatable": false,
-            "creatable": true,
-            "type": "Reference"
+            "fieldId": "0000002-7af3827ba52747cdba51e8129e16b3c9"
         },
         {
-            "reserved": false,
-            "label": "退货产品明细",
+            "fieldId": "0000002-7a5596f97c5946aba335b9d4a14ce582",
+            "entityCode": 1084,
+            "description": null,
             "creatable": true,
+            "idFieldFlag": false,
             "type": "Reference",
-            "mainDetailFieldFlag": false,
+            "nullable": false,
+            "mainDetailFieldFlag": true,
+            "defaultMemberOfListFlag": true,
+            "referenceSetting": null,
+            "name": "mdWMSfukuandanId",
+            "physicalName": "mdWMSfukuandanId",
+            "updatable": false,
             "nameFieldFlag": false,
-            "physicalName": "c_tuihuochanpinmingxi",
-            "updatable": true,
-            "idFieldFlag": false,
-            "referTo": "WMScaigoutuihuozhangdan,",
-            "name": "tuihuochanpinmingxi"
+            "referTo": "WMSfukuandan,",
+            "label": "主从关联Id",
+            "displayOrder": 0,
+            "fieldViewModel": null
         },
         {
-            "type": "Text",
-            "nameFieldFlag": false,
-            "physicalName": "c_bencifshuliang",
-            "reserved": false,
-            "referTo": null,
-            "name": "bencifshuliang",
-            "updatable": true,
             "creatable": true,
-            "mainDetailFieldFlag": false,
+            "referTo": "WMScaigoutuihuozhangdan,",
+            "referenceSetting": [
+                {
+                    "entityName": "WMScaigoutuihuozhangdan",
+                    "fieldList": [
+                        "caigourukudanbianhao",
+                        "caigoudingdanmingcheng",
+                        "caigoudingdanbianhao",
+                        "gongyingshangmingcheng"
+                    ]
+                }
+            ],
             "idFieldFlag": false,
-            "label": "本次付款数量"
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-7a641de4f7f64c868b2a1c2bf2e0c7ca",
+            "label": "退货产品明细",
+            "physicalName": "c_tuihuochanpinmingxi",
+            "nullable": true,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "entityCode": 1084,
+            "name": "tuihuochanpinmingxi",
+            "type": "Reference",
+            "displayOrder": 0,
+            "description": null,
+            "updatable": true
+        },
+        {
+            "displayOrder": 0,
+            "updatable": true,
+            "nameFieldFlag": false,
+            "entityCode": 1084,
+            "physicalName": "c_bencifshuliang",
+            "label": "本次付款数量",
+            "type": "Text",
+            "fieldViewModel": {
+                "validators": [],
+                "minLength": 0,
+                "maxLength": 200
+            },
+            "referenceSetting": null,
+            "creatable": true,
+            "defaultMemberOfListFlag": true,
+            "description": null,
+            "nullable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "fieldId": "0000002-d63d9099a0c2429fb4fe74c79b9adb2f",
+            "name": "bencifshuliang"
         }
     ]
 }

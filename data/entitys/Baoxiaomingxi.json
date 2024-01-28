@@ -1,757 +1,185 @@
 {
+    "systemEntityFlag": false,
+    "tags": "项目任务管理",
+    "internalEntityFlag": false,
+    "name": "Baoxiaomingxi",
+    "label": "报销明细",
+    "entityCode": 1224,
+    "detailEntityFlag": true,
     "layoutable": true,
     "listable": true,
     "idFieldName": "baoxiaomingxiId",
-    "internalEntityFlag": false,
-    "name": "Baoxiaomingxi",
-    "systemEntityFlag": false,
-    "detailEntityFlag": true,
-    "label": "报销明细",
-    "entityCode": 1224,
-    "tags": "项目任务管理",
+    "mainEntity": "Baoxiaoshenqing",
+    "assignable": false,
     "authorizable": false,
-    "mainEntity": {
-        "entityId": "0000001-f228db31b69b4ed2b039ae840f8a5278",
-        "layoutable": true,
-        "tags": "项目任务管理",
-        "mainEntity": null,
-        "sortedFieldSet": [
-            {
-                "physicalName": "baoxiaoshenqingId",
-                "type": "PrimaryKey",
-                "description": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-2b9ee947798a4051bd9cbc8bc3cc7061",
-                "entityCode": 1223,
-                "label": "id主键",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "name": "baoxiaoshenqingId",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "nullable": false,
-                "idFieldFlag": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "entityCode": 1223,
-                "physicalName": "c_tianbaoshijian",
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "type": "DateTime",
-                "nullable": true,
-                "referTo": null,
-                "fieldId": "0000002-b82fc307302a4ff48eb52916319f2efc",
-                "name": "tianbaoshijian",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "label": "填报时间",
-                "description": null,
-                "creatable": true
-            },
-            {
-                "type": "Reference",
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "entityCode": 1223,
-                "owner": {
-                    "label": "报销申请",
-                    "name": "Baoxiaoshenqing"
-                },
-                "description": null,
-                "updatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-ddfb1f1ef0234464ba172bfce2cf85f7",
-                "name": "shenqingren",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "label": "申请人",
-                "physicalName": "c_shenqingren",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "name": "shenqingrenbumen",
-                "label": "申请人部门",
-                "description": null,
-                "nullable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-072a6c976b8e4156b632392f714f7432",
-                "entityCode": 1223,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "physicalName": "c_shenqingrenbumen",
-                "type": "Reference",
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "creatable": true
-            },
-            {
-                "physicalName": "createdOn",
-                "type": "DateTime",
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-91974b77e3e740c5a50fca9db3bd6cc5",
-                "name": "createdOn",
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1223,
-                "label": "创建时间",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "description": null,
-                "updatable": false,
-                "referTo": null
-            },
-            {
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "label": "创建用户",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "type": "Reference",
-                "creatable": false,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-4005c201d169461e863c09a03f754288",
-                "entityCode": 1223,
-                "physicalName": "createdBy",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "name": "createdBy",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "fieldViewModel": null,
-                "fieldId": "0000002-c9ffaaf26bc44a11822ba8c3a0f9db0c",
-                "type": "DateTime",
-                "creatable": false,
-                "displayOrder": 0,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "description": null,
-                "updatable": false,
-                "idFieldFlag": false,
-                "physicalName": "modifiedOn",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1223,
-                "name": "modifiedOn",
-                "label": "最近修改时间"
-            },
-            {
-                "name": "modifiedBy",
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1223,
-                "physicalName": "modifiedBy",
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "description": null,
-                "nullable": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-91afa5e8386542f9a1d92f199a3545a2",
-                "label": "修改用户",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "type": "Reference",
-                "nameFieldFlag": false
-            },
-            {
-                "name": "ownerUser",
-                "displayOrder": 0,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "nullable": false,
-                "idFieldFlag": false,
-                "entityCode": 1223,
-                "description": null,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-3d1b597e3e62444ca568362ae8df5d0c",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "type": "Reference",
-                "creatable": false
-            },
-            {
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "updatable": false,
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "ownerDepartment",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "label": "所属部门",
-                "entityCode": 1223,
-                "name": "ownerDepartment",
-                "fieldViewModel": null,
-                "fieldId": "0000002-623eeb862b3341fc86c2184a1ccfa586"
-            }
-        ],
-        "label": "报销申请",
-        "listable": true,
-        "assignable": false,
-        "mainDetailField": null,
-        "fieldNames": [
-            "baoxiaoshenqingId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "tianbaoshijian",
-            "shenqingren",
-            "shenqingrenbumen"
-        ],
-        "virtualFieldSet": [],
-        "idField": {
-            "name": "baoxiaoshenqingId",
-            "label": "id主键"
-        },
-        "nameField": null,
-        "name": "Baoxiaoshenqing",
-        "physicalName": "t_baoxiaoshenqing",
-        "entityCode": 1223,
-        "detailEntityFlag": false,
-        "authorizable": true,
-        "shareable": false,
-        "detailEntitySet": [
-            {
-                "label": "报销明细",
-                "name": "Baoxiaomingxi"
-            }
-        ],
-        "fieldSet": [
-            {
-                "physicalName": "baoxiaoshenqingId",
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "name": "baoxiaoshenqingId",
-                "updatable": false,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-2b9ee947798a4051bd9cbc8bc3cc7061",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "mainDetailFieldFlag": false,
-                "entityCode": 1223,
-                "label": "id主键",
-                "description": null,
-                "fieldViewModel": null
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1223,
-                "name": "createdOn",
-                "idFieldFlag": false,
-                "referTo": null,
-                "physicalName": "createdOn",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "fieldId": "0000002-91974b77e3e740c5a50fca9db3bd6cc5",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "description": null,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "label": "创建时间",
-                "type": "DateTime",
-                "nullable": false
-            },
-            {
-                "nullable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "physicalName": "createdBy",
-                "type": "Reference",
-                "fieldId": "0000002-4005c201d169461e863c09a03f754288",
-                "name": "createdBy",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1223,
-                "label": "创建用户",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "description": null,
-                "creatable": false,
-                "updatable": false
-            },
-            {
-                "fieldViewModel": null,
-                "fieldId": "0000002-c9ffaaf26bc44a11822ba8c3a0f9db0c",
-                "displayOrder": 0,
-                "updatable": false,
-                "type": "DateTime",
-                "nullable": true,
-                "physicalName": "modifiedOn",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1223,
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                }
-            },
-            {
-                "idFieldFlag": false,
-                "fieldId": "0000002-91afa5e8386542f9a1d92f199a3545a2",
-                "entityCode": 1223,
-                "updatable": false,
-                "name": "modifiedBy",
-                "mainDetailFieldFlag": false,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "修改用户",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "physicalName": "modifiedBy",
-                "type": "Reference",
-                "description": null
-            },
-            {
-                "name": "ownerUser",
-                "label": "所属用户",
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-3d1b597e3e62444ca568362ae8df5d0c",
-                "physicalName": "ownerUser",
-                "owner": {
-                    "label": "报销申请",
-                    "name": "Baoxiaoshenqing"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1223,
-                "creatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "所属部门",
-                "description": null,
-                "name": "ownerDepartment",
-                "physicalName": "ownerDepartment",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "nameFieldFlag": false,
-                "fieldId": "0000002-623eeb862b3341fc86c2184a1ccfa586",
-                "entityCode": 1223,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "type": "Reference"
-            },
-            {
-                "entityCode": 1223,
-                "label": "填报时间",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "nullable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "name": "tianbaoshijian",
-                "description": null,
-                "referenceSetting": null,
-                "physicalName": "c_tianbaoshijian",
-                "type": "DateTime",
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldId": "0000002-b82fc307302a4ff48eb52916319f2efc",
-                "displayOrder": 0,
-                "nameFieldFlag": false
-            },
-            {
-                "name": "shenqingren",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-ddfb1f1ef0234464ba172bfce2cf85f7",
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ],
-                        "entityName": "User"
-                    }
-                ],
-                "physicalName": "c_shenqingren",
-                "type": "Reference",
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "entityCode": 1223,
-                "label": "申请人",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ]
-            },
-            {
-                "label": "申请人部门",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "name": "shenqingrenbumen",
-                "type": "Reference",
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "fieldId": "0000002-072a6c976b8e4156b632392f714f7432",
-                "entityCode": 1223,
-                "physicalName": "c_shenqingrenbumen",
-                "owner": {
-                    "name": "Baoxiaoshenqing",
-                    "label": "报销申请"
-                },
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ],
-                        "entityName": "Department"
-                    }
-                ]
-            }
-        ]
-    },
-    "physicalName": "t_baoxiaomingxi",
     "shareable": false,
     "nameField": null,
-    "assignable": false,
+    "physicalName": "t_baoxiaomingxi",
     "fieldSet": [
         {
-            "type": "PrimaryKey",
-            "mainDetailFieldFlag": false,
+            "displayOrder": 0,
             "nameFieldFlag": false,
-            "referTo": null,
-            "name": "baoxiaomingxiId",
+            "entityCode": 1224,
+            "description": null,
             "updatable": false,
-            "idFieldFlag": true,
-            "label": "id主键",
+            "defaultMemberOfListFlag": false,
             "physicalName": "baoxiaomingxiId",
-            "reserved": true,
-            "creatable": false
-        },
-        {
-            "reserved": true,
-            "updatable": false,
-            "label": "创建时间",
+            "type": "PrimaryKey",
             "creatable": false,
-            "type": "DateTime",
-            "physicalName": "createdOn",
+            "mainDetailFieldFlag": false,
             "referTo": null,
-            "name": "createdOn",
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false
+            "referenceSetting": null,
+            "fieldId": "0000002-cf905b16b0f64e51b390647ffba0059f",
+            "label": "id主键",
+            "nullable": false,
+            "idFieldFlag": true,
+            "fieldViewModel": null,
+            "name": "baoxiaomingxiId"
         },
         {
-            "reserved": true,
-            "name": "createdBy",
-            "idFieldFlag": false,
             "creatable": false,
-            "mainDetailFieldFlag": false,
             "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "referTo": "User,",
-            "updatable": false,
-            "label": "创建用户",
-            "type": "Reference"
-        },
-        {
+            "fieldViewModel": null,
+            "entityCode": 1224,
+            "physicalName": "createdOn",
+            "displayOrder": 0,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
             "type": "DateTime",
-            "nameFieldFlag": false,
+            "nullable": false,
             "updatable": false,
-            "creatable": false,
-            "name": "modifiedOn",
             "idFieldFlag": false,
-            "label": "最近修改时间",
+            "fieldId": "0000002-5c80f50b8a1e4976a5da1da881ceb8db",
+            "name": "createdOn",
+            "label": "创建时间",
+            "description": null,
             "mainDetailFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "reserved": true,
             "referTo": null
         },
         {
-            "physicalName": "modifiedBy",
+            "name": "createdBy",
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "nullable": false,
+            "idFieldFlag": false,
+            "referenceSetting": null,
+            "label": "创建用户",
+            "physicalName": "createdBy",
+            "type": "Reference",
+            "displayOrder": 0,
+            "fieldId": "0000002-7e8f997e0dc64e6b980e3dab8f3a702a",
+            "entityCode": 1224,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "description": null,
+            "creatable": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "updatable": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "nullable": true,
+            "label": "最近修改时间",
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "fieldId": "0000002-edf21bab42994c9abc2839af5a60a8e0",
+            "referenceSetting": null,
+            "mainDetailFieldFlag": false,
+            "name": "modifiedOn",
+            "physicalName": "modifiedOn",
+            "type": "DateTime",
+            "description": null,
+            "creatable": false,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "entityCode": 1224
+        },
+        {
+            "creatable": false,
+            "fieldViewModel": null,
+            "idFieldFlag": false,
+            "referenceSetting": null,
+            "description": null,
+            "displayOrder": 0,
+            "type": "Reference",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
             "name": "modifiedBy",
             "label": "修改用户",
-            "creatable": false,
+            "physicalName": "modifiedBy",
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": true,
             "referTo": "User,",
-            "updatable": false,
-            "idFieldFlag": false,
-            "type": "Reference"
+            "fieldId": "0000002-b387927a4c1745a19b646961c6ca09eb",
+            "entityCode": 1224,
+            "nullable": true
         },
         {
-            "referTo": "Baoxiaoshenqing,",
-            "name": "mdBaoxiaoshenqingId",
-            "idFieldFlag": false,
+            "description": null,
             "creatable": true,
-            "type": "Reference",
+            "idFieldFlag": false,
             "mainDetailFieldFlag": true,
-            "physicalName": "mdBaoxiaoshenqingId",
-            "reserved": true,
+            "fieldId": "0000002-c0dee0dbdcdc4d03be912af5a926dfc1",
             "label": "主从关联Id",
+            "displayOrder": 0,
             "nameFieldFlag": false,
-            "updatable": false
+            "entityCode": 1224,
+            "defaultMemberOfListFlag": true,
+            "referTo": "Baoxiaoshenqing,",
+            "updatable": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "name": "mdBaoxiaoshenqingId",
+            "physicalName": "mdBaoxiaoshenqingId",
+            "type": "Reference",
+            "nullable": false
         },
         {
-            "physicalName": "c_baoxiaojine",
-            "idFieldFlag": false,
             "creatable": true,
+            "updatable": true,
             "mainDetailFieldFlag": false,
-            "type": "Money",
-            "nameFieldFlag": false,
-            "reserved": false,
             "referTo": null,
+            "referenceSetting": null,
+            "fieldId": "0000002-40f291d1922a49eca726a5d409d2930d",
             "name": "baoxiaojine",
-            "updatable": true,
-            "label": "报销金额"
+            "label": "报销金额",
+            "idFieldFlag": false,
+            "description": null,
+            "displayOrder": 0,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "entityCode": 1224,
+            "physicalName": "c_baoxiaojine",
+            "type": "Money",
+            "nullable": true
         },
         {
+            "referenceSetting": null,
+            "entityCode": 1224,
             "physicalName": "c_baoxiaoleixing",
-            "reserved": false,
-            "updatable": true,
-            "idFieldFlag": false,
-            "label": "报销类型",
-            "type": "Option",
-            "mainDetailFieldFlag": false,
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": true,
             "nameFieldFlag": false,
             "referTo": null,
+            "type": "Option",
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-bdd02ed520764e6f99d152f553bd0fd4",
+            "description": null,
+            "updatable": true,
             "name": "baoxiaoleixing",
-            "creatable": true,
+            "label": "报销类型",
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
             "optionList": [
                 {
                     "key": "差旅",
@@ -772,43 +200,77 @@
             ]
         },
         {
-            "physicalName": "c_fashengriqi",
-            "nameFieldFlag": false,
-            "reserved": false,
-            "referTo": null,
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": true,
             "name": "fashengriqi",
-            "updatable": true,
-            "idFieldFlag": false,
+            "physicalName": "c_fashengriqi",
+            "description": null,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "fieldViewModel": {
+                "validators": []
+            },
             "label": "发生日期",
-            "creatable": true,
             "type": "Date",
-            "mainDetailFieldFlag": false
+            "updatable": true,
+            "idFieldFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1224,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-5e8165f57b23431986cdcdc130b88299"
         },
         {
+            "fieldId": "0000002-0d425ebeb09f424f989d86351f23c09b",
             "label": "费用说明",
-            "creatable": true,
-            "type": "TextArea",
-            "mainDetailFieldFlag": false,
-            "referTo": null,
-            "name": "feiyongshuoming",
             "updatable": true,
+            "mainDetailFieldFlag": false,
             "idFieldFlag": false,
             "nameFieldFlag": false,
+            "referTo": null,
+            "entityCode": 1224,
+            "type": "TextArea",
+            "nullable": true,
+            "name": "feiyongshuoming",
             "physicalName": "c_feiyongshuoming",
-            "reserved": false
+            "displayOrder": 0,
+            "fieldViewModel": {
+                "validators": [],
+                "minLength": 0,
+                "maxLength": 1000,
+                "rows": 3
+            },
+            "description": null,
+            "creatable": true,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null
         },
         {
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
-            "name": "fujian",
-            "updatable": true,
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "File",
             "physicalName": "c_fujian",
-            "reserved": false,
-            "label": "附件"
+            "type": "File",
+            "nameFieldFlag": false,
+            "entityCode": 1224,
+            "displayOrder": 0,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": {
+                "uploadFileTypes": [],
+                "uploadHint": "",
+                "validators": [],
+                "maxFileCount": 3,
+                "fileMaxSize": 5
+            },
+            "label": "附件",
+            "description": null,
+            "nullable": true,
+            "updatable": true,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-0fb7d145420044aaba3eeb312f739b07",
+            "name": "fujian",
+            "idFieldFlag": false,
+            "referenceSetting": null
         }
     ]
 }

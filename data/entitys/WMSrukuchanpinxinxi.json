@@ -1,1128 +1,257 @@
 {
-    "detailEntityFlag": true,
     "layoutable": true,
+    "idFieldName": "wMSrukuchanpinxinxiId",
     "internalEntityFlag": false,
+    "tags": "WMS",
     "name": "WMSrukuchanpinxinxi",
+    "label": "WMS入库产品信息",
     "entityCode": 1121,
+    "detailEntityFlag": true,
     "systemEntityFlag": false,
     "listable": true,
-    "idFieldName": "wMSrukuchanpinxinxiId",
-    "tags": "WMS",
-    "label": "WMS入库产品信息",
+    "shareable": false,
     "assignable": false,
     "authorizable": false,
-    "mainEntity": {
-        "label": "WMS其他入库单",
-        "detailEntityFlag": false,
-        "listable": true,
-        "assignable": false,
-        "fieldSet": [
-            {
-                "idFieldFlag": true,
-                "defaultMemberOfListFlag": false,
-                "displayOrder": 0,
-                "physicalName": "wMSqitarukudanId",
-                "nullable": false,
-                "creatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "wMSqitarukudanId",
-                "description": null,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1120,
-                "label": "id主键",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "type": "PrimaryKey",
-                "referTo": null,
-                "fieldId": "0000002-ae9cd2f628664c0395c31a2878f306b6"
-            },
-            {
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "type": "DateTime",
-                "description": null,
-                "nullable": false,
-                "updatable": false,
-                "fieldId": "0000002-59e95db7673648858987261d6cd4fc7a",
-                "name": "createdOn",
-                "label": "创建时间",
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "physicalName": "createdOn",
-                "creatable": false,
-                "referTo": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1120,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "idFieldFlag": false,
-                "fieldId": "0000002-394c28000ecd4402be9c7bbf336704ee",
-                "name": "createdBy",
-                "displayOrder": 0,
-                "creatable": false,
-                "physicalName": "createdBy",
-                "type": "Reference",
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "nullable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1120,
-                "label": "创建用户",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "description": null,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "mainDetailFieldFlag": false
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "nullable": true,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "type": "DateTime",
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1120,
-                "name": "modifiedOn",
-                "physicalName": "modifiedOn",
-                "description": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-bac70cfebd034fe5a4c93758206cffd3",
-                "label": "最近修改时间",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                }
-            },
-            {
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "modifiedBy",
-                "description": null,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "修改用户",
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-10e7b114fb304702b2b783833ee61af9",
-                "entityCode": 1120,
-                "name": "modifiedBy",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldViewModel": null
-            },
-            {
-                "type": "Reference",
-                "description": null,
-                "nullable": false,
-                "creatable": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-49fb75c80a784a4482f050f8fac2f6c1",
-                "displayOrder": 0,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "physicalName": "ownerUser",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "name": "ownerUser",
-                "label": "所属用户",
-                "entityCode": 1120
-            },
-            {
-                "name": "ownerDepartment",
-                "physicalName": "ownerDepartment",
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "type": "Reference",
-                "description": null,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldId": "0000002-e5637bfbaf6541699b99d3d50481fd7a",
-                "entityCode": 1120,
-                "owner": {
-                    "label": "WMS其他入库单",
-                    "name": "WMSqitarukudan"
-                },
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "label": "所属部门",
-                "creatable": false
-            },
-            {
-                "fieldViewModel": null,
-                "label": "入库类型",
-                "physicalName": "c_rukuleixing",
-                "type": "Option",
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-b9ef030072f048509c75be87c8dd31fa",
-                "entityCode": 1120,
-                "name": "rukuleixing",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "description": null,
-                "creatable": true,
-                "referTo": null,
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "entityCode": 1120,
-                "displayOrder": 0,
-                "physicalName": "c_qitarukudanbianhao",
-                "type": "Text",
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": [],
-                "name": "qitarukudanbianhao",
-                "label": "其他入库单编号",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-89a8b4f8455f4a648fb8b43e08b97825",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                }
-            },
-            {
-                "type": "Integer",
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-d267f57bac2b40bcbb1b6a81880b3a0a",
-                "label": "入库产品总数",
-                "displayOrder": 0,
-                "updatable": true,
-                "physicalName": "c_rukuchanpinzongshu",
-                "description": null,
-                "owner": {
-                    "label": "WMS其他入库单",
-                    "name": "WMSqitarukudan"
-                },
-                "creatable": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1120,
-                "name": "rukuchanpinzongshu",
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "nullable": true,
-                "idFieldFlag": false
-            },
-            {
-                "physicalName": "c_rukuchanpinchengbenzonge",
-                "type": "Money",
-                "creatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999
-                },
-                "fieldId": "0000002-412b434e43e4403497c9a04aeb1a8968",
-                "label": "入库产品成本总额/元",
-                "description": null,
-                "referenceSetting": null,
-                "entityCode": 1120,
-                "defaultMemberOfListFlag": false,
-                "name": "rukuchanpinchengbenzonge",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "entityCode": 1120,
-                "owner": {
-                    "label": "WMS其他入库单",
-                    "name": "WMSqitarukudan"
-                },
-                "type": "Boolean",
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-1c5dcb4eab1e491497feccb084874dbe",
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "name": "rukuqueren",
-                "label": "入库确认",
-                "nullable": false,
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "physicalName": "c_rukuqueren",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "entityCode": 1120,
-                "name": "paizhao",
-                "description": null,
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "type": "Picture",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "maxFileCount": 9,
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": [
-                        "jpeg",
-                        "png",
-                        "gif"
-                    ],
-                    "uploadHint": "",
-                    "validators": []
-                },
-                "fieldId": "0000002-cf901c21b3fb4d658ac1c856990f5778",
-                "referTo": null,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "label": "拍照",
-                "physicalName": "c_paizhao",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true
-            },
-            {
-                "nameFieldFlag": false,
-                "entityCode": 1120,
-                "name": "rukushijian",
-                "label": "入库时间",
-                "description": null,
-                "creatable": true,
-                "idFieldFlag": false,
-                "type": "DateTime",
-                "nullable": false,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "c_rukushijian",
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-2f688407618c40cc8f7ffefbc9b3b337",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            },
-            {
-                "label": "库管归属部门",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "entityCode": 1120,
-                "name": "kuguanguishubumen",
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "type": "Reference",
-                "description": null,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-ddc5a45a6cc44defba0c1c9a2b226e61",
-                "physicalName": "c_kuguanguishubumen",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "creatable": true
-            },
-            {
-                "entityCode": 1120,
-                "label": "入库仓库",
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "physicalName": "c_rukucangku",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "idFieldFlag": false,
-                "type": "Reference",
-                "description": null,
-                "creatable": true,
-                "referTo": [
-                    {
-                        "name": "WMScangkuxinxi",
-                        "label": "WMS仓库信息"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "WMScangkuxinxi",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-2816d9ccbcb74765afe5560be2d64bc7",
-                "name": "rukucangku",
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            }
-        ],
-        "detailEntitySet": [
-            {
-                "name": "WMSrukuchanpinxinxi",
-                "label": "WMS入库产品信息"
-            }
-        ],
-        "entityId": "0000001-ccbe381704da4833a02b8b517f617afd",
-        "name": "WMSqitarukudan",
-        "physicalName": "t_wmsqitarukudan",
-        "entityCode": 1120,
-        "layoutable": true,
-        "tags": "WMS",
-        "idField": {
-            "name": "wMSqitarukudanId",
-            "label": "id主键"
-        },
-        "fieldNames": [
-            "wMSqitarukudanId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "rukuleixing",
-            "qitarukudanbianhao",
-            "rukuchanpinzongshu",
-            "rukuchanpinchengbenzonge",
-            "rukuqueren",
-            "paizhao",
-            "rukushijian",
-            "kuguanguishubumen",
-            "rukucangku"
-        ],
-        "authorizable": true,
-        "nameField": {
-            "name": "qitarukudanbianhao",
-            "label": "其他入库单编号"
-        },
-        "sortedFieldSet": [
-            {
-                "label": "id主键",
-                "physicalName": "wMSqitarukudanId",
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "description": null,
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "idFieldFlag": true,
-                "referTo": null,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-ae9cd2f628664c0395c31a2878f306b6",
-                "entityCode": 1120,
-                "name": "wMSqitarukudanId",
-                "type": "PrimaryKey",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "type": "Option",
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-b9ef030072f048509c75be87c8dd31fa",
-                "name": "rukuleixing",
-                "physicalName": "c_rukuleixing",
-                "defaultMemberOfListFlag": true,
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "displayOrder": 0,
-                "entityCode": 1120,
-                "label": "入库类型",
-                "nullable": true,
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": null
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "entityCode": 1120,
-                "name": "qitarukudanbianhao",
-                "updatable": true,
-                "idFieldFlag": false,
-                "label": "其他入库单编号",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "nameFieldFlag": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": [],
-                "type": "Text",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "fieldId": "0000002-89a8b4f8455f4a648fb8b43e08b97825",
-                "physicalName": "c_qitarukudanbianhao",
-                "nullable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                }
-            },
-            {
-                "label": "入库产品总数",
-                "displayOrder": 0,
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-d267f57bac2b40bcbb1b6a81880b3a0a",
-                "entityCode": 1120,
-                "referenceSetting": null,
-                "mainDetailFieldFlag": false,
-                "name": "rukuchanpinzongshu",
-                "physicalName": "c_rukuchanpinzongshu",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "type": "Integer",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                }
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-412b434e43e4403497c9a04aeb1a8968",
-                "entityCode": 1120,
-                "name": "rukuchanpinchengbenzonge",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "入库产品成本总额/元",
-                "physicalName": "c_rukuchanpinchengbenzonge",
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2
-                },
-                "description": null,
-                "displayOrder": 0,
-                "referTo": null,
-                "type": "Money",
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "creatable": true,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": true,
-                "entityCode": 1120,
-                "name": "rukuqueren",
-                "physicalName": "c_rukuqueren",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "type": "Boolean",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-1c5dcb4eab1e491497feccb084874dbe",
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "label": "入库确认"
-            },
-            {
-                "entityCode": 1120,
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-cf901c21b3fb4d658ac1c856990f5778",
-                "label": "拍照",
-                "type": "Picture",
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "maxFileCount": 9,
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": [
-                        "jpeg",
-                        "png",
-                        "gif"
-                    ],
-                    "uploadHint": "",
-                    "validators": []
-                },
-                "name": "paizhao",
-                "physicalName": "c_paizhao",
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "description": null,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-2f688407618c40cc8f7ffefbc9b3b337",
-                "description": null,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1120,
-                "label": "入库时间",
-                "physicalName": "c_rukushijian",
-                "type": "DateTime",
-                "defaultMemberOfListFlag": true,
-                "name": "rukushijian",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "nullable": false,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            },
-            {
-                "physicalName": "c_kuguanguishubumen",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "label": "库管归属部门",
-                "displayOrder": 0,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-ddc5a45a6cc44defba0c1c9a2b226e61",
-                "entityCode": 1120,
-                "name": "kuguanguishubumen",
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "description": null,
-                "nullable": true,
-                "updatable": true,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            },
-            {
-                "referTo": [
-                    {
-                        "name": "WMScangkuxinxi",
-                        "label": "WMS仓库信息"
-                    }
-                ],
-                "fieldId": "0000002-2816d9ccbcb74765afe5560be2d64bc7",
-                "label": "入库仓库",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "rukucangku",
-                "physicalName": "c_rukucangku",
-                "type": "Reference",
-                "updatable": true,
-                "owner": {
-                    "label": "WMS其他入库单",
-                    "name": "WMSqitarukudan"
-                },
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMScangkuxinxi",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma"
-                        ]
-                    }
-                ],
-                "entityCode": 1120,
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "name": "createdOn",
-                "label": "创建时间",
-                "type": "DateTime",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-59e95db7673648858987261d6cd4fc7a",
-                "entityCode": 1120,
-                "creatable": false,
-                "fieldViewModel": null
-            },
-            {
-                "name": "createdBy",
-                "description": null,
-                "updatable": false,
-                "label": "创建用户",
-                "physicalName": "createdBy",
-                "type": "Reference",
-                "nameFieldFlag": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "fieldId": "0000002-394c28000ecd4402be9c7bbf336704ee",
-                "owner": {
-                    "label": "WMS其他入库单",
-                    "name": "WMSqitarukudan"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "entityCode": 1120,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-bac70cfebd034fe5a4c93758206cffd3",
-                "label": "最近修改时间",
-                "description": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1120,
-                "physicalName": "modifiedOn",
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "nullable": true,
-                "updatable": false,
-                "type": "DateTime",
-                "creatable": false,
-                "referenceSetting": null,
-                "name": "modifiedOn",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                }
-            },
-            {
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1120,
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "physicalName": "modifiedBy",
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "type": "Reference",
-                "description": null,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-10e7b114fb304702b2b783833ee61af9",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "idFieldFlag": false
-            },
-            {
-                "name": "ownerUser",
-                "nullable": false,
-                "creatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-49fb75c80a784a4482f050f8fac2f6c1",
-                "physicalName": "ownerUser",
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "entityCode": 1120,
-                "label": "所属用户",
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "type": "Reference",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "label": "所属部门",
-                "type": "Reference",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-e5637bfbaf6541699b99d3d50481fd7a",
-                "name": "ownerDepartment",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "WMSqitarukudan",
-                    "label": "WMS其他入库单"
-                },
-                "nullable": false,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1120,
-                "physicalName": "ownerDepartment",
-                "description": null,
-                "updatable": false
-            }
-        ],
-        "mainDetailField": null,
-        "virtualFieldSet": [],
-        "shareable": false,
-        "mainEntity": null
-    },
-    "nameField": null,
-    "shareable": false,
     "physicalName": "t_wmsrukuchanpinxinxi",
+    "nameField": null,
+    "mainEntity": "WMSqitarukudan",
     "fieldSet": [
         {
-            "referTo": null,
-            "type": "PrimaryKey",
-            "physicalName": "wMSrukuchanpinxinxiId",
-            "reserved": true,
-            "updatable": false,
-            "idFieldFlag": true,
+            "fieldId": "0000002-badba494a3c941b8afca4ce7597ff4c4",
             "label": "id主键",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
+            "description": null,
+            "displayOrder": 0,
             "nameFieldFlag": false,
-            "name": "wMSrukuchanpinxinxiId"
+            "referenceSetting": null,
+            "updatable": false,
+            "fieldViewModel": null,
+            "entityCode": 1121,
+            "name": "wMSrukuchanpinxinxiId",
+            "physicalName": "wMSrukuchanpinxinxiId",
+            "type": "PrimaryKey",
+            "creatable": false,
+            "idFieldFlag": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "nullable": false,
+            "defaultMemberOfListFlag": false
         },
         {
-            "physicalName": "createdOn",
-            "reserved": true,
-            "name": "createdOn",
-            "updatable": false,
+            "entityCode": 1121,
+            "creatable": false,
             "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "referenceSetting": null,
+            "updatable": false,
+            "fieldId": "0000002-ff6dfe30ea1b46c09b6c1304f3fb9432",
             "label": "创建时间",
-            "nameFieldFlag": false,
-            "referTo": null,
-            "creatable": false,
             "type": "DateTime",
-            "mainDetailFieldFlag": false
-        },
-        {
-            "referTo": "User,",
-            "name": "createdBy",
-            "updatable": false,
-            "label": "创建用户",
+            "displayOrder": 0,
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
-            "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference"
-        },
-        {
-            "name": "modifiedOn",
-            "updatable": false,
-            "idFieldFlag": false,
-            "label": "最近修改时间",
-            "creatable": false,
-            "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
-            "physicalName": "modifiedOn",
-            "type": "DateTime",
-            "mainDetailFieldFlag": false
-        },
-        {
-            "nameFieldFlag": false,
-            "reserved": true,
-            "name": "modifiedBy",
-            "updatable": false,
-            "label": "修改用户",
-            "physicalName": "modifiedBy",
-            "referTo": "User,",
-            "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false
-        },
-        {
-            "referTo": "WMSqitarukudan,",
-            "name": "mdWMSqitarukudanId",
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "reserved": true,
-            "updatable": false,
-            "label": "主从关联Id",
-            "mainDetailFieldFlag": true,
-            "physicalName": "mdWMSqitarukudanId"
-        },
-        {
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
-            "updatable": true,
-            "label": "本次入库数量",
-            "type": "Integer",
-            "physicalName": "c_bencirukushuliang",
-            "reserved": false,
-            "name": "bencirukushuliang",
-            "idFieldFlag": false,
-            "creatable": true
-        },
-        {
-            "physicalName": "c_rukucangwei",
-            "name": "rukucangwei",
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": false,
-            "referTo": "Cangkuguanli,",
-            "updatable": true,
-            "label": "入库仓位"
-        },
-        {
-            "name": "chengbendanjia",
-            "label": "成本单价/元",
-            "mainDetailFieldFlag": false,
-            "reserved": false,
-            "physicalName": "c_chengbendanjia",
-            "referTo": null,
-            "updatable": true,
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "Money",
+            "fieldViewModel": null,
+            "name": "createdOn",
+            "physicalName": "createdOn",
+            "description": null,
+            "nullable": false,
             "nameFieldFlag": false
         },
         {
-            "physicalName": "c_xuanzechanpin",
-            "reserved": false,
-            "label": "选择产品",
-            "creatable": true,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "fieldId": "0000002-9cb352869ab14cb2ba03b3a708512b29",
+            "entityCode": 1121,
             "nameFieldFlag": false,
-            "referTo": "WMSchanpinxinxi,",
-            "name": "xuanzechanpin",
-            "updatable": true,
+            "displayOrder": 0,
+            "creatable": false,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
+            "name": "createdBy",
+            "physicalName": "createdBy",
+            "description": null,
+            "updatable": false,
+            "referenceSetting": null,
+            "nullable": false,
+            "defaultMemberOfListFlag": false,
+            "label": "创建用户",
+            "type": "Reference"
+        },
+        {
+            "label": "最近修改时间",
+            "displayOrder": 0,
+            "name": "modifiedOn",
+            "referTo": null,
+            "referenceSetting": null,
+            "nameFieldFlag": false,
+            "description": null,
+            "creatable": false,
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1121,
+            "physicalName": "modifiedOn",
+            "type": "DateTime",
+            "nullable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-e98eac7ff2f5464399045c27574d5531"
+        },
+        {
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "creatable": false,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-5ab1a8392ba64db89e0e6b6fab86e703",
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "description": null,
+            "nullable": true,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1121,
+            "name": "modifiedBy",
+            "label": "修改用户",
+            "type": "Reference",
             "idFieldFlag": false
+        },
+        {
+            "label": "主从关联Id",
+            "description": null,
+            "updatable": false,
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": null,
+            "entityCode": 1121,
+            "type": "Reference",
+            "displayOrder": 0,
+            "referenceSetting": null,
+            "fieldId": "0000002-d64052e5ea6b467f9b61972d0aee0434",
+            "physicalName": "mdWMSqitarukudanId",
+            "creatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": true,
+            "name": "mdWMSqitarukudanId",
+            "nullable": false,
+            "nameFieldFlag": false,
+            "referTo": "WMSqitarukudan,"
+        },
+        {
+            "displayOrder": 0,
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "fieldId": "0000002-b3a9bbb87a12471aa38c6c11ef30d3a6",
+            "entityCode": 1121,
+            "name": "bencirukushuliang",
+            "type": "Integer",
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "nullable": false,
+            "idFieldFlag": false,
+            "label": "本次入库数量",
+            "physicalName": "c_bencirukushuliang",
+            "description": null,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "minValue": -999999999,
+                "validators": [],
+                "maxValue": 999999999
+            }
+        },
+        {
+            "name": "rukucangwei",
+            "label": "入库仓位",
+            "displayOrder": 0,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1121,
+            "type": "Reference",
+            "description": null,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-d6edbfc7199744d2bdb60b294ab6c6c6",
+            "physicalName": "c_rukucangwei",
+            "nullable": true,
+            "updatable": true,
+            "idFieldFlag": false,
+            "referTo": "Cangkuguanli,",
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "referenceSetting": [
+                {
+                    "entityName": "Cangkuguanli",
+                    "fieldList": [
+                        "cangkumingcheng",
+                        "cangkubianma",
+                        "cangkudizhi",
+                        "cangkurongliang",
+                        "cangkuxingzhi",
+                        "cangkuzhuangtai",
+                        "cangkuzhuguan"
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "Money",
+            "nullable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "referenceSetting": [],
+            "entityCode": 1121,
+            "name": "chengbendanjia",
+            "physicalName": "c_chengbendanjia",
+            "description": null,
+            "creatable": true,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": [],
+                "precision": 2
+            },
+            "fieldId": "0000002-6c3cdb101b9a46eb9fec0e4492c4de4b",
+            "label": "成本单价/元",
+            "displayOrder": 0,
+            "updatable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "fieldId": "0000002-adef4afdaf9c4ce687acfd0d5bf1b4d1",
+            "creatable": true,
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "entityCode": 1121,
+            "label": "选择产品",
+            "description": null,
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "referenceSetting": [
+                {
+                    "entityName": "WMSchanpinxinxi",
+                    "fieldList": [
+                        "chanpinbianhao",
+                        "chanpinmingcheng",
+                        "chanpinleixing"
+                    ]
+                }
+            ],
+            "name": "xuanzechanpin",
+            "physicalName": "c_xuanzechanpin",
+            "type": "Reference",
+            "nullable": true,
+            "referTo": "WMSchanpinxinxi,"
         }
     ]
 }

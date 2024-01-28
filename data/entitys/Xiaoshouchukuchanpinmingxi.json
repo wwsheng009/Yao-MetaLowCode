@@ -1,1641 +1,300 @@
 {
-    "tags": "进销存",
-    "name": "Xiaoshouchukuchanpinmingxi",
+    "layoutable": true,
+    "systemEntityFlag": false,
     "label": "应收账款对账-销售出库产品明细",
     "entityCode": 1067,
-    "internalEntityFlag": false,
-    "idFieldName": "xiaoshouchukuchanpinmingxiId",
-    "systemEntityFlag": false,
     "detailEntityFlag": true,
-    "layoutable": true,
     "listable": true,
+    "idFieldName": "xiaoshouchukuchanpinmingxiId",
+    "internalEntityFlag": false,
+    "tags": "进销存",
+    "name": "Xiaoshouchukuchanpinmingxi",
+    "shareable": false,
+    "mainEntity": "Yingshouzhangkuanuizhang",
+    "nameField": null,
     "authorizable": false,
     "assignable": false,
-    "mainEntity": {
-        "name": "Yingshouzhangkuanuizhang",
-        "physicalName": "t_yingshouzhangkuanuizhang",
-        "detailEntityFlag": false,
-        "shareable": false,
-        "nameField": {
-            "name": "yingshouduizhangdanbianhao",
-            "label": "应收对账单编号"
-        },
-        "fieldSet": [
-            {
-                "fieldId": "0000002-cf108a88e0d44dce9b2f8fb74db484ad",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "PrimaryKey",
-                "nullable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "name": "yingshouzhangkuanuizhangId",
-                "referTo": null,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1066,
-                "label": "id主键",
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": true,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "yingshouzhangkuanuizhangId",
-                "description": null,
-                "nameFieldFlag": false
-            },
-            {
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-76897ab3b01d4814a3851221b92304ab",
-                "type": "DateTime",
-                "entityCode": 1066,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "createdOn",
-                "nullable": false,
-                "creatable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                }
-            },
-            {
-                "type": "Reference",
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1066,
-                "label": "创建用户",
-                "description": null,
-                "nullable": false,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "name": "createdBy",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "displayOrder": 0,
-                "fieldId": "0000002-d883cc721d7c41b09f652e16287781bb",
-                "physicalName": "createdBy",
-                "mainDetailFieldFlag": false
-            },
-            {
-                "entityCode": 1066,
-                "name": "modifiedOn",
-                "creatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-014c56eaaac349adbe42f6fbcecefc97",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "label": "最近修改时间",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "description": null,
-                "nullable": true,
-                "updatable": false,
-                "referenceSetting": null,
-                "physicalName": "modifiedOn",
-                "type": "DateTime",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "description": null,
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-194c5c8a9d564815bfcbec0401c0e2c9",
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldViewModel": null,
-                "entityCode": 1066,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Reference",
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "referenceSetting": null,
-                "physicalName": "modifiedBy",
-                "updatable": false
-            },
-            {
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1066,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nullable": false,
-                "name": "ownerUser",
-                "physicalName": "ownerUser",
-                "type": "Reference",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-9d14df7e324b4c6984ed5a1242bc2ec3",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "所属用户"
-            },
-            {
-                "fieldId": "0000002-d19cc098021a4155811b01e4279c6db8",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "entityCode": 1066,
-                "name": "ownerDepartment",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nullable": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "label": "所属部门",
-                "physicalName": "ownerDepartment",
-                "type": "Reference",
-                "description": null,
-                "creatable": false,
-                "nameFieldFlag": false
-            },
-            {
-                "entityCode": 1066,
-                "referTo": [
-                    {
-                        "name": "Kehuguanli",
-                        "label": "客户管理"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "creatable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "xuanzekehu",
-                "physicalName": "c_xuanzekehu",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Kehuguanli",
-                        "fieldList": [
-                            "kehumingcheng",
-                            "kehufenlei",
-                            "kehulaiyuan",
-                            "kehubiaoqian",
-                            "jiagedengji",
-                            "jiesuanzhouqi",
-                            "kehusuozaidiqu",
-                            "jutidizhi"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-66a4adb73d474182969a1c409b2c0b7e",
-                "label": "选择客户",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "type": "Reference",
-                "description": null,
-                "nullable": false
-            },
-            {
-                "nameFieldFlag": false,
-                "fieldId": "0000002-66cd7036ddaf46cc822c7b92ebcfe9df",
-                "label": "对账开始日期",
-                "type": "Date",
-                "physicalName": "c_duizhangkaishiriqi",
-                "description": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "name": "duizhangkaishiriqi",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nullable": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1066,
-                "displayOrder": 0,
-                "creatable": true
-            },
-            {
-                "physicalName": "c_duizhangjieshuriqi",
-                "description": null,
-                "creatable": true,
-                "entityCode": 1066,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "name": "duizhangjieshuriqi",
-                "referTo": null,
-                "referenceSetting": null,
-                "label": "对账结束日期",
-                "type": "Date",
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-b9b98b0678b14cb889cbec6cd0d69481"
-            },
-            {
-                "entityCode": 1066,
-                "type": "Text",
-                "description": null,
-                "nullable": false,
-                "defaultMemberOfListFlag": true,
-                "creatable": true,
-                "name": "yingshouduizhangdanbianhao",
-                "physicalName": "c_yingshouduizhangdanbianhao",
-                "nameFieldFlag": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-de1f4213cc7b4e7faec57c8effcb89c5",
-                "label": "应收对账单编号",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                }
-            },
-            {
-                "updatable": true,
-                "label": "应收金额总额(含税)/元",
-                "physicalName": "c_yingshoujinezonge",
-                "description": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-6a446d6e34444a18aa809691ca2c2659",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "creatable": true,
-                "nullable": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999
-                },
-                "referenceSetting": null,
-                "entityCode": 1066,
-                "name": "yingshoujinezonge",
-                "type": "Money",
-                "referTo": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "label": "应收金额总额(不含税)/元",
-                "updatable": true,
-                "referTo": null,
-                "name": "yingshoujinezon",
-                "nullable": true,
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Money",
-                "physicalName": "c_yingshoujinezon",
-                "description": null,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "fieldId": "0000002-89e5cd8ca5124473ad690565b6e140ff",
-                "entityCode": 1066
-            },
-            {
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "referTo": null,
-                "fieldViewModel": null,
-                "entityCode": 1066,
-                "label": "预计收款方式",
-                "physicalName": "c_yujishoukuanfangshi",
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "description": null,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-b7066f8774a3477f911b25933ffd27c6",
-                "name": "yujishoukuanfangshi",
-                "type": "Option",
-                "creatable": true
-            },
-            {
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Date",
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-6ee3382bf62e495d98b965b4f9783281",
-                "entityCode": 1066,
-                "name": "yujishoukuanriqi",
-                "label": "预计收款日期",
-                "physicalName": "c_yujishoukuanriqi",
-                "creatable": true,
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "name": "yinhangzhanghu",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nullable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1066,
-                "physicalName": "c_yinhangzhanghu",
-                "type": "Text",
-                "description": null,
-                "creatable": true,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-2730f02861764701b30320aa0b6d8bfc",
-                "label": "银行账户",
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                }
-            },
-            {
-                "referTo": null,
-                "entityCode": 1066,
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "fieldId": "0000002-cf2bccb569194804a32d2d4394964a98",
-                "label": "开户银行",
-                "physicalName": "c_kaihuyinhang",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Text",
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "name": "kaihuyinhang",
-                "displayOrder": 0
-            },
-            {
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-f90ad55c16b947c58303460b59a12bf5",
-                "entityCode": 1066,
-                "name": "yingshouduizhangqueren",
-                "type": "Boolean",
-                "defaultMemberOfListFlag": false,
-                "label": "应收对账确认",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "description": null,
-                "nullable": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "physicalName": "c_yingshouduizhangqueren",
-                "displayOrder": 0,
-                "updatable": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "entityCode": 1066,
-                "label": "应收对账时间",
-                "nullable": true,
-                "type": "DateTime",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-b1594d9f72504626845b7deac8f590fa",
-                "name": "yingshouduizhangshijian",
-                "physicalName": "c_yingshouduizhangshijian",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "creatable": true,
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "departmentId",
-                            "userName"
-                        ],
-                        "entityName": "User"
-                    }
-                ],
-                "name": "yingshouduizhangrenyuan",
-                "label": "应收对账人员",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-fe6e6bb1a0e6427b961bd6ec0277c9b5",
-                "entityCode": 1066,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "physicalName": "c_yingshouduizhangrenyuan",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "type": "Reference",
-                "description": null
-            },
-            {
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "ApprovalConfig",
-                        "label": "审批配置"
-                    }
-                ],
-                "creatable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-c6924b430dc04bcfb03ed0ea7fbb164e",
-                "label": "审批流程",
-                "physicalName": "approvalConfigId",
-                "description": null,
-                "nameFieldFlag": false,
-                "entityCode": 1066,
-                "name": "approvalConfigId",
-                "nullable": true,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "fieldId": "0000002-621c668b3d6f4f60a327b0189dc4f1c8",
-                "entityCode": 1066,
-                "name": "approvalStatus",
-                "label": "审批状态",
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "physicalName": "approvalStatus",
-                "nameFieldFlag": false,
-                "type": "Status",
-                "description": null,
-                "nullable": true,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "displayOrder": 0,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "type": "Reference",
-                "label": "最近审批人",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "nullable": true,
-                "updatable": false,
-                "name": "lastApprovedBy",
-                "entityCode": 1066,
-                "physicalName": "lastApprovedBy",
-                "description": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-5ba423664760461cb8aba08b1306c257",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1066,
-                "physicalName": "lastApprovedOn",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-cc30922ebe644c3aae115b03d8de0fff",
-                "name": "lastApprovedOn",
-                "referTo": null,
-                "label": "最近审批时间",
-                "type": "DateTime",
-                "displayOrder": 0
-            },
-            {
-                "referTo": null,
-                "entityCode": 1066,
-                "name": "lastApprovalRemark",
-                "physicalName": "lastApprovalRemark",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "nullable": true,
-                "updatable": false,
-                "description": null,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-416d5fcda63549789ce928715e468195",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "label": "最近审批批注",
-                "type": "TextArea",
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            }
-        ],
-        "mainDetailField": null,
-        "authorizable": true,
-        "assignable": false,
-        "detailEntitySet": [
-            {
-                "name": "Xiaoshouchukuchanpinmingxi",
-                "label": "应收账款对账-销售出库产品明细"
-            },
-            {
-                "name": "Xiaoshoutuihuochanpinmingxi",
-                "label": "应收账款对账-销售退货产品明细"
-            }
-        ],
-        "mainEntity": null,
-        "label": "应收账款-对账",
-        "entityCode": 1066,
-        "listable": true,
-        "tags": "进销存",
-        "virtualFieldSet": [],
-        "entityId": "0000001-b6dbf07b48674bc285cce62b563da01b",
-        "layoutable": true,
-        "idField": {
-            "name": "yingshouzhangkuanuizhangId",
-            "label": "id主键"
-        },
-        "sortedFieldSet": [
-            {
-                "fieldId": "0000002-cf108a88e0d44dce9b2f8fb74db484ad",
-                "physicalName": "yingshouzhangkuanuizhangId",
-                "displayOrder": 0,
-                "nullable": false,
-                "referenceSetting": null,
-                "label": "id主键",
-                "type": "PrimaryKey",
-                "creatable": false,
-                "idFieldFlag": true,
-                "fieldViewModel": null,
-                "entityCode": 1066,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "mainDetailFieldFlag": false,
-                "name": "yingshouzhangkuanuizhangId",
-                "description": null,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null
-            },
-            {
-                "fieldId": "0000002-66a4adb73d474182969a1c409b2c0b7e",
-                "type": "Reference",
-                "nullable": false,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "entityCode": 1066,
-                "physicalName": "c_xuanzekehu",
-                "label": "选择客户",
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Kehuguanli",
-                        "label": "客户管理"
-                    }
-                ],
-                "name": "xuanzekehu",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "kehumingcheng",
-                            "kehufenlei",
-                            "kehulaiyuan",
-                            "kehubiaoqian",
-                            "jiagedengji",
-                            "jiesuanzhouqi",
-                            "kehusuozaidiqu",
-                            "jutidizhi"
-                        ],
-                        "entityName": "Kehuguanli"
-                    }
-                ]
-            },
-            {
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-66cd7036ddaf46cc822c7b92ebcfe9df",
-                "physicalName": "c_duizhangkaishiriqi",
-                "type": "Date",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "duizhangkaishiriqi",
-                "label": "对账开始日期",
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1066,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "creatable": true,
-                "referTo": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": true
-            },
-            {
-                "fieldId": "0000002-b9b98b0678b14cb889cbec6cd0d69481",
-                "label": "对账结束日期",
-                "type": "Date",
-                "description": null,
-                "nullable": false,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1066,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "name": "duizhangjieshuriqi",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "c_duizhangjieshuriqi",
-                "defaultMemberOfListFlag": true,
-                "referTo": null
-            },
-            {
-                "name": "yingshouduizhangdanbianhao",
-                "mainDetailFieldFlag": false,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "entityCode": 1066,
-                "type": "Text",
-                "nullable": false,
-                "creatable": true,
-                "description": null,
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "fieldId": "0000002-de1f4213cc7b4e7faec57c8effcb89c5",
-                "label": "应收对账单编号",
-                "physicalName": "c_yingshouduizhangdanbianhao",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                }
-            },
-            {
-                "label": "应收金额总额(含税)/元",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nameFieldFlag": false,
-                "fieldId": "0000002-6a446d6e34444a18aa809691ca2c2659",
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "type": "Money",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "physicalName": "c_yingshoujinezonge",
-                "name": "yingshoujinezonge",
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1066
-            },
-            {
-                "entityCode": 1066,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-89e5cd8ca5124473ad690565b6e140ff",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "description": null,
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "label": "应收金额总额(不含税)/元",
-                "physicalName": "c_yingshoujinezon",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "referTo": null,
-                "name": "yingshoujinezon",
-                "type": "Money",
-                "creatable": true
-            },
-            {
-                "entityCode": 1066,
-                "label": "预计收款方式",
-                "type": "Option",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-b7066f8774a3477f911b25933ffd27c6",
-                "name": "yujishoukuanfangshi",
-                "physicalName": "c_yujishoukuanfangshi",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "description": null,
-                "nullable": true,
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-6ee3382bf62e495d98b965b4f9783281",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Date",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1066,
-                "nullable": true,
-                "updatable": true,
-                "name": "yujishoukuanriqi",
-                "physicalName": "c_yujishoukuanriqi",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "label": "预计收款日期"
-            },
-            {
-                "updatable": true,
-                "fieldId": "0000002-2730f02861764701b30320aa0b6d8bfc",
-                "entityCode": 1066,
-                "name": "yinhangzhanghu",
-                "label": "银行账户",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "c_yinhangzhanghu",
-                "type": "Text",
-                "referTo": null,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "nameFieldFlag": false,
-                "type": "Text",
-                "description": null,
-                "updatable": true,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-cf2bccb569194804a32d2d4394964a98",
-                "entityCode": 1066,
-                "name": "kaihuyinhang",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nullable": true,
-                "referTo": null,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "label": "开户银行",
-                "physicalName": "c_kaihuyinhang",
-                "creatable": true
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "label": "应收对账确认",
-                "physicalName": "c_yingshouduizhangqueren",
-                "type": "Boolean",
-                "description": null,
-                "nullable": false,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-f90ad55c16b947c58303460b59a12bf5",
-                "entityCode": 1066,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "referenceSetting": null,
-                "referTo": null,
-                "name": "yingshouduizhangqueren",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "nullable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "type": "DateTime",
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1066,
-                "description": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-b1594d9f72504626845b7deac8f590fa",
-                "name": "yingshouduizhangshijian",
-                "label": "应收对账时间",
-                "physicalName": "c_yingshouduizhangshijian",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "referTo": null
-            },
-            {
-                "label": "应收对账人员",
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "creatable": true,
-                "physicalName": "c_yingshouduizhangrenyuan",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Reference",
-                "description": null,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-fe6e6bb1a0e6427b961bd6ec0277c9b5",
-                "entityCode": 1066,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "yingshouduizhangrenyuan",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "label": "创建时间",
-                "description": null,
-                "fieldId": "0000002-76897ab3b01d4814a3851221b92304ab",
-                "name": "createdOn",
-                "nullable": false,
-                "creatable": false,
-                "idFieldFlag": false,
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1066,
-                "type": "DateTime"
-            },
-            {
-                "label": "创建用户",
-                "type": "Reference",
-                "creatable": false,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1066,
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-d883cc721d7c41b09f652e16287781bb",
-                "name": "createdBy",
-                "physicalName": "createdBy",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ]
-            },
-            {
-                "fieldId": "0000002-014c56eaaac349adbe42f6fbcecefc97",
-                "name": "modifiedOn",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "creatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": false,
-                "entityCode": 1066,
-                "label": "最近修改时间",
-                "physicalName": "modifiedOn",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "type": "DateTime",
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": false,
-                "referenceSetting": null,
-                "description": null,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "nameFieldFlag": false,
-                "entityCode": 1066,
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-194c5c8a9d564815bfcbec0401c0e2c9",
-                "label": "修改用户",
-                "physicalName": "modifiedBy",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "name": "modifiedBy"
-            },
-            {
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1066,
-                "type": "Reference",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "nullable": false,
-                "name": "ownerUser",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "fieldId": "0000002-9d14df7e324b4c6984ed5a1242bc2ec3"
-            },
-            {
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "name": "ownerDepartment",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "referenceSetting": null,
-                "type": "Reference",
-                "defaultMemberOfListFlag": false,
-                "displayOrder": 0,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-d19cc098021a4155811b01e4279c6db8",
-                "description": null,
-                "physicalName": "ownerDepartment",
-                "nullable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1066,
-                "label": "所属部门"
-            },
-            {
-                "label": "审批流程",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "type": "Reference",
-                "description": null,
-                "referTo": [
-                    {
-                        "name": "ApprovalConfig",
-                        "label": "审批配置"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1066,
-                "nullable": true,
-                "name": "approvalConfigId",
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-c6924b430dc04bcfb03ed0ea7fbb164e",
-                "physicalName": "approvalConfigId",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "referenceSetting": null,
-                "fieldId": "0000002-621c668b3d6f4f60a327b0189dc4f1c8",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "type": "Status",
-                "displayOrder": 0,
-                "entityCode": 1066,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "label": "审批状态",
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "name": "approvalStatus",
-                "physicalName": "approvalStatus",
-                "creatable": false,
-                "updatable": false
-            },
-            {
-                "entityCode": 1066,
-                "nullable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-5ba423664760461cb8aba08b1306c257",
-                "physicalName": "lastApprovedBy",
-                "owner": {
-                    "label": "应收账款-对账",
-                    "name": "Yingshouzhangkuanuizhang"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "label": "最近审批人",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "lastApprovedBy",
-                "referenceSetting": null,
-                "type": "Reference"
-            },
-            {
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "entityCode": 1066,
-                "physicalName": "lastApprovedOn",
-                "description": null,
-                "name": "lastApprovedOn",
-                "label": "最近审批时间",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-cc30922ebe644c3aae115b03d8de0fff",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "type": "DateTime",
-                "nullable": true
-            },
-            {
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "lastApprovalRemark",
-                "type": "TextArea",
-                "description": null,
-                "nullable": true,
-                "creatable": false,
-                "label": "最近审批批注",
-                "owner": {
-                    "name": "Yingshouzhangkuanuizhang",
-                    "label": "应收账款-对账"
-                },
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-416d5fcda63549789ce928715e468195",
-                "entityCode": 1066,
-                "physicalName": "lastApprovalRemark",
-                "displayOrder": 0,
-                "idFieldFlag": false
-            }
-        ],
-        "fieldNames": [
-            "yingshouzhangkuanuizhangId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "xuanzekehu",
-            "duizhangkaishiriqi",
-            "duizhangjieshuriqi",
-            "yingshouduizhangdanbianhao",
-            "yingshoujinezonge",
-            "yingshoujinezon",
-            "yujishoukuanfangshi",
-            "yujishoukuanriqi",
-            "yinhangzhanghu",
-            "kaihuyinhang",
-            "yingshouduizhangqueren",
-            "yingshouduizhangshijian",
-            "yingshouduizhangrenyuan",
-            "approvalConfigId",
-            "approvalStatus",
-            "lastApprovedBy",
-            "lastApprovedOn",
-            "lastApprovalRemark"
-        ]
-    },
-    "nameField": null,
     "physicalName": "t_xiaoshouchukuchanpinmingxi",
-    "shareable": false,
     "fieldSet": [
         {
-            "label": "id主键",
-            "creatable": false,
+            "nullable": false,
             "nameFieldFlag": false,
-            "physicalName": "xiaoshouchukuchanpinmingxiId",
-            "reserved": true,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
             "name": "xiaoshouchukuchanpinmingxiId",
             "updatable": false,
-            "referTo": null,
-            "idFieldFlag": true,
+            "entityCode": 1067,
+            "creatable": false,
             "type": "PrimaryKey",
-            "mainDetailFieldFlag": false
+            "description": null,
+            "physicalName": "xiaoshouchukuchanpinmingxiId",
+            "displayOrder": 0,
+            "idFieldFlag": true,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "fieldId": "0000002-3ea147171bc745aa8904b8b8240d8275",
+            "label": "id主键"
         },
         {
+            "creatable": false,
             "updatable": false,
-            "type": "DateTime",
-            "nameFieldFlag": false,
-            "physicalName": "createdOn",
-            "referTo": null,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-dd58e3de5c9540d2aa3f78814ee4411d",
             "label": "创建时间",
-            "creatable": false,
+            "description": null,
             "mainDetailFieldFlag": false,
-            "reserved": true,
+            "referenceSetting": null,
             "name": "createdOn",
-            "idFieldFlag": false
-        },
-        {
-            "mainDetailFieldFlag": false,
             "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "name": "createdBy",
-            "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference",
-            "reserved": true,
-            "referTo": "User,",
-            "updatable": false,
-            "label": "创建用户"
-        },
-        {
-            "physicalName": "modifiedOn",
-            "name": "modifiedOn",
-            "idFieldFlag": false,
-            "creatable": false,
+            "nullable": false,
+            "physicalName": "createdOn",
             "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": true,
+            "displayOrder": 0,
+            "idFieldFlag": false,
             "referTo": null,
-            "updatable": false,
-            "label": "最近修改时间"
+            "fieldViewModel": null,
+            "entityCode": 1067
         },
         {
-            "idFieldFlag": false,
-            "label": "修改用户",
-            "referTo": "User,",
-            "name": "modifiedBy",
-            "updatable": false,
+            "label": "创建用户",
+            "physicalName": "createdBy",
+            "displayOrder": 0,
+            "nullable": false,
             "creatable": false,
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "physicalName": "modifiedBy",
-            "reserved": true,
-            "mainDetailFieldFlag": false
-        },
-        {
-            "nameFieldFlag": false,
-            "reserved": true,
+            "mainDetailFieldFlag": false,
+            "entityCode": 1067,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "name": "createdBy",
+            "description": null,
+            "fieldId": "0000002-6ec4d4e3396b4af09ebb175a143f3e06",
             "updatable": false,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": true,
-            "physicalName": "mdYingshouzhangkuanuizhangId",
-            "referTo": "Yingshouzhangkuanuizhang,",
-            "name": "mdYingshouzhangkuanuizhangId",
-            "label": "主从关联Id",
-            "creatable": true,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "referenceSetting": null,
             "type": "Reference"
         },
         {
             "nameFieldFlag": false,
-            "physicalName": "c_xuanzechukumingxi",
-            "reserved": false,
-            "name": "xuanzechukumingxi",
-            "idFieldFlag": false,
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "referTo": "Xiaoshouchuku,",
-            "updatable": true,
-            "label": "选择出库明细",
-            "type": "Reference"
-        },
-        {
             "referTo": null,
-            "name": "duizhangshuliang",
+            "referenceSetting": null,
+            "entityCode": 1067,
+            "physicalName": "modifiedOn",
+            "description": null,
+            "nullable": true,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "updatable": false,
+            "label": "最近修改时间",
+            "displayOrder": 0,
+            "creatable": false,
             "idFieldFlag": false,
-            "type": "Integer",
-            "nameFieldFlag": false,
-            "reserved": false,
-            "updatable": true,
-            "label": "对账数量",
-            "creatable": true,
             "mainDetailFieldFlag": false,
-            "physicalName": "c_duizhangshuliang"
+            "fieldId": "0000002-c1f4ce7ca2fc4ce6a5a029d0dddd4ef4",
+            "name": "modifiedOn",
+            "type": "DateTime"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "label": "修改用户",
+            "physicalName": "modifiedBy",
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": false,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-79b6de7dbacc4477b54f8fefe710dfaf",
+            "referenceSetting": null,
+            "fieldViewModel": null,
+            "nameFieldFlag": false,
+            "name": "modifiedBy",
+            "type": "Reference",
+            "updatable": false,
+            "entityCode": 1067
+        },
+        {
+            "name": "mdYingshouzhangkuanuizhangId",
+            "physicalName": "mdYingshouzhangkuanuizhangId",
+            "type": "Reference",
+            "displayOrder": 0,
+            "nullable": false,
+            "creatable": true,
+            "referTo": "Yingshouzhangkuanuizhang,",
+            "entityCode": 1067,
+            "fieldViewModel": null,
+            "description": null,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "label": "主从关联Id",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": true,
+            "fieldId": "0000002-3161c64e179243bda202653cc57792da",
+            "referenceSetting": null
         },
         {
             "idFieldFlag": false,
-            "type": "Money",
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "fieldId": "0000002-4755145f802649c29194c4db65414a84",
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": "Xiaoshouchuku,",
+            "description": null,
+            "label": "选择出库明细",
+            "physicalName": "c_xuanzechukumingxi",
+            "type": "Reference",
+            "name": "xuanzechukumingxi",
+            "displayOrder": 0,
+            "nullable": false,
+            "creatable": true,
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "referenceSetting": [
+                {
+                    "entityName": "Xiaoshouchuku",
+                    "fieldList": [
+                        "xuanzexiaoshoudingdan",
+                        "chanpinchukubiaoqian",
+                        "chukucangku",
+                        "chukuchanpinzongshu",
+                        "chukuchanpinshoujiazonge",
+                        "yujichukushijian",
+                        "chukuyuan"
+                    ]
+                }
+            ],
+            "entityCode": 1067
+        },
+        {
+            "label": "对账数量",
+            "nullable": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "entityCode": 1067,
+            "type": "Integer",
+            "displayOrder": 0,
+            "updatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-f9e971274e3f41f886547ce5d4e798c3",
+            "creatable": true,
+            "referenceSetting": null,
+            "description": null,
+            "physicalName": "c_duizhangshuliang",
+            "mainDetailFieldFlag": false,
+            "name": "duizhangshuliang"
+        },
+        {
+            "defaultMemberOfListFlag": false,
             "physicalName": "c_shijishoujia",
-            "reserved": false,
+            "nullable": true,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-8ca94e97ea774920ba3eb18e2cb22029",
+            "entityCode": 1067,
+            "type": "Money",
+            "referTo": null,
+            "description": null,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "referenceSetting": null,
             "name": "shijishoujia",
             "label": "实际售价(含税)/元",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
+            "displayOrder": 0,
             "updatable": true
         },
         {
-            "type": "Money",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
+            "description": null,
             "physicalName": "c_yingshoujine",
-            "reserved": false,
+            "label": "应收金额(含税)/元",
+            "type": "Money",
+            "nullable": true,
+            "idFieldFlag": false,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "entityCode": 1067,
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "referenceSetting": null,
             "name": "yingshoujine",
-            "idFieldFlag": false,
+            "displayOrder": 0,
             "creatable": true,
-            "referTo": null,
-            "updatable": true,
-            "label": "应收金额(含税)/元"
-        },
-        {
             "nameFieldFlag": false,
-            "physicalName": "c_shijishoujiabu",
-            "updatable": true,
-            "idFieldFlag": false,
-            "label": "实际售价(不含税)/元",
-            "type": "Money",
             "mainDetailFieldFlag": false,
-            "reserved": false,
-            "referTo": null,
-            "name": "shijishoujiabu",
-            "creatable": true
+            "fieldId": "0000002-577e239085714d9ea2b3218d905820f0"
         },
         {
-            "reserved": false,
+            "label": "实际售价(不含税)/元",
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": true,
+            "entityCode": 1067,
+            "type": "Money",
+            "description": null,
+            "updatable": true,
             "referTo": null,
+            "referenceSetting": null,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "minValue": -999999999,
+                "validators": [],
+                "precision": 2,
+                "maxValue": 999999999
+            },
+            "fieldId": "0000002-e424bd651d944ab7929e4bc3efb2c2b4",
+            "name": "shijishoujiabu",
+            "physicalName": "c_shijishoujiabu",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false
+        },
+        {
             "name": "yingshoujineyuan",
+            "type": "Money",
+            "referTo": null,
+            "entityCode": 1067,
+            "displayOrder": 0,
+            "nullable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "physicalName": "c_yingshoujineyuan",
             "updatable": true,
             "idFieldFlag": false,
+            "referenceSetting": null,
+            "description": null,
             "label": "应收金额(不含税)/元",
-            "nameFieldFlag": false,
-            "physicalName": "c_yingshoujineyuan",
             "creatable": true,
-            "type": "Money",
-            "mainDetailFieldFlag": false
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": [],
+                "precision": 2
+            },
+            "fieldId": "0000002-48e4993aa6e842ef845e1a72bb7fb3cf"
         }
     ]
 }

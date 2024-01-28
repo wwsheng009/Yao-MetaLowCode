@@ -1,966 +1,333 @@
 {
+    "layoutable": true,
+    "idFieldName": "kaohezhibiaoId",
+    "internalEntityFlag": false,
+    "tags": "HRM人事",
     "name": "Kaohezhibiao",
-    "label": "考核指标",
+    "entityCode": 1155,
     "systemEntityFlag": false,
+    "label": "考核指标",
     "detailEntityFlag": true,
     "listable": true,
-    "idFieldName": "kaohezhibiaoId",
-    "tags": "HRM人事",
-    "entityCode": 1155,
-    "layoutable": true,
-    "internalEntityFlag": false,
     "physicalName": "t_kaohezhibiao",
-    "mainEntity": {
-        "physicalName": "t_jixiaokaohejihuazhiding",
-        "entityCode": 1153,
-        "authorizable": true,
-        "fieldSet": [
-            {
-                "fieldId": "0000002-b215fea9d8584f62bd572ff69fa2add1",
-                "name": "jixiaokaohejihuazhidingId",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "idFieldFlag": true,
-                "entityCode": 1153,
-                "label": "id主键",
-                "physicalName": "jixiaokaohejihuazhidingId",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "type": "PrimaryKey",
-                "referenceSetting": null
-            },
-            {
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "name": "createdOn",
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "updatable": false,
-                "nameFieldFlag": false,
-                "type": "DateTime",
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-090baf4e4a0d4ebcb97132a2dd94f67b",
-                "entityCode": 1153,
-                "description": null,
-                "nullable": false
-            },
-            {
-                "entityCode": 1153,
-                "description": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-19f75eea37864dfeabd2e4d8ef38dc94",
-                "name": "createdBy",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "创建用户",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "type": "Reference",
-                "updatable": false,
-                "physicalName": "createdBy",
-                "idFieldFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "fieldViewModel": null,
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "creatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1153,
-                "physicalName": "modifiedOn",
-                "type": "DateTime",
-                "description": null,
-                "nullable": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-ee6d713b52c64357bc228358912460ed",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "displayOrder": 0,
-                "updatable": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "name": "modifiedBy",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "fieldViewModel": null,
-                "physicalName": "modifiedBy",
-                "type": "Reference",
-                "creatable": false,
-                "referenceSetting": null,
-                "entityCode": 1153,
-                "label": "修改用户",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-20775ed1d1784ef6a8c481461a3263f4",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false
-            },
-            {
-                "label": "所属用户",
-                "creatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1153,
-                "name": "ownerUser",
-                "type": "Reference",
-                "nullable": false,
-                "idFieldFlag": false,
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "fieldId": "0000002-08ee0f286b7c4916af6da3de48c175da",
-                "physicalName": "ownerUser",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ]
-            },
-            {
-                "nameFieldFlag": false,
-                "fieldId": "0000002-495bf27cc8e64fa1abfc94ef6686fefe",
-                "entityCode": 1153,
-                "name": "ownerDepartment",
-                "physicalName": "ownerDepartment",
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "creatable": false,
-                "updatable": false,
-                "fieldViewModel": null,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "label": "所属部门",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "nullable": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-306ed6f6743946bc83aa444d2ef5b019",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "creatable": true,
-                "idFieldFlag": false,
-                "physicalName": "c_jixiaokaohezhuti",
-                "description": null,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "name": "jixiaokaohezhuti",
-                "label": "绩效考核主题",
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Jixiaokaohe",
-                        "label": "绩效考核"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "Jixiaokaohe",
-                        "fieldList": [
-                            "kaohezhuti",
-                            "kaohekaishishijian",
-                            "kaohejieshushijian",
-                            "kaoheshuoming"
-                        ]
-                    }
-                ],
-                "entityCode": 1153,
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                }
-            },
-            {
-                "label": "考核对象",
-                "physicalName": "c_kaoheduixiang",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-52cf0577899c422b9b6f8829d27a7b0f",
-                "name": "kaoheduixiang",
-                "referenceSetting": [
-                    {
-                        "entityName": "Yuangongdangan",
-                        "fieldList": [
-                            "gonghao",
-                            "xingming",
-                            "bumen",
-                            "gangwei"
-                        ]
-                    }
-                ],
-                "description": null,
-                "updatable": true,
-                "entityCode": 1153,
-                "type": "Reference",
-                "creatable": true,
-                "idFieldFlag": false,
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "nullable": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Yuangongdangan",
-                        "label": "员工档案"
-                    }
-                ]
-            },
-            {
-                "fieldId": "0000002-e7d9d4e683424b199c57b2f2c55341c7",
-                "entityCode": 1153,
-                "name": "zhibiaozongquanzhong",
-                "label": "指标总权重（%）",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "referenceSetting": null,
-                "physicalName": "c_zhibiaozongquanzhong",
-                "type": "Percent",
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "nullable": true,
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                }
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "physicalName": "c_beizhu",
-                "description": null,
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1153,
-                "name": "beizhu",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "creatable": true,
-                "updatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxLength": 1000,
-                    "rows": 3,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "fieldId": "0000002-4d06051050964a91b7c20cb6d5543b39",
-                "label": "备注",
-                "type": "TextArea",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-e35b50e6eee24540833e85e87672c009",
-                "entityCode": 1153,
-                "label": "考核主题",
-                "creatable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "c_kaohezhuti",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "idFieldFlag": false,
-                "name": "kaohezhuti",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "type": "Text",
-                "nameFieldFlag": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "defaultMemberOfListFlag": false
-            }
-        ],
-        "sortedFieldSet": [
-            {
-                "nullable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "creatable": false,
-                "idFieldFlag": true,
-                "label": "id主键",
-                "physicalName": "jixiaokaohejihuazhidingId",
-                "description": null,
-                "fieldId": "0000002-b215fea9d8584f62bd572ff69fa2add1",
-                "entityCode": 1153,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "name": "jixiaokaohejihuazhidingId",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                }
-            },
-            {
-                "nullable": false,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "fieldId": "0000002-306ed6f6743946bc83aa444d2ef5b019",
-                "physicalName": "c_jixiaokaohezhuti",
-                "description": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "name": "jixiaokaohezhuti",
-                "owner": {
-                    "label": "绩效考核计划制定",
-                    "name": "Jixiaokaohejihuazhiding"
-                },
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Jixiaokaohe",
-                        "fieldList": [
-                            "kaohezhuti",
-                            "kaohekaishishijian",
-                            "kaohejieshushijian",
-                            "kaoheshuoming"
-                        ]
-                    }
-                ],
-                "entityCode": 1153,
-                "creatable": true,
-                "referTo": [
-                    {
-                        "name": "Jixiaokaohe",
-                        "label": "绩效考核"
-                    }
-                ],
-                "label": "绩效考核主题",
-                "type": "Reference"
-            },
-            {
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-52cf0577899c422b9b6f8829d27a7b0f",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "creatable": true,
-                "nullable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Yuangongdangan",
-                        "label": "员工档案"
-                    }
-                ],
-                "label": "考核对象",
-                "physicalName": "c_kaoheduixiang",
-                "displayOrder": 0,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Yuangongdangan",
-                        "fieldList": [
-                            "gonghao",
-                            "xingming",
-                            "bumen",
-                            "gangwei"
-                        ]
-                    }
-                ],
-                "name": "kaoheduixiang",
-                "type": "Reference",
-                "description": null,
-                "entityCode": 1153
-            },
-            {
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-e7d9d4e683424b199c57b2f2c55341c7",
-                "entityCode": 1153,
-                "name": "zhibiaozongquanzhong",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "type": "Percent",
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "label": "指标总权重（%）",
-                "physicalName": "c_zhibiaozongquanzhong",
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                }
-            },
-            {
-                "type": "TextArea",
-                "nullable": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 1000,
-                    "rows": 3
-                },
-                "entityCode": 1153,
-                "name": "beizhu",
-                "physicalName": "c_beizhu",
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "label": "备注",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "creatable": true,
-                "fieldId": "0000002-4d06051050964a91b7c20cb6d5543b39",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false
-            },
-            {
-                "referTo": null,
-                "entityCode": 1153,
-                "type": "Text",
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "考核主题",
-                "physicalName": "c_kaohezhuti",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "description": null,
-                "fieldId": "0000002-e35b50e6eee24540833e85e87672c009",
-                "name": "kaohezhuti",
-                "nameFieldFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "name": "createdOn",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-090baf4e4a0d4ebcb97132a2dd94f67b",
-                "entityCode": 1153,
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "type": "DateTime",
-                "description": null,
-                "idFieldFlag": false,
-                "label": "创建时间",
-                "referTo": null
-            },
-            {
-                "label": "创建用户",
-                "physicalName": "createdBy",
-                "owner": {
-                    "label": "绩效考核计划制定",
-                    "name": "Jixiaokaohejihuazhiding"
-                },
-                "type": "Reference",
-                "nullable": false,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "description": null,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-19f75eea37864dfeabd2e4d8ef38dc94",
-                "entityCode": 1153,
-                "name": "createdBy",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "physicalName": "modifiedOn",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "fieldViewModel": null,
-                "name": "modifiedOn",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "nullable": true,
-                "type": "DateTime",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-ee6d713b52c64357bc228358912460ed",
-                "label": "最近修改时间",
-                "nameFieldFlag": false,
-                "entityCode": 1153
-            },
-            {
-                "fieldId": "0000002-20775ed1d1784ef6a8c481461a3263f4",
-                "physicalName": "modifiedBy",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "entityCode": 1153,
-                "label": "修改用户",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "modifiedBy",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "idFieldFlag": false
-            },
-            {
-                "description": null,
-                "creatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "entityCode": 1153,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-08ee0f286b7c4916af6da3de48c175da",
-                "physicalName": "ownerUser",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "label": "所属用户",
-                "type": "Reference",
-                "nullable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "ownerUser"
-            },
-            {
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "physicalName": "ownerDepartment",
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldViewModel": null,
-                "label": "所属部门",
-                "name": "ownerDepartment",
-                "description": null,
-                "fieldId": "0000002-495bf27cc8e64fa1abfc94ef6686fefe",
-                "owner": {
-                    "name": "Jixiaokaohejihuazhiding",
-                    "label": "绩效考核计划制定"
-                },
-                "type": "Reference",
-                "nullable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "entityCode": 1153
-            }
-        ],
-        "mainDetailField": null,
-        "name": "Jixiaokaohejihuazhiding",
-        "label": "绩效考核计划制定",
-        "mainEntity": null,
-        "fieldNames": [
-            "jixiaokaohejihuazhidingId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "jixiaokaohezhuti",
-            "kaoheduixiang",
-            "zhibiaozongquanzhong",
-            "beizhu",
-            "kaohezhuti"
-        ],
-        "detailEntityFlag": false,
-        "shareable": false,
-        "idField": {
-            "name": "jixiaokaohejihuazhidingId",
-            "label": "id主键"
-        },
-        "virtualFieldSet": [],
-        "entityId": "0000001-30cfef4322624d6080891f94b25c5f04",
-        "assignable": false,
-        "tags": "HRM人事",
-        "nameField": {
-            "name": "kaohezhuti",
-            "label": "考核主题"
-        },
-        "detailEntitySet": [
-            {
-                "name": "Kaohezhibiao",
-                "label": "考核指标"
-            }
-        ],
-        "layoutable": true,
-        "listable": true
-    },
+    "mainEntity": "Jixiaokaohejihuazhiding",
     "assignable": false,
-    "authorizable": false,
     "nameField": "指标名称",
     "shareable": false,
+    "authorizable": false,
     "fieldSet": [
         {
-            "physicalName": "kaohezhibiaoId",
-            "reserved": true,
-            "referTo": null,
-            "name": "kaohezhibiaoId",
-            "updatable": false,
-            "label": "id主键",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
+            "entityCode": 1155,
+            "description": null,
             "idFieldFlag": true,
-            "type": "PrimaryKey"
+            "referenceSetting": null,
+            "fieldId": "0000002-6618bd20f38246d9bd0726cc52fec731",
+            "creatable": false,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "physicalName": "kaohezhibiaoId",
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "type": "PrimaryKey",
+            "label": "id主键",
+            "nullable": false,
+            "name": "kaohezhibiaoId"
         },
         {
-            "nameFieldFlag": false,
-            "physicalName": "createdOn",
-            "reserved": true,
-            "referTo": null,
-            "label": "创建时间",
+            "fieldId": "0000002-cc4b2ba222fc4f699d6540a1e346d950",
             "creatable": false,
-            "name": "createdOn",
             "updatable": false,
+            "fieldViewModel": null,
+            "referTo": null,
+            "entityCode": 1155,
+            "name": "createdOn",
+            "defaultMemberOfListFlag": false,
+            "nullable": false,
             "idFieldFlag": false,
+            "referenceSetting": null,
+            "physicalName": "createdOn",
             "type": "DateTime",
+            "description": null,
+            "displayOrder": 0,
+            "label": "创建时间",
+            "nameFieldFlag": false,
             "mainDetailFieldFlag": false
         },
         {
-            "label": "创建用户",
-            "mainDetailFieldFlag": false,
             "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
-            "referTo": "User,",
-            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "entityCode": 1155,
             "name": "createdBy",
+            "displayOrder": 0,
+            "nullable": false,
+            "creatable": false,
+            "referenceSetting": null,
+            "label": "创建用户",
+            "physicalName": "createdBy",
+            "type": "Reference",
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-69d79c6694c64271a9623ba7df5554e6",
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "description": null,
+            "updatable": false
+        },
+        {
             "updatable": false,
             "idFieldFlag": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "entityCode": 1155,
+            "name": "modifiedOn",
+            "physicalName": "modifiedOn",
+            "type": "DateTime",
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-29ca3715beb949939389aa18dcdb038e",
+            "label": "最近修改时间",
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true,
             "creatable": false
         },
         {
+            "type": "Reference",
+            "description": null,
+            "displayOrder": 0,
             "idFieldFlag": false,
-            "label": "最近修改时间",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-8ed76af14bee436a82b09ee911638cb0",
+            "entityCode": 1155,
+            "label": "修改用户",
             "nameFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "reserved": true,
-            "referTo": null,
-            "name": "modifiedOn",
+            "physicalName": "modifiedBy",
             "updatable": false,
-            "type": "DateTime"
+            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "referenceSetting": null,
+            "name": "modifiedBy",
+            "nullable": true,
+            "creatable": false,
+            "defaultMemberOfListFlag": false
         },
         {
-            "physicalName": "modifiedBy",
-            "reserved": true,
-            "label": "修改用户",
-            "creatable": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
+            "name": "mdJixiaokaohejihuazhidingId",
             "nameFieldFlag": false,
-            "referTo": "User,",
-            "name": "modifiedBy",
+            "mainDetailFieldFlag": true,
+            "fieldViewModel": null,
+            "type": "Reference",
+            "displayOrder": 0,
+            "nullable": false,
+            "idFieldFlag": false,
+            "fieldId": "0000002-e58379cb85c14357915951475be83bef",
+            "entityCode": 1155,
+            "description": null,
+            "creatable": true,
+            "referTo": "Jixiaokaohejihuazhiding,",
+            "referenceSetting": null,
+            "label": "主从关联Id",
+            "physicalName": "mdJixiaokaohejihuazhidingId",
             "updatable": false,
+            "defaultMemberOfListFlag": true
+        },
+        {
+            "entityCode": 1155,
+            "label": "指标名称",
+            "description": null,
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": {
+                "maxLength": 200,
+                "validators": [],
+                "minLength": 0
+            },
+            "referenceSetting": null,
+            "fieldId": "0000002-9aaab53301604bc9abd41a5caa6ec786",
+            "type": "Text",
+            "nullable": false,
+            "creatable": true,
+            "nameFieldFlag": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "name": "zhibiaomingcheng",
+            "physicalName": "c_zhibiaomingcheng",
+            "displayOrder": 0,
             "idFieldFlag": false
         },
         {
-            "nameFieldFlag": false,
-            "referTo": "Jixiaokaohejihuazhiding,",
-            "updatable": false,
-            "label": "主从关联Id",
-            "creatable": true,
-            "mainDetailFieldFlag": true,
-            "physicalName": "mdJixiaokaohejihuazhidingId",
-            "reserved": true,
-            "name": "mdJixiaokaohejihuazhidingId",
-            "idFieldFlag": false,
-            "type": "Reference"
-        },
-        {
-            "physicalName": "c_zhibiaomingcheng",
-            "referTo": null,
             "updatable": true,
-            "nameFieldFlag": true,
-            "name": "zhibiaomingcheng",
-            "idFieldFlag": false,
-            "label": "指标名称",
-            "creatable": true,
-            "type": "Text",
-            "mainDetailFieldFlag": false,
-            "reserved": false
-        },
-        {
-            "label": "权重（%）",
-            "type": "Percent",
-            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 100,
+                "minValue": 0,
+                "validators": []
+            },
+            "referenceSetting": [],
             "physicalName": "c_quanzhong",
-            "reserved": false,
-            "referTo": null,
+            "type": "Percent",
+            "nullable": false,
+            "mainDetailFieldFlag": false,
             "name": "quanzhong",
-            "updatable": true,
+            "description": null,
             "nameFieldFlag": false,
-            "idFieldFlag": false,
-            "creatable": true
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-d95bd584f121451aa3d2ca4af6ff183e",
+            "entityCode": 1155,
+            "label": "权重（%）",
+            "displayOrder": 0,
+            "creatable": true,
+            "idFieldFlag": false
         },
         {
-            "referTo": null,
-            "updatable": true,
-            "creatable": true,
-            "idFieldFlag": false,
             "label": "目标值",
-            "type": "Text",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
             "physicalName": "c_mubiaozhi",
-            "reserved": false,
-            "name": "mubiaozhi"
-        },
-        {
-            "updatable": true,
-            "label": "定性/定量指标",
-            "type": "Text",
-            "mainDetailFieldFlag": false,
-            "referTo": null,
-            "physicalName": "c_dingxing",
-            "reserved": false,
-            "name": "dingxing",
+            "displayOrder": 0,
             "idFieldFlag": false,
-            "creatable": true,
-            "nameFieldFlag": false
-        },
-        {
+            "fieldId": "0000002-6d8f39a6d16f4cab95287f96e76f1d15",
+            "name": "mubiaozhi",
+            "referTo": null,
+            "referenceSetting": null,
+            "type": "Text",
+            "nullable": false,
             "nameFieldFlag": false,
-            "physicalName": "c_zhibiaodingyi",
-            "referTo": null,
-            "name": "zhibiaodingyi",
-            "type": "Text",
-            "mainDetailFieldFlag": false,
-            "reserved": false,
-            "updatable": true,
-            "idFieldFlag": false,
-            "label": "指标定义",
-            "creatable": true
-        },
-        {
-            "label": "评分标准",
-            "mainDetailFieldFlag": false,
-            "referTo": null,
-            "updatable": true,
-            "idFieldFlag": false,
-            "name": "pingfenbiaozhun",
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "entityCode": 1155,
+            "description": null,
             "creatable": true,
-            "type": "Text",
-            "nameFieldFlag": false,
-            "physicalName": "c_pingfenbiaozhun",
-            "reserved": false
-        },
-        {
-            "physicalName": "c_pingfenyiju",
-            "reserved": false,
-            "referTo": null,
-            "name": "pingfenyiju",
-            "label": "评分依据",
-            "type": "Text",
-            "nameFieldFlag": false,
             "updatable": true,
-            "idFieldFlag": false,
-            "creatable": true,
             "mainDetailFieldFlag": false
         },
         {
-            "referTo": null,
-            "name": "jiliangdanwei",
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "description": null,
             "updatable": true,
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_jiliangdanwei",
-            "reserved": false,
-            "label": "计量单位",
+            "idFieldFlag": false,
+            "displayOrder": 0,
+            "nullable": true,
             "creatable": true,
-            "type": "Text",
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "entityCode": 1155,
+            "name": "dingxing",
             "nameFieldFlag": false,
-            "idFieldFlag": false
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "type": "Text",
+            "fieldId": "0000002-c6ed4022faaf45dc8a0c2fd88a39f1e0",
+            "label": "定性/定量指标",
+            "physicalName": "c_dingxing"
+        },
+        {
+            "physicalName": "c_zhibiaodingyi",
+            "nullable": true,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "fieldId": "0000002-c81ab42a337d41858ecdd89b0eb8b984",
+            "name": "zhibiaodingyi",
+            "label": "指标定义",
+            "defaultMemberOfListFlag": true,
+            "nameFieldFlag": false,
+            "referenceSetting": null,
+            "type": "Text",
+            "description": null,
+            "displayOrder": 0,
+            "updatable": true,
+            "entityCode": 1155,
+            "creatable": true,
+            "idFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "entityCode": 1155,
+            "label": "评分标准",
+            "physicalName": "c_pingfenbiaozhun",
+            "description": null,
+            "nameFieldFlag": false,
+            "referenceSetting": null,
+            "fieldId": "0000002-1fe8fe7140034da7a00b440256d43548",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "type": "Text",
+            "displayOrder": 0,
+            "nullable": true,
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "name": "pingfenbiaozhun",
+            "creatable": true,
+            "fieldViewModel": {
+                "maxLength": 200,
+                "validators": [],
+                "minLength": 0
+            }
+        },
+        {
+            "name": "pingfenyiju",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": {
+                "maxLength": 200,
+                "validators": [],
+                "minLength": 0
+            },
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "label": "评分依据",
+            "description": null,
+            "displayOrder": 0,
+            "creatable": true,
+            "updatable": true,
+            "type": "Text",
+            "nullable": true,
+            "fieldId": "0000002-b2431b551b8a4a7b97fa34ce968ceca9",
+            "entityCode": 1155,
+            "physicalName": "c_pingfenyiju",
+            "referenceSetting": null
+        },
+        {
+            "type": "Text",
+            "nullable": true,
+            "referTo": null,
+            "referenceSetting": null,
+            "fieldId": "0000002-dbd3b37a45d24af8bed52fced0dbfeff",
+            "mainDetailFieldFlag": false,
+            "label": "计量单位",
+            "description": null,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "entityCode": 1155,
+            "physicalName": "c_jiliangdanwei",
+            "displayOrder": 0,
+            "creatable": true,
+            "updatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "name": "jiliangdanwei"
         }
     ]
 }

@@ -1,1666 +1,160 @@
 {
+    "entityCode": 1118,
     "systemEntityFlag": false,
-    "layoutable": true,
-    "internalEntityFlag": false,
-    "name": "Gongzuojishixijingli",
-    "label": "简历-工作及实习经历",
-    "listable": true,
+    "detailEntityFlag": true,
     "idFieldName": "gongzuojishixijingliId",
     "tags": "HRM人事",
-    "entityCode": 1118,
-    "detailEntityFlag": true,
-    "authorizable": false,
+    "name": "Gongzuojishixijingli",
+    "layoutable": true,
+    "listable": true,
+    "internalEntityFlag": false,
+    "label": "简历-工作及实习经历",
     "shareable": false,
     "nameField": "企业名称",
-    "mainEntity": {
-        "mainEntity": null,
-        "sortedFieldSet": [
-            {
-                "idFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "description": null,
-                "entityCode": 1116,
-                "displayOrder": 0,
-                "creatable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-604899c53ad44e5f817b0f2224dc4165",
-                "label": "id主键",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "nullable": false,
-                "name": "jianlishoujijichushaiId",
-                "type": "PrimaryKey",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "physicalName": "jianlishoujijichushaiId"
-            },
-            {
-                "fieldId": "0000002-00cc1716493c492c95eddd1e7a73f004",
-                "entityCode": 1116,
-                "type": "Text",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": true,
-                "referTo": null,
-                "physicalName": "c_jianlibianhao",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "name": "jianlibianhao",
-                "label": "简历编号",
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "owner": {
-                    "label": "简历收集及初筛",
-                    "name": "Jianlishoujijichushai"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxFileCount": 3,
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": []
-                },
-                "fieldId": "0000002-2ebe6f6e40724fa2a3f063a09b03c890",
-                "name": "jianlishangchuan",
-                "physicalName": "c_jianlishangchuan",
-                "type": "File",
-                "mainDetailFieldFlag": false,
-                "entityCode": 1116,
-                "label": "简历上传",
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "description": null
-            },
-            {
-                "name": "zuopinji",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-f472c9bd96ec4e5aab052e5c9dcd0707",
-                "entityCode": 1116,
-                "physicalName": "c_zuopinji",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "displayOrder": 0,
-                "label": "作品集",
-                "type": "File",
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "uploadHint": "",
-                    "validators": [],
-                    "maxFileCount": 9,
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": []
-                },
-                "referTo": null,
-                "referenceSetting": null,
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "nullable": false,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1116,
-                "name": "xuanzeyixianggangwei",
-                "label": "选择意向岗位",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Zhaopinxuqiu",
-                        "fieldList": [
-                            "xuqiubianhao",
-                            "xuanzeJD",
-                            "gangweixingzhi",
-                            "xuqiurenshu",
-                            "gongzuodidian",
-                            "xinziqujian",
-                            "xueliyaoqiu",
-                            "gongzuonianxianyaoqiu",
-                            "nianlingyaoqiu"
-                        ]
-                    }
-                ],
-                "physicalName": "c_xuanzeyixianggangwei",
-                "nameFieldFlag": false,
-                "fieldId": "0000002-853ade917d28429c9afcc1161bca3b30",
-                "type": "Reference",
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Zhaopinxuqiu",
-                        "label": "招聘需求"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "label": "是否接受调剂",
-                "nullable": false,
-                "updatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "name": "shifoujieshoutiaoji",
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-33c76f5dd0f24eaf86f2e03b3011273e",
-                "entityCode": 1116,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "c_shifoujieshoutiaoji",
-                "type": "Boolean",
-                "description": null,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "name": "xingming",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-4336f74ea5594f4e9889e7a1f9845a9b",
-                "entityCode": 1116,
-                "label": "姓名",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "description": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "physicalName": "c_xingming",
-                "type": "Text",
-                "nullable": false,
-                "nameFieldFlag": true
-            },
-            {
-                "physicalName": "c_xingbie",
-                "type": "Option",
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "xingbie",
-                "label": "性别",
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1116,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "fieldId": "0000002-1ed896f6df4f49c4b0de3b9d47158aa9",
-                "nullable": false,
-                "referTo": null,
-                "referenceSetting": null
-            },
-            {
-                "fieldId": "0000002-ad3b2058224244af8c5083896455ad5c",
-                "referenceSetting": null,
-                "nullable": true,
-                "creatable": true,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "label": "民族",
-                "physicalName": "c_minzu",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": true,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "entityCode": 1116,
-                "name": "minzu",
-                "type": "Text",
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "idFieldFlag": false,
-                "nameFieldFlag": false
-            },
-            {
-                "description": null,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-e18c1028bfcd4e159f91f0b486fff979",
-                "name": "jiguan",
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "entityCode": 1116,
-                "type": "AreaSelect",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "creatable": true,
-                "updatable": true,
-                "label": "籍贯",
-                "physicalName": "c_jiguan",
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": [],
-                    "areaDataType": 2
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-05f13295f82a41cda6756c9aa663d1e8",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "idFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "c_zhengzhimianmao",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "label": "政治面貌",
-                "type": "Option",
-                "description": null,
-                "creatable": true,
-                "entityCode": 1116,
-                "name": "zhengzhimianmao",
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false
-            },
-            {
-                "type": "Text",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-0482eba7066149afb405ae925684b9f8",
-                "referTo": null,
-                "entityCode": 1116,
-                "label": "手机",
-                "physicalName": "c_shouji",
-                "description": null,
-                "updatable": true,
-                "name": "shouji",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                }
-            },
-            {
-                "type": "Text",
-                "creatable": true,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-89b1a8f749dc4a9ab1975c83e7fcc46e",
-                "physicalName": "c_youxiang",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "entityCode": 1116,
-                "name": "youxiang",
-                "label": "邮箱",
-                "description": null,
-                "displayOrder": 0
-            },
-            {
-                "fieldId": "0000002-d1c8c22ddaf5427f901290398f32e356",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "referTo": null,
-                "entityCode": 1116,
-                "label": "出生年月日",
-                "physicalName": "c_chushengnianyueri",
-                "type": "Date",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "name": "chushengnianyueri",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            },
-            {
-                "physicalName": "c_nianling",
-                "referTo": null,
-                "label": "年龄",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "type": "Text",
-                "nullable": false,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1116,
-                "name": "nianling",
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-57787825cd1b480c9ccbcaa039ad79ab",
-                "idFieldFlag": false
-            },
-            {
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": null,
-                "entityCode": 1116,
-                "label": "最高学历",
-                "physicalName": "c_zuigaoxueli",
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "label": "简历收集及初筛",
-                    "name": "Jianlishoujijichushai"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "type": "Option",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-3c122891cc79488c9aef16e842720ed7",
-                "name": "zuigaoxueli",
-                "description": null
-            },
-            {
-                "description": null,
-                "defaultMemberOfListFlag": true,
-                "label": "学校",
-                "entityCode": 1116,
-                "physicalName": "c_xuexiao",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-444672c6eb6c4b7b84cf4a00437b0f9d",
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "name": "xuexiao",
-                "type": "Text",
-                "nullable": false,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                }
-            },
-            {
-                "displayOrder": 0,
-                "nullable": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "type": "Text",
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "label": "专业",
-                "physicalName": "c_zhuanye",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-fd26a4dd530740cbab4afa3d4a4e454d",
-                "entityCode": 1116,
-                "name": "zhuanye",
-                "creatable": true
-            },
-            {
-                "physicalName": "c_biyeshijian",
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-a9a2fe8a754342d8961d8bde232bdc51",
-                "owner": {
-                    "label": "简历收集及初筛",
-                    "name": "Jianlishoujijichushai"
-                },
-                "type": "Date",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1116,
-                "label": "毕业时间",
-                "nullable": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "name": "biyeshijian",
-                "updatable": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "displayOrder": 0
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-852c4c8c92e04d918c5643ae6dbce084",
-                "physicalName": "c_hunyuqingkuang",
-                "displayOrder": 0,
-                "updatable": true,
-                "description": null,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "entityCode": 1116,
-                "name": "hunyuqingkuang",
-                "label": "婚育情况",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "fieldViewModel": null,
-                "type": "Option",
-                "nullable": false
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "physicalName": "c_shifouneitui",
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-ea58fb15ba4c4791a8097e55b9deb20a",
-                "type": "Boolean",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "name": "shifouneitui",
-                "updatable": true,
-                "referenceSetting": null,
-                "entityCode": 1116,
-                "label": "是否内推",
-                "owner": {
-                    "label": "简历收集及初筛",
-                    "name": "Jianlishoujijichushai"
-                }
-            },
-            {
-                "idFieldFlag": false,
-                "fieldId": "0000002-20f53e662ac142a3bb7ff93993f2d2ac",
-                "physicalName": "createdOn",
-                "label": "创建时间",
-                "nameFieldFlag": false,
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "referTo": null,
-                "name": "createdOn",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1116,
-                "type": "DateTime"
-            },
-            {
-                "nullable": false,
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "createdBy",
-                "description": null,
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "entityCode": 1116,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-e057ca84187d4baaa7c22455dbdb7f3e",
-                "label": "创建用户",
-                "defaultMemberOfListFlag": false,
-                "name": "createdBy",
-                "type": "Reference"
-            },
-            {
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "type": "DateTime",
-                "nullable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "fieldId": "0000002-bc4bdc4aa2064f8fbae0e15fe5d73988",
-                "description": null,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "physicalName": "modifiedOn",
-                "creatable": false,
-                "entityCode": 1116
-            },
-            {
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "physicalName": "modifiedBy",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "type": "Reference",
-                "displayOrder": 0,
-                "fieldId": "0000002-d46ac871b2a543dda7dbc365fa268c8b",
-                "entityCode": 1116,
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ]
-            },
-            {
-                "nameFieldFlag": false,
-                "fieldId": "0000002-bdba0c6e9f2048f9929b809ddbee7c4e",
-                "physicalName": "ownerUser",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "name": "ownerUser",
-                "label": "所属用户",
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1116,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "type": "Reference",
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "description": null
-            },
-            {
-                "fieldId": "0000002-4281cd0cf98e451596d02ea714288fa1",
-                "entityCode": 1116,
-                "physicalName": "ownerDepartment",
-                "type": "Reference",
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "description": null,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "referenceSetting": null,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null
-            }
-        ],
-        "label": "简历收集及初筛",
-        "physicalName": "t_jianlishoujijichushai",
-        "detailEntityFlag": false,
-        "listable": true,
-        "authorizable": true,
-        "tags": "HRM人事",
-        "mainDetailField": null,
-        "entityId": "0000001-cb5e97fae6484b72822a92632e8064c1",
-        "entityCode": 1116,
-        "layoutable": true,
-        "nameField": {
-            "name": "xingming",
-            "label": "姓名"
-        },
-        "detailEntitySet": [
-            {
-                "name": "Gongzuojishixijingli",
-                "label": "简历-工作及实习经历"
-            }
-        ],
-        "fieldSet": [
-            {
-                "entityCode": 1116,
-                "name": "jianlishoujijichushaiId",
-                "label": "id主键",
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "jianlishoujijichushaiId",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "nameFieldFlag": false,
-                "type": "PrimaryKey",
-                "creatable": false,
-                "idFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-604899c53ad44e5f817b0f2224dc4165",
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false
-            },
-            {
-                "updatable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "referTo": null,
-                "fieldId": "0000002-20f53e662ac142a3bb7ff93993f2d2ac",
-                "label": "创建时间",
-                "nullable": false,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "name": "createdOn",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "entityCode": 1116,
-                "physicalName": "createdOn",
-                "type": "DateTime",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "creatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "createdBy",
-                "nullable": false,
-                "idFieldFlag": false,
-                "owner": {
-                    "label": "简历收集及初筛",
-                    "name": "Jianlishoujijichushai"
-                },
-                "description": null,
-                "updatable": false,
-                "fieldId": "0000002-e057ca84187d4baaa7c22455dbdb7f3e",
-                "label": "创建用户",
-                "physicalName": "createdBy",
-                "mainDetailFieldFlag": false,
-                "entityCode": 1116,
-                "type": "Reference",
-                "displayOrder": 0
-            },
-            {
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "type": "DateTime",
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1116,
-                "physicalName": "modifiedOn",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "description": null,
-                "updatable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-bc4bdc4aa2064f8fbae0e15fe5d73988",
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "type": "Reference",
-                "description": null,
-                "creatable": false,
-                "fieldViewModel": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "nullable": true,
-                "fieldId": "0000002-d46ac871b2a543dda7dbc365fa268c8b",
-                "physicalName": "modifiedBy",
-                "displayOrder": 0,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1116,
-                "name": "modifiedBy",
-                "label": "修改用户"
-            },
-            {
-                "physicalName": "ownerUser",
-                "type": "Reference",
-                "nullable": false,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-bdba0c6e9f2048f9929b809ddbee7c4e",
-                "entityCode": 1116,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "所属用户",
-                "updatable": false,
-                "name": "ownerUser",
-                "description": null
-            },
-            {
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "entityCode": 1116,
-                "type": "Reference",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "label": "所属部门",
-                "physicalName": "ownerDepartment",
-                "description": null,
-                "creatable": false,
-                "fieldId": "0000002-4281cd0cf98e451596d02ea714288fa1",
-                "name": "ownerDepartment",
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "nullable": false,
-                "updatable": false
-            },
-            {
-                "fieldId": "0000002-00cc1716493c492c95eddd1e7a73f004",
-                "entityCode": 1116,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "name": "jianlibianhao",
-                "label": "简历编号",
-                "physicalName": "c_jianlibianhao",
-                "type": "Text",
-                "description": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-2ebe6f6e40724fa2a3f063a09b03c890",
-                "referTo": null,
-                "name": "jianlishangchuan",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "maxFileCount": 3,
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": [],
-                    "uploadHint": ""
-                },
-                "type": "File",
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "entityCode": 1116,
-                "label": "简历上传",
-                "physicalName": "c_jianlishangchuan",
-                "description": null,
-                "creatable": true,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "entityCode": 1116,
-                "physicalName": "c_zuopinji",
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "maxFileCount": 9,
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": []
-                },
-                "fieldId": "0000002-f472c9bd96ec4e5aab052e5c9dcd0707",
-                "name": "zuopinji",
-                "label": "作品集",
-                "type": "File",
-                "description": null,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null
-            },
-            {
-                "fieldId": "0000002-853ade917d28429c9afcc1161bca3b30",
-                "entityCode": 1116,
-                "name": "xuanzeyixianggangwei",
-                "label": "选择意向岗位",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "physicalName": "c_xuanzeyixianggangwei",
-                "nullable": false,
-                "type": "Reference",
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "description": null,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "Zhaopinxuqiu",
-                        "label": "招聘需求"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "Zhaopinxuqiu",
-                        "fieldList": [
-                            "xuqiubianhao",
-                            "xuanzeJD",
-                            "gangweixingzhi",
-                            "xuqiurenshu",
-                            "gongzuodidian",
-                            "xinziqujian",
-                            "xueliyaoqiu",
-                            "gongzuonianxianyaoqiu",
-                            "nianlingyaoqiu"
-                        ]
-                    }
-                ]
-            },
-            {
-                "label": "是否接受调剂",
-                "physicalName": "c_shifoujieshoutiaoji",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-33c76f5dd0f24eaf86f2e03b3011273e",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1116,
-                "name": "shifoujieshoutiaoji",
-                "type": "Boolean",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "referTo": null
-            },
-            {
-                "name": "xingming",
-                "description": null,
-                "displayOrder": 0,
-                "fieldId": "0000002-4336f74ea5594f4e9889e7a1f9845a9b",
-                "type": "Text",
-                "nullable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "entityCode": 1116,
-                "label": "姓名",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "c_xingming",
-                "creatable": true,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "type": "Option",
-                "description": null,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1116,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "name": "xingbie",
-                "label": "性别",
-                "displayOrder": 0,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-1ed896f6df4f49c4b0de3b9d47158aa9",
-                "nullable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "physicalName": "c_xingbie"
-            },
-            {
-                "nullable": true,
-                "referTo": null,
-                "fieldId": "0000002-ad3b2058224244af8c5083896455ad5c",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "type": "Text",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "name": "minzu",
-                "description": null,
-                "physicalName": "c_minzu",
-                "creatable": true,
-                "referenceSetting": null,
-                "entityCode": 1116,
-                "label": "民族"
-            },
-            {
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "name": "jiguan",
-                "displayOrder": 0,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "areaDataType": 2
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-e18c1028bfcd4e159f91f0b486fff979",
-                "entityCode": 1116,
-                "label": "籍贯",
-                "type": "AreaSelect",
-                "updatable": true,
-                "referTo": null,
-                "physicalName": "c_jiguan",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false
-            },
-            {
-                "type": "Option",
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "label": "政治面貌",
-                "owner": {
-                    "label": "简历收集及初筛",
-                    "name": "Jianlishoujijichushai"
-                },
-                "defaultMemberOfListFlag": false,
-                "nullable": true,
-                "idFieldFlag": false,
-                "name": "zhengzhimianmao",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-05f13295f82a41cda6756c9aa663d1e8",
-                "entityCode": 1116,
-                "fieldViewModel": null,
-                "physicalName": "c_zhengzhimianmao",
-                "updatable": true
-            },
-            {
-                "label": "手机",
-                "physicalName": "c_shouji",
-                "creatable": true,
-                "nullable": false,
-                "idFieldFlag": false,
-                "fieldId": "0000002-0482eba7066149afb405ae925684b9f8",
-                "entityCode": 1116,
-                "type": "Text",
-                "displayOrder": 0,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "name": "shouji",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "physicalName": "c_youxiang",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "type": "Text",
-                "nullable": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-89b1a8f749dc4a9ab1975c83e7fcc46e",
-                "name": "youxiang",
-                "mainDetailFieldFlag": false,
-                "label": "邮箱",
-                "nameFieldFlag": false,
-                "entityCode": 1116,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "description": null,
-                "displayOrder": 0
-            },
-            {
-                "description": null,
-                "creatable": true,
-                "referTo": null,
-                "entityCode": 1116,
-                "name": "chushengnianyueri",
-                "type": "Date",
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-d1c8c22ddaf5427f901290398f32e356",
-                "label": "出生年月日",
-                "physicalName": "c_chushengnianyueri",
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "nullable": false,
-                "nameFieldFlag": false
-            },
-            {
-                "name": "nianling",
-                "physicalName": "c_nianling",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-57787825cd1b480c9ccbcaa039ad79ab",
-                "entityCode": 1116,
-                "description": null,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "label": "年龄",
-                "type": "Text",
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "entityCode": 1116,
-                "physicalName": "c_zuigaoxueli",
-                "updatable": true,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "description": null,
-                "nullable": false,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-3c122891cc79488c9aef16e842720ed7",
-                "name": "zuigaoxueli",
-                "label": "最高学历",
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "type": "Option",
-                "displayOrder": 0
-            },
-            {
-                "referTo": null,
-                "referenceSetting": null,
-                "name": "xuexiao",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1116,
-                "updatable": true,
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "physicalName": "c_xuexiao",
-                "type": "Text",
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "fieldId": "0000002-444672c6eb6c4b7b84cf4a00437b0f9d",
-                "label": "学校"
-            },
-            {
-                "name": "zhuanye",
-                "label": "专业",
-                "nullable": false,
-                "physicalName": "c_zhuanye",
-                "type": "Text",
-                "description": null,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-fd26a4dd530740cbab4afa3d4a4e454d",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1116,
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": null
-            },
-            {
-                "name": "biyeshijian",
-                "nullable": false,
-                "updatable": true,
-                "referenceSetting": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-a9a2fe8a754342d8961d8bde232bdc51",
-                "displayOrder": 0,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "entityCode": 1116,
-                "label": "毕业时间",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "description": null,
-                "physicalName": "c_biyeshijian",
-                "type": "Date",
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            },
-            {
-                "idFieldFlag": false,
-                "fieldId": "0000002-852c4c8c92e04d918c5643ae6dbce084",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "type": "Option",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1116,
-                "label": "婚育情况",
-                "physicalName": "c_hunyuqingkuang",
-                "owner": {
-                    "name": "Jianlishoujijichushai",
-                    "label": "简历收集及初筛"
-                },
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "hunyuqingkuang",
-                "nullable": false,
-                "creatable": true,
-                "updatable": true
-            },
-            {
-                "physicalName": "c_shifouneitui",
-                "creatable": true,
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "name": "shifouneitui",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-ea58fb15ba4c4791a8097e55b9deb20a",
-                "label": "是否内推",
-                "type": "Boolean",
-                "description": null,
-                "nullable": true,
-                "entityCode": 1116,
-                "owner": {
-                    "label": "简历收集及初筛",
-                    "name": "Jianlishoujijichushai"
-                },
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            }
-        ],
-        "assignable": false,
-        "fieldNames": [
-            "jianlishoujijichushaiId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "jianlibianhao",
-            "jianlishangchuan",
-            "zuopinji",
-            "xuanzeyixianggangwei",
-            "shifoujieshoutiaoji",
-            "xingming",
-            "xingbie",
-            "minzu",
-            "jiguan",
-            "zhengzhimianmao",
-            "shouji",
-            "youxiang",
-            "chushengnianyueri",
-            "nianling",
-            "zuigaoxueli",
-            "xuexiao",
-            "zhuanye",
-            "biyeshijian",
-            "hunyuqingkuang",
-            "shifouneitui"
-        ],
-        "name": "Jianlishoujijichushai",
-        "shareable": false,
-        "idField": {
-            "name": "jianlishoujijichushaiId",
-            "label": "id主键"
-        },
-        "virtualFieldSet": []
-    },
+    "mainEntity": "Jianlishoujijichushai",
     "assignable": false,
     "physicalName": "t_gongzuojishixijingli",
+    "authorizable": false,
     "fieldSet": [
         {
-            "name": "gongzuojishixijingliId",
-            "label": "id主键",
-            "type": "PrimaryKey",
-            "mainDetailFieldFlag": false,
-            "updatable": false,
-            "idFieldFlag": true,
-            "creatable": false,
-            "nameFieldFlag": false,
             "physicalName": "gongzuojishixijingliId",
-            "reserved": true,
-            "referTo": null
+            "nullable": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "referenceSetting": null,
+            "entityCode": 1118,
+            "name": "gongzuojishixijingliId",
+            "fieldViewModel": null,
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "description": null,
+            "idFieldFlag": true,
+            "fieldId": "0000002-3070e411dcd24cef953cd654fb2605ba",
+            "label": "id主键",
+            "creatable": false,
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "type": "PrimaryKey"
         },
         {
-            "label": "创建时间",
-            "creatable": false,
-            "type": "DateTime",
+            "idFieldFlag": false,
             "nameFieldFlag": false,
+            "referTo": null,
+            "fieldId": "0000002-7bd4af091e9e4235bb0001937d80f1be",
+            "name": "createdOn",
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1118,
             "physicalName": "createdOn",
-            "idFieldFlag": false,
-            "updatable": false,
-            "mainDetailFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
-            "name": "createdOn"
-        },
-        {
-            "idFieldFlag": false,
-            "reserved": true,
-            "referTo": "User,",
-            "name": "createdBy",
-            "label": "创建用户",
-            "creatable": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "updatable": false
-        },
-        {
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "reserved": true,
-            "name": "modifiedOn",
-            "idFieldFlag": false,
-            "label": "最近修改时间",
             "type": "DateTime",
-            "nameFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "referTo": null,
-            "updatable": false
+            "nullable": false,
+            "creatable": false,
+            "fieldViewModel": null,
+            "label": "创建时间",
+            "description": null,
+            "displayOrder": 0,
+            "updatable": false,
+            "mainDetailFieldFlag": false
         },
         {
-            "name": "modifiedBy",
+            "description": null,
+            "displayOrder": 0,
+            "creatable": false,
             "updatable": false,
             "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "entityCode": 1118,
+            "name": "createdBy",
+            "fieldViewModel": null,
+            "fieldId": "0000002-7aa577b3e14743069e76c13d5e672189",
+            "type": "Reference",
+            "nullable": false,
+            "mainDetailFieldFlag": false,
+            "label": "创建用户",
+            "physicalName": "createdBy",
+            "referenceSetting": null
+        },
+        {
+            "displayOrder": 0,
+            "nullable": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "name": "modifiedOn",
+            "entityCode": 1118,
+            "label": "最近修改时间",
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-e90446e61c734dd09793ba6365e793dc",
+            "type": "DateTime",
+            "description": null,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "referTo": null,
+            "fieldViewModel": null,
+            "physicalName": "modifiedOn"
+        },
+        {
+            "entityCode": 1118,
+            "description": null,
+            "displayOrder": 0,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "name": "modifiedBy",
+            "nullable": true,
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "physicalName": "modifiedBy",
+            "idFieldFlag": false,
+            "fieldId": "0000002-94f318f648534b458bc053ee2b6767b4",
             "label": "修改用户",
             "type": "Reference",
-            "mainDetailFieldFlag": false,
             "nameFieldFlag": false,
-            "physicalName": "modifiedBy",
-            "creatable": false,
-            "reserved": true,
-            "referTo": "User,"
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "referenceSetting": null
         },
         {
-            "physicalName": "mdJianlishoujijichushaiId",
-            "reserved": true,
-            "referTo": "Jianlishoujijichushai,",
-            "updatable": false,
-            "creatable": true,
-            "type": "Reference",
-            "mainDetailFieldFlag": true,
-            "nameFieldFlag": false,
+            "entityCode": 1118,
+            "description": null,
+            "fieldViewModel": null,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-23b593d793e44c79a4f8a2bb14ef28e5",
             "name": "mdJianlishoujijichushaiId",
+            "label": "主从关联Id",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": true,
+            "referTo": "Jianlishoujijichushai,",
+            "physicalName": "mdJianlishoujijichushaiId",
+            "type": "Reference",
+            "nullable": false,
+            "creatable": true,
+            "displayOrder": 0,
             "idFieldFlag": false,
-            "label": "主从关联Id"
+            "referenceSetting": null
         },
         {
-            "nameFieldFlag": false,
-            "physicalName": "c_gongzuoxingzhi",
-            "referTo": null,
             "name": "gongzuoxingzhi",
+            "creatable": true,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "entityCode": 1118,
+            "label": "工作性质",
+            "nameFieldFlag": false,
+            "fieldId": "0000002-2ae3f444a94543ee9c0fb443de1162f5",
+            "physicalName": "c_gongzuoxingzhi",
             "type": "Option",
-            "reserved": false,
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "description": null,
+            "nullable": true,
             "updatable": true,
             "idFieldFlag": false,
-            "label": "工作性质",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
             "optionList": [
                 {
                     "key": "全职",
@@ -1677,69 +171,120 @@
             ]
         },
         {
-            "referTo": null,
             "name": "gongzuokaishishijian",
-            "updatable": true,
             "label": "工作开始时间",
-            "mainDetailFieldFlag": false,
-            "reserved": false,
             "physicalName": "c_gongzuokaishishijian",
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true,
             "idFieldFlag": false,
-            "creatable": true,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-5f9e1525aef2402eb72c2acc8bf486f1",
+            "entityCode": 1118,
+            "updatable": true,
+            "referTo": null,
+            "fieldViewModel": {
+                "validators": []
+            },
             "type": "Date",
+            "creatable": true,
+            "referenceSetting": null
+        },
+        {
+            "description": null,
+            "nullable": true,
+            "idFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": {
+                "validators": []
+            },
+            "referenceSetting": null,
+            "fieldId": "0000002-bbbfae2b72a444739ceea3b4ce692ba0",
+            "label": "工作结束时间",
+            "physicalName": "c_gongzuojieshushijian",
+            "mainDetailFieldFlag": false,
+            "type": "Date",
+            "displayOrder": 0,
+            "creatable": true,
+            "updatable": true,
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1118,
+            "name": "gongzuojieshushijian",
             "nameFieldFlag": false
         },
         {
-            "updatable": true,
-            "idFieldFlag": false,
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_gongzuojieshushijian",
-            "reserved": false,
-            "name": "gongzuojieshushijian",
-            "type": "Date",
-            "nameFieldFlag": false,
-            "referTo": null,
-            "label": "工作结束时间"
-        },
-        {
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "Text",
-            "nameFieldFlag": true,
-            "reserved": false,
+            "fieldId": "0000002-5153b3eee7204df3969e10ebc4a2b2fa",
             "name": "qiyemingcheng",
-            "label": "企业名称",
-            "mainDetailFieldFlag": false,
             "physicalName": "c_qiyemingcheng",
-            "referTo": null,
-            "updatable": true
-        },
-        {
-            "reserved": false,
-            "name": "gangweimingcheng",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
+            "description": null,
+            "entityCode": 1118,
+            "displayOrder": 0,
             "updatable": true,
             "idFieldFlag": false,
-            "label": "岗位名称",
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
             "creatable": true,
+            "nameFieldFlag": true,
+            "label": "企业名称",
             "type": "Text",
-            "physicalName": "c_gangweimingcheng"
+            "nullable": true,
+            "referTo": null,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            }
         },
         {
+            "fieldId": "0000002-28de1caa59d7436b81ec044cfedf27b9",
+            "type": "Text",
             "mainDetailFieldFlag": false,
+            "referenceSetting": null,
             "nameFieldFlag": false,
-            "physicalName": "c_gongzuomiaoshu",
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "name": "gangweimingcheng",
+            "label": "岗位名称",
             "updatable": true,
-            "label": "工作描述",
-            "creatable": true,
-            "reserved": false,
-            "referTo": null,
-            "name": "gongzuomiaoshu",
             "idFieldFlag": false,
-            "type": "Text"
+            "referTo": null,
+            "entityCode": 1118,
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": true,
+            "physicalName": "c_gangweimingcheng",
+            "description": null,
+            "defaultMemberOfListFlag": false
+        },
+        {
+            "type": "Text",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "physicalName": "c_gongzuomiaoshu",
+            "description": null,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "referenceSetting": null,
+            "label": "工作描述",
+            "nullable": true,
+            "creatable": true,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "fieldId": "0000002-a529c3d642bf483ab812a99205a3e015",
+            "entityCode": 1118,
+            "name": "gongzuomiaoshu",
+            "displayOrder": 0
         }
     ]
 }

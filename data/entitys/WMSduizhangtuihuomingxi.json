@@ -1,1499 +1,194 @@
 {
+    "layoutable": true,
+    "name": "WMSduizhangtuihuomingxi",
+    "entityCode": 1079,
     "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "tags": "WMS",
+    "label": "WMS对账退货明细",
     "listable": true,
     "idFieldName": "wMSduizhangtuihuomingxiId",
     "internalEntityFlag": false,
-    "name": "WMSduizhangtuihuomingxi",
-    "label": "WMS对账退货明细",
-    "layoutable": true,
-    "tags": "WMS",
-    "entityCode": 1079,
-    "detailEntityFlag": true,
     "assignable": false,
-    "authorizable": false,
-    "mainEntity": {
-        "fieldNames": [
-            "wMSzhangkuanduizhangId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "gongyingshangmingcheng",
-            "duizhangkaishiriqi",
-            "duizhangjieshuriqi",
-            "yingfuduizhangdanbianhao",
-            "yujifukuanfangshi",
-            "yujifukuanriqi",
-            "yinhangzhanghu",
-            "kaihuyinhang",
-            "yingfuduizhangqueren",
-            "yingfuduizhangshijian",
-            "yingfuduizhangrenyuan",
-            "yingfuduizhaguishubumen",
-            "fapiaotaitou",
-            "fapiaoshuihao",
-            "shuizhong",
-            "zengzhishuishuil"
-        ],
-        "physicalName": "t_wmszhangkuanduizhang",
-        "assignable": false,
-        "nameField": {
-            "name": "yingfuduizhangdanbianhao",
-            "label": "应付对账单编号"
-        },
-        "fieldSet": [
-            {
-                "label": "id主键",
-                "description": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "wMSzhangkuanduizhangId",
-                "type": "PrimaryKey",
-                "updatable": false,
-                "fieldViewModel": null,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-1ba28e2327a24c859dc0954340d36d60",
-                "physicalName": "wMSzhangkuanduizhangId",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "creatable": false,
-                "idFieldFlag": true,
-                "entityCode": 1060,
-                "displayOrder": 0,
-                "nullable": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "fieldViewModel": null,
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "DateTime",
-                "updatable": false,
-                "idFieldFlag": false,
-                "fieldId": "0000002-16e59717fa084af7acf93d4425c05b3e",
-                "name": "createdOn",
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1060,
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "fieldId": "0000002-f06adabd064b4ba0b5bd74b21b24ffa2",
-                "type": "Reference",
-                "nullable": false,
-                "physicalName": "createdBy",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1060,
-                "name": "createdBy",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "创建用户",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "nullable": true,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "entityCode": 1060,
-                "label": "最近修改时间",
-                "physicalName": "modifiedOn",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-7e417183af4c410490f12a3cab25a4e5",
-                "displayOrder": 0,
-                "type": "DateTime",
-                "description": null,
-                "nameFieldFlag": false,
-                "name": "modifiedOn"
-            },
-            {
-                "fieldId": "0000002-3e11cae3f90e47dcb0f79f79590ac952",
-                "description": null,
-                "updatable": false,
-                "referenceSetting": null,
-                "entityCode": 1060,
-                "physicalName": "modifiedBy",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "displayOrder": 0,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "owner": {
-                    "label": "WMS账款对账",
-                    "name": "WMSzhangkuanduizhang"
-                },
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null
-            },
-            {
-                "label": "所属用户",
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "nullable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-d2828776c53e44acb20ac5aadf9143d7",
-                "entityCode": 1060,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "name": "ownerUser",
-                "physicalName": "ownerUser",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "nameFieldFlag": false
-            },
-            {
-                "physicalName": "ownerDepartment",
-                "type": "Reference",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-eb7fd41cd031486887caf79c05689a57",
-                "displayOrder": 0,
-                "creatable": false,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1060,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "nullable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            },
-            {
-                "type": "Reference",
-                "description": null,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSgongyingshangxinxi",
-                        "fieldList": [
-                            "gongyingshangmingcheng"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-ab2eb1dbaca84be2a0dc5ff97c2bb127",
-                "name": "gongyingshangmingcheng",
-                "displayOrder": 0,
-                "creatable": true,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "WMSgongyingshangxinxi",
-                        "label": "WMS供应商信息"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "entityCode": 1060,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "label": "供应商名称",
-                "physicalName": "c_gongyingshangmingcheng",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "idFieldFlag": false,
-                "name": "duizhangkaishiriqi",
-                "label": "对账开始日期",
-                "type": "Date",
-                "description": null,
-                "updatable": true,
-                "physicalName": "c_duizhangkaishiriqi",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1060,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-8247506b024e4990a70d695fcebcca39",
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-1deb58ed30424e55809cf18e88d8d1b9",
-                "entityCode": 1060,
-                "physicalName": "c_duizhangjieshuriqi",
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "name": "duizhangjieshuriqi",
-                "label": "对账结束日期",
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "type": "Date",
-                "displayOrder": 0,
-                "referTo": null
-            },
-            {
-                "fieldId": "0000002-9108d402c9824183aca3ce851349033e",
-                "label": "应付对账单编号",
-                "type": "Text",
-                "nullable": true,
-                "creatable": true,
-                "entityCode": 1060,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "name": "yingfuduizhangdanbianhao",
-                "physicalName": "c_yingfuduizhangdanbianhao",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "description": null,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "referenceSetting": null
-            },
-            {
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": null,
-                "name": "yujifukuanfangshi",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "description": null,
-                "creatable": true,
-                "fieldId": "0000002-467685abe57a47f382a5312c8e6f8256",
-                "entityCode": 1060,
-                "label": "预计付款方式",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "c_yujifukuanfangshi",
-                "type": "Option",
-                "mainDetailFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-c3a878ea452948d598fc0fb72a10af70",
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1060,
-                "name": "yujifukuanriqi",
-                "physicalName": "c_yujifukuanriqi",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Date",
-                "description": null,
-                "creatable": true,
-                "label": "预计付款日期",
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null
-            },
-            {
-                "type": "Text",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1060,
-                "physicalName": "c_yinhangzhanghu",
-                "description": null,
-                "nullable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "name": "yinhangzhanghu",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "defaultMemberOfListFlag": true,
-                "label": "银行账户",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-1501f6ae64354558a9dfb5fab83d38b6",
-                "idFieldFlag": false
-            },
-            {
-                "description": null,
-                "displayOrder": 0,
-                "label": "开户银行",
-                "physicalName": "c_kaihuyinhang",
-                "owner": {
-                    "label": "WMS账款对账",
-                    "name": "WMSzhangkuanduizhang"
-                },
-                "nullable": true,
-                "referenceSetting": null,
-                "entityCode": 1060,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-2be78586be2144b7a06866c6029d8754",
-                "type": "Text",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "name": "kaihuyinhang"
-            },
-            {
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "name": "yingfuduizhangqueren",
-                "physicalName": "c_yingfuduizhangqueren",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1060,
-                "label": "应付对账确认",
-                "idFieldFlag": false,
-                "fieldId": "0000002-c9da3fe1e1954224af0c053eea0b9d11",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Option",
-                "updatable": true
-            },
-            {
-                "creatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-0255c2c313794871a216e68b2556de33",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "yingfuduizhangshijian",
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "description": null,
-                "label": "应付对账时间",
-                "physicalName": "c_yingfuduizhangshijian",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Date",
-                "nullable": true,
-                "updatable": true,
-                "referTo": null,
-                "entityCode": 1060
-            },
-            {
-                "physicalName": "c_yingfuduizhangrenyuan",
-                "nullable": true,
-                "fieldId": "0000002-e659e35ff3a148aeaedeb40bccc1ab2b",
-                "name": "yingfuduizhangrenyuan",
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "entityCode": 1060,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "label": "应付对账人员",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Reference",
-                "creatable": true,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ]
-            },
-            {
-                "fieldId": "0000002-3405547aced04bac955803f82c9c9fdf",
-                "physicalName": "c_yingfuduizhaguishubumen",
-                "displayOrder": 0,
-                "nullable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "name": "yingfuduizhaguishubumen",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "entityCode": 1060,
-                "type": "Reference",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "label": "应付对账人员归属部门",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1060,
-                "name": "fapiaotaitou",
-                "physicalName": "c_fapiaotaitou",
-                "mainDetailFieldFlag": false,
-                "label": "发票抬头",
-                "nullable": true,
-                "creatable": true,
-                "fieldId": "0000002-4fb1915780dd4b2a86c278a55d2190c2",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Text"
-            },
-            {
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "entityCode": 1060,
-                "name": "fapiaoshuihao",
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-68e96e4370a24538a7822aace47b26a5",
-                "type": "Text",
-                "description": null,
-                "updatable": true,
-                "referTo": null,
-                "label": "发票税号",
-                "physicalName": "c_fapiaoshuihao",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "creatable": true
-            },
-            {
-                "entityCode": 1060,
-                "name": "shuizhong",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "label": "税种",
-                "type": "Text",
-                "fieldId": "0000002-18dde9487e1044d8b004f260729eba1a",
-                "physicalName": "c_shuizhong",
-                "nullable": true,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                }
-            },
-            {
-                "label": "增值税税率 %",
-                "physicalName": "c_zengzhishuishuil",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "fieldId": "0000002-911fa299744c4c898508ba147bf75d68",
-                "entityCode": 1060,
-                "creatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "type": "Text",
-                "nullable": true,
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "name": "zengzhishuishuil",
-                "description": null
-            }
-        ],
-        "sortedFieldSet": [
-            {
-                "physicalName": "wMSzhangkuanduizhangId",
-                "fieldId": "0000002-1ba28e2327a24c859dc0954340d36d60",
-                "entityCode": 1060,
-                "displayOrder": 0,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "nullable": false,
-                "updatable": false,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "name": "wMSzhangkuanduizhangId",
-                "label": "id主键",
-                "type": "PrimaryKey",
-                "description": null
-            },
-            {
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "WMSgongyingshangxinxi",
-                        "label": "WMS供应商信息"
-                    }
-                ],
-                "fieldId": "0000002-ab2eb1dbaca84be2a0dc5ff97c2bb127",
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "name": "gongyingshangmingcheng",
-                "physicalName": "c_gongyingshangmingcheng",
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSgongyingshangxinxi",
-                        "fieldList": [
-                            "gongyingshangmingcheng"
-                        ]
-                    }
-                ],
-                "creatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "description": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1060,
-                "label": "供应商名称",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Reference"
-            },
-            {
-                "referenceSetting": null,
-                "fieldId": "0000002-8247506b024e4990a70d695fcebcca39",
-                "label": "对账开始日期",
-                "physicalName": "c_duizhangkaishiriqi",
-                "defaultMemberOfListFlag": true,
-                "type": "Date",
-                "description": null,
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "nameFieldFlag": false,
-                "entityCode": 1060,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "name": "duizhangkaishiriqi",
-                "displayOrder": 0,
-                "creatable": true,
-                "referTo": null
-            },
-            {
-                "physicalName": "c_duizhangjieshuriqi",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "name": "duizhangjieshuriqi",
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1060,
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-1deb58ed30424e55809cf18e88d8d1b9",
-                "label": "对账结束日期",
-                "type": "Date",
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null
-            },
-            {
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-9108d402c9824183aca3ce851349033e",
-                "physicalName": "c_yingfuduizhangdanbianhao",
-                "description": null,
-                "referTo": null,
-                "name": "yingfuduizhangdanbianhao",
-                "label": "应付对账单编号",
-                "type": "Text",
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "creatable": true,
-                "nameFieldFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "entityCode": 1060,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "nullable": true
-            },
-            {
-                "label": "预计付款方式",
-                "type": "Option",
-                "referTo": null,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1060,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-467685abe57a47f382a5312c8e6f8256",
-                "name": "yujifukuanfangshi",
-                "physicalName": "c_yujifukuanfangshi",
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false
-            },
-            {
-                "description": null,
-                "nullable": true,
-                "referTo": null,
-                "entityCode": 1060,
-                "physicalName": "c_yujifukuanriqi",
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "label": "预计付款日期",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Date",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-c3a878ea452948d598fc0fb72a10af70",
-                "name": "yujifukuanriqi",
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "updatable": true
-            },
-            {
-                "nameFieldFlag": false,
-                "fieldId": "0000002-1501f6ae64354558a9dfb5fab83d38b6",
-                "entityCode": 1060,
-                "name": "yinhangzhanghu",
-                "description": null,
-                "creatable": true,
-                "label": "银行账户",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "physicalName": "c_yinhangzhanghu",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "type": "Text",
-                "nullable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "label": "开户银行",
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Text",
-                "description": null,
-                "displayOrder": 0,
-                "fieldId": "0000002-2be78586be2144b7a06866c6029d8754",
-                "entityCode": 1060,
-                "name": "kaihuyinhang",
-                "physicalName": "c_kaihuyinhang",
-                "referenceSetting": null,
-                "nullable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "creatable": true,
-                "type": "Option",
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1060,
-                "name": "yingfuduizhangqueren",
-                "physicalName": "c_yingfuduizhangqueren",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-c9da3fe1e1954224af0c053eea0b9d11",
-                "label": "应付对账确认",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                }
-            },
-            {
-                "description": null,
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1060,
-                "physicalName": "c_yingfuduizhangshijian",
-                "type": "Date",
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "name": "yingfuduizhangshijian",
-                "label": "应付对账时间",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "fieldId": "0000002-0255c2c313794871a216e68b2556de33",
-                "nullable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "creatable": true,
-                "physicalName": "c_yingfuduizhangrenyuan",
-                "type": "Reference",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "label": "应付对账人员",
-                "updatable": true,
-                "idFieldFlag": false,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "entityCode": 1060,
-                "name": "yingfuduizhangrenyuan",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "fieldId": "0000002-e659e35ff3a148aeaedeb40bccc1ab2b",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-3405547aced04bac955803f82c9c9fdf",
-                "physicalName": "c_yingfuduizhaguishubumen",
-                "description": null,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "entityCode": 1060,
-                "name": "yingfuduizhaguishubumen",
-                "creatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "label": "应付对账人员归属部门",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "type": "Reference",
-                "nullable": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-4fb1915780dd4b2a86c278a55d2190c2",
-                "type": "Text",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "referenceSetting": null,
-                "label": "发票抬头",
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "physicalName": "c_fapiaotaitou",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1060,
-                "name": "fapiaotaitou"
-            },
-            {
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "name": "fapiaoshuihao",
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "label": "发票税号",
-                "physicalName": "c_fapiaoshuihao",
-                "nullable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referTo": null,
-                "fieldId": "0000002-68e96e4370a24538a7822aace47b26a5",
-                "entityCode": 1060,
-                "description": null,
-                "displayOrder": 0,
-                "owner": {
-                    "label": "WMS账款对账",
-                    "name": "WMSzhangkuanduizhang"
-                },
-                "type": "Text",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "entityCode": 1060,
-                "type": "Text",
-                "displayOrder": 0,
-                "creatable": true,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "physicalName": "c_shuizhong",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-18dde9487e1044d8b004f260729eba1a",
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "name": "shuizhong",
-                "label": "税种",
-                "nullable": true,
-                "idFieldFlag": false
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "creatable": true,
-                "nameFieldFlag": false,
-                "physicalName": "c_zengzhishuishuil",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1060,
-                "name": "zengzhishuishuil",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "referTo": null,
-                "type": "Text",
-                "updatable": true,
-                "fieldId": "0000002-911fa299744c4c898508ba147bf75d68",
-                "label": "增值税税率 %"
-            },
-            {
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-16e59717fa084af7acf93d4425c05b3e",
-                "owner": {
-                    "label": "WMS账款对账",
-                    "name": "WMSzhangkuanduizhang"
-                },
-                "description": null,
-                "type": "DateTime",
-                "displayOrder": 0,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "createdOn",
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "referenceSetting": null,
-                "nullable": false,
-                "updatable": false,
-                "referTo": null,
-                "entityCode": 1060
-            },
-            {
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "nullable": false,
-                "creatable": false,
-                "fieldViewModel": null,
-                "entityCode": 1060,
-                "fieldId": "0000002-f06adabd064b4ba0b5bd74b21b24ffa2",
-                "label": "创建用户",
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "name": "createdBy",
-                "physicalName": "createdBy",
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "idFieldFlag": false,
-                "name": "modifiedOn",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "creatable": false,
-                "updatable": false,
-                "physicalName": "modifiedOn",
-                "displayOrder": 0,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-7e417183af4c410490f12a3cab25a4e5",
-                "entityCode": 1060,
-                "label": "最近修改时间",
-                "mainDetailFieldFlag": false,
-                "type": "DateTime",
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "entityCode": 1060,
-                "label": "修改用户",
-                "creatable": false,
-                "updatable": false,
-                "name": "modifiedBy",
-                "physicalName": "modifiedBy",
-                "displayOrder": 0,
-                "fieldId": "0000002-3e11cae3f90e47dcb0f79f79590ac952",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "type": "Reference",
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "name": "ownerUser",
-                "label": "所属用户",
-                "type": "Reference",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1060,
-                "physicalName": "ownerUser",
-                "owner": {
-                    "name": "WMSzhangkuanduizhang",
-                    "label": "WMS账款对账"
-                },
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-d2828776c53e44acb20ac5aadf9143d7",
-                "description": null,
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "owner": {
-                    "label": "WMS账款对账",
-                    "name": "WMSzhangkuanduizhang"
-                },
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-eb7fd41cd031486887caf79c05689a57",
-                "entityCode": 1060,
-                "physicalName": "ownerDepartment",
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "type": "Reference",
-                "description": null,
-                "nullable": false,
-                "referenceSetting": null
-            }
-        ],
-        "mainDetailField": null,
-        "virtualFieldSet": [],
-        "entityId": "0000001-c67d5e3463f4467da927d71fce0e629c",
-        "name": "WMSzhangkuanduizhang",
-        "entityCode": 1060,
-        "shareable": false,
-        "detailEntitySet": [
-            {
-                "name": "WMSduizhangtuihuomingxi",
-                "label": "WMS对账退货明细"
-            },
-            {
-                "name": "WMSduizhangsrukumingxi",
-                "label": "WMS对账入库明细"
-            }
-        ],
-        "mainEntity": null,
-        "label": "WMS账款对账",
-        "detailEntityFlag": false,
-        "layoutable": true,
-        "listable": true,
-        "authorizable": true,
-        "tags": "WMS",
-        "idField": {
-            "name": "wMSzhangkuanduizhangId",
-            "label": "id主键"
-        }
-    },
-    "physicalName": "t_wmsduizhangtuihuomingxi",
-    "shareable": false,
+    "mainEntity": "WMSzhangkuanduizhang",
     "nameField": null,
+    "shareable": false,
+    "authorizable": false,
+    "physicalName": "t_wmsduizhangtuihuomingxi",
     "fieldSet": [
         {
-            "reserved": true,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1079,
+            "type": "PrimaryKey",
+            "nameFieldFlag": false,
+            "fieldViewModel": null,
+            "creatable": false,
+            "referTo": null,
+            "description": null,
+            "displayOrder": 0,
+            "updatable": false,
+            "fieldId": "0000002-34ff6d89c7cc4248ba8c151c99167ca0",
             "name": "wMSduizhangtuihuomingxiId",
             "label": "id主键",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
+            "referenceSetting": null,
             "physicalName": "wMSduizhangtuihuomingxiId",
-            "idFieldFlag": true,
-            "type": "PrimaryKey",
-            "referTo": null,
-            "updatable": false
+            "nullable": false,
+            "idFieldFlag": true
         },
         {
-            "referTo": null,
-            "creatable": false,
-            "type": "DateTime",
-            "physicalName": "createdOn",
-            "reserved": true,
+            "referenceSetting": null,
             "name": "createdOn",
-            "updatable": false,
+            "physicalName": "createdOn",
             "idFieldFlag": false,
-            "label": "创建时间",
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "fieldViewModel": null,
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false
+            "fieldId": "0000002-547012e38edd49b9ab0849c6e59d5a87",
+            "type": "DateTime",
+            "nullable": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "label": "创建时间",
+            "description": null,
+            "updatable": false,
+            "entityCode": 1079,
+            "displayOrder": 0
         },
         {
+            "fieldId": "0000002-4ac278b75f2049eabbc3b85eef1bca55",
+            "entityCode": 1079,
+            "nullable": false,
+            "creatable": false,
             "mainDetailFieldFlag": false,
-            "reserved": true,
+            "referenceSetting": null,
+            "description": null,
             "referTo": "User,",
             "name": "createdBy",
-            "updatable": false,
+            "label": "创建用户",
             "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference",
             "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
             "physicalName": "createdBy",
-            "label": "创建用户"
+            "type": "Reference",
+            "displayOrder": 0,
+            "updatable": false,
+            "fieldViewModel": null
         },
         {
             "updatable": false,
-            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": null,
             "label": "最近修改时间",
-            "reserved": true,
             "physicalName": "modifiedOn",
-            "referTo": null,
-            "name": "modifiedOn",
+            "referenceSetting": null,
+            "displayOrder": 0,
+            "nullable": true,
             "creatable": false,
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1079,
             "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false
+            "description": null,
+            "idFieldFlag": false,
+            "fieldId": "0000002-63a9c8336fc84a059d3751236ee14732",
+            "name": "modifiedOn"
         },
         {
-            "label": "修改用户",
-            "type": "Reference",
-            "idFieldFlag": false,
-            "physicalName": "modifiedBy",
-            "reserved": true,
-            "referTo": "User,",
-            "name": "modifiedBy",
-            "updatable": false,
+            "fieldViewModel": null,
+            "entityCode": 1079,
+            "description": null,
+            "nullable": true,
             "creatable": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false
-        },
-        {
-            "physicalName": "mdWMSzhangkuanduizhangId",
-            "referTo": "WMSzhangkuanduizhang,",
-            "idFieldFlag": false,
-            "label": "主从关联Id",
-            "type": "Reference",
-            "mainDetailFieldFlag": true,
-            "nameFieldFlag": false,
-            "reserved": true,
-            "name": "mdWMSzhangkuanduizhangId",
             "updatable": false,
-            "creatable": true
-        },
-        {
-            "label": "选择退货明细",
-            "creatable": true,
+            "label": "修改用户",
+            "displayOrder": 0,
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "referenceSetting": null,
+            "physicalName": "modifiedBy",
+            "name": "modifiedBy",
             "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_xuanzetuihuomingxi",
-            "referTo": "WMScaigoutuihuozhangdan,",
-            "name": "xuanzetuihuomingxi",
             "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": false,
-            "updatable": true
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-024efaa1142f4a2c9d1b5b63c0233b3b"
         },
         {
+            "name": "mdWMSzhangkuanduizhangId",
+            "description": null,
+            "nullable": false,
+            "updatable": false,
+            "mainDetailFieldFlag": true,
+            "fieldViewModel": null,
+            "fieldId": "0000002-73278e635efd44f3bf80f37063a42141",
+            "label": "主从关联Id",
+            "physicalName": "mdWMSzhangkuanduizhangId",
+            "defaultMemberOfListFlag": true,
+            "referTo": "WMSzhangkuanduizhang,",
+            "entityCode": 1079,
+            "creatable": true,
             "nameFieldFlag": false,
-            "reserved": false,
-            "name": "duizhagshuliang",
-            "updatable": true,
-            "type": "Integer",
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_duizhagshuliang",
-            "referTo": null,
+            "type": "Reference",
+            "displayOrder": 0,
             "idFieldFlag": false,
+            "referenceSetting": null
+        },
+        {
+            "creatable": true,
+            "idFieldFlag": false,
+            "name": "xuanzetuihuomingxi",
+            "physicalName": "c_xuanzetuihuomingxi",
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "fieldId": "0000002-7278c75b692645c5b04da915cace40c9",
+            "description": null,
+            "updatable": true,
+            "nameFieldFlag": false,
+            "referTo": "WMScaigoutuihuozhangdan,",
+            "referenceSetting": [
+                {
+                    "fieldList": [
+                        "caigourukudanbianhao"
+                    ],
+                    "entityName": "WMScaigoutuihuozhangdan"
+                }
+            ],
+            "type": "Reference",
+            "label": "选择退货明细",
+            "nullable": true,
+            "entityCode": 1079
+        },
+        {
+            "name": "duizhagshuliang",
+            "physicalName": "c_duizhagshuliang",
+            "description": null,
+            "nullable": true,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-9b862c12422a4d2da9cc635351716cbb",
+            "entityCode": 1079,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "type": "Integer",
+            "updatable": true,
+            "referTo": null,
             "label": "对账数量",
-            "creatable": true
+            "defaultMemberOfListFlag": true,
+            "referenceSetting": null,
+            "displayOrder": 0,
+            "idFieldFlag": false
         }
     ]
 }

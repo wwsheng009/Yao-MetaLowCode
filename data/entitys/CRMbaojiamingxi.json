@@ -1,1414 +1,253 @@
 {
-    "listable": true,
     "idFieldName": "cRMbaojiamingxiId",
     "internalEntityFlag": false,
-    "tags": "CRM",
-    "entityCode": 1170,
-    "layoutable": true,
-    "systemEntityFlag": false,
-    "detailEntityFlag": true,
     "name": "CRMbaojiamingxi",
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "listable": true,
+    "tags": "CRM",
     "label": "CRM报价明细",
+    "entityCode": 1170,
+    "systemEntityFlag": false,
     "shareable": false,
-    "assignable": false,
-    "nameField": null,
-    "authorizable": false,
-    "mainEntity": {
-        "virtualFieldSet": [],
-        "entityCode": 1169,
-        "tags": "CRM",
-        "detailEntitySet": [
-            {
-                "name": "CRMbaojiamingxi",
-                "label": "CRM报价明细"
-            }
-        ],
-        "detailEntityFlag": false,
-        "listable": true,
-        "fieldSet": [
-            {
-                "physicalName": "cRMchanpinbaojiaId",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-ae0dd9a49ef94ee098539ddcc4437cfa",
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1169,
-                "label": "id主键",
-                "description": null,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "name": "cRMchanpinbaojiaId",
-                "idFieldFlag": true
-            },
-            {
-                "referTo": null,
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "nullable": false,
-                "creatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "physicalName": "createdOn",
-                "type": "DateTime",
-                "owner": {
-                    "label": "CRM产品报价",
-                    "name": "CRMchanpinbaojia"
-                },
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-cba7a56703444911b48f9244016d52ba",
-                "entityCode": 1169,
-                "displayOrder": 0,
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "createdOn",
-                "label": "创建时间"
-            },
-            {
-                "fieldViewModel": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "entityCode": 1169,
-                "name": "createdBy",
-                "physicalName": "createdBy",
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-9b450422b3c849cc921691819080a4e3",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "referenceSetting": null,
-                "label": "创建用户",
-                "description": null,
-                "nullable": false
-            },
-            {
-                "type": "DateTime",
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-86d48f75d488422fbf5a267c5db520df",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": true,
-                "creatable": false,
-                "name": "modifiedOn",
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "label": "最近修改时间",
-                "physicalName": "modifiedOn",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1169
-            },
-            {
-                "fieldViewModel": null,
-                "label": "修改用户",
-                "type": "Reference",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "name": "modifiedBy",
-                "displayOrder": 0,
-                "creatable": false,
-                "description": null,
-                "fieldId": "0000002-b5562785ba6a449b931fa515f90121d3",
-                "entityCode": 1169,
-                "physicalName": "modifiedBy"
-            },
-            {
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1169,
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "name": "ownerUser",
-                "owner": {
-                    "label": "CRM产品报价",
-                    "name": "CRMchanpinbaojia"
-                },
-                "physicalName": "ownerUser",
-                "type": "Reference",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-fe5e7be299aa4b5a81fe7a4fc687debc",
-                "label": "所属用户",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null
-            },
-            {
-                "name": "ownerDepartment",
-                "description": null,
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "entityCode": 1169,
-                "type": "Reference",
-                "creatable": false,
-                "nameFieldFlag": false,
-                "physicalName": "ownerDepartment",
-                "displayOrder": 0,
-                "nullable": false,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "label": "所属部门",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-191043495e884789b78e66485e87e1e3"
-            },
-            {
-                "fieldId": "0000002-73f4f5ca6d244923ad86abdab8e9605c",
-                "entityCode": 1169,
-                "label": "关联客户",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "CRMgonghaichi",
-                        "fieldList": [
-                            "kehumingcheng",
-                            "kehubianhao"
-                        ]
-                    }
-                ],
-                "name": "guanliankehu",
-                "physicalName": "c_guanliankehu",
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "CRMgonghaichi",
-                        "label": "CRM客户"
-                    }
-                ]
-            },
-            {
-                "displayOrder": 0,
-                "referenceSetting": [
-                    {
-                        "entityName": "CRMshangji",
-                        "fieldList": [
-                            "shangjimingcheng",
-                            "shangjibianhao"
-                        ]
-                    }
-                ],
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "CRMshangji",
-                        "label": "CRM商机"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "guanlianshangji",
-                "creatable": true,
-                "updatable": true,
-                "nullable": true,
-                "label": "关联商机",
-                "type": "Reference",
-                "description": null,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-48e392b500024da2bfdd18d9643f6d8d",
-                "entityCode": 1169,
-                "physicalName": "c_guanlianshangji"
-            },
-            {
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-c272956a44a4408ba966087cd75ff75b",
-                "name": "baojiariqi",
-                "label": "报价日期",
-                "physicalName": "c_baojiariqi",
-                "type": "Date",
-                "description": null,
-                "updatable": true,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "idFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1169,
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "label": "负责人",
-                "description": null,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "entityCode": 1169,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "nameFieldFlag": false,
-                "name": "fuzeren",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Reference",
-                "nullable": true,
-                "updatable": true,
-                "fieldId": "0000002-03761f84a3e74058bdd712a13caa8f42",
-                "physicalName": "c_fuzeren"
-            },
-            {
-                "name": "guishubumen",
-                "physicalName": "c_guishubumen",
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-4853191639df4899b5cfa2e8e04d123a",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ],
-                        "entityName": "Department"
-                    }
-                ],
-                "entityCode": 1169,
-                "label": "归属部门",
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false
-            },
-            {
-                "creatable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "displayOrder": 0,
-                "name": "baojiadanbianhao",
-                "label": "报价单编号",
-                "physicalName": "c_baojiadanbianhao",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-0a387390209443b4a81f95c8ceac6a29",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1169,
-                "description": null,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "type": "Text"
-            },
-            {
-                "updatable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "fieldId": "0000002-597b1185ddfa489fa0c22327e349ee30",
-                "displayOrder": 0,
-                "creatable": true,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "entityCode": 1169,
-                "name": "dijicibaojia",
-                "label": "第几次报价",
-                "physicalName": "c_dijicibaojia",
-                "type": "Text",
-                "description": null,
-                "nameFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-78ef6049beeb41f09cf95ad070c6f981",
-                "physicalName": "c_chanpinjiagehejyuan",
-                "description": null,
-                "creatable": true,
-                "entityCode": 1169,
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "defaultMemberOfListFlag": true,
-                "name": "chanpinjiagehejyuan",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Money",
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "产品价格合计/元",
-                "referTo": null
-            },
-            {
-                "fieldId": "0000002-62875699baad4a35b063b909b3ccbd6b",
-                "physicalName": "c_zhengdanzhekoul",
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "entityCode": 1169,
-                "name": "zhengdanzhekoul",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "minValue": 0,
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 100
-                },
-                "label": "整单折扣率",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "description": null,
-                "referTo": null,
-                "referenceSetting": null,
-                "type": "Percent",
-                "displayOrder": 0,
-                "creatable": true,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "physicalName": "c_youhuijineuan",
-                "type": "Money",
-                "entityCode": 1169,
-                "defaultMemberOfListFlag": true,
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-fb44c23e065246278e99ba9fe779fbb6",
-                "name": "youhuijineuan",
-                "displayOrder": 0,
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2
-                },
-                "label": "优惠金额/元",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                }
-            },
-            {
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-eb56432b33694cdba23995e56f86ec90",
-                "type": "Money",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "name": "zongbaojiajinyuan",
-                "physicalName": "c_zongbaojiajinyuan",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1169,
-                "label": "总报价金额/元"
-            },
-            {
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "creatable": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "label": "金额大写",
-                "updatable": true,
-                "type": "Text",
-                "displayOrder": 0,
-                "nullable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1169,
-                "name": "jinedaxie",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-3d5c72023865405aad6d7a4d8eb2811c",
-                "physicalName": "c_jinedaxie"
-            },
-            {
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "name": "baojiamaolil",
-                "label": "报价毛利率",
-                "physicalName": "c_baojiamaolil",
-                "referenceSetting": null,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1169,
-                "description": null,
-                "idFieldFlag": false,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-707c4d0af59c46b6b7dc549b277348f5",
-                "type": "Percent",
-                "updatable": true
-            }
-        ],
-        "layoutable": true,
-        "authorizable": true,
-        "shareable": false,
-        "assignable": false,
-        "sortedFieldSet": [
-            {
-                "type": "PrimaryKey",
-                "description": null,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "label": "id主键",
-                "idFieldFlag": true,
-                "referTo": null,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "nullable": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-ae0dd9a49ef94ee098539ddcc4437cfa",
-                "entityCode": 1169,
-                "name": "cRMchanpinbaojiaId",
-                "physicalName": "cRMchanpinbaojiaId",
-                "displayOrder": 0
-            },
-            {
-                "entityCode": 1169,
-                "updatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "guanliankehu",
-                "type": "Reference",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-73f4f5ca6d244923ad86abdab8e9605c",
-                "label": "关联客户",
-                "physicalName": "c_guanliankehu",
-                "creatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "CRMgonghaichi",
-                        "fieldList": [
-                            "kehumingcheng",
-                            "kehubianhao"
-                        ]
-                    }
-                ],
-                "owner": {
-                    "label": "CRM产品报价",
-                    "name": "CRMchanpinbaojia"
-                },
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "CRMgonghaichi",
-                        "label": "CRM客户"
-                    }
-                ]
-            },
-            {
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "CRMshangji",
-                        "label": "CRM商机"
-                    }
-                ],
-                "entityCode": 1169,
-                "label": "关联商机",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "physicalName": "c_guanlianshangji",
-                "type": "Reference",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-48e392b500024da2bfdd18d9643f6d8d",
-                "name": "guanlianshangji",
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "shangjimingcheng",
-                            "shangjibianhao"
-                        ],
-                        "entityName": "CRMshangji"
-                    }
-                ],
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": true
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-c272956a44a4408ba966087cd75ff75b",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1169,
-                "physicalName": "c_baojiariqi",
-                "displayOrder": 0,
-                "updatable": true,
-                "referenceSetting": null,
-                "name": "baojiariqi",
-                "type": "Date",
-                "description": null,
-                "referTo": null,
-                "label": "报价日期"
-            },
-            {
-                "entityCode": 1169,
-                "name": "fuzeren",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "label": "负责人",
-                "physicalName": "c_fuzeren",
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-03761f84a3e74058bdd712a13caa8f42",
-                "type": "Reference",
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "entityCode": 1169,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-4853191639df4899b5cfa2e8e04d123a",
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "guishubumen",
-                "physicalName": "c_guishubumen",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Reference",
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "label": "归属部门",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            },
-            {
-                "entityCode": 1169,
-                "type": "Text",
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-0a387390209443b4a81f95c8ceac6a29",
-                "name": "baojiadanbianhao",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "physicalName": "c_baojiadanbianhao",
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": true,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "referenceSetting": null,
-                "label": "报价单编号",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "description": null,
-                "defaultMemberOfListFlag": true,
-                "referTo": null
-            },
-            {
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "fieldId": "0000002-597b1185ddfa489fa0c22327e349ee30",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "idFieldFlag": false,
-                "referTo": null,
-                "label": "第几次报价",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1169,
-                "physicalName": "c_dijicibaojia",
-                "type": "Text",
-                "description": null,
-                "name": "dijicibaojia",
-                "updatable": true,
-                "referenceSetting": null
-            },
-            {
-                "referenceSetting": null,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2
-                },
-                "nullable": true,
-                "updatable": true,
-                "name": "chanpinjiagehejyuan",
-                "physicalName": "c_chanpinjiagehejyuan",
-                "type": "Money",
-                "displayOrder": 0,
-                "entityCode": 1169,
-                "label": "产品价格合计/元",
-                "owner": {
-                    "label": "CRM产品报价",
-                    "name": "CRMchanpinbaojia"
-                },
-                "referTo": null,
-                "fieldId": "0000002-78ef6049beeb41f09cf95ad070c6f981",
-                "description": null,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "description": null,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-62875699baad4a35b063b909b3ccbd6b",
-                "label": "整单折扣率",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "creatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1169,
-                "name": "zhengdanzhekoul",
-                "displayOrder": 0,
-                "updatable": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "physicalName": "c_zhengdanzhekoul",
-                "type": "Percent",
-                "nullable": true,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "description": null,
-                "nullable": true,
-                "updatable": true,
-                "fieldId": "0000002-fb44c23e065246278e99ba9fe779fbb6",
-                "name": "youhuijineuan",
-                "owner": {
-                    "label": "CRM产品报价",
-                    "name": "CRMchanpinbaojia"
-                },
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "label": "优惠金额/元",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "entityCode": 1169,
-                "physicalName": "c_youhuijineuan",
-                "type": "Money"
-            },
-            {
-                "entityCode": 1169,
-                "name": "zongbaojiajinyuan",
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "fieldId": "0000002-eb56432b33694cdba23995e56f86ec90",
-                "label": "总报价金额/元",
-                "physicalName": "c_zongbaojiajinyuan",
-                "type": "Money",
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "displayOrder": 0
-            },
-            {
-                "fieldId": "0000002-3d5c72023865405aad6d7a4d8eb2811c",
-                "physicalName": "c_jinedaxie",
-                "displayOrder": 0,
-                "entityCode": 1169,
-                "name": "jinedaxie",
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "type": "Text",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "label": "金额大写",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true
-            },
-            {
-                "physicalName": "c_baojiamaolil",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Percent",
-                "nullable": true,
-                "entityCode": 1169,
-                "label": "报价毛利率",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0
-                },
-                "fieldId": "0000002-707c4d0af59c46b6b7dc549b277348f5",
-                "description": null,
-                "referTo": null,
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "name": "baojiamaolil",
-                "creatable": true
-            },
-            {
-                "nullable": false,
-                "creatable": false,
-                "description": null,
-                "idFieldFlag": false,
-                "fieldId": "0000002-cba7a56703444911b48f9244016d52ba",
-                "entityCode": 1169,
-                "type": "DateTime",
-                "displayOrder": 0,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "name": "createdOn",
-                "physicalName": "createdOn",
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "创建时间",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                }
-            },
-            {
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Reference",
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "fieldViewModel": null,
-                "physicalName": "createdBy",
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-9b450422b3c849cc921691819080a4e3",
-                "label": "创建用户",
-                "creatable": false,
-                "updatable": false,
-                "entityCode": 1169,
-                "name": "createdBy",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "fieldId": "0000002-86d48f75d488422fbf5a267c5db520df",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "description": null,
-                "fieldViewModel": null,
-                "creatable": false,
-                "updatable": false,
-                "name": "modifiedOn",
-                "physicalName": "modifiedOn",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1169,
-                "label": "最近修改时间",
-                "type": "DateTime",
-                "idFieldFlag": false
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-b5562785ba6a449b931fa515f90121d3",
-                "entityCode": 1169,
-                "name": "modifiedBy",
-                "physicalName": "modifiedBy",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "nullable": true,
-                "nameFieldFlag": false,
-                "label": "修改用户",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Reference"
-            },
-            {
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "physicalName": "ownerUser",
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "name": "ownerUser",
-                "label": "所属用户",
-                "description": null,
-                "nullable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                },
-                "type": "Reference",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-fe5e7be299aa4b5a81fe7a4fc687debc",
-                "entityCode": 1169
-            },
-            {
-                "physicalName": "ownerDepartment",
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-191043495e884789b78e66485e87e1e3",
-                "name": "ownerDepartment",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "entityCode": 1169,
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "type": "Reference",
-                "description": null,
-                "label": "所属部门",
-                "owner": {
-                    "name": "CRMchanpinbaojia",
-                    "label": "CRM产品报价"
-                }
-            }
-        ],
-        "entityId": "0000001-d6e496debc3d47e79a7e887992fd9469",
-        "name": "CRMchanpinbaojia",
-        "physicalName": "t_crmchanpinbaojia",
-        "mainDetailField": null,
-        "mainEntity": null,
-        "fieldNames": [
-            "cRMchanpinbaojiaId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "guanliankehu",
-            "guanlianshangji",
-            "baojiariqi",
-            "fuzeren",
-            "guishubumen",
-            "baojiadanbianhao",
-            "dijicibaojia",
-            "chanpinjiagehejyuan",
-            "zhengdanzhekoul",
-            "youhuijineuan",
-            "zongbaojiajinyuan",
-            "jinedaxie",
-            "baojiamaolil"
-        ],
-        "label": "CRM产品报价",
-        "idField": {
-            "name": "cRMchanpinbaojiaId",
-            "label": "id主键"
-        },
-        "nameField": {
-            "name": "baojiadanbianhao",
-            "label": "报价单编号"
-        }
-    },
     "physicalName": "t_crmbaojiamingxi",
+    "nameField": null,
+    "mainEntity": "CRMchanpinbaojia",
+    "assignable": false,
+    "authorizable": false,
     "fieldSet": [
         {
-            "idFieldFlag": true,
-            "creatable": false,
-            "physicalName": "cRMbaojiamingxiId",
-            "reserved": true,
-            "updatable": false,
             "label": "id主键",
             "type": "PrimaryKey",
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-7490bc66fc5344bd953d43be187a7589",
+            "name": "cRMbaojiamingxiId",
+            "updatable": false,
+            "idFieldFlag": true,
             "referTo": null,
-            "name": "cRMbaojiamingxiId"
+            "description": null,
+            "nullable": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1170,
+            "displayOrder": 0,
+            "physicalName": "cRMbaojiamingxiId",
+            "creatable": false
         },
         {
-            "mainDetailFieldFlag": false,
             "physicalName": "createdOn",
-            "referTo": null,
-            "name": "createdOn",
             "updatable": false,
-            "creatable": false,
-            "type": "DateTime",
+            "fieldViewModel": null,
             "nameFieldFlag": false,
-            "reserved": true,
+            "entityCode": 1170,
+            "type": "DateTime",
+            "displayOrder": 0,
             "idFieldFlag": false,
+            "referenceSetting": null,
+            "nullable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "description": null,
+            "referTo": null,
+            "fieldId": "0000002-ca7387fac38048d6a26780f4f09b3e3e",
+            "name": "createdOn",
             "label": "创建时间"
         },
         {
-            "updatable": false,
-            "creatable": false,
+            "entityCode": 1170,
             "label": "创建用户",
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
+            "nullable": false,
             "referTo": "User,",
+            "fieldViewModel": null,
+            "referenceSetting": null,
             "name": "createdBy",
+            "physicalName": "createdBy",
+            "displayOrder": 0,
             "idFieldFlag": false,
-            "mainDetailFieldFlag": false
+            "defaultMemberOfListFlag": false,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-97def8bc0ac64d5f93659e702a916930",
+            "type": "Reference",
+            "description": null,
+            "updatable": false
         },
         {
-            "nameFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "referTo": null,
-            "idFieldFlag": false,
+            "referenceSetting": null,
             "label": "最近修改时间",
+            "physicalName": "modifiedOn",
+            "nullable": true,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "type": "DateTime",
+            "description": null,
             "creatable": false,
             "mainDetailFieldFlag": false,
-            "reserved": true,
-            "name": "modifiedOn",
-            "updatable": false,
-            "type": "DateTime"
+            "fieldViewModel": null,
+            "fieldId": "0000002-87c7c5ae5e644a2181edc0fb77978f0e",
+            "entityCode": 1170,
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "name": "modifiedOn"
         },
         {
-            "physicalName": "modifiedBy",
-            "updatable": false,
             "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "reserved": true,
+            "mainDetailFieldFlag": false,
             "referTo": "User,",
             "name": "modifiedBy",
+            "type": "Reference",
+            "displayOrder": 0,
+            "creatable": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "entityCode": 1170,
             "label": "修改用户",
-            "mainDetailFieldFlag": false
+            "description": null,
+            "nullable": true,
+            "fieldId": "0000002-315b4f69273d4516a7b48a57778a8b2a",
+            "physicalName": "modifiedBy",
+            "updatable": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false
         },
         {
-            "label": "主从关联Id",
-            "creatable": true,
             "name": "mdCRMchanpinbaojiaId",
+            "label": "主从关联Id",
+            "description": null,
+            "displayOrder": 0,
+            "mainDetailFieldFlag": true,
+            "type": "Reference",
+            "creatable": true,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-15af155f05d7468989e5b54c89871caa",
+            "physicalName": "mdCRMchanpinbaojiaId",
+            "nullable": false,
             "updatable": false,
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": null,
+            "entityCode": 1170,
             "idFieldFlag": false,
             "referTo": "CRMchanpinbaojia,",
-            "type": "Reference",
-            "mainDetailFieldFlag": true,
-            "nameFieldFlag": false,
-            "physicalName": "mdCRMchanpinbaojiaId",
-            "reserved": true
+            "referenceSetting": null
         },
         {
-            "nameFieldFlag": false,
-            "reserved": false,
             "updatable": true,
-            "creatable": true,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_xuanzechanpin",
-            "referTo": "CRMchanpinmingxi,",
+            "defaultMemberOfListFlag": true,
+            "referenceSetting": [
+                {
+                    "fieldList": [
+                        "chanpinmingcheng",
+                        "pinpai",
+                        "guigexinghao",
+                        "danwei",
+                        "chengbenjiageyuan",
+                        "biaozhunjiageyuan",
+                        "shifoushangjia",
+                        "chanpintupian",
+                        "chanpinfujian",
+                        "jishucanshu"
+                    ],
+                    "entityName": "CRMchanpinmingxi"
+                }
+            ],
+            "description": null,
+            "displayOrder": 0,
+            "fieldId": "0000002-8937109a37b84b4db51420592fd0baae",
             "name": "xuanzechanpin",
+            "physicalName": "c_xuanzechanpin",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referTo": "CRMchanpinmingxi,",
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "entityCode": 1170,
+            "nullable": true,
+            "creatable": true,
             "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
             "label": "选择产品"
         },
         {
-            "idFieldFlag": false,
             "type": "Integer",
-            "reserved": false,
-            "referTo": null,
-            "name": "shuliang",
+            "updatable": true,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "entityCode": 1170,
             "label": "数量",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
             "physicalName": "c_shuliang",
-            "updatable": true
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-8a2c0b6281a24a67b2ed1a4746433cb3",
+            "nullable": true,
+            "creatable": true,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "referenceSetting": null,
+            "description": null,
+            "name": "shuliang"
         },
         {
-            "reserved": false,
-            "referTo": null,
-            "type": "Percent",
-            "nameFieldFlag": false,
-            "name": "zhekou",
             "updatable": true,
-            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
             "label": "折扣",
-            "creatable": true,
+            "physicalName": "c_zhekou",
+            "displayOrder": 0,
+            "type": "Percent",
+            "nullable": true,
+            "nameFieldFlag": false,
+            "description": null,
+            "idFieldFlag": false,
             "mainDetailFieldFlag": false,
-            "physicalName": "c_zhekou"
+            "fieldId": "0000002-ca180b2cf3e54d089f5cea5e382c2e5a",
+            "entityCode": 1170,
+            "name": "zhekou",
+            "referenceSetting": null,
+            "creatable": true,
+            "referTo": null,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 100,
+                "minValue": 0,
+                "validators": []
+            }
         },
         {
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
-            "updatable": true,
-            "idFieldFlag": false,
-            "label": "小计",
-            "type": "Money",
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "referenceSetting": null,
             "physicalName": "c_xiaoji",
-            "reserved": false,
-            "name": "xiaoji"
+            "type": "Money",
+            "displayOrder": 0,
+            "nullable": true,
+            "idFieldFlag": false,
+            "fieldId": "0000002-8efa89898746463589d21545caaaacf3",
+            "name": "xiaoji",
+            "label": "小计",
+            "mainDetailFieldFlag": false,
+            "entityCode": 1170,
+            "updatable": true,
+            "referTo": null,
+            "description": null,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true
         }
     ]
 }

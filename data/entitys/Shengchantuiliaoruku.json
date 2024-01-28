@@ -1,1197 +1,199 @@
 {
-    "name": "Shengchantuiliaoruku",
+    "internalEntityFlag": false,
+    "tags": "ERP(离散制造-MTO）",
+    "entityCode": 1218,
+    "label": "生产退料入库明细",
     "systemEntityFlag": false,
     "detailEntityFlag": true,
+    "layoutable": true,
     "listable": true,
     "idFieldName": "shengchantuiliaorukuId",
-    "internalEntityFlag": false,
-    "label": "生产退料入库明细",
-    "entityCode": 1218,
-    "layoutable": true,
-    "tags": "ERP(离散制造-MTO）",
+    "name": "Shengchantuiliaoruku",
     "physicalName": "t_shengchantuiliaoruku",
     "nameField": null,
-    "authorizable": false,
-    "assignable": false,
     "shareable": false,
-    "mainEntity": {
-        "authorizable": true,
-        "idField": {
-            "name": "shengchantuiliaoId",
-            "label": "id主键"
-        },
-        "mainEntity": null,
-        "mainDetailField": null,
-        "entityId": "0000001-4fa627b5fa5a4bbc836831daacb04538",
-        "physicalName": "t_shengchantuiliao",
-        "assignable": false,
-        "sortedFieldSet": [
-            {
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "fieldId": "0000002-3c3e322e13204d23bf24dfd45797e2a2",
-                "entityCode": 1216,
-                "name": "shengchantuiliaoId",
-                "label": "id主键",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "updatable": false,
-                "referenceSetting": null,
-                "fieldViewModel": null,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "physicalName": "shengchantuiliaoId",
-                "description": null,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "name": "shengchanlingliaodan",
-                "label": "生产领料单",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "entityCode": 1216,
-                "description": null,
-                "displayOrder": 0,
-                "referTo": [
-                    {
-                        "name": "Shengchanlingliao",
-                        "label": "生产领料"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Shengchanlingliao",
-                        "fieldList": [
-                            "shengchangongdan",
-                            "shengchangongdanmingcheng",
-                            "chukucangku",
-                            "chukuchanpinzongshu"
-                        ]
-                    }
-                ],
-                "physicalName": "c_shengchanlingliaodan",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "nullable": false,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-8b6917dac0f8418483c2b59f1d277e13",
-                "updatable": true
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "label": "生产工单名称",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "idFieldFlag": false,
-                "name": "shengchangongdanmingcheng",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-f327152440e84837b89311c67eed900b",
-                "entityCode": 1216,
-                "physicalName": "c_shengchangongdanmingcheng",
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "type": "Text",
-                "description": null,
-                "creatable": true
-            },
-            {
-                "name": "tuiliaorukudanbianhao",
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "type": "Text",
-                "idFieldFlag": false,
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "referTo": null,
-                "fieldId": "0000002-731fa2d2bfe14d3191ad6eb3f84d4f54",
-                "entityCode": 1216,
-                "label": "退料入库单编号",
-                "physicalName": "c_tuiliaorukudanbianhao",
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "referenceSetting": null
-            },
-            {
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "type": "Reference",
-                "description": null,
-                "defaultMemberOfListFlag": true,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-bc4fa30f712f404bb8aadd5c77b429f6",
-                "label": "入库仓库",
-                "physicalName": "c_rukucangku",
-                "nullable": false,
-                "name": "rukucangku",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma",
-                            "cangkudizhi",
-                            "cangkurongliang",
-                            "cangkuxingzhi",
-                            "cangkuzhuangtai"
-                        ]
-                    }
-                ],
-                "entityCode": 1216,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "仓库管理",
-                        "name": "Cangkuguanli"
-                    }
-                ]
-            },
-            {
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "name": "tuiliaoyuanyin",
-                "type": "Option",
-                "nullable": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": null,
-                "fieldId": "0000002-bcc88c538fa1457481ef2d1f91a8b3cf",
-                "label": "退料原因",
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1216,
-                "physicalName": "c_tuiliaoyuanyin",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "fieldId": "0000002-5a8ec81e32034c18ba68a78e11bdc327",
-                "name": "rukuchanpinzongshu",
-                "label": "入库产品总数",
-                "type": "Integer",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "maxValue": 999999999,
-                    "minValue": -999999999
-                },
-                "physicalName": "c_rukuchanpinzongshu",
-                "nullable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1216,
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "label": "产品入库确认",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "description": null,
-                "nullable": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1216,
-                "name": "chanpinrukuqueren",
-                "physicalName": "c_chanpinrukuqueren",
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-8fee9525eca44f59a2216e765e3c554f",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "type": "Boolean",
-                "nameFieldFlag": false,
-                "creatable": true
-            },
-            {
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "physicalName": "c_tuiliaorukushijian",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "creatable": true,
-                "label": "退料入库时间",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "type": "DateTime",
-                "referenceSetting": null,
-                "description": null,
-                "nullable": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-6a8c1f14909545ffb88c3ce4a06d6d2e",
-                "entityCode": 1216,
-                "name": "tuiliaorukushijian"
-            },
-            {
-                "entityCode": 1216,
-                "label": "拍照",
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "name": "paizhao",
-                "physicalName": "c_paizhao",
-                "type": "Picture",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxFileCount": 9,
-                    "fileMaxSize": 20,
-                    "uploadFileTypes": [
-                        "jpeg",
-                        "png",
-                        "gif"
-                    ],
-                    "uploadHint": "",
-                    "validators": []
-                },
-                "fieldId": "0000002-24823a56e6334b78b2f377831946492b",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "description": null,
-                "displayOrder": 0
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "name": "rukuyuan",
-                "physicalName": "c_rukuyuan",
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "label": "入库员",
-                "displayOrder": 0,
-                "updatable": true,
-                "referTo": [
-                    {
-                        "name": "Yuangongdangan",
-                        "label": "员工档案"
-                    }
-                ],
-                "fieldId": "0000002-dbe4b89b7e554df8b63c34a1050e7104",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "type": "Reference",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "entityCode": 1216,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Yuangongdangan",
-                        "fieldList": [
-                            "gonghao",
-                            "xingming",
-                            "bumen",
-                            "gangwei"
-                        ]
-                    }
-                ]
-            },
-            {
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "type": "DateTime",
-                "displayOrder": 0,
-                "nullable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "referTo": null,
-                "fieldId": "0000002-371ffc203fd14dc7a7f025f43a42cc9e",
-                "entityCode": 1216,
-                "name": "createdOn",
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "entityCode": 1216,
-                "displayOrder": 0,
-                "creatable": false,
-                "fieldId": "0000002-3b4e774f0905413083da69ca2afc289e",
-                "type": "Reference",
-                "nullable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "name": "createdBy",
-                "physicalName": "createdBy",
-                "referenceSetting": null,
-                "label": "创建用户",
-                "description": null,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                }
-            },
-            {
-                "idFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "modifiedOn",
-                "creatable": false,
-                "type": "DateTime",
-                "displayOrder": 0,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1216,
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "label": "最近修改时间",
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-04df280d2180475db802da086f1bfc0b",
-                "name": "modifiedOn"
-            },
-            {
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "type": "Reference",
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "label": "修改用户",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1216,
-                "physicalName": "modifiedBy",
-                "description": null,
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-679aa292bcc143a5a6ab484645c607b9",
-                "nullable": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "modifiedBy"
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1216,
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "name": "ownerUser",
-                "owner": {
-                    "label": "生产退料",
-                    "name": "Shengchantuiliao"
-                },
-                "mainDetailFieldFlag": false,
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-96aaca247a174e3b855fe06f2c939350",
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "type": "Reference",
-                "fieldViewModel": null
-            },
-            {
-                "entityCode": 1216,
-                "name": "ownerDepartment",
-                "physicalName": "ownerDepartment",
-                "type": "Reference",
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-e6de17f70fcc4e249e5fd421bf8eb0e1",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "label": "所属部门",
-                "nullable": false,
-                "fieldViewModel": null
-            }
-        ],
-        "virtualFieldSet": [],
-        "fieldNames": [
-            "shengchantuiliaoId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "shengchanlingliaodan",
-            "shengchangongdanmingcheng",
-            "tuiliaorukudanbianhao",
-            "rukucangku",
-            "tuiliaoyuanyin",
-            "rukuchanpinzongshu",
-            "chanpinrukuqueren",
-            "tuiliaorukushijian",
-            "paizhao",
-            "rukuyuan"
-        ],
-        "layoutable": true,
-        "listable": true,
-        "shareable": false,
-        "tags": "ERP(离散制造-MTO）",
-        "nameField": {
-            "name": "tuiliaorukudanbianhao",
-            "label": "退料入库单编号"
-        },
-        "fieldSet": [
-            {
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-3c3e322e13204d23bf24dfd45797e2a2",
-                "name": "shengchantuiliaoId",
-                "label": "id主键",
-                "updatable": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1216,
-                "physicalName": "shengchantuiliaoId",
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "creatable": false
-            },
-            {
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "idFieldFlag": false,
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "type": "DateTime",
-                "displayOrder": 0,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-371ffc203fd14dc7a7f025f43a42cc9e",
-                "entityCode": 1216,
-                "name": "createdOn",
-                "updatable": false,
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "nullable": false,
-                "creatable": false
-            },
-            {
-                "name": "createdBy",
-                "label": "创建用户",
-                "referenceSetting": null,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1216,
-                "description": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "createdBy",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-3b4e774f0905413083da69ca2afc289e",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "updatable": false
-            },
-            {
-                "fieldId": "0000002-04df280d2180475db802da086f1bfc0b",
-                "physicalName": "modifiedOn",
-                "owner": {
-                    "label": "生产退料",
-                    "name": "Shengchantuiliao"
-                },
-                "description": null,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "label": "最近修改时间",
-                "type": "DateTime",
-                "nullable": true,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1216,
-                "name": "modifiedOn",
-                "displayOrder": 0
-            },
-            {
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "creatable": false,
-                "type": "Reference",
-                "nullable": true,
-                "updatable": false,
-                "fieldViewModel": null,
-                "physicalName": "modifiedBy",
-                "name": "modifiedBy",
-                "description": null,
-                "entityCode": 1216,
-                "label": "修改用户",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-679aa292bcc143a5a6ab484645c607b9"
-            },
-            {
-                "name": "ownerUser",
-                "physicalName": "ownerUser",
-                "type": "Reference",
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1216,
-                "label": "所属用户",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-96aaca247a174e3b855fe06f2c939350",
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "description": null,
-                "referenceSetting": null
-            },
-            {
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1216,
-                "physicalName": "ownerDepartment",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldId": "0000002-e6de17f70fcc4e249e5fd421bf8eb0e1",
-                "description": null,
-                "displayOrder": 0,
-                "type": "Reference",
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "type": "Reference",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "description": null,
-                "nullable": false,
-                "creatable": true,
-                "referTo": [
-                    {
-                        "name": "Shengchanlingliao",
-                        "label": "生产领料"
-                    }
-                ],
-                "fieldId": "0000002-8b6917dac0f8418483c2b59f1d277e13",
-                "entityCode": 1216,
-                "name": "shengchanlingliaodan",
-                "label": "生产领料单",
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Shengchanlingliao",
-                        "fieldList": [
-                            "shengchangongdan",
-                            "shengchangongdanmingcheng",
-                            "chukucangku",
-                            "chukuchanpinzongshu"
-                        ]
-                    }
-                ],
-                "physicalName": "c_shengchanlingliaodan",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "entityCode": 1216,
-                "physicalName": "c_shengchangongdanmingcheng",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-f327152440e84837b89311c67eed900b",
-                "name": "shengchangongdanmingcheng",
-                "label": "生产工单名称",
-                "description": null,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "type": "Text",
-                "displayOrder": 0,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                }
-            },
-            {
-                "displayOrder": 0,
-                "referTo": null,
-                "name": "tuiliaorukudanbianhao",
-                "idFieldFlag": false,
-                "nameFieldFlag": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "entityCode": 1216,
-                "type": "Text",
-                "fieldId": "0000002-731fa2d2bfe14d3191ad6eb3f84d4f54",
-                "physicalName": "c_tuiliaorukudanbianhao",
-                "description": null,
-                "nullable": false,
-                "creatable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "label": "退料入库单编号"
-            },
-            {
-                "physicalName": "c_rukucangku",
-                "type": "Reference",
-                "description": null,
-                "creatable": true,
-                "fieldId": "0000002-bc4fa30f712f404bb8aadd5c77b429f6",
-                "label": "入库仓库",
-                "nullable": false,
-                "referTo": [
-                    {
-                        "name": "Cangkuguanli",
-                        "label": "仓库管理"
-                    }
-                ],
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "rukucangku",
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma",
-                            "cangkudizhi",
-                            "cangkurongliang",
-                            "cangkuxingzhi",
-                            "cangkuzhuangtai"
-                        ]
-                    }
-                ],
-                "entityCode": 1216,
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                }
-            },
-            {
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1216,
-                "name": "tuiliaoyuanyin",
-                "physicalName": "c_tuiliaoyuanyin",
-                "label": "退料原因",
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "type": "Option",
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldId": "0000002-bcc88c538fa1457481ef2d1f91a8b3cf",
-                "description": null,
-                "updatable": true
-            },
-            {
-                "entityCode": 1216,
-                "label": "入库产品总数",
-                "type": "Integer",
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-5a8ec81e32034c18ba68a78e11bdc327",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "name": "rukuchanpinzongshu",
-                "physicalName": "c_rukuchanpinzongshu",
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "description": null,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1216,
-                "name": "chanpinrukuqueren",
-                "description": null,
-                "nullable": false,
-                "updatable": true,
-                "type": "Boolean",
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-8fee9525eca44f59a2216e765e3c554f",
-                "physicalName": "c_chanpinrukuqueren",
-                "displayOrder": 0,
-                "creatable": true,
-                "referenceSetting": null,
-                "label": "产品入库确认",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "idFieldFlag": false
-            },
-            {
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "description": null,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldId": "0000002-6a8c1f14909545ffb88c3ce4a06d6d2e",
-                "label": "退料入库时间",
-                "physicalName": "c_tuiliaorukushijian",
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": true,
-                "referenceSetting": null,
-                "name": "tuiliaorukushijian",
-                "type": "DateTime",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1216,
-                "fieldViewModel": {
-                    "validators": []
-                }
-            },
-            {
-                "physicalName": "c_paizhao",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "fieldId": "0000002-24823a56e6334b78b2f377831946492b",
-                "entityCode": 1216,
-                "name": "paizhao",
-                "referTo": null,
-                "referenceSetting": null,
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "label": "拍照",
-                "type": "Picture",
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "uploadHint": "",
-                    "validators": [],
-                    "maxFileCount": 9,
-                    "fileMaxSize": 20,
-                    "uploadFileTypes": [
-                        "jpeg",
-                        "png",
-                        "gif"
-                    ]
-                }
-            },
-            {
-                "fieldId": "0000002-dbe4b89b7e554df8b63c34a1050e7104",
-                "physicalName": "c_rukuyuan",
-                "owner": {
-                    "name": "Shengchantuiliao",
-                    "label": "生产退料"
-                },
-                "type": "Reference",
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "rukuyuan",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "label": "入库员",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1216,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "员工档案",
-                        "name": "Yuangongdangan"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "Yuangongdangan",
-                        "fieldList": [
-                            "gonghao",
-                            "xingming",
-                            "bumen",
-                            "gangwei"
-                        ]
-                    }
-                ]
-            }
-        ],
-        "name": "Shengchantuiliao",
-        "label": "生产退料",
-        "entityCode": 1216,
-        "detailEntityFlag": false,
-        "detailEntitySet": [
-            {
-                "name": "Shengchantuiliaoruku",
-                "label": "生产退料入库明细"
-            }
-        ]
-    },
+    "mainEntity": "Shengchantuiliao",
+    "assignable": false,
+    "authorizable": false,
     "fieldSet": [
         {
-            "nameFieldFlag": false,
-            "idFieldFlag": true,
-            "creatable": false,
-            "type": "PrimaryKey",
-            "physicalName": "shengchantuiliaorukuId",
-            "reserved": true,
-            "referTo": null,
-            "name": "shengchantuiliaorukuId",
+            "fieldId": "0000002-973701d327f644ab86ed4f30252e8ccd",
+            "description": null,
             "updatable": false,
+            "idFieldFlag": true,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "name": "shengchantuiliaorukuId",
+            "type": "PrimaryKey",
+            "displayOrder": 0,
+            "fieldViewModel": null,
+            "entityCode": 1218,
             "label": "id主键",
+            "nameFieldFlag": false,
+            "physicalName": "shengchantuiliaorukuId",
+            "nullable": false,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null
+        },
+        {
+            "referTo": null,
+            "entityCode": 1218,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "label": "创建时间",
+            "description": null,
+            "creatable": false,
+            "updatable": false,
+            "displayOrder": 0,
+            "defaultMemberOfListFlag": false,
+            "nameFieldFlag": false,
+            "referenceSetting": null,
+            "fieldId": "0000002-19614efd6a624f878e38e71f26e63986",
+            "name": "createdOn",
+            "physicalName": "createdOn",
+            "nullable": false
+        },
+        {
+            "label": "创建用户",
+            "type": "Reference",
+            "description": null,
+            "physicalName": "createdBy",
+            "displayOrder": 0,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-7e2f0541373f4e0291e3cc3d15c69e26",
+            "name": "createdBy",
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "entityCode": 1218,
+            "nullable": false,
+            "creatable": false,
             "mainDetailFieldFlag": false
         },
         {
-            "name": "createdOn",
-            "idFieldFlag": false,
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdOn",
-            "reserved": true,
-            "referTo": null,
-            "updatable": false,
-            "label": "创建时间",
-            "type": "DateTime"
-        },
-        {
-            "updatable": false,
-            "label": "创建用户",
-            "type": "Reference",
-            "physicalName": "createdBy",
-            "reserved": true,
-            "referTo": "User,",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "name": "createdBy",
-            "idFieldFlag": false
-        },
-        {
-            "updatable": false,
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
             "name": "modifiedOn",
-            "label": "最近修改时间",
-            "type": "DateTime",
-            "nameFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "idFieldFlag": false
-        },
-        {
-            "nameFieldFlag": false,
-            "physicalName": "modifiedBy",
-            "referTo": "User,",
-            "updatable": false,
-            "type": "Reference",
+            "description": null,
+            "creatable": false,
             "mainDetailFieldFlag": false,
-            "reserved": true,
-            "name": "modifiedBy",
-            "idFieldFlag": false,
-            "label": "修改用户",
-            "creatable": false
-        },
-        {
-            "type": "Reference",
-            "mainDetailFieldFlag": true,
-            "physicalName": "mdShengchantuiliaoId",
-            "reserved": true,
-            "referTo": "Shengchantuiliao,",
-            "idFieldFlag": false,
-            "creatable": true,
+            "fieldViewModel": null,
+            "fieldId": "0000002-304b3e05857c45028febca3fc4457e1b",
+            "entityCode": 1218,
             "nameFieldFlag": false,
-            "name": "mdShengchantuiliaoId",
-            "updatable": false,
-            "label": "主从关联Id"
-        },
-        {
-            "nameFieldFlag": false,
-            "reserved": false,
-            "referTo": "ERPchanpinxinxi,",
-            "idFieldFlag": false,
-            "label": "产品名称",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_chanpinmingcheng",
-            "name": "chanpinmingcheng",
-            "updatable": true,
-            "type": "Reference"
-        },
-        {
-            "nameFieldFlag": false,
-            "reserved": false,
             "referTo": null,
-            "name": "bencipaigongshuliang",
-            "updatable": true,
+            "updatable": false,
+            "referenceSetting": null,
+            "label": "最近修改时间",
+            "physicalName": "modifiedOn",
+            "nullable": true,
             "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "type": "DateTime",
+            "displayOrder": 0
+        },
+        {
+            "type": "Reference",
+            "description": null,
+            "displayOrder": 0,
+            "defaultMemberOfListFlag": false,
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-d01c680ad4e145dca6548941f9a1550f",
+            "entityCode": 1218,
+            "label": "修改用户",
+            "physicalName": "modifiedBy",
+            "creatable": false,
+            "nullable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "referenceSetting": null
+        },
+        {
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-de18776361224776932d70b9b9935bae",
+            "entityCode": 1218,
+            "name": "mdShengchantuiliaoId",
+            "type": "Reference",
+            "description": null,
+            "creatable": true,
+            "mainDetailFieldFlag": true,
+            "referenceSetting": null,
+            "physicalName": "mdShengchantuiliaoId",
+            "nameFieldFlag": false,
+            "label": "主从关联Id",
+            "displayOrder": 0,
+            "updatable": false,
+            "referTo": "Shengchantuiliao,",
+            "nullable": false,
+            "idFieldFlag": false,
+            "fieldViewModel": null
+        },
+        {
+            "displayOrder": 0,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": "ERPchanpinxinxi,",
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "physicalName": "c_chanpinmingcheng",
+            "type": "Reference",
+            "referenceSetting": [
+                {
+                    "entityName": "ERPchanpinxinxi",
+                    "fieldList": [
+                        "chanpinmingcheng",
+                        "chanpinbianma",
+                        "chanpinleixing",
+                        "chanpinshuxing",
+                        "pinpai",
+                        "guigexinghao"
+                    ]
+                }
+            ],
+            "description": null,
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "name": "chanpinmingcheng",
+            "label": "产品名称",
+            "nullable": false,
+            "idFieldFlag": false,
+            "fieldId": "0000002-f9e440c6307e4b4a9f1ab85d71aa329a",
+            "entityCode": 1218
+        },
+        {
+            "type": "Integer",
+            "description": null,
             "creatable": true,
             "mainDetailFieldFlag": false,
+            "fieldId": "0000002-cb0864188d8e4d229bfbd3146101c8ab",
             "physicalName": "c_bencipaigongshuliang",
+            "nameFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": {
+                "validators": [],
+                "maxValue": 999999999,
+                "minValue": -999999999
+            },
+            "referenceSetting": [],
+            "displayOrder": 0,
+            "updatable": true,
+            "entityCode": 1218,
+            "name": "bencipaigongshuliang",
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": true,
             "label": "本次入库数量",
-            "type": "Integer"
+            "nullable": false
         }
     ]
 }

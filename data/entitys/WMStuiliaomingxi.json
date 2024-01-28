@@ -1,1144 +1,197 @@
 {
-    "label": "WMS退料明细",
+    "name": "WMStuiliaomingxi",
     "systemEntityFlag": false,
-    "detailEntityFlag": true,
     "layoutable": true,
     "idFieldName": "wMStuiliaomingxiId",
-    "tags": "WMS",
-    "name": "WMStuiliaomingxi",
-    "listable": true,
     "internalEntityFlag": false,
+    "label": "WMS退料明细",
     "entityCode": 1115,
-    "assignable": false,
-    "shareable": false,
-    "mainEntity": {
-        "shareable": false,
-        "assignable": false,
-        "entityId": "0000001-1e7148c0438640a99de28b23d99b70a4",
-        "name": "WMStuiliaoruku",
-        "label": "WMS退料入库",
-        "entityCode": 1112,
-        "detailEntityFlag": false,
-        "authorizable": true,
-        "mainEntity": null,
-        "fieldSet": [
-            {
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-3548b836e59d442a985dd7e637fa9c7d",
-                "name": "wMStuiliaorukuId",
-                "physicalName": "wMStuiliaorukuId",
-                "owner": {
-                    "label": "WMS退料入库",
-                    "name": "WMStuiliaoruku"
-                },
-                "creatable": false,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "type": "PrimaryKey",
-                "entityCode": 1112,
-                "label": "id主键",
-                "description": null,
-                "nullable": false,
-                "updatable": false
-            },
-            {
-                "referTo": null,
-                "fieldId": "0000002-d2d942c34350415e8426314dd633b366",
-                "type": "DateTime",
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "label": "创建时间",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "physicalName": "createdOn",
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "entityCode": 1112,
-                "name": "createdOn",
-                "description": null,
-                "displayOrder": 0
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "name": "createdBy",
-                "physicalName": "createdBy",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-50442b71af594b8bb77f26b052b245fa",
-                "nullable": false,
-                "updatable": false,
-                "description": null,
-                "creatable": false,
-                "idFieldFlag": false,
-                "entityCode": 1112,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Reference",
-                "label": "创建用户",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null
-            },
-            {
-                "updatable": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "type": "DateTime",
-                "referenceSetting": null,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-bab576f65ec34a00b729a8de1b643e2c",
-                "physicalName": "modifiedOn",
-                "description": null,
-                "idFieldFlag": false,
-                "entityCode": 1112,
-                "nullable": true,
-                "creatable": false
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1112,
-                "label": "修改用户",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "physicalName": "modifiedBy",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "fieldId": "0000002-8fa377c9794043ada201a781f4996422",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "name": "modifiedBy",
-                "nullable": true,
-                "creatable": false
-            },
-            {
-                "label": "所属用户",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1112,
-                "name": "ownerUser",
-                "type": "Reference",
-                "creatable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-5eb8cc7072824c06b6ff6ccaa245f3f4",
-                "physicalName": "ownerUser",
-                "description": null,
-                "nullable": false,
-                "fieldViewModel": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1112,
-                "label": "所属部门",
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldViewModel": null,
-                "fieldId": "0000002-1ef123b82ad642748385bb5a62ca9aea",
-                "physicalName": "ownerDepartment",
-                "type": "Reference",
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "name": "ownerDepartment",
-                "description": null,
-                "nullable": false,
-                "creatable": false,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                }
-            },
-            {
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-8af20c575ca84257a4efce4a54a9c23c",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1112,
-                "name": "xuanzelingliaochukudan",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "physicalName": "c_xuanzelingliaochukudan",
-                "updatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSlingliaochuku",
-                        "fieldList": [
-                            "xuanzeshengchangongdan",
-                            "lingliaochukudanbianhao"
-                        ]
-                    }
-                ],
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "WMSlingliaochuku",
-                        "label": "WMS领料出库"
-                    }
-                ],
-                "label": "选择领料出库单",
-                "description": null,
-                "displayOrder": 0
-            },
-            {
-                "entityCode": 1112,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "label": "车间退料时间",
-                "owner": {
-                    "label": "WMS退料入库",
-                    "name": "WMStuiliaoruku"
-                },
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-b653970a5adc4bf8940de80fb21b6506",
-                "physicalName": "c_chejiantuiliaoshijian",
-                "nameFieldFlag": false,
-                "referTo": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "name": "chejiantuiliaoshijian",
-                "type": "DateTime",
-                "description": null,
-                "creatable": true
-            },
-            {
-                "physicalName": "c_chejiantuiliaobianhao",
-                "idFieldFlag": false,
-                "nameFieldFlag": true,
-                "referTo": null,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "description": null,
-                "nullable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "name": "chejiantuiliaobianhao",
-                "type": "Text",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-27c099a3c6414503ad754bfbd969bf33",
-                "entityCode": 1112,
-                "label": "车间退料编号",
-                "displayOrder": 0,
-                "creatable": true,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "entityCode": 1112,
-                "name": "tuiliaoyuanyin",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Option",
-                "nullable": true,
-                "referenceSetting": null,
-                "physicalName": "c_tuiliaoyuanyin",
-                "description": null,
-                "creatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-97caa3582df84515aea177c89be20bab",
-                "label": "退料原因",
-                "updatable": true,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "displayOrder": 0,
-                "name": "tuiliaocangku",
-                "label": "退料仓库",
-                "creatable": true,
-                "fieldId": "0000002-bf8a516bf48649448744cec683036aef",
-                "entityCode": 1112,
-                "owner": {
-                    "label": "WMS退料入库",
-                    "name": "WMStuiliaoruku"
-                },
-                "type": "Reference",
-                "description": null,
-                "nullable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma"
-                        ]
-                    }
-                ],
-                "physicalName": "c_tuiliaocangku",
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Cangkuguanli",
-                        "label": "仓库管理"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-ab754dce0cb04672be36d5f666469776",
-                "type": "Integer",
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "entityCode": 1112,
-                "physicalName": "c_tuiliaohuopinzongshu",
-                "owner": {
-                    "label": "WMS退料入库",
-                    "name": "WMStuiliaoruku"
-                },
-                "nullable": true,
-                "updatable": true,
-                "name": "tuiliaohuopinzongshu",
-                "label": "退料货品总数",
-                "creatable": true,
-                "idFieldFlag": false
-            },
-            {
-                "entityCode": 1112,
-                "name": "tuiliaochanpinchengbenzo",
-                "description": null,
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-1082a0d5a91f44498b7ee9b37e9d866f",
-                "physicalName": "c_tuiliaochanpinchengbenzo",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "referTo": null,
-                "label": "退料产品成本总额/元",
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "type": "Money",
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1112,
-                "physicalName": "c_jingbanren",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "displayOrder": 0,
-                "fieldId": "0000002-d458cf4af9784eafa287e04de7597299",
-                "description": null,
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "updatable": true,
-                "name": "jingbanren",
-                "label": "经办人",
-                "type": "Reference",
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "creatable": true,
-                "updatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-deb26d3bcd054e769192b430310562f9",
-                "name": "jingbanrenguishubumen",
-                "nullable": true,
-                "description": null,
-                "displayOrder": 0,
-                "type": "Reference",
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "entityCode": 1112,
-                "physicalName": "c_jingbanrenguishubumen",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "label": "经办人归属部门",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            }
-        ],
-        "fieldNames": [
-            "wMStuiliaorukuId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "xuanzelingliaochukudan",
-            "chejiantuiliaoshijian",
-            "chejiantuiliaobianhao",
-            "tuiliaoyuanyin",
-            "tuiliaocangku",
-            "tuiliaohuopinzongshu",
-            "tuiliaochanpinchengbenzo",
-            "jingbanren",
-            "jingbanrenguishubumen"
-        ],
-        "listable": true,
-        "idField": {
-            "name": "wMStuiliaorukuId",
-            "label": "id主键"
-        },
-        "nameField": {
-            "label": "车间退料编号",
-            "name": "chejiantuiliaobianhao"
-        },
-        "sortedFieldSet": [
-            {
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1112,
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "creatable": false,
-                "fieldId": "0000002-3548b836e59d442a985dd7e637fa9c7d",
-                "description": null,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "name": "wMStuiliaorukuId",
-                "label": "id主键",
-                "physicalName": "wMStuiliaorukuId",
-                "idFieldFlag": true
-            },
-            {
-                "description": null,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "updatable": true,
-                "fieldId": "0000002-8af20c575ca84257a4efce4a54a9c23c",
-                "name": "xuanzelingliaochukudan",
-                "label": "选择领料出库单",
-                "physicalName": "c_xuanzelingliaochukudan",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Reference",
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "WMSlingliaochuku",
-                        "label": "WMS领料出库"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSlingliaochuku",
-                        "fieldList": [
-                            "xuanzeshengchangongdan",
-                            "lingliaochukudanbianhao"
-                        ]
-                    }
-                ],
-                "creatable": true,
-                "idFieldFlag": false,
-                "entityCode": 1112,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "label": "车间退料时间",
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "entityCode": 1112,
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "name": "chejiantuiliaoshijian",
-                "owner": {
-                    "label": "WMS退料入库",
-                    "name": "WMStuiliaoruku"
-                },
-                "type": "DateTime",
-                "nameFieldFlag": false,
-                "fieldId": "0000002-b653970a5adc4bf8940de80fb21b6506",
-                "physicalName": "c_chejiantuiliaoshijian",
-                "description": null
-            },
-            {
-                "type": "Text",
-                "nameFieldFlag": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "name": "chejiantuiliaobianhao",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "idFieldFlag": false,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "creatable": true,
-                "updatable": true,
-                "fieldId": "0000002-27c099a3c6414503ad754bfbd969bf33",
-                "label": "车间退料编号",
-                "physicalName": "c_chejiantuiliaobianhao",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "referenceSetting": null,
-                "entityCode": 1112
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "name": "tuiliaoyuanyin",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Option",
-                "nullable": true,
-                "referenceSetting": null,
-                "entityCode": 1112,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "label": "退料原因",
-                "description": null,
-                "updatable": true,
-                "fieldViewModel": null,
-                "referTo": null,
-                "fieldId": "0000002-97caa3582df84515aea177c89be20bab",
-                "physicalName": "c_tuiliaoyuanyin",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "physicalName": "c_tuiliaocangku",
-                "type": "Reference",
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-bf8a516bf48649448744cec683036aef",
-                "name": "tuiliaocangku",
-                "description": null,
-                "updatable": true,
-                "entityCode": 1112,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "referTo": [
-                    {
-                        "name": "Cangkuguanli",
-                        "label": "仓库管理"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma"
-                        ]
-                    }
-                ],
-                "label": "退料仓库",
-                "displayOrder": 0,
-                "creatable": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                }
-            },
-            {
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "entityCode": 1112,
-                "name": "tuiliaohuopinzongshu",
-                "physicalName": "c_tuiliaohuopinzongshu",
-                "type": "Integer",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-ab754dce0cb04672be36d5f666469776",
-                "label": "退料货品总数",
-                "owner": {
-                    "label": "WMS退料入库",
-                    "name": "WMStuiliaoruku"
-                },
-                "displayOrder": 0,
-                "nullable": true
-            },
-            {
-                "entityCode": 1112,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Money",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-1082a0d5a91f44498b7ee9b37e9d866f",
-                "referTo": null,
-                "referenceSetting": null,
-                "label": "退料产品成本总额/元",
-                "updatable": true,
-                "idFieldFlag": false,
-                "name": "tuiliaochanpinchengbenzo",
-                "physicalName": "c_tuiliaochanpinchengbenzo",
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                }
-            },
-            {
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "mainDetailFieldFlag": false,
-                "entityCode": 1112,
-                "label": "经办人",
-                "type": "Reference",
-                "description": null,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-d458cf4af9784eafa287e04de7597299",
-                "name": "jingbanren",
-                "physicalName": "c_jingbanren",
-                "nullable": true,
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ],
-                        "entityName": "User"
-                    }
-                ],
-                "displayOrder": 0,
-                "creatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "type": "Reference",
-                "updatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "label": "经办人归属部门",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldId": "0000002-deb26d3bcd054e769192b430310562f9",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "idFieldFlag": false,
-                "name": "jingbanrenguishubumen",
-                "physicalName": "c_jingbanrenguishubumen",
-                "description": null,
-                "nullable": true,
-                "entityCode": 1112
-            },
-            {
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "nullable": false,
-                "updatable": false,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-d2d942c34350415e8426314dd633b366",
-                "physicalName": "createdOn",
-                "label": "创建时间",
-                "type": "DateTime",
-                "description": null,
-                "creatable": false,
-                "fieldViewModel": null,
-                "entityCode": 1112,
-                "name": "createdOn"
-            },
-            {
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "owner": {
-                    "label": "WMS退料入库",
-                    "name": "WMStuiliaoruku"
-                },
-                "idFieldFlag": false,
-                "name": "createdBy",
-                "label": "创建用户",
-                "physicalName": "createdBy",
-                "displayOrder": 0,
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-50442b71af594b8bb77f26b052b245fa",
-                "referenceSetting": null,
-                "type": "Reference",
-                "description": null,
-                "updatable": false,
-                "entityCode": 1112
-            },
-            {
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "最近修改时间",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "modifiedOn",
-                "description": null,
-                "physicalName": "modifiedOn",
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldId": "0000002-bab576f65ec34a00b729a8de1b643e2c",
-                "entityCode": 1112,
-                "type": "DateTime",
-                "referTo": null
-            },
-            {
-                "name": "modifiedBy",
-                "physicalName": "modifiedBy",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1112,
-                "label": "修改用户",
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-8fa377c9794043ada201a781f4996422",
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Reference",
-                "creatable": false,
-                "updatable": false
-            },
-            {
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "label": "所属用户",
-                "description": null,
-                "creatable": false,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-5eb8cc7072824c06b6ff6ccaa245f3f4",
-                "physicalName": "ownerUser",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1112,
-                "name": "ownerUser"
-            },
-            {
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-1ef123b82ad642748385bb5a62ca9aea",
-                "entityCode": 1112,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "physicalName": "ownerDepartment",
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "type": "Reference",
-                "description": null,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "WMStuiliaoruku",
-                    "label": "WMS退料入库"
-                },
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            }
-        ],
-        "virtualFieldSet": [],
-        "layoutable": true,
-        "tags": "WMS",
-        "detailEntitySet": [
-            {
-                "name": "WMStuiliaomingxi",
-                "label": "WMS退料明细"
-            }
-        ],
-        "mainDetailField": null,
-        "physicalName": "t_wmstuiliaoruku"
-    },
-    "authorizable": false,
+    "detailEntityFlag": true,
+    "listable": true,
+    "tags": "WMS",
     "physicalName": "t_wmstuiliaomingxi",
+    "mainEntity": "WMStuiliaoruku",
+    "authorizable": false,
+    "shareable": false,
     "nameField": null,
+    "assignable": false,
     "fieldSet": [
         {
-            "idFieldFlag": true,
-            "type": "PrimaryKey",
             "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "fieldId": "0000002-bac522dc6a9d4e8aab815137c36b74f1",
             "physicalName": "wMStuiliaomingxiId",
-            "reserved": true,
-            "name": "wMStuiliaomingxiId",
-            "updatable": false,
+            "type": "PrimaryKey",
+            "description": null,
+            "nullable": false,
             "nameFieldFlag": false,
-            "referTo": null,
+            "displayOrder": 0,
+            "updatable": false,
+            "entityCode": 1115,
             "label": "id主键",
-            "creatable": false
+            "idFieldFlag": true,
+            "name": "wMStuiliaomingxiId",
+            "creatable": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "fieldViewModel": null
         },
         {
-            "creatable": false,
-            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-06fff8e482f54b9d9c806264d79e9981",
+            "entityCode": 1115,
             "physicalName": "createdOn",
-            "reserved": true,
-            "referTo": null,
+            "type": "DateTime",
+            "displayOrder": 0,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
             "name": "createdOn",
-            "updatable": false,
+            "nullable": false,
+            "fieldViewModel": null,
             "label": "创建时间",
-            "nameFieldFlag": false,
+            "updatable": false,
+            "description": null,
+            "creatable": false,
             "idFieldFlag": false,
-            "type": "DateTime"
+            "referTo": null,
+            "referenceSetting": null
         },
         {
-            "updatable": false,
-            "idFieldFlag": false,
-            "label": "创建用户",
-            "creatable": false,
-            "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": "User,",
-            "mainDetailFieldFlag": false,
-            "physicalName": "createdBy",
             "name": "createdBy",
-            "type": "Reference"
-        },
-        {
-            "label": "最近修改时间",
-            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "fieldViewModel": null,
+            "type": "Reference",
+            "displayOrder": 0,
+            "nullable": false,
             "nameFieldFlag": false,
-            "referTo": null,
-            "name": "modifiedOn",
-            "updatable": false,
-            "idFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "reserved": true,
-            "creatable": false,
-            "type": "DateTime"
-        },
-        {
-            "nameFieldFlag": false,
-            "physicalName": "modifiedBy",
-            "name": "modifiedBy",
-            "updatable": false,
-            "mainDetailFieldFlag": false,
-            "reserved": true,
+            "defaultMemberOfListFlag": false,
             "referTo": "User,",
-            "idFieldFlag": false,
-            "label": "修改用户",
-            "creatable": false,
-            "type": "Reference"
-        },
-        {
-            "name": "mdWMStuiliaorukuId",
-            "updatable": false,
-            "label": "主从关联Id",
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": "WMStuiliaoruku,",
-            "mainDetailFieldFlag": true,
-            "physicalName": "mdWMStuiliaorukuId",
-            "idFieldFlag": false,
-            "creatable": true
-        },
-        {
-            "referTo": "WMSchanpinxinxi,",
-            "name": "xuanzebeiliao",
-            "label": "选择备料",
-            "type": "Reference",
-            "idFieldFlag": false,
-            "creatable": true,
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "c_xuanzebeiliao",
-            "reserved": false,
-            "updatable": true
+            "fieldId": "0000002-2106f82e01e5445c9994014ad4001f98",
+            "label": "创建用户",
+            "physicalName": "createdBy",
+            "description": null,
+            "creatable": false,
+            "updatable": false,
+            "entityCode": 1115,
+            "idFieldFlag": false
         },
         {
-            "type": "Integer",
-            "physicalName": "c_tuiliaoshuliang",
-            "reserved": false,
+            "physicalName": "modifiedOn",
+            "nullable": true,
             "referTo": null,
-            "name": "tuiliaoshuliang",
-            "updatable": true,
-            "creatable": true,
-            "nameFieldFlag": false,
+            "entityCode": 1115,
+            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "fieldId": "0000002-1e8fbdff4cbd47e98a944b214470e480",
+            "label": "最近修改时间",
+            "description": null,
+            "displayOrder": 0,
+            "creatable": false,
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "name": "modifiedOn",
             "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "fieldViewModel": null
+        },
+        {
+            "updatable": false,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-653e98c2c5b348ad8aee8e33e737e793",
+            "entityCode": 1115,
+            "name": "modifiedBy",
+            "type": "Reference",
+            "nameFieldFlag": false,
+            "referenceSetting": null,
+            "label": "修改用户",
+            "physicalName": "modifiedBy",
+            "displayOrder": 0,
+            "creatable": false,
+            "fieldViewModel": null,
+            "description": null,
+            "nullable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": "User,"
+        },
+        {
+            "entityCode": 1115,
+            "label": "主从关联Id",
+            "physicalName": "mdWMStuiliaorukuId",
+            "fieldId": "0000002-d21836e023574b7ebe28394f5dcad13c",
+            "creatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": true,
+            "fieldViewModel": null,
+            "name": "mdWMStuiliaorukuId",
+            "description": null,
+            "nullable": false,
+            "type": "Reference",
+            "displayOrder": 0,
+            "updatable": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": "WMStuiliaoruku,",
+            "referenceSetting": null
+        },
+        {
+            "updatable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-68efd167a7474cc5943b6001fea0795b",
+            "entityCode": 1115,
+            "name": "xuanzebeiliao",
+            "fieldViewModel": {
+                "validators": [],
+                "searchDialogWidth": 520
+            },
+            "type": "Reference",
+            "description": null,
+            "mainDetailFieldFlag": false,
+            "referenceSetting": [
+                {
+                    "entityName": "WMSchanpinxinxi",
+                    "fieldList": [
+                        "chanpinbianhao",
+                        "chanpinshuxing",
+                        "chanpinmingcheng",
+                        "chanpinleixing"
+                    ]
+                }
+            ],
+            "label": "选择备料",
+            "idFieldFlag": false,
+            "referTo": "WMSchanpinxinxi,",
+            "creatable": true,
+            "physicalName": "c_xuanzebeiliao",
+            "displayOrder": 0,
+            "nullable": true
+        },
+        {
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": {
+                "validators": [],
+                "maxValue": 999999999,
+                "minValue": -999999999
+            },
+            "referenceSetting": null,
+            "fieldId": "0000002-c658d1b7c1674014b3c12784d23dbfd4",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "name": "tuiliaoshuliang",
             "label": "退料数量",
-            "mainDetailFieldFlag": false
+            "physicalName": "c_tuiliaoshuliang",
+            "nameFieldFlag": false,
+            "entityCode": 1115,
+            "type": "Integer",
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": true,
+            "referTo": null
         }
     ]
 }

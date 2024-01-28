@@ -1,1227 +1,230 @@
 {
     "label": "订单明细",
+    "entityCode": 1234,
+    "listable": true,
+    "idFieldName": "dingdanmingxiId",
+    "tags": "车辆租赁管理系统",
+    "name": "Dingdanmingxi",
     "systemEntityFlag": false,
     "detailEntityFlag": true,
     "layoutable": true,
-    "listable": true,
-    "tags": "车辆租赁管理系统",
-    "name": "Dingdanmingxi",
-    "idFieldName": "dingdanmingxiId",
     "internalEntityFlag": false,
-    "entityCode": 1234,
-    "nameField": null,
-    "assignable": false,
-    "physicalName": "t_dingdanmingxi",
-    "mainEntity": {
-        "name": "Dingdanliebiao",
-        "label": "订单列表",
-        "listable": true,
-        "authorizable": true,
-        "fieldSet": [
-            {
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-967dcd34a95a47ef9292a5149917dcdd",
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "idFieldFlag": true,
-                "fieldViewModel": null,
-                "entityCode": 1233,
-                "description": null,
-                "creatable": false,
-                "label": "id主键",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "referTo": null,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "name": "dingdanliebiaoId",
-                "physicalName": "dingdanliebiaoId",
-                "nullable": false
-            },
-            {
-                "name": "createdOn",
-                "label": "创建时间",
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "physicalName": "createdOn",
-                "type": "DateTime",
-                "description": null,
-                "nameFieldFlag": false,
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "fieldId": "0000002-4f51c3b2e3454e1ba972fd26755b8cb7",
-                "entityCode": 1233,
-                "owner": {
-                    "label": "订单列表",
-                    "name": "Dingdanliebiao"
-                },
-                "nullable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null
-            },
-            {
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-57b52e9870c44047845106a0d377014e",
-                "name": "createdBy",
-                "label": "创建用户",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "createdBy",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "entityCode": 1233,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ]
-            },
-            {
-                "type": "DateTime",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "referTo": null,
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "creatable": false,
-                "updatable": false,
-                "fieldId": "0000002-a828ec8939b3499da6508e4e6ee3e7d3",
-                "entityCode": 1233,
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "physicalName": "modifiedOn",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "referenceSetting": null
-            },
-            {
-                "physicalName": "modifiedBy",
-                "creatable": false,
-                "description": null,
-                "fieldId": "0000002-889017938f04449cbfe819fc95ac64a0",
-                "entityCode": 1233,
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "modifiedBy",
-                "displayOrder": 0,
-                "type": "Reference",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "修改用户",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                }
-            },
-            {
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-1c53a648540941ee9017fa0e0b63e5cf",
-                "label": "所属用户",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1233,
-                "name": "ownerUser",
-                "physicalName": "ownerUser",
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "updatable": false,
-                "nullable": false
-            },
-            {
-                "fieldId": "0000002-4e18d098be544c38b5eacaf4850f920d",
-                "description": null,
-                "physicalName": "ownerDepartment",
-                "nullable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "所属部门",
-                "type": "Reference",
-                "displayOrder": 0,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "entityCode": 1233,
-                "name": "ownerDepartment",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "fieldId": "0000002-9eb9d9ca165044dc86ba492cbbe5f960",
-                "type": "Reference",
-                "creatable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "kehumingcheng",
-                            "shoujihao",
-                            "zhengjianleixing",
-                            "zhengjianhaoma",
-                            "jiashizhengleixing",
-                            "jiashizhenghaoma",
-                            "zhengjiantupianzheng",
-                            "zhengjiantupianfan",
-                            "jiashizhengtupianzheng",
-                            "jiashizhengtupianfan",
-                            "jiashizhengshixiaoriqi",
-                            "beizhu"
-                        ],
-                        "entityName": "Kehuliebiao"
-                    }
-                ],
-                "name": "xuanzekehu",
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "owner": {
-                    "label": "订单列表",
-                    "name": "Dingdanliebiao"
-                },
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Kehuliebiao",
-                        "label": "客户列表"
-                    }
-                ],
-                "entityCode": 1233,
-                "label": "选择客户",
-                "physicalName": "c_xuanzekehu",
-                "updatable": true
-            },
-            {
-                "physicalName": "c_xuanzecheliang",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-c0cb2f4336d44bcaab163bb0a6ed0698",
-                "name": "xuanzecheliang",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Cheliangxinxi",
-                        "fieldList": [
-                            "pinpai",
-                            "chexing",
-                            "chepaihao",
-                            "xingshizhenghao",
-                            "cheshenyanse",
-                            "fadongjihao",
-                            "dangqianlichengshu",
-                            "xiacibaoyanglichengshu",
-                            "xiacinianjianriqi",
-                            "xiacibaoxianriqi",
-                            "rizujinfeiyong",
-                            "goumairiqi",
-                            "cheliangtupian",
-                            "xingshizhengtupian"
-                        ]
-                    }
-                ],
-                "entityCode": 1233,
-                "creatable": true,
-                "referTo": [
-                    {
-                        "name": "Cheliangxinxi",
-                        "label": "车辆信息"
-                    }
-                ],
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "label": "选择车辆",
-                "type": "Reference",
-                "updatable": true
-            },
-            {
-                "label": "车辆押金",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "nullable": true,
-                "creatable": true,
-                "referTo": null,
-                "fieldId": "0000002-22e510eb921a4bc7bab11cf60b4e8f58",
-                "name": "cheliangyajin",
-                "physicalName": "c_cheliangyajin",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Money",
-                "entityCode": 1233,
-                "description": null,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "label": "保险费",
-                "displayOrder": 0,
-                "updatable": true,
-                "referTo": null,
-                "entityCode": 1233,
-                "description": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "physicalName": "c_baoxianfei",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Money",
-                "referenceSetting": null,
-                "name": "baoxianfei",
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-7f207ac0690943f68d2a4f92f9782f16"
-            },
-            {
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "entityCode": 1233,
-                "type": "Money",
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-968f59010b0741a4aec02bd6140763a0",
-                "label": "优惠金额",
-                "physicalName": "c_youhuijine",
-                "referTo": null,
-                "name": "youhuijine",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "type": "Money",
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-1129c39bc158471fbe60a7e3d88a5aff",
-                "label": "手续费",
-                "nullable": true,
-                "displayOrder": 0,
-                "updatable": true,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "entityCode": 1233,
-                "name": "shouxufei",
-                "physicalName": "c_shouxufei"
-            },
-            {
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-9da800278bd84f25be7df7d3d208eb2f",
-                "name": "shijizuchejine",
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "owner": {
-                    "label": "订单列表",
-                    "name": "Dingdanliebiao"
-                },
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1233,
-                "physicalName": "c_shijizuchejine",
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "label": "实际租车金额",
-                "type": "Money",
-                "description": null
-            },
-            {
-                "physicalName": "c_rizujin",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "entityCode": 1233,
-                "name": "rizujin",
-                "description": null,
-                "referTo": null,
-                "type": "Money",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-034a3ebc7f23479d9e63913002830b3b",
-                "label": "日租金",
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999
-                },
-                "referenceSetting": null
-            },
-            {
-                "fieldId": "0000002-cdf8fcf90a6f4fb6ae87a50e6ee9c295",
-                "nullable": true,
-                "updatable": true,
-                "referenceSetting": null,
-                "name": "hetongwenjian",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "entityCode": 1233,
-                "description": null,
-                "referTo": null,
-                "fieldViewModel": {
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": [],
-                    "maxFileCount": 3,
-                    "fileMaxSize": 5
-                },
-                "label": "合同文件",
-                "physicalName": "c_hetongwenjian",
-                "type": "File",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "physicalName": "c_yujiguihuanriqi",
-                "label": "预计归还日期",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-89d398a8516e4678a1015391edecbac0",
-                "name": "yujiguihuanriqi",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1233,
-                "type": "Date",
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false
-            }
-        ],
-        "detailEntityFlag": false,
-        "mainEntity": null,
-        "fieldNames": [
-            "dingdanliebiaoId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "xuanzekehu",
-            "xuanzecheliang",
-            "cheliangyajin",
-            "baoxianfei",
-            "youhuijine",
-            "shouxufei",
-            "shijizuchejine",
-            "rizujin",
-            "hetongwenjian",
-            "yujiguihuanriqi"
-        ],
-        "mainDetailField": null,
-        "entityId": "0000001-cd395bed1a094d41b33ed9b4e2d79139",
-        "physicalName": "t_dingdanliebiao",
-        "layoutable": true,
-        "shareable": false,
-        "detailEntitySet": [
-            {
-                "name": "Dingdanmingxi",
-                "label": "订单明细"
-            }
-        ],
-        "sortedFieldSet": [
-            {
-                "fieldId": "0000002-967dcd34a95a47ef9292a5149917dcdd",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "type": "PrimaryKey",
-                "nullable": false,
-                "nameFieldFlag": false,
-                "entityCode": 1233,
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "name": "dingdanliebiaoId",
-                "label": "id主键",
-                "physicalName": "dingdanliebiaoId",
-                "idFieldFlag": true,
-                "referTo": null,
-                "fieldViewModel": null,
-                "referenceSetting": null
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-9eb9d9ca165044dc86ba492cbbe5f960",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Reference",
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "label": "选择客户",
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Kehuliebiao",
-                        "fieldList": [
-                            "kehumingcheng",
-                            "shoujihao",
-                            "zhengjianleixing",
-                            "zhengjianhaoma",
-                            "jiashizhengleixing",
-                            "jiashizhenghaoma",
-                            "zhengjiantupianzheng",
-                            "zhengjiantupianfan",
-                            "jiashizhengtupianzheng",
-                            "jiashizhengtupianfan",
-                            "jiashizhengshixiaoriqi",
-                            "beizhu"
-                        ]
-                    }
-                ],
-                "entityCode": 1233,
-                "name": "xuanzekehu",
-                "displayOrder": 0,
-                "physicalName": "c_xuanzekehu",
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "Kehuliebiao",
-                        "label": "客户列表"
-                    }
-                ],
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                }
-            },
-            {
-                "referenceSetting": [
-                    {
-                        "entityName": "Cheliangxinxi",
-                        "fieldList": [
-                            "pinpai",
-                            "chexing",
-                            "chepaihao",
-                            "xingshizhenghao",
-                            "cheshenyanse",
-                            "fadongjihao",
-                            "dangqianlichengshu",
-                            "xiacibaoyanglichengshu",
-                            "xiacinianjianriqi",
-                            "xiacibaoxianriqi",
-                            "rizujinfeiyong",
-                            "goumairiqi",
-                            "cheliangtupian",
-                            "xingshizhengtupian"
-                        ]
-                    }
-                ],
-                "owner": {
-                    "label": "订单列表",
-                    "name": "Dingdanliebiao"
-                },
-                "defaultMemberOfListFlag": true,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "entityCode": 1233,
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "name": "xuanzecheliang",
-                "displayOrder": 0,
-                "physicalName": "c_xuanzecheliang",
-                "type": "Reference",
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Cheliangxinxi",
-                        "label": "车辆信息"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-c0cb2f4336d44bcaab163bb0a6ed0698",
-                "label": "选择车辆"
-            },
-            {
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1233,
-                "name": "cheliangyajin",
-                "label": "车辆押金",
-                "physicalName": "c_cheliangyajin",
-                "description": null,
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-22e510eb921a4bc7bab11cf60b4e8f58",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "referTo": null,
-                "type": "Money",
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                }
-            },
-            {
-                "fieldId": "0000002-7f207ac0690943f68d2a4f92f9782f16",
-                "label": "保险费",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1233,
-                "physicalName": "c_baoxianfei",
-                "updatable": true,
-                "type": "Money",
-                "name": "baoxianfei",
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2
-                }
-            },
-            {
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Money",
-                "description": null,
-                "referTo": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-968f59010b0741a4aec02bd6140763a0",
-                "name": "youhuijine",
-                "label": "优惠金额",
-                "physicalName": "c_youhuijine",
-                "referenceSetting": null,
-                "entityCode": 1233,
-                "nameFieldFlag": false
-            },
-            {
-                "physicalName": "c_shouxufei",
-                "type": "Money",
-                "nameFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2
-                },
-                "entityCode": 1233,
-                "name": "shouxufei",
-                "owner": {
-                    "label": "订单列表",
-                    "name": "Dingdanliebiao"
-                },
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-1129c39bc158471fbe60a7e3d88a5aff",
-                "label": "手续费",
-                "description": null
-            },
-            {
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "nullable": true,
-                "creatable": true,
-                "entityCode": 1233,
-                "name": "shijizuchejine",
-                "label": "实际租车金额",
-                "physicalName": "c_shijizuchejine",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-9da800278bd84f25be7df7d3d208eb2f",
-                "type": "Money",
-                "updatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                }
-            },
-            {
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1233,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "name": "rizujin",
-                "nullable": true,
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Money",
-                "description": null,
-                "updatable": true,
-                "referTo": null,
-                "fieldId": "0000002-034a3ebc7f23479d9e63913002830b3b",
-                "physicalName": "c_rizujin",
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "label": "日租金",
-                "idFieldFlag": false
-            },
-            {
-                "physicalName": "c_hetongwenjian",
-                "description": null,
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "name": "hetongwenjian",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": [],
-                    "maxFileCount": 3,
-                    "fileMaxSize": 5
-                },
-                "fieldId": "0000002-cdf8fcf90a6f4fb6ae87a50e6ee9c295",
-                "entityCode": 1233,
-                "type": "File",
-                "idFieldFlag": false,
-                "label": "合同文件",
-                "nameFieldFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "label": "预计归还日期",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1233,
-                "physicalName": "c_yujiguihuanriqi",
-                "type": "Date",
-                "nullable": true,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-89d398a8516e4678a1015391edecbac0",
-                "description": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "name": "yujiguihuanriqi"
-            },
-            {
-                "physicalName": "createdOn",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "name": "createdOn",
-                "label": "创建时间",
-                "description": null,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-4f51c3b2e3454e1ba972fd26755b8cb7",
-                "entityCode": 1233,
-                "type": "DateTime",
-                "nullable": false,
-                "fieldViewModel": null
-            },
-            {
-                "description": null,
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-57b52e9870c44047845106a0d377014e",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "label": "创建用户",
-                "physicalName": "createdBy",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "name": "createdBy",
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1233
-            },
-            {
-                "physicalName": "modifiedOn",
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": null,
-                "type": "DateTime",
-                "nullable": true,
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1233,
-                "label": "最近修改时间",
-                "referenceSetting": null,
-                "fieldId": "0000002-a828ec8939b3499da6508e4e6ee3e7d3",
-                "name": "modifiedOn",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "physicalName": "modifiedBy",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1233,
-                "updatable": false,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-889017938f04449cbfe819fc95ac64a0",
-                "description": null
-            },
-            {
-                "fieldViewModel": null,
-                "fieldId": "0000002-1c53a648540941ee9017fa0e0b63e5cf",
-                "nullable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "label": "所属用户",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "displayOrder": 0,
-                "physicalName": "ownerUser",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1233,
-                "name": "ownerUser",
-                "type": "Reference",
-                "creatable": false,
-                "idFieldFlag": false
-            },
-            {
-                "physicalName": "ownerDepartment",
-                "owner": {
-                    "name": "Dingdanliebiao",
-                    "label": "订单列表"
-                },
-                "type": "Reference",
-                "nullable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-4e18d098be544c38b5eacaf4850f920d",
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "updatable": false,
-                "idFieldFlag": false,
-                "description": null,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "entityCode": 1233,
-                "displayOrder": 0,
-                "referenceSetting": null
-            }
-        ],
-        "virtualFieldSet": [],
-        "entityCode": 1233,
-        "assignable": false,
-        "tags": "车辆租赁管理系统",
-        "idField": {
-            "name": "dingdanliebiaoId",
-            "label": "id主键"
-        },
-        "nameField": null
-    },
     "shareable": false,
     "authorizable": false,
+    "physicalName": "t_dingdanmingxi",
+    "mainEntity": "Dingdanliebiao",
+    "nameField": null,
+    "assignable": false,
     "fieldSet": [
         {
-            "nameFieldFlag": false,
-            "physicalName": "dingdanmingxiId",
-            "referTo": null,
-            "updatable": false,
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "reserved": true,
-            "name": "dingdanmingxiId",
-            "idFieldFlag": true,
             "label": "id主键",
-            "type": "PrimaryKey"
-        },
-        {
-            "name": "createdOn",
-            "idFieldFlag": false,
+            "displayOrder": 0,
+            "name": "dingdanmingxiId",
+            "description": null,
+            "nullable": false,
             "creatable": false,
             "nameFieldFlag": false,
+            "referTo": null,
+            "fieldId": "0000002-4072425c865c47589a365c433ffb7a69",
+            "type": "PrimaryKey",
+            "referenceSetting": null,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "entityCode": 1234,
+            "physicalName": "dingdanmingxiId",
+            "updatable": false,
+            "idFieldFlag": true,
+            "mainDetailFieldFlag": false
+        },
+        {
+            "referTo": null,
+            "fieldViewModel": null,
+            "label": "创建时间",
             "physicalName": "createdOn",
-            "referTo": null,
+            "description": null,
+            "nullable": false,
             "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "reserved": true,
-            "updatable": false,
-            "label": "创建时间"
-        },
-        {
-            "mainDetailFieldFlag": false,
             "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "name": "createdBy",
-            "idFieldFlag": false,
-            "label": "创建用户",
-            "type": "Reference",
-            "reserved": true,
-            "referTo": "User,",
             "updatable": false,
-            "creatable": false
-        },
-        {
-            "label": "最近修改时间",
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1234,
+            "name": "createdOn",
+            "displayOrder": 0,
             "creatable": false,
-            "type": "DateTime",
-            "nameFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "idFieldFlag": false,
-            "updatable": false,
-            "mainDetailFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
-            "name": "modifiedOn"
+            "fieldId": "0000002-ec7ed3a6d10d4b1cbfa8b6499923257c",
+            "mainDetailFieldFlag": false
         },
         {
-            "physicalName": "modifiedBy",
-            "reserved": true,
+            "physicalName": "createdBy",
             "updatable": false,
-            "label": "修改用户",
-            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "fieldId": "0000002-a7b425afdfe44f27957bc4ad942a05e5",
+            "name": "createdBy",
+            "nullable": false,
+            "creatable": false,
             "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1234,
+            "label": "创建用户",
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
             "referTo": "User,",
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "type": "Reference",
+            "description": null
+        },
+        {
+            "type": "DateTime",
+            "referenceSetting": null,
+            "entityCode": 1234,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "description": null,
+            "displayOrder": 0,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
+            "nullable": true,
+            "fieldId": "0000002-995b665ea95b4d9ebf89557c8a5dd266",
+            "physicalName": "modifiedOn",
+            "creatable": false,
+            "updatable": false,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null
+        },
+        {
+            "entityCode": 1234,
+            "label": "修改用户",
+            "nullable": true,
+            "updatable": false,
+            "fieldId": "0000002-e8d78c117c4c412d8acce8338a1fd434",
+            "creatable": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "type": "Reference",
+            "description": null,
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "referTo": "User,",
+            "fieldViewModel": null,
             "name": "modifiedBy",
             "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference"
+            "physicalName": "modifiedBy"
         },
         {
+            "displayOrder": 0,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-427c3c71f08e494c8b22b46b42092646",
+            "entityCode": 1234,
+            "name": "mdDingdanliebiaoId",
+            "fieldViewModel": null,
+            "label": "主从关联Id",
             "physicalName": "mdDingdanliebiaoId",
             "type": "Reference",
+            "nullable": false,
             "idFieldFlag": false,
-            "label": "主从关联Id",
-            "creatable": true,
-            "nameFieldFlag": false,
-            "reserved": true,
+            "mainDetailFieldFlag": true,
+            "defaultMemberOfListFlag": true,
             "referTo": "Dingdanliebiao,",
-            "name": "mdDingdanliebiaoId",
+            "description": null,
+            "creatable": true,
             "updatable": false,
-            "mainDetailFieldFlag": true
+            "referenceSetting": null
         },
         {
-            "reserved": false,
-            "idFieldFlag": false,
-            "creatable": true,
             "type": "Reference",
-            "nameFieldFlag": false,
-            "physicalName": "c_xuanzecheliang",
+            "description": null,
             "referTo": "Cheliangxinxi,",
+            "entityCode": 1234,
             "name": "xuanzecheliang",
-            "updatable": true,
-            "label": "选择车辆",
-            "mainDetailFieldFlag": false
-        },
-        {
-            "type": "Date",
-            "nameFieldFlag": false,
-            "name": "yujiguihuanriqi",
-            "updatable": true,
             "creatable": true,
-            "label": "预计归还日期",
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_yujiguihuanriqi",
-            "reserved": false,
-            "referTo": null,
-            "idFieldFlag": false
-        },
-        {
-            "type": "TextArea",
-            "nameFieldFlag": false,
-            "referTo": null,
-            "name": "beizhu",
+            "label": "选择车辆",
+            "nullable": true,
+            "fieldId": "0000002-70e9954241d84013a1d9f614ae8842d6",
+            "referenceSetting": [
+                {
+                    "fieldList": [
+                        "pinpai",
+                        "chexing",
+                        "chepaihao",
+                        "xingshizhenghao",
+                        "cheshenyanse",
+                        "fadongjihao",
+                        "dangqianlichengshu",
+                        "xiacibaoyanglichengshu",
+                        "xiacinianjianriqi",
+                        "xiacibaoxianriqi",
+                        "rizujinfeiyong",
+                        "goumairiqi",
+                        "cheliangtupian",
+                        "xingshizhengtupian"
+                    ],
+                    "entityName": "Cheliangxinxi"
+                }
+            ],
             "updatable": true,
             "idFieldFlag": false,
-            "physicalName": "c_beizhu",
-            "reserved": false,
-            "label": "备注",
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "physicalName": "c_xuanzecheliang",
+            "displayOrder": 0
+        },
+        {
+            "nameFieldFlag": false,
+            "referTo": null,
+            "referenceSetting": null,
+            "name": "yujiguihuanriqi",
+            "label": "预计归还日期",
+            "nullable": true,
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-d795018c6fc747738ba6c2f2c22292ac",
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "description": null,
+            "physicalName": "c_yujiguihuanriqi",
+            "type": "Date",
             "creatable": true,
-            "mainDetailFieldFlag": false
+            "fieldViewModel": {
+                "validators": []
+            },
+            "entityCode": 1234
+        },
+        {
+            "referenceSetting": null,
+            "name": "beizhu",
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": true,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 1000,
+                "rows": 3,
+                "validators": []
+            },
+            "fieldId": "0000002-1464ad0e020c40ad974ba09697a1a07e",
+            "label": "备注",
+            "physicalName": "c_beizhu",
+            "idFieldFlag": false,
+            "entityCode": 1234,
+            "description": null,
+            "updatable": true,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "type": "TextArea"
         }
     ]
 }

@@ -1,1225 +1,219 @@
 {
+    "name": "WMSlailiaozhijianmingxi",
+    "layoutable": true,
+    "internalEntityFlag": false,
+    "label": "WMS来料质检明细",
     "entityCode": 1094,
     "systemEntityFlag": false,
     "detailEntityFlag": true,
-    "layoutable": true,
     "listable": true,
-    "name": "WMSlailiaozhijianmingxi",
-    "label": "WMS来料质检明细",
-    "tags": "WMS",
     "idFieldName": "wMSlailiaozhijianmingxiId",
-    "internalEntityFlag": false,
-    "mainEntity": {
-        "entityId": "0000001-997c032ae57f42d28eca4b6cfd6ab2af",
-        "name": "WMSlailiaozhijiandan",
-        "physicalName": "t_wmslailiaozhijiandan",
-        "assignable": false,
-        "listable": true,
-        "authorizable": true,
-        "shareable": false,
-        "nameField": {
-            "name": "shouhuodanbianhao",
-            "label": "质检单编号"
-        },
-        "fieldNames": [
-            "wMSlailiaozhijiandanId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "xuanzegongyingshang",
-            "shouhuodanbianhao",
-            "dingdanqiandingshijian",
-            "gongyingshangsonghuoshijian",
-            "gongyingshangyujidaohuoshijian",
-            "shouhuocangku",
-            "shishouchanpinzongshu",
-            "queshichanpinzongshu",
-            "shishouchanpinchengbenzon",
-            "queshichanpinchengbenzong",
-            "pingjunhegel"
-        ],
-        "label": "WMS来料质检单",
-        "detailEntityFlag": false,
-        "fieldSet": [
-            {
-                "type": "PrimaryKey",
-                "displayOrder": 0,
-                "creatable": false,
-                "owner": {
-                    "label": "WMS来料质检单",
-                    "name": "WMSlailiaozhijiandan"
-                },
-                "updatable": false,
-                "idFieldFlag": true,
-                "referenceSetting": null,
-                "physicalName": "wMSlailiaozhijiandanId",
-                "description": null,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-4d64fafef3ad4f6d8cb894deacd45f14",
-                "entityCode": 1093,
-                "name": "wMSlailiaozhijiandanId",
-                "label": "id主键",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "name": "createdOn",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-a62f4ef3d90441de805832d1577db306",
-                "description": null,
-                "nullable": false,
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1093,
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "referenceSetting": null,
-                "type": "DateTime",
-                "creatable": false,
-                "updatable": false
-            },
-            {
-                "label": "创建用户",
-                "description": null,
-                "displayOrder": 0,
-                "name": "createdBy",
-                "type": "Reference",
-                "creatable": false,
-                "fieldViewModel": null,
-                "physicalName": "createdBy",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "nullable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-b9e49b772cdc4d6f9e596013f2dc4d4d",
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1093
-            },
-            {
-                "nullable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-7ba4166eb5c445d2875e47876877fef9",
-                "name": "modifiedOn",
-                "type": "DateTime",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "physicalName": "modifiedOn",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1093,
-                "label": "最近修改时间",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "referTo": null
-            },
-            {
-                "label": "修改用户",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "referenceSetting": null,
-                "entityCode": 1093,
-                "fieldViewModel": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "nullable": true,
-                "name": "modifiedBy",
-                "physicalName": "modifiedBy",
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "fieldId": "0000002-fd6a9ce6d35d4fd4af57e66a429b5685"
-            },
-            {
-                "label": "所属用户",
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "label": "WMS来料质检单",
-                    "name": "WMSlailiaozhijiandan"
-                },
-                "type": "Reference",
-                "displayOrder": 0,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "ownerUser",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-2a78a992d55f4d1bbaa8197b5bdf1eec",
-                "entityCode": 1093,
-                "physicalName": "ownerUser",
-                "nullable": false,
-                "creatable": false
-            },
-            {
-                "physicalName": "ownerDepartment",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-c1a0c2f12afe48e683ce79ee46c21c05",
-                "entityCode": 1093,
-                "label": "所属部门",
-                "updatable": false,
-                "type": "Reference",
-                "creatable": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "name": "ownerDepartment",
-                "description": null,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null
-            },
-            {
-                "fieldId": "0000002-5c10855e95774810b70250623bf7afe0",
-                "entityCode": 1093,
-                "label": "选择供应商",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "xuanzegongyingshang",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "updatable": true,
-                "physicalName": "c_xuanzegongyingshang",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSgongyingshangxinxi",
-                        "fieldList": [
-                            "gongyingshangmingcheng",
-                            "gongyingshangbianma"
-                        ]
-                    }
-                ],
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "WMSgongyingshangxinxi",
-                        "label": "WMS供应商信息"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "creatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "physicalName": "c_shouhuodanbianhao",
-                "type": "Text",
-                "displayOrder": 0,
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [],
-                "fieldId": "0000002-00878ee285034ceb994cf5d064e9180b",
-                "entityCode": 1093,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "name": "shouhuodanbianhao",
-                "label": "质检单编号"
-            },
-            {
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1093,
-                "physicalName": "c_dingdanqiandingshijian",
-                "description": null,
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "type": "DateTime",
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-4053275b90e24976a26ce3a242668b58",
-                "name": "dingdanqiandingshijian",
-                "label": "订单签订时间"
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": [],
-                "description": null,
-                "name": "gongyingshangsonghuoshijian",
-                "physicalName": "c_gongyingshangsonghuoshijian",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "type": "DateTime",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1093,
-                "displayOrder": 0,
-                "label": "实际收货时间",
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-c62f8d04b33046c2894f230e89924acc"
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "physicalName": "c_gongyingshangyujidaohuoshijian",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": [],
-                "fieldId": "0000002-72b0a5fca76d47e3a2309dcc9226f102",
-                "label": "质检时间",
-                "displayOrder": 0,
-                "owner": {
-                    "label": "WMS来料质检单",
-                    "name": "WMSlailiaozhijiandan"
-                },
-                "type": "DateTime",
-                "nullable": true,
-                "entityCode": 1093,
-                "name": "gongyingshangyujidaohuoshijian",
-                "idFieldFlag": false
-            },
-            {
-                "referTo": [
-                    {
-                        "name": "WMScangkuxinxi",
-                        "label": "WMS仓库信息"
-                    }
-                ],
-                "fieldId": "0000002-379b41c3ec5f4719a12293063565cb63",
-                "entityCode": 1093,
-                "name": "shouhuocangku",
-                "label": "收货仓库",
-                "physicalName": "c_shouhuocangku",
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "type": "Reference",
-                "updatable": true,
-                "displayOrder": 0,
-                "referenceSetting": [
-                    {
-                        "entityName": "WMScangkuxinxi",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma"
-                        ]
-                    }
-                ]
-            },
-            {
-                "fieldViewModel": {
-                    "minValue": -999999999,
-                    "validators": [],
-                    "maxValue": 999999999
-                },
-                "physicalName": "c_shishouchanpinzongshu",
-                "description": null,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldId": "0000002-f5ba3533989447ad87a30ee9c23c4370",
-                "entityCode": 1093,
-                "label": "合格产品总数",
-                "type": "Integer",
-                "nullable": true,
-                "referenceSetting": [],
-                "name": "shishouchanpinzongshu",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false
-            },
-            {
-                "entityCode": 1093,
-                "name": "queshichanpinzongshu",
-                "label": "不合格产品总数",
-                "type": "Integer",
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [],
-                "fieldId": "0000002-fb800e157b254d7f9604d7d69f4861fa",
-                "description": null,
-                "defaultMemberOfListFlag": true,
-                "physicalName": "c_queshichanpinzongshu",
-                "owner": {
-                    "label": "WMS来料质检单",
-                    "name": "WMSlailiaozhijiandan"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                }
-            },
-            {
-                "label": "合格产品成本总额/元",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "physicalName": "c_shishouchanpinchengbenzon",
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [],
-                "entityCode": 1093,
-                "name": "shishouchanpinchengbenzon",
-                "type": "Money",
-                "displayOrder": 0,
-                "fieldId": "0000002-998c55cd36094fd3a1c563d7dd8d4acd",
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 999999999
-                }
-            },
-            {
-                "entityCode": 1093,
-                "type": "Money",
-                "nullable": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "fieldId": "0000002-58f4a189a0a04e4ea4ac01e83236ed63",
-                "label": "不合格产品成本总额/元",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": [],
-                "physicalName": "c_queshichanpinchengbenzong",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "name": "queshichanpinchengbenzong",
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false
-            },
-            {
-                "entityCode": 1093,
-                "label": "平均合格率%",
-                "displayOrder": 0,
-                "referTo": null,
-                "physicalName": "c_pingjunhegel",
-                "type": "Percent",
-                "creatable": true,
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-2479b8e76d8e4467976b4c919131ca24",
-                "description": null,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "name": "pingjunhegel",
-                "owner": {
-                    "label": "WMS来料质检单",
-                    "name": "WMSlailiaozhijiandan"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            }
-        ],
-        "sortedFieldSet": [
-            {
-                "mainDetailFieldFlag": false,
-                "label": "id主键",
-                "type": "PrimaryKey",
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1093,
-                "name": "wMSlailiaozhijiandanId",
-                "displayOrder": 0,
-                "description": null,
-                "nullable": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-4d64fafef3ad4f6d8cb894deacd45f14",
-                "physicalName": "wMSlailiaozhijiandanId",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "nameFieldFlag": false
-            },
-            {
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "WMSgongyingshangxinxi",
-                        "fieldList": [
-                            "gongyingshangmingcheng",
-                            "gongyingshangbianma"
-                        ]
-                    }
-                ],
-                "name": "xuanzegongyingshang",
-                "label": "选择供应商",
-                "type": "Reference",
-                "fieldId": "0000002-5c10855e95774810b70250623bf7afe0",
-                "entityCode": 1093,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "physicalName": "c_xuanzegongyingshang",
-                "creatable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "WMSgongyingshangxinxi",
-                        "label": "WMS供应商信息"
-                    }
-                ],
-                "displayOrder": 0,
-                "nullable": true
-            },
-            {
-                "creatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": true,
-                "type": "Text",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "shouhuodanbianhao",
-                "physicalName": "c_shouhuodanbianhao",
-                "owner": {
-                    "label": "WMS来料质检单",
-                    "name": "WMSlailiaozhijiandan"
-                },
-                "referenceSetting": [],
-                "label": "质检单编号",
-                "referTo": null,
-                "fieldViewModel": {
-                    "maxLength": 200,
-                    "validators": [],
-                    "minLength": 0
-                },
-                "fieldId": "0000002-00878ee285034ceb994cf5d064e9180b",
-                "entityCode": 1093
-            },
-            {
-                "updatable": true,
-                "entityCode": 1093,
-                "label": "订单签订时间",
-                "physicalName": "c_dingdanqiandingshijian",
-                "type": "DateTime",
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "name": "dingdanqiandingshijian",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-4053275b90e24976a26ce3a242668b58",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "creatable": true,
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "description": null,
-                "idFieldFlag": false,
-                "nullable": true,
-                "creatable": true,
-                "fieldId": "0000002-c62f8d04b33046c2894f230e89924acc",
-                "name": "gongyingshangsonghuoshijian",
-                "label": "实际收货时间",
-                "physicalName": "c_gongyingshangsonghuoshijian",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1093,
-                "type": "DateTime",
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": []
-            },
-            {
-                "name": "gongyingshangyujidaohuoshijian",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1093,
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": [],
-                "fieldId": "0000002-72b0a5fca76d47e3a2309dcc9226f102",
-                "label": "质检时间",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "type": "DateTime",
-                "description": null,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "physicalName": "c_gongyingshangyujidaohuoshijian",
-                "nullable": true
-            },
-            {
-                "name": "shouhuocangku",
-                "physicalName": "c_shouhuocangku",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "WMScangkuxinxi",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma"
-                        ]
-                    }
-                ],
-                "entityCode": 1093,
-                "label": "收货仓库",
-                "idFieldFlag": false,
-                "type": "Reference",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "referTo": [
-                    {
-                        "name": "WMScangkuxinxi",
-                        "label": "WMS仓库信息"
-                    }
-                ],
-                "fieldId": "0000002-379b41c3ec5f4719a12293063565cb63",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "label": "合格产品总数",
-                "description": null,
-                "creatable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "entityCode": 1093,
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "shishouchanpinzongshu",
-                "physicalName": "c_shishouchanpinzongshu",
-                "nullable": true,
-                "referenceSetting": [],
-                "fieldId": "0000002-f5ba3533989447ad87a30ee9c23c4370",
-                "type": "Integer",
-                "updatable": true,
-                "referTo": null
-            },
-            {
-                "entityCode": 1093,
-                "type": "Integer",
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "fieldId": "0000002-fb800e157b254d7f9604d7d69f4861fa",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [],
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "name": "queshichanpinzongshu",
-                "physicalName": "c_queshichanpinzongshu",
-                "description": null,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "label": "不合格产品总数"
-            },
-            {
-                "fieldId": "0000002-998c55cd36094fd3a1c563d7dd8d4acd",
-                "entityCode": 1093,
-                "label": "合格产品成本总额/元",
-                "physicalName": "c_shishouchanpinchengbenzon",
-                "displayOrder": 0,
-                "referenceSetting": [],
-                "name": "shishouchanpinchengbenzon",
-                "type": "Money",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "updatable": true
-            },
-            {
-                "nullable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-58f4a189a0a04e4ea4ac01e83236ed63",
-                "name": "queshichanpinchengbenzong",
-                "label": "不合格产品成本总额/元",
-                "type": "Money",
-                "displayOrder": 0,
-                "description": null,
-                "updatable": true,
-                "physicalName": "c_queshichanpinchengbenzong",
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [],
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "entityCode": 1093,
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "entityCode": 1093,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "name": "pingjunhegel",
-                "type": "Percent",
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "label": "平均合格率%",
-                "physicalName": "c_pingjunhegel",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "description": null,
-                "creatable": true,
-                "fieldId": "0000002-2479b8e76d8e4467976b4c919131ca24",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                }
-            },
-            {
-                "physicalName": "createdOn",
-                "type": "DateTime",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-a62f4ef3d90441de805832d1577db306",
-                "entityCode": 1093,
-                "label": "创建时间",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "name": "createdOn",
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "description": null,
-                "nullable": false,
-                "referenceSetting": null
-            },
-            {
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-b9e49b772cdc4d6f9e596013f2dc4d4d",
-                "entityCode": 1093,
-                "name": "createdBy",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "physicalName": "createdBy",
-                "nullable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "创建用户",
-                "type": "Reference"
-            },
-            {
-                "description": null,
-                "updatable": false,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-7ba4166eb5c445d2875e47876877fef9",
-                "type": "DateTime",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1093,
-                "label": "最近修改时间",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "modifiedOn",
-                "nullable": true,
-                "displayOrder": 0,
-                "name": "modifiedOn",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                }
-            },
-            {
-                "physicalName": "modifiedBy",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "modifiedBy",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-fd6a9ce6d35d4fd4af57e66a429b5685",
-                "entityCode": 1093,
-                "label": "修改用户",
-                "type": "Reference",
-                "nullable": true,
-                "referenceSetting": null
-            },
-            {
-                "name": "ownerUser",
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "entityCode": 1093,
-                "physicalName": "ownerUser",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-2a78a992d55f4d1bbaa8197b5bdf1eec",
-                "label": "所属用户",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ]
-            },
-            {
-                "type": "Reference",
-                "creatable": false,
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-c1a0c2f12afe48e683ce79ee46c21c05",
-                "entityCode": 1093,
-                "name": "ownerDepartment",
-                "owner": {
-                    "name": "WMSlailiaozhijiandan",
-                    "label": "WMS来料质检单"
-                },
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "label": "所属部门",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "ownerDepartment",
-                "description": null,
-                "fieldViewModel": null
-            }
-        ],
-        "mainDetailField": null,
-        "mainEntity": null,
-        "virtualFieldSet": [],
-        "entityCode": 1093,
-        "layoutable": true,
-        "tags": "WMS",
-        "idField": {
-            "name": "wMSlailiaozhijiandanId",
-            "label": "id主键"
-        },
-        "detailEntitySet": [
-            {
-                "name": "WMSlailiaozhijianmingxi",
-                "label": "WMS来料质检明细"
-            }
-        ]
-    },
+    "tags": "WMS",
+    "shareable": false,
+    "authorizable": false,
+    "mainEntity": "WMSlailiaozhijiandan",
     "assignable": false,
     "physicalName": "t_wmslailiaozhijianmingxi",
     "nameField": null,
-    "shareable": false,
-    "authorizable": false,
     "fieldSet": [
         {
-            "creatable": false,
+            "nullable": false,
+            "referenceSetting": null,
+            "displayOrder": 0,
             "type": "PrimaryKey",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "wMSlailiaozhijianmingxiId",
-            "referTo": null,
-            "name": "wMSlailiaozhijianmingxiId",
-            "idFieldFlag": true,
-            "reserved": true,
-            "updatable": false,
-            "label": "id主键"
-        },
-        {
-            "name": "createdOn",
-            "updatable": false,
-            "reserved": true,
-            "referTo": null,
-            "idFieldFlag": false,
-            "label": "创建时间",
             "creatable": false,
-            "type": "DateTime",
+            "mainDetailFieldFlag": false,
+            "name": "wMSlailiaozhijianmingxiId",
+            "label": "id主键",
+            "description": null,
+            "idFieldFlag": true,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "fieldViewModel": null,
+            "entityCode": 1094,
+            "physicalName": "wMSlailiaozhijianmingxiId",
+            "updatable": false,
             "nameFieldFlag": false,
-            "physicalName": "createdOn",
-            "mainDetailFieldFlag": false
+            "fieldId": "0000002-b8d13749ddc2426bb1d9d689cdb0301f"
         },
         {
-            "referTo": "User,",
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "physicalName": "createdOn",
+            "creatable": false,
+            "displayOrder": 0,
+            "nullable": false,
+            "nameFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-3faad491506f4209bf898df46dbf0996",
+            "description": null,
+            "idFieldFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1094,
+            "type": "DateTime",
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "name": "createdOn",
+            "label": "创建时间"
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-19679ace398c478bbe7f9bdfebf6fdc1",
             "label": "创建用户",
             "creatable": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
-            "name": "createdBy",
-            "updatable": false,
-            "idFieldFlag": false,
             "type": "Reference",
-            "mainDetailFieldFlag": false
-        },
-        {
-            "mainDetailFieldFlag": false,
-            "creatable": false,
-            "physicalName": "modifiedOn",
-            "reserved": true,
-            "referTo": null,
-            "name": "modifiedOn",
-            "updatable": false,
+            "nullable": false,
             "idFieldFlag": false,
-            "label": "最近修改时间",
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "entityCode": 1094,
+            "name": "createdBy",
+            "physicalName": "createdBy",
+            "updatable": false,
+            "referenceSetting": null,
+            "description": null,
+            "displayOrder": 0,
             "nameFieldFlag": false,
-            "type": "DateTime"
+            "fieldViewModel": null
         },
         {
+            "referTo": null,
+            "fieldViewModel": null,
+            "entityCode": 1094,
+            "displayOrder": 0,
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "physicalName": "modifiedOn",
+            "type": "DateTime",
+            "creatable": false,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "description": null,
             "nameFieldFlag": false,
+            "fieldId": "0000002-58d3498ea0f1495689544ef1978822db",
+            "nullable": true,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false
+        },
+        {
+            "description": null,
+            "nullable": true,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "entityCode": 1094,
+            "label": "修改用户",
+            "type": "Reference",
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "physicalName": "modifiedBy",
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "referenceSetting": null,
+            "fieldId": "0000002-a0aea62cbf04420882f1d7167d5ed8f0",
             "name": "modifiedBy",
             "idFieldFlag": false,
-            "label": "修改用户",
-            "creatable": false,
-            "type": "Reference",
-            "physicalName": "modifiedBy",
-            "reserved": true,
-            "referTo": "User,",
-            "updatable": false,
-            "mainDetailFieldFlag": false
+            "fieldViewModel": null
         },
         {
+            "fieldId": "0000002-d284b6756c9644378f66815ad45726b6",
+            "entityCode": 1094,
+            "displayOrder": 0,
+            "creatable": true,
             "referTo": "WMSlailiaozhijiandan,",
-            "creatable": true,
+            "referenceSetting": null,
+            "nullable": false,
+            "name": "mdWMSlailiaozhijiandanId",
+            "label": "主从关联Id",
+            "description": null,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "physicalName": "mdWMSlailiaozhijiandanId",
             "type": "Reference",
             "updatable": false,
-            "idFieldFlag": false,
-            "label": "主从关联Id",
+            "nameFieldFlag": false,
             "mainDetailFieldFlag": true,
-            "nameFieldFlag": false,
-            "physicalName": "mdWMSlailiaozhijiandanId",
-            "reserved": true,
-            "name": "mdWMSlailiaozhijiandanId"
+            "defaultMemberOfListFlag": true
         },
         {
-            "physicalName": "c_chanpinmingxi",
+            "defaultMemberOfListFlag": true,
+            "referenceSetting": [
+                {
+                    "fieldList": [
+                        "chanpinbianhao",
+                        "chanpinmingcheng"
+                    ],
+                    "entityName": "WMSchanpinxinxi"
+                }
+            ],
+            "fieldId": "0000002-a36fe73e44714572b7d7a124ad19a0e2",
             "label": "产品明细",
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "reserved": false,
+            "displayOrder": 0,
+            "updatable": true,
             "referTo": "WMSchanpinxinxi,",
+            "entityCode": 1094,
+            "physicalName": "c_chanpinmingxi",
+            "type": "Reference",
+            "description": null,
+            "mainDetailFieldFlag": false,
             "name": "chanpinmingxi",
-            "updatable": true,
-            "mainDetailFieldFlag": false
+            "nullable": true,
+            "creatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "validators": [],
+                "searchDialogWidth": 520
+            }
         },
         {
-            "nameFieldFlag": false,
+            "label": "检验合格数量",
+            "displayOrder": 0,
             "updatable": true,
             "creatable": true,
-            "type": "Text",
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "validators": [],
+                "minLength": 0,
+                "maxLength": 200
+            },
+            "fieldId": "0000002-1a7f09e5077f4e56b6143bd44e252701",
+            "entityCode": 1094,
+            "description": null,
+            "nullable": true,
             "mainDetailFieldFlag": false,
-            "physicalName": "c_shijishouhuoshuliang",
-            "reserved": false,
-            "referTo": null,
-            "name": "shijishouhuoshuliang",
+            "defaultMemberOfListFlag": true,
             "idFieldFlag": false,
-            "label": "检验合格数量"
+            "referTo": null,
+            "referenceSetting": [],
+            "name": "shijishouhuoshuliang",
+            "physicalName": "c_shijishouhuoshuliang",
+            "type": "Text"
         },
         {
+            "label": "检验不合格数量",
+            "creatable": true,
+            "updatable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-6198cb1ace5d44a4bc1df26f71d1356c",
+            "physicalName": "c_shishouqueshishuliang",
+            "type": "Text",
+            "description": null,
+            "idFieldFlag": false,
             "referTo": null,
             "name": "shishouqueshishuliang",
-            "idFieldFlag": false,
-            "label": "检验不合格数量",
-            "type": "Text",
-            "nameFieldFlag": false,
-            "reserved": false,
-            "creatable": true,
+            "displayOrder": 0,
+            "nullable": true,
             "mainDetailFieldFlag": false,
-            "physicalName": "c_shishouqueshishuliang",
-            "updatable": true
+            "referenceSetting": [],
+            "entityCode": 1094,
+            "fieldViewModel": {
+                "maxLength": 200,
+                "validators": [],
+                "minLength": 0
+            }
         }
     ]
 }

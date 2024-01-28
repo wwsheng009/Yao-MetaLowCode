@@ -1,939 +1,233 @@
 {
+    "name": "Jiabanmingxi",
+    "entityCode": 1150,
+    "layoutable": true,
+    "internalEntityFlag": false,
+    "tags": "HRM人事",
+    "label": "加班明细",
+    "systemEntityFlag": false,
     "detailEntityFlag": true,
     "listable": true,
     "idFieldName": "jiabanmingxiId",
-    "tags": "HRM人事",
-    "name": "Jiabanmingxi",
-    "label": "加班明细",
-    "entityCode": 1150,
-    "systemEntityFlag": false,
-    "layoutable": true,
-    "internalEntityFlag": false,
     "assignable": false,
-    "authorizable": false,
-    "mainEntity": {
-        "entityId": "0000001-e89073916e74440bac6c032dec35b368",
-        "listable": true,
-        "idField": {
-            "name": "jiabanshenqingId",
-            "label": "id主键"
-        },
-        "detailEntitySet": [
-            {
-                "name": "Jiabanmingxi",
-                "label": "加班明细"
-            }
-        ],
-        "fieldSet": [
-            {
-                "label": "id主键",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "description": null,
-                "updatable": false,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "name": "jiabanshenqingId",
-                "displayOrder": 0,
-                "entityCode": 1149,
-                "referenceSetting": null,
-                "fieldId": "0000002-b46f3908c4ee4a95bfb4ce7df752e327",
-                "type": "PrimaryKey",
-                "nullable": false,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "physicalName": "jiabanshenqingId"
-            },
-            {
-                "name": "createdOn",
-                "physicalName": "createdOn",
-                "owner": {
-                    "label": "加班申请",
-                    "name": "Jiabanshenqing"
-                },
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1149,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-2dbeec3607764703967446de04ece4fe",
-                "label": "创建时间",
-                "nullable": false,
-                "fieldViewModel": null,
-                "type": "DateTime",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false
-            },
-            {
-                "physicalName": "createdBy",
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1149,
-                "label": "创建用户",
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-ff0c426d43e144f1aa4e73e96aa813a6",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "creatable": false,
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "name": "createdBy",
-                "nullable": false
-            },
-            {
-                "referTo": null,
-                "referenceSetting": null,
-                "owner": {
-                    "label": "加班申请",
-                    "name": "Jiabanshenqing"
-                },
-                "type": "DateTime",
-                "description": null,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-f44121d380e845999f0ff034f0ba17aa",
-                "physicalName": "modifiedOn",
-                "mainDetailFieldFlag": false,
-                "label": "最近修改时间",
-                "nullable": true,
-                "updatable": false,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1149,
-                "name": "modifiedOn",
-                "displayOrder": 0,
-                "nameFieldFlag": false
-            },
-            {
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-790a12889a814d93bb053797e0339042",
-                "type": "Reference",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "fieldViewModel": null,
-                "name": "modifiedBy",
-                "physicalName": "modifiedBy",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "displayOrder": 0,
-                "creatable": false,
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1149,
-                "label": "修改用户"
-            },
-            {
-                "fieldId": "0000002-57d19e83099e46ca98f0f85b97e2a737",
-                "physicalName": "ownerUser",
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "name": "ownerUser",
-                "label": "所属用户",
-                "type": "Reference",
-                "creatable": false,
-                "idFieldFlag": false,
-                "entityCode": 1149,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null
-            },
-            {
-                "fieldId": "0000002-0fef937694994984b179e215fbbb7cb0",
-                "entityCode": 1149,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "name": "ownerDepartment",
-                "type": "Reference",
-                "description": null,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "physicalName": "ownerDepartment",
-                "nullable": false,
-                "label": "所属部门",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "name": "qingjiadanhao",
-                "label": "加班单号",
-                "type": "Text",
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-7d9967ae60844443bad4c7307a794202",
-                "entityCode": 1149,
-                "physicalName": "c_qingjiadanhao",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "referenceSetting": []
-            },
-            {
-                "physicalName": "c_qingjialeixing",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": [],
-                "entityCode": 1149,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {},
-                "label": "加班类型",
-                "type": "Option",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-5882426d318d46b1a094b3b73fa81d2a",
-                "name": "qingjialeixing",
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false
-            },
-            {
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "Reference",
-                "nullable": false,
-                "updatable": true,
-                "entityCode": 1149,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "gonghao",
-                            "xingming",
-                            "bumen",
-                            "gangwei"
-                        ],
-                        "entityName": "Yuangongdangan"
-                    }
-                ],
-                "fieldId": "0000002-ce01be6af01344928799c9141fc144d5",
-                "label": "员工",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Yuangongdangan",
-                        "label": "员工档案"
-                    }
-                ],
-                "name": "yuangong",
-                "physicalName": "c_yuangong",
-                "description": null
-            },
-            {
-                "idFieldFlag": false,
-                "entityCode": 1149,
-                "updatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 1000,
-                    "rows": 3,
-                    "validators": []
-                },
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "type": "TextArea",
-                "description": null,
-                "creatable": true,
-                "physicalName": "c_qingjiashiyoushuoming",
-                "owner": {
-                    "label": "加班申请",
-                    "name": "Jiabanshenqing"
-                },
-                "label": "加班事由说明",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [],
-                "fieldId": "0000002-87f31d600a9d453883fbafa0999921f7",
-                "name": "qingjiashiyoushuoming"
-            },
-            {
-                "fieldId": "0000002-f1acc9a82f8c402f892d1a0fd34e487f",
-                "physicalName": "c_xiangguanzhengming",
-                "description": null,
-                "entityCode": 1149,
-                "name": "xiangguanzhengming",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "label": "相关证明",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "File",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "maxFileCount": 3,
-                    "fileMaxSize": 5,
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": []
-                }
-            },
-            {
-                "fieldId": "0000002-880aeaab7042420a9cbbd9f3117e38b6",
-                "mainDetailFieldFlag": false,
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "entityCode": 1149,
-                "name": "hejiqingjiatianshu",
-                "label": "加班总天数",
-                "physicalName": "c_hejiqingjiatianshu",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "Decimal",
-                "description": null,
-                "fieldViewModel": {
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 1,
-                    "maxValue": 999999999
-                },
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": []
-            }
-        ],
-        "virtualFieldSet": [],
-        "label": "加班申请",
-        "authorizable": true,
-        "tags": "HRM人事",
-        "nameField": {
-            "name": "qingjiadanhao",
-            "label": "加班单号"
-        },
-        "mainDetailField": null,
-        "fieldNames": [
-            "jiabanshenqingId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "qingjiadanhao",
-            "qingjialeixing",
-            "yuangong",
-            "qingjiashiyoushuoming",
-            "xiangguanzhengming",
-            "hejiqingjiatianshu"
-        ],
-        "entityCode": 1149,
-        "layoutable": true,
-        "shareable": false,
-        "mainEntity": null,
-        "name": "Jiabanshenqing",
-        "physicalName": "t_jiabanshenqing",
-        "detailEntityFlag": false,
-        "assignable": false,
-        "sortedFieldSet": [
-            {
-                "idFieldFlag": true,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-b46f3908c4ee4a95bfb4ce7df752e327",
-                "label": "id主键",
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "physicalName": "jiabanshenqingId",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "referTo": null,
-                "name": "jiabanshenqingId",
-                "type": "PrimaryKey",
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1149,
-                "description": null,
-                "nameFieldFlag": false
-            },
-            {
-                "idFieldFlag": false,
-                "physicalName": "c_qingjiadanhao",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "name": "qingjiadanhao",
-                "label": "加班单号",
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-7d9967ae60844443bad4c7307a794202",
-                "entityCode": 1149,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "Text",
-                "nullable": false,
-                "nameFieldFlag": true,
-                "referenceSetting": []
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [],
-                "fieldId": "0000002-5882426d318d46b1a094b3b73fa81d2a",
-                "name": "qingjialeixing",
-                "nullable": false,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "entityCode": 1149,
-                "label": "加班类型",
-                "physicalName": "c_qingjialeixing",
-                "fieldViewModel": {},
-                "type": "Option",
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "name": "yuangong",
-                "label": "员工",
-                "nullable": false,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "Reference",
-                "referenceSetting": [
-                    {
-                        "entityName": "Yuangongdangan",
-                        "fieldList": [
-                            "gonghao",
-                            "xingming",
-                            "bumen",
-                            "gangwei"
-                        ]
-                    }
-                ],
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "员工档案",
-                        "name": "Yuangongdangan"
-                    }
-                ],
-                "fieldId": "0000002-ce01be6af01344928799c9141fc144d5",
-                "entityCode": 1149,
-                "physicalName": "c_yuangong"
-            },
-            {
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "fieldId": "0000002-87f31d600a9d453883fbafa0999921f7",
-                "entityCode": 1149,
-                "label": "加班事由说明",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "rows": 3,
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 1000
-                },
-                "referenceSetting": [],
-                "name": "qingjiashiyoushuoming",
-                "mainDetailFieldFlag": false,
-                "physicalName": "c_qingjiashiyoushuoming",
-                "type": "TextArea",
-                "referTo": null
-            },
-            {
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "label": "相关证明",
-                "type": "File",
-                "referTo": null,
-                "creatable": true,
-                "updatable": true,
-                "physicalName": "c_xiangguanzhengming",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-f1acc9a82f8c402f892d1a0fd34e487f",
-                "entityCode": 1149,
-                "fieldViewModel": {
-                    "maxFileCount": 3,
-                    "fileMaxSize": 5,
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "name": "xiangguanzhengming",
-                "nullable": true
-            },
-            {
-                "creatable": true,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 1
-                },
-                "fieldId": "0000002-880aeaab7042420a9cbbd9f3117e38b6",
-                "physicalName": "c_hejiqingjiatianshu",
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "加班总天数",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "nameFieldFlag": false,
-                "entityCode": 1149,
-                "displayOrder": 0,
-                "description": null,
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "referenceSetting": [],
-                "name": "hejiqingjiatianshu",
-                "type": "Decimal"
-            },
-            {
-                "nullable": false,
-                "entityCode": 1149,
-                "name": "createdOn",
-                "creatable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-2dbeec3607764703967446de04ece4fe",
-                "physicalName": "createdOn",
-                "displayOrder": 0,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "referTo": null,
-                "label": "创建时间",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "DateTime",
-                "description": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "label": "创建用户",
-                "physicalName": "createdBy",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "description": null,
-                "updatable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-ff0c426d43e144f1aa4e73e96aa813a6",
-                "nullable": false,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "type": "Reference",
-                "idFieldFlag": false,
-                "entityCode": 1149,
-                "name": "createdBy",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "entityCode": 1149,
-                "physicalName": "modifiedOn",
-                "type": "DateTime",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "idFieldFlag": false,
-                "fieldId": "0000002-f44121d380e845999f0ff034f0ba17aa",
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "nullable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": null
-            },
-            {
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-790a12889a814d93bb053797e0339042",
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "Reference",
-                "nullable": true,
-                "updatable": false,
-                "name": "modifiedBy",
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1149,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "label": "修改用户",
-                "physicalName": "modifiedBy",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "name": "ownerUser",
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "nullable": false,
-                "creatable": false,
-                "type": "Reference",
-                "displayOrder": 0,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-57d19e83099e46ca98f0f85b97e2a737",
-                "entityCode": 1149,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "description": null,
-                "idFieldFlag": false
-            },
-            {
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1149,
-                "owner": {
-                    "name": "Jiabanshenqing",
-                    "label": "加班申请"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "name": "ownerDepartment",
-                "description": null,
-                "referenceSetting": null,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "fieldViewModel": null,
-                "fieldId": "0000002-0fef937694994984b179e215fbbb7cb0",
-                "label": "所属部门",
-                "physicalName": "ownerDepartment",
-                "displayOrder": 0
-            }
-        ]
-    },
-    "physicalName": "t_jiabanmingxi",
     "nameField": null,
+    "physicalName": "t_jiabanmingxi",
     "shareable": false,
+    "authorizable": false,
+    "mainEntity": "Jiabanshenqing",
     "fieldSet": [
         {
-            "nameFieldFlag": false,
-            "physicalName": "jiabanmingxiId",
-            "reserved": true,
-            "referTo": null,
             "type": "PrimaryKey",
-            "name": "jiabanmingxiId",
+            "referTo": null,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "displayOrder": 0,
+            "nullable": false,
+            "creatable": false,
             "updatable": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
             "idFieldFlag": true,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-ffefa4f5b40d47199bcb37769d249a68",
+            "entityCode": 1150,
+            "name": "jiabanmingxiId",
             "label": "id主键",
-            "creatable": false,
-            "mainDetailFieldFlag": false
+            "physicalName": "jiabanmingxiId",
+            "description": null
         },
         {
-            "physicalName": "createdOn",
-            "reserved": true,
-            "creatable": false,
-            "updatable": false,
+            "nameFieldFlag": false,
+            "nullable": false,
             "idFieldFlag": false,
+            "name": "createdOn",
+            "mainDetailFieldFlag": false,
+            "type": "DateTime",
+            "displayOrder": 0,
+            "creatable": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
             "label": "创建时间",
-            "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
-            "name": "createdOn"
+            "physicalName": "createdOn",
+            "description": null,
+            "updatable": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "fieldId": "0000002-a432cba1d55e4eb781ba36256386f3c9",
+            "entityCode": 1150
         },
         {
-            "referTo": "User,",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
-            "name": "createdBy",
-            "updatable": false,
-            "idFieldFlag": false,
+            "fieldId": "0000002-76fce53915d24adc9636e2619d386825",
             "label": "创建用户",
-            "type": "Reference"
-        },
-        {
-            "referTo": null,
-            "updatable": false,
+            "description": null,
             "creatable": false,
+            "mainDetailFieldFlag": false,
+            "entityCode": 1150,
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "name": "createdBy",
+            "physicalName": "createdBy",
+            "type": "Reference",
+            "displayOrder": 0,
+            "nullable": false,
+            "idFieldFlag": false,
             "nameFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "reserved": true,
-            "name": "modifiedOn",
-            "idFieldFlag": false,
-            "label": "最近修改时间",
-            "type": "DateTime",
-            "mainDetailFieldFlag": false
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "referenceSetting": null
         },
         {
-            "updatable": false,
-            "idFieldFlag": false,
-            "label": "修改用户",
+            "name": "modifiedOn",
+            "physicalName": "modifiedOn",
             "creatable": false,
+            "fieldId": "0000002-11f875bea9ba4bce821339bf1102d976",
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1150,
+            "label": "最近修改时间",
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "type": "DateTime",
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "fieldViewModel": null
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "creatable": false,
+            "idFieldFlag": false,
             "nameFieldFlag": false,
             "physicalName": "modifiedBy",
-            "reserved": true,
-            "mainDetailFieldFlag": false,
-            "referTo": "User,",
             "name": "modifiedBy",
-            "type": "Reference"
-        },
-        {
-            "referTo": "Jiabanshenqing,",
+            "label": "修改用户",
+            "nullable": true,
             "updatable": false,
-            "creatable": true,
-            "label": "主从关联Id",
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "entityCode": 1150,
             "type": "Reference",
-            "mainDetailFieldFlag": true,
-            "nameFieldFlag": false,
+            "description": null,
+            "displayOrder": 0,
+            "fieldId": "0000002-0aea3b66239d49708a481c1e7bc43765"
+        },
+        {
+            "fieldId": "0000002-c6519a32e801417c8325c382abad9d50",
+            "fieldViewModel": null,
+            "entityCode": 1150,
             "physicalName": "mdJiabanshenqingId",
-            "reserved": true,
+            "description": null,
+            "nullable": false,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "type": "Reference",
+            "creatable": true,
+            "updatable": false,
+            "mainDetailFieldFlag": true,
+            "referTo": "Jiabanshenqing,",
             "name": "mdJiabanshenqingId",
-            "idFieldFlag": false
+            "label": "主从关联Id",
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "referenceSetting": null
         },
         {
-            "physicalName": "c_jiabankaishishijian",
+            "fieldId": "0000002-007d885977884cb2afff912edf2da7cf",
+            "label": "加班开始时间",
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "referenceSetting": [],
+            "displayOrder": 0,
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "entityCode": 1150,
             "name": "jiabankaishishijian",
-            "updatable": true,
+            "description": null,
+            "nullable": true,
+            "physicalName": "c_jiabankaishishijian",
             "type": "DateTime",
-            "mainDetailFieldFlag": false,
             "creatable": true,
-            "nameFieldFlag": false,
-            "reserved": false,
-            "referTo": null,
-            "idFieldFlag": false,
-            "label": "加班开始时间"
+            "fieldViewModel": {
+                "validators": []
+            }
         },
         {
-            "nameFieldFlag": false,
-            "physicalName": "c_jiabanjieshushijian",
-            "idFieldFlag": false,
+            "type": "DateTime",
+            "nullable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": {
+                "validators": []
+            },
+            "referenceSetting": null,
+            "entityCode": 1150,
             "label": "加班结束时间",
-            "creatable": true,
-            "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "reserved": false,
-            "referTo": null,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-af4178cdf28f46369263ff9a003d5e3d",
+            "physicalName": "c_jiabanjieshushijian",
+            "updatable": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
             "name": "jiabanjieshushijian",
-            "updatable": true
+            "creatable": true,
+            "description": null,
+            "displayOrder": 0
         },
         {
-            "physicalName": "c_jiabanshichang",
-            "referTo": null,
+            "description": null,
             "idFieldFlag": false,
-            "creatable": true,
-            "type": "Decimal",
-            "nameFieldFlag": false,
-            "reserved": false,
+            "referenceSetting": null,
+            "entityCode": 1150,
             "name": "jiabanshichang",
-            "updatable": true,
             "label": "加班时长（h）",
-            "mainDetailFieldFlag": false
+            "fieldViewModel": {
+                "precision": 1,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "nullable": true,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "creatable": true,
+            "mainDetailFieldFlag": false,
+            "type": "Decimal",
+            "displayOrder": 0,
+            "updatable": true,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-d0fc0f471fdd4e968f505797f8ccecb4",
+            "physicalName": "c_jiabanshichang"
         },
         {
-            "nameFieldFlag": false,
-            "reserved": false,
-            "name": "jiabantianshu",
-            "updatable": true,
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_jiabantianshu",
-            "referTo": null,
-            "idFieldFlag": false,
-            "label": "加班天数",
+            "entityCode": 1150,
             "creatable": true,
-            "type": "Integer"
+            "idFieldFlag": false,
+            "fieldViewModel": {
+                "validators": [],
+                "maxValue": 999999999,
+                "minValue": -999999999
+            },
+            "referenceSetting": null,
+            "fieldId": "0000002-b2fb56d039b14efda7bce1feaed8e9b5",
+            "physicalName": "c_jiabantianshu",
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "name": "jiabantianshu",
+            "label": "加班天数",
+            "description": null,
+            "referTo": null,
+            "type": "Integer",
+            "displayOrder": 0,
+            "nullable": true,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false
         }
     ]
 }

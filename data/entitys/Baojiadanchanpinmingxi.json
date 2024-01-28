@@ -1,1489 +1,274 @@
 {
+    "name": "Baojiadanchanpinmingxi",
+    "systemEntityFlag": false,
     "detailEntityFlag": true,
     "layoutable": true,
-    "listable": true,
-    "tags": "进销存",
-    "entityCode": 1011,
-    "label": "报价单产品明细",
-    "systemEntityFlag": false,
-    "idFieldName": "baojiadanchanpinmingxiId",
     "internalEntityFlag": false,
-    "name": "Baojiadanchanpinmingxi",
-    "nameField": null,
-    "mainEntity": {
-        "shareable": false,
-        "assignable": false,
-        "tags": "进销存",
-        "nameField": {
-            "name": "baojiadanbianhao",
-            "label": "报价单编号"
-        },
-        "mainEntity": null,
-        "listable": true,
-        "authorizable": true,
-        "layoutable": true,
-        "fieldSet": [
-            {
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "name": "baojiadanId",
-                "label": "id主键",
-                "fieldViewModel": null,
-                "entityCode": 1010,
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "type": "PrimaryKey",
-                "physicalName": "baojiadanId",
-                "nullable": false,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": true,
-                "fieldId": "0000002-b089c349e00247eb8e1c18e02f57994e"
-            },
-            {
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "nullable": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-0d63c9b953854d59ab6325d3cf8c66e7",
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "type": "DateTime",
-                "updatable": false,
-                "name": "createdOn",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "entityCode": 1010,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null
-            },
-            {
-                "physicalName": "createdBy",
-                "description": null,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "label": "创建用户",
-                "type": "Reference",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-defe8bb093a94b1692b82a3ad3c9cce0",
-                "entityCode": 1010,
-                "name": "createdBy",
-                "nullable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "creatable": false
-            },
-            {
-                "name": "modifiedOn",
-                "physicalName": "modifiedOn",
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "defaultMemberOfListFlag": false,
-                "label": "最近修改时间",
-                "owner": {
-                    "label": "报价单",
-                    "name": "Baojiadan"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": false,
-                "entityCode": 1010,
-                "description": null,
-                "creatable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-858070b541a84116b02db7fe4f10dcd0",
-                "type": "DateTime",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "entityCode": 1010,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "fieldId": "0000002-4e42d879c4644b44a6e4de5e7566c26d",
-                "name": "modifiedBy",
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "label": "修改用户",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "nullable": true,
-                "physicalName": "modifiedBy",
-                "creatable": false
-            },
-            {
-                "fieldId": "0000002-b086fe7f036248949d741c22c01795b4",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "ownerUser",
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "entityCode": 1010
-            },
-            {
-                "nullable": false,
-                "idFieldFlag": false,
-                "entityCode": 1010,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "Reference",
-                "description": null,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "physicalName": "ownerDepartment",
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldId": "0000002-381f9457d32c413ba822510188f8c657",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "nameFieldFlag": false
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-ffaf0a081e2c4518851d55a9a22a82ef",
-                "physicalName": "c_xuanzekehu",
-                "type": "Reference",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1010,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "nullable": false,
-                "updatable": true,
-                "name": "xuanzekehu",
-                "displayOrder": 0,
-                "referTo": [
-                    {
-                        "name": "Kehuguanli",
-                        "label": "客户管理"
-                    }
-                ],
-                "referenceSetting": [
-                    {
-                        "entityName": "Kehuguanli",
-                        "fieldList": [
-                            "kehumingcheng",
-                            "kehufenlei",
-                            "kehulaiyuan",
-                            "kehubiaoqian",
-                            "jiagedengji"
-                        ]
-                    }
-                ],
-                "label": "选择客户",
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "fieldId": "0000002-d7cb785c7815428989a5c07b7dda19cb",
-                "name": "chukucangku",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "Reference",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma",
-                            "cangkudizhi",
-                            "jutidizhi",
-                            "cangkurongliang",
-                            "cangkuxingzhi",
-                            "cangkuzhuguan"
-                        ]
-                    }
-                ],
-                "referTo": [
-                    {
-                        "label": "仓库管理",
-                        "name": "Cangkuguanli"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "physicalName": "c_chukucangku",
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1010,
-                "label": "出库仓库",
-                "displayOrder": 0,
-                "updatable": true
-            },
-            {
-                "physicalName": "c_xiaoshouyuanjiazonge",
-                "owner": {
-                    "label": "报价单",
-                    "name": "Baojiadan"
-                },
-                "nullable": true,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-6d89085b06f7489c9001eb9a1f7fec73",
-                "entityCode": 1010,
-                "label": "销售原价总额(含税)/元",
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "type": "Money",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "name": "xiaoshouyuanjiazonge",
-                "referTo": null,
-                "fieldViewModel": {
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 999999999
-                }
-            },
-            {
-                "entityCode": 1010,
-                "creatable": true,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldId": "0000002-0ad02211778c4d188ba2ae8c6647b7eb",
-                "name": "youhuijine",
-                "referenceSetting": null,
-                "label": "优惠金额/元",
-                "type": "Money",
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "physicalName": "c_youhuijine",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true
-            },
-            {
-                "referTo": null,
-                "description": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "label": "整单折扣率%",
-                "physicalName": "c_zhengdanzhekoulv",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "entityCode": 1010,
-                "creatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-87dfe8919cbe45799d621b3683cc386c",
-                "name": "zhengdanzhekoulv",
-                "type": "Percent"
-            },
-            {
-                "referTo": null,
-                "entityCode": 1010,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "mainDetailFieldFlag": false,
-                "creatable": true,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": [],
-                    "precision": 2
-                },
-                "fieldId": "0000002-80d5234a76074b5a83de50419750488f",
-                "label": "销售订单金额(含税)/元",
-                "physicalName": "c_xiaoshoudingdanjine",
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "name": "xiaoshoudingdanjine",
-                "description": null,
-                "displayOrder": 0,
-                "type": "Money",
-                "nullable": true,
-                "nameFieldFlag": false
-            },
-            {
-                "physicalName": "c_baojiamaolilv",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1010,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-0c58cc764658436681b6da62003463b5",
-                "label": "报价毛利率%",
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "minValue": 0,
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 100
-                },
-                "name": "baojiamaolilv",
-                "type": "Percent",
-                "nullable": false,
-                "creatable": true,
-                "updatable": true,
-                "referTo": null
-            },
-            {
-                "creatable": true,
-                "entityCode": 1010,
-                "name": "baojiadanbianhao",
-                "label": "报价单编号",
-                "type": "Text",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "physicalName": "c_baojiadanbianhao",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "fieldId": "0000002-b6c5ea2ebfe645f5a33c2074df12be01",
-                "referTo": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "updatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "type": "Date",
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-64a28fd0d0d94f9d8e27ee1b95104cef",
-                "entityCode": 1010,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "nullable": false,
-                "name": "baojiariqi",
-                "label": "报价日期",
-                "physicalName": "c_baojiariqi"
-            },
-            {
-                "label": "审批流程",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1010,
-                "name": "approvalConfigId",
-                "referTo": [
-                    {
-                        "name": "ApprovalConfig",
-                        "label": "审批配置"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "physicalName": "approvalConfigId",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-eb28247d9f874c4abe2eca8c8fb25212",
-                "type": "Reference",
-                "description": null,
-                "creatable": false
-            },
-            {
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "entityCode": 1010,
-                "name": "approvalStatus",
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "审批状态",
-                "physicalName": "approvalStatus",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "Status",
-                "description": null,
-                "nullable": true,
-                "fieldId": "0000002-3143daab6ef1429286c22f27ccc4a928",
-                "displayOrder": 0,
-                "updatable": false
-            },
-            {
-                "name": "lastApprovedBy",
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "entityCode": 1010,
-                "nullable": true,
-                "label": "最近审批人",
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "creatable": false,
-                "physicalName": "lastApprovedBy",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-92733ace21924f2f8bbfb47daefc1867"
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "entityCode": 1010,
-                "label": "最近审批时间",
-                "physicalName": "lastApprovedOn",
-                "displayOrder": 0,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-21e03e9c8bf94bbf8c18481e00181ba5",
-                "description": null,
-                "nullable": true,
-                "creatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "lastApprovedOn",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "DateTime",
-                "fieldViewModel": null,
-                "referTo": null,
-                "referenceSetting": null
-            },
-            {
-                "creatable": false,
-                "idFieldFlag": false,
-                "referTo": null,
-                "physicalName": "lastApprovalRemark",
-                "type": "TextArea",
-                "fieldViewModel": null,
-                "fieldId": "0000002-d13c718df0b240d288cc3ad5ec1971c7",
-                "nameFieldFlag": false,
-                "label": "最近审批批注",
-                "owner": {
-                    "label": "报价单",
-                    "name": "Baojiadan"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1010,
-                "name": "lastApprovalRemark",
-                "referenceSetting": null,
-                "nullable": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-66ef29cc66b24a0ab0315bd83b91cea6",
-                "defaultMemberOfListFlag": false,
-                "name": "chengbenzongjia",
-                "description": null,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "entityCode": 1010,
-                "label": "成本总价",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "physicalName": "c_chengbenzongjia",
-                "type": "Money",
-                "updatable": true,
-                "mainDetailFieldFlag": false
-            }
-        ],
-        "sortedFieldSet": [
-            {
-                "updatable": false,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "entityCode": 1010,
-                "name": "baojiadanId",
-                "physicalName": "baojiadanId",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "type": "PrimaryKey",
-                "nullable": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-b089c349e00247eb8e1c18e02f57994e",
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "label": "id主键",
-                "displayOrder": 0,
-                "fieldViewModel": null
-            },
-            {
-                "entityCode": 1010,
-                "label": "选择客户",
-                "physicalName": "c_xuanzekehu",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Kehuguanli",
-                        "fieldList": [
-                            "kehumingcheng",
-                            "kehufenlei",
-                            "kehulaiyuan",
-                            "kehubiaoqian",
-                            "jiagedengji"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-ffaf0a081e2c4518851d55a9a22a82ef",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Kehuguanli",
-                        "label": "客户管理"
-                    }
-                ],
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "Reference",
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "name": "xuanzekehu",
-                "description": null,
-                "nullable": false,
-                "creatable": true
-            },
-            {
-                "entityCode": 1010,
-                "type": "Reference",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma",
-                            "cangkudizhi",
-                            "jutidizhi",
-                            "cangkurongliang",
-                            "cangkuxingzhi",
-                            "cangkuzhuguan"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-d7cb785c7815428989a5c07b7dda19cb",
-                "description": null,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Cangkuguanli",
-                        "label": "仓库管理"
-                    }
-                ],
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "label": "出库仓库",
-                "physicalName": "c_chukucangku",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "creatable": true,
-                "updatable": true,
-                "name": "chukucangku",
-                "idFieldFlag": false
-            },
-            {
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "physicalName": "c_xiaoshouyuanjiazonge",
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "nameFieldFlag": false,
-                "fieldId": "0000002-6d89085b06f7489c9001eb9a1f7fec73",
-                "label": "销售原价总额(含税)/元",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "xiaoshouyuanjiazonge",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "Money",
-                "referenceSetting": null,
-                "entityCode": 1010
-            },
-            {
-                "nullable": true,
-                "updatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "label": "优惠金额/元",
-                "type": "Money",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "fieldId": "0000002-0ad02211778c4d188ba2ae8c6647b7eb",
-                "entityCode": 1010,
-                "physicalName": "c_youhuijine",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "creatable": true,
-                "name": "youhuijine"
-            },
-            {
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": true,
-                "referTo": null,
-                "entityCode": 1010,
-                "label": "整单折扣率%",
-                "creatable": true,
-                "idFieldFlag": false,
-                "type": "Percent",
-                "defaultMemberOfListFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-87dfe8919cbe45799d621b3683cc386c",
-                "name": "zhengdanzhekoulv",
-                "physicalName": "c_zhengdanzhekoulv",
-                "description": null
-            },
-            {
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-80d5234a76074b5a83de50419750488f",
-                "physicalName": "c_xiaoshoudingdanjine",
-                "description": null,
-                "entityCode": 1010,
-                "name": "xiaoshoudingdanjine",
-                "label": "销售订单金额(含税)/元",
-                "type": "Money",
-                "fieldViewModel": {
-                    "validators": [],
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999
-                },
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "nullable": true,
-                "creatable": true
-            },
-            {
-                "nullable": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "label": "报价毛利率%",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-0c58cc764658436681b6da62003463b5",
-                "name": "baojiamaolilv",
-                "updatable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1010,
-                "physicalName": "c_baojiamaolilv",
-                "type": "Percent"
-            },
-            {
-                "label": "报价单编号",
-                "type": "Text",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 200
-                },
-                "fieldId": "0000002-b6c5ea2ebfe645f5a33c2074df12be01",
-                "entityCode": 1010,
-                "name": "baojiadanbianhao",
-                "idFieldFlag": false,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "c_baojiadanbianhao",
-                "description": null,
-                "updatable": true,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "nullable": false,
-                "creatable": true,
-                "referTo": null
-            },
-            {
-                "name": "baojiariqi",
-                "physicalName": "c_baojiariqi",
-                "displayOrder": 0,
-                "nullable": false,
-                "referTo": null,
-                "fieldId": "0000002-64a28fd0d0d94f9d8e27ee1b95104cef",
-                "entityCode": 1010,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "label": "报价日期",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "Date",
-                "updatable": true,
-                "idFieldFlag": false,
-                "description": null,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "entityCode": 1010,
-                "label": "成本总价",
-                "physicalName": "c_chengbenzongjia",
-                "creatable": true,
-                "name": "chengbenzongjia",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-66ef29cc66b24a0ab0315bd83b91cea6",
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "type": "Money",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null
-            },
-            {
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "DateTime",
-                "creatable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "label": "创建时间",
-                "fieldViewModel": null,
-                "nullable": false,
-                "fieldId": "0000002-0d63c9b953854d59ab6325d3cf8c66e7",
-                "name": "createdOn",
-                "description": null,
-                "displayOrder": 0,
-                "entityCode": 1010
-            },
-            {
-                "entityCode": 1010,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "name": "createdBy",
-                "label": "创建用户",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "fieldId": "0000002-defe8bb093a94b1692b82a3ad3c9cce0",
-                "physicalName": "createdBy",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "type": "DateTime",
-                "updatable": false,
-                "referTo": null,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "label": "最近修改时间",
-                "nullable": true,
-                "entityCode": 1010,
-                "name": "modifiedOn",
-                "physicalName": "modifiedOn",
-                "description": null,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-858070b541a84116b02db7fe4f10dcd0"
-            },
-            {
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "nameFieldFlag": false,
-                "entityCode": 1010,
-                "creatable": false,
-                "idFieldFlag": false,
-                "physicalName": "modifiedBy",
-                "description": null,
-                "displayOrder": 0,
-                "fieldId": "0000002-4e42d879c4644b44a6e4de5e7566c26d",
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "type": "Reference",
-                "nullable": true
-            },
-            {
-                "updatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1010,
-                "description": null,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "name": "ownerUser",
-                "label": "所属用户",
-                "displayOrder": 0,
-                "creatable": false,
-                "fieldId": "0000002-b086fe7f036248949d741c22c01795b4",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "physicalName": "ownerUser"
-            },
-            {
-                "fieldId": "0000002-381f9457d32c413ba822510188f8c657",
-                "owner": {
-                    "label": "报价单",
-                    "name": "Baojiadan"
-                },
-                "nullable": false,
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1010,
-                "name": "ownerDepartment",
-                "physicalName": "ownerDepartment",
-                "type": "Reference",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "description": null,
-                "displayOrder": 0,
-                "label": "所属部门",
-                "creatable": false,
-                "idFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-eb28247d9f874c4abe2eca8c8fb25212",
-                "name": "approvalConfigId",
-                "label": "审批流程",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "approvalConfigId",
-                "type": "Reference",
-                "nullable": true,
-                "fieldViewModel": null,
-                "description": null,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "审批配置",
-                        "name": "ApprovalConfig"
-                    }
-                ],
-                "entityCode": 1010,
-                "displayOrder": 0,
-                "updatable": false,
-                "referenceSetting": null
-            },
-            {
-                "fieldId": "0000002-3143daab6ef1429286c22f27ccc4a928",
-                "type": "Status",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "name": "approvalStatus",
-                "description": null,
-                "physicalName": "approvalStatus",
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1010,
-                "label": "审批状态",
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "referTo": null
-            },
-            {
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": false,
-                "entityCode": 1010,
-                "physicalName": "lastApprovedBy",
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-92733ace21924f2f8bbfb47daefc1867",
-                "name": "lastApprovedBy",
-                "description": null,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "label": "最近审批人",
-                "type": "Reference",
-                "creatable": false,
-                "nameFieldFlag": false
-            },
-            {
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "name": "lastApprovedOn",
-                "owner": {
-                    "label": "报价单",
-                    "name": "Baojiadan"
-                },
-                "type": "DateTime",
-                "description": null,
-                "fieldId": "0000002-21e03e9c8bf94bbf8c18481e00181ba5",
-                "physicalName": "lastApprovedOn",
-                "nullable": true,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "label": "最近审批时间",
-                "displayOrder": 0,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1010,
-                "creatable": false
-            },
-            {
-                "entityCode": 1010,
-                "idFieldFlag": false,
-                "referTo": null,
-                "owner": {
-                    "name": "Baojiadan",
-                    "label": "报价单"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": false,
-                "name": "lastApprovalRemark",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldViewModel": null,
-                "fieldId": "0000002-d13c718df0b240d288cc3ad5ec1971c7",
-                "label": "最近审批批注",
-                "physicalName": "lastApprovalRemark",
-                "type": "TextArea",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            }
-        ],
-        "fieldNames": [
-            "baojiadanId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "xuanzekehu",
-            "chukucangku",
-            "xiaoshouyuanjiazonge",
-            "youhuijine",
-            "zhengdanzhekoulv",
-            "xiaoshoudingdanjine",
-            "baojiamaolilv",
-            "baojiadanbianhao",
-            "baojiariqi",
-            "approvalConfigId",
-            "approvalStatus",
-            "lastApprovedBy",
-            "lastApprovedOn",
-            "lastApprovalRemark",
-            "chengbenzongjia"
-        ],
-        "label": "报价单",
-        "detailEntityFlag": false,
-        "mainDetailField": null,
-        "physicalName": "t_baojiadan",
-        "idField": {
-            "name": "baojiadanId",
-            "label": "id主键"
-        },
-        "entityCode": 1010,
-        "detailEntitySet": [
-            {
-                "name": "Baojiadanchanpinmingxi",
-                "label": "报价单产品明细"
-            }
-        ],
-        "virtualFieldSet": [],
-        "entityId": "0000001-a1fb2c4a5c764d31b351ff04de3d846f",
-        "name": "Baojiadan"
-    },
-    "assignable": false,
-    "authorizable": false,
+    "tags": "进销存",
+    "label": "报价单产品明细",
+    "entityCode": 1011,
+    "listable": true,
+    "idFieldName": "baojiadanchanpinmingxiId",
     "physicalName": "t_baojiadanchanpinmingxi",
+    "assignable": false,
     "shareable": false,
+    "mainEntity": "Baojiadan",
+    "nameField": null,
+    "authorizable": false,
     "fieldSet": [
         {
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
-            "idFieldFlag": true,
-            "label": "id主键",
             "type": "PrimaryKey",
-            "physicalName": "baojiadanchanpinmingxiId",
-            "reserved": true,
-            "name": "baojiadanchanpinmingxiId",
-            "updatable": false,
-            "creatable": false
-        },
-        {
+            "creatable": false,
+            "nameFieldFlag": false,
             "referTo": null,
-            "label": "创建时间",
-            "creatable": false,
-            "type": "DateTime",
+            "fieldViewModel": null,
+            "physicalName": "baojiadanchanpinmingxiId",
+            "description": null,
+            "updatable": false,
+            "entityCode": 1011,
+            "name": "baojiadanchanpinmingxiId",
+            "idFieldFlag": true,
+            "defaultMemberOfListFlag": false,
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdOn",
-            "reserved": true,
+            "referenceSetting": null,
+            "fieldId": "0000002-c22ff95631e242cea27fdc7f448d3578",
+            "label": "id主键",
+            "displayOrder": 0,
+            "nullable": false
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referTo": null,
             "name": "createdOn",
+            "label": "创建时间",
+            "displayOrder": 0,
             "updatable": false,
-            "idFieldFlag": false
-        },
-        {
-            "referTo": "User,",
-            "name": "createdBy",
-            "updatable": false,
+            "fieldId": "0000002-ede1771f27a249fa9f8414a2b4ae57ed",
+            "entityCode": 1011,
+            "physicalName": "createdOn",
+            "creatable": false,
             "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
-            "label": "创建用户"
+            "referenceSetting": null,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "type": "DateTime",
+            "description": null,
+            "nullable": false,
+            "nameFieldFlag": false
         },
         {
+            "fieldId": "0000002-0ce4e5caf2be4f09a7de601f53fad9e3",
+            "label": "创建用户",
             "creatable": false,
-            "physicalName": "modifiedOn",
-            "reserved": true,
+            "referTo": "User,",
+            "displayOrder": 0,
+            "updatable": false,
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1011,
+            "description": null,
+            "nullable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "fieldViewModel": null,
+            "name": "createdBy",
+            "physicalName": "createdBy",
+            "type": "Reference",
+            "defaultMemberOfListFlag": false
+        },
+        {
+            "description": null,
+            "defaultMemberOfListFlag": false,
+            "referenceSetting": null,
+            "entityCode": 1011,
+            "type": "DateTime",
             "referTo": null,
             "name": "modifiedOn",
-            "idFieldFlag": false,
             "label": "最近修改时间",
+            "idFieldFlag": false,
             "nameFieldFlag": false,
-            "updatable": false,
-            "type": "DateTime",
-            "mainDetailFieldFlag": false
+            "fieldViewModel": null,
+            "physicalName": "modifiedOn",
+            "displayOrder": 0,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-47be7859a27d497493b5e544b5e0811f",
+            "nullable": true,
+            "updatable": false
         },
         {
+            "fieldId": "0000002-cb946cbb67b5480db8e67da77b15970c",
+            "displayOrder": 0,
+            "nullable": true,
             "nameFieldFlag": false,
+            "entityCode": 1011,
+            "type": "Reference",
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
             "referTo": "User,",
-            "physicalName": "modifiedBy",
-            "reserved": true,
+            "referenceSetting": null,
             "name": "modifiedBy",
+            "label": "修改用户",
+            "physicalName": "modifiedBy",
+            "description": null,
+            "creatable": false,
             "updatable": false,
             "idFieldFlag": false,
-            "label": "修改用户",
-            "creatable": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false
+            "fieldViewModel": null
         },
         {
-            "physicalName": "mdBaojiadanId",
-            "label": "主从关联Id",
-            "creatable": true,
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "referTo": "Baojiadan,",
-            "name": "mdBaojiadanId",
-            "updatable": false,
+            "description": null,
+            "referenceSetting": null,
             "idFieldFlag": false,
             "mainDetailFieldFlag": true,
-            "reserved": true
+            "fieldViewModel": null,
+            "fieldId": "0000002-4dc473a9632644c685ab4b81464bb4d6",
+            "label": "主从关联Id",
+            "nullable": false,
+            "creatable": true,
+            "displayOrder": 0,
+            "updatable": false,
+            "entityCode": 1011,
+            "physicalName": "mdBaojiadanId",
+            "type": "Reference",
+            "name": "mdBaojiadanId",
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": "Baojiadan,"
         },
         {
-            "updatable": true,
-            "idFieldFlag": false,
-            "label": "选择产品",
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "reserved": false,
-            "referTo": "Chanpinxinxi,",
-            "name": "xuanzechanpin",
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "fieldId": "0000002-ad399725c37e4769bc6790d1e393fecb",
+            "entityCode": 1011,
             "creatable": true,
+            "name": "xuanzechanpin",
+            "type": "Reference",
+            "description": null,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "referenceSetting": [
+                {
+                    "entityName": "Chanpinxinxi",
+                    "fieldList": [
+                        "chanpinbianma",
+                        "chanpinmingcheng",
+                        "chanpinleixing",
+                        "chanpinshuxing",
+                        "pinpai",
+                        "guigexinghao"
+                    ]
+                }
+            ],
+            "displayOrder": 0,
+            "nullable": false,
+            "updatable": true,
             "mainDetailFieldFlag": false,
+            "referTo": "Chanpinxinxi,",
+            "label": "选择产品",
             "physicalName": "c_xuanzechanpin"
         },
         {
-            "idFieldFlag": false,
-            "label": "销售数量",
-            "type": "Integer",
-            "name": "xiaoshoushuliang",
-            "physicalName": "c_xiaoshoushuliang",
-            "reserved": false,
             "referTo": null,
-            "updatable": true,
-            "creatable": true,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "label": "销售数量",
+            "physicalName": "c_xiaoshoushuliang",
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-dd10aa40481647b9949fd26fb9bdbc3d",
+            "name": "xiaoshoushuliang",
+            "type": "Integer",
+            "description": null,
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false
+            "entityCode": 1011,
+            "creatable": true,
+            "updatable": true,
+            "referenceSetting": null,
+            "nullable": false
         },
         {
+            "updatable": true,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "fieldId": "0000002-752e2f104f074b70bdb787d35ea8d253",
+            "physicalName": "c_xiaoshoudanjia",
+            "description": null,
+            "idFieldFlag": false,
+            "creatable": true,
+            "defaultMemberOfListFlag": true,
+            "referenceSetting": [],
             "name": "xiaoshoudanjia",
             "type": "Money",
+            "nullable": true,
             "nameFieldFlag": false,
-            "physicalName": "c_xiaoshoudanjia",
+            "mainDetailFieldFlag": false,
             "referTo": null,
+            "entityCode": 1011,
             "label": "销售单价(含税)/元",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "reserved": false,
-            "updatable": true,
-            "idFieldFlag": false
+            "displayOrder": 0
         },
         {
-            "name": "chanpinchengbenjia",
-            "updatable": true,
-            "idFieldFlag": false,
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "c_chanpinchengbenjia",
-            "reserved": false,
-            "referTo": null,
             "label": "产品成本单价",
-            "type": "Money"
-        },
-        {
-            "reserved": false,
-            "name": "chanpin",
-            "updatable": true,
+            "nullable": true,
+            "creatable": true,
             "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "fieldId": "0000002-8db113d6b1724a0b9b4ffb99e1f11fab",
+            "name": "chanpinchengbenjia",
+            "description": null,
+            "displayOrder": 0,
+            "referenceSetting": [],
+            "physicalName": "c_chanpinchengbenjia",
             "type": "Money",
             "mainDetailFieldFlag": false,
-            "physicalName": "c_chanpin",
+            "entityCode": 1011,
+            "updatable": true,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            }
+        },
+        {
+            "name": "chanpin",
+            "nameFieldFlag": false,
+            "nullable": true,
+            "updatable": true,
+            "mainDetailFieldFlag": false,
             "referTo": null,
+            "referenceSetting": null,
+            "fieldId": "0000002-160ddf2809c74f0d8ecfa6dcb13e0770",
+            "physicalName": "c_chanpin",
+            "description": null,
+            "entityCode": 1011,
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
             "label": "产品总价合计",
-            "creatable": true,
-            "nameFieldFlag": false
+            "type": "Money",
+            "creatable": true
         }
     ]
 }

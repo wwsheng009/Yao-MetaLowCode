@@ -1,1035 +1,330 @@
 {
-    "name": "Mubiaoguanjianjieguo",
-    "systemEntityFlag": false,
-    "listable": true,
-    "idFieldName": "mubiaoguanjianjieguoId",
     "label": "目标关键结果",
     "entityCode": 1207,
-    "detailEntityFlag": true,
-    "layoutable": true,
+    "idFieldName": "mubiaoguanjianjieguoId",
     "internalEntityFlag": false,
     "tags": "项目任务管理",
-    "physicalName": "t_mubiaoguanjianjieguo",
+    "name": "Mubiaoguanjianjieguo",
+    "systemEntityFlag": false,
+    "detailEntityFlag": true,
+    "layoutable": true,
+    "listable": true,
     "assignable": false,
-    "mainEntity": {
-        "authorizable": true,
-        "assignable": false,
-        "idField": {
-            "name": "mubiaoId",
-            "label": "id主键"
-        },
-        "mainDetailField": null,
-        "detailEntityFlag": false,
-        "physicalName": "t_mubiao",
-        "entityCode": 1205,
-        "layoutable": true,
-        "shareable": false,
-        "tags": "项目任务管理",
-        "detailEntitySet": [
-            {
-                "label": "目标关键结果",
-                "name": "Mubiaoguanjianjieguo"
-            }
-        ],
-        "virtualFieldSet": [],
-        "name": "Mubiao",
-        "fieldSet": [
-            {
-                "fieldId": "0000002-9dab2b8128ef45cc988cad696480d66c",
-                "creatable": false,
-                "idFieldFlag": true,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "physicalName": "mubiaoId",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "updatable": false,
-                "referTo": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "entityCode": 1205,
-                "name": "mubiaoId",
-                "label": "id主键",
-                "type": "PrimaryKey",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "name": "createdOn",
-                "type": "DateTime",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1205,
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "label": "创建时间",
-                "nullable": false,
-                "creatable": false,
-                "fieldId": "0000002-e168fdf4fe0b4c9889772ce12093c26c",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "createdOn"
-            },
-            {
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "entityCode": 1205,
-                "label": "创建用户",
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "creatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-5b837ceae81f4521b8532723b0ca222b",
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "name": "createdBy",
-                "type": "Reference",
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "createdBy",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "nameFieldFlag": false
-            },
-            {
-                "name": "modifiedOn",
-                "physicalName": "modifiedOn",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "label": "最近修改时间",
-                "nullable": true,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1205,
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "description": null,
-                "creatable": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-7efde81390e04edc9049aebade27a8dd",
-                "type": "DateTime",
-                "displayOrder": 0,
-                "nameFieldFlag": false
-            },
-            {
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "description": null,
-                "physicalName": "modifiedBy",
-                "owner": {
-                    "label": "目标",
-                    "name": "Mubiao"
-                },
-                "type": "Reference",
-                "nullable": true,
-                "creatable": false,
-                "updatable": false,
-                "label": "修改用户",
-                "entityCode": 1205,
-                "name": "modifiedBy",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-cb9f093bcad54889b80ef7f727cfc731"
-            },
-            {
-                "name": "ownerUser",
-                "nullable": false,
-                "fieldId": "0000002-d523c527e0034df1a75aea26036986e8",
-                "creatable": false,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "label": "所属用户",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1205,
-                "physicalName": "ownerUser",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "description": null,
-                "nullable": false,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "entityCode": 1205,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "fieldViewModel": null,
-                "physicalName": "ownerDepartment",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-1274d5ae05f3401ea79b95a1365058fd",
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "type": "Reference"
-            },
-            {
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-4ae1114f4ef5421e81a63522f3b40ad4",
-                "type": "Text",
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "description": null,
-                "creatable": true,
-                "nameFieldFlag": true,
-                "entityCode": 1205,
-                "name": "mubiaomingcheng",
-                "label": "目标名称",
-                "physicalName": "c_mubiaomingcheng",
-                "referenceSetting": null,
-                "nullable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "label": "目标类型",
-                "updatable": true,
-                "fieldViewModel": null,
-                "fieldId": "0000002-28cc59ebb1ba4fdfbfb1cc769c18f379",
-                "physicalName": "c_mubiaoleixing",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "type": "Option",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "entityCode": 1205,
-                "name": "mubiaoleixing",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "nullable": true,
-                "nameFieldFlag": false
-            },
-            {
-                "description": null,
-                "name": "mubiaosuoshubumen",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "nullable": true,
-                "creatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-f0151c2e99c945b39eff347cf6489b31",
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "physicalName": "c_mubiaosuoshubumen",
-                "type": "Reference",
-                "displayOrder": 0,
-                "entityCode": 1205,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "label": "目标所属部门"
-            },
-            {
-                "label": "负责人",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "physicalName": "c_fuzeren",
-                "mainDetailFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "entityCode": 1205,
-                "name": "fuzeren",
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-4c157c58072a4d94bf8a3b2748fe48c5",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Mubiaozhouqi",
-                        "fieldList": [
-                            "zhouqimingcheng",
-                            "kaishishijian",
-                            "jieshushijian",
-                            "zhouqizhuangtai"
-                        ]
-                    }
-                ],
-                "type": "Reference",
-                "name": "mubiaozhouqi",
-                "description": null,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1205,
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "Mubiaozhouqi",
-                        "label": "目标周期"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "displayOrder": 0,
-                "label": "目标周期",
-                "physicalName": "c_mubiaozhouqi",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "creatable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-3636c3002bea4d8abbd6dc438cc81f74"
-            },
-            {
-                "referTo": null,
-                "name": "zongjindu",
-                "type": "Percent",
-                "mainDetailFieldFlag": false,
-                "nullable": true,
-                "updatable": true,
-                "referenceSetting": null,
-                "label": "总进度",
-                "physicalName": "c_zongjindu",
-                "owner": {
-                    "label": "目标",
-                    "name": "Mubiao"
-                },
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "fieldId": "0000002-1900f9c394794784b44e34c2f7db5ce7",
-                "entityCode": 1205,
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "idFieldFlag": false
-            }
-        ],
-        "mainEntity": null,
-        "label": "目标",
-        "listable": true,
-        "nameField": {
-            "name": "mubiaomingcheng",
-            "label": "目标名称"
-        },
-        "sortedFieldSet": [
-            {
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "name": "mubiaoId",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": true,
-                "fieldId": "0000002-9dab2b8128ef45cc988cad696480d66c",
-                "label": "id主键",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "physicalName": "mubiaoId",
-                "nullable": false,
-                "referTo": null,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1205,
-                "type": "PrimaryKey",
-                "nameFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-4ae1114f4ef5421e81a63522f3b40ad4",
-                "name": "mubiaomingcheng",
-                "physicalName": "c_mubiaomingcheng",
-                "type": "Text",
-                "displayOrder": 0,
-                "label": "目标名称",
-                "description": null,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1205,
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                }
-            },
-            {
-                "type": "Option",
-                "nameFieldFlag": false,
-                "fieldId": "0000002-28cc59ebb1ba4fdfbfb1cc769c18f379",
-                "name": "mubiaoleixing",
-                "label": "目标类型",
-                "physicalName": "c_mubiaoleixing",
-                "owner": {
-                    "label": "目标",
-                    "name": "Mubiao"
-                },
-                "nullable": true,
-                "updatable": true,
-                "fieldViewModel": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": null,
-                "entityCode": 1205,
-                "description": null,
-                "creatable": true,
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "referTo": null
-            },
-            {
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "name": "mubiaosuoshubumen",
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": true,
-                "fieldId": "0000002-f0151c2e99c945b39eff347cf6489b31",
-                "entityCode": 1205,
-                "label": "目标所属部门",
-                "creatable": true,
-                "updatable": true,
-                "physicalName": "c_mubiaosuoshubumen",
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ]
-            },
-            {
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "entityCode": 1205,
-                "label": "负责人",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-4c157c58072a4d94bf8a3b2748fe48c5",
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "type": "Reference",
-                "creatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "name": "fuzeren",
-                "physicalName": "c_fuzeren",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "entityCode": 1205,
-                "description": null,
-                "updatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Mubiaozhouqi",
-                        "fieldList": [
-                            "zhouqimingcheng",
-                            "kaishishijian",
-                            "jieshushijian",
-                            "zhouqizhuangtai"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-3636c3002bea4d8abbd6dc438cc81f74",
-                "creatable": true,
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Mubiaozhouqi",
-                        "label": "目标周期"
-                    }
-                ],
-                "name": "mubiaozhouqi",
-                "physicalName": "c_mubiaozhouqi",
-                "nullable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "label": "目标周期",
-                "displayOrder": 0
-            },
-            {
-                "nullable": true,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 100,
-                    "minValue": 0,
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "fieldId": "0000002-1900f9c394794784b44e34c2f7db5ce7",
-                "label": "总进度",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "name": "zongjindu",
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "physicalName": "c_zongjindu",
-                "type": "Percent",
-                "description": null,
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1205
-            },
-            {
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1205,
-                "physicalName": "createdOn",
-                "displayOrder": 0,
-                "creatable": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "type": "DateTime",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-e168fdf4fe0b4c9889772ce12093c26c",
-                "name": "createdOn",
-                "label": "创建时间",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                }
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "label": "创建用户",
-                "type": "Reference",
-                "mainDetailFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "fieldId": "0000002-5b837ceae81f4521b8532723b0ca222b",
-                "entityCode": 1205,
-                "physicalName": "createdBy",
-                "idFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": false,
-                "updatable": false,
-                "fieldViewModel": null,
-                "name": "createdBy",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "description": null
-            },
-            {
-                "updatable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-7efde81390e04edc9049aebade27a8dd",
-                "name": "modifiedOn",
-                "label": "最近修改时间",
-                "nullable": true,
-                "creatable": false,
-                "fieldViewModel": null,
-                "physicalName": "modifiedOn",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1205,
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "type": "DateTime",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "修改用户",
-                "physicalName": "modifiedBy",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "type": "Reference",
-                "updatable": false,
-                "fieldViewModel": null,
-                "description": null,
-                "nullable": true,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-cb9f093bcad54889b80ef7f727cfc731",
-                "entityCode": 1205,
-                "name": "modifiedBy",
-                "displayOrder": 0,
-                "referenceSetting": null
-            },
-            {
-                "label": "所属用户",
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1205,
-                "physicalName": "ownerUser",
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "type": "Reference",
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "name": "ownerUser",
-                "description": null,
-                "nullable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-d523c527e0034df1a75aea26036986e8",
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null
-            },
-            {
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "Mubiao",
-                    "label": "目标"
-                },
-                "description": null,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "displayOrder": 0,
-                "creatable": false,
-                "physicalName": "ownerDepartment",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-1274d5ae05f3401ea79b95a1365058fd",
-                "entityCode": 1205,
-                "name": "ownerDepartment",
-                "label": "所属部门",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            }
-        ],
-        "fieldNames": [
-            "mubiaoId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "mubiaomingcheng",
-            "mubiaoleixing",
-            "mubiaosuoshubumen",
-            "fuzeren",
-            "mubiaozhouqi",
-            "zongjindu"
-        ],
-        "entityId": "0000001-87c4638c07a74f7ca52570907bb5789c"
-    },
-    "nameField": null,
     "authorizable": false,
     "shareable": false,
+    "physicalName": "t_mubiaoguanjianjieguo",
+    "nameField": null,
+    "mainEntity": "Mubiao",
     "fieldSet": [
         {
+            "referenceSetting": null,
+            "description": null,
             "idFieldFlag": true,
-            "reserved": true,
-            "name": "mubiaoguanjianjieguoId",
-            "updatable": false,
-            "label": "id主键",
-            "creatable": false,
-            "type": "PrimaryKey",
-            "mainDetailFieldFlag": false,
             "nameFieldFlag": false,
+            "fieldViewModel": null,
+            "name": "mubiaoguanjianjieguoId",
+            "referTo": null,
+            "displayOrder": 0,
+            "creatable": false,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-7974962833cc4b6ebc005eb3e2dba8cf",
+            "entityCode": 1207,
+            "label": "id主键",
             "physicalName": "mubiaoguanjianjieguoId",
+            "type": "PrimaryKey",
+            "defaultMemberOfListFlag": false,
+            "nullable": false,
+            "updatable": false
+        },
+        {
+            "referTo": null,
+            "creatable": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "entityCode": 1207,
+            "physicalName": "createdOn",
+            "type": "DateTime",
+            "nullable": false,
+            "defaultMemberOfListFlag": false,
+            "label": "创建时间",
+            "description": null,
+            "updatable": false,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "fieldId": "0000002-35d9622579c74af5bed96aec4327ab83",
+            "name": "createdOn",
+            "displayOrder": 0
+        },
+        {
+            "nullable": false,
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "fieldId": "0000002-ed4676855f6d4f10b23a1983d73e0996",
+            "description": null,
+            "displayOrder": 0,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "physicalName": "createdBy",
+            "creatable": false,
+            "idFieldFlag": false,
+            "referenceSetting": null,
+            "name": "createdBy",
+            "type": "Reference",
+            "updatable": false,
+            "entityCode": 1207,
+            "label": "创建用户"
+        },
+        {
+            "label": "最近修改时间",
+            "physicalName": "modifiedOn",
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldId": "0000002-ee4ca80e9bf44313b2b8814eb065c5a1",
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "type": "DateTime",
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1207,
+            "name": "modifiedOn",
+            "description": null,
+            "updatable": false,
             "referTo": null
         },
         {
-            "type": "DateTime",
-            "nameFieldFlag": false,
-            "reserved": true,
-            "name": "createdOn",
-            "updatable": false,
-            "label": "创建时间",
-            "creatable": false,
-            "physicalName": "createdOn",
-            "referTo": null,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false
-        },
-        {
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
-            "label": "创建用户",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "referTo": "User,",
-            "name": "createdBy",
-            "updatable": false,
-            "idFieldFlag": false,
-            "type": "Reference"
-        },
-        {
-            "updatable": false,
-            "label": "最近修改时间",
-            "creatable": false,
-            "type": "DateTime",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
-            "name": "modifiedOn",
-            "idFieldFlag": false,
-            "physicalName": "modifiedOn"
-        },
-        {
-            "creatable": false,
-            "mainDetailFieldFlag": false,
-            "physicalName": "modifiedBy",
-            "reserved": true,
-            "referTo": "User,",
-            "updatable": false,
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "name": "modifiedBy",
+            "entityCode": 1207,
             "label": "修改用户",
-            "type": "Reference"
-        },
-        {
+            "description": null,
+            "displayOrder": 0,
+            "creatable": false,
+            "fieldId": "0000002-c529c9a8340c40e28958fae1cebebca5",
+            "nullable": true,
             "nameFieldFlag": false,
-            "reserved": true,
-            "idFieldFlag": false,
-            "creatable": true,
-            "type": "Reference",
-            "physicalName": "mdMubiaoId",
-            "referTo": "Mubiao,",
-            "name": "mdMubiaoId",
-            "updatable": false,
-            "label": "主从关联Id",
-            "mainDetailFieldFlag": true
-        },
-        {
-            "idFieldFlag": false,
-            "label": "关键结果标题",
-            "creatable": true,
-            "type": "Text",
             "mainDetailFieldFlag": false,
-            "reserved": false,
-            "referTo": null,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "physicalName": "c_guanjianjieguobiaoti",
-            "name": "guanjianjieguobiaoti"
+            "referenceSetting": null,
+            "name": "modifiedBy",
+            "updatable": false,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "type": "Reference",
+            "physicalName": "modifiedBy"
         },
         {
-            "nameFieldFlag": false,
-            "reserved": false,
-            "referTo": null,
+            "type": "Reference",
+            "fieldViewModel": null,
+            "nullable": false,
             "idFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referenceSetting": null,
+            "name": "mdMubiaoId",
+            "label": "主从关联Id",
+            "physicalName": "mdMubiaoId",
+            "fieldId": "0000002-725b98a03469457da431286500bf1241",
+            "entityCode": 1207,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": true,
+            "referTo": "Mubiao,",
+            "description": null,
+            "displayOrder": 0,
+            "updatable": false
+        },
+        {
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "fieldId": "0000002-836b662b49a64759b32cf03cf2d23f04",
+            "displayOrder": 0,
+            "updatable": true,
+            "type": "Text",
+            "creatable": true,
+            "referenceSetting": null,
+            "defaultMemberOfListFlag": true,
+            "entityCode": 1207,
+            "physicalName": "c_guanjianjieguobiaoti",
+            "nullable": true,
+            "mainDetailFieldFlag": false,
+            "name": "guanjianjieguobiaoti",
+            "label": "关键结果标题",
+            "description": null
+        },
+        {
+            "displayOrder": 0,
+            "physicalName": "c_jindudanwei",
+            "description": null,
+            "referTo": null,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "creatable": true,
+            "fieldViewModel": {
+                "maxLength": 200,
+                "validators": [],
+                "minLength": 0
+            },
+            "fieldId": "0000002-e45ff055bac94616b2cb6ac02dc6f9b3",
             "label": "进度单位",
             "type": "Text",
+            "nullable": true,
+            "updatable": true,
+            "idFieldFlag": false,
             "mainDetailFieldFlag": false,
-            "physicalName": "c_jindudanwei",
+            "entityCode": 1207,
             "name": "jindudanwei",
-            "updatable": true,
-            "creatable": true
+            "referenceSetting": null
         },
         {
-            "reserved": false,
-            "referTo": null,
-            "updatable": true,
-            "label": "当前进度",
-            "type": "Text",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
             "physicalName": "c_dangqianjindu",
-            "name": "dangqianjindu",
+            "description": null,
             "idFieldFlag": false,
-            "creatable": true
+            "fieldViewModel": {
+                "maxLength": 200,
+                "validators": [],
+                "minLength": 0
+            },
+            "fieldId": "0000002-bc2a1262f7064912a4cfe7df198c0d08",
+            "name": "dangqianjindu",
+            "type": "Text",
+            "nullable": true,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "entityCode": 1207,
+            "defaultMemberOfListFlag": true,
+            "label": "当前进度",
+            "updatable": true,
+            "referTo": null,
+            "referenceSetting": null,
+            "displayOrder": 0
         },
         {
+            "fieldId": "0000002-0b35dcbbb39240af8fcc11d9e1030a72",
             "name": "qishijindu",
-            "updatable": true,
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": false,
-            "referTo": null,
-            "idFieldFlag": false,
             "label": "起始进度",
             "type": "Text",
-            "physicalName": "c_qishijindu"
-        },
-        {
-            "reserved": false,
-            "referTo": null,
-            "name": "mubiaojindu",
-            "idFieldFlag": false,
-            "label": "目标进度",
-            "type": "Text",
-            "nameFieldFlag": false,
-            "physicalName": "c_mubiaojindu",
-            "updatable": true,
-            "creatable": true,
-            "mainDetailFieldFlag": false
-        },
-        {
-            "nameFieldFlag": false,
-            "referTo": null,
-            "name": "jinduwanchengqingkuang",
-            "updatable": true,
-            "idFieldFlag": false,
-            "physicalName": "c_jinduwanchengqingkuang",
-            "reserved": false,
-            "label": "进度完成情况",
-            "creatable": true,
-            "type": "Percent",
-            "mainDetailFieldFlag": false
-        },
-        {
-            "referTo": null,
-            "name": "quanzhong",
-            "idFieldFlag": false,
-            "type": "Percent",
-            "nameFieldFlag": false,
-            "physicalName": "c_quanzhong",
-            "label": "权重",
-            "creatable": true,
+            "displayOrder": 0,
+            "nullable": true,
             "mainDetailFieldFlag": false,
-            "reserved": false,
-            "updatable": true
+            "physicalName": "c_qishijindu",
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "entityCode": 1207,
+            "description": null,
+            "creatable": true,
+            "idFieldFlag": false,
+            "referenceSetting": null,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "maxLength": 200,
+                "validators": [],
+                "minLength": 0
+            }
+        },
+        {
+            "referTo": null,
+            "fieldViewModel": {
+                "minLength": 0,
+                "maxLength": 200,
+                "validators": []
+            },
+            "name": "mubiaojindu",
+            "label": "目标进度",
+            "nullable": true,
+            "displayOrder": 0,
+            "updatable": true,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-35c56745b53741e187832eb64ca50e77",
+            "physicalName": "c_mubiaojindu",
+            "type": "Text",
+            "referenceSetting": null,
+            "entityCode": 1207,
+            "description": null,
+            "creatable": true,
+            "idFieldFlag": false
+        },
+        {
+            "creatable": true,
+            "updatable": true,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 100,
+                "minValue": 0,
+                "validators": []
+            },
+            "fieldId": "0000002-41b10af53a9a420e99140dadea2751cc",
+            "entityCode": 1207,
+            "physicalName": "c_jinduwanchengqingkuang",
+            "mainDetailFieldFlag": false,
+            "idFieldFlag": false,
+            "referTo": null,
+            "referenceSetting": null,
+            "nameFieldFlag": false,
+            "name": "jinduwanchengqingkuang",
+            "label": "进度完成情况",
+            "type": "Percent",
+            "description": null,
+            "displayOrder": 0,
+            "nullable": true
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "referenceSetting": null,
+            "name": "quanzhong",
+            "label": "权重",
+            "type": "Percent",
+            "creatable": true,
+            "idFieldFlag": false,
+            "fieldId": "0000002-67ff55d27f3545658b653c5b4ef12ecd",
+            "description": null,
+            "updatable": true,
+            "referTo": null,
+            "physicalName": "c_quanzhong",
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "precision": 2,
+                "maxValue": 100,
+                "minValue": 0,
+                "validators": []
+            },
+            "entityCode": 1207,
+            "displayOrder": 0,
+            "nullable": true,
+            "defaultMemberOfListFlag": false
         },
         {
             "label": "结果状态",
-            "creatable": true,
-            "referTo": null,
-            "updatable": true,
-            "reserved": false,
-            "name": "jieguozhuangtai",
             "idFieldFlag": false,
-            "type": "Option",
             "mainDetailFieldFlag": false,
+            "referTo": null,
+            "entityCode": 1207,
+            "type": "Option",
+            "description": null,
+            "nullable": true,
+            "creatable": true,
+            "updatable": true,
             "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "name": "jieguozhuangtai",
+            "fieldViewModel": null,
             "physicalName": "c_jieguozhuangtai",
+            "displayOrder": 0,
+            "referenceSetting": null,
+            "fieldId": "0000002-419ee3df3cab4e09b1c0d9dcb2823c37",
             "optionList": [
                 {
                     "key": "可控",

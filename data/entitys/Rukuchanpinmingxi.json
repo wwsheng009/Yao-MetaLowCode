@@ -1,1639 +1,283 @@
 {
-    "tags": "进销存",
     "name": "Rukuchanpinmingxi",
-    "detailEntityFlag": true,
-    "listable": true,
-    "idFieldName": "rukuchanpinmingxiId",
     "internalEntityFlag": false,
     "label": "入库产品明细",
     "entityCode": 1035,
     "systemEntityFlag": false,
+    "detailEntityFlag": true,
     "layoutable": true,
+    "listable": true,
+    "idFieldName": "rukuchanpinmingxiId",
+    "tags": "进销存",
+    "nameField": null,
+    "shareable": false,
+    "mainEntity": "Caigouruku",
     "assignable": false,
     "authorizable": false,
-    "nameField": null,
-    "mainEntity": {
-        "authorizable": true,
-        "tags": "进销存",
-        "fieldSet": [
-            {
-                "referenceSetting": null,
-                "description": null,
-                "idFieldFlag": true,
-                "referTo": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "label": "id主键",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "PrimaryKey",
-                "updatable": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-7d6ef98b04024b4cafdac83d912d1656",
-                "entityCode": 1034,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "caigourukuId",
-                "physicalName": "caigourukuId",
-                "creatable": false
-            },
-            {
-                "label": "创建时间",
-                "nullable": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "name": "createdOn",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "DateTime",
-                "description": null,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-b0a3eeaa15294d65a951c3a7f06d95c7",
-                "entityCode": 1034,
-                "displayOrder": 0,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "physicalName": "createdOn",
-                "updatable": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "label": "创建用户",
-                "description": null,
-                "creatable": false,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1034,
-                "owner": {
-                    "label": "采购入库",
-                    "name": "Caigouruku"
-                },
-                "type": "Reference",
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "name": "createdBy",
-                "displayOrder": 0,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-642434edbaa449d49591c816d10557b0",
-                "physicalName": "createdBy",
-                "updatable": false,
-                "nameFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-029635320b444db6ba36639984723ec0",
-                "name": "modifiedOn",
-                "physicalName": "modifiedOn",
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1034,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "label": "最近修改时间",
-                "fieldViewModel": null,
-                "type": "DateTime",
-                "description": null
-            },
-            {
-                "fieldId": "0000002-828b432c5b4842248dc2712132b967cf",
-                "entityCode": 1034,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "fieldViewModel": null,
-                "defaultMemberOfListFlag": false,
-                "label": "修改用户",
-                "type": "Reference",
-                "displayOrder": 0,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "description": null,
-                "name": "modifiedBy",
-                "physicalName": "modifiedBy",
-                "nullable": true,
-                "nameFieldFlag": false
-            },
-            {
-                "nullable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "所属用户",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "physicalName": "ownerUser",
-                "description": null,
-                "updatable": false,
-                "referenceSetting": null,
-                "entityCode": 1034,
-                "name": "ownerUser",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-697f53a3f03f419081bd60bd373b27d3",
-                "type": "Reference"
-            },
-            {
-                "label": "所属部门",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-97156ba2bbae46b4a22058d70387bd5d",
-                "entityCode": 1034,
-                "name": "ownerDepartment",
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "type": "Reference",
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "physicalName": "ownerDepartment",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "defaultMemberOfListFlag": false,
-                "nullable": false,
-                "creatable": false
-            },
-            {
-                "description": null,
-                "referTo": [
-                    {
-                        "name": "Caigoudingdan",
-                        "label": "采购订单"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "fieldList": [
-                            "caigoudingdan",
-                            "dingdanqiandingriqi",
-                            "caigoudingdanmingcheng",
-                            "dingdanjiaofuriqi",
-                            "caigoufuzeren",
-                            "rukucangku"
-                        ],
-                        "entityName": "Caigoudingdan"
-                    }
-                ],
-                "type": "Reference",
-                "nullable": false,
-                "label": "选择采购订单",
-                "physicalName": "c_xuanzecaigoudingdan",
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-1324b14797b74a8ea35d46e8ea93ba89",
-                "entityCode": 1034,
-                "name": "xuanzecaigoudingdan",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "physicalName": "c_caigourukudanbianhao",
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "nullable": false,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "entityCode": 1034,
-                "name": "caigourukudanbianhao",
-                "description": null,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-fce381cad90a469bbbef0574ceb129c0",
-                "label": "采购入库单编号",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "Text",
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": true
-            },
-            {
-                "description": null,
-                "physicalName": "c_rukucangku",
-                "type": "Reference",
-                "updatable": true,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Cangkuguanli",
-                        "label": "仓库管理"
-                    }
-                ],
-                "name": "rukucangku",
-                "label": "入库仓库",
-                "nullable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma",
-                            "cangkudizhi",
-                            "cangkurongliang",
-                            "cangkuxingzhi",
-                            "cangkuzhuangtai",
-                            "cangkuzhuguan"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-02fbaef6340c4b8786bb09116a4da5f5",
-                "entityCode": 1034
-            },
-            {
-                "fieldId": "0000002-4a82db78051c43d1b5b9aeeecf9dcbf0",
-                "physicalName": "c_rukuchanpinzongshu",
-                "displayOrder": 0,
-                "nullable": true,
-                "defaultMemberOfListFlag": true,
-                "name": "rukuchanpinzongshu",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "Integer",
-                "referTo": null,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1034,
-                "label": "入库产品总数",
-                "description": null,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                }
-            },
-            {
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "physicalName": "c_rukuchanpincaigoujiazonge",
-                "entityCode": 1034,
-                "name": "rukuchanpincaigoujiazonge",
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "fieldId": "0000002-249c359a34524761986153605bae6486",
-                "type": "Money",
-                "description": null,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "label": "入库产品采购价总额(含税)/元",
-                "creatable": true,
-                "updatable": true,
-                "referTo": null,
-                "displayOrder": 0
-            },
-            {
-                "idFieldFlag": false,
-                "name": "shifoucunzaibuhegepin",
-                "description": null,
-                "nullable": false,
-                "label": "是否存在不合格品",
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldId": "0000002-8bb72ff6c088487794d3e627cdbcc6f2",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "creatable": true,
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1034,
-                "physicalName": "c_shifoucunzaibuhegepin",
-                "type": "Option"
-            },
-            {
-                "name": "zhijianshijian",
-                "type": "DateTime",
-                "updatable": true,
-                "referenceSetting": null,
-                "entityCode": 1034,
-                "description": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "fieldId": "0000002-6dcabfba8bb6409ca6cb711f46a33466",
-                "physicalName": "c_zhijianshijian",
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "label": "质检时间",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "nullable": true,
-                "creatable": true,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "creatable": true,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "physicalName": "c_zhijianyuan",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "updatable": true,
-                "fieldId": "0000002-63ea8a77795f4134b6741c113be77bd4",
-                "name": "zhijianyuan",
-                "label": "质检员",
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId"
-                        ]
-                    }
-                ],
-                "entityCode": 1034,
-                "type": "Reference",
-                "idFieldFlag": false,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                }
-            },
-            {
-                "description": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "idFieldFlag": false,
-                "referTo": null,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-a206be951a9d418485d616c5acd9dcc5",
-                "physicalName": "c_hegepinrukuqueren",
-                "nullable": false,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "entityCode": 1034,
-                "name": "hegepinrukuqueren",
-                "label": "合格品入库确认",
-                "type": "Boolean",
-                "mainDetailFieldFlag": false
-            },
-            {
-                "label": "拍照",
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-f5815509a9e54b92919d9f1883b3e1b9",
-                "name": "paizhao",
-                "type": "Picture",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "c_paizhao",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1034,
-                "description": null,
-                "displayOrder": 0,
-                "referTo": null,
-                "fieldViewModel": {
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": [
-                        "jpeg",
-                        "png",
-                        "gif"
-                    ],
-                    "uploadHint": "单张100M以内",
-                    "validators": [],
-                    "maxFileCount": 9
-                }
-            },
-            {
-                "updatable": true,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "creatable": true,
-                "physicalName": "c_rukushijian",
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-ffae3dcab5ff4497b4dad91f0731125a",
-                "type": "DateTime",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "name": "rukushijian",
-                "label": "入库时间",
-                "description": null,
-                "displayOrder": 0,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1034
-            },
-            {
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "name": "rukuyuan",
-                "physicalName": "c_rukuyuan",
-                "type": "Reference",
-                "description": null,
-                "idFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId"
-                        ]
-                    }
-                ],
-                "fieldId": "0000002-e97b961a1d9e4f3c80fb1ea8f4281031",
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1034,
-                "label": "入库员",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "entityCode": 1034,
-                "owner": {
-                    "label": "采购入库",
-                    "name": "Caigouruku"
-                },
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "type": "Reference",
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-fc8846e7d9ac4c928b9cb6c6736ffd0c",
-                "name": "approvalConfigId",
-                "physicalName": "approvalConfigId",
-                "displayOrder": 0,
-                "referenceSetting": null,
-                "label": "审批流程",
-                "description": null,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "ApprovalConfig",
-                        "label": "审批配置"
-                    }
-                ]
-            },
-            {
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "Status",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-51eec0a1cc4c463a907b884e1eb710b2",
-                "name": "approvalStatus",
-                "physicalName": "approvalStatus",
-                "updatable": false,
-                "label": "审批状态",
-                "description": null,
-                "nullable": true,
-                "referenceSetting": null,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "referTo": null,
-                "entityCode": 1034,
-                "creatable": false,
-                "nameFieldFlag": false
-            },
-            {
-                "nullable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "name": "lastApprovedBy",
-                "label": "最近审批人",
-                "type": "Reference",
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-e9ca22a67ef3494bafa49d918e347e66",
-                "entityCode": 1034,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "creatable": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "physicalName": "lastApprovedBy",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "description": null
-            },
-            {
-                "type": "DateTime",
-                "description": null,
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "name": "lastApprovedOn",
-                "physicalName": "lastApprovedOn",
-                "nameFieldFlag": false,
-                "fieldId": "0000002-185afce94bde49b0bc03977ac1a1d1a2",
-                "idFieldFlag": false,
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1034,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "updatable": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "label": "最近审批时间",
-                "creatable": false
-            },
-            {
-                "fieldId": "0000002-555e2013cee140de9988da3eab7848f0",
-                "label": "最近审批批注",
-                "type": "TextArea",
-                "creatable": false,
-                "referTo": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "physicalName": "lastApprovalRemark",
-                "description": null,
-                "nullable": true,
-                "updatable": false,
-                "idFieldFlag": false,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1034,
-                "name": "lastApprovalRemark",
-                "displayOrder": 0
-            }
-        ],
-        "virtualFieldSet": [],
-        "physicalName": "t_caigouruku",
-        "entityCode": 1034,
-        "shareable": false,
-        "mainEntity": null,
-        "sortedFieldSet": [
-            {
-                "fieldId": "0000002-7d6ef98b04024b4cafdac83d912d1656",
-                "name": "caigourukuId",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "PrimaryKey",
-                "nullable": false,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "label": "id主键",
-                "physicalName": "caigourukuId",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": true,
-                "referenceSetting": null,
-                "entityCode": 1034,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "entityCode": 1034,
-                "name": "xuanzecaigoudingdan",
-                "referTo": [
-                    {
-                        "name": "Caigoudingdan",
-                        "label": "采购订单"
-                    }
-                ],
-                "fieldId": "0000002-1324b14797b74a8ea35d46e8ea93ba89",
-                "creatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Caigoudingdan",
-                        "fieldList": [
-                            "caigoudingdan",
-                            "dingdanqiandingriqi",
-                            "caigoudingdanmingcheng",
-                            "dingdanjiaofuriqi",
-                            "caigoufuzeren",
-                            "rukucangku"
-                        ]
-                    }
-                ],
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "updatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "label": "选择采购订单",
-                "physicalName": "c_xuanzecaigoudingdan",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "Reference"
-            },
-            {
-                "displayOrder": 0,
-                "nullable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "entityCode": 1034,
-                "label": "采购入库单编号",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "updatable": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 200,
-                    "validators": []
-                },
-                "name": "caigourukudanbianhao",
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-fce381cad90a469bbbef0574ceb129c0",
-                "physicalName": "c_caigourukudanbianhao",
-                "type": "Text",
-                "description": null,
-                "nameFieldFlag": true,
-                "referenceSetting": null
-            },
-            {
-                "entityCode": 1034,
-                "physicalName": "c_rukucangku",
-                "name": "rukucangku",
-                "owner": {
-                    "label": "采购入库",
-                    "name": "Caigouruku"
-                },
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-02fbaef6340c4b8786bb09116a4da5f5",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "Cangkuguanli",
-                        "fieldList": [
-                            "cangkumingcheng",
-                            "cangkubianma",
-                            "cangkudizhi",
-                            "cangkurongliang",
-                            "cangkuxingzhi",
-                            "cangkuzhuangtai",
-                            "cangkuzhuguan"
-                        ]
-                    }
-                ],
-                "label": "入库仓库",
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "creatable": true,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "label": "仓库管理",
-                        "name": "Cangkuguanli"
-                    }
-                ]
-            },
-            {
-                "creatable": true,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "label": "入库产品总数",
-                "name": "rukuchanpinzongshu",
-                "description": null,
-                "fieldId": "0000002-4a82db78051c43d1b5b9aeeecf9dcbf0",
-                "type": "Integer",
-                "nameFieldFlag": false,
-                "fieldViewModel": {
-                    "minValue": -999999999,
-                    "validators": [],
-                    "maxValue": 999999999
-                },
-                "referenceSetting": null,
-                "physicalName": "c_rukuchanpinzongshu",
-                "owner": {
-                    "label": "采购入库",
-                    "name": "Caigouruku"
-                },
-                "displayOrder": 0,
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1034
-            },
-            {
-                "displayOrder": 0,
-                "nullable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "precision": 2,
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "name": "rukuchanpincaigoujiazonge",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "Money",
-                "defaultMemberOfListFlag": false,
-                "entityCode": 1034,
-                "description": null,
-                "creatable": true,
-                "fieldId": "0000002-249c359a34524761986153605bae6486",
-                "physicalName": "c_rukuchanpincaigoujiazonge",
-                "updatable": true,
-                "referenceSetting": null,
-                "label": "入库产品采购价总额(含税)/元",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "label": "是否存在不合格品",
-                "description": null,
-                "entityCode": 1034,
-                "owner": {
-                    "label": "采购入库",
-                    "name": "Caigouruku"
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "name": "shifoucunzaibuhegepin",
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-8bb72ff6c088487794d3e627cdbcc6f2",
-                "type": "Option",
-                "nullable": false,
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": null,
-                "physicalName": "c_shifoucunzaibuhegepin"
-            },
-            {
-                "description": null,
-                "creatable": true,
-                "defaultMemberOfListFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-6dcabfba8bb6409ca6cb711f46a33466",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "DateTime",
-                "entityCode": 1034,
-                "displayOrder": 0,
-                "referTo": null,
-                "name": "zhijianshijian",
-                "physicalName": "c_zhijianshijian",
-                "nameFieldFlag": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "label": "质检时间",
-                "nullable": true,
-                "updatable": true
-            },
-            {
-                "nameFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId"
-                        ]
-                    }
-                ],
-                "physicalName": "c_zhijianyuan",
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "entityCode": 1034,
-                "name": "zhijianyuan",
-                "label": "质检员",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-63ea8a77795f4134b6741c113be77bd4",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "Reference",
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "physicalName": "c_hegepinrukuqueren",
-                "description": null,
-                "nullable": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-a206be951a9d418485d616c5acd9dcc5",
-                "name": "hegepinrukuqueren",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "type": "Boolean",
-                "updatable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "entityCode": 1034,
-                "label": "合格品入库确认",
-                "displayOrder": 0,
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true
-            },
-            {
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "name": "paizhao",
-                "displayOrder": 0,
-                "type": "Picture",
-                "description": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "physicalName": "c_paizhao",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "fieldViewModel": {
-                    "maxFileCount": 9,
-                    "fileMaxSize": 100,
-                    "uploadFileTypes": [
-                        "jpeg",
-                        "png",
-                        "gif"
-                    ],
-                    "uploadHint": "单张100M以内",
-                    "validators": []
-                },
-                "nullable": true,
-                "creatable": true,
-                "label": "拍照",
-                "fieldId": "0000002-f5815509a9e54b92919d9f1883b3e1b9",
-                "entityCode": 1034
-            },
-            {
-                "physicalName": "c_rukushijian",
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-ffae3dcab5ff4497b4dad91f0731125a",
-                "entityCode": 1034,
-                "type": "DateTime",
-                "description": null,
-                "nullable": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "name": "rukushijian",
-                "label": "入库时间",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-e97b961a1d9e4f3c80fb1ea8f4281031",
-                "entityCode": 1034,
-                "label": "入库员",
-                "physicalName": "c_rukuyuan",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "updatable": true,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "userName",
-                            "departmentId"
-                        ]
-                    }
-                ],
-                "name": "rukuyuan",
-                "type": "Reference",
-                "description": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                }
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "label": "创建时间",
-                "type": "DateTime",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "creatable": false,
-                "updatable": false,
-                "nameFieldFlag": false,
-                "entityCode": 1034,
-                "name": "createdOn",
-                "description": null,
-                "nullable": false,
-                "fieldId": "0000002-b0a3eeaa15294d65a951c3a7f06d95c7",
-                "referTo": null,
-                "referenceSetting": null,
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "idFieldFlag": false
-            },
-            {
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "label": "创建用户",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "creatable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "description": null,
-                "nullable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "entityCode": 1034,
-                "name": "createdBy",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "fieldId": "0000002-642434edbaa449d49591c816d10557b0",
-                "physicalName": "createdBy",
-                "type": "Reference"
-            },
-            {
-                "entityCode": 1034,
-                "label": "最近修改时间",
-                "nameFieldFlag": false,
-                "fieldId": "0000002-029635320b444db6ba36639984723ec0",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "DateTime",
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "physicalName": "modifiedOn",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "name": "modifiedOn",
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "fieldViewModel": null
-            },
-            {
-                "fieldId": "0000002-828b432c5b4842248dc2712132b967cf",
-                "physicalName": "modifiedBy",
-                "nameFieldFlag": false,
-                "fieldViewModel": null,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "referenceSetting": null,
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "updatable": false,
-                "entityCode": 1034,
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "creatable": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "referenceSetting": null,
-                "physicalName": "ownerUser",
-                "nullable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-697f53a3f03f419081bd60bd373b27d3",
-                "name": "ownerUser",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "creatable": false,
-                "updatable": false,
-                "description": null,
-                "displayOrder": 0,
-                "entityCode": 1034,
-                "label": "所属用户",
-                "type": "Reference",
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ]
-            },
-            {
-                "physicalName": "ownerDepartment",
-                "nameFieldFlag": false,
-                "fieldId": "0000002-97156ba2bbae46b4a22058d70387bd5d",
-                "label": "所属部门",
-                "updatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "name": "ownerDepartment",
-                "nullable": false,
-                "fieldViewModel": null,
-                "owner": {
-                    "label": "采购入库",
-                    "name": "Caigouruku"
-                },
-                "creatable": false,
-                "description": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1034,
-                "type": "Reference"
-            },
-            {
-                "name": "approvalConfigId",
-                "nullable": true,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1034,
-                "label": "审批流程",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "description": null,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "ApprovalConfig",
-                        "label": "审批配置"
-                    }
-                ],
-                "fieldViewModel": null,
-                "fieldId": "0000002-fc8846e7d9ac4c928b9cb6c6736ffd0c",
-                "type": "Reference",
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "approvalConfigId"
-            },
-            {
-                "description": null,
-                "nullable": true,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "label": "审批状态",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-51eec0a1cc4c463a907b884e1eb710b2",
-                "physicalName": "approvalStatus",
-                "fieldViewModel": null,
-                "name": "approvalStatus",
-                "displayOrder": 0,
-                "creatable": false,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1034,
-                "type": "Status"
-            },
-            {
-                "fieldId": "0000002-e9ca22a67ef3494bafa49d918e347e66",
-                "label": "最近审批人",
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "updatable": false,
-                "idFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "nullable": true,
-                "creatable": false,
-                "entityCode": 1034,
-                "name": "lastApprovedBy",
-                "physicalName": "lastApprovedBy",
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "nameFieldFlag": false
-            },
-            {
-                "nullable": true,
-                "referTo": null,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "name": "lastApprovedOn",
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "type": "DateTime",
-                "description": null,
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "physicalName": "lastApprovedOn",
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-185afce94bde49b0bc03977ac1a1d1a2",
-                "entityCode": 1034,
-                "label": "最近审批时间",
-                "updatable": false
-            },
-            {
-                "type": "TextArea",
-                "description": null,
-                "creatable": false,
-                "label": "最近审批批注",
-                "name": "lastApprovalRemark",
-                "physicalName": "lastApprovalRemark",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-555e2013cee140de9988da3eab7848f0",
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": null,
-                "owner": {
-                    "name": "Caigouruku",
-                    "label": "采购入库"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1034
-            }
-        ],
-        "detailEntityFlag": false,
-        "listable": true,
-        "layoutable": true,
-        "assignable": false,
-        "idField": {
-            "label": "id主键",
-            "name": "caigourukuId"
-        },
-        "nameField": {
-            "name": "caigourukudanbianhao",
-            "label": "采购入库单编号"
-        },
-        "detailEntitySet": [
-            {
-                "name": "Rukuchanpinmingxi",
-                "label": "入库产品明细"
-            }
-        ],
-        "mainDetailField": null,
-        "name": "Caigouruku",
-        "label": "采购入库",
-        "fieldNames": [
-            "caigourukuId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "xuanzecaigoudingdan",
-            "caigourukudanbianhao",
-            "rukucangku",
-            "rukuchanpinzongshu",
-            "rukuchanpincaigoujiazonge",
-            "shifoucunzaibuhegepin",
-            "zhijianshijian",
-            "zhijianyuan",
-            "hegepinrukuqueren",
-            "paizhao",
-            "rukushijian",
-            "rukuyuan",
-            "approvalConfigId",
-            "approvalStatus",
-            "lastApprovedBy",
-            "lastApprovedOn",
-            "lastApprovalRemark"
-        ],
-        "entityId": "0000001-2a0ed47b282c4b38a2f4ce894349f1c9"
-    },
     "physicalName": "t_rukuchanpinmingxi",
-    "shareable": false,
     "fieldSet": [
         {
-            "referTo": null,
-            "updatable": false,
-            "mainDetailFieldFlag": false,
-            "creatable": false,
-            "type": "PrimaryKey",
-            "nameFieldFlag": false,
-            "physicalName": "rukuchanpinmingxiId",
-            "reserved": true,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
             "name": "rukuchanpinmingxiId",
+            "nullable": false,
+            "type": "PrimaryKey",
+            "displayOrder": 0,
             "idFieldFlag": true,
-            "label": "id主键"
+            "label": "id主键",
+            "creatable": false,
+            "updatable": false,
+            "description": null,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "fieldId": "0000002-a7de000fd78749e482e0a55f86b6aae7",
+            "entityCode": 1035,
+            "physicalName": "rukuchanpinmingxiId"
         },
         {
-            "nameFieldFlag": false,
-            "physicalName": "createdOn",
-            "referTo": null,
-            "updatable": false,
+            "referenceSetting": null,
             "creatable": false,
-            "type": "DateTime",
-            "reserved": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "referTo": null,
+            "fieldViewModel": null,
+            "fieldId": "0000002-a8d827f59674499fa1b7012267521012",
+            "entityCode": 1035,
+            "nullable": false,
+            "displayOrder": 0,
+            "defaultMemberOfListFlag": false,
             "name": "createdOn",
-            "idFieldFlag": false,
-            "label": "创建时间",
-            "mainDetailFieldFlag": false
-        },
-        {
-            "label": "创建用户",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "createdBy",
-            "reserved": true,
-            "idFieldFlag": false,
-            "type": "Reference",
-            "referTo": "User,",
-            "name": "createdBy",
-            "updatable": false,
-            "creatable": false
-        },
-        {
-            "physicalName": "modifiedOn",
-            "name": "modifiedOn",
-            "creatable": false,
-            "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": null,
-            "updatable": false,
-            "idFieldFlag": false,
-            "label": "最近修改时间",
+            "physicalName": "createdOn",
             "type": "DateTime",
+            "label": "创建时间",
+            "description": null,
             "mainDetailFieldFlag": false
         },
         {
-            "updatable": false,
-            "idFieldFlag": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": "User,",
+            "referenceSetting": null,
+            "entityCode": 1035,
+            "label": "创建用户",
+            "description": null,
+            "nullable": false,
             "creatable": false,
-            "physicalName": "modifiedBy",
-            "name": "modifiedBy",
-            "label": "修改用户"
+            "nameFieldFlag": false,
+            "referTo": "User,",
+            "fieldId": "0000002-19c80c48cf9147f2b3b7d24fb39d342a",
+            "physicalName": "createdBy",
+            "mainDetailFieldFlag": false,
+            "name": "createdBy",
+            "type": "Reference",
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "updatable": false,
+            "defaultMemberOfListFlag": false,
+            "fieldViewModel": null
         },
         {
-            "physicalName": "mdCaigourukuId",
-            "mainDetailFieldFlag": true,
-            "name": "mdCaigourukuId",
+            "description": null,
+            "creatable": false,
             "updatable": false,
             "idFieldFlag": false,
-            "label": "主从关联Id",
-            "creatable": true,
+            "fieldViewModel": null,
+            "entityCode": 1035,
+            "name": "modifiedOn",
+            "label": "最近修改时间",
+            "physicalName": "modifiedOn",
+            "nullable": true,
             "nameFieldFlag": false,
-            "reserved": true,
-            "referTo": "Caigouruku,",
-            "type": "Reference"
+            "referenceSetting": null,
+            "fieldId": "0000002-2daf2090b1454f28b0f7cb1586c4ca05",
+            "defaultMemberOfListFlag": false,
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "referTo": null,
+            "type": "DateTime"
         },
         {
-            "referTo": "Chanpinxinxi,",
-            "idFieldFlag": false,
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": false,
-            "name": "xuanzechanpin",
-            "updatable": true,
-            "label": "选择产品",
+            "physicalName": "modifiedBy",
+            "displayOrder": 0,
+            "creatable": false,
             "type": "Reference",
-            "physicalName": "c_xuanzechanpin"
+            "nullable": true,
+            "updatable": false,
+            "idFieldFlag": false,
+            "fieldId": "0000002-4257d1b56b3344f191493b0aa37df374",
+            "entityCode": 1035,
+            "label": "修改用户",
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "name": "modifiedBy",
+            "description": null,
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "referenceSetting": null
         },
         {
-            "referTo": null,
-            "idFieldFlag": false,
-            "label": "本次到货数量",
-            "type": "Integer",
-            "mainDetailFieldFlag": false,
+            "creatable": true,
+            "referTo": "Caigouruku,",
+            "referenceSetting": null,
+            "fieldId": "0000002-0c852337ce664c9599f30d2bf062a6c8",
+            "entityCode": 1035,
+            "name": "mdCaigourukuId",
+            "type": "Reference",
+            "displayOrder": 0,
             "nameFieldFlag": false,
-            "physicalName": "c_bencidaohuoshuliang",
-            "reserved": false,
+            "label": "主从关联Id",
+            "description": null,
+            "nullable": false,
+            "idFieldFlag": false,
+            "fieldViewModel": null,
+            "physicalName": "mdCaigourukuId",
+            "updatable": false,
+            "mainDetailFieldFlag": true,
+            "defaultMemberOfListFlag": true
+        },
+        {
+            "nullable": false,
+            "creatable": true,
+            "entityCode": 1035,
+            "label": "选择产品",
+            "physicalName": "c_xuanzechanpin",
+            "updatable": true,
+            "mainDetailFieldFlag": false,
+            "referTo": "Chanpinxinxi,",
+            "name": "xuanzechanpin",
+            "type": "Reference",
+            "description": null,
+            "displayOrder": 0,
+            "fieldId": "0000002-a0ec617d2a3449b08e6771f765c8a812",
+            "defaultMemberOfListFlag": true,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "referenceSetting": [
+                {
+                    "entityName": "Chanpinxinxi",
+                    "fieldList": [
+                        "chanpinbianma",
+                        "chanpinshuxing",
+                        "chanpinmingcheng",
+                        "chanpinleixing",
+                        "pinpai",
+                        "guigexinghao"
+                    ]
+                }
+            ]
+        },
+        {
+            "entityCode": 1035,
+            "description": null,
+            "nullable": false,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "fieldId": "0000002-775a630de55f42c2af2fc97ff2d29ee8",
+            "displayOrder": 0,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "fieldViewModel": {
+                "minValue": -999999999,
+                "validators": [],
+                "maxValue": 999999999
+            },
             "name": "bencidaohuoshuliang",
+            "label": "本次到货数量",
+            "physicalName": "c_bencidaohuoshuliang",
+            "type": "Integer",
+            "creatable": true,
             "updatable": true,
-            "creatable": true
+            "referenceSetting": null
         },
         {
-            "reserved": false,
-            "referTo": null,
-            "name": "buhegeshuliang",
+            "referenceSetting": null,
             "label": "不合格数量",
-            "type": "Integer",
+            "nullable": true,
             "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "c_buhegeshuliang",
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-91fa0f55a41a4a7baf23a1c5cb2f534a",
             "creatable": true,
-            "updatable": true,
-            "idFieldFlag": false
-        },
-        {
+            "nameFieldFlag": false,
             "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "physicalName": "c_bencirukushuliang",
             "referTo": null,
-            "label": "本次入库数量",
-            "creatable": true,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            },
+            "name": "buhegeshuliang",
             "type": "Integer",
-            "mainDetailFieldFlag": false,
-            "reserved": false,
-            "name": "bencirukushuliang",
+            "description": null,
+            "entityCode": 1035,
+            "physicalName": "c_buhegeshuliang",
+            "displayOrder": 0,
             "updatable": true
         },
         {
-            "referTo": "Cangkuguanli,",
-            "name": "rukucangwei",
-            "idFieldFlag": false,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_rukucangwei",
-            "reserved": false,
-            "updatable": true,
-            "label": "入库仓位",
+            "description": null,
             "creatable": true,
-            "nameFieldFlag": false
+            "idFieldFlag": false,
+            "referenceSetting": null,
+            "physicalName": "c_bencirukushuliang",
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldId": "0000002-c0a8f973117d423d98e362c6cc268573",
+            "entityCode": 1035,
+            "name": "bencirukushuliang",
+            "label": "本次入库数量",
+            "displayOrder": 0,
+            "updatable": true,
+            "referTo": null,
+            "type": "Integer",
+            "nullable": false,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": {
+                "maxValue": 999999999,
+                "minValue": -999999999,
+                "validators": []
+            }
+        },
+        {
+            "name": "rukucangwei",
+            "type": "Reference",
+            "nullable": true,
+            "fieldViewModel": {
+                "searchDialogWidth": 520,
+                "validators": []
+            },
+            "referenceSetting": [
+                {
+                    "entityName": "Cangkuguanli",
+                    "fieldList": [
+                        "cangkumingcheng",
+                        "cangkubianma",
+                        "cangkudizhi",
+                        "cangkurongliang",
+                        "cangkuxingzhi",
+                        "cangkuzhuangtai",
+                        "cangkuzhuguan"
+                    ]
+                }
+            ],
+            "physicalName": "c_rukucangwei",
+            "updatable": true,
+            "referTo": "Cangkuguanli,",
+            "fieldId": "0000002-44aa8f29bb384a8ab1153a102594387c",
+            "label": "入库仓位",
+            "description": null,
+            "creatable": true,
+            "defaultMemberOfListFlag": false,
+            "entityCode": 1035,
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false
         }
     ]
 }

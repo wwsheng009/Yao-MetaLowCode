@@ -1,986 +1,182 @@
 {
-    "detailEntityFlag": true,
-    "listable": true,
-    "tags": "项目任务管理",
-    "name": "Qingjiaxiangqing",
-    "entityCode": 1228,
     "layoutable": true,
     "idFieldName": "qingjiaxiangqingId",
-    "internalEntityFlag": false,
+    "tags": "项目任务管理",
+    "entityCode": 1228,
     "label": "请假详情",
     "systemEntityFlag": false,
-    "authorizable": false,
+    "detailEntityFlag": true,
+    "listable": true,
+    "internalEntityFlag": false,
+    "name": "Qingjiaxiangqing",
     "shareable": false,
-    "mainEntity": {
-        "entityId": "0000001-185c9e6525d04b219804af36e34c724b",
-        "listable": true,
-        "detailEntitySet": [
-            {
-                "name": "Qingjiaxiangqing",
-                "label": "请假详情"
-            }
-        ],
-        "mainEntity": null,
-        "fieldSet": [
-            {
-                "owner": {
-                    "label": "项目任务管理请假申请",
-                    "name": "Xiangmurenwuguanliqingjiash"
-                },
-                "displayOrder": 0,
-                "referTo": null,
-                "referenceSetting": null,
-                "label": "id主键",
-                "description": null,
-                "idFieldFlag": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "updatable": false,
-                "fieldId": "0000002-1b394fb8654b4a28a240334571b8e776",
-                "entityCode": 1227,
-                "name": "xiangmurenwuguanliqingjiashId",
-                "physicalName": "xiangmurenwuguanliqingjiashId",
-                "nullable": false,
-                "creatable": false,
-                "type": "PrimaryKey",
-                "fieldViewModel": null
-            },
-            {
-                "fieldId": "0000002-21e64ffee4d74f4d8a2ea78d6597b105",
-                "entityCode": 1227,
-                "name": "createdOn",
-                "physicalName": "createdOn",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "DateTime",
-                "description": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "label": "创建时间",
-                "displayOrder": 0,
-                "fieldViewModel": null,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "referTo": null,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "type": "Reference",
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-175e7bb818c74bf0ac2246ef6018167b",
-                "name": "createdBy",
-                "updatable": false,
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "entityCode": 1227,
-                "label": "创建用户",
-                "physicalName": "createdBy",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "description": null,
-                "nullable": false,
-                "creatable": false,
-                "fieldViewModel": null,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "label": "最近修改时间",
-                "type": "DateTime",
-                "displayOrder": 0,
-                "updatable": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-e8dcbd6c1da947fca9b8b9c3390b6cbf",
-                "physicalName": "modifiedOn",
-                "description": null,
-                "defaultMemberOfListFlag": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "entityCode": 1227,
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "nullable": true,
-                "creatable": false,
-                "name": "modifiedOn",
-                "referenceSetting": null
-            },
-            {
-                "fieldId": "0000002-0de56f8f178840d19f2c8b087440fde4",
-                "name": "modifiedBy",
-                "owner": {
-                    "label": "项目任务管理请假申请",
-                    "name": "Xiangmurenwuguanliqingjiash"
-                },
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "type": "Reference",
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "label": "修改用户",
-                "physicalName": "modifiedBy",
-                "description": null,
-                "nullable": true,
-                "updatable": false,
-                "fieldViewModel": null
-            },
-            {
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "fieldViewModel": null,
-                "nullable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "name": "ownerUser",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "Reference",
-                "description": null,
-                "creatable": false,
-                "updatable": false,
-                "fieldId": "0000002-668b9326b3074c9a9b1adb55e0cbd336",
-                "label": "所属用户",
-                "physicalName": "ownerUser",
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ]
-            },
-            {
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "部门",
-                        "name": "Department"
-                    }
-                ],
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "description": null,
-                "type": "Reference",
-                "displayOrder": 0,
-                "nullable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "label": "所属部门",
-                "idFieldFlag": false,
-                "physicalName": "ownerDepartment",
-                "creatable": false,
-                "updatable": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-5a21b32b74ac42578d8087c31dac28fb",
-                "name": "ownerDepartment"
-            },
-            {
-                "label": "填表时间",
-                "type": "Date",
-                "description": null,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "fieldId": "0000002-15b1d032df314deb9d01e855c8beda95",
-                "entityCode": 1227,
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "displayOrder": 0,
-                "updatable": true,
-                "idFieldFlag": false,
-                "nullable": true,
-                "creatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "name": "tianbiaoshijian",
-                "physicalName": "c_tianbiaoshijian",
-                "nameFieldFlag": false
-            },
-            {
-                "fieldId": "0000002-5b7c9a0949dc40f6b846a29886658852",
-                "entityCode": 1227,
-                "name": "shenqingren",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ],
-                "owner": {
-                    "label": "项目任务管理请假申请",
-                    "name": "Xiangmurenwuguanliqingjiash"
-                },
-                "type": "Reference",
-                "label": "申请人",
-                "physicalName": "c_shenqingren",
-                "nullable": true,
-                "creatable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "description": null,
-                "updatable": true,
-                "idFieldFlag": false
-            },
-            {
-                "creatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "entityCode": 1227,
-                "label": "所在部门",
-                "physicalName": "c_suozaibumen",
-                "description": null,
-                "nullable": true,
-                "mainDetailFieldFlag": false,
-                "name": "suozaibumen",
-                "owner": {
-                    "label": "项目任务管理请假申请",
-                    "name": "Xiangmurenwuguanliqingjiash"
-                },
-                "type": "Reference",
-                "updatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldId": "0000002-d38a96f4f9d14460b32244151a2fc620",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            },
-            {
-                "physicalName": "c_qingjialeixing",
-                "nameFieldFlag": false,
-                "referenceSetting": null,
-                "displayOrder": 0,
-                "creatable": true,
-                "updatable": true,
-                "fieldViewModel": null,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-03a80baff54946d2bedd0c0352434591",
-                "name": "qingjialeixing",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "nullable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "entityCode": 1227,
-                "label": "请假类型",
-                "type": "Option",
-                "description": null
-            },
-            {
-                "referenceSetting": null,
-                "creatable": true,
-                "updatable": true,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "label": "合计天数",
-                "description": null,
-                "referTo": null,
-                "fieldId": "0000002-751b6d1ac38d4a948f28430e37125c56",
-                "name": "hejitianshu",
-                "nullable": true,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "entityCode": 1227,
-                "physicalName": "c_hejitianshu",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "Integer",
-                "displayOrder": 0
-            },
-            {
-                "referTo": null,
-                "name": "qingjiashiyou",
-                "creatable": true,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "physicalName": "c_qingjiashiyou",
-                "nullable": true,
-                "updatable": true,
-                "nameFieldFlag": true,
-                "fieldViewModel": {
-                    "minLength": 0,
-                    "maxLength": 1000,
-                    "rows": 3,
-                    "validators": []
-                },
-                "fieldId": "0000002-5d566a4b606a46d4860d492695ece58f",
-                "label": "请假事由",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "description": null,
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "type": "TextArea",
-                "displayOrder": 0,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "name": "shangchuanzhengming",
-                "idFieldFlag": false,
-                "fieldId": "0000002-58690df6d5be4dc09a2c19e0fc83544e",
-                "nullable": true,
-                "updatable": true,
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "description": null,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "fieldViewModel": {
-                    "fileMaxSize": 5,
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": [],
-                    "maxFileCount": 3
-                },
-                "label": "上传证明",
-                "physicalName": "c_shangchuanzhengming",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "File",
-                "displayOrder": 0,
-                "creatable": true,
-                "mainDetailFieldFlag": false
-            }
-        ],
-        "label": "项目任务管理请假申请",
-        "physicalName": "t_xiangmurenwuguanliqingjiash",
-        "detailEntityFlag": false,
-        "layoutable": true,
-        "tags": "项目任务管理",
-        "idField": {
-            "name": "xiangmurenwuguanliqingjiashId",
-            "label": "id主键"
-        },
-        "sortedFieldSet": [
-            {
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "description": null,
-                "idFieldFlag": true,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-1b394fb8654b4a28a240334571b8e776",
-                "entityCode": 1227,
-                "name": "xiangmurenwuguanliqingjiashId",
-                "label": "id主键",
-                "displayOrder": 0,
-                "referTo": null,
-                "physicalName": "xiangmurenwuguanliqingjiashId",
-                "type": "PrimaryKey",
-                "nullable": false,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": false
-            },
-            {
-                "displayOrder": 0,
-                "updatable": true,
-                "type": "Date",
-                "name": "tianbiaoshijian",
-                "label": "填表时间",
-                "creatable": true,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1227,
-                "description": null,
-                "nullable": true,
-                "idFieldFlag": false,
-                "fieldId": "0000002-15b1d032df314deb9d01e855c8beda95",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "nameFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "referTo": null,
-                "fieldViewModel": {
-                    "validators": []
-                },
-                "referenceSetting": null,
-                "physicalName": "c_tianbiaoshijian"
-            },
-            {
-                "entityCode": 1227,
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "name": "shenqingren",
-                "physicalName": "c_shenqingren",
-                "type": "Reference",
-                "updatable": true,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "validators": [],
-                    "searchDialogWidth": 520
-                },
-                "fieldId": "0000002-5b7c9a0949dc40f6b846a29886658852",
-                "label": "申请人",
-                "referenceSetting": [
-                    {
-                        "entityName": "User",
-                        "fieldList": [
-                            "departmentId",
-                            "userName",
-                            "jobTitle"
-                        ]
-                    }
-                ]
-            },
-            {
-                "entityCode": 1227,
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "Reference",
-                "description": null,
-                "updatable": true,
-                "defaultMemberOfListFlag": true,
-                "name": "suozaibumen",
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referenceSetting": [
-                    {
-                        "entityName": "Department",
-                        "fieldList": [
-                            "departmentName",
-                            "departmentOwnerUser"
-                        ]
-                    }
-                ],
-                "label": "所在部门",
-                "physicalName": "c_suozaibumen",
-                "nullable": true,
-                "creatable": true,
-                "fieldViewModel": {
-                    "searchDialogWidth": 520,
-                    "validators": []
-                },
-                "fieldId": "0000002-d38a96f4f9d14460b32244151a2fc620",
-                "displayOrder": 0,
-                "nameFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            },
-            {
-                "entityCode": 1227,
-                "physicalName": "c_qingjialeixing",
-                "type": "Option",
-                "updatable": true,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": null,
-                "name": "qingjialeixing",
-                "idFieldFlag": false,
-                "label": "请假类型",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "description": null,
-                "displayOrder": 0,
-                "nullable": true,
-                "creatable": true,
-                "referTo": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-03a80baff54946d2bedd0c0352434591"
-            },
-            {
-                "mainDetailFieldFlag": false,
-                "defaultMemberOfListFlag": true,
-                "fieldViewModel": {
-                    "maxValue": 999999999,
-                    "minValue": -999999999,
-                    "validators": []
-                },
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "Integer",
-                "displayOrder": 0,
-                "idFieldFlag": false,
-                "nullable": true,
-                "creatable": true,
-                "updatable": true,
-                "referenceSetting": null,
-                "description": null,
-                "entityCode": 1227,
-                "name": "hejitianshu",
-                "label": "合计天数",
-                "physicalName": "c_hejitianshu",
-                "fieldId": "0000002-751b6d1ac38d4a948f28430e37125c56",
-                "nameFieldFlag": false,
-                "referTo": null
-            },
-            {
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "displayOrder": 0,
-                "nameFieldFlag": true,
-                "mainDetailFieldFlag": false,
-                "fieldId": "0000002-5d566a4b606a46d4860d492695ece58f",
-                "name": "qingjiashiyou",
-                "label": "请假事由",
-                "type": "TextArea",
-                "nullable": true,
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "description": null,
-                "updatable": true,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "physicalName": "c_qingjiashiyou",
-                "creatable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": {
-                    "rows": 3,
-                    "validators": [],
-                    "minLength": 0,
-                    "maxLength": 1000
-                }
-            },
-            {
-                "description": null,
-                "nullable": true,
-                "creatable": true,
-                "fieldId": "0000002-58690df6d5be4dc09a2c19e0fc83544e",
-                "name": "shangchuanzhengming",
-                "label": "上传证明",
-                "physicalName": "c_shangchuanzhengming",
-                "type": "File",
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": {
-                    "maxFileCount": 3,
-                    "fileMaxSize": 5,
-                    "uploadFileTypes": [],
-                    "uploadHint": "",
-                    "validators": []
-                },
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "displayOrder": 0,
-                "defaultMemberOfListFlag": false,
-                "referTo": null,
-                "updatable": true,
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "nameFieldFlag": false
-            },
-            {
-                "label": "创建时间",
-                "physicalName": "createdOn",
-                "updatable": false,
-                "idFieldFlag": false,
-                "referTo": null,
-                "referenceSetting": null,
-                "entityCode": 1227,
-                "name": "createdOn",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "DateTime",
-                "displayOrder": 0,
-                "nullable": false,
-                "fieldViewModel": null,
-                "fieldId": "0000002-21e64ffee4d74f4d8a2ea78d6597b105",
-                "defaultMemberOfListFlag": false,
-                "description": null,
-                "creatable": false,
-                "nameFieldFlag": false,
-                "mainDetailFieldFlag": false
-            },
-            {
-                "nameFieldFlag": false,
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "idFieldFlag": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldId": "0000002-175e7bb818c74bf0ac2246ef6018167b",
-                "label": "创建用户",
-                "fieldViewModel": null,
-                "mainDetailFieldFlag": false,
-                "entityCode": 1227,
-                "name": "createdBy",
-                "physicalName": "createdBy",
-                "creatable": false,
-                "referenceSetting": null
-            },
-            {
-                "nullable": true,
-                "idFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "name": "modifiedOn",
-                "type": "DateTime",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "fieldId": "0000002-e8dcbd6c1da947fca9b8b9c3390b6cbf",
-                "entityCode": 1227,
-                "creatable": false,
-                "mainDetailFieldFlag": false,
-                "referTo": null,
-                "label": "最近修改时间",
-                "physicalName": "modifiedOn",
-                "owner": {
-                    "label": "项目任务管理请假申请",
-                    "name": "Xiangmurenwuguanliqingjiash"
-                },
-                "nameFieldFlag": false
-            },
-            {
-                "entityCode": 1227,
-                "name": "modifiedBy",
-                "label": "修改用户",
-                "nullable": true,
-                "defaultMemberOfListFlag": false,
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "type": "Reference",
-                "description": null,
-                "displayOrder": 0,
-                "updatable": false,
-                "idFieldFlag": false,
-                "mainDetailFieldFlag": false,
-                "referTo": [
-                    {
-                        "name": "User",
-                        "label": "用户"
-                    }
-                ],
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "fieldId": "0000002-0de56f8f178840d19f2c8b087440fde4",
-                "physicalName": "modifiedBy",
-                "creatable": false,
-                "nameFieldFlag": false
-            },
-            {
-                "label": "所属用户",
-                "mainDetailFieldFlag": false,
-                "displayOrder": 0,
-                "nullable": false,
-                "updatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "label": "用户",
-                        "name": "User"
-                    }
-                ],
-                "fieldViewModel": null,
-                "physicalName": "ownerUser",
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "idFieldFlag": false,
-                "referenceSetting": null,
-                "fieldId": "0000002-668b9326b3074c9a9b1adb55e0cbd336",
-                "description": null,
-                "type": "Reference",
-                "creatable": false,
-                "nameFieldFlag": false,
-                "entityCode": 1227,
-                "name": "ownerUser"
-            },
-            {
-                "fieldId": "0000002-5a21b32b74ac42578d8087c31dac28fb",
-                "name": "ownerDepartment",
-                "idFieldFlag": false,
-                "nameFieldFlag": false,
-                "type": "Reference",
-                "nullable": false,
-                "entityCode": 1227,
-                "label": "所属部门",
-                "physicalName": "ownerDepartment",
-                "displayOrder": 0,
-                "updatable": false,
-                "mainDetailFieldFlag": false,
-                "fieldViewModel": null,
-                "referenceSetting": null,
-                "owner": {
-                    "name": "Xiangmurenwuguanliqingjiash",
-                    "label": "项目任务管理请假申请"
-                },
-                "description": null,
-                "creatable": false,
-                "defaultMemberOfListFlag": false,
-                "referTo": [
-                    {
-                        "name": "Department",
-                        "label": "部门"
-                    }
-                ]
-            }
-        ],
-        "mainDetailField": null,
-        "entityCode": 1227,
-        "authorizable": true,
-        "assignable": false,
-        "fieldNames": [
-            "xiangmurenwuguanliqingjiashId",
-            "createdOn",
-            "createdBy",
-            "modifiedOn",
-            "modifiedBy",
-            "ownerUser",
-            "ownerDepartment",
-            "tianbiaoshijian",
-            "shenqingren",
-            "suozaibumen",
-            "qingjialeixing",
-            "hejitianshu",
-            "qingjiashiyou",
-            "shangchuanzhengming"
-        ],
-        "name": "Xiangmurenwuguanliqingjiash",
-        "shareable": false,
-        "nameField": {
-            "label": "请假事由",
-            "name": "qingjiashiyou"
-        },
-        "virtualFieldSet": []
-    },
     "nameField": null,
-    "assignable": false,
+    "authorizable": false,
     "physicalName": "t_qingjiaxiangqing",
+    "mainEntity": "Xiangmurenwuguanliqingjiash",
+    "assignable": false,
     "fieldSet": [
         {
-            "referTo": null,
-            "name": "qingjiaxiangqingId",
-            "updatable": false,
             "type": "PrimaryKey",
-            "creatable": false,
-            "mainDetailFieldFlag": false,
+            "displayOrder": 0,
             "nameFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "fieldId": "0000002-427bf9de56b54123814d52b6c08f240d",
+            "label": "id主键",
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
             "physicalName": "qingjiaxiangqingId",
-            "reserved": true,
-            "idFieldFlag": true,
-            "label": "id主键"
+            "description": null,
+            "nullable": false,
+            "updatable": false,
+            "referenceSetting": null,
+            "entityCode": 1228,
+            "name": "qingjiaxiangqingId",
+            "creatable": false,
+            "idFieldFlag": true
         },
         {
+            "creatable": false,
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "name": "createdOn",
             "physicalName": "createdOn",
-            "reserved": true,
-            "updatable": false,
             "type": "DateTime",
             "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
+            "fieldId": "0000002-b5cfb73feaf44a3d862b9d19ce50747f",
+            "displayOrder": 0,
+            "idFieldFlag": false,
+            "nullable": false,
+            "updatable": false,
             "nameFieldFlag": false,
             "referTo": null,
-            "name": "createdOn",
-            "idFieldFlag": false,
+            "entityCode": 1228,
             "label": "创建时间",
+            "description": null
+        },
+        {
+            "displayOrder": 0,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "entityCode": 1228,
+            "physicalName": "createdBy",
+            "label": "创建用户",
+            "description": null,
+            "nullable": false,
+            "defaultMemberOfListFlag": false,
+            "referTo": "User,",
+            "fieldViewModel": null,
+            "fieldId": "0000002-6169bbf5eae6404ca75ddf33abd2ca27",
+            "name": "createdBy",
+            "referenceSetting": null,
+            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "type": "Reference",
             "creatable": false
         },
         {
-            "reserved": true,
-            "idFieldFlag": false,
-            "creatable": false,
-            "type": "Reference",
-            "nameFieldFlag": false,
-            "referTo": "User,",
-            "name": "createdBy",
-            "updatable": false,
-            "label": "创建用户",
-            "mainDetailFieldFlag": false,
-            "physicalName": "createdBy"
-        },
-        {
-            "label": "最近修改时间",
-            "mainDetailFieldFlag": false,
-            "physicalName": "modifiedOn",
-            "referTo": null,
             "name": "modifiedOn",
-            "updatable": false,
-            "idFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "fieldViewModel": null,
+            "fieldId": "0000002-c889375d2fe84063bfb67dc78423c9e1",
+            "nullable": true,
+            "defaultMemberOfListFlag": false,
+            "referTo": null,
+            "referenceSetting": null,
+            "label": "最近修改时间",
             "creatable": false,
+            "idFieldFlag": false,
+            "displayOrder": 0,
+            "updatable": false,
+            "nameFieldFlag": false,
+            "entityCode": 1228,
+            "physicalName": "modifiedOn",
             "type": "DateTime",
-            "nameFieldFlag": false,
-            "reserved": true
+            "description": null
         },
         {
-            "type": "Reference",
-            "physicalName": "modifiedBy",
-            "reserved": true,
+            "displayOrder": 0,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
+            "defaultMemberOfListFlag": false,
             "referTo": "User,",
+            "fieldId": "0000002-60d3660172b94cc483398f13e95c6674",
+            "entityCode": 1228,
+            "physicalName": "modifiedBy",
             "name": "modifiedBy",
-            "updatable": false,
             "label": "修改用户",
+            "referenceSetting": null,
+            "type": "Reference",
+            "updatable": false,
+            "fieldViewModel": null,
             "creatable": false,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "idFieldFlag": false
+            "idFieldFlag": false,
+            "description": null,
+            "nullable": true
         },
         {
             "type": "Reference",
-            "nameFieldFlag": false,
-            "physicalName": "mdXiangmurenwuguanliqingjiashId",
-            "name": "mdXiangmurenwuguanliqingjiashId",
-            "creatable": true,
-            "label": "主从关联Id",
+            "displayOrder": 0,
             "mainDetailFieldFlag": true,
-            "reserved": true,
-            "referTo": "Xiangmurenwuguanliqingjiash,",
+            "fieldViewModel": null,
+            "entityCode": 1228,
+            "name": "mdXiangmurenwuguanliqingjiashId",
+            "description": null,
+            "nullable": false,
             "updatable": false,
-            "idFieldFlag": false
-        },
-        {
-            "physicalName": "c_riqi",
-            "referTo": null,
-            "updatable": true,
-            "type": "Date",
-            "label": "日期",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "nameFieldFlag": false,
-            "reserved": false,
-            "name": "riqi",
-            "idFieldFlag": false
-        },
-        {
-            "label": "时段",
-            "type": "Option",
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_shiduan",
-            "reserved": false,
-            "referTo": null,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "name": "shiduan",
+            "referTo": "Xiangmurenwuguanliqingjiash,",
+            "referenceSetting": null,
+            "fieldId": "0000002-75233ee2086a4d70aed4d3df0159e4cf",
+            "physicalName": "mdXiangmurenwuguanliqingjiashId",
             "idFieldFlag": false,
+            "label": "主从关联Id",
             "creatable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true
+        },
+        {
+            "mainDetailFieldFlag": false,
+            "name": "riqi",
+            "physicalName": "c_riqi",
+            "type": "Date",
+            "description": null,
+            "label": "日期",
+            "updatable": true,
+            "idFieldFlag": false,
+            "fieldViewModel": {
+                "validators": []
+            },
+            "fieldId": "0000002-1e5dfa9a68d34388867ff010e4bcb1b1",
+            "displayOrder": 0,
+            "nullable": true,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "referTo": null,
+            "entityCode": 1228,
+            "referenceSetting": null
+        },
+        {
+            "fieldViewModel": null,
+            "referenceSetting": null,
+            "fieldId": "0000002-71457b51e3054617a0a274e0dd83af46",
+            "entityCode": 1228,
+            "name": "shiduan",
+            "displayOrder": 0,
+            "nullable": true,
+            "referTo": null,
+            "label": "时段",
+            "physicalName": "c_shiduan",
+            "type": "Option",
+            "idFieldFlag": false,
+            "updatable": true,
+            "defaultMemberOfListFlag": true,
+            "description": null,
+            "creatable": true,
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false,
             "optionList": [
                 {
                     "key": "全天",
@@ -998,16 +194,27 @@
         },
         {
             "name": "tianshu",
-            "idFieldFlag": false,
+            "displayOrder": 0,
+            "entityCode": 1228,
+            "nullable": true,
             "creatable": true,
-            "mainDetailFieldFlag": false,
-            "type": "Integer",
-            "nameFieldFlag": false,
-            "physicalName": "c_tianshu",
-            "reserved": false,
             "referTo": null,
+            "referenceSetting": null,
+            "fieldId": "0000002-3145e01ea8b34133b7c90dbe13f64a5c",
+            "physicalName": "c_tianshu",
+            "description": null,
+            "idFieldFlag": false,
+            "defaultMemberOfListFlag": true,
+            "fieldViewModel": {
+                "minValue": -999999999,
+                "validators": [],
+                "maxValue": 999999999
+            },
+            "label": "天数",
+            "type": "Integer",
             "updatable": true,
-            "label": "天数"
+            "nameFieldFlag": false,
+            "mainDetailFieldFlag": false
         }
     ]
 }
