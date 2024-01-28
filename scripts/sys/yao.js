@@ -12,9 +12,10 @@ function loadEntityToYao(entityName) {
  */
 function updateEntityToYao(entityName) {
   const yaoModel = entityToYaoModel(entityName);
+  console.log("yaoModel",yaoModel)
   loadYaoModel(yaoModel);
   migrateYaoModel(yaoModel);
-  return yaoModel
+  return yaoModel;
 }
 
 /**
@@ -35,7 +36,7 @@ function entityToYaoModel(entityName) {
     throw Error(`实体:${entityName} 不存在`);
   }
   if (!entity.fieldSet) {
-    console.log(`实体 ${entityName} 没有字段列表!!!!!!`)
+    console.log(`实体 ${entityName} 没有字段列表!!!!!!`);
   }
   let yaoModel = {
     name: entity.name,
@@ -108,14 +109,14 @@ function getYaoColumnFromField(field) {
       break;
     case "MultiOption":
     case "Option":
-      column.type = "enum";
-      column.option = Array.isArray(field.optionList)
-        ? field.optionList.map((f) => f.key)
-        : [];
+      column.type = "string";
+      // column.option = Array.isArray(field.optionList)
+      //   ? field.optionList.map((f) => f.value)
+      //   : [];
       break;
     case "Tag":
-      column.type = "enum";
-      column.option = Array.isArray(field.tagList) ? field.tagList : [];
+      column.type = "string";
+      // column.option = Array.isArray(field.tagList) ? field.tagList : [];
       break;
     case "Boolean":
       column.type = "boolean";
@@ -126,6 +127,8 @@ function getYaoColumnFromField(field) {
     case "DateTime":
       column.type = "datetime";
       break;
+    case "AnyReference": //一对多引用
+    case "ReferenceList": //多对多引用
     case "Reference": //暂时这样处理
       column.type = "string";
       break;

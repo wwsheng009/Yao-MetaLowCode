@@ -267,7 +267,7 @@ function getFormLayout(entityName) {
   if (!entity) {
     throw Error(`实体 ${entityName} 不存在`)
   }
-  const [formLayout] = Process("models.sys.form.layout.get", {
+  let [formLayout] = Process("models.sys.form.layout.get", {
     wheres: [
       {
         column: "entityCode",

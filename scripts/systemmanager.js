@@ -1,4 +1,4 @@
-const { UnderscoreName, toCamelCase,getEntityField } = Require("sys.lib");
+const { UnderscoreName, toCamelCase, getEntityField } = Require("sys.lib");
 
 const { updateEntityToYao } = Require("sys.yao");
 
@@ -403,7 +403,7 @@ function addField(field, entity) {
   if (row == null) {
     throw new Error(`Entity ${entity} 不存在`);
   }
-  const fieldData = getEntityField(entity,field.name);
+  const fieldData = getEntityField(entity, field.name);
   if (fieldData.fieldId) {
     // return { code: 300, message: `字段：${field.name} 已经存在` };
     throw new Error(`字段：${field.name} 已经存在`);
@@ -466,13 +466,13 @@ function updateField(field, entity) {
   //   referenceSetting: [],
   // };
 
-  const Field = getEntityField(entity,field.name);
+  const Field = getEntityField(entity, field.name);
   if (Field.fieldId) {
     Process("models.sys.entity.field.update", Field.fieldId, field);
     updateEntityToYao(entity);
     return true;
   }
-  return false;
+  return field;
 }
 
 /**
@@ -721,8 +721,8 @@ function createEntity(entity, mainEntity) {
 
   updateEntityToYao(entity.name);
 
-  fieldSet.forEach(f=>f.owner=owner)
-  sortedFieldSet.forEach(f=>f.owner=owner)
+  fieldSet.forEach((f) => (f.owner = owner));
+  sortedFieldSet.forEach((f) => (f.owner = owner));
 
   return {
     ...entity,
@@ -1041,8 +1041,80 @@ function addRefField(field, entity, refEntity) {
 function addAnyRefField(field, entity, referTo) {}
 
 function updateRefField(field, entity, refEntity) {
+  // updateRefField?entity=Cangkuguanli&refEntity=User
+  const data = {
+    name: "cangkuzhuguan",
+    label: "仓库主管",
+    type: "Reference",
+    defaultMemberOfListFlag: true,
+    nullable: false,
+    creatable: true,
+    updatable: true,
+    fieldViewModel: { searchDialogWidth: 520, validators: [] },
+    referenceSetting: [
+      {
+        entityName: "User",
+        fieldList: [
+          "userName",
+          "departmentId",
+          "jobTitle",
+          "mobilePhone",
+          "email",
+          "tatp",
+        ],
+      },
+    ],
+    entityCode: 1006,
+  };
+
+
   field.referTo = `${refEntity},`;
   return updateField(field, entity);
+
+  return {
+    fieldId: null,
+    entityCode: 1006,
+    name: "cangkuzhuguan",
+    label: "仓库主管",
+    physicalName: "c_cangkuzhuguan",
+    owner: {
+      name: "Cangkuguanli",
+      label: "仓库管理",
+    },
+    type: "Reference",
+    description: null,
+    displayOrder: 0,
+    nullable: false,
+    creatable: true,
+    updatable: true,
+    idFieldFlag: false,
+    nameFieldFlag: false,
+    mainDetailFieldFlag: false,
+    defaultMemberOfListFlag: true,
+    referTo: [
+      {
+        name: "User",
+        label: "用户",
+      },
+    ],
+    fieldViewModel: {
+      searchDialogWidth: 520,
+      validators: [],
+    },
+    referenceSetting: [
+      {
+        entityName: "User",
+        fieldList: [
+          "userName",
+          "departmentId",
+          "jobTitle",
+          "mobilePhone",
+          "email",
+          "tatp",
+        ],
+      },
+    ],
+  };
 }
 
 function updateAnyRefField(field, entity, referTo) {}
@@ -1056,7 +1128,7 @@ function updateAnyRefField(field, entity, referTo) {}
  * @returns`
  */
 function getField(entity, field) {
-  return getEntityField(entity,field);
+  return getEntityField(entity, field);
 }
 
 /**
@@ -1070,15 +1142,12 @@ function getField(entity, field) {
 function getRefFieldExtras(entity, field) {
   // entity = "Entity";
   // field = "r1";
-  const fieldData = getEntityField( entity,field);
+  const fieldData = getEntityField(entity, field);
   if (!fieldData) {
     return;
   }
-  let referenceSetting = fieldData.referenceSetting[0];
-  // console.log("referenceSetting", referenceSetting);
-  // referenceSetting = [{ entityName: "Entity1", fieldSet: ["d1", "time1"] }];
+  let referenceSetting = fieldData.referenceSetting? fieldData.referenceSetting[0]:{};
 
-  // let referTo = fieldData.referTo;
   let refEntityName = referenceSetting.entityName;
 
   const [referEntity] = Process("models.sys.entity.get", {
@@ -1099,20 +1168,10 @@ function getRefFieldExtras(entity, field) {
   }
 
   let selectedFieldItems = [];
-  // [
-  //   {
-  //     name: "modifiedOn",
-  //     label: "最近修改时间",
-  //   },
-  //   {
-  //     name: "ownerUser",
-  //     label: "所属用户",
-  //   },
-  // ]
   let lables = [];
 
   // console.log("referenceSetting.fieldSet", referenceSetting.fieldSet);
-  referenceSetting.fieldSet.forEach((item) => {
+  referenceSetting.fieldList?.forEach((item) => {
     let label = getLabel(item);
     selectedFieldItems.push({
       name: item,
@@ -1229,7 +1288,7 @@ function saveOptionItems(entity, field, optionItems) {
   //   { label: "a2", saved: true, value: 2 },
   //   { label: "a3", value: 3, saved: false },
   // ];
-  const Field = getEntityField(entity,field);
+  const Field = getEntityField(entity, field);
   if (Field.fieldId) {
     const options = optionItems.items.map((item) => {
       return {
@@ -1246,9 +1305,9 @@ function saveOptionItems(entity, field, optionItems) {
 }
 
 /**
- * 
+ *
  * yao run scripts.systemmanager.getTagFields
- * @returns 
+ * @returns
  */
 function getTagFields() {
   const entityList = Process("models.sys.entity.get", {
@@ -1322,7 +1381,7 @@ function saveTagItems(entity, field, tagItems) {
   //     { label: "tag33", value: "tag33", saved: false },
   //   ],
   // };
-  const Field = getEntityField(entity,field);
+  const Field = getEntityField(entity, field);
   if (Field.fieldId) {
     const options = tagItems.items.map((item) => {
       return item.value;

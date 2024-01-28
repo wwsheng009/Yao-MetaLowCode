@@ -1,5 +1,5 @@
 const { getEntityField, toCamelCase, getEntityByName } = Require("sys.lib");
-const { updateEntityToYao } = Require("sys.yao");
+const { updateEntityToYao, loadEntityToYao } = Require("sys.yao");
 
 function getCookie() {
   const cookie = Process("utils.env.Get", "METALOWCODE_COOKIE");
@@ -11,8 +11,13 @@ function getCookie() {
 /**
  * 下载实体定义
  *
+ * yao run scripts.systemmanager_import.download
+ *
  * yao run scripts.systemmanager_import.download 'LayoutConfig'
+ *
  * yao run scripts.systemmanager_import.download 'User'
+ *
+ * yao run scripts.systemmanager_import.download 'Baojiadan'
  * @param {string|null} entityName
  */
 function download(entityName) {
@@ -37,18 +42,37 @@ function download(entityName) {
     list = response.data.data;
     // 系统模型
     [
-      "ReportConfig",
-      "ApprovalConfig",
+      "OptionItem",
+      "TagItem",
+      "ReferenceListMap",
+      "ReferenceCache",
+      "SystemSetting",
+      "FormLayout",
+      "DataListView",
+      "RouterMenu",
+      "StatusItem",
       "LayoutConfig",
-      "TriggerConfig",
-      "FollowUp",
-      "TodoTask",
-      "MetaApi",
-      "Chart",
       "User",
       "Department",
       "Role",
       "Team",
+      "LoginLog",
+      "ApprovalConfig",
+      "ApprovalFlow",
+      "ApprovalHistory",
+      "ApprovalTask",
+      "ReportConfig",
+      "RecycleBin",
+      "Notification",
+      "TriggerConfig",
+      "RevisionHistory",
+      "ShareAccess",
+      "MetaApi",
+      "Chart",
+      "TriggerLog",
+      "FollowUp",
+      "TodoTask",
+      "BackupDatabase",
     ].forEach((key) => list.push({ name: key }));
   }
   console.log(`Entity count: ${list.length}`);
@@ -62,8 +86,33 @@ function download(entityName) {
     }
     const props = getEntityProps(entity.name, getCookie());
     Object.assign(entity, props);
-
+    if (
+      typeof entity.mainEntity === "object" &&
+      entity.mainEntity &&
+      entity.mainEntity.name
+    ) {
+      entity.mainEntity = entity.mainEntity.name;
+    }
     const fieldSet = getFieldList(entity.name, getCookie());
+
+    // for (let f of fieldSet) {
+
+    // }
+    fieldSet.forEach((f, idx) => {
+      // if (f.type === "Reference") {
+      let fieldData = getField(entity.name, f.name);
+      delete fieldData.owner;
+      if (Array.isArray(fieldData.referTo)) {
+        // console.log("fieldData.referTo",fieldData.referTo)
+        fieldData.referTo =
+          fieldData.referTo.map((r) => r.name).join(",") + ",";
+        // console.log("fieldData.referTo2",fieldData.referTo)
+      }
+      fieldSet[idx] = fieldData;
+      f = fieldData;
+      Process("utils.time.Sleep", 50);
+      // }
+    });
     Object.assign(entity, { fieldSet: fieldSet });
 
     entity = updateIdFieldName(entity);
@@ -72,15 +121,19 @@ function download(entityName) {
       `/entitys/${entity.name}.json`,
       JSON.stringify(entity, null, 4)
     );
-    Process("utils.time.Sleep", 1000);
+    Process("utils.time.Sleep", 100);
 
     console.log(`${index}/${list.length}:${entity.name} download finished`);
     index++;
   }
 
-  downloadOptionFields(entityName);
-  downloadTagFields(entityName);
-  importEntity(entityName);
+  downloadOptionFields(entityName); //字段的OptionList,需要单独下载
+  downloadTagFields(entityName); //字段的TagList，也需要单独的下载
+  importEntity(entityName); //导入实体定义到数据库
+  downloadFormLayout(entityName); //下载表单布局设置
+  if (!entityName) {
+    downlaodNav(); //下载导航设置
+  }
 }
 
 function updateIdFieldName(entity) {
@@ -99,6 +152,20 @@ function updateIdFieldName(entity) {
     entity.idFieldName = toCamelCase(entity.name) + "Id";
   }
   return entity;
+}
+
+function getField(entityName, fieldName) {
+  var currentTimestamp = new Date().getTime();
+
+  const response = http.Get(
+    `http://web1.demo.melecode.com/systemManager/getField?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
+    {},
+    {
+      Cookie: getCookie(),
+    }
+  );
+  checkRespone(response);
+  return response.data.data;
 }
 
 function getEntityProps(entityName, cookie) {
@@ -279,7 +346,7 @@ function downloadTagFields(entityName) {
 function getTagItems(entityName, field) {
   var currentTimestamp = new Date().getTime();
 
-  const response = http.post(
+  const response = http.Get(
     `http://web1.demo.melecode.com/systemManager/getTagItems?entity=${entityName}&field=${field}&_=${currentTimestamp}`,
     {},
     {
@@ -307,7 +374,10 @@ function checkRespone(response) {
 /**
  * import the entity from file
  *
+ * yao run scripts.systemmanager_import.importEntity
+ *
  * yao run scripts.systemmanager_import.importEntity 'User'
+ *
  * yao run scripts.systemmanager_import.importEntity 'TriggerConfig'
  * @param {string|null} entityName
  */
@@ -360,11 +430,14 @@ function importEntity(entityName) {
 
     entity = updateIdFieldName(entity);
     // check if is the system entity
-    delete entity.entityCode;
-    let entityCode = getSystemEntityCode(entity.name);
-    if (entityCode) {
-      entity.entityCode = entityCode;
+    if (!entity.entityCode) {
+      entity.entityCode = getSystemEntityCode(entity.name);
     }
+    // delete entity.entityCode;
+    // let entityCode = getSystemEntityCode(entity.name);
+    // if (entityCode) {
+    //   entity.entityCode = entityCode;
+    // }
     entityCode = Process("models.sys.entity.create", entity);
     if (!entityCode) {
       throw Error(`创建失败:${entity.name}`);
@@ -400,19 +473,38 @@ function importEntity(entityName) {
 function getSystemEntityMap() {
   //由于前端部分权限检查的代码绑定了实体的代码，实体名称和实体代码的映射关系保持一致
   return {
-    ReportConfig: 45,
-    ApprovalConfig: 30,
-    LayoutConfig: 15, //布局，系统级别的实体
-    TriggerConfig: 48,
-    FollowUp: 54,
-    TodoTask: 55,
-    FormLayout: 8,
-    MetaApi: 51,
-    Chart: 52,
-    User: 21,
-    Department: 22,
-    Role: 23,
-    Team: 24,
+    OptionItem: 3, //"单选项
+    TagItem: 4, //"多选项
+    ReferenceListMap: 5, //"多对多中间表
+    ReferenceCache: 6, //"名称字段缓存
+    SystemSetting: 7, //"系统参数
+    FormLayout: 8, //"表单布局
+    DataListView: 9, //"数据列表视图
+    RouterMenu: 10, //"系统导航菜单
+    StatusItem: 12, //"状态项
+    LayoutConfig: 15, //"布局设置
+    User: 21, //"用户
+    Department: 22, //"部门
+    Role: 23, //"权限角色
+    Team: 24, //"团队
+    LoginLog: 25, //"登录日志
+    ApprovalConfig: 30, //"审批配置
+    ApprovalFlow: 31, //"审批流程
+    ApprovalHistory: 32, //"审批历史
+    ApprovalTask: 33, //"审批任务
+    ReportConfig: 45, //"报表模板
+    RecycleBin: 46, //"回收站
+    Notification: 47, //"消息通知
+    TriggerConfig: 48, //"触发器
+    RevisionHistory: 49, //"修改历史
+    ShareAccess: 50, //"共享访问
+    MetaApi: 51, //"API管理
+    Chart: 52, //"仪表盘
+    TriggerLog: 53, //"触发器日志
+    FollowUp: 54, //"跟进
+    TodoTask: 55, //"待办
+    BackupDatabase: 56, //"数据库备份
+    Yanshishiti: 1001, //"演示实体
   };
 }
 
@@ -490,7 +582,6 @@ function getFormLayout(entityName) {
   // for good view
   // layoutForm.layoutJson = JSON.parse(layoutForm.layoutJson)
   Process("fs.system.WriteFile", fname, JSON.stringify(layoutForm, null, 4));
-
 
   // let data = {
   //   formLayoutId: "0000008-8c49a51e848f4421b24d86ed29f6db10",
@@ -596,4 +687,105 @@ function getFormLayout(entityName) {
   // };
 
   // return response.data.data;
+}
+
+/**
+ * 单独导入表单布局
+ * yao run scripts.systemmanager_import.importFormLayout
+ * @param {string|null} entityName
+ */
+function importFormLayout(entityName) {
+  let fileList = [];
+  if (entityName) {
+    fileList.push(`/formlayout/${entityName}.json`);
+  } else {
+    fileList = Process("fs.system.ReadDir", "/formlayout/");
+  }
+
+  let index = 0;
+  for (const f of fileList) {
+    let entityContent = Process("fs.system.ReadFile", f);
+    entityContent = JSON.parse(entityContent);
+
+    const [layout] = Process("models.sys.form.layout.get", {
+      wheres: [
+        {
+          column: "entityCode",
+          value: entityContent.entityCode,
+        },
+      ],
+    });
+    if (layout?.formLayoutId) {
+      entityContent.formLayoutId = layout?.formLayoutId;
+    }
+    Process("models.sys.form.layout.save", entityContent);
+
+    index++;
+    console.log(
+      `${index}/${fileList.length}:${entityContent.entityLabel} form layout imported`
+    );
+  }
+}
+
+//yao run scripts.systemmanager_import.downlaodNav
+function downlaodNav() {
+  var currentTimestamp = new Date().getTime();
+
+  const response = http.Get(
+    `http://web1.demo.melecode.com/layout/getNavigationList?_=${currentTimestamp}`,
+    {},
+    {
+      Cookie: getCookie(),
+    }
+  );
+  checkRespone(response);
+
+  let navData = response.data.data;
+  console.log("navData", navData);
+  Process(
+    "fs.system.writefile",
+    "/navList.json",
+    JSON.stringify(navData, null, 4)
+  );
+  importNav();
+}
+/**
+ * yao run scripts.systemmanager_import.importNav
+ */
+function importNav() {
+  const ftext = Process("fs.system.readfile", "/navList.json");
+  demoData = JSON.parse(ftext);
+
+  loadEntityToYao("LayoutConfig");
+  Process("models.LayoutConfig.deletewhere", {
+    wheres: [
+      {
+        column: "layoutConfigId",
+        op: "notnull",
+      },
+    ],
+  });
+  const navList = JSON.parse(demoData.topNavigation.config).navList;
+  demoData.navigationList.forEach((nav) => {
+    nav.applyType = "NAV";
+    const { formData } = Process("scripts.layout.saveConfig", null, null, nav);
+
+    navList.forEach((n) => {
+      if (n.layoutConfigId === nav.layoutConfigId) {
+        n.layoutConfigId = formData.layoutConfigId;
+      }
+    });
+  });
+
+  const topNav = {
+    configName: null,
+    shareTo: "ALL",
+    applyType: "TOP_NAV",
+    config: JSON.stringify({
+      navList,
+    }),
+  };
+  const { formData } = Process("scripts.layout.saveConfig", null, null, topNav);
+
+  console.log(formData);
 }

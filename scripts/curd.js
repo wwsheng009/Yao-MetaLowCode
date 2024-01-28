@@ -243,7 +243,58 @@ function refFieldQuery(
   pageSize,
   queryText,
   extraFilter
-) {}
+) {
+  // entity=User&refField=departmentId&pageNo=1&pageSize=10&queryText=&extraFilter=&_=1706449697186
+
+  return {
+    idFieldName: "departmentId",
+    nameFieldName: "departmentName",
+    columnList: [
+      {
+        prop: "departmentName",
+        width: "160",
+        label: "部门名称",
+        align: "center",
+        type: "Text",
+      },
+      {
+        prop: "parentDepartmentId",
+        width: "160",
+        label: "上级部门",
+        align: "center",
+        type: "Reference",
+      },
+    ],
+    dataList: [
+      {
+        departmentId: "0000022-00000000000000000000000000000001",
+        departmentName: "公司总部",
+        parentDepartmentId: null,
+      },
+      {
+        departmentId: "0000022-8b698fea6842441d8aafc0d5ba395401",
+        departmentName: "北京公司",
+        parentDepartmentId: {
+          id: "0000022-00000000000000000000000000000001",
+          name: "公司总部",
+        },
+      },
+      {
+        departmentId: "0000022-5c081c8aca3b4f18a3e7ced7f81eb0cb",
+        departmentName: "质量控制部",
+        parentDepartmentId: {
+          id: "0000022-8b698fea6842441d8aafc0d5ba395401",
+          name: "北京公司",
+        },
+      },
+    ],
+    pagination: {
+      pageSize: 10,
+      pageNo: 1,
+      total: 3,
+    },
+  };
+}
 
 function formUpdateQuery(entity, id) {}
 
