@@ -112,6 +112,9 @@ function checkRight(id, rightType, entityName) {
 }
 
 function getRightMap() {
+
+  //todo根据用户信息进行权限信息处理。
+  
   let rightMap = {
     r6000: true,
     r6001: true,
@@ -126,7 +129,7 @@ function getRightMap() {
     r6011: true,
     r6013: true,
     r6014: true,
-    r6015: true,
+    r6015: true, //触发器日志
     r6016: true,
     r6017: true,
   };
@@ -135,6 +138,30 @@ function getRightMap() {
     select: ["entityCode"],
     limit: 10000,
   });
+  //21 用户管理 User
+  //22 部门管理 Department
+  //23 权限角色 Role
+  //24 团队管理 Team
+  //30 审批流程
+  //45 报表设计
+  //48 触发器列表
+  //52 仪表盘
+  
+  [21, 22, 23, 24, 30,45, 48, 52].forEach((n) => {
+    codelist.push({
+      entityCode: n,
+    });
+  });
+
+  //操作：
+  //1 查看权限
+  //2 新建权限
+  //3 修改权限
+  //4 删除权限
+  //5 分配权限
+  //6 共享权限
+
+
   codelist.forEach((entity) => {
     rightMap[`r${entity.entityCode}-1`] = 50;
     rightMap[`r${entity.entityCode}-2`] = 50;
