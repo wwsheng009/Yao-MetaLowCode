@@ -187,43 +187,14 @@ function saveConfig(recordId, applyType2, formData) {
   loadEntityToYao("LayoutConfig");
   // 自定义列表显示，shareTo = SELF
   // 默认列表显示，shareTo = ALL
-  // const [layoutConfig] = Process("models.layoutconfig.get", {
-  //   wheres: [
-  //     {
-  //       column: "shareTo",
-  //       value: shareTo,
-  //     },
-  //     {
-  //       column: "applyType",
-  //       value: applyType,
-  //     },
-  //     {
-  //       column: "entityCode",
-  //       value: entityCode,
-  //     },
-  //   ],
-  // });
-  // let idstr = null;
-  // if (layoutConfig?.layoutConfigId) {
-  //   idstr = entityCode + "-" + layoutConfig?.layoutConfigId;
-  // }
-  const configId = Process("scripts.curd.saveRecord", "LayoutConfig", idstr, {
+  const data = Process("scripts.curd.saveRecord", "LayoutConfig", idstr, {
     configName,
     config,
     applyType,
     entityCode,
     shareTo,
   });
-  return {
-    formData: {
-      layoutConfigId: configId,
-      configName,
-      config,
-      applyType,
-      entityCode,
-      shareTo,
-    },
-  };
+  return data;
   // formModel = {"config":"[{\"isUpdatable\":false,\"fieldName\":\"yonghuId\",\"isNameField\":false,\"fieldLabel\":\"id主键\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"PrimaryKey\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]","entityCode":1532,"applyType":"LIST","shareTo":"ALL"}
   // return `${entityLayoutConfig.entityCode}-${configId}`;
 }
