@@ -96,23 +96,18 @@ function download(entityName) {
     }
     const fieldSet = getFieldList(entity.name, getCookie());
 
-    // for (let f of fieldSet) {
 
-    // }
     fieldSet.forEach((f, idx) => {
-      // if (f.type === "Reference") {
       let fieldData = getField(entity.name, f.name);
       delete fieldData.owner;
       if (Array.isArray(fieldData.referTo)) {
-        // console.log("fieldData.referTo",fieldData.referTo)
         fieldData.referTo =
           fieldData.referTo.map((r) => r.name).join(",") + ",";
-        // console.log("fieldData.referTo2",fieldData.referTo)
       }
       fieldSet[idx] = fieldData;
       f = fieldData;
       Process("utils.time.Sleep", 50);
-      // }
+      
     });
     Object.assign(entity, { fieldSet: fieldSet });
 
@@ -235,14 +230,12 @@ function downloadOptionFields(entityName) {
       const optionItems = getOptionItems(option.entityName, field.fieldName);
       const options = optionItems.map((item) => {
         return {
-          key: item.label,
+          label: item.label,
           value: item.value,
+          displayOrder: item.displayOrder,
         };
       });
-      //   console.log("optionItems",optionItems)
       const fieldData = getEntityField(option.entityName, field.fieldName);
-      //   console.log("fieldData",fieldData)
-
       if (fieldData.fieldId) {
         Process("models.sys.entity.field.update", fieldData.fieldId, {
           optionList: options,
@@ -294,7 +287,7 @@ function getOptionItems(entityName, fieldName) {
       },
     ],
   });
-  OptionItems.forEach((item,idx) => {
+  OptionItems.forEach((item, idx) => {
     item.displayOrder = idx + 1;
     item.systemFlag ||= 0;
   });
@@ -642,115 +635,11 @@ function getFormLayout(entityName) {
   // layoutForm.layoutJson = JSON.parse(layoutForm.layoutJson)
   Process("fs.system.WriteFile", fname, JSON.stringify(layoutForm, null, 4));
 
-  // let data = {
-  //   formLayoutId: "0000008-8c49a51e848f4421b24d86ed29f6db10",
-  //   layoutName: "默认表单布局",
-  //   entityCode: 21,
-  //   layoutJson:'',
-  //   createdOn: "2023-10-12 13:32:22",
-  //   createdBy: "0000021-00000000000000000000000000000001",
-  //   modifiedOn: "2023-10-17 11:35:36",
-  //   modifiedBy: "0000021-00000000000000000000000000000001",
-  //   optionData: {
-  //     jobTitle: [
-  //       {
-  //         value: 4,
-  //         label: "总监",
-  //         displayOrder: 1,
-  //       },
-  //       {
-  //         value: 2,
-  //         label: "主管",
-  //         displayOrder: 2,
-  //       },
-  //       {
-  //         value: 3,
-  //         label: "经理",
-  //         displayOrder: 3,
-  //       },
-  //       {
-  //         value: 5,
-  //         label: "部长",
-  //         displayOrder: 4,
-  //       },
-  //       {
-  //         value: 1,
-  //         label: "员工",
-  //         displayOrder: 5,
-  //       },
-  //       {
-  //         value: 6,
-  //         label: "a",
-  //         displayOrder: 6,
-  //       },
-  //       {
-  //         value: 7,
-  //         label: "测试",
-  //         displayOrder: 7,
-  //       },
-  //     ],
-  //     aaaaaa: [
-  //       {
-  //         value: 1,
-  //         label: "11",
-  //         displayOrder: 1,
-  //       },
-  //       {
-  //         value: 2,
-  //         label: "222",
-  //         displayOrder: 2,
-  //       },
-  //       {
-  //         value: 3,
-  //         label: "33",
-  //         displayOrder: 3,
-  //       },
-  //       {
-  //         value: 4,
-  //         label: "111",
-  //         displayOrder: 4,
-  //       },
-  //     ],
-  //     yonghuxingbie: [
-  //       {
-  //         value: 1,
-  //         label: "男",
-  //         displayOrder: 1,
-  //       },
-  //       {
-  //         value: 2,
-  //         label: "女",
-  //         displayOrder: 2,
-  //       },
-  //     ],
-  //   },
-  //   formUploadParam: {
-  //     cloudStorage: "false",
-  //     cloudUploadToken: "",
-  //     picUploadURL: "DSV['uploadServer'] + '/picture/upload'",
-  //     fileUploadURL: "DSV['uploadServer'] + '/file/upload'",
-  //     picDownloadPrefix: "/picture/get/",
-  //     fileDownloadPrefix: "/file/get/",
-  //   },
-  //   entityRecord: {
-  //     modifiedOn: "2023-10-17 11:35:36",
-  //     entityCode: 21,
-  //     formLayoutId: "0000008-8c49a51e848f4421b24d86ed29f6db10",
-  //     createdBy: "0000021-00000000000000000000000000000001",
-  //     modifiedBy: "0000021-00000000000000000000000000000001",
-  //     layoutJson:
-  //       '',
-  //     createdOn: "2023-10-12 13:32:22",
-  //     layoutName: "默认表单布局",
-  //   },
-  // };
-
-  // return response.data.data;
 }
 
 /**
  * 有了表单布局才能使用表单创建数据。
- * 
+ *
  * 单独导入表单布局
  * yao run scripts.systemmanager_import.importFormLayout
  * @param {string|null} entityName
@@ -849,4 +738,158 @@ function importNav() {
   const { formData } = Process("scripts.layout.saveConfig", null, null, topNav);
 
   console.log(formData);
+}
+
+/**
+ * yao run scripts.systemmanager_import.downloadLayoutList 'WMSgongyingshangxinxi'
+ * @param {string|null} entityName 
+ */
+function downloadLayoutList(entityName){
+  let entiyList = [];
+  if (entityName) {
+    entiyList.push(entityName);
+  } else {
+    const list = Process("models.sys.entity.get", {
+      select: ["name"],
+      limit: 10000,
+    });
+    list.forEach((l) => entiyList.push(l.name));
+  }
+
+  let index = 0;
+  entiyList.forEach((name) => {
+    getLayoutList(name);
+    index++;
+    console.log(`${index}/${entiyList.length}:${name} layout list downlaod`);
+    Process("utils.time.Sleep", 500);
+  });
+}
+
+function getLayoutList(entityName) {
+  var currentTimestamp = new Date().getTime();
+  const response = http.Get(
+    `http://web1.demo.melecode.com/layout/getLayoutList?entityName=${entityName}&_=${currentTimestamp}`,
+    {},
+    {
+      Cookie: getCookie(),
+    }
+  );
+  checkRespone(response);
+
+  let data = response.data.data;
+  Process(
+    "fs.system.writefile",
+    `/layoutlist/${entityName}.json`,
+    JSON.stringify(data, null, 4)
+  );
+  return  data
+}
+
+/**
+ * yao run scripts.systemmanager_import.importLayoutList
+ * @param {string} entityName 
+ */
+function importLayoutList(entityName){
+
+  let fileList = [];
+  if (entityName) {
+    fileList.push(`/layoutlist/${entityName}.json`);
+  } else {
+    fileList = Process("fs.system.ReadDir", "/layoutlist/");
+  }
+
+  function saveConfig(config){
+    if (!config) {
+      return
+    }
+    Process("models.layoutconfig.deletewhere", {
+      wheres: [
+        {
+          column: "entityCode",
+          value: config.entityCode,
+        },
+        {
+          column: "applyType",
+          value: config.applyType,
+        },
+        {
+          column: "shareTo",
+          value: config.shareTo,
+        },
+      ],
+    });
+    delete config.layoutConfigId
+    delete config.createdBy
+    Process("models.layoutconfig.save", config);
+
+  }
+  let index = 0;
+  for (const f of fileList) {
+    let entityContent = Process("fs.system.ReadFile", f);
+    entityContent = JSON.parse(entityContent);
+
+    saveConfig(entityContent["SEARCH"])//搜索字段
+    saveConfig(entityContent["TAB"])//加载页签
+    saveConfig(entityContent["ADD"])//创建相关
+    if (entityContent["LIST"]) {  
+      saveConfig(entityContent["LIST"]["ALL"])//列表-默认
+      saveConfig(entityContent["LIST"]["SELF"])//列表-自定义
+    }
+    index++;
+    console.log(
+      `${index}/${fileList.length}:${entityContent.entityLabel} form layout imported`
+    );
+  }
+}
+/**
+ * yao run scripts.systemmanager_import.downloadEntityData 'User'
+ * @param {string} entityName 
+ * @returns 
+ */
+function downloadEntityData(entityName) {
+  var currentTimestamp = new Date().getTime();
+
+  const [entity] = Process("models.sys.entity.get", {
+    select: ["name"],
+    wheres: [
+      {
+        column: "name",
+        value: entityName,
+      },
+    ],
+    withs: {
+      fieldSet: {
+        query: {
+          select: ["name", "label", "type"],
+        },
+      },
+    },
+  });
+  if (!entity?.fieldSet) {
+    throw Error(`实体:${entityName}不存在`)
+  }
+
+  const response = http.Post(
+    `http://web1.demo.melecode.com/crud/listQuery?_=${currentTimestamp}`,
+    {
+      mainEntity: entityName,
+      fieldsList:entity.fieldSet.map(f=>f.name).join(','),
+      filter: { equation: "AND", items: [] },
+      pageSize: 200000,
+      pageNo: 1,
+      sortFields: [{ fieldName: "modifiedOn", type: "DESC" }],
+      advFilter: {},
+      quickFilter: "",
+      builtInFilter: {},
+      statistics: [],
+    },
+    null,
+    null,
+    {
+      Cookie: getCookie(),
+    }
+  );
+  checkRespone(response);
+
+  return response.data.data;
 }
