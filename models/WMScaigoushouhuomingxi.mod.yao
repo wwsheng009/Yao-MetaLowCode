@@ -1,0 +1,73 @@
+{
+  "name": "WMScaigoushouhuomingxi",
+  "label": "WMS采购收货明细",
+  "table": {
+    "name": "t_wmscaigoushouhuomingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigoushouhuomingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdWMScaigoushouhuodanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品明细",
+      "label": "产品明细",
+      "name": "chanpinmingxi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实际收货数量",
+      "label": "实际收货数量",
+      "name": "shijishouhuoshuliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实收缺失数量",
+      "label": "实收缺失数量",
+      "name": "shishouqueshishuliang",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

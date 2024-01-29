@@ -1,0 +1,191 @@
+{
+  "name": "WMSgongyinshangbaojia",
+  "label": "WMS供应商报价",
+  "table": {
+    "name": "t_wmsgongyinshangbaojia"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSgongyinshangbaojiaId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdWMScaigouxunbaojiaId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择需求",
+      "label": "选择需求",
+      "name": "xuanzexuqiu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购需求编号",
+      "label": "采购需求编号",
+      "name": "caigouxuqiubianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品编码",
+      "label": "产品编码",
+      "name": "chanpinbianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "品牌",
+      "label": "品牌",
+      "name": "pinpai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "规格型号",
+      "label": "规格型号",
+      "name": "guigexinghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品属性",
+      "label": "产品属性",
+      "name": "chanpinshuxing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品类型",
+      "label": "产品类型",
+      "name": "chanpinleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "单位",
+      "label": "单位",
+      "name": "danwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "历史报价(含税)/元",
+      "label": "历史报价(含税)/元",
+      "name": "lishibaojiyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "标准采购单价(含税)/元",
+      "label": "标准采购单价(含税)/元",
+      "name": "biaozhuncaigoudanjiyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "采购数量需求",
+      "label": "采购数量需求",
+      "name": "caigoushuliangxuqiu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "报价单价(含税)/元",
+      "label": "报价单价(含税)/元",
+      "name": "baojiadanjianshuiuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "标准价折扣率 %",
+      "label": "标准价折扣率 %",
+      "name": "biaozhunjiazheko",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "增值税税率%",
+      "label": "增值税税率%",
+      "name": "zengzhishuishuil",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "税额/元",
+      "label": "税额/元",
+      "name": "shuiyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "报价总价(含税)/元",
+      "label": "报价总价(含税)/元",
+      "name": "baojiazongjin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报价单价(不含税)/元",
+      "label": "报价单价(不含税)/元",
+      "name": "baojiadanjibuhanshan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "报价总价(不含税)/元",
+      "label": "报价总价(不含税)/元",
+      "name": "baojiazongjiabuhanshuiuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

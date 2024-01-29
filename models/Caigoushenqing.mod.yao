@@ -1,0 +1,165 @@
+{
+  "name": "Caigoushenqing",
+  "label": "采购申请",
+  "table": {
+    "name": "t_caigoushenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "caigoushenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购申请编号",
+      "label": "采购申请编号",
+      "name": "caigoushenqingbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请人",
+      "label": "申请人",
+      "name": "shenqingren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请日期",
+      "label": "申请日期",
+      "name": "shenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "到货需求日期",
+      "label": "到货需求日期",
+      "name": "daohuoxuqiuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "需求来源",
+      "label": "需求来源",
+      "name": "xuqiulaiyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库仓库",
+      "label": "入库仓库",
+      "name": "rukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "到货地址",
+      "label": "到货地址",
+      "name": "daohuodizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "具体地址",
+      "label": "具体地址",
+      "name": "jutidizhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购价格总额(含税)/元",
+      "label": "采购价格总额(含税)/元",
+      "name": "caigoujiagezonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

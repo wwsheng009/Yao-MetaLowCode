@@ -1,0 +1,74 @@
+{
+  "name": "Shengchanchanpinmingxi",
+  "label": "生产产品明细",
+  "table": {
+    "name": "t_shengchanchanpinmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shengchanchanpinmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdShengchanjihuaId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "计划生产数量",
+      "label": "计划生产数量",
+      "name": "jihuashengchanshuliang",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "生产班组",
+      "label": "生产班组",
+      "name": "shengchanbanzu",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

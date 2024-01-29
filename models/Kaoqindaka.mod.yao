@@ -1,0 +1,87 @@
+{
+  "name": "Kaoqindaka",
+  "label": "补卡申请",
+  "table": {
+    "name": "t_kaoqindaka"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "kaoqindakaId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "补签日期",
+      "label": "补签日期",
+      "name": "buqianriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "补签时间段",
+      "label": "补签时间段",
+      "name": "buqianshijianduan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "补签事由说明",
+      "label": "补签事由说明",
+      "name": "buqianshiyoushuoming",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

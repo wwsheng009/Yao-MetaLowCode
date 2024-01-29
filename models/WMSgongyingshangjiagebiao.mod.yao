@@ -1,0 +1,119 @@
+{
+  "name": "WMSgongyingshangjiagebiao",
+  "label": "WMS供应商价格表",
+  "table": {
+    "name": "t_wmsgongyingshangjiagebiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSgongyingshangjiagebiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商名称",
+      "label": "供应商名称",
+      "name": "gongyingshang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "标准采购单价(含税)/元",
+      "label": "标准采购单价(含税)/元",
+      "name": "biaozhuncaigoudanjyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "采购单价(含税)/元",
+      "label": "采购单价(含税)/元",
+      "name": "caigoudanjiahanshyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "折扣率%",
+      "label": "折扣率%",
+      "name": "zhekoul",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "增值税税率 %",
+      "label": "增值税税率 %",
+      "name": "zengzhishuishuil",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "采购单价(不含税)/元",
+      "label": "采购单价(不含税)/元",
+      "name": "caigoudanjiabuhanshuyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "税额/元",
+      "label": "税额/元",
+      "name": "shuieyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

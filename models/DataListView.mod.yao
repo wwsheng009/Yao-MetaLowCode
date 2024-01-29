@@ -1,0 +1,94 @@
+{
+  "name": "DataListView",
+  "label": "数据列表视图",
+  "table": {
+    "name": "t_data_list_view"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "dataListViewId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "实体编码",
+      "label": "实体编码",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "列表视图名称",
+      "label": "列表视图名称",
+      "name": "viewName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "表头Json",
+      "label": "表头Json",
+      "name": "headerJson",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "筛选条件Json",
+      "label": "筛选条件Json",
+      "name": "filterJson",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "分页Json",
+      "label": "分页Json",
+      "name": "paginationJson",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "排序Json",
+      "label": "排序Json",
+      "name": "sortJson",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "内置筛选条件",
+      "label": "内置筛选条件",
+      "name": "presetFilter",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

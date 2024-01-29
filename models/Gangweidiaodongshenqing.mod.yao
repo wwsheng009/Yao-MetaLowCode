@@ -1,0 +1,157 @@
+{
+  "name": "Gangweidiaodongshenqing",
+  "label": "岗位调动申请",
+  "table": {
+    "name": "t_gangweidiaodongshenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "gangweidiaodongshenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调动员工",
+      "label": "调动员工",
+      "name": "diaodongyuangong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请日期",
+      "label": "申请日期",
+      "name": "shenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "原部门",
+      "label": "原部门",
+      "name": "yuanbumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "现调入部门",
+      "label": "现调入部门",
+      "name": "xiantiaorubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "原岗位",
+      "label": "原岗位",
+      "name": "yuangangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "现岗位",
+      "label": "现岗位",
+      "name": "xiangangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调动原因",
+      "label": "调动原因",
+      "name": "diaodongyuanyin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位调动生效时间",
+      "label": "岗位调动生效时间",
+      "name": "gangweidiaodongsheng",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

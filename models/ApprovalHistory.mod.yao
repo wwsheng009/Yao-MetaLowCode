@@ -1,0 +1,122 @@
+{
+  "name": "ApprovalHistory",
+  "label": "审批历史",
+  "table": {
+    "name": "t_approval_history"
+  },
+  "columns": [
+    {
+      "comment": "流程任务id",
+      "label": "流程任务id",
+      "name": "approvalHistoryId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "审批流程id",
+      "label": "审批流程id",
+      "name": "approvalTaskId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批人",
+      "label": "审批人",
+      "name": "approver",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批时间",
+      "label": "审批时间",
+      "name": "approvalOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "批注",
+      "label": "批注",
+      "name": "remark",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "是否驳回",
+      "label": "是否驳回",
+      "name": "isBacked",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "扩展属性 (JSON Map)",
+      "label": "扩展属性 (JSON Map)",
+      "name": "attrMore",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "步骤名称",
+      "label": "步骤名称",
+      "name": "stepName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "节点类型",
+      "label": "节点类型",
+      "name": "nodeType",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "步骤节点",
+      "label": "步骤节点",
+      "name": "currentNode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "当前步骤抄送人",
+      "label": "当前步骤抄送人",
+      "name": "currentCCTo",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "签名图片",
+      "label": "签名图片",
+      "name": "signatureImage",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

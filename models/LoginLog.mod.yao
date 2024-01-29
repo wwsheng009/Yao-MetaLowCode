@@ -1,0 +1,94 @@
+{
+  "name": "LoginLog",
+  "label": "登录日志",
+  "table": {
+    "name": "t_login_log"
+  },
+  "columns": [
+    {
+      "comment": "登录用户",
+      "label": "登录用户",
+      "name": "loginUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "登出时间",
+      "label": "登出时间",
+      "name": "logoutTime",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "登出类型",
+      "label": "登出类型",
+      "name": "logoutType",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "已登出",
+      "label": "已登出",
+      "name": "logout",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "sessionId",
+      "label": "sessionId",
+      "name": "sessionId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "浏览器",
+      "label": "浏览器",
+      "name": "browserName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "登录ip",
+      "label": "登录ip",
+      "name": "ip",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "loginLogId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    }
+  ]
+}

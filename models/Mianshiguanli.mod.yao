@@ -1,0 +1,94 @@
+{
+  "name": "Mianshiguanli",
+  "label": "面试管理",
+  "table": {
+    "name": "t_mianshiguanli"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "mianshiguanliId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择简历",
+      "label": "选择简历",
+      "name": "xuanzejianli",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发起时间",
+      "label": "发起时间",
+      "name": "faqishijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "需要几次面试",
+      "label": "需要几次面试",
+      "name": "xuyaojicimianshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机号",
+      "label": "手机号",
+      "name": "shoujihao",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

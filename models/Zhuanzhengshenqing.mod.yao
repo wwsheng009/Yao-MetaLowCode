@@ -1,0 +1,150 @@
+{
+  "name": "Zhuanzhengshenqing",
+  "label": "转正申请",
+  "table": {
+    "name": "t_zhuanzhengshenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "zhuanzhengshenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "转正员工",
+      "label": "转正员工",
+      "name": "zhuanzhengyuangong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请日期",
+      "label": "申请日期",
+      "name": "shenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "员工部门",
+      "label": "员工部门",
+      "name": "yuangongbumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入职日期",
+      "label": "入职日期",
+      "name": "ruzhiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "拟转正日期",
+      "label": "拟转正日期",
+      "name": "nizhuanzhengriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "试用期评价",
+      "label": "试用期评价",
+      "name": "shiyongqipingjia",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "附件",
+      "label": "附件",
+      "name": "fujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

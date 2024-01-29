@@ -1,0 +1,103 @@
+{
+  "name": "Wuxianyijinjiaonajishu",
+  "label": "五险一金缴纳基数",
+  "table": {
+    "name": "t_wuxianyijinjiaonajishu"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wuxianyijinjiaonajishuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工姓名",
+      "label": "员工姓名",
+      "name": "yuangongxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所在部门",
+      "label": "所在部门",
+      "name": "suozaibumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位",
+      "label": "岗位",
+      "name": "gangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "参保地",
+      "label": "参保地",
+      "name": "canbaodi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "社保基数",
+      "label": "社保基数",
+      "name": "shebaojishu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "公积金基数",
+      "label": "公积金基数",
+      "name": "gongjijinjishu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

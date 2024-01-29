@@ -1,0 +1,66 @@
+{
+  "name": "WMSfukuandantuihuochamingxi",
+  "label": "WMS付款单退货产品明细",
+  "table": {
+    "name": "t_wmsfukuandantuihuochamingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSfukuandantuihuochamingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdWMSfukuandanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货产品明细",
+      "label": "退货产品明细",
+      "name": "tuihuochanpinmingxi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "本次付款数量",
+      "label": "本次付款数量",
+      "name": "bencifshuliang",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

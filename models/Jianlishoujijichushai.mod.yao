@@ -1,0 +1,199 @@
+{
+  "name": "Jianlishoujijichushai",
+  "label": "简历收集及初筛",
+  "table": {
+    "name": "t_jianlishoujijichushai"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "jianlishoujijichushaiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "简历编号",
+      "label": "简历编号",
+      "name": "jianlibianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "简历上传",
+      "label": "简历上传",
+      "name": "jianlishangchuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "作品集",
+      "label": "作品集",
+      "name": "zuopinji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择意向岗位",
+      "label": "选择意向岗位",
+      "name": "xuanzeyixianggangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "是否接受调剂",
+      "label": "是否接受调剂",
+      "name": "shifoujieshoutiaoji",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "性别",
+      "label": "性别",
+      "name": "xingbie",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "民族",
+      "label": "民族",
+      "name": "minzu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "籍贯",
+      "label": "籍贯",
+      "name": "jiguan",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "政治面貌",
+      "label": "政治面貌",
+      "name": "zhengzhimianmao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机",
+      "label": "手机",
+      "name": "shouji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "邮箱",
+      "label": "邮箱",
+      "name": "youxiang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出生年月日",
+      "label": "出生年月日",
+      "name": "chushengnianyueri",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "年龄",
+      "label": "年龄",
+      "name": "nianling",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最高学历",
+      "label": "最高学历",
+      "name": "zuigaoxueli",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "学校",
+      "label": "学校",
+      "name": "xuexiao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "专业",
+      "label": "专业",
+      "name": "zhuanye",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "毕业时间",
+      "label": "毕业时间",
+      "name": "biyeshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "婚育情况",
+      "label": "婚育情况",
+      "name": "hunyuqingkuang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "是否内推",
+      "label": "是否内推",
+      "name": "shifouneitui",
+      "nullable": true,
+      "type": "boolean"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "name": "Jiabanshenqing",
+  "label": "加班申请",
+  "table": {
+    "name": "t_jiabanshenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "jiabanshenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "加班单号",
+      "label": "加班单号",
+      "name": "qingjiadanhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "加班类型",
+      "label": "加班类型",
+      "name": "qingjialeixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工",
+      "label": "员工",
+      "name": "yuangong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "加班事由说明",
+      "label": "加班事由说明",
+      "name": "qingjiashiyoushuoming",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "相关证明",
+      "label": "相关证明",
+      "name": "xiangguanzhengming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "加班总天数",
+      "label": "加班总天数",
+      "name": "hejiqingjiatianshu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 1
+    }
+  ]
+}

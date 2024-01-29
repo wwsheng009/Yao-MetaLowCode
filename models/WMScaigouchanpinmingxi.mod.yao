@@ -1,0 +1,108 @@
+{
+  "name": "WMScaigouchanpinmingxi",
+  "label": "WMS采购产品明细",
+  "table": {
+    "name": "t_wmscaigouchanpinmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigouchanpinmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdWMScaigoushenqingId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品编码",
+      "label": "产品编码",
+      "name": "chanpinbianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "品牌",
+      "label": "品牌",
+      "name": "pinpai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "规格型号",
+      "label": "规格型号",
+      "name": "guigexinghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "单位",
+      "label": "单位",
+      "name": "danwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "当前可用库存数量",
+      "label": "当前可用库存数量",
+      "name": "dangqiankeyongkucunshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "采购数量需求",
+      "label": "采购数量需求",
+      "name": "caigoushuliangxuqiu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "需求池",
+      "label": "需求池",
+      "name": "xuqiuchi",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

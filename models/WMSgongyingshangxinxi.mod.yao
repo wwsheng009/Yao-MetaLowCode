@@ -1,0 +1,214 @@
+{
+  "name": "WMSgongyingshangxinxi",
+  "label": "WMS供应商信息",
+  "table": {
+    "name": "t_wmsgongyingshangxinxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSgongyingshangxinxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商编码",
+      "label": "供应商编码",
+      "name": "gongyingshangbianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商名称",
+      "label": "供应商名称",
+      "name": "gongyingshangmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商分类",
+      "label": "供应商分类",
+      "name": "gongyingshangfenlei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商等级",
+      "label": "供应商等级",
+      "name": "gongyingshangdengji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "签约开始日期",
+      "label": "签约开始日期",
+      "name": "qianyuekaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "签约结束日期",
+      "label": "签约结束日期",
+      "name": "qianyuejieshuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "结算期限",
+      "label": "结算期限",
+      "name": "jiesuanqixian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "信用额度/元",
+      "label": "信用额度/元",
+      "name": "xinyongeduyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "采购负责人",
+      "label": "采购负责人",
+      "name": "caigoufuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购归属部门",
+      "label": "采购归属部门",
+      "name": "caigouguishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同附件",
+      "label": "合同附件",
+      "name": "hetongfujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商地址",
+      "label": "供应商地址",
+      "name": "gongyingshangdizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "供应商详细地址",
+      "label": "供应商详细地址",
+      "name": "gongyingshangxiangxidizhi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "发票抬头",
+      "label": "发票抬头",
+      "name": "fapiaotaitou",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票税号",
+      "label": "发票税号",
+      "name": "fapiaoshuihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "税种",
+      "label": "税种",
+      "name": "shuizhong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "增值税税率 %",
+      "label": "增值税税率 %",
+      "name": "zengzhishuishuil",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "开户银行",
+      "label": "开户银行",
+      "name": "kaihuyinhang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "银行账号",
+      "label": "银行账号",
+      "name": "yinhangzhanghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人姓名",
+      "label": "联系人姓名",
+      "name": "lianxirenxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人手机",
+      "label": "联系人手机",
+      "name": "lianxirenshouji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人职位",
+      "label": "联系人职位",
+      "name": "lianxirenzhiwei",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

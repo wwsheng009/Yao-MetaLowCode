@@ -1,0 +1,73 @@
+{
+  "name": "Lianxirenxinxi",
+  "label": "联系人信息",
+  "table": {
+    "name": "t_lianxirenxinxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "lianxirenxinxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdKehuguanliId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机",
+      "label": "手机",
+      "name": "shouji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "职位",
+      "label": "职位",
+      "name": "zhiwei",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

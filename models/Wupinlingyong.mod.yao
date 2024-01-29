@@ -1,0 +1,108 @@
+{
+  "name": "Wupinlingyong",
+  "label": "物品领用",
+  "table": {
+    "name": "t_wupinlingyong"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wupinlingyongId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "填表时间",
+      "label": "填表时间",
+      "name": "tianbiaoshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "申请人",
+      "label": "申请人",
+      "name": "shenqingren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请人部门",
+      "label": "申请人部门",
+      "name": "shenqingrenbumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "物品名称",
+      "label": "物品名称",
+      "name": "wupinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "物品数量",
+      "label": "物品数量",
+      "name": "wupinshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "物品用途",
+      "label": "物品用途",
+      "name": "wupinyongtu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "物品详细说明",
+      "label": "物品详细说明",
+      "name": "wupinxiangxishuoming",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

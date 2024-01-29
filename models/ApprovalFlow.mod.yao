@@ -1,0 +1,45 @@
+{
+  "name": "ApprovalFlow",
+  "label": "审批流程",
+  "table": {
+    "name": "t_approval_flow"
+  },
+  "columns": [
+    {
+      "comment": "流程定义id",
+      "label": "流程定义id",
+      "name": "approvalFlowId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "审批流程id",
+      "label": "审批流程id",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "流程定义json",
+      "label": "流程定义json",
+      "name": "flowDefinition",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

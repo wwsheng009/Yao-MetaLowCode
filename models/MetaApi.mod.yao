@@ -1,0 +1,73 @@
+{
+  "name": "MetaApi",
+  "label": "API管理",
+  "table": {
+    "name": "t_meta_api"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "metaApiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "APP_ID",
+      "label": "APP_ID",
+      "name": "appId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "APP_SECRET",
+      "label": "APP_SECRET",
+      "name": "appSecret",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "绑定用户",
+      "label": "绑定用户",
+      "name": "bindUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "IP 白名单",
+      "label": "IP 白名单",
+      "name": "bindIps",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

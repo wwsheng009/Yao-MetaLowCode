@@ -1,0 +1,143 @@
+{
+  "name": "Kehuliebiao",
+  "label": "客户列表",
+  "table": {
+    "name": "t_kehuliebiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "kehuliebiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机号",
+      "label": "手机号",
+      "name": "shoujihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "证件类型",
+      "label": "证件类型",
+      "name": "zhengjianleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "证件号码",
+      "label": "证件号码",
+      "name": "zhengjianhaoma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "驾驶证类型",
+      "label": "驾驶证类型",
+      "name": "jiashizhengleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "驾驶证号码",
+      "label": "驾驶证号码",
+      "name": "jiashizhenghaoma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "证件图片（正）",
+      "label": "证件图片（正）",
+      "name": "zhengjiantupianzheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "证件图片（反）",
+      "label": "证件图片（反）",
+      "name": "zhengjiantupianfan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "驾驶证图片（正）",
+      "label": "驾驶证图片（正）",
+      "name": "jiashizhengtupianzheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "驾驶证图片（反）",
+      "label": "驾驶证图片（反）",
+      "name": "jiashizhengtupianfan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "驾驶证失效日期",
+      "label": "驾驶证失效日期",
+      "name": "jiashizhengshixiaoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

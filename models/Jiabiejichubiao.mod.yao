@@ -1,0 +1,87 @@
+{
+  "name": "Jiabiejichubiao",
+  "label": "假别基础表",
+  "table": {
+    "name": "t_jiabiejichubiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "jiabiejichubiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "请假类型",
+      "label": "请假类型",
+      "name": "qingjialeixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "请假步长",
+      "label": "请假步长",
+      "name": "qingjiabuchang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "适用范围",
+      "label": "适用范围",
+      "name": "shiyongfanwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "请假说明",
+      "label": "请假说明",
+      "name": "qingjiashuoming",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

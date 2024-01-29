@@ -1,0 +1,101 @@
+{
+  "name": "Chuchaishenqing",
+  "label": "出差申请",
+  "table": {
+    "name": "t_chuchaishenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "chuchaishenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出差单号",
+      "label": "出差单号",
+      "name": "chuchaidanhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出差目的地",
+      "label": "出差目的地",
+      "name": "chuchaimudidi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "出差开始日期",
+      "label": "出差开始日期",
+      "name": "chuchaikaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "出差结束日期",
+      "label": "出差结束日期",
+      "name": "chuchaijieshuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "出差事由",
+      "label": "出差事由",
+      "name": "chuchaishiyou",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

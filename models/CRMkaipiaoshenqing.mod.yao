@@ -1,0 +1,165 @@
+{
+  "name": "CRMkaipiaoshenqing",
+  "label": "CRM开票申请",
+  "table": {
+    "name": "t_crmkaipiaoshenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMkaipiaoshenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联客户",
+      "label": "关联客户",
+      "name": "guanliankehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联合同订单",
+      "label": "关联合同订单",
+      "name": "guanlianhetongdingdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联回款单",
+      "label": "关联回款单",
+      "name": "guanlianhuikuandan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开票申请编号",
+      "label": "开票申请编号",
+      "name": "kaipiaoshenqingbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开票金额/元",
+      "label": "开票金额/元",
+      "name": "kaipiaojinuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "开票类型",
+      "label": "开票类型",
+      "name": "kaipiaoleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开票日期",
+      "label": "开票日期",
+      "name": "kaipiaoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "发票号码",
+      "label": "发票号码",
+      "name": "fapiaohaoma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "附件",
+      "label": "附件",
+      "name": "fujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人",
+      "label": "联系人",
+      "name": "lianxiren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系方式",
+      "label": "联系方式",
+      "name": "lianxifangshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "寄送地址",
+      "label": "寄送地址",
+      "name": "jisongdizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "详细地址",
+      "label": "详细地址",
+      "name": "xiangxidizhi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "开票状态",
+      "label": "开票状态",
+      "name": "kaipiaozhuangtai",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

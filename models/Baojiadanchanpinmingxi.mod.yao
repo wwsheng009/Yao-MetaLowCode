@@ -1,0 +1,90 @@
+{
+  "name": "Baojiadanchanpinmingxi",
+  "label": "报价单产品明细",
+  "table": {
+    "name": "t_baojiadanchanpinmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "baojiadanchanpinmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdBaojiadanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择产品",
+      "label": "选择产品",
+      "name": "xuanzechanpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售数量",
+      "label": "销售数量",
+      "name": "xiaoshoushuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "销售单价(含税)/元",
+      "label": "销售单价(含税)/元",
+      "name": "xiaoshoudanjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "产品成本单价",
+      "label": "产品成本单价",
+      "name": "chanpinchengbenjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "产品总价合计",
+      "label": "产品总价合计",
+      "name": "chanpin",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

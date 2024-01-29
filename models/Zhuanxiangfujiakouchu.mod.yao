@@ -1,0 +1,151 @@
+{
+  "name": "Zhuanxiangfujiakouchu",
+  "label": "专项附加扣除",
+  "table": {
+    "name": "t_zhuanxiangfujiakouchu"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "zhuanxiangfujiakouchuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工姓名",
+      "label": "员工姓名",
+      "name": "yuangongxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所在部门",
+      "label": "所在部门",
+      "name": "suozaibumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位",
+      "label": "岗位",
+      "name": "gangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "状态",
+      "label": "状态",
+      "name": "zhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "子女教育",
+      "label": "子女教育",
+      "name": "jibengongzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "继续教育",
+      "label": "继续教育",
+      "name": "jixiaoxinzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "大病医疗",
+      "label": "大病医疗",
+      "name": "butie",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "住房贷款",
+      "label": "住房贷款",
+      "name": "zhufangdaikuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "住房租金",
+      "label": "住房租金",
+      "name": "zhufangzujin",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "赡养老人",
+      "label": "赡养老人",
+      "name": "shanyanglaoren",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "婴幼儿照护",
+      "label": "婴幼儿照护",
+      "name": "yingyouerzhaohu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "专项附加扣除总额（元）",
+      "label": "专项附加扣除总额（元）",
+      "name": "zhuanxiangfujiakouchuzonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

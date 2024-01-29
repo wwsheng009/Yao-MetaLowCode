@@ -1,0 +1,108 @@
+{
+  "name": "Ribao",
+  "label": "日报",
+  "table": {
+    "name": "t_ribao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "ribaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "时间",
+      "label": "时间",
+      "name": "shijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "填报人",
+      "label": "填报人",
+      "name": "tianbaoren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "今天完成工作",
+      "label": "今天完成工作",
+      "name": "jintianwanchenggongzuo",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "是否选择任务",
+      "label": "是否选择任务",
+      "name": "shifouxuanzerenwu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "明日工作计划",
+      "label": "明日工作计划",
+      "name": "mingrigongzuojihua",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "今日工作困难及需要的帮助",
+      "label": "今日工作困难及需要的帮助",
+      "name": "jinrigongzuokunnanjixuya",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "工作心得分享",
+      "label": "工作心得分享",
+      "name": "gongzuoxindefenxiang",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

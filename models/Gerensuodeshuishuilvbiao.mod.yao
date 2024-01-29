@@ -1,0 +1,97 @@
+{
+  "name": "Gerensuodeshuishuilvbiao",
+  "label": "个人所得税税率表",
+  "table": {
+    "name": "t_gerensuodeshuishuilvbiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "gerensuodeshuishuilvbiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "级数",
+      "label": "级数",
+      "name": "jishu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "应纳税所得额下限（元）",
+      "label": "应纳税所得额下限（元）",
+      "name": "yingnashuisuodeexiaxian",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应纳税所得额上限（元）",
+      "label": "应纳税所得额上限（元）",
+      "name": "yingnashuisuodeeshangxian",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "税率（%）",
+      "label": "税率（%）",
+      "name": "shuilv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "速算扣除数（元）",
+      "label": "速算扣除数（元）",
+      "name": "susuankouchushu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

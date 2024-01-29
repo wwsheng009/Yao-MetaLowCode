@@ -1,0 +1,80 @@
+{
+  "name": "Fangansheji",
+  "label": "方案设计",
+  "table": {
+    "name": "t_fangansheji"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "fanganshejiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择报价单",
+      "label": "选择报价单",
+      "name": "xuanzebaojiadan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "图纸附件",
+      "label": "图纸附件",
+      "name": "tuzhifujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "设计完工需求日期",
+      "label": "设计完工需求日期",
+      "name": "shejiwangongxuqiuriqi",
+      "nullable": true,
+      "type": "date"
+    }
+  ]
+}

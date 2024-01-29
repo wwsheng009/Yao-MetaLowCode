@@ -36,15 +36,7 @@
       "label": "数据库字段名",
       "name": "physicalName",
       "type": "string"
-    },
-    {
-      "comment": "owner",
-      "label": "owner",
-      "name": "owner",
-      "type": "json",
-      "nullable": true
-    },
-    {
+    },{
       "comment": "字段类型",
       "label": "字段类型",
       "name": "type",
@@ -135,8 +127,8 @@
       "nullable": true
     },
     {
-      "comment": "referenceSetting",
-      "label": "referenceSetting",
+      "comment": "引用配置",
+      "label": "引用配置",
       "name": "referenceSetting",
       "type": "json",
       "nullable": true

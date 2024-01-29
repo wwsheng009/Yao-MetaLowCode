@@ -1,0 +1,123 @@
+{
+  "name": "WMSqitarukudan",
+  "label": "WMS其他入库单",
+  "table": {
+    "name": "t_wmsqitarukudan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSqitarukudanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库类型",
+      "label": "入库类型",
+      "name": "rukuleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "其他入库单编号",
+      "label": "其他入库单编号",
+      "name": "qitarukudanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库产品总数",
+      "label": "入库产品总数",
+      "name": "rukuchanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "入库产品成本总额/元",
+      "label": "入库产品成本总额/元",
+      "name": "rukuchanpinchengbenzonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "入库确认",
+      "label": "入库确认",
+      "name": "rukuqueren",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "拍照",
+      "label": "拍照",
+      "name": "paizhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库时间",
+      "label": "入库时间",
+      "name": "rukushijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "库管归属部门",
+      "label": "库管归属部门",
+      "name": "kuguanguishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库仓库",
+      "label": "入库仓库",
+      "name": "rukucangku",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

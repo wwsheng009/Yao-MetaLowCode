@@ -1,0 +1,88 @@
+{
+  "name": "Baoxiaomingxi",
+  "label": "报销明细",
+  "table": {
+    "name": "t_baoxiaomingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "baoxiaomingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdBaoxiaoshenqingId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报销金额",
+      "label": "报销金额",
+      "name": "baoxiaojine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "报销类型",
+      "label": "报销类型",
+      "name": "baoxiaoleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发生日期",
+      "label": "发生日期",
+      "name": "fashengriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "费用说明",
+      "label": "费用说明",
+      "name": "feiyongshuoming",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "附件",
+      "label": "附件",
+      "name": "fujian",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

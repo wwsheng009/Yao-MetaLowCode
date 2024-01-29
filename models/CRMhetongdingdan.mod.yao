@@ -1,0 +1,167 @@
+{
+  "name": "CRMhetongdingdan",
+  "label": "CRM合同订单",
+  "table": {
+    "name": "t_crmhetongdingdan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMhetongdingdanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联客户",
+      "label": "关联客户",
+      "name": "guanliankehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联报价单",
+      "label": "关联报价单",
+      "name": "guanlianbaojiadan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同标题",
+      "label": "合同标题",
+      "name": "hetongbiaoti",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同订单编号",
+      "label": "合同订单编号",
+      "name": "hetongdingdanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同签订日期",
+      "label": "合同签订日期",
+      "name": "hetongqiandingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "合同到期日期",
+      "label": "合同到期日期",
+      "name": "hetongdaoqiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "负责人",
+      "label": "负责人",
+      "name": "fuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "归属部门",
+      "label": "归属部门",
+      "name": "guishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品原价格合计/元",
+      "label": "产品原价格合计/元",
+      "name": "chanpinyuanjiagehejiyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "整单折扣率",
+      "label": "整单折扣率",
+      "name": "zhengdanzhekoul",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "合同优惠金额/元",
+      "label": "合同优惠金额/元",
+      "name": "hetongyouhuijineuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "合同金额/元",
+      "label": "合同金额/元",
+      "name": "hetongjinyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "合同金额大写",
+      "label": "合同金额大写",
+      "name": "hetongjinedaxie",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同联系人",
+      "label": "合同联系人",
+      "name": "hetonglianxiren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同附件上传",
+      "label": "合同附件上传",
+      "name": "hetongfujianshangchuan",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

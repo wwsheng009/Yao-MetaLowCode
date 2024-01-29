@@ -1,0 +1,122 @@
+{
+  "name": "Shengchanjihua",
+  "label": "生产计划",
+  "table": {
+    "name": "t_shengchanjihua"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shengchanjihuaId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择销售订单",
+      "label": "选择销售订单",
+      "name": "xuanzexiaoshoudingdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售订单名称",
+      "label": "销售订单名称",
+      "name": "xiaoshoudingdanmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售订单编号",
+      "label": "销售订单编号",
+      "name": "xiaoshoudingdanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "生产计划名称",
+      "label": "生产计划名称",
+      "name": "shengchanjihuamingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "计划开始日期",
+      "label": "计划开始日期",
+      "name": "jihuakaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "计划完工日期",
+      "label": "计划完工日期",
+      "name": "jihuawangongriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "领料仓库",
+      "label": "领料仓库",
+      "name": "lingliaocangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "生产计划编号",
+      "label": "生产计划编号",
+      "name": "shengchanjihuabianhao",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

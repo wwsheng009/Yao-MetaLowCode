@@ -1,0 +1,87 @@
+{
+  "name": "Chart",
+  "label": "仪表盘",
+  "table": {
+    "name": "t_chart"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "chartId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仪表盘数据",
+      "label": "仪表盘数据",
+      "name": "chartData",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "仪表盘名称",
+      "label": "仪表盘名称",
+      "name": "chartName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "默认视图",
+      "label": "默认视图",
+      "name": "defaultChart",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "移动端数据",
+      "label": "移动端数据",
+      "name": "mobileChartData",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

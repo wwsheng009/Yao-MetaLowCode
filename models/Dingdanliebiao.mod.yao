@@ -1,0 +1,135 @@
+{
+  "name": "Dingdanliebiao",
+  "label": "订单列表",
+  "table": {
+    "name": "t_dingdanliebiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "dingdanliebiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择客户",
+      "label": "选择客户",
+      "name": "xuanzekehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择车辆",
+      "label": "选择车辆",
+      "name": "xuanzecheliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "车辆押金",
+      "label": "车辆押金",
+      "name": "cheliangyajin",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "保险费",
+      "label": "保险费",
+      "name": "baoxianfei",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "优惠金额",
+      "label": "优惠金额",
+      "name": "youhuijine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "手续费",
+      "label": "手续费",
+      "name": "shouxufei",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "实际租车金额",
+      "label": "实际租车金额",
+      "name": "shijizuchejine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "日租金",
+      "label": "日租金",
+      "name": "rizujin",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "合同文件",
+      "label": "合同文件",
+      "name": "hetongwenjian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预计归还日期",
+      "label": "预计归还日期",
+      "name": "yujiguihuanriqi",
+      "nullable": true,
+      "type": "date"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "name": "Yuangongxinzijiegou",
+  "label": "员工薪资结构",
+  "table": {
+    "name": "t_yuangongxinzijiegou"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "yuangongxinzijiegouId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工姓名",
+      "label": "员工姓名",
+      "name": "yuangongxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所在部门",
+      "label": "所在部门",
+      "name": "suozaibumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位",
+      "label": "岗位",
+      "name": "gangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "状态",
+      "label": "状态",
+      "name": "zhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "基本工资（元）",
+      "label": "基本工资（元）",
+      "name": "jibengongzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "绩效薪资（元）",
+      "label": "绩效薪资（元）",
+      "name": "jixiaoxinzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "补贴（元）",
+      "label": "补贴（元）",
+      "name": "butie",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

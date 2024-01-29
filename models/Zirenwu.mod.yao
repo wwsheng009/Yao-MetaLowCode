@@ -1,0 +1,101 @@
+{
+  "name": "Zirenwu",
+  "label": "子任务",
+  "table": {
+    "name": "t_zirenwu"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "zirenwuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "子任务标题",
+      "label": "子任务标题",
+      "name": "zirenwubiaoti",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择关联项目任务",
+      "label": "选择关联项目任务",
+      "name": "xuanzeguanlianxiangmurenwu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开始时间",
+      "label": "开始时间",
+      "name": "kaishishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "截止时间",
+      "label": "截止时间",
+      "name": "jiezhishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "负责人",
+      "label": "负责人",
+      "name": "fuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "任务描述",
+      "label": "任务描述",
+      "name": "renwumiaoshu",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

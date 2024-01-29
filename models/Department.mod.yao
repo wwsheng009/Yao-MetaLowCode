@@ -1,0 +1,52 @@
+{
+  "name": "Department",
+  "label": "部门",
+  "table": {
+    "name": "t_department"
+  },
+  "columns": [
+    {
+      "comment": "部门Id主键",
+      "label": "部门Id主键",
+      "name": "departmentId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "上级部门",
+      "label": "上级部门",
+      "name": "parentDepartmentId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "部门名称",
+      "label": "部门名称",
+      "name": "departmentName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "部门说明",
+      "label": "部门说明",
+      "name": "description",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "部门负责人",
+      "label": "部门负责人",
+      "name": "departmentOwnerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "钉钉部门ID",
+      "label": "钉钉部门ID",
+      "name": "dingDepartmentId",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

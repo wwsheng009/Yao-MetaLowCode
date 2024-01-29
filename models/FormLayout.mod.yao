@@ -1,0 +1,66 @@
+{
+  "name": "FormLayout",
+  "label": "表单布局",
+  "table": {
+    "name": "t_form_layout"
+  },
+  "columns": [
+    {
+      "comment": "布局Id主键",
+      "label": "布局Id主键",
+      "name": "formLayoutId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "布局名称",
+      "label": "布局名称",
+      "name": "layoutName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "布局Json",
+      "label": "布局Json",
+      "name": "layoutJson",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "name": "ApprovalTask",
+  "label": "审批任务",
+  "table": {
+    "name": "t_approval_task"
+  },
+  "columns": [
+    {
+      "comment": "流程任务id",
+      "label": "流程任务id",
+      "name": "approvalTaskId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "审批流程id",
+      "label": "审批流程id",
+      "name": "approvalFlowId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "当前审批人",
+      "label": "当前审批人",
+      "name": "approver",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批时间",
+      "label": "审批时间",
+      "name": "approvalOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "步骤名称",
+      "label": "步骤名称",
+      "name": "stepName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "批注",
+      "label": "批注",
+      "name": "remark",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "扩展属性 (JSON Map)",
+      "label": "扩展属性 (JSON Map)",
+      "name": "attrMore",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联实体ID",
+      "label": "关联实体ID",
+      "name": "entityId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "步骤节点",
+      "label": "步骤节点",
+      "name": "currentNode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "审批流程id",
+      "label": "审批流程id",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审核类型",
+      "label": "审核类型",
+      "name": "signType",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "审核状态",
+      "label": "审核状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "抄送人",
+      "label": "抄送人",
+      "name": "ccTo",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "approvalUser",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

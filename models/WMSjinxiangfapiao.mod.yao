@@ -1,0 +1,160 @@
+{
+  "name": "WMSjinxiangfapiao",
+  "label": "WMS进项发票",
+  "table": {
+    "name": "t_wmsjinxiangfapiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSjinxiangfapiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择对账单",
+      "label": "选择对账单",
+      "name": "xuanzeduizhangdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票附件上传",
+      "label": "发票附件上传",
+      "name": "fapiaofujianshangchuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票金额(含税)/元",
+      "label": "发票金额(含税)/元",
+      "name": "fapiaojineanshuuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "待开票金额含税元",
+      "label": "待开票金额含税元",
+      "name": "daikaipiaojinehanshuiyan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "累计开票金额(含税)/元",
+      "label": "累计开票金额(含税)/元",
+      "name": "leijikaipiaansuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "发票类型",
+      "label": "发票类型",
+      "name": "fapiaoleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票号码",
+      "label": "发票号码",
+      "name": "fapiaohaoma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开票时间",
+      "label": "开票时间",
+      "name": "kaipiaoshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "发票抬头",
+      "label": "发票抬头",
+      "name": "fapiaotaitou",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票税号",
+      "label": "发票税号",
+      "name": "fapiaoshuihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "税种",
+      "label": "税种",
+      "name": "shuizhong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "增值税税率%",
+      "label": "增值税税率%",
+      "name": "zengzhishuishuil",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "jingbanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "归属部门",
+      "label": "归属部门",
+      "name": "guishubumen",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

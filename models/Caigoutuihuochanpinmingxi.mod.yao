@@ -1,0 +1,80 @@
+{
+  "name": "Caigoutuihuochanpinmingxi",
+  "label": "采购退货产品明细",
+  "table": {
+    "name": "t_caigoutuihuochanpinmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "caigoutuihuochanpinmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdCaigoutuihuoId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择产品",
+      "label": "选择产品",
+      "name": "xuanzechanpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "已入库-退货数量",
+      "label": "已入库-退货数量",
+      "name": "tuihuoshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "未入库-退货数量",
+      "label": "未入库-退货数量",
+      "name": "weichukutuihuoshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "本次退货总数",
+      "label": "本次退货总数",
+      "name": "bencituihuozongshu",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

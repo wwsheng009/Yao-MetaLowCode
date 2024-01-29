@@ -1,0 +1,101 @@
+{
+  "name": "Lizhishenqing",
+  "label": "离职申请",
+  "table": {
+    "name": "t_lizhishenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "lizhishenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "离职员工",
+      "label": "离职员工",
+      "name": "diaodongyuangong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请日期",
+      "label": "申请日期",
+      "name": "shenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "所在部门",
+      "label": "所在部门",
+      "name": "yuanbumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "离职原因",
+      "label": "离职原因",
+      "name": "diaodongyuanyin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预计离职时间",
+      "label": "预计离职时间",
+      "name": "gangweidiaodongsheng",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "附件",
+      "label": "附件",
+      "name": "fujian",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

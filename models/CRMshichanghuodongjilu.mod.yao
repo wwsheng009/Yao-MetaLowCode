@@ -1,0 +1,138 @@
+{
+  "name": "CRMshichanghuodongjilu",
+  "label": "CRM市场活动记录",
+  "table": {
+    "name": "t_crmshichanghuodongjilu"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMshichanghuodongjiluId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "活动名称",
+      "label": "活动名称",
+      "name": "huodongmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "活动开始时间",
+      "label": "活动开始时间",
+      "name": "huodongkaishishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "活动结束时间",
+      "label": "活动结束时间",
+      "name": "huodongjieshushijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "活动类型",
+      "label": "活动类型",
+      "name": "huodongleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "责任人",
+      "label": "责任人",
+      "name": "zerenren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "责任部门",
+      "label": "责任部门",
+      "name": "zerenbumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预计投入成本",
+      "label": "预计投入成本",
+      "name": "yujitouruchengben",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "预计产出线索数",
+      "label": "预计产出线索数",
+      "name": "yujichanchuxiansuoshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "活动计划",
+      "label": "活动计划",
+      "name": "huodongjihua",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "实际投入成本",
+      "label": "实际投入成本",
+      "name": "shijitouruchengben",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "活动总结",
+      "label": "活动总结",
+      "name": "huodongzongjie",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

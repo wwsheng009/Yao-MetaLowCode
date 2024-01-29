@@ -1,0 +1,185 @@
+{
+  "name": "WMScaigouxuqiuchi",
+  "label": "WMS采购需求池",
+  "table": {
+    "name": "t_wmscaigouxuqiuchi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigouxuqiuchiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购申请编号",
+      "label": "采购申请编号",
+      "name": "caigoushenqingbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请人",
+      "label": "申请人",
+      "name": "shenqingren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请人归属部门",
+      "label": "申请人归属部门",
+      "name": "shenqingrenguishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请日期",
+      "label": "申请日期",
+      "name": "shenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "计划到货日期",
+      "label": "计划到货日期",
+      "name": "jihuadaohuoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "需求来源",
+      "label": "需求来源",
+      "name": "xuqiulaiyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库仓库",
+      "label": "入库仓库",
+      "name": "rukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "到货地址",
+      "label": "到货地址",
+      "name": "daohuodizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "详细地址",
+      "label": "详细地址",
+      "name": "xiangxidizhi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品编号",
+      "label": "产品编号",
+      "name": "chanpinbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "品牌",
+      "label": "品牌",
+      "name": "pinpai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "规格型号",
+      "label": "规格型号",
+      "name": "guigexinghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "单位",
+      "label": "单位",
+      "name": "danwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购需求数量",
+      "label": "采购需求数量",
+      "name": "caigouxuqiushuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "需求具体描述",
+      "label": "需求具体描述",
+      "name": "xuqiujutimiaoshu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "报价状态",
+      "label": "报价状态",
+      "name": "baojiazhuangtai",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

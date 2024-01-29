@@ -1,0 +1,123 @@
+{
+  "name": "Feiyongdengji",
+  "label": "费用登记",
+  "table": {
+    "name": "t_feiyongdengji"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "feiyongdengjiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "费用编号",
+      "label": "费用编号",
+      "name": "feiyongbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "费用登记日期",
+      "label": "费用登记日期",
+      "name": "feiyongdengjiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "费用发生日期",
+      "label": "费用发生日期",
+      "name": "feiyongfashengriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "选择关联项目",
+      "label": "选择关联项目",
+      "name": "xuanzeguanlianxiangmu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "费用类型",
+      "label": "费用类型",
+      "name": "feiyongleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "费用金额",
+      "label": "费用金额",
+      "name": "feiyongjine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "登记人",
+      "label": "登记人",
+      "name": "dengjiren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "费用说明",
+      "label": "费用说明",
+      "name": "feiyongshuoming",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "发票收据",
+      "label": "发票收据",
+      "name": "fapiaoshouju",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

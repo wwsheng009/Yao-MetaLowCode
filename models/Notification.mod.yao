@@ -1,0 +1,87 @@
+{
+  "name": "Notification",
+  "label": "消息通知",
+  "table": {
+    "name": "t_notification"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "notificationId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "接收人",
+      "label": "接收人",
+      "name": "toUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发送人",
+      "label": "发送人",
+      "name": "fromUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "是否未读",
+      "label": "是否未读",
+      "name": "unread",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "消息分类",
+      "label": "消息分类",
+      "name": "type",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "相关记录",
+      "label": "相关记录",
+      "name": "relatedRecord",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "消息",
+      "label": "消息",
+      "name": "message",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

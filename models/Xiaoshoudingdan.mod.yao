@@ -1,0 +1,175 @@
+{
+  "name": "Xiaoshoudingdan",
+  "label": "销售订单",
+  "table": {
+    "name": "t_xiaoshoudingdan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "xiaoshoudingdanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择客户",
+      "label": "选择客户",
+      "name": "xuanzekehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "订单签订日期",
+      "label": "订单签订日期",
+      "name": "dingdanqiandingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "订单交付日期",
+      "label": "订单交付日期",
+      "name": "dingdanjiaofuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "销售归属部门",
+      "label": "销售归属部门",
+      "name": "xiaoshouguishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库仓库",
+      "label": "出库仓库",
+      "name": "chukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售原价总额(含税)/元",
+      "label": "销售原价总额(含税)/元",
+      "name": "xiaoshouyuanjiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "优惠金额/元",
+      "label": "优惠金额/元",
+      "name": "youhuijine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "整单折扣率 %",
+      "label": "整单折扣率 %",
+      "name": "zhengdanzhekoulv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "销售订单金额(含税)/元",
+      "label": "销售订单金额(含税)/元",
+      "name": "xiaoshoudingdanjine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "订单毛利率%",
+      "label": "订单毛利率%",
+      "name": "dingdanmaolilv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "合同附件上传",
+      "label": "合同附件上传",
+      "name": "hetongfujianshangchuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "送货地区",
+      "label": "送货地区",
+      "name": "songhuodiqu",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "具体地址",
+      "label": "具体地址",
+      "name": "jutidizhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "结算期限",
+      "label": "结算期限",
+      "name": "jiesuanqixian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售订单名称",
+      "label": "销售订单名称",
+      "name": "xiaoshoudingdanmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品成本总价",
+      "label": "产品成本总价",
+      "name": "chanpinchengbenzongjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

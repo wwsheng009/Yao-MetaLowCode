@@ -1,0 +1,153 @@
+{
+  "name": "CRMchanpinbaojia",
+  "label": "CRM产品报价",
+  "table": {
+    "name": "t_crmchanpinbaojia"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMchanpinbaojiaId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联客户",
+      "label": "关联客户",
+      "name": "guanliankehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联商机",
+      "label": "关联商机",
+      "name": "guanlianshangji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报价日期",
+      "label": "报价日期",
+      "name": "baojiariqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "负责人",
+      "label": "负责人",
+      "name": "fuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "归属部门",
+      "label": "归属部门",
+      "name": "guishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报价单编号",
+      "label": "报价单编号",
+      "name": "baojiadanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "第几次报价",
+      "label": "第几次报价",
+      "name": "dijicibaojia",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品价格合计/元",
+      "label": "产品价格合计/元",
+      "name": "chanpinjiagehejyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "整单折扣率",
+      "label": "整单折扣率",
+      "name": "zhengdanzhekoul",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "优惠金额/元",
+      "label": "优惠金额/元",
+      "name": "youhuijineuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "总报价金额/元",
+      "label": "总报价金额/元",
+      "name": "zongbaojiajinyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "金额大写",
+      "label": "金额大写",
+      "name": "jinedaxie",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报价毛利率",
+      "label": "报价毛利率",
+      "name": "baojiamaolil",
+      "nullable": true,
+      "type": "float"
+    }
+  ]
+}

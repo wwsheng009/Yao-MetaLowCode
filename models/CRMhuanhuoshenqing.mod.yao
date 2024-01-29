@@ -1,0 +1,115 @@
+{
+  "name": "CRMhuanhuoshenqing",
+  "label": "CRM换货申请",
+  "table": {
+    "name": "t_crmhuanhuoshenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMhuanhuoshenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联原合同",
+      "label": "关联原合同",
+      "name": "guanlianyuanhetong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "换货原因",
+      "label": "换货原因",
+      "name": "huanhuoyuanyin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "换货申请时间",
+      "label": "换货申请时间",
+      "name": "huanhuoshenqingshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "换货申请单编号",
+      "label": "换货申请单编号",
+      "name": "huanhuoshenqingdanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "寄送地址",
+      "label": "寄送地址",
+      "name": "jisongdizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "详细地址",
+      "label": "详细地址",
+      "name": "xiangxidizhi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "jingbanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "经办部门",
+      "label": "经办部门",
+      "name": "jingbanbumen",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

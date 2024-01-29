@@ -1,0 +1,98 @@
+{
+  "name": "Tiaobochanpinmingxi",
+  "label": "调拨产品明细",
+  "table": {
+    "name": "t_tiaobochanpinmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "tiaobochanpinmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdKucuntiaoboId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择产品",
+      "label": "选择产品",
+      "name": "xuanzechanpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "本次调拨数量",
+      "label": "本次调拨数量",
+      "name": "bencirukushuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "销售单价(含税)/元",
+      "label": "销售单价(含税)/元",
+      "name": "xiaoshoudanjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "成本单价",
+      "label": "成本单价",
+      "name": "chengbendanjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "产品售价合计(含税)/元",
+      "label": "产品售价合计(含税)/元",
+      "name": "chanpinshoujiaheji",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "产品成本合计/元",
+      "label": "产品成本合计/元",
+      "name": "chanpinchengbenheji",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

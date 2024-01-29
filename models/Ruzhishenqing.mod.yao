@@ -1,0 +1,122 @@
+{
+  "name": "Ruzhishenqing",
+  "label": "入职申请",
+  "table": {
+    "name": "t_ruzhishenqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "ruzhishenqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入职员工",
+      "label": "入职员工",
+      "name": "ruzhiyuangong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机号",
+      "label": "手机号",
+      "name": "shoujihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预计入职日期",
+      "label": "预计入职日期",
+      "name": "yujiruzhiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "部门",
+      "label": "部门",
+      "name": "bumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工类型",
+      "label": "员工类型",
+      "name": "yuangongleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "入职offer",
+      "label": "入职offer",
+      "name": "ruzhioffer",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "直属上级领导",
+      "label": "直属上级领导",
+      "name": "zhishushangjilingdao",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

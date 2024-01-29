@@ -1,0 +1,45 @@
+{
+  "name": "StatusItem",
+  "label": "状态项",
+  "table": {
+    "name": "t_status_item"
+  },
+  "columns": [
+    {
+      "comment": "选项值",
+      "label": "选项值",
+      "name": "value",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "statusItemId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "显示值",
+      "label": "显示值",
+      "name": "label",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "字段名称",
+      "label": "字段名称",
+      "name": "fieldName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "显示顺序",
+      "label": "显示顺序",
+      "name": "displayOrder",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

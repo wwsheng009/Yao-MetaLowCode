@@ -1,0 +1,171 @@
+{
+  "name": "WMSzhangkuanduizhang",
+  "label": "WMS账款对账",
+  "table": {
+    "name": "t_wmszhangkuanduizhang"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSzhangkuanduizhangId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商名称",
+      "label": "供应商名称",
+      "name": "gongyingshangmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "对账开始日期",
+      "label": "对账开始日期",
+      "name": "duizhangkaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "对账结束日期",
+      "label": "对账结束日期",
+      "name": "duizhangjieshuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "应付对账单编号",
+      "label": "应付对账单编号",
+      "name": "yingfuduizhangdanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预计付款方式",
+      "label": "预计付款方式",
+      "name": "yujifukuanfangshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预计付款日期",
+      "label": "预计付款日期",
+      "name": "yujifukuanriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "银行账户",
+      "label": "银行账户",
+      "name": "yinhangzhanghu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开户银行",
+      "label": "开户银行",
+      "name": "kaihuyinhang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "应付对账确认",
+      "label": "应付对账确认",
+      "name": "yingfuduizhangqueren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "应付对账时间",
+      "label": "应付对账时间",
+      "name": "yingfuduizhangshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "应付对账人员",
+      "label": "应付对账人员",
+      "name": "yingfuduizhangrenyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "应付对账人员归属部门",
+      "label": "应付对账人员归属部门",
+      "name": "yingfuduizhaguishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票抬头",
+      "label": "发票抬头",
+      "name": "fapiaotaitou",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票税号",
+      "label": "发票税号",
+      "name": "fapiaoshuihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "税种",
+      "label": "税种",
+      "name": "shuizhong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "增值税税率 %",
+      "label": "增值税税率 %",
+      "name": "zengzhishuishuil",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

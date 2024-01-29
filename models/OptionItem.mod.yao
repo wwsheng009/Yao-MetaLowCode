@@ -1,0 +1,59 @@
+{
+  "name": "OptionItem",
+  "label": "单选项",
+  "table": {
+    "name": "t_option_item"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "optionItemId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "实体名称",
+      "label": "实体名称",
+      "name": "entityName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "字段名称",
+      "label": "字段名称",
+      "name": "fieldName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选项值",
+      "label": "选项值",
+      "name": "value",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "显示值",
+      "label": "显示值",
+      "name": "label",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "显示顺序",
+      "label": "显示顺序",
+      "name": "displayOrder",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "系统选项",
+      "label": "系统选项",
+      "name": "systemFlag",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "Qingjiaxiangqing",
+  "label": "请假详情",
+  "table": {
+    "name": "t_qingjiaxiangqing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "qingjiaxiangqingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdXiangmurenwuguanliqingjiashId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "日期",
+      "label": "日期",
+      "name": "riqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "时段",
+      "label": "时段",
+      "name": "shiduan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "天数",
+      "label": "天数",
+      "name": "tianshu",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

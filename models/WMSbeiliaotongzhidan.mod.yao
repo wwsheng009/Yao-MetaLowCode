@@ -1,0 +1,116 @@
+{
+  "name": "WMSbeiliaotongzhidan",
+  "label": "WMS备料通知单",
+  "table": {
+    "name": "t_wmsbeiliaotongzhidan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSbeiliaotongzhidanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择生产工单",
+      "label": "选择生产工单",
+      "name": "xuanzeshengchangongdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "备料通知单编号",
+      "label": "备料通知单编号",
+      "name": "beiliaotongzhidanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "备料负责人",
+      "label": "备料负责人",
+      "name": "beiliaofuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "备料通知时间",
+      "label": "备料通知时间",
+      "name": "beiliaotongzhishijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "计划领料时间",
+      "label": "计划领料时间",
+      "name": "jihualingliaoshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "备料仓库",
+      "label": "备料仓库",
+      "name": "beiliaocangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "备料产品总数",
+      "label": "备料产品总数",
+      "name": "beiliaochanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "备料产品成本总额/元",
+      "label": "备料产品成本总额/元",
+      "name": "beiliaochanpinchengbenzonn",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

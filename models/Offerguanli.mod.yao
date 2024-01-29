@@ -1,0 +1,152 @@
+{
+  "name": "Offerguanli",
+  "label": "offer管理",
+  "table": {
+    "name": "t_offerguanli"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "offerguanliId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "招聘负责人",
+      "label": "招聘负责人",
+      "name": "zhaopinfuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发放时间",
+      "label": "发放时间",
+      "name": "fafangshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "offer电子版",
+      "label": "offer电子版",
+      "name": "offerdianziban",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "offer 状态",
+      "label": "offer 状态",
+      "name": "offerzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择候选人",
+      "label": "选择候选人",
+      "name": "xuanzehouxuanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "offer岗位",
+      "label": "offer岗位",
+      "name": "offergangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入职部门",
+      "label": "入职部门",
+      "name": "ruzhibumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "试用期薪酬（元）",
+      "label": "试用期薪酬（元）",
+      "name": "shiyongqixinchou",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "转正薪酬（元）",
+      "label": "转正薪酬（元）",
+      "name": "zhuanzhengxinchou",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "报到日期",
+      "label": "报到日期",
+      "name": "baodaoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "报道联系人",
+      "label": "报道联系人",
+      "name": "baodaolianxiren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人电话",
+      "label": "联系人电话",
+      "name": "lianxirendianhua",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "短信模板",
+      "label": "短信模板",
+      "name": "duanxinmuban",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

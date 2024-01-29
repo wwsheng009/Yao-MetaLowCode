@@ -1,0 +1,87 @@
+{
+  "name": "TodoTask",
+  "label": "待办",
+  "table": {
+    "name": "t_todo_task"
+  },
+  "columns": [
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联记录",
+      "label": "关联记录",
+      "name": "recordId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "提醒方式",
+      "label": "提醒方式",
+      "name": "remindType",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "待办时间",
+      "label": "待办时间",
+      "name": "todoDate",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "待办事项",
+      "label": "待办事项",
+      "name": "todoItem",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "todoTaskId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    }
+  ]
+}

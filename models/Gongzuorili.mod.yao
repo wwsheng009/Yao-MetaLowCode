@@ -1,0 +1,101 @@
+{
+  "name": "Gongzuorili",
+  "label": "工作日历",
+  "table": {
+    "name": "t_gongzuorili"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "gongzuoriliId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "日期时间",
+      "label": "日期时间",
+      "name": "riqishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "星期",
+      "label": "星期",
+      "name": "xingqi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工作状态",
+      "label": "工作状态",
+      "name": "gongzuozhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "详情",
+      "label": "详情",
+      "name": "xiangqing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "节日",
+      "label": "节日",
+      "name": "jieri",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "节假日加班补偿规定",
+      "label": "节假日加班补偿规定",
+      "name": "jiejiarijiabanbuchangguiding",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

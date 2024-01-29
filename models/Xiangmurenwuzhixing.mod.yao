@@ -1,0 +1,108 @@
+{
+  "name": "Xiangmurenwuzhixing",
+  "label": "项目任务执行",
+  "table": {
+    "name": "t_xiangmurenwuzhixing"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "xiangmurenwuzhixingId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择项目",
+      "label": "选择项目",
+      "name": "xuanzexiangmu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择任务",
+      "label": "选择任务",
+      "name": "xuanzerenwu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择子任务",
+      "label": "选择子任务",
+      "name": "xuanzezirenwu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开始时间",
+      "label": "开始时间",
+      "name": "kaishishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "截止时间",
+      "label": "截止时间",
+      "name": "jiezhishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "任务当前状态",
+      "label": "任务当前状态",
+      "name": "renwudangqianzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "任务负责人",
+      "label": "任务负责人",
+      "name": "renwufuzeren",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

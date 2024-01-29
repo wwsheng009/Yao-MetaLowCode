@@ -1,0 +1,137 @@
+{
+  "name": "Jinxiangfapiao",
+  "label": "进项发票",
+  "table": {
+    "name": "t_jinxiangfapiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "jinxiangfapiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "进项发票编号",
+      "label": "进项发票编号",
+      "name": "xiaoxiangfapiaobianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票金额(含税)/元",
+      "label": "发票金额(含税)/元",
+      "name": "fapiaojine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "发票类型",
+      "label": "发票类型",
+      "name": "fapiaoleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票抬头",
+      "label": "发票抬头",
+      "name": "fapiaotaitou",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票税号",
+      "label": "发票税号",
+      "name": "fapiaoshuihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "税种",
+      "label": "税种",
+      "name": "shuizhong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "增值税税率%",
+      "label": "增值税税率%",
+      "name": "zengzhishuishuilv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "选择应付账款-对账单",
+      "label": "选择应付账款-对账单",
+      "name": "duizhangdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商名称",
+      "label": "供应商名称",
+      "name": "gongyingshangmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票号码",
+      "label": "发票号码",
+      "name": "fapiaohaoma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收票时间",
+      "label": "收票时间",
+      "name": "shoupiaoshijian",
+      "nullable": true,
+      "type": "datetime"
+    }
+  ]
+}

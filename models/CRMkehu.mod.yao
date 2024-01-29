@@ -1,0 +1,150 @@
+{
+  "name": "CRMkehu",
+  "label": "CRM公海池",
+  "table": {
+    "name": "t_crmkehu"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMkehuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户编号",
+      "label": "客户编号",
+      "name": "kehubianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机号",
+      "label": "手机号",
+      "name": "shoujihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户来源",
+      "label": "客户来源",
+      "name": "kehulaiyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户状态",
+      "label": "客户状态",
+      "name": "kehuzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户级别",
+      "label": "客户级别",
+      "name": "kehujibie",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属公海",
+      "label": "所属公海",
+      "name": "suoshugonghai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属行业",
+      "label": "所属行业",
+      "name": "suoshuhangye",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户邮箱",
+      "label": "客户邮箱",
+      "name": "kehuyouxiang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户地址",
+      "label": "客户地址",
+      "name": "kehudizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "详细地址",
+      "label": "详细地址",
+      "name": "xiangxidizhi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "客户详情",
+      "label": "客户详情",
+      "name": "kehuxiangqing",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "客户认领",
+      "label": "客户认领",
+      "name": "kehurenling",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

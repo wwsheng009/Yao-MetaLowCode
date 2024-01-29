@@ -1,0 +1,157 @@
+{
+  "name": "Shoukuanzhanghuxinxi",
+  "label": "收款账户信息",
+  "table": {
+    "name": "t_shoukuanzhanghuxinxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shoukuanzhanghuxinxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "账户类型",
+      "label": "账户类型",
+      "name": "zhanghuleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "对应成员",
+      "label": "对应成员",
+      "name": "duiyingchengyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "部门",
+      "label": "部门",
+      "name": "bumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开户名称",
+      "label": "开户名称",
+      "name": "kaihumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "银行卡号",
+      "label": "银行卡号",
+      "name": "yinhangkahao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开户网点",
+      "label": "开户网点",
+      "name": "kaihuwangdian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "支付宝账号",
+      "label": "支付宝账号",
+      "name": "zhifubaozhanghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "支付宝名称",
+      "label": "支付宝名称",
+      "name": "zhifubaomingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商",
+      "label": "供应商",
+      "name": "gongyingshang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票抬头",
+      "label": "发票抬头",
+      "name": "fapiaotaitou",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开户银行",
+      "label": "开户银行",
+      "name": "kaihuyinhang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收款银行账号",
+      "label": "收款银行账号",
+      "name": "shoukuanyinhangzhanghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "税种",
+      "label": "税种",
+      "name": "shuizhong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "增值税税率",
+      "label": "增值税税率",
+      "name": "zengzhishuishuilv",
+      "nullable": true,
+      "type": "float"
+    }
+  ]
+}

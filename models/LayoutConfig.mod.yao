@@ -1,0 +1,94 @@
+{
+  "name": "LayoutConfig",
+  "label": "布局设置",
+  "table": {
+    "name": "t_layout_config"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "layoutConfigId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "配置名称",
+      "label": "配置名称",
+      "name": "configName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "配置",
+      "label": "配置",
+      "name": "config",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "分享给谁",
+      "label": "分享给谁",
+      "name": "shareTo",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "应用类型",
+      "label": "应用类型",
+      "name": "applyType",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

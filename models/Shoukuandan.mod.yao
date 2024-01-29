@@ -1,0 +1,165 @@
+{
+  "name": "Shoukuandan",
+  "label": "收款单",
+  "table": {
+    "name": "t_shoukuandan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shoukuandanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择应收账款-对账单",
+      "label": "选择应收账款-对账单",
+      "name": "duizhangdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收款单号",
+      "label": "收款单号",
+      "name": "yingshouduizhangdanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择销项发票",
+      "label": "选择销项发票",
+      "name": "xuanzexiaoxiangfapiao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票附件",
+      "label": "发票附件",
+      "name": "fapiaofujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收款金额/元",
+      "label": "收款金额/元",
+      "name": "shoukuanjine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "收款方式",
+      "label": "收款方式",
+      "name": "shoukuanfangshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收款时间",
+      "label": "收款时间",
+      "name": "shoukuanshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "银行收款回单",
+      "label": "银行收款回单",
+      "name": "yinhangshoukuanhuidan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "jingbanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

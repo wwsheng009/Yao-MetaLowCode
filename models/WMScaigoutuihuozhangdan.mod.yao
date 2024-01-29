@@ -1,0 +1,274 @@
+{
+  "name": "WMScaigoutuihuozhangdan",
+  "label": "WMS采购退货账单",
+  "table": {
+    "name": "t_wmscaigoutuihuozhangdan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigoutuihuozhangdanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购退货单编号",
+      "label": "采购退货单编号",
+      "name": "caigourukudanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购订单名称",
+      "label": "采购订单名称",
+      "name": "caigoudingdanmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购订单编号",
+      "label": "采购订单编号",
+      "name": "caigoudingdanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商名称",
+      "label": "供应商名称",
+      "name": "gongyingshangmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商编码",
+      "label": "供应商编码",
+      "name": "gongyingshangbianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货仓库",
+      "label": "退货仓库",
+      "name": "rukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货时间",
+      "label": "退货时间",
+      "name": "rukushijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "rukuyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品编号",
+      "label": "产品编号",
+      "name": "chanpinbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "品牌",
+      "label": "品牌",
+      "name": "pinpai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "规格型号",
+      "label": "规格型号",
+      "name": "guigexinghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "单位",
+      "label": "单位",
+      "name": "danwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购数量",
+      "label": "采购数量",
+      "name": "zhijianhegeshuliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "已开票数量",
+      "label": "已开票数量",
+      "name": "yikaipiaoshuliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "已付款数量",
+      "label": "已付款数量",
+      "name": "yifukuanshuliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "已入库-退货数量",
+      "label": "已入库-退货数量",
+      "name": "bencirukuzongshu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实际采购价(含税)/元",
+      "label": "实际采购价(含税)/元",
+      "name": "shijicaigoujanshuuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "实际采购价(不含税)/元",
+      "label": "实际采购价(不含税)/元",
+      "name": "shijicaigoujiabuhanshuyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应付状态",
+      "label": "应付状态",
+      "name": "yingfuzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "应付金额/元",
+      "label": "应付金额/元",
+      "name": "yingfujineyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应付对账时间",
+      "label": "应付对账时间",
+      "name": "yingfuduizhangshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "开票状态",
+      "label": "开票状态",
+      "name": "kaipiaozhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开票金额/元",
+      "label": "开票金额/元",
+      "name": "kaipiaojineyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "开票时间",
+      "label": "开票时间",
+      "name": "kaipiaoshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "付款状态",
+      "label": "付款状态",
+      "name": "fukuanzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "付款金额/元",
+      "label": "付款金额/元",
+      "name": "fukuanjineyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "付款时间",
+      "label": "付款时间",
+      "name": "fukuanshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "未入库-退货数量",
+      "label": "未入库-退货数量",
+      "name": "weirukuihuoshuliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "本次退货总数",
+      "label": "本次退货总数",
+      "name": "bencituihuozongshu",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

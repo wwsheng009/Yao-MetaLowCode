@@ -1,0 +1,166 @@
+{
+  "name": "Kucunpandian",
+  "label": "库存盘点",
+  "table": {
+    "name": "t_kucunpandian"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "kucunpandianId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "盘点类型",
+      "label": "盘点类型",
+      "name": "pandianleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "盘点单编号",
+      "label": "盘点单编号",
+      "name": "pandiandanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "盘点开始日期",
+      "label": "盘点开始日期",
+      "name": "pandiankaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "盘点结束日期",
+      "label": "盘点结束日期",
+      "name": "pandianjieshuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "盘点员",
+      "label": "盘点员",
+      "name": "pandianyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "盘点仓库",
+      "label": "盘点仓库",
+      "name": "pandiancangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "盘亏产品总数",
+      "label": "盘亏产品总数",
+      "name": "pankuichanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "盘亏产品售价总额(含税)/元",
+      "label": "盘亏产品售价总额(含税)/元",
+      "name": "pankuichanpinshoujiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "盘盈产品总数",
+      "label": "盘盈产品总数",
+      "name": "panyingchanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "盘盈产品售价总额(含税)/元",
+      "label": "盘盈产品售价总额(含税)/元",
+      "name": "panyingchanpinshoujiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

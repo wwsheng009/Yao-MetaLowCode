@@ -1,0 +1,160 @@
+{
+  "name": "Cheliangxinxi",
+  "label": "车辆信息",
+  "table": {
+    "name": "t_cheliangxinxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cheliangxinxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "品牌",
+      "label": "品牌",
+      "name": "pinpai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "车型",
+      "label": "车型",
+      "name": "chexing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "车牌号",
+      "label": "车牌号",
+      "name": "chepaihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "行驶证号",
+      "label": "行驶证号",
+      "name": "xingshizhenghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "车身颜色",
+      "label": "车身颜色",
+      "name": "cheshenyanse",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发动机号",
+      "label": "发动机号",
+      "name": "fadongjihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "当前里程数",
+      "label": "当前里程数",
+      "name": "dangqianlichengshu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "下次保养里程数",
+      "label": "下次保养里程数",
+      "name": "xiacibaoyanglichengshu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "下次年检日期",
+      "label": "下次年检日期",
+      "name": "xiacinianjianriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "下次保险日期",
+      "label": "下次保险日期",
+      "name": "xiacibaoxianriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "日租金费用",
+      "label": "日租金费用",
+      "name": "rizujinfeiyong",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "购买日期",
+      "label": "购买日期",
+      "name": "goumairiqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "车辆图片",
+      "label": "车辆图片",
+      "name": "cheliangtupian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "行驶证图片",
+      "label": "行驶证图片",
+      "name": "xingshizhengtupian",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

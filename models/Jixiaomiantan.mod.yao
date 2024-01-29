@@ -1,0 +1,143 @@
+{
+  "name": "Jixiaomiantan",
+  "label": "绩效面谈",
+  "table": {
+    "name": "t_jixiaomiantan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "jixiaomiantanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "被考核人姓名",
+      "label": "被考核人姓名",
+      "name": "beikaoherenxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "面谈人",
+      "label": "面谈人",
+      "name": "miantanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "面谈日期",
+      "label": "面谈日期",
+      "name": "miantanriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "业绩完成进展情况",
+      "label": "业绩完成进展情况",
+      "name": "yejiwanchengjinzhanqingkuang",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "问题分析及改进计划",
+      "label": "问题分析及改进计划",
+      "name": "wentifenxijigaijinjihua",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "希望获得哪方面资源支持",
+      "label": "希望获得哪方面资源支持",
+      "name": "xiwanghuodenafang",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "培养与发展建议",
+      "label": "培养与发展建议",
+      "name": "peiyangyufazhanjianyi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

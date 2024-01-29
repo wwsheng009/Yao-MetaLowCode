@@ -1,0 +1,144 @@
+{
+  "name": "WMSqitachukudan",
+  "label": "WMS其他出库单",
+  "table": {
+    "name": "t_wmsqitachukudan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSqitachukudanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库类型",
+      "label": "出库类型",
+      "name": "chukuleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库仓库",
+      "label": "出库仓库",
+      "name": "chukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "其他出库单编号",
+      "label": "其他出库单编号",
+      "name": "qitachukudanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收货地址",
+      "label": "收货地址",
+      "name": "shouhuodizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "详细地址",
+      "label": "详细地址",
+      "name": "xiangxidizhi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "出库产品总数",
+      "label": "出库产品总数",
+      "name": "chukuchanpinzongshu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库产品成本总额/元",
+      "label": "出库产品成本总额/元",
+      "name": "chukuchanpinchengbenzon",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "出库确认",
+      "label": "出库确认",
+      "name": "chukuqueren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "拍照",
+      "label": "拍照",
+      "name": "paizhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库时间",
+      "label": "出库时间",
+      "name": "chukushijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "出库员",
+      "label": "出库员",
+      "name": "chukuyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "库管归属部门",
+      "label": "库管归属部门",
+      "name": "kuguanguishubumen",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

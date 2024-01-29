@@ -1,0 +1,157 @@
+{
+  "name": "WMSgonghuoshangsonghuodan",
+  "label": "WMS供货商送货单",
+  "table": {
+    "name": "t_wmsgonghuoshangsonghuodan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSgonghuoshangsonghuodanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择采购订单",
+      "label": "选择采购订单",
+      "name": "xuanzecaigoudingdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "送货单编号",
+      "label": "送货单编号",
+      "name": "songhuodanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "订单签订时间",
+      "label": "订单签订时间",
+      "name": "dingdanqiandingshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "供应商送货时间",
+      "label": "供应商送货时间",
+      "name": "gongyingshangsonghuoshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "供应商预计到货时间",
+      "label": "供应商预计到货时间",
+      "name": "gongyingshangyujidaohuoshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "选择送货信息",
+      "label": "选择送货信息",
+      "name": "xuanzesonghuoxinxi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收货仓库",
+      "label": "收货仓库",
+      "name": "shouhuocangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收货人联系方式",
+      "label": "收货人联系方式",
+      "name": "shouhuorenlianxifangshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收货人姓名",
+      "label": "收货人姓名",
+      "name": "shouhuorenxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "送达确认",
+      "label": "送达确认",
+      "name": "songdaqueren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "送达时间",
+      "label": "送达时间",
+      "name": "songdashijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "拍照",
+      "label": "拍照",
+      "name": "paizhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收货人地址",
+      "label": "收货人地址",
+      "name": "shouhuorendizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "详细地址",
+      "label": "详细地址",
+      "name": "xiangxidizhi",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

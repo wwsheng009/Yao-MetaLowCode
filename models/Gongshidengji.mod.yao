@@ -1,0 +1,130 @@
+{
+  "name": "Gongshidengji",
+  "label": "工时登记",
+  "table": {
+    "name": "t_gongshidengji"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "gongshidengjiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "流水号",
+      "label": "流水号",
+      "name": "liushuihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择项目",
+      "label": "选择项目",
+      "name": "xuanzexiangmu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择任务",
+      "label": "选择任务",
+      "name": "xuanzerenwu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择子任务",
+      "label": "选择子任务",
+      "name": "xuanzezirenwu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开始时间",
+      "label": "开始时间",
+      "name": "kaishishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "结束时间",
+      "label": "结束时间",
+      "name": "jieshushijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "工作时长",
+      "label": "工作时长",
+      "name": "gongzuoshichang",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 1
+    },
+    {
+      "comment": "工时类别",
+      "label": "工时类别",
+      "name": "gongshileibie",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工时描述",
+      "label": "工时描述",
+      "name": "gongshimiaoshu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "登记人",
+      "label": "登记人",
+      "name": "dengjiren",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

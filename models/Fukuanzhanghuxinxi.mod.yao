@@ -1,0 +1,94 @@
+{
+  "name": "Fukuanzhanghuxinxi",
+  "label": "付款账户信息",
+  "table": {
+    "name": "t_fukuanzhanghuxinxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "fukuanzhanghuxinxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "账户名称",
+      "label": "账户名称",
+      "name": "zhanghumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "银行账号",
+      "label": "银行账号",
+      "name": "yinhangzhanghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "币种",
+      "label": "币种",
+      "name": "bizhong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "账户性质",
+      "label": "账户性质",
+      "name": "zhanghuxingzhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "账户状态",
+      "label": "账户状态",
+      "name": "zhanghuzhuangtai",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

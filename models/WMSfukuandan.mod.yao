@@ -1,0 +1,123 @@
+{
+  "name": "WMSfukuandan",
+  "label": "WMS付款单",
+  "table": {
+    "name": "t_wmsfukuandan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSfukuandanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择对账单",
+      "label": "选择对账单",
+      "name": "duizhangdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "付款单号",
+      "label": "付款单号",
+      "name": "fukuandanhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择进项发票",
+      "label": "选择进项发票",
+      "name": "xuanzejinxiangfapiao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "本次付款金额合计/元",
+      "label": "本次付款金额合计/元",
+      "name": "bencifukuanjinehejiuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "付款方式",
+      "label": "付款方式",
+      "name": "fukuanfangshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "付款时间",
+      "label": "付款时间",
+      "name": "fukuanshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "银行付款回单",
+      "label": "银行付款回单",
+      "name": "yinhangfukuanhuidan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "jingbanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "经办人归属部门",
+      "label": "经办人归属部门",
+      "name": "jingbanrenguishubumen",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

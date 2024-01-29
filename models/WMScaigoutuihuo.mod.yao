@@ -1,0 +1,159 @@
+{
+  "name": "WMScaigoutuihuo",
+  "label": "WMS采购退货",
+  "table": {
+    "name": "t_wmscaigoutuihuo"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigoutuihuoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择采购订单",
+      "label": "选择采购订单",
+      "name": "xuanzecaigoudingdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货申请日期",
+      "label": "退货申请日期",
+      "name": "tuihuoshenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "采购退货单编号",
+      "label": "采购退货单编号",
+      "name": "caigoutuihuodanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货原因",
+      "label": "退货原因",
+      "name": "tuihuoyuanyin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货仓库",
+      "label": "退货仓库",
+      "name": "tuihuocangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "已入库-退货产品总数",
+      "label": "已入库-退货产品总数",
+      "name": "yiruuihuochanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "已入库-退货产品采购价总额(含税)/元",
+      "label": "已入库-退货产品采购价总额(含税)/元",
+      "name": "yhuochanpincaigoujiazouan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "退货产品总数",
+      "label": "退货产品总数",
+      "name": "tuihuochanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "退货产品采购价总额(含税)/元",
+      "label": "退货产品采购价总额(含税)/元",
+      "name": "tuihuochanpincaigoujiazonn",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "产品退回确认",
+      "label": "产品退回确认",
+      "name": "chanpintuihuiqueren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "拍照",
+      "label": "拍照",
+      "name": "paizhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货处理时间",
+      "label": "退货处理时间",
+      "name": "tuihuochulishijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "jingbanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "经办人归属部门",
+      "label": "经办人归属部门",
+      "name": "jingbanrenguishubumen",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,126 @@
+{
+  "name": "Gongzijisuan",
+  "label": "工资计算",
+  "table": {
+    "name": "t_gongzijisuan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "gongzijisuanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "薪资归属月份",
+      "label": "薪资归属月份",
+      "name": "xinziguishuyuefen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "薪资归属年份",
+      "label": "薪资归属年份",
+      "name": "xinziguishunianfen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工",
+      "label": "员工",
+      "name": "yuangong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "部门",
+      "label": "部门",
+      "name": "bumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工资单发放状态",
+      "label": "工资单发放状态",
+      "name": "gongzidanfafangzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "绩效系数",
+      "label": "绩效系数",
+      "name": "jixiaoxishu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "考勤扣款",
+      "label": "考勤扣款",
+      "name": "kaoqinkoukuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "业绩提成",
+      "label": "业绩提成",
+      "name": "yejiticheng",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "加班补贴",
+      "label": "加班补贴",
+      "name": "jiabanbutie",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

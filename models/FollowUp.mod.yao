@@ -1,0 +1,80 @@
+{
+  "name": "FollowUp",
+  "label": "跟进",
+  "table": {
+    "name": "t_follow_up"
+  },
+  "columns": [
+    {
+      "comment": "附件上传",
+      "label": "附件上传",
+      "name": "attachment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "跟进内容",
+      "label": "跟进内容",
+      "name": "content",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "followUpId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "图片",
+      "label": "图片",
+      "name": "picture",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联记录",
+      "label": "关联记录",
+      "name": "recordId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "跟进方式",
+      "label": "跟进方式",
+      "name": "wayType",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

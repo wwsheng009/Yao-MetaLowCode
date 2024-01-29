@@ -34,6 +34,26 @@
       "nullable": true
     },
     {
+      "comment": "数据库表名",
+      "label": "数据库表名",
+      "name": "physicalName",
+      "type": "string"
+    },
+    {
+      "comment": "是否明细实体",
+      "label": "明细实体",
+      "name": "detailEntityFlag",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "所属主实体",
+      "label": "所属主实体",
+      "name": "mainEntity",
+      "type": "string",
+      "nullable": true
+    },
+    {
       "comment": "是否允许设计表单",
       "label": "是否允许设计表单",
       "name": "layoutable",
@@ -53,6 +73,12 @@
       "name": "authorizable",
       "type": "boolean",
       "default": false
+    },{
+      "comment": "是否允许共享记录",
+      "label": "是否允许共享记录",
+      "name": "shareable",
+      "type": "boolean",
+      "default": false
     },
     {
       "comment": "是否允许分配记录",
@@ -62,32 +88,11 @@
       "default": false
     },
     {
-      "comment": "是否允许共享记录",
-      "label": "是否允许共享记录",
-      "name": "shareable",
-      "type": "boolean",
-      "default": false
-    },
-    {
-      "comment": "所属主实体",
-      "label": "所属主实体",
-      "name": "mainEntity",
-      "type": "string",
-      "nullable": true
-    },
-    {
       "comment": "明细实体",
       "label": "明细实体",
       "name": "detailEntitySet",
       "type": "string",
       "nullable": true
-    },
-    {
-      "comment": "是否明细实体",
-      "label": "明细实体",
-      "name": "detailEntityFlag",
-      "type": "boolean",
-      "default": false
     },
     {
       "comment": "是否系统实体",
@@ -102,12 +107,6 @@
       "name": "internalEntityFlag",
       "type": "boolean",
       "default": false
-    },
-    {
-      "comment": "数据库表名",
-      "label": "数据库表名",
-      "name": "physicalName",
-      "type": "string"
     },
     {
       "comment": "激活类型",

@@ -1,0 +1,73 @@
+{
+  "name": "ReportConfig",
+  "label": "报表模板",
+  "table": {
+    "name": "t_report_config"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "reportConfigId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "模板名称",
+      "label": "模板名称",
+      "name": "reportName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报表json",
+      "label": "报表json",
+      "name": "reportJson",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "是否禁用",
+      "label": "是否禁用",
+      "name": "isDisabled",
+      "nullable": true,
+      "type": "boolean"
+    }
+  ]
+}

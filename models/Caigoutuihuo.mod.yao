@@ -1,0 +1,194 @@
+{
+  "name": "Caigoutuihuo",
+  "label": "采购退货",
+  "table": {
+    "name": "t_caigoutuihuo"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "caigoutuihuoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货申请日期",
+      "label": "退货申请日期",
+      "name": "tuihuoshenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "采购退货单编号",
+      "label": "采购退货单编号",
+      "name": "xiaoshoutuihuodanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货原因",
+      "label": "退货原因",
+      "name": "tuihuoyuanyin",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "退货仓库",
+      "label": "退货仓库",
+      "name": "tuihuocangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "已入库-退货产品总数",
+      "label": "已入库-退货产品总数",
+      "name": "yichukutuihuochanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "已入库-退货产品售价总额(含税)/元",
+      "label": "已入库-退货产品售价总额(含税)/元",
+      "name": "uihuochanpinshoujiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "jingbanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择采购订单",
+      "label": "选择采购订单",
+      "name": "xuanzecaigoudingdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货产品总数",
+      "label": "退货产品总数",
+      "name": "tuihuochanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "退货产品采购价总额(含税)/元",
+      "label": "退货产品采购价总额(含税)/元",
+      "name": "tuihuochanpincaigoujiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "产品退回确认",
+      "label": "产品退回确认",
+      "name": "chanpintuihuiqueren",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "拍照",
+      "label": "拍照",
+      "name": "paizhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退货处理时间",
+      "label": "退货处理时间",
+      "name": "tuihuochulishijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

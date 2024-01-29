@@ -1,0 +1,87 @@
+{
+  "name": "Rencaikugongzuojishixijingli",
+  "label": "人才库工作及实习经历",
+  "table": {
+    "name": "t_rencaikugongzuojishixijingli"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "rencaikugongzuojishixijingliId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdRencaikuId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工作性质",
+      "label": "工作性质",
+      "name": "gongzuoxingzhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工作开始时间",
+      "label": "工作开始时间",
+      "name": "gongzuokaishishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "工作结束时间",
+      "label": "工作结束时间",
+      "name": "gongzuojieshushijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "企业名称",
+      "label": "企业名称",
+      "name": "qiyemingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位名称",
+      "label": "岗位名称",
+      "name": "gangweimingcheng",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

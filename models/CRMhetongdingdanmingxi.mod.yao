@@ -1,0 +1,81 @@
+{
+  "name": "CRMhetongdingdanmingxi",
+  "label": "CRM合同订单明细",
+  "table": {
+    "name": "t_crmhetongdingdanmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMhetongdingdanmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdCRMhetongdingdanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择产品",
+      "label": "选择产品",
+      "name": "xuanzechanpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "数量",
+      "label": "数量",
+      "name": "shuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "折扣",
+      "label": "折扣",
+      "name": "zhekou",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "小计",
+      "label": "小计",
+      "name": "xiaoji",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

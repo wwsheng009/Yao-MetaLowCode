@@ -1,0 +1,150 @@
+{
+  "name": "ChanpinBOM",
+  "label": "产品BOM",
+  "table": {
+    "name": "t_chanpinbom"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "chanpinBOMId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择方案设计",
+      "label": "选择方案设计",
+      "name": "xuanzefangansheji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择产品",
+      "label": "选择产品",
+      "name": "xuanzechanpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "BOM编码",
+      "label": "BOM编码",
+      "name": "bianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择生产工序",
+      "label": "选择生产工序",
+      "name": "xuanzeshengchangongxu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工序编码",
+      "label": "工序编码",
+      "name": "gongxubianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工序名称",
+      "label": "工序名称",
+      "name": "gongxumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工序技术附件",
+      "label": "工序技术附件",
+      "name": "gongxujishufujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "生产班组",
+      "label": "生产班组",
+      "name": "shengchanbanzu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品编码",
+      "label": "产品编码",
+      "name": "chanpinbianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户编码",
+      "label": "客户编码",
+      "name": "kehubianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报价单编号",
+      "label": "报价单编号",
+      "name": "baojiadanbianhao",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

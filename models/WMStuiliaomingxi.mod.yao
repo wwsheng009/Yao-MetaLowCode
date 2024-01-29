@@ -1,0 +1,66 @@
+{
+  "name": "WMStuiliaomingxi",
+  "label": "WMS退料明细",
+  "table": {
+    "name": "t_wmstuiliaomingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMStuiliaomingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdWMStuiliaorukuId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择备料",
+      "label": "选择备料",
+      "name": "xuanzebeiliao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退料数量",
+      "label": "退料数量",
+      "name": "tuiliaoshuliang",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

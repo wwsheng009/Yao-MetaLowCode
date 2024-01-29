@@ -1,0 +1,199 @@
+{
+  "name": "Zhaopinxuqiu",
+  "label": "招聘需求",
+  "table": {
+    "name": "t_zhaopinxuqiu"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "zhaopinxuqiuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "需求编号",
+      "label": "需求编号",
+      "name": "xuqiubianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "需求提交人",
+      "label": "需求提交人",
+      "name": "xuqiutijiaoren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "提交日期",
+      "label": "提交日期",
+      "name": "tijiaoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "需求类型",
+      "label": "需求类型",
+      "name": "xuqiuleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "需求状态",
+      "label": "需求状态",
+      "name": "xuqiuzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "招聘负责人",
+      "label": "招聘负责人",
+      "name": "zhaopinfuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择JD",
+      "label": "选择JD",
+      "name": "xuanzeJD",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位性质",
+      "label": "岗位性质",
+      "name": "gangweixingzhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "需求人数",
+      "label": "需求人数",
+      "name": "xuqiurenshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "工作地点",
+      "label": "工作地点",
+      "name": "gongzuodidian",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "期望到岗时间",
+      "label": "期望到岗时间",
+      "name": "qiwangdaogangshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "薪资区间",
+      "label": "薪资区间",
+      "name": "xinziqujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发放模式",
+      "label": "发放模式",
+      "name": "fafangmoshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "人员来源",
+      "label": "人员来源",
+      "name": "renyuanlaiyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "学历要求",
+      "label": "学历要求",
+      "name": "xueliyaoqiu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工作年限要求",
+      "label": "工作年限要求",
+      "name": "gongzuonianxianyaoqiu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "年龄要求",
+      "label": "年龄要求",
+      "name": "nianlingyaoqiu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位职责",
+      "label": "岗位职责",
+      "name": "gangweizhize",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "任职要求",
+      "label": "任职要求",
+      "name": "renzhiyaoqiu",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

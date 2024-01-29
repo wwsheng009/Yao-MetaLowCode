@@ -1,0 +1,299 @@
+{
+  "name": "Yuangongdangan",
+  "label": "员工档案",
+  "table": {
+    "name": "t_yuangongdangan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "yuangongdanganId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工号",
+      "label": "工号",
+      "name": "gonghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "部门",
+      "label": "部门",
+      "name": "bumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位",
+      "label": "岗位",
+      "name": "gangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工成员",
+      "label": "员工成员",
+      "name": "yuangongchengyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "身份证号",
+      "label": "身份证号",
+      "name": "shenfenzhenghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "性别",
+      "label": "性别",
+      "name": "xingbie",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出生日期",
+      "label": "出生日期",
+      "name": "chushengriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "籍贯",
+      "label": "籍贯",
+      "name": "jiguan",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "户籍所在地",
+      "label": "户籍所在地",
+      "name": "hujisuozaidi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "户籍类型",
+      "label": "户籍类型",
+      "name": "hujileixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "民族",
+      "label": "民族",
+      "name": "minzu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "婚姻状态",
+      "label": "婚姻状态",
+      "name": "hunyinzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "政治面貌",
+      "label": "政治面貌",
+      "name": "zhengzhimianmao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工照片",
+      "label": "员工照片",
+      "name": "yuangongzhaopian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "聘用形式",
+      "label": "聘用形式",
+      "name": "pinyongxingshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工状态",
+      "label": "员工状态",
+      "name": "yuangongzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "参加工作日期",
+      "label": "参加工作日期",
+      "name": "canjiagongzuoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "入职日期",
+      "label": "入职日期",
+      "name": "ruzhiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "试用期天数（天）",
+      "label": "试用期天数（天）",
+      "name": "shiyongqitianshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "转正日期",
+      "label": "转正日期",
+      "name": "zhuanzhengriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "试用期薪资",
+      "label": "试用期薪资",
+      "name": "shiyongqixinzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "正式薪资",
+      "label": "正式薪资",
+      "name": "zhengshixinzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "直接上级",
+      "label": "直接上级",
+      "name": "zhijieshangji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "负责HR",
+      "label": "负责HR",
+      "name": "fuzeHR",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "社保账号",
+      "label": "社保账号",
+      "name": "shebaozhanghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "公积金账号",
+      "label": "公积金账号",
+      "name": "gongjijinzhanghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "银行卡号",
+      "label": "银行卡号",
+      "name": "yinhangkahao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开户行",
+      "label": "开户行",
+      "name": "kaihuxing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机号",
+      "label": "手机号",
+      "name": "shoujihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "常住地址",
+      "label": "常住地址",
+      "name": "changzhudizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "具体地址",
+      "label": "具体地址",
+      "name": "jutidizhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最高学历",
+      "label": "最高学历",
+      "name": "zuigaoxueli",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "毕业时间",
+      "label": "毕业时间",
+      "name": "biyeshijian",
+      "nullable": true,
+      "type": "date"
+    }
+  ]
+}

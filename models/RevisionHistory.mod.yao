@@ -1,0 +1,59 @@
+{
+  "name": "RevisionHistory",
+  "label": "修改历史",
+  "table": {
+    "name": "t_revision_history"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "revisionHistoryId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "所属实体",
+      "label": "所属实体",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "相关实体Id",
+      "label": "相关实体Id",
+      "name": "entityId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "变更数据",
+      "label": "变更数据",
+      "name": "revisionContent",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "操作人",
+      "label": "操作人",
+      "name": "revisionBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "操作时间",
+      "label": "操作时间",
+      "name": "revisionOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "变更类型",
+      "label": "变更类型",
+      "name": "revisionType",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

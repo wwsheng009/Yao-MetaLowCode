@@ -1,0 +1,116 @@
+{
+  "name": "Fentanfuzhubiao",
+  "label": "分摊辅助表（费用）",
+  "table": {
+    "name": "t_fentanfuzhubiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "fentanfuzhubiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "姓名",
+      "label": "姓名",
+      "name": "xingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "部门",
+      "label": "部门",
+      "name": "bumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "费用类型",
+      "label": "费用类型",
+      "name": "feiyongleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "会计科目",
+      "label": "会计科目",
+      "name": "kuaijikemu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "单号",
+      "label": "单号",
+      "name": "danhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "提交时间",
+      "label": "提交时间",
+      "name": "tijiaoshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "分摊核销金额",
+      "label": "分摊核销金额",
+      "name": "fentanhexiaojine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "付款时间",
+      "label": "付款时间",
+      "name": "fukuanshijian",
+      "nullable": true,
+      "type": "date"
+    }
+  ]
+}

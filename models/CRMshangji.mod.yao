@@ -1,0 +1,130 @@
+{
+  "name": "CRMshangji",
+  "label": "CRM商机",
+  "table": {
+    "name": "t_crmshangji"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cRMshangjiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联客户",
+      "label": "关联客户",
+      "name": "guanliankehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关联联系人",
+      "label": "关联联系人",
+      "name": "guanlianlianxiren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "商机名称",
+      "label": "商机名称",
+      "name": "shangjimingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "商机编号",
+      "label": "商机编号",
+      "name": "shangjibianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售阶段",
+      "label": "销售阶段",
+      "name": "xiaoshoujieduan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "赢率",
+      "label": "赢率",
+      "name": "yingl",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "负责人",
+      "label": "负责人",
+      "name": "fuzeren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "归属部门",
+      "label": "归属部门",
+      "name": "guishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预测商机金额/元",
+      "label": "预测商机金额/元",
+      "name": "yuceshangjijineyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "预计成交日期",
+      "label": "预计成交日期",
+      "name": "yujichengjiaoriqi",
+      "nullable": true,
+      "type": "date"
+    }
+  ]
+}

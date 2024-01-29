@@ -1,0 +1,73 @@
+{
+  "name": "Chanpingongyiluxian",
+  "label": "产品工艺路线",
+  "table": {
+    "name": "t_chanpingongyiluxian"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "chanpingongyiluxianId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdERPchanpinxinxiId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "单位生产数量",
+      "label": "单位生产数量",
+      "name": "danweishengchanshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "生产班组",
+      "label": "生产班组",
+      "name": "shengchanbanzu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工序名称",
+      "label": "工序名称",
+      "name": "gongxumingcheng",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "name": "WMStuiliaoruku",
+  "label": "WMS退料入库",
+  "table": {
+    "name": "t_wmstuiliaoruku"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMStuiliaorukuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择领料出库单",
+      "label": "选择领料出库单",
+      "name": "xuanzelingliaochukudan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "车间退料时间",
+      "label": "车间退料时间",
+      "name": "chejiantuiliaoshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "车间退料编号",
+      "label": "车间退料编号",
+      "name": "chejiantuiliaobianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退料原因",
+      "label": "退料原因",
+      "name": "tuiliaoyuanyin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退料仓库",
+      "label": "退料仓库",
+      "name": "tuiliaocangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "退料货品总数",
+      "label": "退料货品总数",
+      "name": "tuiliaohuopinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "退料产品成本总额/元",
+      "label": "退料产品成本总额/元",
+      "name": "tuiliaochanpinchengbenzo",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "经办人",
+      "label": "经办人",
+      "name": "jingbanren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "经办人归属部门",
+      "label": "经办人归属部门",
+      "name": "jingbanrenguishubumen",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

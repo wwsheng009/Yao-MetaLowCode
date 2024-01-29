@@ -1,0 +1,173 @@
+{
+  "name": "Yingfuzhangkuan",
+  "label": "应付账款-对账",
+  "table": {
+    "name": "t_yingfuzhangkuan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "yingfuzhangkuanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择供应商",
+      "label": "选择供应商",
+      "name": "xuanzegongyingshang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "对账开始日期",
+      "label": "对账开始日期",
+      "name": "duizhangkaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "对账结束日期",
+      "label": "对账结束日期",
+      "name": "duizhangjieshuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "应付对账单编号",
+      "label": "应付对账单编号",
+      "name": "yingfuduizhangdanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "应付金额总额(含税)/元",
+      "label": "应付金额总额(含税)/元",
+      "name": "yingfujinezonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应付金额总额(不含税)/元",
+      "label": "应付金额总额(不含税)/元",
+      "name": "yingfujinezonge1",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "预计付款方式",
+      "label": "预计付款方式",
+      "name": "yujifukuanfangshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "预计付款日期",
+      "label": "预计付款日期",
+      "name": "yujifukuanriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "应付对账确认",
+      "label": "应付对账确认",
+      "name": "yingfuduizhangqueren",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "应付对账时间",
+      "label": "应付对账时间",
+      "name": "yingfuduizhangshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "应付对账人员",
+      "label": "应付对账人员",
+      "name": "yingfuduizhangrenyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

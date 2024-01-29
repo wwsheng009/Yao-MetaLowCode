@@ -1,0 +1,47 @@
+{
+  "name": "ReferenceListMap",
+  "label": "多对多中间表",
+  "table": {
+    "name": "t_reference_list_map"
+  },
+  "columns": [
+    {
+      "comment": "实体名称",
+      "label": "实体名称",
+      "name": "entityName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "字段名称",
+      "label": "字段名称",
+      "name": "fieldName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "记录Id",
+      "label": "记录Id",
+      "name": "objectId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "主键Id",
+      "label": "主键Id",
+      "name": "mapId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "被引用记录Id",
+      "label": "被引用记录Id",
+      "name": "toId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    }
+  ]
+}

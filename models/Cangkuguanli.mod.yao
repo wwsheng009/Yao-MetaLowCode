@@ -1,0 +1,164 @@
+{
+  "name": "Cangkuguanli",
+  "label": "仓库管理",
+  "table": {
+    "name": "t_cangkuguanli"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cangkuguanliId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓库名称",
+      "label": "仓库名称",
+      "name": "cangkumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓库编码",
+      "label": "仓库编码",
+      "name": "cangkubianma",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓库地区",
+      "label": "仓库地区",
+      "name": "cangkudizhi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "仓库容量/立方",
+      "label": "仓库容量/立方",
+      "name": "cangkurongliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓库性质",
+      "label": "仓库性质",
+      "name": "cangkuxingzhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓库状态",
+      "label": "仓库状态",
+      "name": "cangkuzhuangtai",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "仓库主管",
+      "label": "仓库主管",
+      "name": "cangkuzhuguan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系电话",
+      "label": "联系电话",
+      "name": "lianxidianhua",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "备注信息",
+      "label": "备注信息",
+      "name": "beizhuxinxi",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "具体地址",
+      "label": "具体地址",
+      "name": "jutidizhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "总入库数量",
+      "label": "总入库数量",
+      "name": "zongrukushuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "总出库数量",
+      "label": "总出库数量",
+      "name": "zongchukushuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "当前库存数",
+      "label": "当前库存数",
+      "name": "dangqiankucunshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "库存冻结数量",
+      "label": "库存冻结数量",
+      "name": "kucundongjieshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "当前可用库存数量",
+      "label": "当前可用库存数量",
+      "name": "dangqiankeyongkucunshuliang",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

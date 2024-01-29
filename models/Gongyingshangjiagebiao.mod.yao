@@ -1,0 +1,119 @@
+{
+  "name": "Gongyingshangjiagebiao",
+  "label": "供应商价格表",
+  "table": {
+    "name": "t_gongyingshangjiagebiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "gongyingshangjiagebiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择供应商",
+      "label": "选择供应商",
+      "name": "xuanzegongyingshang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择产品",
+      "label": "选择产品",
+      "name": "xuanzechanpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "标准采购单价(含税)/元",
+      "label": "标准采购单价(含税)/元",
+      "name": "biaozhuncaigoudanjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "采购单价(含税)/元",
+      "label": "采购单价(含税)/元",
+      "name": "caigoudanjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "折扣率%",
+      "label": "折扣率%",
+      "name": "zhekoulv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "增值税税率%",
+      "label": "增值税税率%",
+      "name": "zengzhishuishuil",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "采购单价(不含税)/元",
+      "label": "采购单价(不含税)/元",
+      "name": "caigoudanjia1",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "税额/元",
+      "label": "税额/元",
+      "name": "shuie",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "WMSgongyingqitalianxirenxinxi",
+  "label": "WMS供应商其他联系人信息",
+  "table": {
+    "name": "t_wmsgongyingqitalianxirenxinxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSgongyingqitalianxirenxinxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdWMSgongyingshangxinxiId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人姓名",
+      "label": "联系人姓名",
+      "name": "lianxirenxingming1",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人职位",
+      "label": "联系人职位",
+      "name": "lianxirenzhiwei1",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人手机",
+      "label": "联系人手机",
+      "name": "lianxirenshouji1",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

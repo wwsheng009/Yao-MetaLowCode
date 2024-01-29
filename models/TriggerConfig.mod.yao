@@ -1,0 +1,108 @@
+{
+  "name": "TriggerConfig",
+  "label": "触发器",
+  "table": {
+    "name": "t_trigger_config"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "triggerConfigId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "触发周期",
+      "label": "触发周期",
+      "name": "whenCron",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "过滤条件",
+      "label": "过滤条件",
+      "name": "actionFilter",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "优先级",
+      "label": "优先级",
+      "name": "priority",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "触发器名称",
+      "label": "触发器名称",
+      "name": "name",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "是否禁用",
+      "label": "是否禁用",
+      "name": "isDisabled",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "触发器类型",
+      "label": "触发器类型",
+      "name": "actionType",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "触发条件",
+      "label": "触发条件",
+      "name": "whenNum",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "触发器执行内容",
+      "label": "触发器执行内容",
+      "name": "actionContent",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

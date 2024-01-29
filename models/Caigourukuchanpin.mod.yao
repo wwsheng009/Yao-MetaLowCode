@@ -1,0 +1,98 @@
+{
+  "name": "Caigourukuchanpin",
+  "label": "应付对账-采购入库产品",
+  "table": {
+    "name": "t_caigourukuchanpin"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "caigourukuchanpinId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdYingfuzhangkuanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择入库明细",
+      "label": "选择入库明细",
+      "name": "xuanzerukumingxi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "对账数量",
+      "label": "对账数量",
+      "name": "duizhangshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "实际采购价(含税)/元",
+      "label": "实际采购价(含税)/元",
+      "name": "shijicaigoujia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应付金额(含税)/元",
+      "label": "应付金额(含税)/元",
+      "name": "yingfujine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "实际采购价(不含税)/元",
+      "label": "实际采购价(不含税)/元",
+      "name": "shijicaigoujia1",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应付金额(不含税)/元",
+      "label": "应付金额(不含税)/元",
+      "name": "yingfujine1",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

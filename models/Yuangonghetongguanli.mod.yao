@@ -1,0 +1,164 @@
+{
+  "name": "Yuangonghetongguanli",
+  "label": "员工合同管理",
+  "table": {
+    "name": "t_yuangonghetongguanli"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "yuangonghetongguanliId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "员工姓名",
+      "label": "员工姓名",
+      "name": "yuangongxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入职时间",
+      "label": "入职时间",
+      "name": "ruzhishijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "员工状态",
+      "label": "员工状态",
+      "name": "yuangongzhuangtai",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "岗位",
+      "label": "岗位",
+      "name": "gangwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "聘用形式",
+      "label": "聘用形式",
+      "name": "pinyongxingshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同编号",
+      "label": "合同编号",
+      "name": "hetongbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主合同",
+      "label": "主合同",
+      "name": "zhuhetong",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "合同类型",
+      "label": "合同类型",
+      "name": "hetongleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同开始日期",
+      "label": "合同开始日期",
+      "name": "hetongkaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "合同结束日期",
+      "label": "合同结束日期",
+      "name": "hetongjieshuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "合同签订日期",
+      "label": "合同签订日期",
+      "name": "hetongqiandingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "合同期限",
+      "label": "合同期限",
+      "name": "hetongqixian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同主体",
+      "label": "合同主体",
+      "name": "hetongzhuti",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同附件",
+      "label": "合同附件",
+      "name": "hetongfujian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合同备注",
+      "label": "合同备注",
+      "name": "hetongbeizhu",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "name": "WMScaigouruku",
+  "label": "WMS采购入库",
+  "table": {
+    "name": "t_wmscaigouruku"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigourukuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购入库单编号",
+      "label": "采购入库单编号",
+      "name": "shouhuodanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库仓库",
+      "label": "入库仓库",
+      "name": "shouhuocangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库产品总数",
+      "label": "入库产品总数",
+      "name": "shishouchanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "选择质检单",
+      "label": "选择质检单",
+      "name": "xuanzezhijiandan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库产品采购价总额(含税)/元",
+      "label": "入库产品采购价总额(含税)/元",
+      "name": "rukuchanpincaigoujiazon",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

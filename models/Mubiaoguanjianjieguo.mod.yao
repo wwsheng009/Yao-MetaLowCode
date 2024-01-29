@@ -1,0 +1,108 @@
+{
+  "name": "Mubiaoguanjianjieguo",
+  "label": "目标关键结果",
+  "table": {
+    "name": "t_mubiaoguanjianjieguo"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "mubiaoguanjianjieguoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdMubiaoId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "关键结果标题",
+      "label": "关键结果标题",
+      "name": "guanjianjieguobiaoti",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "进度单位",
+      "label": "进度单位",
+      "name": "jindudanwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "当前进度",
+      "label": "当前进度",
+      "name": "dangqianjindu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "起始进度",
+      "label": "起始进度",
+      "name": "qishijindu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "目标进度",
+      "label": "目标进度",
+      "name": "mubiaojindu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "进度完成情况",
+      "label": "进度完成情况",
+      "name": "jinduwanchengqingkuang",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "权重",
+      "label": "权重",
+      "name": "quanzhong",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "结果状态",
+      "label": "结果状态",
+      "name": "jieguozhuangtai",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

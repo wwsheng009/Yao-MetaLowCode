@@ -1,0 +1,80 @@
+{
+  "name": "Shengchangongdanmingxi",
+  "label": "生产工单明细",
+  "table": {
+    "name": "t_shengchangongdanmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shengchangongdanmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdERPshengchangongdanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品名称",
+      "label": "产品名称",
+      "name": "chanpinmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "本次派工数量",
+      "label": "本次派工数量",
+      "name": "bencipaigongshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "开工时间",
+      "label": "开工时间",
+      "name": "kaigongshijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "完工时间",
+      "label": "完工时间",
+      "name": "wangongshijian",
+      "nullable": true,
+      "type": "date"
+    }
+  ]
+}

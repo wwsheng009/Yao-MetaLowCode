@@ -1,0 +1,109 @@
+{
+  "name": "Richeng",
+  "label": "日程",
+  "table": {
+    "name": "t_richeng"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "richengId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "日程主题",
+      "label": "日程主题",
+      "name": "richengzhuti",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开始时间",
+      "label": "开始时间",
+      "name": "kaishishijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "结束时间",
+      "label": "结束时间",
+      "name": "jieshushijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "日程类型",
+      "label": "日程类型",
+      "name": "richengleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "地点",
+      "label": "地点",
+      "name": "didian",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "时长",
+      "label": "时长",
+      "name": "shichang",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 1
+    },
+    {
+      "comment": "日程描述",
+      "label": "日程描述",
+      "name": "richengmiaoshu",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

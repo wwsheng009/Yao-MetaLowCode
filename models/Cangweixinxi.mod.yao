@@ -1,0 +1,80 @@
+{
+  "name": "Cangweixinxi",
+  "label": "仓位信息",
+  "table": {
+    "name": "t_cangweixinxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "cangweixinxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdCangkuguanliId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓位序号",
+      "label": "仓位序号",
+      "name": "cangweixuhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓位容量/立方",
+      "label": "仓位容量/立方",
+      "name": "cangweirongliang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓位备注",
+      "label": "仓位备注",
+      "name": "cangweibeizhu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "仓位状态",
+      "label": "仓位状态",
+      "name": "cangweizhuangtai",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

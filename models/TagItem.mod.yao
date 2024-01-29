@@ -1,0 +1,46 @@
+{
+  "name": "TagItem",
+  "label": "多选项",
+  "table": {
+    "name": "t_tag_item"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "tagItemId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "实体名称",
+      "label": "实体名称",
+      "name": "entityName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "字段名称",
+      "label": "字段名称",
+      "name": "fieldName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选项值",
+      "label": "选项值",
+      "name": "value",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "显示顺序",
+      "label": "显示顺序",
+      "name": "displayOrder",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}
+// yao migrate -n tagitem

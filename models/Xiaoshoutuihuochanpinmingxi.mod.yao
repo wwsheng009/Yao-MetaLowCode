@@ -1,0 +1,98 @@
+{
+  "name": "Xiaoshoutuihuochanpinmingxi",
+  "label": "应收账款对账-销售退货产品明细",
+  "table": {
+    "name": "t_xiaoshoutuihuochanpinmingxi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "xiaoshoutuihuochanpinmingxiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdYingshouzhangkuanuizhangId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "对账数量",
+      "label": "对账数量",
+      "name": "duizhangshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "实际售价(含税)/元",
+      "label": "实际售价(含税)/元",
+      "name": "shijishoujia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应收金额(含税)/元",
+      "label": "应收金额(含税)/元",
+      "name": "yingshoujine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "实际售价(不含税)/元",
+      "label": "实际售价(不含税)/元",
+      "name": "shijishoujiabu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "应收金额(不含税)/元",
+      "label": "应收金额(不含税)/元",
+      "name": "yingshoujineyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "选择退货明细",
+      "label": "选择退货明细",
+      "name": "xuanzetuihuomingxi",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

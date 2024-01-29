@@ -1,0 +1,120 @@
+{
+  "name": "Chanpinxiaoshoujiagebiao",
+  "label": "产品销售价格表",
+  "table": {
+    "name": "t_chanpinxiaoshoujiagebiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "chanpinxiaoshoujiagebiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择产品",
+      "label": "选择产品",
+      "name": "xuanzechanpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "价格等级",
+      "label": "价格等级",
+      "name": "jiagedengji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售单价(含税)/元",
+      "label": "销售单价(含税)/元",
+      "name": "xiaoshoudanjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "增值税税率",
+      "label": "增值税税率",
+      "name": "zengzhishuishuilv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "销售单价(不含税)/元",
+      "label": "销售单价(不含税)/元",
+      "name": "xiaoshoudanjiabuhanshui",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "税额",
+      "label": "税额",
+      "name": "shuie",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "售价毛利/元",
+      "label": "售价毛利/元",
+      "name": "shoujiamaoli",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "成本价",
+      "label": "成本价",
+      "name": "chengbenjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "name": "Jinjilianxiren",
+  "label": "员工-紧急联系人",
+  "table": {
+    "name": "t_jinjilianxiren"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "jinjilianxirenId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdYuangongdanganId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "手机",
+      "label": "手机",
+      "name": "shouji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "紧急联系人姓名",
+      "label": "紧急联系人姓名",
+      "name": "jinjilianxirenxingming",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

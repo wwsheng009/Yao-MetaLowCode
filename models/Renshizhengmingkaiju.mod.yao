@@ -1,0 +1,94 @@
+{
+  "name": "Renshizhengmingkaiju",
+  "label": "人事证明开具",
+  "table": {
+    "name": "t_renshizhengmingkaiju"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "renshizhengmingkaijuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请日期",
+      "label": "申请日期",
+      "name": "shenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "申请员工",
+      "label": "申请员工",
+      "name": "shenqingyuangong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "身份证号",
+      "label": "身份证号",
+      "name": "shenfenzhenghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请证明类型",
+      "label": "申请证明类型",
+      "name": "shenqingzhengmingleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请事由",
+      "label": "申请事由",
+      "name": "shenqingshiyou",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

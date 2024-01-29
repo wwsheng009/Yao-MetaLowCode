@@ -1,0 +1,80 @@
+{
+  "name": "Team",
+  "label": "团队",
+  "table": {
+    "name": "t_team"
+  },
+  "columns": [
+    {
+      "comment": "团队Id主键",
+      "label": "团队Id主键",
+      "name": "teamId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "是否禁用",
+      "label": "是否禁用",
+      "name": "disabled",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "团队名称",
+      "label": "团队名称",
+      "name": "teamName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "负责人",
+      "label": "负责人",
+      "name": "principalId",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

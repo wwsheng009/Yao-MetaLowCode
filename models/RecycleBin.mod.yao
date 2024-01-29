@@ -1,0 +1,80 @@
+{
+  "name": "RecycleBin",
+  "label": "回收站",
+  "table": {
+    "name": "t_recycle_bin"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "recycleBinId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "所属实体",
+      "label": "所属实体",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "相关实体Id",
+      "label": "相关实体Id",
+      "name": "entityId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "相关实体名称",
+      "label": "相关实体名称",
+      "name": "entityName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "删除人",
+      "label": "删除人",
+      "name": "deletedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "删除时间",
+      "label": "删除时间",
+      "name": "deletedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "删除渠道",
+      "label": "删除渠道",
+      "name": "deletedWith",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "恢复人",
+      "label": "恢复人",
+      "name": "restoreBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "恢复时间",
+      "label": "恢复时间",
+      "name": "restoreOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "关联删除数据Id",
+      "label": "关联删除数据Id",
+      "name": "detailEntityIds",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

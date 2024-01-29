@@ -1,0 +1,172 @@
+{
+  "name": "Xiaoshouchuku",
+  "label": "销售出库",
+  "table": {
+    "name": "t_xiaoshouchuku"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "xiaoshouchukuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择销售订单",
+      "label": "选择销售订单",
+      "name": "xuanzexiaoshoudingdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "产品出库标签",
+      "label": "产品出库标签",
+      "name": "chanpinchukubiaoqian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库仓库",
+      "label": "出库仓库",
+      "name": "chukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库产品总数",
+      "label": "出库产品总数",
+      "name": "chukuchanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "出库产品售价总额(含税)/元",
+      "label": "出库产品售价总额(含税)/元",
+      "name": "chukuchanpinshoujiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "预计出库时间",
+      "label": "预计出库时间",
+      "name": "yujichukushijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "出库员",
+      "label": "出库员",
+      "name": "chukuyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户收货确认",
+      "label": "客户收货确认",
+      "name": "kehushouhuoqueren",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "收货确认时间",
+      "label": "收货确认时间",
+      "name": "shouhuoquerenshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "销售订单名称",
+      "label": "销售订单名称",
+      "name": "xiaoshoudingdanmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

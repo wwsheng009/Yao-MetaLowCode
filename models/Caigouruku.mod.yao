@@ -1,0 +1,179 @@
+{
+  "name": "Caigouruku",
+  "label": "采购入库",
+  "table": {
+    "name": "t_caigouruku"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "caigourukuId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择采购订单",
+      "label": "选择采购订单",
+      "name": "xuanzecaigoudingdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购入库单编号",
+      "label": "采购入库单编号",
+      "name": "caigourukudanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库仓库",
+      "label": "入库仓库",
+      "name": "rukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库产品总数",
+      "label": "入库产品总数",
+      "name": "rukuchanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "入库产品采购价总额(含税)/元",
+      "label": "入库产品采购价总额(含税)/元",
+      "name": "rukuchanpincaigoujiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "是否存在不合格品",
+      "label": "是否存在不合格品",
+      "name": "shifoucunzaibuhegepin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "质检时间",
+      "label": "质检时间",
+      "name": "zhijianshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "质检员",
+      "label": "质检员",
+      "name": "zhijianyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "合格品入库确认",
+      "label": "合格品入库确认",
+      "name": "hegepinrukuqueren",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "拍照",
+      "label": "拍照",
+      "name": "paizhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "入库时间",
+      "label": "入库时间",
+      "name": "rukushijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "入库员",
+      "label": "入库员",
+      "name": "rukuyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "Gongyingshanglianxiren",
+  "label": "供应商联系人",
+  "table": {
+    "name": "t_gongyingshanglianxiren"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "gongyingshanglianxirenId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdGongyingshangguanliId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人姓名",
+      "label": "联系人姓名",
+      "name": "lianxirenxingming",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人手机",
+      "label": "联系人手机",
+      "name": "lianxirenshouji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人职位",
+      "label": "联系人职位",
+      "name": "lianxirenzhiwei",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

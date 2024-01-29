@@ -1,0 +1,95 @@
+{
+  "name": "Shoukuanjihua",
+  "label": "收款计划",
+  "table": {
+    "name": "t_shoukuanjihua"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shoukuanjihuaId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdXiaoshoudingdanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收款项",
+      "label": "收款项",
+      "name": "shoukuanxiang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收款比例",
+      "label": "收款比例",
+      "name": "shoukuanbili",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "收款金额/元",
+      "label": "收款金额/元",
+      "name": "shoukuanjine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "收款方式",
+      "label": "收款方式",
+      "name": "shoukuanfangshi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "计划收款日期",
+      "label": "计划收款日期",
+      "name": "jihuashoukuanriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

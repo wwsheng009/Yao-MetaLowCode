@@ -1,0 +1,87 @@
+{
+  "name": "ApprovalConfig",
+  "label": "审批配置",
+  "table": {
+    "name": "t_approval_config"
+  },
+  "columns": [
+    {
+      "comment": "流程配置id",
+      "label": "流程配置id",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "最新的流程定义id",
+      "label": "最新的流程定义id",
+      "name": "approvalFlowId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "流程名称",
+      "label": "流程名称",
+      "name": "flowName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "是否禁用",
+      "label": "是否禁用",
+      "name": "isDisabled",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "运行中的流程统计",
+      "label": "运行中的流程统计",
+      "name": "runningTotal",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "结束的流程统计",
+      "label": "结束的流程统计",
+      "name": "completeTotal",
+      "nullable": true,
+      "type": "integer"
+    }
+  ]
+}

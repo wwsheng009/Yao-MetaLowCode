@@ -1,0 +1,101 @@
+{
+  "name": "WMScaigouxunbaojia",
+  "label": "WMS采购询报价",
+  "table": {
+    "name": "t_wmscaigouxunbaojia"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigouxunbaojiaId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商名称",
+      "label": "供应商名称",
+      "name": "gongyingshangmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "询价发起人",
+      "label": "询价发起人",
+      "name": "xunjiafaqiren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "询价开始日期",
+      "label": "询价开始日期",
+      "name": "xunjiakaishiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "报价截止日期",
+      "label": "报价截止日期",
+      "name": "baojiajiezhiriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "询价时长/天",
+      "label": "询价时长/天",
+      "name": "xunjiashichangtian",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "询价单编号",
+      "label": "询价单编号",
+      "name": "xunjiadanbianhao",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

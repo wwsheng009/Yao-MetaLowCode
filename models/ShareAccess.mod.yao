@@ -1,0 +1,73 @@
+{
+  "name": "ShareAccess",
+  "label": "共享访问",
+  "table": {
+    "name": "t_share_access"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shareAccessId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "实体ID",
+      "label": "实体ID",
+      "name": "entityId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "分享人",
+      "label": "分享人",
+      "name": "shareTo",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "允许修改",
+      "label": "允许修改",
+      "name": "withUpdate",
+      "nullable": true,
+      "type": "boolean"
+    }
+  ]
+}

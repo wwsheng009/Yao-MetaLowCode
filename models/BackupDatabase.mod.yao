@@ -1,0 +1,80 @@
+{
+  "name": "BackupDatabase",
+  "label": "数据库备份",
+  "table": {
+    "name": "t_backup_database"
+  },
+  "columns": [
+    {
+      "comment": "是否过期",
+      "label": "是否过期",
+      "name": "overdue",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "备份状态",
+      "label": "备份状态",
+      "name": "state",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "备份文件",
+      "label": "备份文件",
+      "name": "backupFile",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "失败日志",
+      "label": "失败日志",
+      "name": "errorLog",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "库名",
+      "label": "库名",
+      "name": "database",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "backupDatabaseId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    }
+  ]
+}

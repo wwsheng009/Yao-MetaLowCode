@@ -1,0 +1,130 @@
+{
+  "name": "WMSkucuntiaobo",
+  "label": "WMS库存调拨",
+  "table": {
+    "name": "t_wmskucuntiaobo"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMSkucuntiaoboId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调拨类型",
+      "label": "调拨类型",
+      "name": "tiaoboleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调拨申请日期",
+      "label": "调拨申请日期",
+      "name": "tiaoboshenqingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "期望到货日期",
+      "label": "期望到货日期",
+      "name": "qiwangdaohuoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "申请人",
+      "label": "申请人",
+      "name": "shenqingren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "申请人归属部门",
+      "label": "申请人归属部门",
+      "name": "shenqingrenguishubumen",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调拨单编号",
+      "label": "调拨单编号",
+      "name": "tiaobodanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调出仓库",
+      "label": "调出仓库",
+      "name": "tiaochucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调入仓库",
+      "label": "调入仓库",
+      "name": "tiaorucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "调拨产品总数",
+      "label": "调拨产品总数",
+      "name": "tiaobochanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "调拨产品成本总额/元",
+      "label": "调拨产品成本总额/元",
+      "name": "tiaobochanpinchengbenzonn",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

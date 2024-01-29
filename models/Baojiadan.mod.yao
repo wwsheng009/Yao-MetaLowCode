@@ -1,0 +1,168 @@
+{
+  "name": "Baojiadan",
+  "label": "报价单",
+  "table": {
+    "name": "t_baojiadan"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "baojiadanId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择客户",
+      "label": "选择客户",
+      "name": "xuanzekehu",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "出库仓库",
+      "label": "出库仓库",
+      "name": "chukucangku",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "销售原价总额(含税)/元",
+      "label": "销售原价总额(含税)/元",
+      "name": "xiaoshouyuanjiazonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "优惠金额/元",
+      "label": "优惠金额/元",
+      "name": "youhuijine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "整单折扣率%",
+      "label": "整单折扣率%",
+      "name": "zhengdanzhekoulv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "销售订单金额(含税)/元",
+      "label": "销售订单金额(含税)/元",
+      "name": "xiaoshoudingdanjine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "报价毛利率%",
+      "label": "报价毛利率%",
+      "name": "baojiamaolilv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "报价单编号",
+      "label": "报价单编号",
+      "name": "baojiadanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报价日期",
+      "label": "报价日期",
+      "name": "baojiariqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "成本总价",
+      "label": "成本总价",
+      "name": "chengbenzongjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "name": "Shengchanbaogong",
+  "label": "生产报工",
+  "table": {
+    "name": "t_shengchanbaogong"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shengchanbaogongId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "生产工单",
+      "label": "生产工单",
+      "name": "shengchangongdan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "生产工单名称",
+      "label": "生产工单名称",
+      "name": "shengchangongdanmingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报工总数",
+      "label": "报工总数",
+      "name": "chukuchanpinzongshu",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "生产报工单编号",
+      "label": "生产报工单编号",
+      "name": "lingliaochukudanbianhao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报工时间",
+      "label": "报工时间",
+      "name": "baogongshijian",
+      "nullable": true,
+      "type": "datetime"
+    }
+  ]
+}

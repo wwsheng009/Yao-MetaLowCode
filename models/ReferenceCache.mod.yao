@@ -1,0 +1,32 @@
+{
+  "name": "ReferenceCache",
+  "label": "名称字段缓存",
+  "table": {
+    "name": "t_reference_cache"
+  },
+  "columns": [
+    {
+      "comment": "缓存Id主键",
+      "label": "缓存Id主键",
+      "name": "cacheId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "实体记录Id",
+      "label": "实体记录Id",
+      "name": "referenceId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "实体名称值",
+      "label": "实体名称值",
+      "name": "recordLabel",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}

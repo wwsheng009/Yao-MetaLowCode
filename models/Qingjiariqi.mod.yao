@@ -1,0 +1,74 @@
+{
+  "name": "Qingjiariqi",
+  "label": "请假日期",
+  "table": {
+    "name": "t_qingjiariqi"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "qingjiariqiId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdQingjiashenqingId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "请假日期",
+      "label": "请假日期",
+      "name": "qingjiariqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "请假时段",
+      "label": "请假时段",
+      "name": "qingjiashiduan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "请假天数小计",
+      "label": "请假天数小计",
+      "name": "qingjiatianshuxiaoji",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 1
+    }
+  ]
+}

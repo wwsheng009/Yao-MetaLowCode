@@ -1,0 +1,123 @@
+{
+  "name": "Jixiaojieguokaohezhibiao",
+  "label": "绩效结果考核指标",
+  "table": {
+    "name": "t_jixiaojieguokaohezhibiao"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "jixiaojieguokaohezhibiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdJixiaojieguokaoheId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "指标名称",
+      "label": "指标名称",
+      "name": "zhibiaomingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "权重（%）",
+      "label": "权重（%）",
+      "name": "quanzhong",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "定性/定量指标",
+      "label": "定性/定量指标",
+      "name": "dingxing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "评分标准",
+      "label": "评分标准",
+      "name": "pingfenbiaozhun",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "自评说明",
+      "label": "自评说明",
+      "name": "pingfenyiju",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "计量单位",
+      "label": "计量单位",
+      "name": "jiliangdanwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "目标值",
+      "label": "目标值",
+      "name": "mubiaozhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "完成值",
+      "label": "完成值",
+      "name": "wanchengzhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "评分依据",
+      "label": "评分依据",
+      "name": "pingfenyiju1",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "自评分",
+      "label": "自评分",
+      "name": "zipingfen",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

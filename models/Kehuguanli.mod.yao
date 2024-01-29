@@ -1,0 +1,171 @@
+{
+  "name": "Kehuguanli",
+  "label": "客户管理",
+  "table": {
+    "name": "t_kehuguanli"
+  },
+  "columns": [
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "kehuguanliId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户名称",
+      "label": "客户名称",
+      "name": "kehumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户分类",
+      "label": "客户分类",
+      "name": "kehufenlei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户来源",
+      "label": "客户来源",
+      "name": "kehulaiyuan",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户标签",
+      "label": "客户标签",
+      "name": "kehubiaoqian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "价格等级",
+      "label": "价格等级",
+      "name": "jiagedengji",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "结算周期",
+      "label": "结算周期",
+      "name": "jiesuanzhouqi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "客户所在地区",
+      "label": "客户所在地区",
+      "name": "kehusuozaidiqu",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "具体地址",
+      "label": "具体地址",
+      "name": "jutidizhi",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票抬头",
+      "label": "发票抬头",
+      "name": "fapiaotaitou",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票税号",
+      "label": "发票税号",
+      "name": "fapiaoshuihao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "税种",
+      "label": "税种",
+      "name": "shuizhong",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "增值税税率",
+      "label": "增值税税率",
+      "name": "zengzhishuishuilv",
+      "nullable": true,
+      "type": "float"
+    },
+    {
+      "comment": "开户电话",
+      "label": "开户电话",
+      "name": "kaihudianhua",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "收票邮箱",
+      "label": "收票邮箱",
+      "name": "shoupiaoyouxiang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "开户银行",
+      "label": "开户银行",
+      "name": "kaihuyinhang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "银行账户",
+      "label": "银行账户",
+      "name": "yinhangzhanghu",
+      "nullable": true,
+      "type": "string"
+    }
+  ]
+}
