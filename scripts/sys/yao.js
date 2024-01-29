@@ -18,6 +18,8 @@ function updateEntityToYao(entityName) {
   return yaoModel;
 }
 
+
+
 /**
  * convert entity to yao model
  *
@@ -40,6 +42,7 @@ function entityToYaoModel(entityName) {
   }
   let yaoModel = {
     name: entity.name,
+    label: entity.label,
     table: {
       name: entity.physicalName,
     },
@@ -193,4 +196,5 @@ function migrateYaoModel(model) {
 module.exports = {
   loadEntityToYao,
   updateEntityToYao,
+  entityToYaoModel
 };
