@@ -151,7 +151,23 @@ function getFieldListOfEntity(entity) {
   const [row] = Process("models.sys.entity.get", {
     wheres: wheres,
     withs: {
-      fieldSet: {},
+      fieldSet: {
+        query: {
+          select: [
+            "nameFieldFlag",
+            "physicalName",
+            "reserved",
+            "referTo",
+            "name",
+            "updatable",
+            "idFieldFlag",
+            "label",
+            "creatable",
+            "type",
+            "mainDetailFieldFlag",
+          ],
+        },
+      },
     },
   });
   if (row == null) {
@@ -1067,54 +1083,53 @@ function updateRefField(field, entity, refEntity) {
     entityCode: 1006,
   };
 
-
   field.referTo = `${refEntity},`;
   return updateField(field, entity);
 
-  return {
-    fieldId: null,
-    entityCode: 1006,
-    name: "cangkuzhuguan",
-    label: "仓库主管",
-    physicalName: "c_cangkuzhuguan",
-    owner: {
-      name: "Cangkuguanli",
-      label: "仓库管理",
-    },
-    type: "Reference",
-    description: null,
-    displayOrder: 0,
-    nullable: false,
-    creatable: true,
-    updatable: true,
-    idFieldFlag: false,
-    nameFieldFlag: false,
-    mainDetailFieldFlag: false,
-    defaultMemberOfListFlag: true,
-    referTo: [
-      {
-        name: "User",
-        label: "用户",
-      },
-    ],
-    fieldViewModel: {
-      searchDialogWidth: 520,
-      validators: [],
-    },
-    referenceSetting: [
-      {
-        entityName: "User",
-        fieldList: [
-          "userName",
-          "departmentId",
-          "jobTitle",
-          "mobilePhone",
-          "email",
-          "tatp",
-        ],
-      },
-    ],
-  };
+  // return {
+  //   fieldId: null,
+  //   entityCode: 1006,
+  //   name: "cangkuzhuguan",
+  //   label: "仓库主管",
+  //   physicalName: "c_cangkuzhuguan",
+  //   owner: {
+  //     name: "Cangkuguanli",
+  //     label: "仓库管理",
+  //   },
+  //   type: "Reference",
+  //   description: null,
+  //   displayOrder: 0,
+  //   nullable: false,
+  //   creatable: true,
+  //   updatable: true,
+  //   idFieldFlag: false,
+  //   nameFieldFlag: false,
+  //   mainDetailFieldFlag: false,
+  //   defaultMemberOfListFlag: true,
+  //   referTo: [
+  //     {
+  //       name: "User",
+  //       label: "用户",
+  //     },
+  //   ],
+  //   fieldViewModel: {
+  //     searchDialogWidth: 520,
+  //     validators: [],
+  //   },
+  //   referenceSetting: [
+  //     {
+  //       entityName: "User",
+  //       fieldList: [
+  //         "userName",
+  //         "departmentId",
+  //         "jobTitle",
+  //         "mobilePhone",
+  //         "email",
+  //         "tatp",
+  //       ],
+  //     },
+  //   ],
+  // };
 }
 
 function updateAnyRefField(field, entity, referTo) {}
@@ -1134,43 +1149,42 @@ function getField(entity, field) {
 /**
  * get the reference field info
  *
- * yao run scripts.systemmanager.getRefFieldExtras 'Entity1' 'r1'
- * @param {string} entity
- * @param {string} field
+ * yao run scripts.systemmanager.getRefFieldExtras 'WMSgongyingshangxinxi' 'caigoufuzeren'
+ * @param {string} entityName
+ * @param {string} fieldName
  * @returns
  */
-function getRefFieldExtras(entity, field) {
+function getRefFieldExtras(entityName, fieldName) {
   // entity = "Entity";
   // field = "r1";
-  const fieldData = getEntityField(entity, field);
+  const fieldData = getEntityField(entityName, fieldName);
   if (!fieldData) {
     return;
-  }
-  let referenceSetting = fieldData.referenceSetting? fieldData.referenceSetting[0]:{};
-
-  let refEntityName = referenceSetting.entityName;
-
-  const [referEntity] = Process("models.sys.entity.get", {
-    wheres: [{ column: "name", value: entity }],
-    withs: {
-      fieldSet: {
-        query: {
-          select: ["reserved", "name", "label", "type"],
-        },
-      },
-    },
-  });
-
-  function getLabel(field) {
-    const item = referEntity.fieldSet?.find((f) => f.name == field);
-
-    return item?.label || "";
   }
 
   let selectedFieldItems = [];
   let lables = [];
 
-  // console.log("referenceSetting.fieldSet", referenceSetting.fieldSet);
+  const refEntityName = fieldData.referTo.split(",")[0];
+  let referenceSetting = fieldData.referenceSetting?.find(
+    (item) => item.entityName === refEntityName
+  );
+  const [referEntity] = Process("models.sys.entity.get", {
+    wheres: [{ column: "name", value: refEntityName }],
+    withs: {
+      fieldSet: {
+        query: {
+          select: ["reserved", "name", "label", "type"],
+          limit: 10000,
+        },
+      },
+    },
+  });
+
+  function getLabel(fieldName) {
+    const item = referEntity.fieldSet?.find((f) => f.name == fieldName);
+    return item?.label || "";
+  }
   referenceSetting.fieldList?.forEach((item) => {
     let label = getLabel(item);
     selectedFieldItems.push({

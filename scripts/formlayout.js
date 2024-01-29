@@ -1,122 +1,119 @@
-
 const { getEntityByName, getEntityByCode } = Require("sys.lib");
 
-
 function updateFormLayout(layoutId, layoutJson) {
+  Process("models.formlayout.update", layoutId, {
+    layoutJson,
+  });
+  return layoutId;
+  //   layoutJson = {
+  //     widgetList: [
+  //       {
+  //         type: "reference",
+  //         alias: "",
+  //         icon: "reference-field",
+  //         formItemFlag: true,
+  //         options: {
+  //           name: "ownerUser",
+  //           keyNameEnabled: false,
+  //           keyName: "",
+  //           label: "所属用户",
+  //           labelAlign: "",
+  //           placeholder: "",
+  //           columnWidth: "200px",
+  //           size: "",
+  //           labelWidth: null,
+  //           labelHidden: false,
+  //           labelWrap: false,
+  //           disabled: false,
+  //           hidden: false,
+  //           required: true,
+  //           requiredHint: "",
+  //           validation: "",
+  //           validationHint: "",
+  //           searchDialogWidth: "520px",
+  //           customClass: [],
+  //           labelIconClass: null,
+  //           labelIconPosition: "rear",
+  //           labelTooltip: null,
+  //           prefixIcon: "",
+  //           suffixIcon: "",
+  //           buttonIcon: "Search",
+  //           onCreated: "",
+  //           onMounted: "",
+  //           onChange: "",
+  //           onValidate: "",
+  //           onRecordSelected: "",
+  //         },
+  //         nameReadonly: true,
+  //         id: "reference56917",
+  //       },
+  //       {
+  //         type: "date",
+  //         icon: "date-field",
+  //         formItemFlag: true,
+  //         options: {
+  //           name: "modifiedOn",
+  //           keyNameEnabled: false,
+  //           keyName: "",
+  //           label: "最近修改时间",
+  //           labelAlign: "",
+  //           type: "datetime",
+  //           defaultValue: null,
+  //           placeholder: "",
+  //           columnWidth: "200px",
+  //           size: "",
+  //           autoFullWidth: true,
+  //           labelWidth: null,
+  //           labelHidden: false,
+  //           labelWrap: false,
+  //           readonly: false,
+  //           disabled: false,
+  //           hidden: false,
+  //           clearable: true,
+  //           editable: false,
+  //           format: "YYYY-MM-DD HH:mm:ss",
+  //           valueFormat: "YYYY-MM-DD HH:mm:ss",
+  //           required: false,
+  //           requiredHint: "",
+  //           validation: "",
+  //           validationHint: "",
+  //           customClass: "",
+  //           labelIconClass: null,
+  //           labelIconPosition: "rear",
+  //           labelTooltip: null,
+  //           onCreated: "",
+  //           onMounted: "",
+  //           onChange: "",
+  //           onFocus: "",
+  //           onBlur: "",
+  //           onValidate: "",
+  //         },
+  //         nameReadonly: true,
+  //         id: "date77791",
+  //       },
+  //     ],
+  //     formConfig: {
+  //       modelName: "formData",
+  //       refName: "vForm",
+  //       rulesName: "rules",
+  //       labelWidth: 80,
+  //       labelPosition: "left",
+  //       size: "",
+  //       labelAlign: "label-left-align",
+  //       cssCode: "",
+  //       customClass: [],
+  //       functions: "",
+  //       layoutType: "PC",
+  //       jsonVersion: 3,
+  //       dataSources: [],
+  //       onFormCreated: "",
+  //       onFormMounted: "",
+  //       onFormDataChange: "",
+  //       onFormValidate: "",
+  //     },
+  //   };
 
-  Process("models.formlayout.update",layoutId,{
-    layoutJson
-  })
-  return layoutId
-//   layoutJson = {
-//     widgetList: [
-//       {
-//         type: "reference",
-//         alias: "",
-//         icon: "reference-field",
-//         formItemFlag: true,
-//         options: {
-//           name: "ownerUser",
-//           keyNameEnabled: false,
-//           keyName: "",
-//           label: "所属用户",
-//           labelAlign: "",
-//           placeholder: "",
-//           columnWidth: "200px",
-//           size: "",
-//           labelWidth: null,
-//           labelHidden: false,
-//           labelWrap: false,
-//           disabled: false,
-//           hidden: false,
-//           required: true,
-//           requiredHint: "",
-//           validation: "",
-//           validationHint: "",
-//           searchDialogWidth: "520px",
-//           customClass: [],
-//           labelIconClass: null,
-//           labelIconPosition: "rear",
-//           labelTooltip: null,
-//           prefixIcon: "",
-//           suffixIcon: "",
-//           buttonIcon: "Search",
-//           onCreated: "",
-//           onMounted: "",
-//           onChange: "",
-//           onValidate: "",
-//           onRecordSelected: "",
-//         },
-//         nameReadonly: true,
-//         id: "reference56917",
-//       },
-//       {
-//         type: "date",
-//         icon: "date-field",
-//         formItemFlag: true,
-//         options: {
-//           name: "modifiedOn",
-//           keyNameEnabled: false,
-//           keyName: "",
-//           label: "最近修改时间",
-//           labelAlign: "",
-//           type: "datetime",
-//           defaultValue: null,
-//           placeholder: "",
-//           columnWidth: "200px",
-//           size: "",
-//           autoFullWidth: true,
-//           labelWidth: null,
-//           labelHidden: false,
-//           labelWrap: false,
-//           readonly: false,
-//           disabled: false,
-//           hidden: false,
-//           clearable: true,
-//           editable: false,
-//           format: "YYYY-MM-DD HH:mm:ss",
-//           valueFormat: "YYYY-MM-DD HH:mm:ss",
-//           required: false,
-//           requiredHint: "",
-//           validation: "",
-//           validationHint: "",
-//           customClass: "",
-//           labelIconClass: null,
-//           labelIconPosition: "rear",
-//           labelTooltip: null,
-//           onCreated: "",
-//           onMounted: "",
-//           onChange: "",
-//           onFocus: "",
-//           onBlur: "",
-//           onValidate: "",
-//         },
-//         nameReadonly: true,
-//         id: "date77791",
-//       },
-//     ],
-//     formConfig: {
-//       modelName: "formData",
-//       refName: "vForm",
-//       rulesName: "rules",
-//       labelWidth: 80,
-//       labelPosition: "left",
-//       size: "",
-//       labelAlign: "label-left-align",
-//       cssCode: "",
-//       customClass: [],
-//       functions: "",
-//       layoutType: "PC",
-//       jsonVersion: 3,
-//       dataSources: [],
-//       onFormCreated: "",
-//       onFormMounted: "",
-//       onFormDataChange: "",
-//       onFormValidate: "",
-//     },
-//   };
-
-//   return "0000008-64639fd4f57c435b94e0832240e51a8d";
+  //   return "0000008-64639fd4f57c435b94e0832240e51a8d";
 }
 
 function createFormLayout(entityName, layoutJson) {
@@ -144,97 +141,97 @@ function createFormLayout(entityName, layoutJson) {
     // },
   });
   return formLayoutId;
-//   layoutJson = {
-//     widgetList: [
-//       {
-//         type: "cascader",
-//         icon: "cascader-field",
-//         formItemFlag: true,
-//         options: {
-//           name: "area",
-//           keyNameEnabled: false,
-//           keyName: "",
-//           label: "area",
-//           labelAlign: "",
-//           defaultValue: "",
-//           placeholder: "",
-//           size: "",
-//           labelWidth: null,
-//           labelHidden: false,
-//           columnWidth: "200px",
-//           disabled: false,
-//           hidden: false,
-//           clearable: true,
-//           filterable: false,
-//           multiple: false,
-//           checkStrictly: false,
-//           showAllLevels: true,
-//           dsEnabled: false,
-//           dsName: "",
-//           dataSetName: "",
-//           labelKey: "label",
-//           valueKey: "value",
-//           childrenKey: "children",
-//           areaDataEnabled: true,
-//           areaDataType: 2,
-//           optionItems: [
-//             {
-//               label: "select 1",
-//               value: 1,
-//               children: [{ label: "child 1", value: 11 }],
-//             },
-//             { label: "select 2", value: 2 },
-//             { label: "select 3", value: 3 },
-//           ],
-//           required: false,
-//           requiredHint: "",
-//           customRule: "",
-//           customRuleHint: "",
-//           customClass: [],
-//           labelIconClass: null,
-//           labelIconPosition: "rear",
-//           labelTooltip: null,
-//           onCreated: "",
-//           onMounted: "",
-//           onChange: "",
-//           onFocus: "",
-//           onBlur: "",
-//           onValidate: "",
-//         },
-//         nameReadonly: true,
-//         optionItemsReadonly: true,
-//         id: "cascader106023",
-//       },
-//     ],
-//     formConfig: {
-//       modelName: "formData",
-//       refName: "vForm",
-//       rulesName: "rules",
-//       labelWidth: 80,
-//       labelPosition: "left",
-//       size: "",
-//       labelAlign: "label-left-align",
-//       cssCode: "",
-//       customClass: [],
-//       functions: "",
-//       layoutType: "PC",
-//       jsonVersion: 3,
-//       dataSources: [],
-//       onFormCreated: "",
-//       onFormMounted: "",
-//       onFormDataChange: "",
-//       onFormValidate: "",
-//     },
-//   };
+  //   layoutJson = {
+  //     widgetList: [
+  //       {
+  //         type: "cascader",
+  //         icon: "cascader-field",
+  //         formItemFlag: true,
+  //         options: {
+  //           name: "area",
+  //           keyNameEnabled: false,
+  //           keyName: "",
+  //           label: "area",
+  //           labelAlign: "",
+  //           defaultValue: "",
+  //           placeholder: "",
+  //           size: "",
+  //           labelWidth: null,
+  //           labelHidden: false,
+  //           columnWidth: "200px",
+  //           disabled: false,
+  //           hidden: false,
+  //           clearable: true,
+  //           filterable: false,
+  //           multiple: false,
+  //           checkStrictly: false,
+  //           showAllLevels: true,
+  //           dsEnabled: false,
+  //           dsName: "",
+  //           dataSetName: "",
+  //           labelKey: "label",
+  //           valueKey: "value",
+  //           childrenKey: "children",
+  //           areaDataEnabled: true,
+  //           areaDataType: 2,
+  //           optionItems: [
+  //             {
+  //               label: "select 1",
+  //               value: 1,
+  //               children: [{ label: "child 1", value: 11 }],
+  //             },
+  //             { label: "select 2", value: 2 },
+  //             { label: "select 3", value: 3 },
+  //           ],
+  //           required: false,
+  //           requiredHint: "",
+  //           customRule: "",
+  //           customRuleHint: "",
+  //           customClass: [],
+  //           labelIconClass: null,
+  //           labelIconPosition: "rear",
+  //           labelTooltip: null,
+  //           onCreated: "",
+  //           onMounted: "",
+  //           onChange: "",
+  //           onFocus: "",
+  //           onBlur: "",
+  //           onValidate: "",
+  //         },
+  //         nameReadonly: true,
+  //         optionItemsReadonly: true,
+  //         id: "cascader106023",
+  //       },
+  //     ],
+  //     formConfig: {
+  //       modelName: "formData",
+  //       refName: "vForm",
+  //       rulesName: "rules",
+  //       labelWidth: 80,
+  //       labelPosition: "left",
+  //       size: "",
+  //       labelAlign: "label-left-align",
+  //       cssCode: "",
+  //       customClass: [],
+  //       functions: "",
+  //       layoutType: "PC",
+  //       jsonVersion: 3,
+  //       dataSources: [],
+  //       onFormCreated: "",
+  //       onFormMounted: "",
+  //       onFormDataChange: "",
+  //       onFormValidate: "",
+  //     },
+  //   };
 
-//   return "0000008-64639fd4f57c435b94e0832240e51a8d";
+  //   return "0000008-64639fd4f57c435b94e0832240e51a8d";
 }
 /**
- * get form layout 
- * 
- * yao run scripts.formlayout.getFormLayout 'Entity1'
- * @param {string} entityName 
- * @returns 
+ * get form layout
+ *
+ * yao run scripts.formlayout.getFormLayout 'WMSchanpinxinxi'
+ * @param {string} entityName
+ * @returns
  */
 function getFormLayout(entityName) {
   const [entity] = Process("models.sys.entity.get", {
@@ -246,7 +243,7 @@ function getFormLayout(entityName) {
       },
     ],
     withs: {
-      fields: {
+      fieldSet: {
         query: {
           select: ["name", "tagList", "optionList"],
           wheres: [
@@ -265,18 +262,23 @@ function getFormLayout(entityName) {
     },
   });
   if (!entity) {
-    throw Error(`实体 ${entityName} 不存在`)
+    throw Error(`实体 ${entityName} 不存在`);
   }
+
   let [formLayout] = Process("models.formlayout.get", {
     wheres: [
       {
         column: "entityCode",
         value: entity.entityCode,
       },
+      {
+        column: "layoutName",
+        value: "默认表单布局",
+      },
     ],
   });
   if (formLayout == null) {
-    formLayout= {
+    formLayout = {
       formLayoutId: null,
       layoutName: null,
       entityCode: null,
@@ -292,35 +294,31 @@ function getFormLayout(entityName) {
     };
   } else {
     let optionData = {};
-    entity.fields && entity.fields.forEach((field) => {
-      if (field.tagList) {
-        optionData[field.name] = field.tagList.map((tag,idx) => {
-          return {
-            value: idx +1,
-            label: tag,
-            displayOrder: idx +1,
-          };
-        });
-      }
-      if (field.optionList) {
-        optionData[field.name] = field.optionList.map((option,idx) => {
-          return {
-            value: idx +1,
-            label: option.label,
-            displayOrder: idx +1,
-          };
-        });
-      }
-    });
+    entity.fieldSet &&
+      entity.fieldSet.forEach((field) => {
+        // if (field.tagList) {
+        //   optionData[field.name] = field.tagList.map((tag, idx) => {
+        //     return {
+        //       value: idx + 1,
+        //       label: tag,
+        //       displayOrder: idx + 1,
+        //     };
+        //   });
+        // }
+        if (Array.isArray(field.optionList)) {
+          optionData[field.name] = field.optionList;
+        }
+      });
 
-    formLayout.formUploadParam ={
+    formLayout.formUploadParam = {
       cloudStorage: "false",
       cloudUploadToken: "",
       picUploadURL: "DSV['uploadServer'] + '/picture/upload'",
       fileUploadURL: "DSV['uploadServer'] + '/file/upload'",
       picDownloadPrefix: "/picture/get/",
       fileDownloadPrefix: "/file/get/",
-    }
+    };
+    console.log("optionData",optionData)
     return {
       ...formLayout,
       entityRecord: formLayout,

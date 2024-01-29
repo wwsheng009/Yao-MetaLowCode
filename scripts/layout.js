@@ -3,7 +3,6 @@ const { getEntityByName } = Require("sys.lib");
 
 // 获取导航配置
 function getNavigationList() {
-
   loadEntityToYao("LayoutConfig");
   const [topNav] = Process("models.layoutconfig.get", {
     select: ["configName", "layoutConfigId", "shareTo", "config"],
@@ -54,7 +53,6 @@ function getNavigationList() {
     topNavigation: { ...topNav, shareTo: "ALL" },
     navigationList,
   };
-
 }
 
 /**
@@ -76,39 +74,18 @@ function getLayoutList(entityName) {
     throw Error(`Entity:${entityName} not exist`);
   }
   loadEntityToYao("LayoutConfig");
-  const entityLayoutConfig = getEntityByName("LayoutConfig");
+  const entityLayout = getEntityByName("LayoutConfig");
 
-  let [layoutAllListConfig] = Process("models.layoutconfig.get", {
+  let layoutConfigs = Process("models.layoutconfig.get", {
     wheres: [
-      {
-        column: "shareTo",
-        value: "ALL",
-      },
-      {
-        column: "applyType",
-        value: "LIST",
-      },
       {
         column: "entityCode",
         value: entity.entityCode,
       },
     ],
   });
-  let [layoutSelfListConfig] = Process("models.layoutconfig.get", {
-    wheres: [
-      {
-        column: "shareTo",
-        value: "SELF",
-      },
-      {
-        column: "applyType",
-        value: "LIST",
-      },
-      {
-        column: "entityCode",
-        value: entity.entityCode,
-      },
-    ],
+  layoutConfigs.forEach((config) => {
+    config.layoutConfigId = `${entityLayout.entityCode}-${config.layoutConfigId}`;
   });
 
   const fields = entity.fieldSet.map((field) => {
@@ -123,28 +100,22 @@ function getLayoutList(entityName) {
       referenceName: field.referTo?.replace(",", ""),
     };
   });
-  if (!layoutSelfListConfig) {
-    layoutSelfListConfig = {
-      applyType: "LIST",
-      entityCode: entity.entityCode,
-      shareTo: "SELF",
-      config: JSON.stringify(fields),
-    };
-  } else {
-    layoutSelfListConfig.layoutConfigId = `${entityLayoutConfig.entityCode}-${layoutSelfListConfig.layoutConfigId}`;
-  }
-  if (!layoutAllListConfig) {
-    layoutAllListConfig = {
-      applyType: "LIST",
-      entityCode: entity.entityCode,
-      shareTo: "ALL",
-      config: JSON.stringify(fields),
-    };
-  } else {
-    layoutAllListConfig.layoutConfigId = `${entityLayoutConfig.entityCode}-${layoutAllListConfig.layoutConfigId}`;
-  }
 
-  return {
+  const layoutSelfListConfig = {
+    applyType: "LIST",
+    entityCode: entity.entityCode,
+    shareTo: "SELF",
+    config: JSON.stringify(fields),
+  };
+
+  const layoutAllListConfig = {
+    applyType: "LIST",
+    entityCode: entity.entityCode,
+    shareTo: "ALL",
+    config: JSON.stringify(fields),
+  };
+
+  const data = {
     FILTER: [],
     nameFieldName: entity.idFieldName,
     titleWidthForSelf: null,
@@ -153,15 +124,30 @@ function getLayoutList(entityName) {
     advFilter: null,
     idFieldName: entity.idFieldName,
     LIST: {
-      ALL: layoutAllListConfig,
-      SELF: layoutSelfListConfig,
+      ALL:
+        layoutConfigs.find(
+          (c) => c.applyType === "LIST" && c.shareTo === "ALL"
+        ) || layoutAllListConfig,
+      SELF:
+        layoutConfigs.find(
+          (c) => c.applyType === "LIST" && c.shareTo === "SELF"
+        ) || layoutSelfListConfig,
       titleWidthForAll: null, //JSON.stringify(fieldsTitle),
     },
   };
+
+  const TAB = layoutConfigs.find((config) => config.applyType === "TAB");
+  const SEARCH = layoutConfigs.find((config) => config.applyType === "SEARCH");
+  const ADD = layoutConfigs.find((config) => config.applyType === "ADD");
+
+  data.TAB = TAB || data.TAB;
+  data.SEARCH = SEARCH || data.SEARCH;
+  data.ADD = ADD || data.ADD;
+  return data;
 }
 /**
  * 创建或是更新布局配置
- * 
+ *
  * yao run scripts.layout.saveConfig
  * @param {string|null} recordId
  * @param {string} applyType
@@ -251,7 +237,7 @@ function saveUserLayoutCache(cacheKey, cacheValue) {
 // 删除布局配置
 function deleteConfig(recordId) {
   loadEntityToYao("LayoutConfig");
-  Process("models.layoutconfig.delete",recordId)
+  Process("models.layoutconfig.delete", recordId);
 }
 
 // 数据导出

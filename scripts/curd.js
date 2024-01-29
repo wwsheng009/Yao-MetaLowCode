@@ -1,6 +1,159 @@
 const { loadEntityToYao } = Require("sys.yao");
 
 const { getEntityByName, getEntityByCode } = Require("sys.lib");
+
+function getSelectFields(entity, fieldsList) {
+  let fields = [];
+  if (fieldsList) {
+    fields = fieldsList.split(",");
+  } else {
+    fields = entity.fieldSet.map((f) => f.name);
+  }
+
+  // 筛选哪些选择的字段
+  const selectFields = entity.fieldSet.filter((field) =>
+    fields.includes(field.name)
+  );
+  return selectFields;
+}
+
+function getfieldsOptionMap(selectFields) {
+  // const selectFields = getSelectFields(entity, fieldsList)
+  // 有引用关系的字段列表
+  const refFields = selectFields.filter((f) => f.type === "Option");
+
+  const refFieldsMap = {};
+  refFields.forEach((refField) => {
+    refFieldsMap[refField.name] = refField.optionList;
+  });
+  return refFieldsMap;
+}
+
+function getfieldsTagMap(selectFields) {
+  // const selectFields = getSelectFields(entity, fieldsList)
+  // 有引用关系的字段列表
+  const refFields = selectFields.filter((f) => f.type === "Tag");
+
+  const refFieldsMap = {};
+  refFields.forEach((refField) => {
+    refFieldsMap[refField.name] = refField.tagList;
+  });
+  return refFieldsMap;
+}
+/**
+ * get the reference Fields as map object
+ * @param {object} entity
+ * @param {Array} fieldsList
+ * @returns
+ */
+function getRefFieldsMap(selectFields) {
+  // const selectFields = getSelectFields(entity, fieldsList)
+  // 有引用关系的字段列表
+  const refFields = selectFields.filter((f) => f.type === "Reference");
+  // 找到引用实体的id字段与显示字段
+  const refFieldsMap = {};
+  refFields.forEach((refField) => {
+    // 引用的实体名称
+    const refEntityName = refField.referTo.split(",")[0];
+
+    const [refEntity] = Process("models.sys.entity.get", {
+      select: ["name", "entityCode"],
+      wheres: [
+        {
+          column: "name",
+          value: refEntityName,
+        },
+      ],
+      withs: {
+        fieldSet: {},
+      },
+    });
+    if (!refEntity) {
+      throw Error(`引用实体${refEntityName}不存在`);
+    }
+    const idFieldName = refEntity.fieldSet.find(
+      (f) => f.idFieldFlag === true
+    )?.name;
+    const nameFieldName = refEntity.fieldSet.find(
+      (f) => f.nameFieldFlag === true
+    )?.name;
+    if (idFieldName && nameFieldName) {
+      refFieldsMap[refField.name] = {
+        entityCode: refEntity.entityCode,
+        entityName: refEntity.name,
+        idFieldName,
+        nameFieldName,
+      };
+    }
+  });
+  return refFieldsMap;
+}
+function updateDataLineOptions(fieldsOptionMap, line) {
+  for (const fieldKey in fieldsOptionMap) {
+    if (
+      Object.hasOwnProperty.call(fieldsOptionMap, fieldKey) &&
+      Object.hasOwnProperty.call(line, fieldKey) && line[fieldKey] != null
+    ) {
+      line[fieldKey] =
+        fieldsOptionMap[fieldKey].find(
+          (item) => item.value == line[fieldKey]
+        ) || line[fieldKey];
+    }
+  }
+  return line;
+}
+
+function updateDataLineTags(fieldsTagMap, line) {
+  for (const fieldKey in fieldsTagMap) {
+    if (
+      Object.hasOwnProperty.call(fieldsTagMap, fieldKey) &&
+      Object.hasOwnProperty.call(line, fieldKey) && line[fieldKey] != null
+    ) {
+      line[fieldKey] =
+        fieldsTagMap[fieldKey].find((item) => item == line[fieldKey]) ||
+        line[fieldKey];
+    }
+  }
+  return line;
+}
+/**
+ * 更新行数据中有引用的数据
+ * @param {object} refFieldsMap
+ * @param {object} line
+ * @returns
+ */
+function updateDataLineReference(refFieldsMap, line) {
+  for (const fieldKey in refFieldsMap) {
+
+    if (
+      Object.hasOwnProperty.call(refFieldsMap, fieldKey) &&
+      Object.hasOwnProperty.call(line, fieldKey) && line[fieldKey] != null
+    ) {
+      const refField = refFieldsMap[fieldKey];
+      // 引用的对象的值
+      const refIdValue = Process(
+        `models.${refField.entityName}.find`,
+        line[fieldKey],
+        {
+          select: [refField.idFieldName, refField.nameFieldName],
+        }
+      );
+      if (refIdValue) {
+        // 重新组装ID与值
+        // refIdValue[refField.idFieldName] = `${refField.entityCode}-${
+        //   refIdValue[refField.idFieldName]
+        // }`;
+        // 重新赋值
+        line[fieldKey] = {
+          id: `${refField.entityCode}-${refIdValue[refField.idFieldName]}`,
+          name: refIdValue[refField.nameFieldName],
+        };
+      }
+    }
+  }
+  return line;
+}
+
 /**
  *
  * 通用查询接口
@@ -48,15 +201,33 @@ function listQuery({
   //   builtInFilter: {},
   //   statistics: [],
   // };
-  const entity = getEntityByName(mainEntity);
+
+  const [entity] = Process("models.sys.entity.get", {
+    wheres: [{ column: "name", value: mainEntity }],
+    withs: {
+      fieldSet: {},
+    },
+  });
+  if (entity == null) {
+    throw new Error(`实体 ${mainEntity} 不存在`);
+  }
+
+  // const entity = getEntityByName(mainEntity);
   loadEntityToYao(mainEntity);
 
-  let queryParam = {
-    select: fieldsList.split(","),
-  };
-  if (!queryParam.select.includes(entity.idFieldName)) {
-    queryParam.select.push(entity.idFieldName);
+  let queryParam = {};
+  if (fieldsList) {
+    queryParam.select = fieldsList.split(",");
+    if (!queryParam.select.includes(entity.idFieldName)) {
+      queryParam.select.push(entity.idFieldName);
+    }
   }
+  
+  const selectFields = getSelectFields(entity, fieldsList);
+  const refFieldsMap = getRefFieldsMap(selectFields);
+  const fieldsOptionMap = getfieldsOptionMap(selectFields);
+  const fieldsTagMap = getfieldsTagMap(selectFields);
+  
   // console.log("queryParam data", queryParam);
   let data = Process(
     `models.${mainEntity}.Paginate`,
@@ -64,14 +235,20 @@ function listQuery({
     pageNo || 1,
     pageSize || 10
   );
+  
   // console.log("listQuery data", data);
   data.data &&
     data.data.forEach((line) => {
       line[entity.idFieldName] = `${entity.entityCode}-${
         line[entity.idFieldName]
       }`;
-    });
+      // 还需要处理关联查询，返回id与名称。
 
+      line = updateDataLineReference(refFieldsMap, line);
+      line = updateDataLineOptions(fieldsOptionMap, line);
+      // line = updateDataLineTags(fieldsTagMap, line);
+    });
+    
   return {
     dataList: data.data,
     pagination: {
@@ -226,7 +403,7 @@ function formCreateQuery(entityName) {
   });
 
   return {
-    layoutJson: formLayout ? JSON.stringify(formLayout) : null,
+    layoutJson: formLayout.layoutJson,
     fieldPropsMap: {},
     formData: {},
     labelData: {},
@@ -237,8 +414,8 @@ function formCreateQuery(entityName) {
 function testEquation() {}
 
 function refFieldQuery(
-  entity,
-  refField,
+  entityName,
+  refFieldName,
   pageNo,
   pageSize,
   queryText,
@@ -246,53 +423,158 @@ function refFieldQuery(
 ) {
   // entity=User&refField=departmentId&pageNo=1&pageSize=10&queryText=&extraFilter=&_=1706449697186
 
-  return {
-    idFieldName: "departmentId",
-    nameFieldName: "departmentName",
-    columnList: [
+  // 先查到关联的实体，
+  // 再查询关联实体对的表，
+  // 默认显示字段列表在字段的referenceSetting中。
+
+  const [mainEntity] = Process("models.sys.entity.get", {
+    wheres: [
       {
-        prop: "departmentName",
-        width: "160",
-        label: "部门名称",
-        align: "center",
-        type: "Text",
-      },
-      {
-        prop: "parentDepartmentId",
-        width: "160",
-        label: "上级部门",
-        align: "center",
-        type: "Reference",
+        column: "name",
+        value: entityName,
       },
     ],
-    dataList: [
-      {
-        departmentId: "0000022-00000000000000000000000000000001",
-        departmentName: "公司总部",
-        parentDepartmentId: null,
-      },
-      {
-        departmentId: "0000022-8b698fea6842441d8aafc0d5ba395401",
-        departmentName: "北京公司",
-        parentDepartmentId: {
-          id: "0000022-00000000000000000000000000000001",
-          name: "公司总部",
+    withs: {
+      fieldSet: {
+        query: {
+          wheres: [
+            {
+              column: "name",
+              value: refFieldName,
+            },
+          ],
         },
       },
-      {
-        departmentId: "0000022-5c081c8aca3b4f18a3e7ced7f81eb0cb",
-        departmentName: "质量控制部",
-        parentDepartmentId: {
-          id: "0000022-8b698fea6842441d8aafc0d5ba395401",
-          name: "北京公司",
-        },
-      },
-    ],
-    pagination: {
-      pageSize: 10,
-      pageNo: 1,
-      total: 3,
     },
+  });
+
+  if (!mainEntity || !mainEntity.fieldSet || !mainEntity.fieldSet[0]) {
+    throw Error(`实体${entityName}-字段${refFieldName}不存在`);
+  }
+  let refField = mainEntity.fieldSet[0];
+
+  // 引用的实体名称
+  const refEntityName = refField.referTo.split(",")[0];
+
+  const [refEntity] = Process("models.sys.entity.get", {
+    wheres: [
+      {
+        column: "name",
+        value: refEntityName,
+      },
+    ],
+    withs: {
+      fieldSet: {},
+    },
+  });
+  if (!refEntity) {
+    throw Error(`引用实体${refEntityName}不存在`);
+  }
+
+  const idFieldName = refEntity.fieldSet.find(
+    (f) => f.idFieldFlag === true
+  )?.name;
+  const nameFieldName = refEntity.fieldSet.find(
+    (f) => f.nameFieldFlag === true
+  )?.name;
+
+  // 引用设置中可能有多个配置。
+  let defaultFieldList = [];
+  if (Array.isArray(refField.referenceSetting)) {
+    let refConfig = refField.referenceSetting.find(
+      (ref) => ref.entityName === refEntityName
+    );
+    // 默认的显示字段列表
+    defaultFieldList = refConfig?.fieldList || [];
+  }
+
+  // Filter objectList by names that exist in filterList
+  const filteredList = refEntity.fieldSet.filter((field) =>
+    defaultFieldList.includes(field.name)
+  );
+
+  const outputFields = filteredList.map((field) => {
+    return {
+      prop: field.name,
+      width: "160",
+      label: field.label,
+      align: "center",
+      type: field.type,
+    };
+  });
+  const data = listQuery({
+    mainEntity: refEntityName,
+    fieldsList: defaultFieldList.join(","),
+    // filter:{
+    //   equation:"AND",
+    //   items:[
+    //     {
+    //       fieldName:refFieldName,
+    //       op:"EQ",
+    //       value:id
+    //     }
+    //   ]
+    // },
+    pageSize,
+    pageNo,
+    // sortFields:[],
+    // advFilter:{
+    //   equation:"AND",
+    //   items:[]
+    // },
+    // quickFilter:"",
+    // builtInFilter:""
+  });
+  return {
+    idFieldName: idFieldName,
+    nameFieldName: nameFieldName,
+    columnList: outputFields,
+    // [
+    //   {
+    //     prop: "departmentName",
+    //     width: "160",
+    //     label: "部门名称",
+    //     align: "center",
+    //     type: "Text",
+    //   },
+    //   {
+    //     prop: "parentDepartmentId",
+    //     width: "160",
+    //     label: "上级部门",
+    //     align: "center",
+    //     type: "Reference",
+    //   },
+    // ],
+    dataList: data.dataList,
+    //  [
+    //   {
+    //     departmentId: "0000022-00000000000000000000000000000001",
+    //     departmentName: "公司总部",
+    //     parentDepartmentId: null,
+    //   },
+    //   {
+    //     departmentId: "0000022-8b698fea6842441d8aafc0d5ba395401",
+    //     departmentName: "北京公司",
+    //     parentDepartmentId: {
+    //       id: "0000022-00000000000000000000000000000001",
+    //       name: "公司总部",
+    //     },
+    //   },
+    //   {
+    //     departmentId: "0000022-5c081c8aca3b4f18a3e7ced7f81eb0cb",
+    //     departmentName: "质量控制部",
+    //     parentDepartmentId: {
+    //       id: "0000022-8b698fea6842441d8aafc0d5ba395401",
+    //       name: "北京公司",
+    //     },
+    //   },
+    // ],
+    pagination: data.pagination,
+    // {
+    //   pageSize: 10,
+    //   pageNo: 1,
+    //   total: 3,
+    // },
   };
 }
 
@@ -382,18 +664,41 @@ function getEntityCodeList(entityName) {
  *
  * yao run scripts.curd.queryById '1-7'
  * @param {*} entityId 实体ID
- * @param {*} fieldNames 需要获取的字段名称
+ * @param {*} fieldsList 需要获取的字段名称
  */
-function queryById(entityId, fieldNames) {
+function queryById(entityId, fieldsList) {
   const [entityCode, id] = entityId.split("-");
-  const entity = getEntityByCode(entityCode);
-  loadEntityToYao(entity.name);
-  let query = {};
-  if (fieldNames) {
-    query.select = fieldNames.split(",");
+  // const entity = getEntityByCode(entityCode);
+
+  const entity = Process("models.sys.entity.find", entityCode, {
+    withs: {
+      fieldSet: {},
+    },
+  });
+  if (entity == null) {
+    throw new Error(`实体 ${mainEntity} 不存在`);
   }
-  console.log(`queryById:${id} ${typeof id}`);
-  const data = Process(`models.${entity.name}.Find`, id, fieldNames);
+
+  const entityName = entity.name;
+
+  loadEntityToYao(entityName);
+  let queryParam = {};
+  if (fieldsList) {
+    queryParam.select = fieldsList.split(",");
+    if (!queryParam.select.includes(entity.idFieldName)) {
+      queryParam.select.push(entity.idFieldName);
+    }
+  }
+  const selectFields = getSelectFields(entity, fieldsList);
+
+  const refFieldsMap = getRefFieldsMap(selectFields);
+  const fieldsOptionMap = getfieldsOptionMap(selectFields);
+  const fieldsTagMap = getfieldsTagMap(selectFields);
+
+  let data = Process(`models.${entity.name}.Find`, id, queryParam);
+  data = updateDataLineReference(refFieldsMap, data);
+  data = updateDataLineOptions(fieldsOptionMap, data);
+  // data = updateDataLineTags(fieldsTagMap, data);
   return data;
 }
 
