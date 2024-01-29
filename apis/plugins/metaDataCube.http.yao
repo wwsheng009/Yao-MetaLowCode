@@ -15,7 +15,7 @@
     {
       "path": "/updateDefault",
       "method": "post",
-      "process": "scripts.plugins.updateDefault",
+      "process": "scripts.plugins.chart.updateDefault",
       "in": ["$query.id", "$query.defaultChart"],
       "out": { "status": 200, "type": "application/json" }
     }

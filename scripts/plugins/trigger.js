@@ -43,7 +43,6 @@ function aviatorValidate(payload){
   console.log(`aviatorValidate no implement yet`)
   console.log(payload)
 }
-function updateDefault(id, defaultChart) {}
 
 function getEntityCode(query) {
   
