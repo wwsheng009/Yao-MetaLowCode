@@ -1,5 +1,6 @@
 const { getEntityField, toCamelCase, getEntityByName } = Require("sys.lib");
-const { updateEntityToYao, loadEntityToYao } = Require("sys.yao");
+const { updateEntityToYao, loadEntityToYao, entityToYaoModel } =
+  Require("sys.yao");
 
 function getCookie() {
   const cookie = Process("utils.env.Get", "METALOWCODE_COOKIE");
@@ -187,7 +188,7 @@ function getEntityProps(entityName, cookie) {
  * @param {string} cookie
  * @returns
  */
-function getFieldList(entityName, cookie) {
+function getFieldList(entityName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
@@ -203,7 +204,7 @@ function getFieldList(entityName, cookie) {
 
 /**
  * yao run scripts.systemmanager_import.downloadOptionFields
- * @returns
+ * @param {string|null} entityName
  */
 function downloadOptionFields(entityName) {
   var currentTimestamp = new Date().getTime();
@@ -268,17 +269,45 @@ function downloadOptionFields(entityName) {
   }
 }
 
-function getOptionItems(entityName, field) {
+function getOptionItems(entityName, fieldName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getOptionItems?entity=${entityName}&field=${field}&_=${currentTimestamp}`,
+    `http://web1.demo.melecode.com/systemManager/getOptionItems?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
     }
   );
   checkRespone(response);
+
+  const OptionItems = response.data.data;
+  Process("models.OptionItem.deletewhere", {
+    wheres: [
+      {
+        column: "entityName",
+        value: entityName,
+      },
+      {
+        column: "fieldName",
+        value: fieldName,
+      },
+    ],
+  });
+  OptionItems.forEach((item,idx) => {
+    item.displayOrder = idx + 1;
+    item.systemFlag ||= 0;
+  });
+
+  var res = Process("models.OptionItem.EachSave", OptionItems, {
+    entityName,
+    fieldName,
+  });
+
+  if (res?.code && res.message) {
+    throw Error(`${entity.name}>>|Exception:${res?.code}|${res.message}`);
+  }
+
   return response.data.data;
 }
 
@@ -343,17 +372,48 @@ function downloadTagFields(entityName) {
   }
 }
 
-function getTagItems(entityName, field) {
+/**
+ *
+ * yao run scripts.systemmanager_import.getTagItems 'TodoTask' 'remindType'
+ * @param {string} entityName
+ * @param {string} fieldName
+ * @returns
+ */
+function getTagItems(entityName, fieldName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getTagItems?entity=${entityName}&field=${field}&_=${currentTimestamp}`,
+    `http://web1.demo.melecode.com/systemManager/getTagItems?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
     }
   );
   checkRespone(response);
+
+  const tagItems = response.data.data;
+  Process("models.TagItem.deletewhere", {
+    wheres: [
+      {
+        column: "entityName",
+        value: entityName,
+      },
+      {
+        column: "fieldName",
+        value: fieldName,
+      },
+    ],
+  });
+  tagItems.forEach((item, idx) => (item.displayOrder = idx + 1));
+  var res = Process("models.TagItem.EachSave", tagItems, {
+    entityName,
+    fieldName,
+  });
+
+  if (res?.code && res.message) {
+    throw Error(`${entity.name}>>|Exception:${res?.code}|${res.message}`);
+  }
+
   return response.data.data;
 }
 
@@ -504,7 +564,6 @@ function getSystemEntityMap() {
     FollowUp: 54, //"跟进
     TodoTask: 55, //"待办
     BackupDatabase: 56, //"数据库备份
-    Yanshishiti: 1001, //"演示实体
   };
 }
 
@@ -561,7 +620,7 @@ function getFormLayout(entityName) {
   if (!layoutData || typeof layoutData !== "object" || !layoutData.layoutJson) {
     return;
   }
-  Process("models.sys.form.layout.deletewhere", {
+  Process("models.formlayout.deletewhere", {
     wheres: [
       {
         column: "entityCode",
@@ -575,7 +634,7 @@ function getFormLayout(entityName) {
     layoutJson: layoutData.layoutJson,
   };
 
-  Process("models.sys.form.layout.save", layoutForm);
+  Process("models.formlayout.save", layoutForm);
   const fname = `/formlayout/${entityName}.json`;
 
   layoutForm.entityLabel = entity.label;
@@ -690,6 +749,8 @@ function getFormLayout(entityName) {
 }
 
 /**
+ * 有了表单布局才能使用表单创建数据。
+ * 
  * 单独导入表单布局
  * yao run scripts.systemmanager_import.importFormLayout
  * @param {string|null} entityName
@@ -707,7 +768,7 @@ function importFormLayout(entityName) {
     let entityContent = Process("fs.system.ReadFile", f);
     entityContent = JSON.parse(entityContent);
 
-    const [layout] = Process("models.sys.form.layout.get", {
+    const [layout] = Process("models.formlayout.get", {
       wheres: [
         {
           column: "entityCode",
@@ -718,7 +779,7 @@ function importFormLayout(entityName) {
     if (layout?.formLayoutId) {
       entityContent.formLayoutId = layout?.formLayoutId;
     }
-    Process("models.sys.form.layout.save", entityContent);
+    Process("models.formlayout.save", entityContent);
 
     index++;
     console.log(

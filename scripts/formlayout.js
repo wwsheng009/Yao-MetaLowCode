@@ -4,7 +4,7 @@ const { getEntityByName, getEntityByCode } = Require("sys.lib");
 
 function updateFormLayout(layoutId, layoutJson) {
 
-  Process("models.sys.form.layout.update",layoutId,{
+  Process("models.formlayout.update",layoutId,{
     layoutJson
   })
   return layoutId
@@ -130,7 +130,7 @@ function createFormLayout(entityName, layoutJson) {
     ],
   });
 
-  const formLayoutId = Process("models.sys.form.layout.save", {
+  const formLayoutId = Process("models.formlayout.save", {
     layoutName: "默认表单布局",
     layoutJson,
     entityCode: entity.entityCode,
@@ -267,7 +267,7 @@ function getFormLayout(entityName) {
   if (!entity) {
     throw Error(`实体 ${entityName} 不存在`)
   }
-  let [formLayout] = Process("models.sys.form.layout.get", {
+  let [formLayout] = Process("models.formlayout.get", {
     wheres: [
       {
         column: "entityCode",

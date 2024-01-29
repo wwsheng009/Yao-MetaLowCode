@@ -216,7 +216,7 @@ function checkStatus() {
 function formCreateQuery(entityName) {
   const entity = getEntityByName(entityName);
 
-  const [formLayout] = Process("models.sys.form.layout.get", {
+  const [formLayout] = Process("models.formLayout.get", {
     wheres: [
       {
         column: "entityCode",
