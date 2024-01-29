@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "chosenListType": null,
+    "advFilter": null,
+    "nameFieldName": "yingshouduizhangdanbianhao",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "付款单号",
+    "idFieldName": "fukuandanId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1077,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"付款单号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanjine\",\"isNameField\":false,\"fieldLabel\":\"付款金额/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanshijian\",\"isNameField\":false,\"fieldLabel\":\"付款时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanren\",\"isNameField\":false,\"fieldLabel\":\"经办人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应付账款-对账单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1077,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"付款单号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanjine\",\"isNameField\":false,\"fieldLabel\":\"付款金额/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanshijian\",\"isNameField\":false,\"fieldLabel\":\"付款时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanren\",\"isNameField\":false,\"fieldLabel\":\"经办人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应付账款-对账单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

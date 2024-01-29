@@ -1,0 +1,27 @@
+{
+    "nameFieldName": "qingjiadanhao",
+    "quickFilterLabel": "请假单号",
+    "idFieldName": "qingjiashenqingId",
+    "LIST": {
+        "ALL": {
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-de75c93cfed04f6886a528006c3697bb",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"qingjiadanhao\",\"isNameField\":true,\"fieldLabel\":\"请假单号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"qingjialeixing\",\"isNameField\":false,\"fieldLabel\":\"请假类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yuangong\",\"isNameField\":false,\"fieldLabel\":\"员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"hejiqingjiatianshu\",\"isNameField\":false,\"fieldLabel\":\"合计请假天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiashiyoushuoming\",\"isNameField\":false,\"fieldLabel\":\"请假事由说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xiangguanzhengming\",\"isNameField\":false,\"fieldLabel\":\"相关证明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"File\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1147
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1147,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"qingjiadanhao\",\"isNameField\":true,\"fieldLabel\":\"请假单号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"qingjialeixing\",\"isNameField\":false,\"fieldLabel\":\"请假类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yuangong\",\"isNameField\":false,\"fieldLabel\":\"员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"hejiqingjiatianshu\",\"isNameField\":false,\"fieldLabel\":\"合计请假天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]"
+        }
+    },
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "advFilter": null,
+    "titleWidthForAll": null
+}

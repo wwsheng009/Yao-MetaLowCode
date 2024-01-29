@@ -1,0 +1,24 @@
+{
+    "advFilter": null,
+    "idFieldName": "triggerConfigId",
+    "FILTER": [],
+    "nameFieldName": "name",
+    "chosenListType": null,
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "触发器名称",
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"whenCron\",\"isNameField\":false,\"fieldLabel\":\"触发周期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"priority\",\"isNameField\":false,\"fieldLabel\":\"优先级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"name\",\"isNameField\":true,\"fieldLabel\":\"触发器名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"actionType\",\"isNameField\":false,\"fieldLabel\":\"触发器类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Status\"},{\"isUpdatable\":true,\"fieldName\":\"whenNum\",\"isNameField\":false,\"fieldLabel\":\"触发条件\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST",
+            "entityCode": 48,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "entityCode": 48,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"whenCron\",\"isNameField\":false,\"fieldLabel\":\"触发周期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"priority\",\"isNameField\":false,\"fieldLabel\":\"优先级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"name\",\"isNameField\":true,\"fieldLabel\":\"触发器名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"actionType\",\"isNameField\":false,\"fieldLabel\":\"触发器类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Status\"},{\"isUpdatable\":true,\"fieldName\":\"whenNum\",\"isNameField\":false,\"fieldLabel\":\"触发条件\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST"
+        }
+    }
+}

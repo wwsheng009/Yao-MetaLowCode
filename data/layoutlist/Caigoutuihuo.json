@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "xiaoshoutuihuodanbianhao",
+    "idFieldName": "caigoutuihuoId",
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "采购退货单编号",
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehu\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"退货申请日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoutuihuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购退货单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecaigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择采购订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"}]",
+            "applyType": "LIST",
+            "entityCode": 1041,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1041,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehu\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"退货申请日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoutuihuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购退货单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecaigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择采购订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"}]"
+        }
+    }
+}

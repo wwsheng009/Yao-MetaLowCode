@@ -1,0 +1,27 @@
+{
+    "quickFilterLabel": "本月完成工作",
+    "chosenListType": null,
+    "advFilter": null,
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "LIST": {
+        "ALL": {
+            "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
+            "layoutConfigId": "0000015-238ad1f105bb43d4b5109f201faf4959",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shijian\",\"isNameField\":false,\"fieldLabel\":\"时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"tianbaorenyuan\",\"isNameField\":false,\"fieldLabel\":\"填报人员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"benyuewanchenggongzuo\",\"isNameField\":true,\"fieldLabel\":\"本月完成工作\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xiayuegongzuojihua\",\"isNameField\":false,\"fieldLabel\":\"下月工作计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"benyuegongzuokunna\",\"isNameField\":false,\"fieldLabel\":\"本月工作困难及需要的帮助\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuoxindefenxiang\",\"isNameField\":false,\"fieldLabel\":\"工作心得分享\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1212
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1212,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shijian\",\"isNameField\":false,\"fieldLabel\":\"时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"tianbaorenyuan\",\"isNameField\":false,\"fieldLabel\":\"填报人员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    },
+    "nameFieldName": "benyuewanchenggongzuo",
+    "idFieldName": "yuebaoId"
+}

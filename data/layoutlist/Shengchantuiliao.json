@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchanlingliaodan\",\"isNameField\":false,\"fieldLabel\":\"生产领料单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanlingliao\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaorukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"退料入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"退料原因\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinrukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaorukushijian\",\"isNameField\":false,\"fieldLabel\":\"退料入库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"rukuyuan\",\"isNameField\":false,\"fieldLabel\":\"入库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"}]",
+            "applyType": "LIST",
+            "entityCode": 1216,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "entityCode": 1216,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchanlingliaodan\",\"isNameField\":false,\"fieldLabel\":\"生产领料单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanlingliao\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaorukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"退料入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"退料原因\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinrukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaorukushijian\",\"isNameField\":false,\"fieldLabel\":\"退料入库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"rukuyuan\",\"isNameField\":false,\"fieldLabel\":\"入库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "nameFieldName": "tuiliaorukudanbianhao",
+    "quickFilterLabel": "退料入库单编号",
+    "chosenListType": null,
+    "idFieldName": "shengchantuiliaoId",
+    "titleWidthForAll": null
+}

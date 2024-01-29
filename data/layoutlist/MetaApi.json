@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "metaApiId",
+    "chosenListType": null,
+    "advFilter": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "idFieldName": "metaApiId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 51,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"appId\",\"isNameField\":false,\"fieldLabel\":\"APP_ID\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"appSecret\",\"isNameField\":false,\"fieldLabel\":\"APP_SECRET\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bindUser\",\"isNameField\":false,\"fieldLabel\":\"绑定用户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"bindIps\",\"isNameField\":false,\"fieldLabel\":\"IP 白名单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "entityCode": 51,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"appId\",\"isNameField\":false,\"fieldLabel\":\"APP_ID\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"appSecret\",\"isNameField\":false,\"fieldLabel\":\"APP_SECRET\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bindUser\",\"isNameField\":false,\"fieldLabel\":\"绑定用户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"bindIps\",\"isNameField\":false,\"fieldLabel\":\"IP 白名单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "titleWidthForAll": null
+}

@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "",
+    "advFilter": null,
+    "idFieldName": "lxxId",
+    "FILTER": [],
+    "nameFieldName": "lxxId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1237,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"aaa\",\"isNameField\":false,\"fieldLabel\":\"aaa\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"bbb\",\"isNameField\":false,\"fieldLabel\":\"bbb\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"aaa\",\"isNameField\":false,\"fieldLabel\":\"aaa\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"bbb\",\"isNameField\":false,\"fieldLabel\":\"bbb\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST",
+            "entityCode": 1237,
+            "shareTo": "SELF"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "chosenListType": "SELF"
+}

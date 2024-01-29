@@ -1,0 +1,27 @@
+{
+    "idFieldName": "ruzhishenqingId",
+    "LIST": {
+        "ALL": {
+            "layoutConfigId": "0000015-f18e0baf4c2c48c18678878b7210a911",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"ruzhiyuangong\",\"isNameField\":false,\"fieldLabel\":\"入职员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yujiruzhiriqi\",\"isNameField\":false,\"fieldLabel\":\"预计入职日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"zhishushangjilingdao\",\"isNameField\":false,\"fieldLabel\":\"直属上级领导\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongleixing\",\"isNameField\":false,\"fieldLabel\":\"员工类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhioffer\",\"isNameField\":false,\"fieldLabel\":\"入职offer\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"File\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1145,
+            "createdBy": "0000021-00000000000000000000000000000001"
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"ruzhiyuangong\",\"isNameField\":false,\"fieldLabel\":\"入职员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yujiruzhiriqi\",\"isNameField\":false,\"fieldLabel\":\"预计入职日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongleixing\",\"isNameField\":false,\"fieldLabel\":\"员工类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zhishushangjilingdao\",\"isNameField\":false,\"fieldLabel\":\"直属上级领导\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"}]",
+            "applyType": "LIST",
+            "entityCode": 1145,
+            "shareTo": "SELF"
+        }
+    },
+    "FILTER": [],
+    "nameFieldName": "xingming",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "姓名",
+    "advFilter": null,
+    "chosenListType": null,
+    "titleWidthForAll": null
+}

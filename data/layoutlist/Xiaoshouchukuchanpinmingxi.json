@@ -1,0 +1,24 @@
+{
+    "chosenListType": null,
+    "idFieldName": "xiaoshouchukuchanpinmingxiId",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "xiaoshouchukuchanpinmingxiId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1067,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingshouzhangkuanuizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择出库明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshouchuku\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujine\",\"isNameField\":false,\"fieldLabel\":\"应收金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        },
+        "SELF": {
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingshouzhangkuanuizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择出库明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshouchuku\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujine\",\"isNameField\":false,\"fieldLabel\":\"应收金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+            "applyType": "LIST",
+            "entityCode": 1067
+        }
+    }
+}

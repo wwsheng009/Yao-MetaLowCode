@@ -1,0 +1,24 @@
+{
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdERPchanpinxinxiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"danweishengchanshuliang\",\"isNameField\":false,\"fieldLabel\":\"单位生产数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":false,\"fieldLabel\":\"工序名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongxu\"}]",
+            "applyType": "LIST",
+            "entityCode": 1186
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1186,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdERPchanpinxinxiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"danweishengchanshuliang\",\"isNameField\":false,\"fieldLabel\":\"单位生产数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":false,\"fieldLabel\":\"工序名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongxu\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "advFilter": null,
+    "idFieldName": "chanpingongyiluxianId",
+    "FILTER": [],
+    "nameFieldName": "chanpingongyiluxianId"
+}

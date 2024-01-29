@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "",
+    "idFieldName": "rukuchanpinmingxiId",
+    "FILTER": [],
+    "nameFieldName": "rukuchanpinmingxiId",
+    "advFilter": null,
+    "LIST": {
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1035,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigourukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigouruku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencidaohuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次到货数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"buhegeshuliang\",\"isNameField\":false,\"fieldLabel\":\"不合格数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次入库数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+        },
+        "ALL": {
+            "entityCode": 1035,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigourukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigouruku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencidaohuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次到货数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"buhegeshuliang\",\"isNameField\":false,\"fieldLabel\":\"不合格数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次入库数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "chosenListType": null
+}

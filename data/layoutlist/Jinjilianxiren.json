@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "jinjilianxirenxingming",
+    "quickFilterLabel": "紧急联系人姓名",
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "jinjilianxirenId",
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1103,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYuangongdanganId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"shouji\",\"isNameField\":false,\"fieldLabel\":\"手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jinjilianxirenxingming\",\"isNameField\":true,\"fieldLabel\":\"紧急联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1103,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYuangongdanganId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"shouji\",\"isNameField\":false,\"fieldLabel\":\"手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jinjilianxirenxingming\",\"isNameField\":true,\"fieldLabel\":\"紧急联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

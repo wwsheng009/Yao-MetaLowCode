@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "shareAccessId",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "nameFieldName": "shareAccessId",
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST",
+            "entityCode": 50
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 50,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+        }
+    }
+}

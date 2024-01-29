@@ -1,0 +1,24 @@
+{
+    "titleWidthForAll": null,
+    "nameFieldName": "teamName",
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "idFieldName": "teamId",
+    "FILTER": [],
+    "quickFilterLabel": "团队名称",
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 24,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"teamName\",\"isNameField\":true,\"fieldLabel\":\"团队名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"principalId\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 24,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"teamName\",\"isNameField\":true,\"fieldLabel\":\"团队名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"principalId\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    }
+}

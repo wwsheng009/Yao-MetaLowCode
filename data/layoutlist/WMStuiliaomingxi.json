@@ -1,0 +1,24 @@
+{
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "SELF": {
+            "entityCode": 1115,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMStuiliaorukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMStuiliaoruku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliao\",\"isNameField\":false,\"fieldLabel\":\"选择备料\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaoshuliang\",\"isNameField\":false,\"fieldLabel\":\"退料数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST"
+        },
+        "ALL": {
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMStuiliaorukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMStuiliaoruku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliao\",\"isNameField\":false,\"fieldLabel\":\"选择备料\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuiliaoshuliang\",\"isNameField\":false,\"fieldLabel\":\"退料数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST",
+            "entityCode": 1115,
+            "shareTo": "ALL"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "wMStuiliaomingxiId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "idFieldName": "wMStuiliaomingxiId"
+}

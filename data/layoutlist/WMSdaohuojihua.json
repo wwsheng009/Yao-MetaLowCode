@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "wMSdaohuojihuaId",
+    "advFilter": null,
+    "idFieldName": "wMSdaohuojihuaId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1086,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+        },
+        "SELF": {
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+            "applyType": "LIST",
+            "entityCode": 1086
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "chosenListType": null
+}

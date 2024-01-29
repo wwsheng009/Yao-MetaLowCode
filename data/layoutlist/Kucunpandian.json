@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "pandiandanbianhao",
+    "quickFilterLabel": "盘点单编号",
+    "chosenListType": null,
+    "LIST": {
+        "SELF": {
+            "entityCode": 1055,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"pandianleixing\",\"isNameField\":false,\"fieldLabel\":\"盘点类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pandiandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"盘点单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pandiankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandianjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandiancangku\",\"isNameField\":false,\"fieldLabel\":\"盘点仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]",
+            "applyType": "LIST"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1055,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"pandianleixing\",\"isNameField\":false,\"fieldLabel\":\"盘点类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pandiandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"盘点单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pandiankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandianjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandiancangku\",\"isNameField\":false,\"fieldLabel\":\"盘点仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "idFieldName": "kucunpandianId"
+}

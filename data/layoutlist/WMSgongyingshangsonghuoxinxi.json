@@ -1,0 +1,27 @@
+{
+    "chosenListType": null,
+    "advFilter": null,
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "fahuorenxingming",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "发货人姓名",
+    "idFieldName": "wMSgongyingshangsonghuoxinxiId",
+    "LIST": {
+        "ALL": {
+            "entityCode": 1040,
+            "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
+            "layoutConfigId": "0000015-a10f772940184096b7df7e9f7c1e333b",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"fahuorenxingming\",\"isNameField\":false,\"fieldLabel\":\"发货人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fahuorenlianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"发货人联系方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fahuodizhi\",\"isNameField\":false,\"fieldLabel\":\"发货地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"xiangxidizhi\",\"isNameField\":false,\"fieldLabel\":\"详细地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"sijixingming\",\"isNameField\":false,\"fieldLabel\":\"司机姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"sijilianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"司机联系方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"songhuochepaihao\",\"isNameField\":false,\"fieldLabel\":\"送货车牌号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "configName": null
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1040,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"fahuorenxingming\",\"isNameField\":true,\"fieldLabel\":\"发货人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fahuorenlianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"发货人联系方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fahuodizhi\",\"isNameField\":false,\"fieldLabel\":\"发货地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"sijixingming\",\"isNameField\":false,\"fieldLabel\":\"司机姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"sijilianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"司机联系方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"songhuochepaihao\",\"isNameField\":false,\"fieldLabel\":\"送货车牌号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    }
+}

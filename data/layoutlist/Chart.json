@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "advFilter": null,
+    "titleWidthForAll": null,
+    "nameFieldName": "chartId",
+    "titleWidthForSelf": null,
+    "idFieldName": "chartId",
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chartName\",\"isNameField\":false,\"fieldLabel\":\"仪表盘名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"defaultChart\",\"isNameField\":false,\"fieldLabel\":\"默认视图\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
+            "applyType": "LIST",
+            "entityCode": 52,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 52,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chartName\",\"isNameField\":false,\"fieldLabel\":\"仪表盘名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"defaultChart\",\"isNameField\":false,\"fieldLabel\":\"默认视图\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]"
+        }
+    }
+}

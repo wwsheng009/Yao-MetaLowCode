@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "目标名称",
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1205,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"mubiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"目标名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"目标类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaosuoshubumen\",\"isNameField\":false,\"fieldLabel\":\"目标所属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhouqi\",\"isNameField\":false,\"fieldLabel\":\"目标周期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Mubiaozhouqi\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1205,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"mubiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"目标名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"目标类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaosuoshubumen\",\"isNameField\":false,\"fieldLabel\":\"目标所属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhouqi\",\"isNameField\":false,\"fieldLabel\":\"目标周期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Mubiaozhouqi\"}]"
+        }
+    },
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "idFieldName": "mubiaoId",
+    "titleWidthForAll": null,
+    "nameFieldName": "mubiaomingcheng",
+    "advFilter": null
+}

@@ -1,0 +1,27 @@
+{
+    "titleWidthForAll": null,
+    "nameFieldName": "wupinmingcheng",
+    "titleWidthForSelf": null,
+    "idFieldName": "wupinlingyongId",
+    "LIST": {
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tianbiaoshijian\",\"isNameField\":false,\"fieldLabel\":\"填表时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingrenbumen\",\"isNameField\":false,\"fieldLabel\":\"申请人部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"wupinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"物品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"wupinshuliang\",\"isNameField\":false,\"fieldLabel\":\"物品数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST",
+            "entityCode": 1226,
+            "shareTo": "SELF"
+        },
+        "ALL": {
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-b84730e518cf407bb19c824b4e8ced85",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tianbiaoshijian\",\"isNameField\":false,\"fieldLabel\":\"填表时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingrenbumen\",\"isNameField\":false,\"fieldLabel\":\"申请人部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"wupinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"物品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"wupinshuliang\",\"isNameField\":false,\"fieldLabel\":\"物品数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"wupinyongtu\",\"isNameField\":false,\"fieldLabel\":\"物品用途\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"wupinxiangxishuoming\",\"isNameField\":false,\"fieldLabel\":\"物品详细说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1226
+        }
+    },
+    "FILTER": [],
+    "quickFilterLabel": "物品名称",
+    "chosenListType": null,
+    "advFilter": null
+}

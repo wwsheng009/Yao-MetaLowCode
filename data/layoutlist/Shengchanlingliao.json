@@ -1,0 +1,24 @@
+{
+    "idFieldName": "shengchanlingliaoId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1215,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"生产工单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品出库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukushijian\",\"isNameField\":false,\"fieldLabel\":\"领料出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"领料出库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1215,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"生产工单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品出库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukushijian\",\"isNameField\":false,\"fieldLabel\":\"领料出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"领料出库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "nameFieldName": "lingliaochukudanbianhao",
+    "advFilter": null,
+    "quickFilterLabel": "领料出库单编号",
+    "chosenListType": null,
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "titleWidthForSelf": null
+}

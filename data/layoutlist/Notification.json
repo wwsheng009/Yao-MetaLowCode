@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "notificationId",
+    "quickFilterLabel": "",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "notificationId",
+    "LIST": {
+        "ALL": {
+            "entityCode": 47,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"toUser\",\"isNameField\":false,\"fieldLabel\":\"接收人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"relatedRecord\",\"isNameField\":false,\"fieldLabel\":\"相关记录\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":false,\"fieldName\":\"message\",\"isNameField\":false,\"fieldLabel\":\"消息\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+            "applyType": "LIST"
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"toUser\",\"isNameField\":false,\"fieldLabel\":\"接收人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"relatedRecord\",\"isNameField\":false,\"fieldLabel\":\"相关记录\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":false,\"fieldName\":\"message\",\"isNameField\":false,\"fieldLabel\":\"消息\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+            "applyType": "LIST",
+            "entityCode": 47,
+            "shareTo": "SELF"
+        }
+    }
+}

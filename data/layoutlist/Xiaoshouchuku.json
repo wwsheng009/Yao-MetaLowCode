@@ -1,0 +1,36 @@
+{
+    "idFieldName": "xiaoshouchukuId",
+    "LIST": {
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukubiaoqian\",\"isNameField\":false,\"fieldLabel\":\"产品出库标签\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"yujichukushijian\",\"isNameField\":false,\"fieldLabel\":\"预计出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"销售订单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"}]",
+            "applyType": "LIST",
+            "entityCode": 1018,
+            "shareTo": "SELF"
+        },
+        "ALL": {
+            "configName": null,
+            "entityCode": 1018,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-a509807d3677402ebebb58274da85bc8",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukubiaoqian\",\"isNameField\":false,\"fieldLabel\":\"产品出库标签\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"yujichukushijian\",\"isNameField\":false,\"fieldLabel\":\"预计出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"销售订单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"出库产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kehushouhuoqueren\",\"isNameField\":false,\"fieldLabel\":\"客户收货确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuoquerenshijian\",\"isNameField\":false,\"fieldLabel\":\"收货确认时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "选择销售订单/出库产品总数/出库员/销售订单名称",
+    "chosenListType": null,
+    "advFilter": null,
+    "FILTER": [],
+    "nameFieldName": "xiaoshoudingdanmingcheng",
+    "SEARCH": {
+        "configName": null,
+        "entityCode": 1018,
+        "createdBy": "0000021-00000000000000000000000000000001",
+        "layoutConfigId": "0000015-5bbd48c921a4412cbe334f8617938c56",
+        "shareTo": "ALL",
+        "config": "[{\"referTo\":\"Xiaoshoudingdan\",\"name\":\"xuanzexiaoshoudingdan\",\"label\":\"选择销售订单\",\"type\":\"Reference\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false},{\"name\":\"chukuchanpinzongshu\",\"label\":\"出库产品总数\",\"type\":\"Integer\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false},{\"referTo\":\"User\",\"name\":\"chukuyuan\",\"label\":\"出库员\",\"type\":\"Reference\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false},{\"name\":\"xiaoshoudingdanmingcheng\",\"label\":\"销售订单名称\",\"type\":\"Text\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false}]",
+        "applyType": "SEARCH"
+    }
+}

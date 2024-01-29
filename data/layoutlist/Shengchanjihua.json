@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "idFieldName": "shengchanjihuaId",
+    "titleWidthForAll": null,
+    "nameFieldName": "shengchanjihuamingcheng",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "生产计划名称",
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1192,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"销售订单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanbianhao\",\"isNameField\":false,\"fieldLabel\":\"销售订单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanjihuamingcheng\",\"isNameField\":true,\"fieldLabel\":\"生产计划名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanjihuabianhao\",\"isNameField\":false,\"fieldLabel\":\"生产计划编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1192,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"销售订单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanbianhao\",\"isNameField\":false,\"fieldLabel\":\"销售订单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanjihuamingcheng\",\"isNameField\":true,\"fieldLabel\":\"生产计划名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanjihuabianhao\",\"isNameField\":false,\"fieldLabel\":\"生产计划编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    }
+}

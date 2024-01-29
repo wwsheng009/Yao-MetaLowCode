@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1194,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanlianyuanhetong\",\"isNameField\":false,\"fieldLabel\":\"关联原合同\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"退货原因\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshenqingshijian\",\"isNameField\":false,\"fieldLabel\":\"退货申请时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshenqingdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"退货退款单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanren\",\"isNameField\":false,\"fieldLabel\":\"经办人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanbumen\",\"isNameField\":false,\"fieldLabel\":\"经办部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuozongjinuan\",\"isNameField\":false,\"fieldLabel\":\"退货总金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1194,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanlianyuanhetong\",\"isNameField\":false,\"fieldLabel\":\"关联原合同\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"退货原因\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshenqingshijian\",\"isNameField\":false,\"fieldLabel\":\"退货申请时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshenqingdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"退货退款单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanren\",\"isNameField\":false,\"fieldLabel\":\"经办人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanbumen\",\"isNameField\":false,\"fieldLabel\":\"经办部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuozongjinuan\",\"isNameField\":false,\"fieldLabel\":\"退货总金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        }
+    },
+    "chosenListType": null,
+    "idFieldName": "cRMtuihuoshenqingId",
+    "titleWidthForAll": null,
+    "nameFieldName": "huanhuoshenqingdanbianhao",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "退货退款单编号"
+}

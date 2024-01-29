@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "advFilter": null,
+    "idFieldName": "revisionHistoryId",
+    "LIST": {
+        "SELF": {
+            "entityCode": 49,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"所属实体\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"entityId\",\"isNameField\":false,\"fieldLabel\":\"相关实体Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":true,\"fieldName\":\"revisionBy\",\"isNameField\":false,\"fieldLabel\":\"操作人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"revisionOn\",\"isNameField\":false,\"fieldLabel\":\"操作时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"revisionType\",\"isNameField\":false,\"fieldLabel\":\"变更类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Status\"}]",
+            "applyType": "LIST"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 49,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"所属实体\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"entityId\",\"isNameField\":false,\"fieldLabel\":\"相关实体Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":true,\"fieldName\":\"revisionBy\",\"isNameField\":false,\"fieldLabel\":\"操作人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"revisionOn\",\"isNameField\":false,\"fieldLabel\":\"操作时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"revisionType\",\"isNameField\":false,\"fieldLabel\":\"变更类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Status\"}]"
+        }
+    },
+    "nameFieldName": "revisionHistoryId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "titleWidthForAll": null
+}

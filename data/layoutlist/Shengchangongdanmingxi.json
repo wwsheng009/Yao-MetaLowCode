@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "idFieldName": "shengchangongdanmingxiId",
+    "titleWidthForAll": null,
+    "nameFieldName": "shengchangongdanmingxiId",
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1214,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdERPshengchangongdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencipaigongshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次派工数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"kaigongshijian\",\"isNameField\":false,\"fieldLabel\":\"开工时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"wangongshijian\",\"isNameField\":false,\"fieldLabel\":\"完工时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+        },
+        "SELF": {
+            "entityCode": 1214,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdERPshengchangongdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencipaigongshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次派工数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"kaigongshijian\",\"isNameField\":false,\"fieldLabel\":\"开工时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"wangongshijian\",\"isNameField\":false,\"fieldLabel\":\"完工时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "FILTER": []
+}

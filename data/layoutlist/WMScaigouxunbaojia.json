@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "quickFilterLabel": "询价单编号",
+    "advFilter": null,
+    "idFieldName": "wMScaigouxunbaojiaId",
+    "titleWidthForAll": null,
+    "nameFieldName": "xunjiadanbianhao",
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiafaqiren\",\"isNameField\":false,\"fieldLabel\":\"询价发起人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiakaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"询价开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"baojiajiezhiriqi\",\"isNameField\":false,\"fieldLabel\":\"报价截止日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiashichangtian\",\"isNameField\":false,\"fieldLabel\":\"询价时长/天\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiadanbianhao\",\"isNameField\":true,\"fieldLabel\":\"询价单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1052
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1052,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiafaqiren\",\"isNameField\":false,\"fieldLabel\":\"询价发起人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiakaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"询价开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"baojiajiezhiriqi\",\"isNameField\":false,\"fieldLabel\":\"报价截止日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiashichangtian\",\"isNameField\":false,\"fieldLabel\":\"询价时长/天\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xunjiadanbianhao\",\"isNameField\":true,\"fieldLabel\":\"询价单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    }
+}

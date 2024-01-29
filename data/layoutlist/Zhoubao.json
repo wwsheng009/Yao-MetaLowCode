@@ -1,0 +1,27 @@
+{
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "idFieldName": "zhoubaoId",
+    "titleWidthForAll": null,
+    "nameFieldName": "benzhouwanchenggongzuo",
+    "quickFilterLabel": "本周完成工作",
+    "chosenListType": null,
+    "LIST": {
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shijian\",\"isNameField\":false,\"fieldLabel\":\"时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhoushu\",\"isNameField\":false,\"fieldLabel\":\"周数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"tianbaorenyuan\",\"isNameField\":false,\"fieldLabel\":\"填报人员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "entityCode": 1211,
+            "shareTo": "SELF"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1211,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-9e20f96b91f6470490360a247074f0c3",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shijian\",\"isNameField\":false,\"fieldLabel\":\"时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhoushu\",\"isNameField\":false,\"fieldLabel\":\"周数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"tianbaorenyuan\",\"isNameField\":false,\"fieldLabel\":\"填报人员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"benzhouwanchenggongzuo\",\"isNameField\":true,\"fieldLabel\":\"本周完成工作\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xiazhougongzuojihua\",\"isNameField\":false,\"fieldLabel\":\"下周工作计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"benzhougongzuokunnanjixu\",\"isNameField\":false,\"fieldLabel\":\"本周工作困难及需要的帮助\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuoxindefenxiang\",\"isNameField\":false,\"fieldLabel\":\"工作心得分享\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "lxx_subId",
+    "chosenListType": null,
+    "idFieldName": "lxx_subId",
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1238,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdLxxId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Lxx\"},{\"isUpdatable\":true,\"fieldName\":\"ccc\",\"isNameField\":false,\"fieldLabel\":\"ccc\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"ddd\",\"isNameField\":false,\"fieldLabel\":\"ddd\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+        },
+        "SELF": {
+            "entityCode": 1238,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdLxxId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Lxx\"},{\"isUpdatable\":true,\"fieldName\":\"ccc\",\"isNameField\":false,\"fieldLabel\":\"ccc\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"ddd\",\"isNameField\":false,\"fieldLabel\":\"ddd\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "titleWidthForAll": null
+}

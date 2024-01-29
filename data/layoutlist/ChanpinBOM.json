@@ -1,0 +1,24 @@
+{
+    "advFilter": null,
+    "LIST": {
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzefangansheji\",\"isNameField\":false,\"fieldLabel\":\"选择方案设计\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fangansheji\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bianma\",\"isNameField\":true,\"fieldLabel\":\"BOM编码\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongxu\",\"isNameField\":false,\"fieldLabel\":\"选择生产工序\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongxu\"},{\"isUpdatable\":true,\"fieldName\":\"gongxubianma\",\"isNameField\":false,\"fieldLabel\":\"工序编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":false,\"fieldLabel\":\"工序名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"kehubianma\",\"isNameField\":false,\"fieldLabel\":\"客户编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baojiadanbianhao\",\"isNameField\":false,\"fieldLabel\":\"报价单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1190,
+            "shareTo": "SELF"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1190,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzefangansheji\",\"isNameField\":false,\"fieldLabel\":\"选择方案设计\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fangansheji\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bianma\",\"isNameField\":true,\"fieldLabel\":\"BOM编码\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongxu\",\"isNameField\":false,\"fieldLabel\":\"选择生产工序\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongxu\"},{\"isUpdatable\":true,\"fieldName\":\"gongxubianma\",\"isNameField\":false,\"fieldLabel\":\"工序编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":false,\"fieldLabel\":\"工序名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"kehubianma\",\"isNameField\":false,\"fieldLabel\":\"客户编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baojiadanbianhao\",\"isNameField\":false,\"fieldLabel\":\"报价单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "chosenListType": null,
+    "quickFilterLabel": "BOM编码",
+    "idFieldName": "chanpinBOMId",
+    "nameFieldName": "bianma",
+    "titleWidthForSelf": null
+}

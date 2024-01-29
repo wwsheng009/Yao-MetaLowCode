@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "daohuojihuaId",
+    "chosenListType": null,
+    "idFieldName": "daohuojihuaId",
+    "LIST": {
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1032,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoneirongbeizhu\",\"isNameField\":false,\"fieldLabel\":\"计划到货内容备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1032,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoneirongbeizhu\",\"isNameField\":false,\"fieldLabel\":\"计划到货内容备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "advFilter": null,
+    "titleWidthForAll": null
+}

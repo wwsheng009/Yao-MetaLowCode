@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "feiyongleixing",
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1236,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongleixing\",\"isNameField\":true,\"fieldLabel\":\"费用类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kuaijikemu\",\"isNameField\":false,\"fieldLabel\":\"会计科目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danhao\",\"isNameField\":false,\"fieldLabel\":\"单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tijiaoshijian\",\"isNameField\":false,\"fieldLabel\":\"提交时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fentanhexiaojine\",\"isNameField\":false,\"fieldLabel\":\"分摊核销金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanshijian\",\"isNameField\":false,\"fieldLabel\":\"付款时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1236,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongleixing\",\"isNameField\":true,\"fieldLabel\":\"费用类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kuaijikemu\",\"isNameField\":false,\"fieldLabel\":\"会计科目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danhao\",\"isNameField\":false,\"fieldLabel\":\"单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tijiaoshijian\",\"isNameField\":false,\"fieldLabel\":\"提交时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fentanhexiaojine\",\"isNameField\":false,\"fieldLabel\":\"分摊核销金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanshijian\",\"isNameField\":false,\"fieldLabel\":\"付款时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+        }
+    },
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "费用类型",
+    "chosenListType": null,
+    "idFieldName": "fentanfuzhubiaoId",
+    "titleWidthForAll": null
+}

@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "xingming",
+    "advFilter": null,
+    "idFieldName": "lianxirenxinxiId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1009,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKehuguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouji\",\"isNameField\":false,\"fieldLabel\":\"手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwei\",\"isNameField\":false,\"fieldLabel\":\"职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKehuguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouji\",\"isNameField\":false,\"fieldLabel\":\"手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwei\",\"isNameField\":false,\"fieldLabel\":\"职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1009,
+            "shareTo": "SELF"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "姓名",
+    "chosenListType": null
+}

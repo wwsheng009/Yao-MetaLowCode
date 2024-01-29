@@ -1,0 +1,36 @@
+{
+    "titleWidthForSelf": null,
+    "chosenListType": "SELF",
+    "idFieldName": "renshizhengmingkaijuId",
+    "FILTER": [],
+    "SEARCH": {
+        "configName": null,
+        "entityCode": 1107,
+        "createdBy": "0000021-00000000000000000000000000000001",
+        "layoutConfigId": "0000015-320ecaeaa26b41d683ccdec2a7cac909",
+        "shareTo": "ALL",
+        "config": "[{\"name\":\"shenfenzhenghao\",\"label\":\"身份证号\",\"type\":\"Text\",\"isSelected\":true,\"isRequired\":false,\"isEdit\":true}]",
+        "applyType": "SEARCH"
+    },
+    "quickFilterLabel": "身份证号",
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "layoutConfigId": "0000015-4bc104f221a442918cca9ef07e721c82",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingyuangong\",\"isNameField\":false,\"fieldLabel\":\"申请员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingzhengmingleixing\",\"isNameField\":false,\"fieldLabel\":\"申请证明类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shenfenzhenghao\",\"isNameField\":false,\"fieldLabel\":\"身份证号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingshiyou\",\"isNameField\":true,\"fieldLabel\":\"申请事由\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1107,
+            "createdBy": "0000021-00000000000000000000000000000001"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1107,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingyuangong\",\"isNameField\":false,\"fieldLabel\":\"申请员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingzhengmingleixing\",\"isNameField\":false,\"fieldLabel\":\"申请证明类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "nameFieldName": "shenqingshiyou"
+}

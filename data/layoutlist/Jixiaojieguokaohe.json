@@ -1,0 +1,27 @@
+{
+    "quickFilterLabel": "考核主题",
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "jixiaojieguokaoheId",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "kaohezhuti",
+    "titleWidthForSelf": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1157,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-77e03bbaef0a4e0f95c237b80bbe5fa1",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"jixiaokaohezhuti\",\"isNameField\":false,\"fieldLabel\":\"绩效考核主题\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaokaohe\"},{\"isUpdatable\":true,\"fieldName\":\"kaoheduixiang\",\"isNameField\":false,\"fieldLabel\":\"考核对象\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"zipingfenheji\",\"isNameField\":false,\"fieldLabel\":\"自评分合计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaozongquanzhong\",\"isNameField\":false,\"fieldLabel\":\"指标总权重（%）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"自我工作总结\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"kaohezhuti\",\"isNameField\":true,\"fieldLabel\":\"考核主题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1157,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"jixiaokaohezhuti\",\"isNameField\":false,\"fieldLabel\":\"绩效考核主题\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaokaohe\"},{\"isUpdatable\":true,\"fieldName\":\"kaoheduixiang\",\"isNameField\":false,\"fieldLabel\":\"考核对象\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"zipingfenheji\",\"isNameField\":false,\"fieldLabel\":\"自评分合计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "xiaoshoudingdanmingxiId",
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "idFieldName": "xiaoshoudingdanmingxiId",
+    "LIST": {
+        "SELF": {
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoushuliang\",\"isNameField\":false,\"fieldLabel\":\"销售数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudanjia\",\"isNameField\":false,\"fieldLabel\":\"销售单价(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbendanjia\",\"isNameField\":false,\"fieldLabel\":\"产品成本单价\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbenxiaoji\",\"isNameField\":false,\"fieldLabel\":\"产品成本小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+            "applyType": "LIST",
+            "entityCode": 1014,
+            "shareTo": "SELF"
+        },
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoushuliang\",\"isNameField\":false,\"fieldLabel\":\"销售数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudanjia\",\"isNameField\":false,\"fieldLabel\":\"销售单价(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbendanjia\",\"isNameField\":false,\"fieldLabel\":\"产品成本单价\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbenxiaoji\",\"isNameField\":false,\"fieldLabel\":\"产品成本小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+            "applyType": "LIST",
+            "entityCode": 1014
+        }
+    },
+    "titleWidthForAll": null
+}

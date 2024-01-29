@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "quickFilterLabel": "",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1002,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"jiagedengji\",\"isNameField\":false,\"fieldLabel\":\"价格等级\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zengzhishuishuilv\",\"isNameField\":false,\"fieldLabel\":\"增值税税率\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudanjiabuhanshui\",\"isNameField\":false,\"fieldLabel\":\"销售单价(不含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shuie\",\"isNameField\":false,\"fieldLabel\":\"税额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoujiamaoli\",\"isNameField\":false,\"fieldLabel\":\"售价毛利/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"jiagedengji\",\"isNameField\":false,\"fieldLabel\":\"价格等级\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zengzhishuishuilv\",\"isNameField\":false,\"fieldLabel\":\"增值税税率\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudanjiabuhanshui\",\"isNameField\":false,\"fieldLabel\":\"销售单价(不含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shuie\",\"isNameField\":false,\"fieldLabel\":\"税额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoujiamaoli\",\"isNameField\":false,\"fieldLabel\":\"售价毛利/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+            "applyType": "LIST",
+            "entityCode": 1002,
+            "shareTo": "SELF"
+        }
+    },
+    "advFilter": null,
+    "idFieldName": "chanpinxiaoshoujiagebiaoId",
+    "titleWidthForAll": null,
+    "nameFieldName": "chanpinxiaoshoujiagebiaoId",
+    "titleWidthForSelf": null,
+    "chosenListType": null
+}

@@ -1,0 +1,24 @@
+{
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "cRMbaojiamingxiId",
+    "titleWidthForAll": null,
+    "nameFieldName": "cRMbaojiamingxiId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1170,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMchanpinbaojiaId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinbaojia\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1170,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMchanpinbaojiaId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinbaojia\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        }
+    },
+    "FILTER": []
+}

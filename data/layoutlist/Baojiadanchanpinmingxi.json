@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "baojiadanchanpinmingxiId",
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "idFieldName": "baojiadanchanpinmingxiId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1011,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBaojiadanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Baojiadan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoushuliang\",\"isNameField\":false,\"fieldLabel\":\"销售数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudanjia\",\"isNameField\":false,\"fieldLabel\":\"销售单价(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1011,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBaojiadanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Baojiadan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoushuliang\",\"isNameField\":false,\"fieldLabel\":\"销售数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudanjia\",\"isNameField\":false,\"fieldLabel\":\"销售单价(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "advFilter": null,
+    "titleWidthForSelf": null
+}

@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "cRMshangjimingxiId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "FILTER": [],
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "cRMshangjimingxiId",
+    "LIST": {
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1167,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMshangjiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMshangji\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1167,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMshangjiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMshangji\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

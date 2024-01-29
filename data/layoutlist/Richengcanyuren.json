@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "idFieldName": "richengcanyurenId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1213,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdRichengId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Richeng\"},{\"isUpdatable\":true,\"fieldName\":\"canyuren\",\"isNameField\":false,\"fieldLabel\":\"参与人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1213,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdRichengId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Richeng\"},{\"isUpdatable\":true,\"fieldName\":\"canyuren\",\"isNameField\":false,\"fieldLabel\":\"参与人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "nameFieldName": "richengcanyurenId",
+    "chosenListType": null,
+    "advFilter": null
+}

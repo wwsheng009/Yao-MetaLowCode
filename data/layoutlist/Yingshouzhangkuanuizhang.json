@@ -1,0 +1,24 @@
+{
+    "titleWidthForAll": null,
+    "quickFilterLabel": "应收对账单编号",
+    "advFilter": null,
+    "idFieldName": "yingshouzhangkuanuizhangId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1066,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应收对账单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1066,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应收对账单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "FILTER": [],
+    "nameFieldName": "yingshouduizhangdanbianhao",
+    "titleWidthForSelf": null,
+    "chosenListType": null
+}

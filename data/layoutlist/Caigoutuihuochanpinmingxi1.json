@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "idFieldName": "caigoutuihuochanpinmingxi1Id",
+    "nameFieldName": "caigoutuihuochanpinmingxi1Id",
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1075,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingfuzhangkuanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzetuihuomingxi\",\"isNameField\":false,\"fieldLabel\":\"选择退货明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoutuihuo\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1075,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingfuzhangkuanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzetuihuomingxi\",\"isNameField\":false,\"fieldLabel\":\"选择退货明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoutuihuo\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

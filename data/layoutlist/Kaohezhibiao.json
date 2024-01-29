@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "zhibiaomingcheng",
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJixiaokaohejihuazhidingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaokaohejihuazhiding\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"指标名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"quanzhong\",\"isNameField\":false,\"fieldLabel\":\"权重（%）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhi\",\"isNameField\":false,\"fieldLabel\":\"目标值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingxing\",\"isNameField\":false,\"fieldLabel\":\"定性/定量指标\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaodingyi\",\"isNameField\":false,\"fieldLabel\":\"指标定义\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenbiaozhun\",\"isNameField\":false,\"fieldLabel\":\"评分标准\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju\",\"isNameField\":false,\"fieldLabel\":\"评分依据\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiliangdanwei\",\"isNameField\":false,\"fieldLabel\":\"计量单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1155,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1155,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJixiaokaohejihuazhidingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaokaohejihuazhiding\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"指标名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"quanzhong\",\"isNameField\":false,\"fieldLabel\":\"权重（%）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhi\",\"isNameField\":false,\"fieldLabel\":\"目标值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingxing\",\"isNameField\":false,\"fieldLabel\":\"定性/定量指标\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaodingyi\",\"isNameField\":false,\"fieldLabel\":\"指标定义\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenbiaozhun\",\"isNameField\":false,\"fieldLabel\":\"评分标准\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju\",\"isNameField\":false,\"fieldLabel\":\"评分依据\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiliangdanwei\",\"isNameField\":false,\"fieldLabel\":\"计量单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "quickFilterLabel": "指标名称",
+    "idFieldName": "kaohezhibiaoId"
+}

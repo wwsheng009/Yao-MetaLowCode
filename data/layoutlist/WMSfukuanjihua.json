@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"付款项\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanjineyuan\",\"isNameField\":false,\"fieldLabel\":\"付款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuafukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划付款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+            "applyType": "LIST",
+            "entityCode": 1087,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1087,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"付款项\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanjineyuan\",\"isNameField\":false,\"fieldLabel\":\"付款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuafukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划付款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "wMSfukuanjihuaId",
+    "titleWidthForSelf": null,
+    "idFieldName": "wMSfukuanjihuaId"
+}

@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "fuwudanhao",
+    "idFieldName": "cRMfuwugongdanId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1183,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianlianxiren\",\"isNameField\":false,\"fieldLabel\":\"关联联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMlianxiren\"},{\"isUpdatable\":true,\"fieldName\":\"fuwuleixing\",\"isNameField\":false,\"fieldLabel\":\"服务类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuwudanhao\",\"isNameField\":true,\"fieldLabel\":\"服务单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dijigefuwudan\",\"isNameField\":false,\"fieldLabel\":\"第几个服务单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fuwukaishishijian\",\"isNameField\":false,\"fieldLabel\":\"服务开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fuwujieshushijian\",\"isNameField\":false,\"fieldLabel\":\"服务结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fuwuxuqiutianshu\",\"isNameField\":false,\"fieldLabel\":\"服务需求天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhoujishurenyuan\",\"isNameField\":false,\"fieldLabel\":\"售后技术人员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fuwudizhi\",\"isNameField\":false,\"fieldLabel\":\"服务地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1183,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianlianxiren\",\"isNameField\":false,\"fieldLabel\":\"关联联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMlianxiren\"},{\"isUpdatable\":true,\"fieldName\":\"fuwuleixing\",\"isNameField\":false,\"fieldLabel\":\"服务类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuwudanhao\",\"isNameField\":true,\"fieldLabel\":\"服务单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dijigefuwudan\",\"isNameField\":false,\"fieldLabel\":\"第几个服务单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fuwukaishishijian\",\"isNameField\":false,\"fieldLabel\":\"服务开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fuwujieshushijian\",\"isNameField\":false,\"fieldLabel\":\"服务结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fuwuxuqiutianshu\",\"isNameField\":false,\"fieldLabel\":\"服务需求天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhoujishurenyuan\",\"isNameField\":false,\"fieldLabel\":\"售后技术人员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fuwudizhi\",\"isNameField\":false,\"fieldLabel\":\"服务地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"}]"
+        }
+    },
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "服务单号",
+    "chosenListType": null,
+    "advFilter": null,
+    "titleWidthForAll": null
+}

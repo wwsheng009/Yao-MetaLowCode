@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "tiaobodanbianhao",
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "kucuntiaoboId",
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "调拨单编号",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1050,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tiaoboleixing\",\"isNameField\":false,\"fieldLabel\":\"调拨类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"调拨单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tiaochucangku\",\"isNameField\":false,\"fieldLabel\":\"调出仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tiaorucangku\",\"isNameField\":false,\"fieldLabel\":\"调入仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1050,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tiaoboleixing\",\"isNameField\":false,\"fieldLabel\":\"调拨类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"调拨单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tiaochucangku\",\"isNameField\":false,\"fieldLabel\":\"调出仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tiaorucangku\",\"isNameField\":false,\"fieldLabel\":\"调入仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

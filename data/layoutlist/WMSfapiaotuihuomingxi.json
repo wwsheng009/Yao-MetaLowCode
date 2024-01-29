@@ -1,0 +1,24 @@
+{
+    "idFieldName": "wMSfapiaotuihuomingxiId",
+    "advFilter": null,
+    "nameFieldName": "wMSfapiaotuihuomingxiId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSjinxiangfapiaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSjinxiangfapiao\"},{\"isUpdatable\":true,\"fieldName\":\"bencikaipiaoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次开票数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuochanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"退货产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoutuihuozhangdan\"}]",
+            "applyType": "LIST",
+            "entityCode": 1081
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1081,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSjinxiangfapiaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSjinxiangfapiao\"},{\"isUpdatable\":true,\"fieldName\":\"bencikaipiaoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次开票数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuochanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"退货产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoutuihuozhangdan\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": []
+}

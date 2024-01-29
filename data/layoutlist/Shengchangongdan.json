@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "shengchangongdanhao",
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanhao\",\"isNameField\":true,\"fieldLabel\":\"生产工单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chejianbianhao\",\"isNameField\":false,\"fieldLabel\":\"车间编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanfuzeren\",\"isNameField\":false,\"fieldLabel\":\"生产负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "entityCode": 1100
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1100,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanhao\",\"isNameField\":true,\"fieldLabel\":\"生产工单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chejianbianhao\",\"isNameField\":false,\"fieldLabel\":\"车间编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanfuzeren\",\"isNameField\":false,\"fieldLabel\":\"生产负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "quickFilterLabel": "生产工单号",
+    "idFieldName": "shengchangongdanId",
+    "titleWidthForSelf": null
+}

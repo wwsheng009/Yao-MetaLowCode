@@ -1,0 +1,45 @@
+{
+    "nameFieldName": "kehumingcheng",
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1008,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-57334ac18b6a4d50a555743e59a9c08c",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehufenlei\",\"isNameField\":false,\"fieldLabel\":\"客户分类\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"客户来源\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jiagedengji\",\"isNameField\":false,\"fieldLabel\":\"价格等级\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanzhouqi\",\"isNameField\":false,\"fieldLabel\":\"结算周期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehubiaoqian\",\"isNameField\":false,\"fieldLabel\":\"客户标签\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Tag\"},{\"isUpdatable\":true,\"fieldName\":\"kehusuozaidiqu\",\"isNameField\":false,\"fieldLabel\":\"客户所在地区\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehufenlei\",\"isNameField\":false,\"fieldLabel\":\"客户分类\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"客户来源\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jiagedengji\",\"isNameField\":false,\"fieldLabel\":\"价格等级\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanzhouqi\",\"isNameField\":false,\"fieldLabel\":\"结算周期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
+            "applyType": "LIST",
+            "entityCode": 1008,
+            "shareTo": "SELF"
+        }
+    },
+    "FILTER": [],
+    "TAB": {
+        "applyType": "TAB",
+        "configName": null,
+        "entityCode": 1008,
+        "createdBy": "0000021-00ec15ca45bc446f9fc36161281733d4",
+        "layoutConfigId": "0000015-92f82f05115f4c29a427f5fd553fc41d",
+        "shareTo": "ALL",
+        "config": "[{\"entityLabel\":\"跟进\",\"entityCode\":54,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"FollowUp\"},{\"entityLabel\":\"待办\",\"entityCode\":55,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"TodoTask\"},{\"entityLabel\":\"销售订单\",\"entityCode\":1013,\"fieldName\":\"xuanzekehu\",\"isReferenced\":true,\"entityName\":\"Xiaoshoudingdan\",\"label\":\"销售订单(选择客户)(N)\"}]"
+    },
+    "quickFilterLabel": "客户名称",
+    "advFilter": null,
+    "idFieldName": "kehuguanliId",
+    "titleWidthForAll": null,
+    "ADD": {
+        "createdBy": "0000021-00ec15ca45bc446f9fc36161281733d4",
+        "layoutConfigId": "0000015-3dfa4e53d477443393a724a1f1ba8ce8",
+        "shareTo": "ALL",
+        "config": "[{\"entityLabel\":\"跟进\",\"entityCode\":54,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"FollowUp\"},{\"entityLabel\":\"待办\",\"entityCode\":55,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"TodoTask\"},{\"entityLabel\":\"报价单\",\"entityCode\":1010,\"fieldName\":\"xuanzekehu\",\"isReferenced\":true,\"entityName\":\"Baojiadan\",\"label\":\"报价单(选择客户)(N)\"}]",
+        "applyType": "ADD",
+        "configName": null,
+        "entityCode": 1008
+    },
+    "titleWidthForSelf": null
+}

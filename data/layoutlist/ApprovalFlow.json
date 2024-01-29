@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "approvalFlowId",
+    "quickFilterLabel": "",
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "approvalFlowId",
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"flowDefinition\",\"isNameField\":false,\"fieldLabel\":\"流程定义json\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 31
+        },
+        "SELF": {
+            "entityCode": 31,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"flowDefinition\",\"isNameField\":false,\"fieldLabel\":\"流程定义json\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "titleWidthForAll": null
+}

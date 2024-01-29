@@ -1,0 +1,27 @@
+{
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "今天完成工作",
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "ribaoId",
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shijian\",\"isNameField\":false,\"fieldLabel\":\"时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"tianbaoren\",\"isNameField\":false,\"fieldLabel\":\"填报人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shifouxuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"是否选择任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jintianwanchenggongzuo\",\"isNameField\":true,\"fieldLabel\":\"今天完成工作\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"mingrigongzuojihua\",\"isNameField\":false,\"fieldLabel\":\"明日工作计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"jinrigongzuokunnanjixuya\",\"isNameField\":false,\"fieldLabel\":\"今日工作困难及需要的帮助\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuoxindefenxiang\",\"isNameField\":false,\"fieldLabel\":\"工作心得分享\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1210,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-1e60d4f7ea2d461798bb021645f810c7"
+        },
+        "SELF": {
+            "entityCode": 1210,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shijian\",\"isNameField\":false,\"fieldLabel\":\"时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"tianbaoren\",\"isNameField\":false,\"fieldLabel\":\"填报人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shifouxuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"是否选择任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "FILTER": [],
+    "nameFieldName": "jintianwanchenggongzuo",
+    "titleWidthForAll": null
+}

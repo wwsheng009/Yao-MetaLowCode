@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "shengchangongdanmingcheng",
+    "quickFilterLabel": "生产工单名称",
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchanjihua\",\"isNameField\":false,\"fieldLabel\":\"选择生产计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanjihua\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"gongdankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"工单开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongdanwangongriqi\",\"isNameField\":false,\"fieldLabel\":\"工单完工日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongdanzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"工单状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"生产工单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanbianhao\",\"isNameField\":false,\"fieldLabel\":\"生产工单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanchengpinpicihao\",\"isNameField\":false,\"fieldLabel\":\"产成品批次号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1200
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchanjihua\",\"isNameField\":false,\"fieldLabel\":\"选择生产计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanjihua\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"gongdankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"工单开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongdanwangongriqi\",\"isNameField\":false,\"fieldLabel\":\"工单完工日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongdanzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"工单状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"生产工单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanbianhao\",\"isNameField\":false,\"fieldLabel\":\"生产工单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanchengpinpicihao\",\"isNameField\":false,\"fieldLabel\":\"产成品批次号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1200,
+            "shareTo": "SELF"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "eRPshengchangongdanId"
+}

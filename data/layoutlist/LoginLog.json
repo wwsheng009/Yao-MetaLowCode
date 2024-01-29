@@ -1,0 +1,24 @@
+{
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "advFilter": null,
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "idFieldName": "loginLogId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 25,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"loginUser\",\"isNameField\":false,\"fieldLabel\":\"登录用户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"logoutType\",\"isNameField\":false,\"fieldLabel\":\"登出类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"logout\",\"isNameField\":false,\"fieldLabel\":\"已登出\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":false,\"fieldName\":\"browserName\",\"isNameField\":false,\"fieldLabel\":\"浏览器\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"ip\",\"isNameField\":false,\"fieldLabel\":\"登录ip\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"loginUser\",\"isNameField\":false,\"fieldLabel\":\"登录用户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"logoutType\",\"isNameField\":false,\"fieldLabel\":\"登出类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"logout\",\"isNameField\":false,\"fieldLabel\":\"已登出\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":false,\"fieldName\":\"browserName\",\"isNameField\":false,\"fieldLabel\":\"浏览器\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"ip\",\"isNameField\":false,\"fieldLabel\":\"登录ip\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 25
+        }
+    },
+    "nameFieldName": "loginLogId",
+    "titleWidthForSelf": null
+}

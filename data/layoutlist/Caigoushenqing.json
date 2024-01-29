@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "entityCode": 1028,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoushenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购申请编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"daohuoxuqiuriqi\",\"isNameField\":false,\"fieldLabel\":\"到货需求日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"需求来源\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
+            "applyType": "LIST"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1028,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoushenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购申请编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"daohuoxuqiuriqi\",\"isNameField\":false,\"fieldLabel\":\"到货需求日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"需求来源\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "caigoushenqingbianhao",
+    "quickFilterLabel": "采购申请编号",
+    "advFilter": null,
+    "idFieldName": "caigoushenqingId"
+}

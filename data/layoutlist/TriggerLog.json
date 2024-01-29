@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "triggerLogId",
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "advFilter": null,
+    "quickFilterLabel": "",
+    "idFieldName": "triggerLogId",
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"triggerConfigId\",\"isNameField\":false,\"fieldLabel\":\"触发器\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"TriggerConfig\"},{\"isUpdatable\":false,\"fieldName\":\"executeFlag\",\"isNameField\":false,\"fieldLabel\":\"执行结果\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":false,\"fieldName\":\"recordId\",\"isNameField\":false,\"fieldLabel\":\"实体记录Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":false,\"fieldName\":\"triggerReason\",\"isNameField\":false,\"fieldLabel\":\"触发原因\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"actionType\",\"isNameField\":false,\"fieldLabel\":\"触发器类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Status\"}]",
+            "applyType": "LIST",
+            "entityCode": 53
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 53,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"triggerConfigId\",\"isNameField\":false,\"fieldLabel\":\"触发器\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"TriggerConfig\"},{\"isUpdatable\":false,\"fieldName\":\"executeFlag\",\"isNameField\":false,\"fieldLabel\":\"执行结果\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":false,\"fieldName\":\"recordId\",\"isNameField\":false,\"fieldLabel\":\"实体记录Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":false,\"fieldName\":\"triggerReason\",\"isNameField\":false,\"fieldLabel\":\"触发原因\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"actionType\",\"isNameField\":false,\"fieldLabel\":\"触发器类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Status\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "gongyingshangmingcheng",
+    "chosenListType": null,
+    "idFieldName": "gongyingshangguanliId",
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "供应商名称",
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1024,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangbianma\",\"isNameField\":false,\"fieldLabel\":\"供应商编码\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":true,\"fieldLabel\":\"供应商名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangfenlei\",\"isNameField\":false,\"fieldLabel\":\"供应商分类\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdengji\",\"isNameField\":false,\"fieldLabel\":\"供应商等级\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuekaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"签约开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        },
+        "SELF": {
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangbianma\",\"isNameField\":false,\"fieldLabel\":\"供应商编码\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":true,\"fieldLabel\":\"供应商名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangfenlei\",\"isNameField\":false,\"fieldLabel\":\"供应商分类\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdengji\",\"isNameField\":false,\"fieldLabel\":\"供应商等级\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuekaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"签约开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "entityCode": 1024
+        }
+    }
+}

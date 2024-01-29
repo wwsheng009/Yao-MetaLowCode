@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "idFieldName": "wMSlingliaomingxiId",
+    "LIST": {
+        "ALL": {
+            "entityCode": 1114,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSlingliaochukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlingliaochuku\"},{\"isUpdatable\":true,\"fieldName\":\"bencilingliaoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次领料数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"chukukuwei\",\"isNameField\":false,\"fieldLabel\":\"出库库位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliao\",\"isNameField\":false,\"fieldLabel\":\"选择备料\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"}]",
+            "applyType": "LIST"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1114,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSlingliaochukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlingliaochuku\"},{\"isUpdatable\":true,\"fieldName\":\"bencilingliaoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次领料数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"chukukuwei\",\"isNameField\":false,\"fieldLabel\":\"出库库位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliao\",\"isNameField\":false,\"fieldLabel\":\"选择备料\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "wMSlingliaomingxiId",
+    "quickFilterLabel": "",
+    "chosenListType": null
+}

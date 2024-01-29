@@ -1,0 +1,27 @@
+{
+    "quickFilterLabel": "请假事由",
+    "chosenListType": null,
+    "idFieldName": "xiangmurenwuguanliqingjiashId",
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1227,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-67c2627195974dda849b6d4eac18fb5e",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tianbiaoshijian\",\"isNameField\":false,\"fieldLabel\":\"填表时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"qingjialeixing\",\"isNameField\":false,\"fieldLabel\":\"请假类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hejitianshu\",\"isNameField\":false,\"fieldLabel\":\"合计天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiashiyou\",\"isNameField\":true,\"fieldLabel\":\"请假事由\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"shangchuanzhengming\",\"isNameField\":false,\"fieldLabel\":\"上传证明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"File\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        },
+        "SELF": {
+            "entityCode": 1227,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tianbiaoshijian\",\"isNameField\":false,\"fieldLabel\":\"填表时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"qingjialeixing\",\"isNameField\":false,\"fieldLabel\":\"请假类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hejitianshu\",\"isNameField\":false,\"fieldLabel\":\"合计天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "titleWidthForAll": null,
+    "nameFieldName": "qingjiashiyou",
+    "advFilter": null
+}

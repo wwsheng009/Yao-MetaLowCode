@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "idFieldName": "dingdanmingxiId",
+    "LIST": {
+        "ALL": {
+            "entityCode": 1234,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdDingdanliebiaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Dingdanliebiao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecheliang\",\"isNameField\":false,\"fieldLabel\":\"选择车辆\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"yujiguihuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计归还日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+            "applyType": "LIST"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1234,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdDingdanliebiaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Dingdanliebiao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecheliang\",\"isNameField\":false,\"fieldLabel\":\"选择车辆\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"yujiguihuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计归还日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]"
+        }
+    },
+    "nameFieldName": "dingdanmingxiId",
+    "chosenListType": null,
+    "advFilter": null,
+    "titleWidthForAll": null
+}

@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "advFilter": null,
+    "titleWidthForAll": null,
+    "nameFieldName": "shuihao",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "税号",
+    "chosenListType": null,
+    "idFieldName": "cRMcaiwuxinxiId",
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"taitouleixing\",\"isNameField\":false,\"fieldLabel\":\"抬头类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"开票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuihao\",\"isNameField\":true,\"fieldLabel\":\"税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuyinhang\",\"isNameField\":false,\"fieldLabel\":\"开户银行\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangzhanghao\",\"isNameField\":false,\"fieldLabel\":\"银行账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehudizhi\",\"isNameField\":false,\"fieldLabel\":\"客户地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"}]",
+            "applyType": "LIST",
+            "entityCode": 1174,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1174,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"taitouleixing\",\"isNameField\":false,\"fieldLabel\":\"抬头类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"开票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuihao\",\"isNameField\":true,\"fieldLabel\":\"税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuyinhang\",\"isNameField\":false,\"fieldLabel\":\"开户银行\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangzhanghao\",\"isNameField\":false,\"fieldLabel\":\"银行账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehudizhi\",\"isNameField\":false,\"fieldLabel\":\"客户地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"}]"
+        }
+    }
+}

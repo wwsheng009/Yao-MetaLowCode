@@ -1,0 +1,24 @@
+{
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "cRMgonghaichixiezhurenId",
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMkehuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMkehu\"},{\"isUpdatable\":true,\"fieldName\":\"xiezhuren\",\"isNameField\":false,\"fieldLabel\":\"协助人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "entityCode": 1163,
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1163,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMkehuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMkehu\"},{\"isUpdatable\":true,\"fieldName\":\"xiezhuren\",\"isNameField\":false,\"fieldLabel\":\"协助人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    },
+    "FILTER": [],
+    "nameFieldName": "cRMgonghaichixiezhurenId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "titleWidthForAll": null
+}

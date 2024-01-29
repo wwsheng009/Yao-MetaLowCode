@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "lianxirenxingming",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "联系人姓名",
+    "chosenListType": null,
+    "idFieldName": "gongyingshanglianxirenId",
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdGongyingshangguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming\",\"isNameField\":true,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1025
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdGongyingshangguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming\",\"isNameField\":true,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 1025,
+            "shareTo": "SELF"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "advFilter": null
+}

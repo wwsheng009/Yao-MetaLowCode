@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "xiaoshoutuihuomingxiId",
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1023,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoutuihuoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoutuihuo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"已出库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"weichukutuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"未出库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1023,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoutuihuoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoutuihuo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"已出库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"weichukutuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"未出库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "quickFilterLabel": "",
+    "advFilter": null,
+    "idFieldName": "xiaoshoutuihuomingxiId"
+}

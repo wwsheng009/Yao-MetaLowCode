@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "LIST": {
+        "SELF": {
+            "entityCode": 1074,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingfuzhangkuanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择入库明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigouruku\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST"
+        },
+        "ALL": {
+            "entityCode": 1074,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingfuzhangkuanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择入库明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigouruku\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "titleWidthForAll": null,
+    "nameFieldName": "caigourukuchanpinId",
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "idFieldName": "caigourukuchanpinId"
+}

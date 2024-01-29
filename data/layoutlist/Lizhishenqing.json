@@ -1,0 +1,27 @@
+{
+    "FILTER": [],
+    "nameFieldName": "lizhishenqingId",
+    "idFieldName": "lizhishenqingId",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"diaodongyuangong\",\"isNameField\":false,\"fieldLabel\":\"离职员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"gangweidiaodongsheng\",\"isNameField\":false,\"fieldLabel\":\"预计离职时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yuanbumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yuanbumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"diaodongyuanyin\",\"isNameField\":false,\"fieldLabel\":\"离职原因\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fujian\",\"isNameField\":false,\"fieldLabel\":\"附件\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"File\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1141,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-4054c7f22647478d9dda6eec3872ff00",
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1141,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"diaodongyuangong\",\"isNameField\":false,\"fieldLabel\":\"离职员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"gangweidiaodongsheng\",\"isNameField\":false,\"fieldLabel\":\"预计离职时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

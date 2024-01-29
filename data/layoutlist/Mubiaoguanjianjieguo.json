@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "idFieldName": "mubiaoguanjianjieguoId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1207,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdMubiaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Mubiao\"},{\"isUpdatable\":true,\"fieldName\":\"guanjianjieguobiaoti\",\"isNameField\":false,\"fieldLabel\":\"关键结果标题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jindudanwei\",\"isNameField\":false,\"fieldLabel\":\"进度单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dangqianjindu\",\"isNameField\":false,\"fieldLabel\":\"当前进度\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"qishijindu\",\"isNameField\":false,\"fieldLabel\":\"起始进度\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaojindu\",\"isNameField\":false,\"fieldLabel\":\"目标进度\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jieguozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"结果状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1207,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdMubiaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Mubiao\"},{\"isUpdatable\":true,\"fieldName\":\"guanjianjieguobiaoti\",\"isNameField\":false,\"fieldLabel\":\"关键结果标题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jindudanwei\",\"isNameField\":false,\"fieldLabel\":\"进度单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dangqianjindu\",\"isNameField\":false,\"fieldLabel\":\"当前进度\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"qishijindu\",\"isNameField\":false,\"fieldLabel\":\"起始进度\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaojindu\",\"isNameField\":false,\"fieldLabel\":\"目标进度\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jieguozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"结果状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "mubiaoguanjianjieguoId",
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "advFilter": null
+}

@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "其他出库单编号",
+    "idFieldName": "qitachukudanId",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "qitarukudanbianhao",
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]",
+            "applyType": "LIST",
+            "entityCode": 1048
+        },
+        "SELF": {
+            "entityCode": 1048,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]",
+            "applyType": "LIST"
+        }
+    }
+}

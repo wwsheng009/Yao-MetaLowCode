@@ -1,0 +1,24 @@
+{
+    "nameFieldName": "renwudangqianzhuangtai",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "任务当前状态",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1201,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"选择任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Renwu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezirenwu\",\"isNameField\":false,\"fieldLabel\":\"选择子任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Zirenwu\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiezhishijian\",\"isNameField\":false,\"fieldLabel\":\"截止时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"renwudangqianzhuangtai\",\"isNameField\":true,\"fieldLabel\":\"任务当前状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"renwufuzeren\",\"isNameField\":false,\"fieldLabel\":\"任务负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1201,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"选择任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Renwu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezirenwu\",\"isNameField\":false,\"fieldLabel\":\"选择子任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Zirenwu\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiezhishijian\",\"isNameField\":false,\"fieldLabel\":\"截止时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"renwudangqianzhuangtai\",\"isNameField\":true,\"fieldLabel\":\"任务当前状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"renwufuzeren\",\"isNameField\":false,\"fieldLabel\":\"任务负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    },
+    "FILTER": [],
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "xiangmurenwuzhixingId",
+    "titleWidthForAll": null
+}

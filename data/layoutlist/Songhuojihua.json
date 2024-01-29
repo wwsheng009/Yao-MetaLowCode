@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "",
+    "advFilter": null,
+    "idFieldName": "songhuojihuaId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1015,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1015,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "titleWidthForSelf": null,
+    "nameFieldName": "songhuojihuaId",
+    "chosenListType": null,
+    "FILTER": []
+}

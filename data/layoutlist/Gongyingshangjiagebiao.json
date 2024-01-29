@@ -1,0 +1,24 @@
+{
+    "FILTER": [],
+    "nameFieldName": "gongyingshangjiagebiaoId",
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "idFieldName": "gongyingshangjiagebiaoId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1027,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhuncaigoudanjia\",\"isNameField\":false,\"fieldLabel\":\"标准采购单价(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjia\",\"isNameField\":false,\"fieldLabel\":\"采购单价(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjia1\",\"isNameField\":false,\"fieldLabel\":\"采购单价(不含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1027,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhuncaigoudanjia\",\"isNameField\":false,\"fieldLabel\":\"标准采购单价(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjia\",\"isNameField\":false,\"fieldLabel\":\"采购单价(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjia1\",\"isNameField\":false,\"fieldLabel\":\"采购单价(不含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

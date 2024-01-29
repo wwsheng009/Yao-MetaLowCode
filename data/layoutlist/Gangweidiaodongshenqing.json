@@ -1,0 +1,27 @@
+{
+    "nameFieldName": "xingming",
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "姓名",
+    "FILTER": [],
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "gangweidiaodongshenqingId",
+    "LIST": {
+        "ALL": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"diaodongyuangong\",\"isNameField\":false,\"fieldLabel\":\"调动员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"xiantiaorubumen\",\"isNameField\":false,\"fieldLabel\":\"现调入部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangweidiaodongsheng\",\"isNameField\":false,\"fieldLabel\":\"岗位调动生效时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yuanbumen\",\"isNameField\":false,\"fieldLabel\":\"原部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yuangangwei\",\"isNameField\":false,\"fieldLabel\":\"原岗位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiangangwei\",\"isNameField\":false,\"fieldLabel\":\"现岗位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"diaodongyuanyin\",\"isNameField\":false,\"fieldLabel\":\"调动原因\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1140,
+            "createdBy": "0000021-00000000000000000000000000000001",
+            "layoutConfigId": "0000015-06db10196ae74ecda7336d2f1c70bd5e",
+            "shareTo": "ALL"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1140,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"diaodongyuangong\",\"isNameField\":false,\"fieldLabel\":\"调动员工\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"xiantiaorubumen\",\"isNameField\":false,\"fieldLabel\":\"现调入部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangweidiaodongsheng\",\"isNameField\":false,\"fieldLabel\":\"岗位调动生效时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "titleWidthForAll": null
+}

@@ -1,0 +1,24 @@
+{
+    "chosenListType": null,
+    "advFilter": null,
+    "nameFieldName": "wMScaigourukuchanpinmingxiId",
+    "titleWidthForSelf": null,
+    "idFieldName": "wMScaigourukuchanpinmingxiId",
+    "LIST": {
+        "ALL": {
+            "entityCode": 1096,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigourukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigouruku\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次入库数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangwei\",\"isNameField\":false,\"fieldLabel\":\"入库仓位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"}]",
+            "applyType": "LIST"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1096,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigourukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigouruku\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次入库数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangwei\",\"isNameField\":false,\"fieldLabel\":\"入库仓位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "quickFilterLabel": ""
+}

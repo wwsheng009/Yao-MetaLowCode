@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "合同编号",
+    "chosenListType": null,
+    "titleWidthForSelf": null,
+    "nameFieldName": "hetongbianhao",
+    "advFilter": null,
+    "idFieldName": "yuangonghetongguanliId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1134,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhishijian\",\"isNameField\":false,\"fieldLabel\":\"入职时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"hetongbianhao\",\"isNameField\":true,\"fieldLabel\":\"合同编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhuhetong\",\"isNameField\":false,\"fieldLabel\":\"主合同\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"hetongleixing\",\"isNameField\":false,\"fieldLabel\":\"合同类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hetongkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"合同开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"hetongqixian\",\"isNameField\":false,\"fieldLabel\":\"合同期限\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hetongzhuti\",\"isNameField\":false,\"fieldLabel\":\"合同主体\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1134,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhishijian\",\"isNameField\":false,\"fieldLabel\":\"入职时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"hetongbianhao\",\"isNameField\":true,\"fieldLabel\":\"合同编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhuhetong\",\"isNameField\":false,\"fieldLabel\":\"主合同\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"hetongleixing\",\"isNameField\":false,\"fieldLabel\":\"合同类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hetongkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"合同开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"hetongqixian\",\"isNameField\":false,\"fieldLabel\":\"合同期限\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hetongzhuti\",\"isNameField\":false,\"fieldLabel\":\"合同主体\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": []
+}

@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "chosenListType": null,
+    "idFieldName": "cangweixinxiId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1007,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCangkuguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"cangweixuhao\",\"isNameField\":false,\"fieldLabel\":\"仓位序号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangweirongliang\",\"isNameField\":false,\"fieldLabel\":\"仓位容量/立方\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangweizhuangtai\",\"isNameField\":false,\"fieldLabel\":\"仓位状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1007,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCangkuguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"cangweixuhao\",\"isNameField\":false,\"fieldLabel\":\"仓位序号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangweirongliang\",\"isNameField\":false,\"fieldLabel\":\"仓位容量/立方\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangweizhuangtai\",\"isNameField\":false,\"fieldLabel\":\"仓位状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "advFilter": null,
+    "nameFieldName": "cangweixinxiId"
+}

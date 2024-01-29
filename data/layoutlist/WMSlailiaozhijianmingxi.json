@@ -1,0 +1,24 @@
+{
+    "advFilter": null,
+    "idFieldName": "wMSlailiaozhijianmingxiId",
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1094,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSlailiaozhijiandanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlailiaozhijiandan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"检验合格数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shishouqueshishuliang\",\"isNameField\":false,\"fieldLabel\":\"检验不合格数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1094,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSlailiaozhijiandanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlailiaozhijiandan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"检验合格数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shishouqueshishuliang\",\"isNameField\":false,\"fieldLabel\":\"检验不合格数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "nameFieldName": "wMSlailiaozhijianmingxiId",
+    "quickFilterLabel": ""
+}

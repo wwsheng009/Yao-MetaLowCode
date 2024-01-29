@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "quickFilterLabel": "",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "gonggaotongzhifanweiId",
+    "chosenListType": null,
+    "advFilter": null,
+    "idFieldName": "gonggaotongzhifanweiId",
+    "LIST": {
+        "SELF": {
+            "entityCode": 1208,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdFabugonggaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fabugonggao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechengyuan\",\"isNameField\":false,\"fieldLabel\":\"选择成员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+            "applyType": "LIST"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1208,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdFabugonggaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fabugonggao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechengyuan\",\"isNameField\":false,\"fieldLabel\":\"选择成员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+        }
+    }
+}

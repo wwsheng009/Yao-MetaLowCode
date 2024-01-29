@@ -1,0 +1,27 @@
+{
+    "nameFieldName": "qingjialeixing",
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "idFieldName": "jiabiejichubiaoId",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "chosenListType": null,
+    "LIST": {
+        "ALL": {
+            "layoutConfigId": "0000015-c1d34199ec5d48a790cb6a6ade412592",
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"qingjialeixing\",\"isNameField\":true,\"fieldLabel\":\"请假类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiabuchang\",\"isNameField\":false,\"fieldLabel\":\"请假步长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongfanwei\",\"isNameField\":false,\"fieldLabel\":\"适用范围\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiashuoming\",\"isNameField\":false,\"fieldLabel\":\"请假说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+            "applyType": "LIST",
+            "configName": null,
+            "entityCode": 1152,
+            "createdBy": "0000021-00000000000000000000000000000001"
+        },
+        "SELF": {
+            "entityCode": 1152,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"qingjialeixing\",\"isNameField\":true,\"fieldLabel\":\"请假类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiabuchang\",\"isNameField\":false,\"fieldLabel\":\"请假步长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongfanwei\",\"isNameField\":false,\"fieldLabel\":\"适用范围\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST"
+        }
+    },
+    "quickFilterLabel": "请假类型"
+}

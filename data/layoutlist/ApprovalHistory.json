@@ -1,0 +1,24 @@
+{
+    "titleWidthForSelf": null,
+    "chosenListType": null,
+    "advFilter": null,
+    "LIST": {
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 32,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"remark\",\"isNameField\":false,\"fieldLabel\":\"批注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"attrMore\",\"isNameField\":false,\"fieldLabel\":\"扩展属性 (JSON Map)\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"stepName\",\"isNameField\":true,\"fieldLabel\":\"步骤名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"signatureImage\",\"isNameField\":true,\"fieldLabel\":\"签名图片\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "SELF": {
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"remark\",\"isNameField\":false,\"fieldLabel\":\"批注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"attrMore\",\"isNameField\":false,\"fieldLabel\":\"扩展属性 (JSON Map)\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"stepName\",\"isNameField\":true,\"fieldLabel\":\"步骤名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"signatureImage\",\"isNameField\":true,\"fieldLabel\":\"签名图片\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+            "applyType": "LIST",
+            "entityCode": 32,
+            "shareTo": "SELF"
+        }
+    },
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "nameFieldName": "signatureImage",
+    "quickFilterLabel": "签名图片",
+    "idFieldName": "approvalHistoryId"
+}

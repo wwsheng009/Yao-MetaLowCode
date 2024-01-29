@@ -1,0 +1,24 @@
+{
+    "quickFilterLabel": "应收计划编号",
+    "chosenListType": null,
+    "idFieldName": "cRMyingshoujihuaId",
+    "titleWidthForAll": null,
+    "FILTER": [],
+    "titleWidthForSelf": null,
+    "advFilter": null,
+    "LIST": {
+        "SELF": {
+            "applyType": "LIST",
+            "entityCode": 1173,
+            "shareTo": "SELF",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"jihuahuikuanjineuan\",\"isNameField\":false,\"fieldLabel\":\"计划回款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jihuahuikuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"计划回款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuahuikuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划回款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujihuabianhao\",\"isNameField\":true,\"fieldLabel\":\"应收计划编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        },
+        "ALL": {
+            "applyType": "LIST",
+            "entityCode": 1173,
+            "shareTo": "ALL",
+            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"jihuahuikuanjineuan\",\"isNameField\":false,\"fieldLabel\":\"计划回款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jihuahuikuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"计划回款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuahuikuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划回款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujihuabianhao\",\"isNameField\":true,\"fieldLabel\":\"应收计划编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+        }
+    },
+    "nameFieldName": "yingshoujihuabianhao"
+}
