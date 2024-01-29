@@ -40,38 +40,62 @@ function deleteUser(userId) {
   return { code: 200, error: null, message: "success", data: true };
   return { code: 201, error: "系统管理员不能删除!", message: null, data: null };
 }
-function saveUser(formModel, entity, id) {
+function saveUser(formModel, entity, idstr) {
   // const formModel = { "userName": "体验", "departmentId": { "id": "0000022-00000000000000000000000000000001", "name": "公司总部" }, "jobTitle": { "value": 1, "label": "员工", "displayOrder": 5 }, "disabled": false, "mobilePhone": "", "email": "", "loginName": "tiyan", "loginPwd": "d97085db8d45c1f291879688dddba8df", "avatar": null }
   // const entity = "User"
   // const id = "0000021-4ad8495b30304b4b944afcbf748d982a"
+  // formModel = {
+  //   userName: "a1",
+  //   departmentId: { id: "22-5", name: "A1" },
+  //   jobTitle: 3,
+  //   disabled: false,
+  //   mobilePhone: "",
+  //   email: "",
+  //   loginName: "a1",
+  //   loginPwd: "123456",
+  //   avatar: null,
+  // };
+  if (idstr) {
+    const [entityCode,id] = idstr.split("-")
+    formModel.userId = id;
+  }
+  if (formModel.departmentId && typeof formModel.departmentId === 'object' ) {
+    const [entityCode,id] = formModel.departmentId.id.split("-")
+    formModel.departmentId = id;
+  }
+
+ const userId = Process('models.user.save',formModel)
+  // /saveUser?entity=User
+  const userData = Process('models.user.find',userId,{})
 
   return {
     layoutJson: null,
     fieldPropsMap: null,
-    formData: {
-      loginPwd: "d97085db8d45c1f291879688dddba8df",
-      departmentId: "0000022-00000000000000000000000000000001",
-      jobTitle: 1,
-      roles: ["0000023-6fba2dd4dbbd41dc881801f3b3580675"],
-      aaaaaa: null,
-      avatar: null,
-      userName: "体验",
-      userId: "0000021-4ad8495b30304b4b944afcbf748d982a",
-      createdOn: "2024-01-05 14:29:43",
-      xsxs: null,
-      modifiedOn: "2024-01-25 18:03:03",
-      ownerUser: "0000021-4ad8495b30304b4b944afcbf748d982a",
-      ownerDepartment: "0000022-00000000000000000000000000000001",
-      mobilePhone: "",
-      createdBy: "0000021-00ec15ca45bc446f9fc36161281733d4",
-      loginName: "tiyan",
-      modifiedBy: "0000021-00000000000000000000000000000001",
-      disabled: false,
-      dingTalkUserId: null,
-      ownerTeam: null,
-      email: "",
-      tatp: null,
-    },
+    formData: userData,
+    // {
+    //   loginPwd: "d97085db8d45c1f291879688dddba8df",
+    //   departmentId: "0000022-00000000000000000000000000000001",
+    //   jobTitle: 1,
+    //   roles: ["0000023-6fba2dd4dbbd41dc881801f3b3580675"],
+    //   aaaaaa: null,
+    //   avatar: null,
+    //   userName: "体验",
+    //   userId: "0000021-4ad8495b30304b4b944afcbf748d982a",
+    //   createdOn: "2024-01-05 14:29:43",
+    //   xsxs: null,
+    //   modifiedOn: "2024-01-25 18:03:03",
+    //   ownerUser: "0000021-4ad8495b30304b4b944afcbf748d982a",
+    //   ownerDepartment: "0000022-00000000000000000000000000000001",
+    //   mobilePhone: "",
+    //   createdBy: "0000021-00ec15ca45bc446f9fc36161281733d4",
+    //   loginName: "tiyan",
+    //   modifiedBy: "0000021-00000000000000000000000000000001",
+    //   disabled: false,
+    //   dingTalkUserId: null,
+    //   ownerTeam: null,
+    //   email: "",
+    //   tatp: null,
+    // },
     labelData: null,
     deletedFields: null,
   };
@@ -112,9 +136,8 @@ function checkRight(id, rightType, entityName) {
 }
 
 function getRightMap() {
-
   //todo根据用户信息进行权限信息处理。
-  
+
   let rightMap = {
     r6000: true,
     r6001: true,
@@ -146,8 +169,8 @@ function getRightMap() {
   //45 报表设计
   //48 触发器列表
   //52 仪表盘
-  
-  [21, 22, 23, 24, 30,45, 48, 52].forEach((n) => {
+
+  [21, 22, 23, 24, 30, 45, 48, 52].forEach((n) => {
     codelist.push({
       entityCode: n,
     });
@@ -160,7 +183,6 @@ function getRightMap() {
   //4 删除权限
   //5 分配权限
   //6 共享权限
-
 
   codelist.forEach((entity) => {
     rightMap[`r${entity.entityCode}-1`] = 50;

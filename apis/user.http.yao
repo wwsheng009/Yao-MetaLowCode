@@ -27,7 +27,7 @@
     {
       "path": "saveUser",
       "method": "post",
-      "process": "scripts.user.logout",
+      "process": "scripts.user.saveUser",
       "in": [":payload", "$query.entity", "$query.id"],
       "out": {
         "status": 200,
