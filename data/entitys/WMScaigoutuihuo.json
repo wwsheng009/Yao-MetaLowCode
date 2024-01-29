@@ -256,16 +256,19 @@
             "fieldViewModel": null,
             "optionList": [
                 {
-                    "key": "产品损坏",
-                    "value": 1
+                    "label": "产品损坏",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "质量问题",
-                    "value": 2
+                    "label": "质量问题",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "发错产品",
-                    "value": 3
+                    "label": "发错产品",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -419,8 +422,9 @@
             "creatable": true,
             "optionList": [
                 {
-                    "key": "确认",
-                    "value": 1
+                    "label": "确认",
+                    "value": 1,
+                    "displayOrder": 1
                 }
             ]
         },

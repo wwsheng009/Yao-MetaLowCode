@@ -276,16 +276,19 @@
             "referTo": null,
             "optionList": [
                 {
-                    "key": "补货",
-                    "value": 1
+                    "label": "补货",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "库存预警",
-                    "value": 2
+                    "label": "库存预警",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "销售需求",
-                    "value": 3
+                    "label": "销售需求",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },

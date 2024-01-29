@@ -321,12 +321,14 @@
             "description": null,
             "optionList": [
                 {
-                    "key": "合格",
-                    "value": 1
+                    "label": "合格",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "存在不合格品",
-                    "value": 2
+                    "label": "存在不合格品",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },

@@ -364,24 +364,29 @@
             "description": null,
             "optionList": [
                 {
-                    "key": "银行转账",
-                    "value": 1
+                    "label": "银行转账",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "现金支付",
-                    "value": 2
+                    "label": "现金支付",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "支付宝支付",
-                    "value": 3
+                    "label": "支付宝支付",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "微信支付",
-                    "value": 4
+                    "label": "微信支付",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "银行支票",
-                    "value": 5
+                    "label": "银行支票",
+                    "value": 5,
+                    "displayOrder": 5
                 }
             ]
         },

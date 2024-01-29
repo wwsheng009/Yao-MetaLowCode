@@ -216,16 +216,19 @@
             "mainDetailFieldFlag": false,
             "optionList": [
                 {
-                    "key": "出库",
-                    "value": 1
+                    "label": "出库",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "库存冻结",
-                    "value": 2
+                    "label": "库存冻结",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "计划出库",
-                    "value": 3
+                    "label": "计划出库",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },

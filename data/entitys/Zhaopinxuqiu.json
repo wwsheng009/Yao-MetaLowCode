@@ -254,16 +254,19 @@
             "creatable": true,
             "optionList": [
                 {
-                    "key": "新增需求",
-                    "value": 1
+                    "label": "新增需求",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "替换需求",
-                    "value": 2
+                    "label": "替换需求",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "储备需求",
-                    "value": 3
+                    "label": "储备需求",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -288,16 +291,19 @@
             "label": "需求状态",
             "optionList": [
                 {
-                    "key": "开启",
-                    "value": 1
+                    "label": "开启",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "关闭",
-                    "value": 2
+                    "label": "关闭",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "完成",
-                    "value": 3
+                    "label": "完成",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -385,24 +391,29 @@
             "description": null,
             "optionList": [
                 {
-                    "key": "正式",
-                    "value": 1
+                    "label": "正式",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "实习",
-                    "value": 2
+                    "label": "实习",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "兼职",
-                    "value": 3
+                    "label": "兼职",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "劳务派遣",
-                    "value": 4
+                    "label": "劳务派遣",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "其他",
-                    "value": 5
+                    "label": "其他",
+                    "value": 5,
+                    "displayOrder": 5
                 }
             ]
         },
@@ -544,16 +555,19 @@
             "fieldId": "0000002-9113bf5c816543ac84a0e2564dd2cad1",
             "optionList": [
                 {
-                    "key": "内聘",
-                    "value": 1
+                    "label": "内聘",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "社招",
-                    "value": 2
+                    "label": "社招",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "校招",
-                    "value": 3
+                    "label": "校招",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -578,32 +592,39 @@
             "referenceSetting": null,
             "optionList": [
                 {
-                    "key": "小学",
-                    "value": 1
+                    "label": "小学",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "初中",
-                    "value": 2
+                    "label": "初中",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "高中、中专、中职",
-                    "value": 3
+                    "label": "高中、中专、中职",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "大专、高职",
-                    "value": 4
+                    "label": "大专、高职",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "本科",
-                    "value": 5
+                    "label": "本科",
+                    "value": 5,
+                    "displayOrder": 5
                 },
                 {
-                    "key": "硕士",
-                    "value": 6
+                    "label": "硕士",
+                    "value": 6,
+                    "displayOrder": 6
                 },
                 {
-                    "key": "博士",
-                    "value": 7
+                    "label": "博士",
+                    "value": 7,
+                    "displayOrder": 7
                 }
             ]
         },

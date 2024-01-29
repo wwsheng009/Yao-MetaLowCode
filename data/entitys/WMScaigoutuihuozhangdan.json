@@ -647,8 +647,9 @@
             "nullable": true,
             "optionList": [
                 {
-                    "key": "确认",
-                    "value": 1
+                    "label": "确认",
+                    "value": 1,
+                    "displayOrder": 1
                 }
             ]
         },
@@ -720,12 +721,14 @@
             "nameFieldFlag": false,
             "optionList": [
                 {
-                    "key": "已开票",
-                    "value": 1
+                    "label": "已开票",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "部分开票",
-                    "value": 2
+                    "label": "部分开票",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },
@@ -797,12 +800,14 @@
             "name": "fukuanzhuangtai",
             "optionList": [
                 {
-                    "key": "已付款",
-                    "value": 1
+                    "label": "已付款",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "部分付款",
-                    "value": 2
+                    "label": "部分付款",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },

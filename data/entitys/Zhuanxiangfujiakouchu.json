@@ -265,12 +265,14 @@
             "creatable": true,
             "optionList": [
                 {
-                    "key": "有效",
-                    "value": 1
+                    "label": "有效",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "无效",
-                    "value": 2
+                    "label": "无效",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },

@@ -233,12 +233,14 @@
             "nullable": true,
             "optionList": [
                 {
-                    "key": "个人",
-                    "value": 1
+                    "label": "个人",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "单位",
-                    "value": 2
+                    "label": "单位",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },
@@ -311,24 +313,29 @@
             "referenceSetting": null,
             "optionList": [
                 {
-                    "key": "中国银行",
-                    "value": 1
+                    "label": "中国银行",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "中国建设银行",
-                    "value": 2
+                    "label": "中国建设银行",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "中国工商银行",
-                    "value": 3
+                    "label": "中国工商银行",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "中国农业银行",
-                    "value": 4
+                    "label": "中国农业银行",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "中国邮政储蓄银行",
-                    "value": 5
+                    "label": "中国邮政储蓄银行",
+                    "value": 5,
+                    "displayOrder": 5
                 }
             ]
         },

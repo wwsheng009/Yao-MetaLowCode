@@ -249,24 +249,29 @@
             "label": "单位",
             "optionList": [
                 {
-                    "key": "个",
-                    "value": 1
+                    "label": "个",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "枚",
-                    "value": 2
+                    "label": "枚",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "台",
-                    "value": 3
+                    "label": "台",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "套",
-                    "value": 4
+                    "label": "套",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "件",
-                    "value": 5
+                    "label": "件",
+                    "value": 5,
+                    "displayOrder": 5
                 }
             ]
         },
@@ -341,12 +346,14 @@
             "nameFieldFlag": false,
             "optionList": [
                 {
-                    "key": "已上架",
-                    "value": 1
+                    "label": "已上架",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "已下架",
-                    "value": 2
+                    "label": "已下架",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },

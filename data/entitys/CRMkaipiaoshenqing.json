@@ -320,16 +320,19 @@
             "name": "kaipiaoleixing",
             "optionList": [
                 {
-                    "key": "增值税专用发票",
-                    "value": 1
+                    "label": "增值税专用发票",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "增值税普通发票",
-                    "value": 2
+                    "label": "增值税普通发票",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "收据",
-                    "value": 3
+                    "label": "收据",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -547,16 +550,19 @@
             "mainDetailFieldFlag": false,
             "optionList": [
                 {
-                    "key": "已开票",
-                    "value": 1
+                    "label": "已开票",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "作废",
-                    "value": 2
+                    "label": "作废",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "待进行",
-                    "value": 3
+                    "label": "待进行",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         }

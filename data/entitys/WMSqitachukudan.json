@@ -177,36 +177,44 @@
             "referenceSetting": null,
             "optionList": [
                 {
-                    "key": "销售换货出库",
-                    "value": 1
+                    "label": "销售换货出库",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "采购退货出库",
-                    "value": 2
+                    "label": "采购退货出库",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "报损出库",
-                    "value": 3
+                    "label": "报损出库",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "借出出库",
-                    "value": 4
+                    "label": "借出出库",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "借出直发出库",
-                    "value": 5
+                    "label": "借出直发出库",
+                    "value": 5,
+                    "displayOrder": 5
                 },
                 {
-                    "key": "盘亏出库",
-                    "value": 6
+                    "label": "盘亏出库",
+                    "value": 6,
+                    "displayOrder": 6
                 },
                 {
-                    "key": "库存冻结",
-                    "value": 7
+                    "label": "库存冻结",
+                    "value": 7,
+                    "displayOrder": 7
                 },
                 {
-                    "key": "调拨出库",
-                    "value": 8
+                    "label": "调拨出库",
+                    "value": 8,
+                    "displayOrder": 8
                 }
             ]
         },
@@ -383,8 +391,9 @@
             "description": null,
             "optionList": [
                 {
-                    "key": "确认",
-                    "value": 1
+                    "label": "确认",
+                    "value": 1,
+                    "displayOrder": 1
                 }
             ]
         },

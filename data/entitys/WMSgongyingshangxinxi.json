@@ -225,16 +225,19 @@
             "nameFieldFlag": false,
             "optionList": [
                 {
-                    "key": "成品供应商",
-                    "value": 1
+                    "label": "成品供应商",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "零件供应商",
-                    "value": 2
+                    "label": "零件供应商",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "集合供应商",
-                    "value": 3
+                    "label": "集合供应商",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -259,16 +262,19 @@
             "referTo": null,
             "optionList": [
                 {
-                    "key": "一级供应商",
-                    "value": 1
+                    "label": "一级供应商",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "二级供应商",
-                    "value": 2
+                    "label": "二级供应商",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "三级供应商",
-                    "value": 3
+                    "label": "三级供应商",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -337,16 +343,19 @@
             "referenceSetting": null,
             "optionList": [
                 {
-                    "key": "月结",
-                    "value": 1
+                    "label": "月结",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "季结",
-                    "value": 2
+                    "label": "季结",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "现结",
-                    "value": 3
+                    "label": "现结",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -581,12 +590,14 @@
             "defaultMemberOfListFlag": true,
             "optionList": [
                 {
-                    "key": "增值税专用发票",
-                    "value": 1
+                    "label": "增值税专用发票",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "增值税普通发票",
-                    "value": 2
+                    "label": "增值税普通发票",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },
@@ -636,20 +647,24 @@
             "type": "Option",
             "optionList": [
                 {
-                    "key": "中国银行",
-                    "value": 1
+                    "label": "中国银行",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "招商银行",
-                    "value": 2
+                    "label": "招商银行",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "建设银行",
-                    "value": 3
+                    "label": "建设银行",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "工商银行",
-                    "value": 4
+                    "label": "工商银行",
+                    "value": 4,
+                    "displayOrder": 4
                 }
             ]
         },

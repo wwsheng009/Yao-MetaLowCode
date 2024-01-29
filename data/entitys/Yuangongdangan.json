@@ -338,12 +338,14 @@
             "type": "Option",
             "optionList": [
                 {
-                    "key": "男",
-                    "value": 1
+                    "label": "男",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "女",
-                    "value": 2
+                    "label": "女",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },
@@ -437,12 +439,14 @@
             "referenceSetting": null,
             "optionList": [
                 {
-                    "key": "城镇",
-                    "value": 1
+                    "label": "城镇",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "农村",
-                    "value": 2
+                    "label": "农村",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },
@@ -491,16 +495,19 @@
             "fieldViewModel": null,
             "optionList": [
                 {
-                    "key": "已婚",
-                    "value": 1
+                    "label": "已婚",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "未婚",
-                    "value": 2
+                    "label": "未婚",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "已婚已育",
-                    "value": 3
+                    "label": "已婚已育",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -525,24 +532,29 @@
             "nullable": true,
             "optionList": [
                 {
-                    "key": "群众",
-                    "value": 1
+                    "label": "群众",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "中国党员",
-                    "value": 2
+                    "label": "中国党员",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "共青团员",
-                    "value": 3
+                    "label": "共青团员",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "民主党派",
-                    "value": 4
+                    "label": "民主党派",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "其他",
-                    "value": 5
+                    "label": "其他",
+                    "value": 5,
+                    "displayOrder": 5
                 }
             ]
         },
@@ -597,24 +609,29 @@
             "referTo": null,
             "optionList": [
                 {
-                    "key": "全职",
-                    "value": 1
+                    "label": "全职",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "实习",
-                    "value": 2
+                    "label": "实习",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "兼职",
-                    "value": 3
+                    "label": "兼职",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "劳务派遣",
-                    "value": 4
+                    "label": "劳务派遣",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "其他",
-                    "value": 5
+                    "label": "其他",
+                    "value": 5,
+                    "displayOrder": 5
                 }
             ]
         },
@@ -639,20 +656,24 @@
             "fieldViewModel": null,
             "optionList": [
                 {
-                    "key": "在职",
-                    "value": 1
+                    "label": "在职",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "待转正",
-                    "value": 2
+                    "label": "待转正",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "已离职",
-                    "value": 3
+                    "label": "已离职",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "其他",
-                    "value": 4
+                    "label": "其他",
+                    "value": 4,
+                    "displayOrder": 4
                 }
             ]
         },
@@ -1047,32 +1068,39 @@
             "referTo": null,
             "optionList": [
                 {
-                    "key": "博士",
-                    "value": 1
+                    "label": "博士",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "硕士",
-                    "value": 2
+                    "label": "硕士",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "本科",
-                    "value": 3
+                    "label": "本科",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "大专、高职",
-                    "value": 4
+                    "label": "大专、高职",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "高中、中专、中技",
-                    "value": 5
+                    "label": "高中、中专、中技",
+                    "value": 5,
+                    "displayOrder": 5
                 },
                 {
-                    "key": "初中",
-                    "value": 6
+                    "label": "初中",
+                    "value": 6,
+                    "displayOrder": 6
                 },
                 {
-                    "key": "小学",
-                    "value": 7
+                    "label": "小学",
+                    "value": 7,
+                    "displayOrder": 7
                 }
             ]
         },

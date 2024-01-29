@@ -288,16 +288,19 @@
             "entityCode": 1200,
             "optionList": [
                 {
-                    "key": "待派工",
-                    "value": 1
+                    "label": "待派工",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "已派工",
-                    "value": 2
+                    "label": "已派工",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "已完结",
-                    "value": 3
+                    "label": "已完结",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },

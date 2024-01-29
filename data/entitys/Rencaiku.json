@@ -337,12 +337,14 @@
             "defaultMemberOfListFlag": true,
             "optionList": [
                 {
-                    "key": "男",
-                    "value": 1
+                    "label": "男",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "女",
-                    "value": 2
+                    "label": "女",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },
@@ -414,16 +416,19 @@
             "displayOrder": 0,
             "optionList": [
                 {
-                    "key": "群众",
-                    "value": 1
+                    "label": "群众",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "团员",
-                    "value": 2
+                    "label": "团员",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "党员",
-                    "value": 3
+                    "label": "党员",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -542,32 +547,39 @@
             "defaultMemberOfListFlag": true,
             "optionList": [
                 {
-                    "key": "小学",
-                    "value": 1
+                    "label": "小学",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "初中",
-                    "value": 2
+                    "label": "初中",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "高中、中专、中职",
-                    "value": 3
+                    "label": "高中、中专、中职",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "大专、高职",
-                    "value": 4
+                    "label": "大专、高职",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "本科",
-                    "value": 5
+                    "label": "本科",
+                    "value": 5,
+                    "displayOrder": 5
                 },
                 {
-                    "key": "硕士",
-                    "value": 6
+                    "label": "硕士",
+                    "value": 6,
+                    "displayOrder": 6
                 },
                 {
-                    "key": "博士",
-                    "value": 7
+                    "label": "博士",
+                    "value": 7,
+                    "displayOrder": 7
                 }
             ]
         },
@@ -662,16 +674,19 @@
             "fieldViewModel": null,
             "optionList": [
                 {
-                    "key": "未婚",
-                    "value": 1
+                    "label": "未婚",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "已婚未育",
-                    "value": 2
+                    "label": "已婚未育",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "已婚已育",
-                    "value": 3
+                    "label": "已婚已育",
+                    "value": 3,
+                    "displayOrder": 3
                 }
             ]
         },
@@ -718,12 +733,14 @@
             "name": "yingpinleixing",
             "optionList": [
                 {
-                    "key": "社招",
-                    "value": 1
+                    "label": "社招",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "校招",
-                    "value": 2
+                    "label": "校招",
+                    "value": 2,
+                    "displayOrder": 2
                 }
             ]
         },
@@ -779,44 +796,54 @@
             "physicalName": "c_jianlizhuangtai",
             "optionList": [
                 {
-                    "key": "带推荐",
-                    "value": 1
+                    "label": "带推荐",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "已推荐",
-                    "value": 2
+                    "label": "已推荐",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "简历淘汰",
-                    "value": 3
+                    "label": "简历淘汰",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "待面试",
-                    "value": 4
+                    "label": "待面试",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "面试淘汰",
-                    "value": 5
+                    "label": "面试淘汰",
+                    "value": 5,
+                    "displayOrder": 5
                 },
                 {
-                    "key": "待发offer",
-                    "value": 6
+                    "label": "待发offer",
+                    "value": 6,
+                    "displayOrder": 6
                 },
                 {
-                    "key": "已发offer",
-                    "value": 7
+                    "label": "已发offer",
+                    "value": 7,
+                    "displayOrder": 7
                 },
                 {
-                    "key": "待入职",
-                    "value": 8
+                    "label": "待入职",
+                    "value": 8,
+                    "displayOrder": 8
                 },
                 {
-                    "key": "拒绝offer",
-                    "value": 9
+                    "label": "拒绝offer",
+                    "value": 9,
+                    "displayOrder": 9
                 },
                 {
-                    "key": "已入职",
-                    "value": 10
+                    "label": "已入职",
+                    "value": 10,
+                    "displayOrder": 10
                 }
             ]
         },
@@ -841,40 +868,49 @@
             "physicalName": "c_jianlilaiyuanqudao",
             "optionList": [
                 {
-                    "key": "BOSS直聘",
-                    "value": 1
+                    "label": "BOSS直聘",
+                    "value": 1,
+                    "displayOrder": 1
                 },
                 {
-                    "key": "猎聘",
-                    "value": 2
+                    "label": "猎聘",
+                    "value": 2,
+                    "displayOrder": 2
                 },
                 {
-                    "key": "智联招聘",
-                    "value": 3
+                    "label": "智联招聘",
+                    "value": 3,
+                    "displayOrder": 3
                 },
                 {
-                    "key": "牛客网",
-                    "value": 4
+                    "label": "牛客网",
+                    "value": 4,
+                    "displayOrder": 4
                 },
                 {
-                    "key": "脉脉",
-                    "value": 5
+                    "label": "脉脉",
+                    "value": 5,
+                    "displayOrder": 5
                 },
                 {
-                    "key": "官网",
-                    "value": 6
+                    "label": "官网",
+                    "value": 6,
+                    "displayOrder": 6
                 },
                 {
-                    "key": "公众号",
-                    "value": 7
+                    "label": "公众号",
+                    "value": 7,
+                    "displayOrder": 7
                 },
                 {
-                    "key": "51job",
-                    "value": 8
+                    "label": "51job",
+                    "value": 8,
+                    "displayOrder": 8
                 },
                 {
-                    "key": "其他",
-                    "value": 9
+                    "label": "其他",
+                    "value": 9,
+                    "displayOrder": 9
                 }
             ]
         },
