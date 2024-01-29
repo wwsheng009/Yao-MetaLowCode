@@ -1,4 +1,4 @@
-const { getEntityField, toCamelCase, getEntityByName } = Require("sys.lib");
+const { getEntitySingleFieldByname, toCamelCase, getEntityByName } = Require("sys.lib");
 const { updateEntityToYao, loadEntityToYao, entityToYaoModel } =
   Require("sys.yao");
 
@@ -235,7 +235,7 @@ function downloadOptionFields(entityName) {
           displayOrder: item.displayOrder,
         };
       });
-      const fieldData = getEntityField(option.entityName, field.fieldName);
+      const fieldData = getEntitySingleFieldByname(option.entityName, field.fieldName);
       if (fieldData.fieldId) {
         Process("models.sys.entity.field.update", fieldData.fieldId, {
           optionList: options,
@@ -338,7 +338,7 @@ function downloadTagFields(entityName) {
       const tags = tagItems.map((item) => {
         return item.value;
       });
-      const fieldData = getEntityField(tag.entityName, field.fieldName);
+      const fieldData = getEntitySingleFieldByname(tag.entityName, field.fieldName);
       if (fieldData.fieldId) {
         Process("models.sys.entity.field.update", fieldData.fieldId, {
           tagList: tags,

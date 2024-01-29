@@ -18,20 +18,20 @@ function UnderscoreName(pathname) {
   return newStr;
 }
 
-function getEntityByName(entity) {
+function getEntityByName(entityName) {
   const [row] = Process("models.sys.entity.get", {
-    wheres: [{ column: "name", value: entity }],
+    wheres: [{ column: "name", value: entityName }],
   });
   if (row == null) {
-    throw new Error(`实体 ${entity} 不存在`);
+    throw new Error(`实体 ${entityName} 不存在`);
   }
   return row;
 }
 
-function getEntityByCode(entity) {
-  const row = Process("models.sys.entity.find",entity, {});
+function getEntityByCode(entityName) {
+  const row = Process("models.sys.entity.find",entityName, {});
   if (row == null) {
-    throw new Error(`实体 ${entity} 不存在`);
+    throw new Error(`实体 ${entityName} 不存在`);
   }
   return row;
 }
@@ -56,7 +56,7 @@ function toCamelCase(str) {
  * @param {string} entity
  * @returns
  */
-function getEntityField(entity,field) {
+function getEntitySingleFieldByname(entity,field) {
   const [row] = Process("models.sys.entity.get", {
     wheres: [
       {
@@ -83,19 +83,10 @@ function getEntityField(entity,field) {
   return {};
 }
 
-function isInternalEntity(entityName){
-
-
-  return entityName !== "ApprovalConfig" &&
-  entityName !== "ReportConfig" &&
-  entityName !== "TriggerConfig" &&
-  entityName !== "MetaApi" &&
-  entityName !== "Chart"
-}
 module.exports = {
   UnderscoreName,
   getEntityByName,
   getEntityByCode,
-  getEntityField,
+  getEntitySingleFieldByname,
   toCamelCase
 };

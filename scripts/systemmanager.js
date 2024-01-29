@@ -1,4 +1,4 @@
-const { UnderscoreName, toCamelCase, getEntityField } = Require("sys.lib");
+const { UnderscoreName, toCamelCase, getEntitySingleFieldByname } = Require("sys.lib");
 
 const { updateEntityToYao } = Require("sys.yao");
 
@@ -419,7 +419,7 @@ function addField(field, entity) {
   if (row == null) {
     throw new Error(`Entity ${entity} 不存在`);
   }
-  const fieldData = getEntityField(entity, field.name);
+  const fieldData = getEntitySingleFieldByname(entity, field.name);
   if (fieldData.fieldId) {
     // return { code: 300, message: `字段：${field.name} 已经存在` };
     throw new Error(`字段：${field.name} 已经存在`);
@@ -482,7 +482,7 @@ function updateField(field, entity) {
   //   referenceSetting: [],
   // };
 
-  const Field = getEntityField(entity, field.name);
+  const Field = getEntitySingleFieldByname(entity, field.name);
   if (Field.fieldId) {
     Process("models.sys.entity.field.update", Field.fieldId, field);
     updateEntityToYao(entity);
@@ -1143,7 +1143,7 @@ function updateAnyRefField(field, entity, referTo) {}
  * @returns`
  */
 function getField(entity, field) {
-  return getEntityField(entity, field);
+  return getEntitySingleFieldByname(entity, field);
 }
 
 /**
@@ -1157,7 +1157,7 @@ function getField(entity, field) {
 function getRefFieldExtras(entityName, fieldName) {
   // entity = "Entity";
   // field = "r1";
-  const fieldData = getEntityField(entityName, fieldName);
+  const fieldData = getEntitySingleFieldByname(entityName, fieldName);
   if (!fieldData) {
     return;
   }
@@ -1302,7 +1302,7 @@ function saveOptionItems(entity, field, optionItems) {
   //   { label: "a2", saved: true, value: 2 },
   //   { label: "a3", value: 3, saved: false },
   // ];
-  const Field = getEntityField(entity, field);
+  const Field = getEntitySingleFieldByname(entity, field);
   if (Field.fieldId) {
     const options = optionItems.items.map((item) => {
       return {
@@ -1395,7 +1395,7 @@ function saveTagItems(entity, field, tagItems) {
   //     { label: "tag33", value: "tag33", saved: false },
   //   ],
   // };
-  const Field = getEntityField(entity, field);
+  const Field = getEntitySingleFieldByname(entity, field);
   if (Field.fieldId) {
     const options = tagItems.items.map((item) => {
       return item.value;

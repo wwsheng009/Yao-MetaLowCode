@@ -92,7 +92,8 @@ function updateDataLineOptions(fieldsOptionMap, line) {
   for (const fieldKey in fieldsOptionMap) {
     if (
       Object.hasOwnProperty.call(fieldsOptionMap, fieldKey) &&
-      Object.hasOwnProperty.call(line, fieldKey) && line[fieldKey] != null
+      Object.hasOwnProperty.call(line, fieldKey) &&
+      line[fieldKey] != null
     ) {
       line[fieldKey] =
         fieldsOptionMap[fieldKey].find(
@@ -107,7 +108,8 @@ function updateDataLineTags(fieldsTagMap, line) {
   for (const fieldKey in fieldsTagMap) {
     if (
       Object.hasOwnProperty.call(fieldsTagMap, fieldKey) &&
-      Object.hasOwnProperty.call(line, fieldKey) && line[fieldKey] != null
+      Object.hasOwnProperty.call(line, fieldKey) &&
+      line[fieldKey] != null
     ) {
       line[fieldKey] =
         fieldsTagMap[fieldKey].find((item) => item == line[fieldKey]) ||
@@ -124,10 +126,10 @@ function updateDataLineTags(fieldsTagMap, line) {
  */
 function updateDataLineReference(refFieldsMap, line) {
   for (const fieldKey in refFieldsMap) {
-
     if (
       Object.hasOwnProperty.call(refFieldsMap, fieldKey) &&
-      Object.hasOwnProperty.call(line, fieldKey) && line[fieldKey] != null
+      Object.hasOwnProperty.call(line, fieldKey) &&
+      line[fieldKey] != null
     ) {
       const refField = refFieldsMap[fieldKey];
       // 引用的对象的值
@@ -222,12 +224,12 @@ function listQuery({
       queryParam.select.push(entity.idFieldName);
     }
   }
-  
+
   const selectFields = getSelectFields(entity, fieldsList);
   const refFieldsMap = getRefFieldsMap(selectFields);
   const fieldsOptionMap = getfieldsOptionMap(selectFields);
-  const fieldsTagMap = getfieldsTagMap(selectFields);
-  
+  // const fieldsTagMap = getfieldsTagMap(selectFields);
+
   // console.log("queryParam data", queryParam);
   let data = Process(
     `models.${mainEntity}.Paginate`,
@@ -235,7 +237,7 @@ function listQuery({
     pageNo || 1,
     pageSize || 10
   );
-  
+
   // console.log("listQuery data", data);
   data.data &&
     data.data.forEach((line) => {
@@ -248,7 +250,7 @@ function listQuery({
       line = updateDataLineOptions(fieldsOptionMap, line);
       // line = updateDataLineTags(fieldsTagMap, line);
     });
-    
+
   return {
     dataList: data.data,
     pagination: {
@@ -578,7 +580,87 @@ function refFieldQuery(
   };
 }
 
-function formUpdateQuery(entity, id) {}
+function getEntityFieldSet(entityName){
+  const [entity] = Process("models.sys.entity.get", {
+    select: ["name"],
+    wheres: [
+      {
+        column: "name",
+        value: entityName,
+      },
+    ],
+    withs: {
+      fieldSet: {
+        query: {
+          select: ["name", "label", "type"],
+        },
+      },
+    },
+  });
+  if (!entity?.fieldSet) {
+    throw Error(`实体:${entityName}不存在`)
+  }
+  return entity.fieldSet
+}
+/**
+ * 表单编辑界面
+ * @param {string} entityName 
+ * @param {string} idstr 
+ * @returns 
+ */
+function formUpdateQuery(entityName, idstr) {
+  // /formUpdateQuery?entity=Department&id=0000022-0018e35999ba4f13af7044d5f8e08f9d&_=1706526706647
+  const entity = getEntityByName(entityName);
+
+
+  const [formLayout] = Process("models.formLayout.get", {
+    wheres: [
+      {
+        column: "entityCode",
+        value: entity.entityCode,
+      },{
+        column: "layoutName",
+        value: "默认表单布局",
+      },
+    ],
+  });
+  // const [entityCode, id] = idstr.split("-");
+  // const data = Process(`models.${entityName}.find`,id)
+
+  const fields = getEntityFieldSet(entityName)
+
+  const data = queryById(idstr,fields.map(f=>f.name).join(','))
+  return {
+    layoutJson: formLayout.layoutJson,
+    fieldPropsMap: {},
+    formData: data,
+    labelData: {},
+    deletedFields: [],
+  };
+  
+  // return {
+  //   layoutJson:
+  //     '{"widgetList":[{"key":40463,"type":"grid","alias":"column-2-grid","category":"container","icon":"column-2-grid","cols":[{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[{"type":"input","alias":"","icon":"text-field","formItemFlag":true,"options":{"name":"departmentName","keyNameEnabled":false,"keyName":"","label":"部门名称","labelAlign":"","type":"text","defaultValue":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"readonly":false,"disabled":false,"hidden":false,"clearable":true,"showPassword":false,"required":true,"requiredHint":"","validation":"","validationHint":"","customClass":[],"labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"minLength":null,"maxLength":null,"showWordLimit":false,"prefixIcon":"","suffixIcon":"","appendButton":false,"appendButtonDisabled":false,"buttonIcon":"custom-search","onCreated":"","onMounted":"","onInput":"","onChange":"","onFocus":"","onBlur":"","onValidate":"","onAppendButtonClick":""},"nameReadonly":true,"id":"input99603"}],"options":{"name":"gridCol94789","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":""},"id":"grid-col-94789"},{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[{"type":"reference","alias":"","icon":"reference-field","formItemFlag":true,"options":{"name":"parentDepartmentId","keyNameEnabled":false,"keyName":"","label":"上级部门","labelAlign":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"disabled":false,"hidden":false,"required":true,"requiredHint":"","validation":"","validationHint":"","newTest":"","customClass":[],"labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"prefixIcon":"","suffixIcon":"","buttonIcon":"Search","onCreated":"","onMounted":"","onChange":"","onValidate":""},"nameReadonly":true,"id":"reference28286"}],"options":{"name":"gridCol20275","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":[]},"id":"grid-col-20275"}],"options":{"name":"grid91283","hidden":false,"gutter":12,"colHeight":null,"customClass":[]},"id":"grid91283"},{"key":52901,"type":"grid","alias":"column-2-grid","category":"container","icon":"column-2-grid","cols":[{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[{"type":"reference","alias":"","icon":"reference-field","formItemFlag":true,"options":{"name":"departmentOwnerUser","keyNameEnabled":false,"keyName":"","label":"部门负责人","labelAlign":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"disabled":false,"hidden":false,"required":false,"requiredHint":"","validation":"","validationHint":"","newTest":"","customClass":[],"labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"prefixIcon":"","suffixIcon":"","buttonIcon":"Search","onCreated":"","onMounted":"","onChange":"","onValidate":""},"nameReadonly":true,"id":"reference95876"}],"options":{"name":"gridCol79602","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":""},"id":"grid-col-79602"},{"type":"grid-col","category":"container","icon":"grid-col","internal":true,"widgetList":[],"options":{"name":"gridCol73374","hidden":false,"span":12,"offset":0,"push":0,"pull":0,"responsive":false,"md":12,"sm":12,"xs":12,"customClass":""},"id":"grid-col-73374"}],"options":{"name":"grid72233","hidden":false,"gutter":12,"colHeight":null,"customClass":[]},"id":"grid72233"},{"type":"textarea","icon":"textarea-field","formItemFlag":true,"options":{"name":"description","keyNameEnabled":false,"keyName":"","label":"部门说明","labelAlign":"","rows":3,"autosize":false,"defaultValue":"","placeholder":"","columnWidth":"200px","size":"","labelWidth":null,"labelHidden":false,"labelWrap":false,"readonly":false,"disabled":false,"hidden":false,"required":false,"requiredHint":"","validation":"","validationHint":"","customClass":"","labelIconClass":null,"labelIconPosition":"rear","labelTooltip":null,"minLength":null,"maxLength":null,"showWordLimit":false,"onCreated":"","onMounted":"","onInput":"","onChange":"","onFocus":"","onBlur":"","onValidate":""},"nameReadonly":true,"id":"textarea89661"}],"formConfig":{"modelName":"formData","refName":"vForm","rulesName":"rules","labelWidth":80,"labelPosition":"left","size":"","labelAlign":"label-left-align","cssCode":"","customClass":[],"functions":"","layoutType":"PC","jsonVersion":3,"dataSources":[],"onFormCreated":"","onFormMounted":"","onFormDataChange":"","onFormValidate":""}}',
+  //   fieldPropsMap: {},
+  //   formData: {
+  //     departmentId: "0000022-0018e35999ba4f13af7044d5f8e08f9d",
+  //     parentDepartmentId: {
+  //       id: "0000022-00000000000000000000000000000001",
+  //       name: "公司总部",
+  //     },
+  //     departmentName: "采购部",
+  //     description: "",
+  //     departmentOwnerUser: {
+  //       id: "0000021-00000000000000000000000000000001",
+  //       name: "系统管理员",
+  //     },
+  //     dingDepartmentId: null,
+  //     recordApprovalState: null,
+  //   },
+  //   labelData: {},
+  //   deletedFields: [],
+  // };
+}
 
 function formatCurrentTime() {
   var now = new Date();
@@ -693,7 +775,7 @@ function queryById(entityId, fieldsList) {
 
   const refFieldsMap = getRefFieldsMap(selectFields);
   const fieldsOptionMap = getfieldsOptionMap(selectFields);
-  const fieldsTagMap = getfieldsTagMap(selectFields);
+  // const fieldsTagMap = getfieldsTagMap(selectFields);
 
   let data = Process(`models.${entity.name}.Find`, id, queryParam);
   data = updateDataLineReference(refFieldsMap, data);
