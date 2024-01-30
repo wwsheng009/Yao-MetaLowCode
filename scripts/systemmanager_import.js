@@ -1,4 +1,5 @@
-const { getEntitySingleFieldByname, toCamelCase, getEntityByName } = Require("sys.lib");
+const { getEntitySingleFieldByname, toCamelCase, getEntityByName } =
+  Require("sys.lib");
 const { updateEntityToYao, loadEntityToYao, entityToYaoModel } =
   Require("sys.yao");
 
@@ -10,7 +11,7 @@ function getCookie() {
   return cookie;
 }
 
-function getWebSite(){
+function getWebSite() {
   const website = Process("utils.env.Get", "METALOWCODE_WEBSITE");
   if (!website) {
     throw Error("请维护环境变量：METALOWCODE_WEBSITE");
@@ -18,7 +19,7 @@ function getWebSite(){
   return website;
 }
 /**
- * 下载实体定义
+ * 下载实体定义,并导入到系统
  *
  * yao run scripts.systemmanager_import.download
  *
@@ -104,9 +105,8 @@ function download(entityName) {
     }
     const fieldSet = getFieldList(entity.name, getCookie());
 
-
     fieldSet.forEach((f, idx) => {
-      let fieldData = getField(entity.name, f.name);
+      let fieldData = getEntityFieldProps(entity.name, f.name);
       delete fieldData.owner;
       if (Array.isArray(fieldData.referTo)) {
         fieldData.referTo =
@@ -115,7 +115,6 @@ function download(entityName) {
       fieldSet[idx] = fieldData;
       f = fieldData;
       Process("utils.time.Sleep", 50);
-      
     });
     Object.assign(entity, { fieldSet: fieldSet });
 
@@ -123,7 +122,7 @@ function download(entityName) {
     Process(
       "fs.system.WriteFile",
       `/entitys/${entity.name}.json`,
-      JSON.stringify(entity, null, 4)
+      JSON.stringify(entity, null, 2)
     );
     Process("utils.time.Sleep", 100);
 
@@ -131,15 +130,40 @@ function download(entityName) {
     index++;
   }
 
+  //update the entityModel with optionList
   downloadOptionFields(entityName); //字段的OptionList,需要单独下载
+  //update the entityModel with tagList
   downloadTagFields(entityName); //字段的TagList，也需要单独的下载
+
   importEntity(entityName); //导入实体定义到数据库
   downloadFormLayout(entityName); //下载表单布局设置
+  downloadLayoutList(entityName); //下载报表布局设置
   if (!entityName) {
     downlaodNav(); //下载导航设置
   }
 }
 
+/**
+ * import the local files for entity or import all
+ *
+ * @param {string|null} entityName
+ */
+function importData(entityName) {
+  importEntity(entityName);
+  importFormLayout(entityName);
+  importLayoutList(entityName);
+  if (!entityName) {
+    importNav(); //下载导航设置
+  }
+ 
+}
+
+/**
+ * update the fidFieldName for the entity
+ *
+ * @param {object} entity
+ * @returns
+ */
 function updateIdFieldName(entity) {
   if (entity.idFieldName) {
     return entity;
@@ -158,7 +182,14 @@ function updateIdFieldName(entity) {
   return entity;
 }
 
-function getField(entityName, fieldName) {
+/**
+ * download the single field propertys for the entity
+ *
+ * @param {string} entityName
+ * @param {string} fieldName
+ * @returns
+ */
+function getEntityFieldProps(entityName, fieldName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
@@ -172,7 +203,13 @@ function getField(entityName, fieldName) {
   return response.data.data;
 }
 
-function getEntityProps(entityName, cookie) {
+/**
+ * get entity properties for the entity
+ *
+ * @param {string} entityName
+ * @returns
+ */
+function getEntityProps(entityName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
@@ -243,7 +280,10 @@ function downloadOptionFields(entityName) {
           displayOrder: item.displayOrder,
         };
       });
-      const fieldData = getEntitySingleFieldByname(option.entityName, field.fieldName);
+      const fieldData = getEntitySingleFieldByname(
+        option.entityName,
+        field.fieldName
+      );
       if (fieldData.fieldId) {
         Process("models.sys.entity.field.update", fieldData.fieldId, {
           optionList: options,
@@ -260,7 +300,7 @@ function downloadOptionFields(entityName) {
     Process(
       "fs.system.WriteFile",
       fname,
-      JSON.stringify(entityContent, null, 4)
+      JSON.stringify(entityContent, null, 2)
     );
     console.log(`${fname} optionList updated`);
     index++;
@@ -312,13 +352,12 @@ function getOptionItems(entityName, fieldName) {
   return response.data.data;
 }
 
-
 /**
  * 下载标签列表
- * 
+ *
  * yao run scripts.systemmanager_import.downloadTagFields
- * 
- * @param {string|null} entityName 
+ *
+ * @param {string|null} entityName
  */
 function downloadTagFields(entityName) {
   var currentTimestamp = new Date().getTime();
@@ -354,7 +393,10 @@ function downloadTagFields(entityName) {
           displayOrder: item.displayOrder,
         };
       });
-      const fieldData = getEntitySingleFieldByname(tag.entityName, field.fieldName);
+      const fieldData = getEntitySingleFieldByname(
+        tag.entityName,
+        field.fieldName
+      );
       if (fieldData.fieldId) {
         Process("models.sys.entity.field.update", fieldData.fieldId, {
           tagList: tags,
@@ -371,7 +413,7 @@ function downloadTagFields(entityName) {
     Process(
       "fs.system.WriteFile",
       fname,
-      JSON.stringify(entityContent, null, 4)
+      JSON.stringify(entityContent, null, 2)
     );
     console.log(`${fname} tagList updated`);
     index++;
@@ -384,9 +426,9 @@ function downloadTagFields(entityName) {
 /**
  *
  * yao run scripts.systemmanager_import.getTagItems 'TodoTask' 'remindType'
- * 
+ *
  * yao run scripts.systemmanager_import.getTagItems 'Kehuguanli' 'kehubiaoqian'
- * 
+ *
  * @param {string} entityName
  * @param {string} fieldName
  * @returns
@@ -541,7 +583,10 @@ function importEntity(entityName) {
     console.log(`${index}/${fileList.length}:${entity.name} imported`);
   }
 }
-
+/**
+ * 系统entity列表映射
+ * @returns
+ */
 function getSystemEntityMap() {
   //由于前端部分权限检查的代码绑定了实体的代码，实体名称和实体代码的映射关系保持一致
   return {
@@ -652,8 +697,7 @@ function getFormLayout(entityName) {
   layoutForm.entityLabel = entity.label;
   // for good view
   // layoutForm.layoutJson = JSON.parse(layoutForm.layoutJson)
-  Process("fs.system.WriteFile", fname, JSON.stringify(layoutForm, null, 4));
-
+  Process("fs.system.WriteFile", fname, JSON.stringify(layoutForm, null, 2));
 }
 
 /**
@@ -714,7 +758,7 @@ function downlaodNav() {
   Process(
     "fs.system.writefile",
     "/navList.json",
-    JSON.stringify(navData, null, 4)
+    JSON.stringify(navData, null, 2)
   );
   importNav();
 }
@@ -761,9 +805,9 @@ function importNav() {
 
 /**
  * yao run scripts.systemmanager_import.downloadLayoutList 'WMSgongyingshangxinxi'
- * @param {string|null} entityName 
+ * @param {string|null} entityName
  */
-function downloadLayoutList(entityName){
+function downloadLayoutList(entityName) {
   let entiyList = [];
   if (entityName) {
     entiyList.push(entityName);
@@ -799,17 +843,16 @@ function getLayoutList(entityName) {
   Process(
     "fs.system.writefile",
     `/layoutlist/${entityName}.json`,
-    JSON.stringify(data, null, 4)
+    JSON.stringify(data, null, 2)
   );
-  return  data
+  return data;
 }
 
 /**
  * yao run scripts.systemmanager_import.importLayoutList
- * @param {string} entityName 
+ * @param {string} entityName
  */
-function importLayoutList(entityName){
-
+function importLayoutList(entityName) {
   let fileList = [];
   if (entityName) {
     fileList.push(`/layoutlist/${entityName}.json`);
@@ -817,9 +860,9 @@ function importLayoutList(entityName){
     fileList = Process("fs.system.ReadDir", "/layoutlist/");
   }
 
-  function saveConfig(config){
+  function saveConfig(config) {
     if (!config) {
-      return
+      return;
     }
     Process("models.layoutconfig.deletewhere", {
       wheres: [
@@ -837,22 +880,21 @@ function importLayoutList(entityName){
         },
       ],
     });
-    delete config.layoutConfigId
-    delete config.createdBy
+    delete config.layoutConfigId;
+    delete config.createdBy;
     Process("models.layoutconfig.save", config);
-
   }
   let index = 0;
   for (const f of fileList) {
     let entityContent = Process("fs.system.ReadFile", f);
     entityContent = JSON.parse(entityContent);
 
-    saveConfig(entityContent["SEARCH"])//搜索字段
-    saveConfig(entityContent["TAB"])//加载页签
-    saveConfig(entityContent["ADD"])//创建相关
-    if (entityContent["LIST"]) {  
-      saveConfig(entityContent["LIST"]["ALL"])//列表-默认
-      saveConfig(entityContent["LIST"]["SELF"])//列表-自定义
+    saveConfig(entityContent["SEARCH"]); //搜索字段
+    saveConfig(entityContent["TAB"]); //加载页签
+    saveConfig(entityContent["ADD"]); //创建相关
+    if (entityContent["LIST"]) {
+      saveConfig(entityContent["LIST"]["ALL"]); //列表-默认
+      saveConfig(entityContent["LIST"]["SELF"]); //列表-自定义
     }
     index++;
     console.log(
@@ -861,9 +903,11 @@ function importLayoutList(entityName){
   }
 }
 /**
+ * 下载一个实体的数据。
+ *
  * yao run scripts.systemmanager_import.downloadEntityData 'User'
- * @param {string} entityName 
- * @returns 
+ * @param {string} entityName
+ * @returns
  */
 function downloadEntityData(entityName) {
   var currentTimestamp = new Date().getTime();
@@ -885,14 +929,14 @@ function downloadEntityData(entityName) {
     },
   });
   if (!entity?.fieldSet) {
-    throw Error(`实体:${entityName}不存在`)
+    throw Error(`实体:${entityName}不存在`);
   }
 
   const response = http.Post(
     `${getWebSite()}/crud/listQuery?_=${currentTimestamp}`,
     {
       mainEntity: entityName,
-      fieldsList:entity.fieldSet.map(f=>f.name).join(','),
+      fieldsList: entity.fieldSet.map((f) => f.name).join(","),
       filter: { equation: "AND", items: [] },
       pageSize: 200000,
       pageNo: 1,
@@ -909,6 +953,10 @@ function downloadEntityData(entityName) {
     }
   );
   checkRespone(response);
-
+  Process(
+    "fs.system.writefile",
+    `/download/${entityName}.json`,
+    JSON.stringify(response.data.data,null,2),
+  );
   return response.data.data;
 }
