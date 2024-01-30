@@ -123,6 +123,15 @@ function updateDataLineOptions(fieldsOptionMap, line) {
  * @param {object} refFieldsMap
  * @param {object} line
  * @returns
+ *
+ * departmentId: 0000022-00000000000000000000000000000001
+ * to 
+ * ```
+ * departmentId: {
+ *  id: "0000022-00000000000000000000000000000001",
+ *  name: "公司总部"
+ * }
+ * ```
  */
 function updateDataLineReference(refFieldsMap, line) {
   for (const fieldKey in refFieldsMap) {
@@ -496,7 +505,7 @@ function refFieldQuery(
   };
 }
 
-function getEntityFieldSet(entityName) {
+function getEntity(entityName) {
   const [entity] = Process("models.sys.entity.get", {
     select: ["name"],
     wheres: [
@@ -507,20 +516,23 @@ function getEntityFieldSet(entityName) {
     ],
     withs: {
       fieldSet: {
-        query: {
-          select: ["name", "label", "type"],
-        },
+        // query: {
+        //   select: ["name", "label", "type"],
+        // },
       },
     },
   });
-  if (!entity?.fieldSet) {
+  if (!entity) {
     throw Error(`实体:${entityName}不存在`);
   }
-  return entity.fieldSet;
+  if (!entity?.fieldSet) {
+    throw Error(`实体:${entityName}配置不正确，字段列表不存在`);
+  }
+  return entity;
 }
 
-function getEntityDefaultLayout(entityName){
-  const entity = getEntityByName(entityName)
+function getEntityDefaultLayout(entityName) {
+  const entity = getEntityByName(entityName);
   const [formLayout] = Process("models.formLayout.get", {
     wheres: [
       {
@@ -533,7 +545,7 @@ function getEntityDefaultLayout(entityName){
       },
     ],
   });
-  return formLayout?.layoutJson
+  return formLayout?.layoutJson;
 }
 /**
  * 表单编辑界面
@@ -545,8 +557,7 @@ function formUpdateQuery(entityName, idstr) {
   // /formUpdateQuery?entity=Department&id=0000022-0018e35999ba4f13af7044d5f8e08f9d&_=1706526706647
   // const entity = getEntityByName(entityName);
 
-  
-  const data = queryById(idstr,null);
+  const data = queryById(idstr, null);
   return {
     layoutJson: getEntityDefaultLayout(entityName),
     fieldPropsMap: {},
@@ -601,17 +612,114 @@ function saveRecord(entityName, idstr, formModel) {
   if (!formModel || !typeof formModel == "object") {
     throw Error(`更新数据，不正确的数据格式：${entityName}`);
   }
-  const entity = getEntityByName(entityName)
+  // const entity = getEntityByName(entityName)
   // const entity = getEntityByName(entityName);
+
+  // console.log("formModel", formModel);
+
+  const mainEntity = getEntity(entityName);
+
+  // 查找有哪些明细实体
+  const detailEntitys = Process("models.sys.entity.get", {
+    wheres: [
+      {
+        column: "mainEntity",
+        value: entityName,
+      },
+    ],
+  });
+  const detailEntityMap = {};
+  detailEntitys.forEach((e) => {
+    detailEntityMap[e.name] = getEntity(e.name);
+  });
+
   loadEntityToYao(entityName);
+
+  // use to collect the detail tables
+  const detailNeedUpdateMap = {};
+
+  function updateFieldData(entity, line) {
+    // "shuizhong":{"value":4,"label":"电子普票","displayOrder":4}
+    // 如果是option,在前端没有修改，会直接把option传到后端。
+    const idField = entity.fieldSet.find((f) => f.idFieldFlag == true);
+    if (line[idField] != null) {
+      const [_, id] = line[idField].split("-");
+      line[idField] = id;
+    }
+    for (const fieldName in line) {
+      if (Object.hasOwnProperty.call(line, fieldName)) {
+        const field = line[fieldName];
+
+        // 更新Option类对象
+        if (field !== null && typeof field == "object") {
+          let fieldConfig = entity.fieldSet.find(
+            (f) => f.name === fieldName && f.type === "Option"
+          );
+
+          if (fieldConfig && field.value != null) {
+            line[fieldName] = field.value;
+          } else {
+            fieldConfig = entity.fieldSet.find(
+              (f) => f.name === fieldName && f.type === "Reference"
+            );
+            if (fieldConfig && field.id != null) {
+              line[fieldName] = field.id;
+            }
+          }
+        }
+        // 是明细表单，是数组
+        if (
+          Array.isArray(field) &&
+          field.length &&
+          detailEntityMap[fieldName]
+        ) {
+          const detailEntity = detailEntityMap[fieldName];
+          field.forEach((l) => {
+            l = updateFieldData(detailEntity, l);
+          });
+          detailNeedUpdateMap[fieldName] = field;
+        }
+      }
+    }
+    return line;
+  }
+  formModel = updateFieldData(mainEntity, formModel);
+
+  const createdTime = formatCurrentTime();
   if (!idstr) {
-    formModel = { ...formModel, createdOn: formatCurrentTime() };
+    formModel = { ...formModel, createdOn: createdTime };
     let id = Process(`models.${entityName}.Create`, formModel);
-    idstr = `${entity.entityCode}-${id}`
+    idstr = `${mainEntity.entityCode}-${id}`;
   } else {
-    const [entityCode, id] = idstr.split("-");
-    formModel = { ...formModel, modifiedOn: formatCurrentTime() };
+    const [_, id] = idstr.split("-");
+    formModel = { ...formModel, modifiedOn: createdTime };
     Process(`models.${entityName}.update`, id, formModel);
+  }
+
+  // 在保存主表数据后，再保存子表的数据
+  for (const entityName in detailNeedUpdateMap) {
+    if (Object.hasOwnProperty.call(detailNeedUpdateMap, entityName)) {
+      const subItems = detailNeedUpdateMap[entityName];
+      // 找子表的元数据
+      const detailEntity = detailEntityMap[entityName];
+      const relatedFieldName = detailEntity.fieldSet.find(
+        (f) => f.mainDetailFieldFlag == true
+      )?.name;
+      const idFieldName = detailEntity.fieldSet.find(
+        (f) => f.idFieldFlag == true
+      )?.name;
+      subItems.forEach((l) => {
+        if (l[idFieldName]) {
+          l.modifiedOn = createdTime;
+        } else {
+          l.createdOn = createdTime;
+        }
+        const [_, id] = idstr.split("-");
+        l[relatedFieldName] = id;
+        return;
+      });
+      Process(`models.${entityName}.eachsave`, subItems, {});
+    }
   }
 
   return {
@@ -672,7 +780,6 @@ function getEntityCodeList(entityName) {
  * @param {*} fieldsList 需要获取的字段名称
  */
 function queryById(entityId, fieldsList) {
-
   const [entityCode, id] = entityId.split("-");
 
   const entity = Process("models.sys.entity.find", entityCode, {
@@ -686,10 +793,10 @@ function queryById(entityId, fieldsList) {
   const entityName = entity.name;
 
   if (!fieldsList) {
-    const fields = getEntityFieldSet(entityName);
-    fieldsList = fields.map((f) => f.name).join(",")
+    const fields = getEntity(entityName).fieldSet;
+    fieldsList = fields.map((f) => f.name).join(",");
   }
- 
+
   loadEntityToYao(entityName);
   let queryParam = {};
   if (fieldsList) {
@@ -705,8 +812,42 @@ function queryById(entityId, fieldsList) {
   // const fieldsTagMap = getfieldsTagMap(selectFields);
 
   let data = Process(`models.${entity.name}.Find`, id, queryParam);
+
   data = updateDataLineReference(refFieldsMap, data);
   data = updateDataLineOptions(fieldsOptionMap, data);
+
+  // 子表信息
+  // 查找有哪些明细实体
+  const detailEntitys = Process("models.sys.entity.get", {
+    wheres: [
+      {
+        column: "mainEntity",
+        value: entityName,
+      },
+    ],
+  });
+  detailEntitys.forEach((e) => {
+    const refEntityName = e.name;
+    const refEntity = getEntity(refEntityName);
+
+    // const refFieldsList = refEntity.fieldSet.map((f) => f.name).join(",");
+
+    // const selectFields = getSelectFields(refEntity, refFieldsList);
+
+    const refFieldsMap = getRefFieldsMap(refEntity.fieldSet);
+    const fieldsOptionMap = getfieldsOptionMap(refEntity.fieldSet);
+
+    let detailData = Process(`models.${refEntityName}.get`, { limit: 10000 });
+    // console.log("find by id ",detailData)
+    // return
+    detailData.forEach((data) => {
+      data = updateDataLineReference(refFieldsMap, data);
+      data = updateDataLineOptions(fieldsOptionMap, data);
+    });
+
+    data[refEntityName] = detailData;
+  });
+
   // data = updateDataLineTags(fieldsTagMap, data);
   return data;
 }
