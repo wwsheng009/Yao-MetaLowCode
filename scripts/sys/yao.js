@@ -1,8 +1,11 @@
+const { getEntityByNameCache } = Require("sys.lib");
+
 /**
  *
  * @param {*} entityName
  */
 function loadEntityToYao(entityName) {
+  return;
   const yaoModel = entityToYaoModel(entityName);
   loadYaoModel(yaoModel);
 }
@@ -12,13 +15,11 @@ function loadEntityToYao(entityName) {
  */
 function updateEntityToYao(entityName) {
   const yaoModel = entityToYaoModel(entityName);
-  console.log("yaoModel",yaoModel)
+  console.log("yaoModel", yaoModel);
   loadYaoModel(yaoModel);
   migrateYaoModel(yaoModel);
   return yaoModel;
 }
-
-
 
 /**
  * convert entity to yao model
@@ -27,12 +28,7 @@ function updateEntityToYao(entityName) {
  * @param {string} entityName
  */
 function entityToYaoModel(entityName) {
-  const [entity] = Process("models.sys.entity.get", {
-    wheres: [{ column: "name", value: entityName }],
-    withs: {
-      fieldSet: {},
-    },
-  });
+  const entity = getEntityByNameCache(entityName);
 
   if (!entity) {
     throw Error(`实体:${entityName} 不存在`);
@@ -196,5 +192,5 @@ function migrateYaoModel(model) {
 module.exports = {
   loadEntityToYao,
   updateEntityToYao,
-  entityToYaoModel
+  entityToYaoModel,
 };

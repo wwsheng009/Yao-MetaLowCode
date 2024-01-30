@@ -1,6 +1,6 @@
 const { loadEntityToYao } = Require("sys.yao");
 
-const { getEntityByName, getEntityByCode } = Require("sys.lib");
+const { getEntityByNameCache,getEntityByCodeCache} = Require("sys.lib");
 
 function getSelectFields(entity, fieldsList) {
   let fields = [];
@@ -56,18 +56,7 @@ function getRefFieldsMap(selectFields) {
     // 引用的实体名称
     const refEntityName = refField.referTo.split(",")[0];
 
-    const [refEntity] = Process("models.sys.entity.get", {
-      select: ["name", "entityCode"],
-      wheres: [
-        {
-          column: "name",
-          value: refEntityName,
-        },
-      ],
-      withs: {
-        fieldSet: {},
-      },
-    });
+    const refEntity = getEntityByNameCache(refEntityName)
     if (!refEntity) {
       throw Error(`引用实体${refEntityName}不存在`);
     }
@@ -213,12 +202,7 @@ function listQuery({
   //   statistics: [],
   // };
 
-  const [entity] = Process("models.sys.entity.get", {
-    wheres: [{ column: "name", value: mainEntity }],
-    withs: {
-      fieldSet: {},
-    },
-  });
+  const entity = getEntityByNameCache(mainEntity)
   if (entity == null) {
     throw new Error(`实体 ${mainEntity} 不存在`);
   }
@@ -318,7 +302,7 @@ function checkStatus() {
 }
 
 function formCreateQuery(entityName) {
-  const entity = getEntityByName(entityName);
+  const entity = getEntityByNameCache(entityName);
 
   const [formLayout] = Process("models.formLayout.get", {
     wheres: [
@@ -354,46 +338,21 @@ function refFieldQuery(
   // 再查询关联实体对的表，
   // 默认显示字段列表在字段的referenceSetting中。
 
-  const [mainEntity] = Process("models.sys.entity.get", {
-    wheres: [
-      {
-        column: "name",
-        value: entityName,
-      },
-    ],
-    withs: {
-      fieldSet: {
-        query: {
-          wheres: [
-            {
-              column: "name",
-              value: refFieldName,
-            },
-          ],
-        },
-      },
-    },
-  });
-
-  if (!mainEntity || !mainEntity.fieldSet || !mainEntity.fieldSet[0]) {
+  const mainEntity = getEntityByNameCache(entityName)
+  let refField = mainEntity.fieldSet.find(f=>f.name === refFieldName)
+  if (!mainEntity || !refField) {
     throw Error(`实体${entityName}-字段${refFieldName}不存在`);
   }
-  let refField = mainEntity.fieldSet[0];
+  // if (!mainEntity || !mainEntity.fieldSet || !mainEntity.fieldSet[0]) {
+  //   throw Error(`实体${entityName}-字段${refFieldName}不存在`);
+  // }
+  // let refField = mainEntity.fieldSet[0];
 
   // 引用的实体名称
   const refEntityName = refField.referTo.split(",")[0];
 
-  const [refEntity] = Process("models.sys.entity.get", {
-    wheres: [
-      {
-        column: "name",
-        value: refEntityName,
-      },
-    ],
-    withs: {
-      fieldSet: {},
-    },
-  });
+  const refEntity = getEntityByNameCache(refEntityName)
+  
   if (!refEntity) {
     throw Error(`引用实体${refEntityName}不存在`);
   }
@@ -505,34 +464,13 @@ function refFieldQuery(
   };
 }
 
+
 function getEntity(entityName) {
-  const [entity] = Process("models.sys.entity.get", {
-    select: ["name"],
-    wheres: [
-      {
-        column: "name",
-        value: entityName,
-      },
-    ],
-    withs: {
-      fieldSet: {
-        // query: {
-        //   select: ["name", "label", "type"],
-        // },
-      },
-    },
-  });
-  if (!entity) {
-    throw Error(`实体:${entityName}不存在`);
-  }
-  if (!entity?.fieldSet) {
-    throw Error(`实体:${entityName}配置不正确，字段列表不存在`);
-  }
-  return entity;
+  return getEntityByNameCache(entityName)
 }
 
 function getEntityDefaultLayout(entityName) {
-  const entity = getEntityByName(entityName);
+  const entity = getEntityByNameCache(entityName);
   const [formLayout] = Process("models.formLayout.get", {
     wheres: [
       {
@@ -612,11 +550,6 @@ function saveRecord(entityName, idstr, formModel) {
   if (!formModel || !typeof formModel == "object") {
     throw Error(`更新数据，不正确的数据格式：${entityName}`);
   }
-  // const entity = getEntityByName(entityName)
-  // const entity = getEntityByName(entityName);
-
-  // console.log("formModel", formModel);
-
   const mainEntity = getEntity(entityName);
 
   // 查找有哪些明细实体
@@ -736,7 +669,7 @@ function deleteRecord({ recordIds, cascades }) {
   recordIds &&
     recordIds.forEach((idstr) => {
       const [entityCode, id] = idstr.split("-");
-      const model = getEntityByCode(entityCode).name;
+      const model = getEntityByCodeCache(entityCode)?.name;
       // Process("yao.model.Delete", model, id);
       Process(`models.${model}.Delete`, id);
     });
@@ -782,11 +715,12 @@ function getEntityCodeList(entityName) {
 function queryById(entityId, fieldsList) {
   const [entityCode, id] = entityId.split("-");
 
-  const entity = Process("models.sys.entity.find", entityCode, {
-    withs: {
-      fieldSet: {},
-    },
-  });
+  // const entity = Process("models.sys.entity.find", entityCode, {
+  //   withs: {
+  //     fieldSet: {},
+  //   },
+  // });
+  const entity = getEntityByCodeCache(entityCode)
   if (entity == null) {
     throw new Error(`实体 ${mainEntity} 不存在`);
   }
@@ -854,38 +788,6 @@ function queryById(entityId, fieldsList) {
   return data;
 }
 
-function getEntityFields(entityName) {
-  const [row] = Process("models.sys.entity.get", {
-    select: ["label", "name"],
-    wheres: [
-      {
-        column: "name",
-        value: entityName,
-      },
-    ],
-    withs: {
-      fieldSet: {
-        query: {
-          select: [
-            "updatable",
-            "name",
-            "type",
-            "nameFieldFlag",
-            "label",
-            "nullable",
-            "creatable",
-            "reserved",
-            "referTo",
-          ],
-        },
-      },
-    },
-  });
-  if (row == null) {
-    throw new Error(`实体 ${entity} 不存在`);
-  }
-  return row;
-}
 /**
  * 通用查询-获取实体字段
  * @param {*} entityCode 实体
@@ -903,33 +805,36 @@ function queryEntityFields(
   queryReserved = queryReserved && queryReserved !== "false";
   firstReference = firstReference && firstReference !== "false";
   // entityCode=1066&queryReference=true&queryReserved=true&_=1706357808358
-  const row = Process("models.sys.entity.find", entityCode, {
-    select: ["label", "name"],
-    withs: {
-      fieldSet: {
-        query: {
-          select: [
-            "updatable",
-            "name",
-            "type",
-            "nameFieldFlag",
-            "label",
-            "nullable",
-            "creatable",
-            "reserved",
-            "referTo",
-          ],
-        },
-      },
-    },
-  });
-  if (row == null) {
+  // const entity = Process("models.sys.entity.find", entityCode, {
+  //   select: ["label", "name"],
+  //   withs: {
+  //     fieldSet: {
+  //       query: {
+  //         select: [
+  //           "updatable",
+  //           "name",
+  //           "type",
+  //           "nameFieldFlag",
+  //           "label",
+  //           "nullable",
+  //           "creatable",
+  //           "reserved",
+  //           "referTo",
+  //         ],
+  //       },
+  //     },
+  //   },
+  // });
+  const entity = getEntityByCodeCache(entityCode)
+
+
+  if (entity == null) {
     throw new Error(`实体 ${entity} 不存在`);
   }
-  if (!row.fieldSet) {
-    throw new Error(`实体 ${row.name} 存在异常，没有字段列表`);
+  if (!entity.fieldSet) {
+    throw new Error(`实体 ${entity.name} 存在异常，没有字段列表`);
   }
-  row.fieldSet = row.fieldSet.filter((field) => {
+  entity.fieldSet = entity.fieldSet.filter((field) => {
     if (field.type === "PrimaryKey") {
       return false;
     }
@@ -950,17 +855,17 @@ function queryEntityFields(
 
   // console.log(row)
 
-  let newFieldSet = row.fieldSet;
+  let newFieldSet = entity.fieldSet;
   let subFieldSet = [];
   if (queryReference && queryReserved) {
-    row.fieldSet.forEach((field) => {
+    entity.fieldSet.forEach((field) => {
       if (field.type === "Reference") {
         const entityName = field.referTo.split(",")[0];
-        const entity = getEntityFields(entityName);
-        if (!entity.fieldSet) {
+        const refEntity = getEntityByNameCache(entityName);
+        if (!refEntity.fieldSet) {
           throw new Error(`实体 ${entityName} 存在异常，没有字段列表`);
         }
-        entity.fieldSet = entity.fieldSet.filter((f1) => {
+        refEntity.fieldSet = refEntity.fieldSet.filter((f1) => {
           if (field.type === "PrimaryKey") {
             return false;
           }
@@ -978,11 +883,11 @@ function queryEntityFields(
           }
           return true;
         });
-        entity.fieldSet.forEach((f1) => {
+        refEntity.fieldSet.forEach((f1) => {
           f1.name = `${field.name}.${f1.name}`;
           f1.label = `${field.label}.${f1.label}`;
         });
-        subFieldSet = subFieldSet.concat(entity.fieldSet);
+        subFieldSet = subFieldSet.concat(refEntity.fieldSet);
       }
     });
     if (!firstReference) {

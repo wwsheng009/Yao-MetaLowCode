@@ -1,4 +1,6 @@
-const { UnderscoreName, toCamelCase, getEntitySingleFieldByname } = Require("sys.lib");
+const { UnderscoreName, toCamelCase, getEntitySingleFieldByname } =
+  Require("sys.lib");
+const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
 
 const { updateEntityToYao } = Require("sys.yao");
 
@@ -396,10 +398,10 @@ function hasDetailEntity(entity) {}
 /**
  * 增加一个新的字段
  * @param {object} field
- * @param {string} entity
+ * @param {string} entityName
  * @returns
  */
-function addField(field, entity) {
+function addField(field, entityName) {
   // field = {
   //   name: "check", //字段名称
   //   label: "检查", //显示名称
@@ -411,15 +413,15 @@ function addField(field, entity) {
   //   fieldViewModel: { validators: [] },
   // };
   const wheres = [];
-  wheres.push({ column: "name", value: entity });
+  wheres.push({ column: "name", value: entityName });
   const [row] = Process("models.sys.entity.get", {
     wheres: wheres,
     withs: {},
   });
   if (row == null) {
-    throw new Error(`Entity ${entity} 不存在`);
+    throw new Error(`Entity ${entityName} 不存在`);
   }
-  const fieldData = getEntitySingleFieldByname(entity, field.name);
+  const fieldData = getEntitySingleFieldByname(entityName, field.name);
   if (fieldData.fieldId) {
     // return { code: 300, message: `字段：${field.name} 已经存在` };
     throw new Error(`字段：${field.name} 已经存在`);
@@ -432,8 +434,9 @@ function addField(field, entity) {
   //   label: row.label,
   // };
   const id = Process("models.sys.entity.field.create", field);
+  updateEntityToYao(entityName);
+  getEntityByNameCache(entityName, true);
 
-  updateEntityToYao(entity);
   // 返回值
   return {
     fieldId: id,
@@ -466,10 +469,10 @@ function addField(field, entity) {
 
 /**
  * update a field definition
- * @param {object} field
- * @param {string} entity
+ * @param {object} fieldName
+ * @param {string} entityName
  */
-function updateField(field, entity) {
+function updateField(fieldName, entityName) {
   // field = {
   //   name: "s1",
   //   label: "测试",
@@ -482,13 +485,14 @@ function updateField(field, entity) {
   //   referenceSetting: [],
   // };
 
-  const Field = getEntitySingleFieldByname(entity, field.name);
+  const Field = getEntitySingleFieldByname(entityName, fieldName.name);
   if (Field.fieldId) {
-    Process("models.sys.entity.field.update", Field.fieldId, field);
-    updateEntityToYao(entity);
+    Process("models.sys.entity.field.update", Field.fieldId, fieldName);
+    updateEntityToYao(entityName);
+    getEntityByNameCache(entityName, true);
     return true;
   }
-  return field;
+  return fieldName;
 }
 
 /**
@@ -588,7 +592,7 @@ function createEntity(entity, mainEntity) {
     updatable: false,
     reserved: true,
     idFieldFlag: false,
-    nameFieldFlag: false,
+    nameFieldFlag: false, //名称字段
     mainDetailFieldFlag: false,
     defaultMemberOfListFlag: false,
     referTo: null,
@@ -611,7 +615,7 @@ function createEntity(entity, mainEntity) {
     updatable: false,
     reserved: true,
     idFieldFlag: false,
-    nameFieldFlag: false,
+    nameFieldFlag: false, //名称字段
     mainDetailFieldFlag: false,
     defaultMemberOfListFlag: false,
     referTo: "User,",
@@ -633,7 +637,7 @@ function createEntity(entity, mainEntity) {
     updatable: false,
     reserved: true,
     idFieldFlag: false,
-    nameFieldFlag: false,
+    nameFieldFlag: false, //名称字段
     mainDetailFieldFlag: false,
     defaultMemberOfListFlag: false,
     referTo: null,
@@ -655,7 +659,7 @@ function createEntity(entity, mainEntity) {
     updatable: false,
     reserved: true,
     idFieldFlag: false,
-    nameFieldFlag: false,
+    nameFieldFlag: false, //名称字段
     mainDetailFieldFlag: false,
     defaultMemberOfListFlag: false,
     referTo: "User,",
@@ -677,7 +681,7 @@ function createEntity(entity, mainEntity) {
     updatable: false,
     reserved: true,
     idFieldFlag: false,
-    nameFieldFlag: false,
+    nameFieldFlag: false, //名称字段
     mainDetailFieldFlag: false,
     defaultMemberOfListFlag: false,
     referTo: "User,",
@@ -700,7 +704,7 @@ function createEntity(entity, mainEntity) {
     updatable: false,
     reserved: true,
     idFieldFlag: false,
-    nameFieldFlag: false,
+    nameFieldFlag: false, //名称字段
     mainDetailFieldFlag: false,
     defaultMemberOfListFlag: false,
     referTo: "Department,",
@@ -727,6 +731,31 @@ function createEntity(entity, mainEntity) {
     ownerDepartmentField,
   ];
 
+  if (mainEntity) {
+    const refField = {
+      entityCode,
+      name: `md${mainEntity}Id`,
+      label: "主从关联Id",
+      physicalName: `md${mainEntity}Id`,
+      type: "Reference",
+      description: null,
+      displayOrder: 0,
+      nullable: false,
+      creatable: true,
+      updatable: false,
+      reserved: true,
+      idFieldFlag: false,
+      nameFieldFlag: false, //名称字段
+      mainDetailFieldFlag: true, //主从字段
+      defaultMemberOfListFlag: true, //是否在列表中默认显示
+      referTo: `${mainEntity},`,
+      fieldViewModel: null,
+      referenceSetting: null,
+    };
+    fieldSet.push(refField);
+    sortedFieldSet.push(refField);
+  }
+
   // 先这样处理
   var res = Process("models.sys.entity.field.EachSave", fieldSet, {
     entityCode: entityCode,
@@ -736,7 +765,7 @@ function createEntity(entity, mainEntity) {
   }
 
   updateEntityToYao(entity.name);
-
+  getEntityByNameCache(entity, true);
   fieldSet.forEach((f) => (f.owner = owner));
   sortedFieldSet.forEach((f) => (f.owner = owner));
 
@@ -778,7 +807,7 @@ function createEntity(entity, mainEntity) {
 }
 
 function copyEntity(entity) {
-  const row = getEntityByName(entity);
+  const row = getEntityByNameCache(entity, true);
 
   delete row.entityCode;
   return row;
@@ -841,14 +870,16 @@ function getEntityByName(entity) {
   return row;
 }
 
-function deleteEntity(entity) {
-  const row = getEntityByName(entity);
+function deleteEntity(entityName) {
+  const entity = getEntityByNameCache(entityName, true);
 
   Process("models.sys.entity.field.deletewhere", {
-    wheres: [{ column: "entityCode", value: row.entityCode }],
+    wheres: [{ column: "entityCode", value: entity.entityCode }],
   });
+  Process("models.sys.entity.delete", entity.entityCode);
 
-  Process("models.sys.entity.delete", row.entityCode);
+  Process("session.del", `MetaEntity:${entityName}`);
+  Process("session.del", `MetaEntity:${entity.entityCode}`);
 }
 
 function getTextFieldListOfEntity(entity) {
@@ -890,20 +921,22 @@ function getTextFieldListOfEntity(entity) {
  * update the entity nameField
  *
  * yao run scripts.systemmanager.updateEntityNameField 'Entity1' 'name1'
- * @param {string} entity
+ * @param {string} entityName
  * @param {string} nameField
  * @returns
  */
-function updateEntityNameField(entity, nameField) {
+function updateEntityNameField(entityName, nameField) {
   Process(
     "models.sys.entity.updatewhere",
     {
-      wheres: [{ column: "name", value: entity }],
+      wheres: [{ column: "name", value: entityName }],
     },
     {
       nameField: nameField,
     }
   );
+  // flush the cache
+  getEntityByNameCache(entityName, true);
   return true;
 }
 
@@ -956,11 +989,12 @@ function fieldCanBeDeleted(entity, field) {
   return true;
 }
 
-function deleteField(entity, field) {
-  const fieldData = getField(entity, field);
+function deleteField(entityName, fieldName) {
+  const fieldData = getField(entityName, fieldName);
   if (fieldData) {
     Process("models.sys.entity.field.delete", fieldData.fieldId);
-    updateEntityToYao(entity);
+    updateEntityToYao(entityName);
+    getEntityByNameCache(entityName, true);
   }
 }
 
@@ -1292,17 +1326,17 @@ function getOptionItems(entity, field) {
 
 /**
  *
- * @param {string} entity
+ * @param {string} entityName
  * @param {string} field
  * @param {Array} optionItems
  */
-function saveOptionItems(entity, field, optionItems) {
+function saveOptionItems(entityName, field, optionItems) {
   // optionItems = [
   //   { label: "a1", saved: true, value: 1 },
   //   { label: "a2", saved: true, value: 2 },
   //   { label: "a3", value: 3, saved: false },
   // ];
-  const Field = getEntitySingleFieldByname(entity, field);
+  const Field = getEntitySingleFieldByname(entityName, field);
   if (Field.fieldId) {
     const options = optionItems.items.map((item) => {
       return {
@@ -1313,6 +1347,8 @@ function saveOptionItems(entity, field, optionItems) {
     Process("models.sys.entity.field.update", Field.fieldId, {
       optionList: options,
     });
+    // flush the cache
+    getEntityByNameCache(entityName, true);
     return true;
   }
   return false;
@@ -1387,7 +1423,7 @@ function getTagItems(entity, field) {
   return list;
 }
 
-function saveTagItems(entity, field, tagItems) {
+function saveTagItems(entityName, fieldName, tagItems) {
   // tagItems = {
   //   items: [
   //     { label: "tag11", saved: true, value: "tag11" },
@@ -1395,16 +1431,18 @@ function saveTagItems(entity, field, tagItems) {
   //     { label: "tag33", value: "tag33", saved: false },
   //   ],
   // };
-  const Field = getEntitySingleFieldByname(entity, field);
-  if (Field.fieldId) {
+  const Field = getEntitySingleFieldByname(entityName, fieldName);
+  if (Field?.fieldId) {
     const options = tagItems.items.map((item) => {
       return item.value;
     });
     Process("models.sys.entity.field.update", Field.fieldId, {
       tagList: options,
     });
+    getEntityByNameCache(entityName, true);
     return true;
   }
+
   return false;
 }
 

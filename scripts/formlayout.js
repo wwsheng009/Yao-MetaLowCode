@@ -1,4 +1,4 @@
-const { getEntityByName, getEntityByCode } = Require("sys.lib");
+const { getEntityByNameCache,getEntityByCodeCache} = Require("sys.lib");
 
 function updateFormLayout(layoutId, layoutJson) {
   Process("models.formlayout.update", layoutId, {
@@ -117,15 +117,7 @@ function updateFormLayout(layoutId, layoutJson) {
 }
 
 function createFormLayout(entityName, layoutJson) {
-  const [entity] = Process("models.sys.entity.get", {
-    select: ["name", "entityCode"],
-    wheres: [
-      {
-        column: "name",
-        value: entityName,
-      },
-    ],
-  });
+  const entity = getEntityByNameCache(entityName)
 
   const formLayoutId = Process("models.formlayout.save", {
     layoutName: "默认表单布局",
@@ -234,33 +226,34 @@ function createFormLayout(entityName, layoutJson) {
  * @returns
  */
 function getFormLayout(entityName) {
-  const [entity] = Process("models.sys.entity.get", {
-    select: ["name", "entityCode"],
-    wheres: [
-      {
-        column: "name",
-        value: entityName,
-      },
-    ],
-    withs: {
-      fieldSet: {
-        query: {
-          select: ["name", "tagList", "optionList"],
-          wheres: [
-            {
-              column: "tagList",
-              op: "notnull",
-            },
-            {
-              column: "optionList",
-              op: "notnull",
-              method: "orwhere",
-            },
-          ],
-        },
-      },
-    },
-  });
+  // const [entity] = Process("models.sys.entity.get", {
+  //   select: ["name", "entityCode"],
+  //   wheres: [
+  //     {
+  //       column: "name",
+  //       value: entityName,
+  //     },
+  //   ],
+  //   withs: {
+  //     fieldSet: {
+  //       query: {
+  //         select: ["name", "tagList", "optionList"],
+  //         wheres: [
+  //           {
+  //             column: "tagList",
+  //             op: "notnull",
+  //           },
+  //           {
+  //             column: "optionList",
+  //             op: "notnull",
+  //             method: "orwhere",
+  //           },
+  //         ],
+  //       },
+  //     },
+  //   },
+  // });
+  const entity = getEntityByNameCache(entityName)
   if (!entity) {
     throw Error(`实体 ${entityName} 不存在`);
   }

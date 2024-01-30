@@ -1,5 +1,5 @@
 const { loadEntityToYao } = Require("sys.yao");
-const { getEntityByName } = Require("sys.lib");
+const { getEntityByNameCache } = Require("sys.lib");
 
 // 获取导航配置
 function getNavigationList() {
@@ -63,18 +63,9 @@ function getNavigationList() {
  * @returns
  */
 function getLayoutList(entityName) {
-  const [entity] = Process("models.sys.entity.get", {
-    wheres: [{ column: "name", value: entityName }],
-    withs: {
-      fieldSet: {},
-    },
-  });
-
-  if (!entity) {
-    throw Error(`Entity:${entityName} not exist`);
-  }
-  loadEntityToYao("LayoutConfig");
-  const entityLayout = getEntityByName("LayoutConfig");
+  const entity = getEntityByNameCache(entityName)
+  // loadEntityToYao("LayoutConfig");
+  const entityLayout = getEntityByNameCache("LayoutConfig");
 
   let layoutConfigs = Process("models.layoutconfig.get", {
     wheres: [
