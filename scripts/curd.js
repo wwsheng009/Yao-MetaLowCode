@@ -125,7 +125,7 @@ function updateDataLineOptions(fieldsOptionMap, line) {
  * @returns
  *
  * departmentId: 0000022-00000000000000000000000000000001
- * to 
+ * to
  * ```
  * departmentId: {
  *  id: "0000022-00000000000000000000000000000001",
@@ -829,17 +829,21 @@ function queryById(entityId, fieldsList) {
   detailEntitys.forEach((e) => {
     const refEntityName = e.name;
     const refEntity = getEntity(refEntityName);
-
-    // const refFieldsList = refEntity.fieldSet.map((f) => f.name).join(",");
-
-    // const selectFields = getSelectFields(refEntity, refFieldsList);
-
     const refFieldsMap = getRefFieldsMap(refEntity.fieldSet);
     const fieldsOptionMap = getfieldsOptionMap(refEntity.fieldSet);
-
-    let detailData = Process(`models.${refEntityName}.get`, { limit: 10000 });
-    // console.log("find by id ",detailData)
-    // return
+    const relatedFieldName = refEntity.fieldSet.find(
+      (f) => f.mainDetailFieldFlag == true
+    )?.name;
+    const query = {
+      wheres: [
+        {
+          column: relatedFieldName,
+          value: id,
+        },
+      ],
+      limit: 10000,
+    };
+    let detailData = Process(`models.${refEntityName}.get`, query);
     detailData.forEach((data) => {
       data = updateDataLineReference(refFieldsMap, data);
       data = updateDataLineOptions(fieldsOptionMap, data);
@@ -847,8 +851,6 @@ function queryById(entityId, fieldsList) {
 
     data[refEntityName] = detailData;
   });
-
-  // data = updateDataLineTags(fieldsTagMap, data);
   return data;
 }
 
