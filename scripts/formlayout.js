@@ -296,17 +296,16 @@ function getFormLayout(entityName) {
     let optionData = {};
     entity.fieldSet &&
       entity.fieldSet.forEach((field) => {
-        // if (field.tagList) {
-        //   optionData[field.name] = field.tagList.map((tag, idx) => {
-        //     return {
-        //       value: idx + 1,
-        //       label: tag,
-        //       displayOrder: idx + 1,
-        //     };
-        //   });
-        // }
         if (Array.isArray(field.optionList)) {
           optionData[field.name] = field.optionList;
+        }else if (Array.isArray(field.tagList)) {
+          optionData[field.name] = field.tagList.map(tag=>{
+            return {
+              value: tag.displayOrder,//需要转换值
+              label: tag.label,
+              displayOrder: tag.displayOrder,
+            };
+          });
         }
       });
 
@@ -318,7 +317,7 @@ function getFormLayout(entityName) {
       picDownloadPrefix: "/picture/get/",
       fileDownloadPrefix: "/file/get/",
     };
-    console.log("optionData",optionData)
+    // console.log("optionData",optionData)
     return {
       ...formLayout,
       entityRecord: formLayout,

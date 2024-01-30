@@ -455,9 +455,21 @@
             },
             "referenceSetting": null,
             "tagList": [
-                "生成",
-                "采购",
-                "赠送"
+                {
+                    "label": "生成",
+                    "value": "生成",
+                    "displayOrder": 1
+                },
+                {
+                    "label": "采购",
+                    "value": "采购",
+                    "displayOrder": 2
+                },
+                {
+                    "label": "赠送",
+                    "value": "赠送",
+                    "displayOrder": 3
+                }
             ]
         }
     ]

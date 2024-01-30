@@ -281,8 +281,16 @@
             "name": "kehubiaoqian",
             "label": "客户标签",
             "tagList": [
-                "KA",
-                "重点"
+                {
+                    "label": "KA",
+                    "value": "KA",
+                    "displayOrder": 1
+                },
+                {
+                    "label": "重点",
+                    "value": "重点",
+                    "displayOrder": 2
+                }
             ]
         },
         {

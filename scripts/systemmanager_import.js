@@ -9,6 +9,14 @@ function getCookie() {
   }
   return cookie;
 }
+
+function getWebSite(){
+  const website = Process("utils.env.Get", "METALOWCODE_WEBSITE");
+  if (!website) {
+    throw Error("请维护环境变量：METALOWCODE_WEBSITE");
+  }
+  return website;
+}
 /**
  * 下载实体定义
  *
@@ -33,7 +41,7 @@ function download(entityName) {
     });
   } else {
     const response = http.Get(
-      `http://web1.demo.melecode.com/systemManager/getEntitySet?_=${currentTimestamp}`,
+      `${getWebSite()}/systemManager/getEntitySet?_=${currentTimestamp}`,
       {},
       {
         Cookie: getCookie(),
@@ -154,7 +162,7 @@ function getField(entityName, fieldName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getField?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
+    `${getWebSite()}/systemManager/getField?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -168,7 +176,7 @@ function getEntityProps(entityName, cookie) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getEntityProps?entity=${entityName}&_=${currentTimestamp}`,
+    `${getWebSite()}/systemManager/getEntityProps?entity=${entityName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -187,7 +195,7 @@ function getFieldList(entityName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getFieldListOfEntity?entity=${entityName}&_=${currentTimestamp}`,
+    `${getWebSite()}/systemManager/getFieldListOfEntity?entity=${entityName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -205,7 +213,7 @@ function downloadOptionFields(entityName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getOptionFields?_=${currentTimestamp}`,
+    `${getWebSite()}/systemManager/getOptionFields?_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -266,7 +274,7 @@ function getOptionItems(entityName, fieldName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getOptionItems?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
+    `${getWebSite()}/systemManager/getOptionItems?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -304,15 +312,19 @@ function getOptionItems(entityName, fieldName) {
   return response.data.data;
 }
 
+
 /**
+ * 下载标签列表
+ * 
  * yao run scripts.systemmanager_import.downloadTagFields
- * @returns
+ * 
+ * @param {string|null} entityName 
  */
 function downloadTagFields(entityName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getTagFields?_=${currentTimestamp}`,
+    `${getWebSite()}/systemManager/getTagFields?_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -336,7 +348,11 @@ function downloadTagFields(entityName) {
     for (const field of tag.fieldList) {
       const tagItems = getTagItems(tag.entityName, field.fieldName);
       const tags = tagItems.map((item) => {
-        return item.value;
+        return {
+          label: item.label,
+          value: item.value,
+          displayOrder: item.displayOrder,
+        };
       });
       const fieldData = getEntitySingleFieldByname(tag.entityName, field.fieldName);
       if (fieldData.fieldId) {
@@ -368,6 +384,9 @@ function downloadTagFields(entityName) {
 /**
  *
  * yao run scripts.systemmanager_import.getTagItems 'TodoTask' 'remindType'
+ * 
+ * yao run scripts.systemmanager_import.getTagItems 'Kehuguanli' 'kehubiaoqian'
+ * 
  * @param {string} entityName
  * @param {string} fieldName
  * @returns
@@ -376,7 +395,7 @@ function getTagItems(entityName, fieldName) {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/systemManager/getTagItems?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
+    `${getWebSite()}/systemManager/getTagItems?entity=${entityName}&field=${fieldName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -601,7 +620,7 @@ function getFormLayout(entityName) {
     throw Error(`实体${entityName}不存在`);
   }
   const response = http.Get(
-    `http://web1.demo.melecode.com/formLayout/get?entity=${entityName}&_=${currentTimestamp}`,
+    `${getWebSite()}/formLayout/get?entity=${entityName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -682,7 +701,7 @@ function downlaodNav() {
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
-    `http://web1.demo.melecode.com/layout/getNavigationList?_=${currentTimestamp}`,
+    `${getWebSite()}/layout/getNavigationList?_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -768,7 +787,7 @@ function downloadLayoutList(entityName){
 function getLayoutList(entityName) {
   var currentTimestamp = new Date().getTime();
   const response = http.Get(
-    `http://web1.demo.melecode.com/layout/getLayoutList?entityName=${entityName}&_=${currentTimestamp}`,
+    `${getWebSite()}/layout/getLayoutList?entityName=${entityName}&_=${currentTimestamp}`,
     {},
     {
       Cookie: getCookie(),
@@ -870,7 +889,7 @@ function downloadEntityData(entityName) {
   }
 
   const response = http.Post(
-    `http://web1.demo.melecode.com/crud/listQuery?_=${currentTimestamp}`,
+    `${getWebSite()}/crud/listQuery?_=${currentTimestamp}`,
     {
       mainEntity: entityName,
       fieldsList:entity.fieldSet.map(f=>f.name).join(','),

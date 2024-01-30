@@ -475,9 +475,21 @@
             "nameFieldFlag": false,
             "defaultMemberOfListFlag": false,
             "tagList": [
-                "销售",
-                "采购",
-                "赠送"
+                {
+                    "label": "销售",
+                    "value": "销售",
+                    "displayOrder": 1
+                },
+                {
+                    "label": "采购",
+                    "value": "采购",
+                    "displayOrder": 2
+                },
+                {
+                    "label": "赠送",
+                    "value": "赠送",
+                    "displayOrder": 3
+                }
             ]
         },
         {

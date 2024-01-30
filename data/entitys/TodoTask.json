@@ -186,9 +186,21 @@
             "description": null,
             "displayOrder": 0,
             "tagList": [
-                "通知",
-                "短信",
-                "邮件"
+                {
+                    "label": "通知",
+                    "value": "通知",
+                    "displayOrder": 1
+                },
+                {
+                    "label": "短信",
+                    "value": "短信",
+                    "displayOrder": 2
+                },
+                {
+                    "label": "邮件",
+                    "value": "邮件",
+                    "displayOrder": 3
+                }
             ]
         },
         {
