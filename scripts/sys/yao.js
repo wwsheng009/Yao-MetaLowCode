@@ -43,13 +43,14 @@ function entityToYaoModel(entityName) {
     },
     columns: entity.fieldSet.map((field) => getYaoColumnFromField(field)),
   };
-  if (entityName === 'User') {
+  if (entityName === "User") {
     yaoModel.values = [
       {
-        userName:'admin',
-        loginPwd:'admin'
-      }
-    ]
+        userName: "admin",
+        loginName: "admin",
+        loginPwd: "admin",
+      },
+    ];
   }
 
   return yaoModel;
@@ -81,8 +82,6 @@ function getYaoColumnFromField(field) {
       column.type = "id";
       column.primary = true;
       break;
-    case "File":
-    case "Picture":
     case "Url":
     case "Email":
     case "Text":
@@ -137,6 +136,10 @@ function getYaoColumnFromField(field) {
     case "ReferenceList": //多对多引用
     case "Reference": //暂时这样处理
       column.type = "string";
+      break;
+    case "File":
+    case "Picture":
+      column.type = "json";
       break;
     case "AreaSelect":
       column.type = "json";

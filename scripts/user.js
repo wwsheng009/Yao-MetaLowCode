@@ -13,7 +13,7 @@ function getFilePath(userId) {
 
   if (user.avatar) {
     console.log(user.avatar)
-    const url = JSON.parse(user.avatar)[0].url;
+    const url = user.avatar[0].url;
     const fname = url.split("=")[1]
     return `/upload/${fname}`;
   }
@@ -54,8 +54,7 @@ function deleteUser(userId) {
   return { code: 200, error: null, message: "success", data: true };
   return { code: 201, error: "系统管理员不能删除!", message: null, data: null };
 }
-function saveUser(formModel, entity, idstr) {
-  // const formModel = { "userName": "体验", "departmentId": { "id": "0000022-00000000000000000000000000000001", "name": "公司总部" }, "jobTitle": { "value": 1, "label": "员工", "displayOrder": 5 }, "disabled": false, "mobilePhone": "", "email": "", "loginName": "tiyan", "loginPwd": "d97085db8d45c1f291879688dddba8df", "avatar": null }
+function saveUser(formModel, entityName, idstr) {
   // const entity = "User"
   // const id = "0000021-4ad8495b30304b4b944afcbf748d982a"
   // formModel = {
@@ -69,50 +68,7 @@ function saveUser(formModel, entity, idstr) {
   //   loginPwd: "123456",
   //   avatar: null,
   // };
-  if (idstr) {
-    const [entityCode, id] = idstr.split("-");
-    formModel.userId = id;
-  }
-  if (formModel.departmentId && typeof formModel.departmentId === "object") {
-    const [entityCode, id] = formModel.departmentId.id.split("-");
-    formModel.departmentId = id;
-  }
-
-  const userId = Process("models.user.save", formModel);
-  // /saveUser?entity=User
-  const userData = Process("models.user.find", userId, {});
-
-  return {
-    layoutJson: null,
-    fieldPropsMap: null,
-    formData: userData,
-    // {
-    //   loginPwd: "d97085db8d45c1f291879688dddba8df",
-    //   departmentId: "0000022-00000000000000000000000000000001",
-    //   jobTitle: 1,
-    //   roles: ["0000023-6fba2dd4dbbd41dc881801f3b3580675"],
-    //   aaaaaa: null,
-    //   avatar: null,
-    //   userName: "体验",
-    //   userId: "0000021-4ad8495b30304b4b944afcbf748d982a",
-    //   createdOn: "2024-01-05 14:29:43",
-    //   xsxs: null,
-    //   modifiedOn: "2024-01-25 18:03:03",
-    //   ownerUser: "0000021-4ad8495b30304b4b944afcbf748d982a",
-    //   ownerDepartment: "0000022-00000000000000000000000000000001",
-    //   mobilePhone: "",
-    //   createdBy: "0000021-00ec15ca45bc446f9fc36161281733d4",
-    //   loginName: "tiyan",
-    //   modifiedBy: "0000021-00000000000000000000000000000001",
-    //   disabled: false,
-    //   dingTalkUserId: null,
-    //   ownerTeam: null,
-    //   email: "",
-    //   tatp: null,
-    // },
-    labelData: null,
-    deletedFields: null,
-  };
+  return Process("scripts.curd.saveRecord",entityName,idstr,formModel)
 }
 
 /**
@@ -131,7 +87,7 @@ function login(payload) {
   const [userData] = Process("models.user.get", {
     wheres: [
       {
-        column: "userName",
+        column: "loginName",
         value: user,
       },
     ],

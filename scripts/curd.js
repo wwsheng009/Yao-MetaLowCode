@@ -1,6 +1,7 @@
 const { loadEntityToYao } = Require("sys.yao");
 
-const { getEntityByNameCache,getEntityByCodeCache,getCurrentTime} = Require("sys.lib");
+const { getEntityByNameCache, getEntityByCodeCache, getCurrentTime } =
+  Require("sys.lib");
 
 function getSelectFields(entity, fieldsList) {
   let fields = [];
@@ -30,7 +31,9 @@ function getfieldsOptionMap(selectFields) {
 }
 
 function getJsonFieldsMap(selectFields) {
-  const refFields = selectFields.filter((f) => f.type === "Picture");
+  const refFields = selectFields.filter((f) =>
+    ["Picture", "File"].includes(f.type)
+  );
   const refFieldsMap = {};
   refFields.forEach((refField) => {
     refFieldsMap[refField.name] = true;
@@ -45,9 +48,15 @@ function updateJsonFields(fieldsOptionMap, line) {
       Object.hasOwnProperty.call(line, fieldKey) &&
       itemData != null
     ) {
-      console.log("xxxxxxxxxxxx",itemData)
-      if (typeof itemData === 'string') {
-        line[fieldKey] = JSON.parse(itemData)
+      if (typeof itemData === "string") {
+        line[fieldKey] = JSON.parse(itemData);
+      }
+      if (Array.isArray(itemData)) {
+        line[fieldKey].forEach((l) => {
+          if (l.url && !l.url.startsWith("/api")) {
+            l.url = "/api" + l.url;
+          }
+        });
       }
     }
   }
@@ -80,7 +89,7 @@ function getRefFieldsMap(selectFields) {
     // 引用的实体名称
     const refEntityName = refField.referTo.split(",")[0];
 
-    const refEntity = getEntityByNameCache(refEntityName)
+    const refEntity = getEntityByNameCache(refEntityName);
     if (!refEntity) {
       throw Error(`引用实体${refEntityName}不存在`);
     }
@@ -157,17 +166,13 @@ function updateDataLineReference(refFieldsMap, line) {
       // 引用的对象的值
       let id = line[fieldKey];
       if (line[fieldKey].includes("-")) {
-        const [entityCode,ids] =  line[fieldKey].split("-")
+        const [entityCode, ids] = line[fieldKey].split("-");
         id = ids;
       }
-      
-      const refIdValue = Process(
-        `models.${refField.entityName}.find`,
-        id,
-        {
-          select: [refField.idFieldName, refField.nameFieldName],
-        }
-      );
+
+      const refIdValue = Process(`models.${refField.entityName}.find`, id, {
+        select: [refField.idFieldName, refField.nameFieldName],
+      });
       if (refIdValue) {
         // 重新组装ID与值
         // refIdValue[refField.idFieldName] = `${refField.entityCode}-${
@@ -232,7 +237,7 @@ function listQuery({
   //   statistics: [],
   // };
 
-  const entity = getEntityByNameCache(mainEntity)
+  const entity = getEntityByNameCache(mainEntity);
   if (entity == null) {
     throw new Error(`实体 ${mainEntity} 不存在`);
   }
@@ -371,8 +376,8 @@ function refFieldQuery(
   // 再查询关联实体对的表，
   // 默认显示字段列表在字段的referenceSetting中。
 
-  const mainEntity = getEntityByNameCache(entityName)
-  let refField = mainEntity.fieldSet.find(f=>f.name === refFieldName)
+  const mainEntity = getEntityByNameCache(entityName);
+  let refField = mainEntity.fieldSet.find((f) => f.name === refFieldName);
   if (!mainEntity || !refField) {
     throw Error(`实体${entityName}-字段${refFieldName}不存在`);
   }
@@ -384,8 +389,8 @@ function refFieldQuery(
   // 引用的实体名称
   const refEntityName = refField.referTo.split(",")[0];
 
-  const refEntity = getEntityByNameCache(refEntityName)
-  
+  const refEntity = getEntityByNameCache(refEntityName);
+
   if (!refEntity) {
     throw Error(`引用实体${refEntityName}不存在`);
   }
@@ -497,9 +502,8 @@ function refFieldQuery(
   };
 }
 
-
 function getEntity(entityName) {
-  return getEntityByNameCache(entityName)
+  return getEntityByNameCache(entityName);
 }
 
 function getEntityDefaultLayout(entityName) {
@@ -560,7 +564,6 @@ function formUpdateQuery(entityName, idstr) {
   // };
 }
 
-
 /**
  * create or update a entity record
  *
@@ -590,7 +593,7 @@ function saveRecord(entityName, idstr, formModel) {
     detailEntityMap[e.name] = getEntity(e.name);
   });
 
-  loadEntityToYao(entityName);
+  // loadEntityToYao(entityName);
 
   // use to collect the detail tables
   const detailNeedUpdateMap = {};
@@ -598,8 +601,13 @@ function saveRecord(entityName, idstr, formModel) {
   function updateFieldData(entity, line) {
     // "shuizhong":{"value":4,"label":"电子普票","displayOrder":4}
     // 如果是option,在前端没有修改，会直接把option传到后端。
+    const fieldsMap = entity.fieldSet.reduce((map, field) => {
+      map[field.name] = field;
+      return map;
+    }, {});
+
     const idField = entity.fieldSet.find((f) => f.idFieldFlag == true);
-    if (line[idField] != null) {
+    if (line[idField] != null && line[idField].includes("-")) {
       const [_, id] = line[idField].split("-");
       line[idField] = id;
     }
@@ -608,19 +616,25 @@ function saveRecord(entityName, idstr, formModel) {
         const field = line[fieldName];
 
         // 更新Option类对象
-        if (field !== null && typeof field == "object") {
-          let fieldConfig = entity.fieldSet.find(
-            (f) => f.name === fieldName && f.type === "Option"
-          );
-
-          if (fieldConfig && field.value != null) {
-            line[fieldName] = field.value;
-          } else {
-            fieldConfig = entity.fieldSet.find(
-              (f) => f.name === fieldName && f.type === "Reference"
-            );
-            if (fieldConfig && field.id != null) {
+        if (field != null) {
+          if (typeof field == "object") {
+            if (
+              fieldsMap[fieldName]?.type === "Option" &&
+              field.value != null
+            ) {
+              line[fieldName] = field.value;
+            }
+            if (
+              fieldsMap[fieldName]?.type === "Reference" &&
+              field.id != null
+            ) {
               line[fieldName] = field.id;
+            }
+            if (
+              ["Picture", "File"].includes(fieldsMap[fieldName]?.type) &&
+              typeof field == "string"
+            ) {
+              line[fieldName] = JSON.parse(field);
             }
           }
         }
@@ -739,10 +753,13 @@ function getEntityCodeList(entityName) {
 function queryById(entityId, fieldsList) {
   const [entityCode, id] = entityId.split("-");
 
-  const entity = getEntityByCodeCache(entityCode)
+  const entity = getEntityByCodeCache(entityCode);
   if (entity == null) {
     throw new Error(`实体 ${mainEntity} 不存在`);
   }
+
+  const idFieldName = entity.fieldSet.find((f) => f.idFieldFlag === true)?.name;
+
   const entityName = entity.name;
 
   if (!fieldsList) {
@@ -750,7 +767,7 @@ function queryById(entityId, fieldsList) {
     fieldsList = fields.map((f) => f.name).join(",");
   }
 
-  loadEntityToYao(entityName);
+  // loadEntityToYao(entityName);
   let queryParam = {};
   if (fieldsList) {
     queryParam.select = fieldsList.split(",");
@@ -808,6 +825,7 @@ function queryById(entityId, fieldsList) {
 
     data[refEntityName] = detailData;
   });
+  data[idFieldName] = `${entity.entityCode}-${data[idFieldName]}`;
   return data;
 }
 
@@ -848,8 +866,7 @@ function queryEntityFields(
   //     },
   //   },
   // });
-  const entity = getEntityByCodeCache(entityCode)
-
+  const entity = getEntityByCodeCache(entityCode);
 
   if (entity == null) {
     throw new Error(`实体 ${entity} 不存在`);
