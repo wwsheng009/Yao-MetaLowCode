@@ -1,6 +1,6 @@
 const { loadEntityToYao } = Require("sys.yao");
 
-const { getEntityByNameCache,getEntityByCodeCache} = Require("sys.lib");
+const { getEntityByNameCache,getEntityByCodeCache,getCurrentTime} = Require("sys.lib");
 
 function getSelectFields(entity, fieldsList) {
   let fields = [];
@@ -527,15 +527,6 @@ function formUpdateQuery(entityName, idstr) {
   // };
 }
 
-function formatCurrentTime() {
-  var now = new Date();
-  // Convert to ISO string and split into date and time parts
-  var dateTimeParts = now.toISOString().split("T"); // ["YYYY-MM-DD", "HH:MM:SS.sssZ"]
-  var datePart = dateTimeParts[0]; // "YYYY-MM-DD"
-  // Take the time part, remove milliseconds and timezone information, then split
-  var timePart = dateTimeParts[1].split(".")[0]; // "HH:MM:SS"
-  return datePart + " " + timePart;
-}
 
 /**
  * create or update a entity record
@@ -618,7 +609,7 @@ function saveRecord(entityName, idstr, formModel) {
   }
   formModel = updateFieldData(mainEntity, formModel);
 
-  const createdTime = formatCurrentTime();
+  const createdTime = getCurrentTime();
   if (!idstr) {
     formModel = { ...formModel, createdOn: createdTime };
     let id = Process(`models.${entityName}.Create`, formModel);
