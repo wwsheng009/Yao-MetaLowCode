@@ -131,9 +131,15 @@ function updateDataLineReference(refFieldsMap, line) {
     ) {
       const refField = refFieldsMap[fieldKey];
       // 引用的对象的值
+      let id = line[fieldKey];
+      if (line[fieldKey].includes("-")) {
+        const [entityCode,ids] =  line[fieldKey].split("-")
+        id = ids;
+      }
+      
       const refIdValue = Process(
         `models.${refField.entityName}.find`,
-        line[fieldKey],
+        id,
         {
           select: [refField.idFieldName, refField.nameFieldName],
         }

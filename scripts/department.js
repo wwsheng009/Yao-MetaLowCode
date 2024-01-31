@@ -1,8 +1,8 @@
-const { getEntityByName, getEntityByCode } = Require("sys.lib");
+const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
 
 // yao run scripts.department.treeData
 function treeData() {
-  const entity = getEntityByName("Department");
+  const entity = getEntityByNameCache("Department");
 
   let items = Process(`models.Department.get`, {});
   if (items.length == 0) {
@@ -56,7 +56,7 @@ function treeData() {
   //   },
   // ];
 }
-function saveDepartment(formModel, entity, idstr) {
+function saveDepartment(formModel, entityName, idstr) {
   //  /saveDepartment?entity=Department&id=
   // const {
   //   departmentName,
@@ -128,10 +128,10 @@ function getSubNodeItems(parentId) {
   return subItems;
 }
 
-function listDepartment(entityName) {
+function listDepartment() {
   const data = Process("models.department.get", { limit: 10000 });
 
-  const entity = getEntityByName(entityName);
+  const entity = getEntityByNameCache('Department');
   data.forEach((line) => {
     line.departmentId = `${entity.entityCode}-${line.departmentId}`;
     if (line.parentDepartmentId) {
