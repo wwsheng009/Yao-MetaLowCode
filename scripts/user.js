@@ -4,19 +4,20 @@
 const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
 
 function getFilePath(userId) {
-  let userid = userId;
-  if (userId.includes("-")) {
-    const [entityCode, id] = userId.split("-");
-    userid = id;
+  let idstr = userId;
+  if (idstr.includes("-")) {
+    const [_, id] = idstr.split("-");
+    idstr = id;
   }
-  const user = Process("models.user.find", userid, {});
-
+  const user = Process("models.user.find", idstr, {});
   if (user.avatar) {
-    console.log(user.avatar)
-    const url = user.avatar[0].url;
-    const fname = url.split("=")[1]
-    return `/upload/${fname}`;
+    const url = user.avatar[0]?.url;
+    if (url) {
+      const fname = url.split("=")[1]
+      return `/upload/${fname}`;
+    }
   }
+  throw Error("error happens")
 }
 function logout() {}
 function getLoginUser() {
@@ -128,11 +129,12 @@ function login(payload) {
   };
 }
 
-function updateLoginUser(formModel, id) {
-  console.log("updateLoginUser", formModel, id);
-  // if (formModel.avatar) {
-  //   formModel.avatar = JSON.stringify(formModel.avatar)
-  // }
+function updateLoginUser(formModel, idStr) {
+  console.log("updateLoginUser", formModel, idStr);
+  if (formModel.avatar) {
+    formModel.avatar = JSON.parse(formModel.avatar)
+  }
+  const [_,id] = idStr.split("-")
   Process("models.user.update", id, formModel);
 }
 function addUserRole(body) {}

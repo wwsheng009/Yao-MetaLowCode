@@ -1,3 +1,5 @@
+const {getFileExtension} = Require("sys.lib")
+
 /**
  * 
  * the type of file:
@@ -20,22 +22,16 @@
  */
 function upload(file) {
   const uuid = Process("utils.str.UUID").replace(/-/g,"");
-  let newFname = `${uuid}.${getFileExtension(file.name) || 'jpg'}`;
+  let ext = getFileExtension(file.name);
+  let newFname = `${uuid}`;
+  if (ext) {
+     newFname = `${uuid}.${ext}`;
+  }
   Process("fs.system.move", file.tempFile, "/upload/" + newFname);
   return {
     name: file.name,
-    url: `/picture/get?name=${newFname}`,
+    url: `/api/picture/get?name=${newFname}`,
   };
 }
-function getFileExtension(filename) {
-  if (filename.includes(".")) {
-    return filename.substring(filename.lastIndexOf(".") + 1);
-  } else {
-    // Return an empty string if there is no dot (and hence no extension)
-    return "";
-  }
-}
 
-function getFilePath(fileName) {
-  return "/upload/" + fileName;
-}
+

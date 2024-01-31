@@ -7,15 +7,15 @@
     {
       "path": "upload",
       "method": "post",
-      "process": "scripts.file.post",
-      "in": [":payload"],
+      "process": "scripts.file.upload",
+      "in": ["$file.file"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "uploadFile",
       "method": "post",
       "process": "scripts.file.uploadFile",
-      "in": [":payload"],
+      "in": ["$file.uploadFile"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
@@ -38,6 +38,19 @@
       "process": "scripts.file.list",
       "in": [":query"],
       "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "get",
+      "method": "get",
+      "process": "flows.download",
+      "in": ["$query.name"],
+      "out": {
+        "status": 200,
+        "body": "{{content}}",
+        "headers": {
+          "Content-Type": "{{type}}"
+        }
+      }
     }
   ]
 }

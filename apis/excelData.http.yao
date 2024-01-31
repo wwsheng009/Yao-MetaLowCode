@@ -15,8 +15,8 @@
     {
       "path": "upload",
       "method": "post",
-      "process": "scripts.excel.upload",
-      "in": [":payload", ":query"],
+      "process": "scripts.file.upload",
+      "in": ["$file.uploadFile"],
       "out": { "status": 200, "type": "application/json" }
     },
     {

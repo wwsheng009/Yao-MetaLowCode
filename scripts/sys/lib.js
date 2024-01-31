@@ -155,6 +155,14 @@ function getCurrentTime() {
 
   return `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 }
+function getFileExtension(filename) {
+  if (filename.includes(".")) {
+    return filename.substring(filename.lastIndexOf(".") + 1);
+  } else {
+    // Return an empty string if there is no dot (and hence no extension)
+    return "";
+  }
+}
 
 module.exports = {
   UnderscoreName,
@@ -165,4 +173,5 @@ module.exports = {
   getEntityByNameCache,
   getEntityByCodeCache,
   getCurrentTime,
+  getFileExtension
 };

@@ -6,7 +6,7 @@
         {
             "description": "获取类型下载地址",
             "name": "filename",
-            "process": "scripts.picture.getFilePath",
+            "process": "scripts.file.getFilePath",
             "args": [
                 "{{$in.0}}"
             ]
