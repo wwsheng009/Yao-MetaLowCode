@@ -1,7 +1,23 @@
 // function getLoginUser() {
 //   return { code: 403, error: "请登录", message: "用户未登录", data: "" };
 // }
-function avatar(userId) {}
+const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
+
+function getFilePath(userId) {
+  let userid = userId;
+  if (userId.includes("-")) {
+    const [entityCode, id] = userId.split("-");
+    userid = id;
+  }
+  const user = Process("models.user.find", userid, {});
+
+  if (user.avatar) {
+    console.log(user.avatar)
+    const url = JSON.parse(user.avatar)[0].url;
+    const fname = url.split("=")[1]
+    return `/upload/${fname}`;
+  }
+}
 function logout() {}
 function getLoginUser() {
   return {
@@ -11,10 +27,8 @@ function getLoginUser() {
     departmentId: "0000022-00000000000000000000000000000001",
     jobTitle: 1,
     userName: "系统管理员",
-    userId: "0000021-00000000000000000000000000000001",
+    userId: "21-1",
     ownerTeam: [
-      "0000024-4282ab63811645c483d1bff3318a013a",
-      "0000024-4f7cba893f494d699c519b19177b726a",
     ],
     email: "",
   };
@@ -56,17 +70,17 @@ function saveUser(formModel, entity, idstr) {
   //   avatar: null,
   // };
   if (idstr) {
-    const [entityCode,id] = idstr.split("-")
+    const [entityCode, id] = idstr.split("-");
     formModel.userId = id;
   }
-  if (formModel.departmentId && typeof formModel.departmentId === 'object' ) {
-    const [entityCode,id] = formModel.departmentId.id.split("-")
+  if (formModel.departmentId && typeof formModel.departmentId === "object") {
+    const [entityCode, id] = formModel.departmentId.id.split("-");
     formModel.departmentId = id;
   }
 
- const userId = Process('models.user.save',formModel)
+  const userId = Process("models.user.save", formModel);
   // /saveUser?entity=User
-  const userData = Process('models.user.find',userId,{})
+  const userData = Process("models.user.find", userId, {});
 
   return {
     layoutJson: null,
@@ -101,26 +115,70 @@ function saveUser(formModel, entity, idstr) {
   };
 }
 
+/**
+ * 用户登录
+ * @param {object} payload
+ * @returns
+ */
 function login(payload) {
   // http://web1.demo.melecode.com/user/login
   // {user: "admin", password: "admin"}
-  return {
-    departmentName: "公司总部",
-    mobilePhone: "15215478481",
-    departmentId: "0000022-00000000000000000000000000000001",
-    jobTitle: 1,
-    disabled: false,
-    userName: "系统管理员",
-    userId: "0000021-00000000000000000000000000000001",
-    ownerTeam: [
-      "0000024-4282ab63811645c483d1bff3318a013a",
-      "0000024-4f7cba893f494d699c519b19177b726a",
+
+  // {"user":"admin","password":"admin"}
+
+  const { user, password } = payload;
+
+  const [userData] = Process("models.user.get", {
+    wheres: [
+      {
+        column: "userName",
+        value: user,
+      },
     ],
-    email: "",
+  });
+  if (!userData) {
+    throw Error(`用户不存在：${user}`);
+  }
+  const userEntity = getEntityByNameCache("User");
+
+  Process("utils.pwd.Verify", password, userData.loginPwd);
+
+  let departmentName = "";
+  let departmentId = "";
+  if (userData.departmentId) {
+    const departEntity = getEntityByNameCache("Department");
+    departmentName = Process(
+      "models.Department.find",
+      userData.departmentId
+    )?.name;
+    departmentId = `${departEntity.entityCode}-${userData.departmentId}`;
+  }
+  const teams = Process("models.team.get", {
+    wheres: [{ column: "ownerUser", value: userData.userId }],
+  });
+
+  const teamEntity = getEntityByNameCache("Team");
+
+  return {
+    departmentName: departmentName,
+    mobilePhone: userData.mobilePhone,
+    departmentId: departmentId,
+    jobTitle: userData.jobTitle,
+    disabled: userData.disabled,
+    userName: userData.userName,
+    userId: `${userEntity.entityCode}-${userData.userId}`,
+    ownerTeam: teams.map((t) => `${teamEntity.entityCode}-${t.teamId}`),
+    email: userData.email,
   };
 }
 
-function updateLoginUser(formModel, id) {}
+function updateLoginUser(formModel, id) {
+  console.log("updateLoginUser", formModel, id);
+  // if (formModel.avatar) {
+  //   formModel.avatar = JSON.stringify(formModel.avatar)
+  // }
+  Process("models.user.update", id, formModel);
+}
 function addUserRole(body) {}
 function getUserRole(userId) {}
 

@@ -107,11 +107,14 @@
     {
       "path": "avatar",
       "method": "get",
-      "process": "scripts.user.avatar",
+      "process": "flows.avatar",
       "in": ["$query.userId"],
       "out": {
         "status": 200,
-        "type": "application/json"
+        "body": "{{content}}",
+        "headers": {
+          "Content-Type": "{{type}}"
+        }
       }
     }
   ]

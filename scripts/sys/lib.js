@@ -76,7 +76,7 @@ function getEntityByCodeCache(entityCode, bypass) {
       return entityC;
     }
   }
-  const [entity] = Process("models.sys.entity.find", entityCode, {
+  const entity = Process("models.sys.entity.find", entityCode, {
     withs: {
       fieldSet: {
         query: {

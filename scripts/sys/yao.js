@@ -10,12 +10,11 @@ function loadEntityToYao(entityName) {
   loadYaoModel(yaoModel);
 }
 /**
- *
+ * yao run scripts.sys.yao.updateEntityToYao 'User'
  * @param {string} entityName
  */
 function updateEntityToYao(entityName) {
   const yaoModel = entityToYaoModel(entityName);
-  console.log("yaoModel", yaoModel);
   loadYaoModel(yaoModel);
   migrateYaoModel(yaoModel);
   return yaoModel;
@@ -24,7 +23,7 @@ function updateEntityToYao(entityName) {
 /**
  * convert entity to yao model
  *
- * yao run scripts.yao.entityToYaoModel 'Entity1'
+ * yao run scripts.sys.yao.entityToYaoModel 'User'
  * @param {string} entityName
  */
 function entityToYaoModel(entityName) {
@@ -44,6 +43,14 @@ function entityToYaoModel(entityName) {
     },
     columns: entity.fieldSet.map((field) => getYaoColumnFromField(field)),
   };
+  if (entityName === 'User') {
+    yaoModel.values = [
+      {
+        userName:'admin',
+        loginPwd:'admin'
+      }
+    ]
+  }
 
   return yaoModel;
 }

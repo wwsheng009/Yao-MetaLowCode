@@ -29,6 +29,31 @@ function getfieldsOptionMap(selectFields) {
   return refFieldsMap;
 }
 
+function getJsonFieldsMap(selectFields) {
+  const refFields = selectFields.filter((f) => f.type === "Picture");
+  const refFieldsMap = {};
+  refFields.forEach((refField) => {
+    refFieldsMap[refField.name] = true;
+  });
+  return refFieldsMap;
+}
+function updateJsonFields(fieldsOptionMap, line) {
+  for (const fieldKey in fieldsOptionMap) {
+    const itemData = line[fieldKey];
+    if (
+      Object.hasOwnProperty.call(fieldsOptionMap, fieldKey) &&
+      Object.hasOwnProperty.call(line, fieldKey) &&
+      itemData != null
+    ) {
+      console.log("xxxxxxxxxxxx",itemData)
+      if (typeof itemData === 'string') {
+        line[fieldKey] = JSON.parse(itemData)
+      }
+    }
+  }
+  return line;
+}
+
 // function getfieldsTagMap(selectFields) {
 //   // const selectFields = getSelectFields(entity, fieldsList)
 //   // 有引用关系的字段列表
@@ -47,7 +72,6 @@ function getfieldsOptionMap(selectFields) {
  * @returns
  */
 function getRefFieldsMap(selectFields) {
-  // const selectFields = getSelectFields(entity, fieldsList)
   // 有引用关系的字段列表
   const refFields = selectFields.filter((f) => f.type === "Reference");
   // 找到引用实体的id字段与显示字段
@@ -227,6 +251,7 @@ function listQuery({
   const selectFields = getSelectFields(entity, fieldsList);
   const refFieldsMap = getRefFieldsMap(selectFields);
   const fieldsOptionMap = getfieldsOptionMap(selectFields);
+  const jsonFidlsMap = getJsonFieldsMap(selectFields);
   // const fieldsTagMap = getfieldsTagMap(selectFields);
 
   // console.log("queryParam data", queryParam);
@@ -247,6 +272,8 @@ function listQuery({
 
       line = updateDataLineReference(refFieldsMap, line);
       line = updateDataLineOptions(fieldsOptionMap, line);
+      line = updateJsonFields(jsonFidlsMap, line);
+
       // line = updateDataLineTags(fieldsTagMap, line);
     });
 
@@ -712,11 +739,6 @@ function getEntityCodeList(entityName) {
 function queryById(entityId, fieldsList) {
   const [entityCode, id] = entityId.split("-");
 
-  // const entity = Process("models.sys.entity.find", entityCode, {
-  //   withs: {
-  //     fieldSet: {},
-  //   },
-  // });
   const entity = getEntityByCodeCache(entityCode)
   if (entity == null) {
     throw new Error(`实体 ${mainEntity} 不存在`);
@@ -740,12 +762,16 @@ function queryById(entityId, fieldsList) {
 
   const refFieldsMap = getRefFieldsMap(selectFields);
   const fieldsOptionMap = getfieldsOptionMap(selectFields);
+  const jsonFidlsMap = getJsonFieldsMap(selectFields);
+
+  // console.log("jsonFidlsMap",jsonFidlsMap)
   // const fieldsTagMap = getfieldsTagMap(selectFields);
 
   let data = Process(`models.${entity.name}.Find`, id, queryParam);
 
   data = updateDataLineReference(refFieldsMap, data);
   data = updateDataLineOptions(fieldsOptionMap, data);
+  data = updateJsonFields(jsonFidlsMap, data);
 
   // 子表信息
   // 查找有哪些明细实体
