@@ -1284,24 +1284,15 @@ function getOptionFields() {
 
 /**
  * 单选项管理
- * @param {string} entity
- * @param {string} field
+ * @param {string} entityName
+ * @param {string} fieldName
  * @returns
  */
-function getOptionItems(entity, field) {
-  const fieldDef = getField(entity, field);
+function getOptionItems(entityName, fieldName) {
+  const fieldDef = getField(entityName, fieldName);
 
-  let list = [];
-  if (Array.isArray(fieldDef?.optionList)) {
-    fieldDef.optionList.forEach((option) => {
-      list.push({
-        saved: true,
-        label: option.key,
-        value: option.value,
-      });
-    });
-  }
-  return list;
+  return fieldDef?.optionList;
+  
   // entity = "User";
   // field = "jobTitle";
 
@@ -1407,20 +1398,9 @@ function getTagFields() {
   // ];
 }
 
-function getTagItems(entity, field) {
-  const fieldDef = getField(entity, field);
-
-  let list = [];
-  if (fieldDef?.tagList) {
-    fieldDef.tagList.forEach((tag) => {
-      list.push({
-        saved: true,
-        label: tag,
-        value: tag,
-      });
-    });
-  }
-  return list;
+function getTagItems(entityName, fieldName) {
+  const fieldDef = getField(entityName, fieldName);
+  return fieldDef.tagList;
 }
 
 function saveTagItems(entityName, fieldName, tagItems) {
