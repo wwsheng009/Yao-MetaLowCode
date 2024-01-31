@@ -1,0 +1,29 @@
+{
+  "name": "自定义接口",
+  "version": "1.0.0",
+  "description": "自定义API接口",
+  "guard": "-",
+  "group": "",
+  "paths": [
+    {
+      "path": "upload",
+      "method": "post",
+      "process": "scripts.picture.upload",
+      "in": ["$file.file"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "get",
+      "method": "get",
+      "process": "flows.download",
+      "in": ["$query.name"],
+      "out": {
+        "status": 200,
+        "body": "{{content}}",
+        "headers": {
+          "Content-Type": "{{type}}"
+        }
+      }
+    }
+  ]
+}
