@@ -131,7 +131,7 @@
       "label": "头像",
       "name": "avatar",
       "nullable": true,
-      "type": "string"
+      "type": "json"
     },
     {
       "comment": "钉钉用户ID",
@@ -139,6 +139,13 @@
       "name": "dingTalkUserId",
       "nullable": true,
       "type": "string"
+    }
+  ],
+  "values": [
+    {
+      "userName": "admin",
+      "loginName": "admin",
+      "loginPwd": "admin"
     }
   ]
 }

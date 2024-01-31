@@ -6,27 +6,6 @@
   },
   "columns": [
     {
-      "comment": "送货批次",
-      "label": "送货批次",
-      "name": "songhuopici",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "计划送货日期",
-      "label": "计划送货日期",
-      "name": "jihuasonghuoriqi",
-      "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "备注",
-      "label": "备注",
-      "name": "beizhu",
-      "nullable": true,
-      "type": "string"
-    },
-    {
       "comment": "id主键",
       "label": "id主键",
       "name": "songhuojihuaId",
@@ -66,6 +45,27 @@
       "comment": "主从关联Id",
       "label": "主从关联Id",
       "name": "mdXiaoshoudingdanId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "送货批次",
+      "label": "送货批次",
+      "name": "songhuopici",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "计划送货日期",
+      "label": "计划送货日期",
+      "name": "jihuasonghuoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "备注",
+      "label": "备注",
+      "name": "beizhu",
       "nullable": true,
       "type": "string"
     }

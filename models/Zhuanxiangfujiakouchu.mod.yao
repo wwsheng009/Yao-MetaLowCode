@@ -6,6 +6,22 @@
   },
   "columns": [
     {
+      "comment": "继续教育",
+      "label": "继续教育",
+      "name": "jixiaoxinzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "大病医疗",
+      "label": "大病医疗",
+      "name": "butie",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "zhuanxiangfujiakouchuId",
@@ -87,22 +103,6 @@
       "comment": "子女教育",
       "label": "子女教育",
       "name": "jibengongzi",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "继续教育",
-      "label": "继续教育",
-      "name": "jixiaoxinzi",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "大病医疗",
-      "label": "大病医疗",
-      "name": "butie",
       "nullable": true,
       "type": "decimal",
       "precision": 2

@@ -1,14 +1,14 @@
 {
-  "name": "Zhuanzhengshenqing",
-  "label": "转正申请",
+  "name": "Asidunasidun",
+  "label": "阿斯顿阿斯顿",
   "table": {
-    "name": "t_zhuanzhengshenqing"
+    "name": "t_asidunasidun"
   },
   "columns": [
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "zhuanzhengshenqingId",
+      "name": "asidunasidunId",
       "nullable": true,
       "type": "id",
       "primary": true
@@ -56,60 +56,26 @@
       "type": "string"
     },
     {
-      "comment": "转正员工",
-      "label": "转正员工",
-      "name": "zhuanzhengyuangong",
+      "comment": "金额",
+      "label": "金额",
+      "name": "jine",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "微软",
+      "label": "微软",
+      "name": "weiruan",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "申请日期",
-      "label": "申请日期",
-      "name": "shenqingriqi",
+      "comment": "微软为人",
+      "label": "微软为人",
+      "name": "weiruanweiren",
       "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "员工部门",
-      "label": "员工部门",
-      "name": "yuangongbumen",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "入职日期",
-      "label": "入职日期",
-      "name": "ruzhiriqi",
-      "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "拟转正日期",
-      "label": "拟转正日期",
-      "name": "nizhuanzhengriqi",
-      "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "试用期评价",
-      "label": "试用期评价",
-      "name": "shiyongqipingjia",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "附件",
-      "label": "附件",
-      "name": "fujian",
-      "nullable": true,
-      "type": "json"
-    },
-    {
-      "comment": "姓名",
-      "label": "姓名",
-      "name": "xingming",
-      "nullable": true,
-      "type": "string"
+      "type": "decimal",
+      "precision": 2
     },
     {
       "comment": "审批流程",

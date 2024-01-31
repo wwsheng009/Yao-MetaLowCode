@@ -6,6 +6,20 @@
   },
   "columns": [
     {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "是否禁用",
+      "label": "是否禁用",
+      "name": "isDisabled",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "reportConfigId",
@@ -54,20 +68,6 @@
       "name": "reportJson",
       "nullable": true,
       "type": "longText"
-    },
-    {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "是否禁用",
-      "label": "是否禁用",
-      "name": "isDisabled",
-      "nullable": true,
-      "type": "boolean"
     }
   ]
 }

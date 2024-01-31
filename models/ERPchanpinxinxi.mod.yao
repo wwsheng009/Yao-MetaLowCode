@@ -6,6 +6,13 @@
   },
   "columns": [
     {
+      "comment": "产品权限",
+      "label": "产品权限",
+      "name": "chanpinquanxian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "eRPchanpinxinxiId",
@@ -121,18 +128,11 @@
       "precision": 2
     },
     {
-      "comment": "产品权限",
-      "label": "产品权限",
-      "name": "chanpinquanxian",
-      "nullable": true,
-      "type": "string"
-    },
-    {
       "comment": "产品图片",
       "label": "产品图片",
       "name": "chanpintupian",
       "nullable": true,
-      "type": "string"
+      "type": "json"
     },
     {
       "comment": "当前库存数",
@@ -160,7 +160,7 @@
       "label": "产品技术附件",
       "name": "chanpinjishufujian",
       "nullable": true,
-      "type": "string"
+      "type": "json"
     },
     {
       "comment": "获取方式",

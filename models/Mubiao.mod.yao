@@ -6,14 +6,6 @@
   },
   "columns": [
     {
-      "comment": "id主键",
-      "label": "id主键",
-      "name": "mubiaoId",
-      "nullable": true,
-      "type": "id",
-      "primary": true
-    },
-    {
       "comment": "创建时间",
       "label": "创建时间",
       "name": "createdOn",
@@ -26,6 +18,14 @@
       "name": "createdBy",
       "nullable": true,
       "type": "string"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "mubiaoId",
+      "nullable": true,
+      "type": "id",
+      "primary": true
     },
     {
       "comment": "最近修改时间",

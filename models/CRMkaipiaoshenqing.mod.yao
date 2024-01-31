@@ -6,6 +6,27 @@
   },
   "columns": [
     {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "cRMkaipiaoshenqingId",
@@ -24,27 +45,6 @@
       "comment": "创建用户",
       "label": "创建用户",
       "name": "createdBy",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "最近修改时间",
-      "label": "最近修改时间",
-      "name": "modifiedOn",
-      "nullable": true,
-      "type": "datetime"
-    },
-    {
-      "comment": "修改用户",
-      "label": "修改用户",
-      "name": "modifiedBy",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "所属用户",
-      "label": "所属用户",
-      "name": "ownerUser",
       "nullable": true,
       "type": "string"
     },
@@ -124,7 +124,7 @@
       "label": "附件",
       "name": "fujian",
       "nullable": true,
-      "type": "string"
+      "type": "json"
     },
     {
       "comment": "联系人",

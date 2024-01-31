@@ -6,6 +6,13 @@
   },
   "columns": [
     {
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdCaigoushenqingId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "caigouchanpinmingxiId",
@@ -38,13 +45,6 @@
       "comment": "修改用户",
       "label": "修改用户",
       "name": "modifiedBy",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "主从关联Id",
-      "label": "主从关联Id",
-      "name": "mdCaigoushenqingId",
       "nullable": true,
       "type": "string"
     },

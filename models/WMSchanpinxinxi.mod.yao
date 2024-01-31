@@ -6,6 +6,13 @@
   },
   "columns": [
     {
+      "comment": "产品权限",
+      "label": "产品权限",
+      "name": "chanpinquanxian",
+      "nullable": true,
+      "type": "string"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "wMSchanpinxinxiId",
@@ -117,14 +124,7 @@
       "label": "产品图片",
       "name": "chanpintupian",
       "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "产品权限",
-      "label": "产品权限",
-      "name": "chanpinquanxian",
-      "nullable": true,
-      "type": "string"
+      "type": "json"
     }
   ]
 }

@@ -6,6 +6,13 @@
   },
   "columns": [
     {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "wMSgongyingshangxinxiId",
@@ -26,13 +33,6 @@
       "name": "createdBy",
       "nullable": true,
       "type": "string"
-    },
-    {
-      "comment": "最近修改时间",
-      "label": "最近修改时间",
-      "name": "modifiedOn",
-      "nullable": true,
-      "type": "datetime"
     },
     {
       "comment": "修改用户",
@@ -131,7 +131,7 @@
       "label": "合同附件",
       "name": "hetongfujian",
       "nullable": true,
-      "type": "string"
+      "type": "json"
     },
     {
       "comment": "供应商地址",
