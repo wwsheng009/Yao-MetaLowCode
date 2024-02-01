@@ -116,6 +116,23 @@ function login(payload) {
 
   const teamEntity = getEntityByNameCache("Team");
 
+  const timeout = 60 * 60 * 8;
+  const sessionId = Process("utils.str.UUID");
+  let userPayload = { ...userData };
+  delete userPayload.loginPwd;
+  const jwtOptions = {
+    timeout: timeout,
+    sid: sessionId,
+  };
+  const jwtClaims = { user_name: user.name };
+  //需要注意的是在这里无法生成studio的token,因为这个处理器只接受3个参数，
+  //而生成studio的token需要在第4个参数里传入secretkey
+  const jwt = Process("utils.jwt.Make", userData.userId, jwtClaims, jwtOptions);
+  Process("session.set", "user", userPayload, timeout, sessionId);
+  Process("session.set", "token", jwt.token, timeout, sessionId);
+  Process("session.set", "user_id", userData.userId, timeout, sessionId);
+
+
   return {
     departmentName: departmentName,
     mobilePhone: userData.mobilePhone,
@@ -126,6 +143,8 @@ function login(payload) {
     userId: `${userEntity.entityCode}-${userData.userId}`,
     ownerTeam: teams.map((t) => `${teamEntity.entityCode}-${t.teamId}`),
     email: userData.email,
+    token: jwt.token,
+    expires_at: jwt.expires_at,
   };
 }
 
