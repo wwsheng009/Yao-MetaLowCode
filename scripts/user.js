@@ -13,26 +13,26 @@ function getFilePath(userId) {
   if (user.avatar) {
     const url = user.avatar[0]?.url;
     if (url) {
-      const fname = url.split("=")[1]
+      const fname = url.split("=")[1];
       return `/upload/${fname}`;
     }
   }
-  throw Error("error happens")
+  throw Error(`用户:${idstr}头像未设置`);
 }
 function logout() {}
 function getLoginUser() {
-  return {
-    departmentName: "公司总部",
-    mobilePhone: "15215478481",
-    loginName: "admin",
-    departmentId: "0000022-00000000000000000000000000000001",
-    jobTitle: 1,
-    userName: "系统管理员",
-    userId: "21-1",
-    ownerTeam: [
-    ],
-    email: "",
-  };
+  return Process("session.get", "user");
+  // return {
+  //   departmentName: "公司总部",
+  //   mobilePhone: "15215478481",
+  //   loginName: "admin",
+  //   departmentId: "0000022-00000000000000000000000000000001",
+  //   jobTitle: 1,
+  //   userName: "系统管理员",
+  //   userId: "21-1",
+  //   ownerTeam: [],
+  //   email: "",
+  // };
 }
 function listUser(entity) {
   return [
@@ -52,6 +52,12 @@ function listUser(entity) {
 }
 function getRoleData(roleId) {}
 function deleteUser(userId) {
+  const [entityCode,id] = userId.split("-")
+  if (id === 1) {
+    throw Error(`系统管理员不能删除!`)
+  }
+  Process("models.User.delete",id)
+  
   return { code: 200, error: null, message: "success", data: true };
   return { code: 201, error: "系统管理员不能删除!", message: null, data: null };
 }
@@ -69,7 +75,7 @@ function saveUser(formModel, entityName, idstr) {
   //   loginPwd: "123456",
   //   avatar: null,
   // };
-  return Process("scripts.curd.saveRecord",entityName,idstr,formModel)
+  return Process("scripts.curd.saveRecord", entityName, idstr, formModel);
 }
 
 /**
@@ -118,8 +124,9 @@ function login(payload) {
 
   const timeout = 60 * 60 * 8;
   const sessionId = Process("utils.str.UUID");
-  let userPayload = { ...userData };
-  delete userPayload.loginPwd;
+  // let userPayload = { ...userData };
+
+  // delete userPayload.loginPwd;
   const jwtOptions = {
     timeout: timeout,
     sid: sessionId,
@@ -128,12 +135,8 @@ function login(payload) {
   //需要注意的是在这里无法生成studio的token,因为这个处理器只接受3个参数，
   //而生成studio的token需要在第4个参数里传入secretkey
   const jwt = Process("utils.jwt.Make", userData.userId, jwtClaims, jwtOptions);
-  Process("session.set", "user", userPayload, timeout, sessionId);
-  Process("session.set", "token", jwt.token, timeout, sessionId);
-  Process("session.set", "user_id", userData.userId, timeout, sessionId);
 
-
-  return {
+  const userPayload = {
     departmentName: departmentName,
     mobilePhone: userData.mobilePhone,
     departmentId: departmentId,
@@ -146,14 +149,20 @@ function login(payload) {
     token: jwt.token,
     expires_at: jwt.expires_at,
   };
+
+  Process("session.set", "user", userPayload, timeout, sessionId);
+  Process("session.set", "token", jwt.token, timeout, sessionId);
+  Process("session.set", "user_id", userData.userId, timeout, sessionId);
+
+  return userPayload;
 }
 
 function updateLoginUser(formModel, idStr) {
   console.log("updateLoginUser", formModel, idStr);
   if (formModel.avatar) {
-    formModel.avatar = JSON.parse(formModel.avatar)
+    formModel.avatar = JSON.parse(formModel.avatar);
   }
-  const [_,id] = idStr.split("-")
+  const [_, id] = idStr.split("-");
   Process("models.user.update", id, formModel);
 }
 function addUserRole(body) {}
