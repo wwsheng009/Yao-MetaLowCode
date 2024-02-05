@@ -34,6 +34,15 @@
         "status": 200,
         "type": "application/json"
       }
+    },{
+      "path": "delTeamOrRoleUsersUser",
+      "method": "get",
+      "process": "scripts.user.delTeamOrRoleUsersUser",
+      "in": ["$query.id", "$query.userId"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
     },
     {
       "path": "listUser",

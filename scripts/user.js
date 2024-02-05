@@ -1,7 +1,8 @@
 // function getLoginUser() {
 //   return { code: 403, error: "请登录", message: "用户未登录", data: "" };
 // }
-const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
+const { getEntityByNameCache, getEntityByCodeCache, getUUID } =
+  Require("sys.lib");
 
 function getFilePath(userId) {
   let idstr = userId;
@@ -112,14 +113,14 @@ function login(payload) {
   if (!userData) {
     throw Error(`用户不存在：${user}`);
   }
-  const userEntity = getEntityByNameCache("User");
+  // const userEntity = getEntityByNameCache("User");
 
   Process("utils.pwd.Verify", password, userData.loginPwd);
 
   let departmentName = "";
   let departmentId = "";
   if (userData.departmentId) {
-    const departEntity = getEntityByNameCache("Department");
+    // const departEntity = getEntityByNameCache("Department");
     departmentName = Process(
       "models.Department.find",
       userData.departmentId
@@ -130,7 +131,7 @@ function login(payload) {
     wheres: [{ column: "ownerUser", value: userData.userId }],
   });
 
-  const teamEntity = getEntityByNameCache("Team");
+  // const teamEntity = getEntityByNameCache("Team");
 
   const timeout = 60 * 60 * 8;
   const sessionId = Process("utils.str.UUID");
@@ -187,18 +188,75 @@ function updateLoginUser(formModel, idStr) {
 function addUserRole(body) {
   // body = { id: "21-1", nodeRoleList: [{ name: "test", id: "23-1" }] };
   // const [entityCode, id] = body.id.split("-");
-  const [{ autoId }] = Process("models.user.get", {
+  // const [{ autoId }] = Process("models.user.get", {
+  //   wheres: [
+  //     {
+  //       column: "userId",
+  //       value: body.id,
+  //     },
+  //   ],
+  // });
+
+  Process("models.ReferenceListMap.deletewhere", {
     wheres: [
       {
-        column: "userId",
+        column: "objectId",
         value: body.id,
+      },
+      {
+        column: "fieldName",
+        value: "roles",
+      },
+    ],
+  });
+  const mapEntity = getEntityByNameCache("ReferenceListMap");
+  const data = body.nodeRoleList.reduce((list, role) => {
+    list.push({
+      mapId: getUUID(mapEntity.entityCode),
+      entityName: "User",
+      fieldName: "roles",
+      objectId: body.id, //用户id
+      toId: role.id, //角色ID
+    });
+    return list;
+  }, []);
+  Process("models.ReferenceListMap.eachsave", data);
+}
+function getUserRole(userId) {
+  const roleList = Process("models.ReferenceListMap.get", {
+    wheres: [
+      {
+        column: "entityName",
+        value: "User",
+      },
+      {
+        column: "fieldName",
+        value: "roles",
+      },
+      {
+        column: "objectId",
+        value: userId,
       },
     ],
   });
 
-  Process("models.user.update", autoId, { roles: body.nodeRoleList });
+  return roleList.reduce((list, r) => {
+    const [role] = Process("models.role.get", {
+      wheres: [
+        {
+          column: "roleId",
+          value: r.toId,
+        },
+      ],
+    });
+    list.push({
+      roleId: role.roleId,
+      roleName: role.roleName,
+      description: role.description,
+    });
+    return list;
+  }, []);
 }
-function getUserRole(userId) {}
 
 /**
  *
@@ -214,62 +272,118 @@ function checkRight(id, rightType, entityName) {
 function getRightMap() {
   //todo根据用户信息进行权限信息处理。
 
-  const user_id = Process("session.get", "user_id");
+  const userId = Process("session.get", "user_id");
 
-  let rightMap = {
-    r6000: true,
-    r6001: true,
-    r6002: true,
-    r6003: true,
-    r6005: true,
-    r6006: true,
-    r6007: true,
-    r6008: true,
-    r6009: true,
-    r6010: true,
-    r6011: true,
-    r6013: true,
-    r6014: true,
-    r6015: true, //触发器日志
-    r6016: true,
-    r6017: true,
-  };
+  if (userId == "0000021-00000000000000000000000000000001") {
+    let rightMap = {
+      r6000: true,
+      r6001: true,
+      r6002: true,
+      r6003: true,
+      r6005: true,
+      r6006: true,
+      r6007: true,
+      r6008: true,
+      r6009: true,
+      r6010: true,
+      r6011: true,
+      r6013: true,
+      r6014: true,
+      r6015: true, //触发器日志
+      r6016: true,
+      r6017: true,
+    };
 
-  const codelist = Process("models.sys.entity.get", {
-    select: ["entityCode"],
-    limit: 10000,
-  });
-  //21 用户管理 User
-  //22 部门管理 Department
-  //23 权限角色 Role
-  //24 团队管理 Team
-  //30 审批流程
-  //45 报表设计
-  //48 触发器列表
-  //52 仪表盘
-
-  [21, 22, 23, 24, 30, 45, 48, 52].forEach((n) => {
-    codelist.push({
-      entityCode: n,
+    const codelist = Process("models.sys.entity.get", {
+      select: ["entityCode"],
+      limit: 10000,
     });
+    //21 用户管理 User
+    //22 部门管理 Department
+    //23 权限角色 Role
+    //24 团队管理 Team
+    //30 审批流程
+    //45 报表设计
+    //48 触发器列表
+    //52 仪表盘
+
+    [21, 22, 23, 24, 30, 45, 48, 52].forEach((n) => {
+      codelist.push({
+        entityCode: n,
+      });
+    });
+
+    //操作：
+    //1 查看权限
+    //2 新建权限
+    //3 修改权限
+    //4 删除权限
+    //5 分配权限
+    //6 共享权限
+
+    codelist.forEach((entity) => {
+      rightMap[`r${entity.entityCode}-1`] = 50;
+      rightMap[`r${entity.entityCode}-2`] = 50;
+      rightMap[`r${entity.entityCode}-3`] = 50;
+      rightMap[`r${entity.entityCode}-4`] = 50;
+      rightMap[`r${entity.entityCode}-5`] = 50;
+      rightMap[`r${entity.entityCode}-6`] = 50;
+    });
+
+    return rightMap;
+  }
+  const roleList = Process("models.ReferenceListMap.get", {
+    wheres: [
+      {
+        column: "entityName",
+        value: "User",
+      },
+      {
+        column: "fieldName",
+        value: "roles",
+      },
+      {
+        column: "objectId",
+        value: userId,
+      },
+    ],
   });
 
-  //操作：
-  //1 查看权限
-  //2 新建权限
-  //3 修改权限
-  //4 删除权限
-  //5 分配权限
-  //6 共享权限
+  return roleList.reduce((obj, r) => {
+    const [role] = Process("models.role.get", {
+      wheres: [
+        {
+          column: "roleId",
+          value: r.toId,
+        },
+      ],
+    });
+    Object.assign(obj, JSON.parse(role.rightJson));
+    return obj;
+  }, {});
+}
 
-  codelist.forEach((entity) => {
-    rightMap[`r${entity.entityCode}-1`] = 50;
-    rightMap[`r${entity.entityCode}-2`] = 50;
-    rightMap[`r${entity.entityCode}-3`] = 50;
-    rightMap[`r${entity.entityCode}-4`] = 50;
-    rightMap[`r${entity.entityCode}-5`] = 50;
-    rightMap[`r${entity.entityCode}-6`] = 50;
+function delTeamOrRoleUsersUser(id, userId) {
+  const [entityCode, _] = id.split("-");
+  const mapEntity = getEntityByNameCache("Role");
+  if (userId == "0000021-00000000000000000000000000000001") {
+    throw Error("管理的权限请不要删除");
+  }
+  let fieldName = "ownerTeam";
+  // console.log("entityCode == mapEntity.entityCode",entityCode,mapEntity.entityCode)
+  if (entityCode == mapEntity.entityCode) {
+    fieldName = "roles";
+  }
+  Process("models.ReferenceListMap.deletewhere", {
+    wheres: [
+      {
+        column: "objectId",
+        value: userId,
+      },
+      {
+        column: "fieldName",
+        value: fieldName,
+      },
+    ],
   });
-
-  return rightMap;
 }
