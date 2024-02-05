@@ -146,6 +146,7 @@ function download(entityName) {
 /**
  * import the local files for entity or import all
  *
+ * yao run scripts.systemmanager_import.importData
  * @param {string|null} entityName
  */
 function importData(entityName) {
@@ -486,7 +487,11 @@ function checkRespone(response) {
   }
 }
 /**
- * import the entity from file
+ * 从文件中导入实体的定义到数据库表sys.entity与sys.entity.field
+ * 
+ * 同时在数据库中创建与实体对应的数据库表定义
+ * 
+ * 注意：此操作不会创建yao dsl文件。
  *
  * yao run scripts.systemmanager_import.importEntity
  *
@@ -735,7 +740,7 @@ function importFormLayout(entityName) {
 
     index++;
     console.log(
-      `${index}/${fileList.length}:${entityContent.entityLabel} form layout imported`
+      `${index}/${fileList.length}:${entityContent.entityLabel} 表单布局 imported`
     );
   }
 }
@@ -898,7 +903,7 @@ function importLayoutList(entityName) {
     }
     index++;
     console.log(
-      `${index}/${fileList.length}:${entityContent.entityLabel} form layout imported`
+      `${index}/${fileList.length}:${entityContent.quickFilterLabel || ""} 列表布局 imported`
     );
   }
 }

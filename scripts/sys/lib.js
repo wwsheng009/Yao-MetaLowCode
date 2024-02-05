@@ -1,4 +1,17 @@
 /**
+ * get database uuid
+ *
+ * yao run scripts.sys.lib.getUUID
+ * @param {number} entityCode
+ * @returns uuid code with length 40
+ */
+function getUUID(entityCode) {
+  const uuid = Process("utils.str.UUID").replace(/-/g, "");
+
+  return `${String(entityCode).padStart(7, "0")}-${uuid}`;
+}
+
+/**
  * 处理数据库表名分隔符，把模型标识转换化成表名，在这里一般会有一个命名规范的约束
  *
  * @param {string} pathname
@@ -173,5 +186,6 @@ module.exports = {
   getEntityByNameCache,
   getEntityByCodeCache,
   getCurrentTime,
-  getFileExtension
+  getFileExtension,
+  getUUID,
 };

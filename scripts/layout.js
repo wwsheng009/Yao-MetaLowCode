@@ -63,7 +63,7 @@ function getNavigationList() {
  * @returns
  */
 function getLayoutList(entityName) {
-  const entity = getEntityByNameCache(entityName)
+  const entity = getEntityByNameCache(entityName);
   // loadEntityToYao("LayoutConfig");
   const entityLayout = getEntityByNameCache("LayoutConfig");
 
@@ -145,7 +145,7 @@ function getLayoutList(entityName) {
  * @param {*} formModel
  */
 function saveConfig(recordId, applyType2, formData) {
-  const entityLayoutConfig = getEntityByName("LayoutConfig");
+  const entityLayoutConfig = getEntityByNameCache("LayoutConfig");
 
   // console.log("recordId:", recordId);
   let idstr = recordId;
@@ -155,16 +155,16 @@ function saveConfig(recordId, applyType2, formData) {
   }
 
   if (recordId) {
-    if (recordId.includes("-")) {
-      const [layoutEntityCode, confiId] = recordId.split("-");
-      if (layoutEntityCode != entityLayoutConfig.entityCode) {
-        throw Error(
-          `不正确的布局ID:${layoutEntityCode},期望是：${entityLayoutConfig.entityCode}`
-        );
-      }
-    } else {
-      idstr = entityLayoutConfig.entityCode + "-" + recordId;
+    // if (recordId.includes("-")) {
+    const [layoutEntityCode, confiId] = recordId.split("-");
+    if (layoutEntityCode != entityLayoutConfig.entityCode) {
+      throw Error(
+        `不正确的布局ID:${layoutEntityCode},期望是：${entityLayoutConfig.entityCode}`
+      );
     }
+    // } else {
+    //   idstr = entityLayoutConfig.entityCode + "-" + recordId;
+    // }
   }
   // applyType=LIST 列表设计
   let { applyType, config, entityCode, shareTo, configName } = formData;

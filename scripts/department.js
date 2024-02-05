@@ -1,4 +1,4 @@
-const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
+const { getEntityByNameCache, getUUID } = Require("sys.lib");
 
 // yao run scripts.department.treeData
 function treeData() {
@@ -13,7 +13,7 @@ function treeData() {
   const convertData = items.map((item) => {
     if (item.parentDepartmentId == null) {
       return {
-        id: `0000022-00000000000000000000000000000001`,//根节点，比较特殊
+        id: `0000022-00000000000000000000000000000001`, //根节点，比较特殊
         label: item.departmentName,
         parentId: item.parentDepartmentId,
       };
@@ -85,22 +85,32 @@ function saveDepartment(formModel, entityName, idstr) {
   }
 
   if (idstr) {
-    const [_, id] = idstr.split("-");
-    obj.departmentId = id;
+    // const [_, id] = idstr.split("-");
+    // obj.departmentId = id;
+    obj.departmentId = idstr;
+  } else {
+    obj.departmentId = getUUID;
   }
   Process(`models.Department.save`, obj);
 }
 
 function deleteDepartment(idStr) {
-  const [_, departmentId] = idStr.split("-");
+  // const [_, departmentId] = idStr.split("-");
   let subItems = [];
-  let item = Process(`models.Department.find`, departmentId, null);
+  let [item] = Process(`models.Department.get`, {
+    wheres: [
+      {
+        column: "departmentId",
+        value: departmentId,
+      },
+    ],
+  });
   if (item?.departmentId) {
     subItems = subItems.concat(getSubNodeItems(item.departmentId));
     subItems.push(item); //删除自己
   }
   subItems.forEach((item) => {
-    Process(`models.Department.delete`, item.departmentId);
+    Process(`models.Department.delete`, item.autoId);
   });
   return true;
 }
@@ -131,7 +141,7 @@ function getSubNodeItems(parentId) {
 function listDepartment() {
   const data = Process("models.department.get", { limit: 10000 });
 
-  const entity = getEntityByNameCache('Department');
+  const entity = getEntityByNameCache("Department");
   data.forEach((line) => {
     line.departmentId = `${entity.entityCode}-${line.departmentId}`;
     if (line.parentDepartmentId) {

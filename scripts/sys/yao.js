@@ -41,14 +41,34 @@ function entityToYaoModel(entityName) {
     table: {
       name: entity.physicalName,
     },
-    columns: entity.fieldSet.map((field) => getYaoColumnFromField(field)),
+    columns: [
+      {
+        type: "id",
+        name: "autoId",
+        label: "id",
+        primary:true,
+
+      },
+    ],
   };
+  yaoModel.columns = yaoModel.columns.concat(
+    entity.fieldSet.map((field) => getYaoColumnFromField(field))
+  );
+
   if (entityName === "User") {
     yaoModel.values = [
       {
+        userId:"0000021-00000000000000000000000000000001",
         userName: "admin",
         loginName: "admin",
         loginPwd: "admin",
+      },
+    ];
+  }else if  (entityName === "Department") {
+    yaoModel.values = [
+      {
+        departmentId:"0000022-00000000000000000000000000000001",
+        departmentName: "公司总部",
       },
     ];
   }
@@ -79,13 +99,16 @@ function getYaoColumnFromField(field) {
   column.nullable = true;
   switch (field.type) {
     case "PrimaryKey":
-      column.type = "id";
-      column.primary = true;
+      column.type = "char";
+      column.length = 40;
+      column.unique = true;
+      column.index = true;
       break;
     case "Url":
     case "Email":
     case "Text":
       column.type = "string";
+      
       break;
     case "TextArea":
       column.type = "longText";

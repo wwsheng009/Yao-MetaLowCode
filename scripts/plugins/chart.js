@@ -39,8 +39,14 @@ function queryChartData(payload) {
 }
 function updateDefault(idStr, defaultChart) {
   // /plugins/metaDataCube/chart/updateDefault?id=52-1&defaultChart=true
-  const [entityCode, id] = idStr.split("-");
-
+  const [{autoId}] = Process("models.chart.get",{
+    wheres:[
+      {
+        column:'charId',
+        value:idStr
+      }
+    ]
+  })
   // 如果是真，需要把其它的关闭掉。
   if (defaultChart) {
     Process(
@@ -59,7 +65,7 @@ function updateDefault(idStr, defaultChart) {
     );
   }
 
-  Process("models.chart.update", id, {
+  Process("models.chart.update", autoId, {
     defaultChart,
   });
 }

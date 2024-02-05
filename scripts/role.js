@@ -1,4 +1,5 @@
 const { loadEntityToYao } = Require("sys.yao");
+const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
 
 /**
  * 创建权限时的空白模板数据
@@ -56,10 +57,16 @@ function getBlankRoleData() {
   };
 }
 function getRoleData(roleId) {
-  const [entityCode, id] = roleId.split("-");
-  loadEntityToYao("Role");
-  const role = Process("models.role.find", id, {
+  // const [entityCode, id] = roleId.split("-");
+  // loadEntityToYao("Role");
+  const role = Process("models.role.get", {
     select: ["roleId", "roleName", "disabled", "description", "rightJson"],
+    wheres:[
+      {
+        column:'roleId',
+        value:roleId
+      }
+    ]
   });
   if (!role) {
     throw Error(`权限配置:${roleId}不存在`);
@@ -69,7 +76,7 @@ function getRoleData(roleId) {
     limit: 10000,
   });
   return {
-    roleId: `${entityCode}-${role.roleId}`,
+    roleId: role.roleId,//`${entityCode}-${role.roleId}`,
     roleName: role.roleName,
     disabled: role.disabled,
     description: role.description,
@@ -91,13 +98,29 @@ function saveRole(roleDTO) {
 }
 
 function deleteRole(roleId) {
-  const [entityCode, id] = roleId.split("-");
-  loadEntityToYao("Role");
-  const result = Process("models.role.delete", id);
+  // const [entityCode, id] = roleId.split("-");
+  // loadEntityToYao("Role");
+  const result = Process("models.role.deletewhere", {
+    wheres:[{
+      column:'roleId',
+      value:roleId,
+    }]
+  });
   if (!result) {
     return true;
   } else if (result.code && result.message) {
     throw Error(`删除权限失败:${roleId}=>${result.code}|${result.message}`);
   }
 }
-function listRole() {}
+function listRole() {
+  // const entity = getEntityByNameCache("Role");
+  const roleList = Process("models.role.get", {
+    select: ["roleId", "roleName"],
+    limit: 10000,
+  });
+
+  return roleList;
+  // return roleList.map((r) => {
+  //   return { roleId: `${entity.entityCode}-${r.roleId}`, roleName: r.roleName };
+  // });
+}

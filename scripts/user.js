@@ -5,12 +5,15 @@ const { getEntityByNameCache, getEntityByCodeCache } = Require("sys.lib");
 
 function getFilePath(userId) {
   let idstr = userId;
-  if (idstr.includes("-")) {
-    const [_, id] = idstr.split("-");
-    idstr = id;
-  }
-  const user = Process("models.user.find", idstr, {});
-  if (user.avatar) {
+  const [user] = Process("models.user.get", {
+    wheres: [
+      {
+        column: "userId",
+        value: idstr,
+      },
+    ],
+  });
+  if (user?.avatar) {
     const url = user.avatar[0]?.url;
     if (url) {
       const fname = url.split("=")[1];
@@ -52,12 +55,19 @@ function listUser(entity) {
 }
 function getRoleData(roleId) {}
 function deleteUser(userId) {
-  const [entityCode,id] = userId.split("-")
-  if (id === 1) {
-    throw Error(`系统管理员不能删除!`)
+  // const [entityCode, id] = userId.split("-");
+  if (userId === "0000021-00000000000000000000000000000001") {
+    throw Error(`系统管理员不能删除!`);
   }
-  Process("models.User.delete",id)
-  
+  Process("models.User.deletewhere", {
+    wheres: [
+      {
+        column: "userId",
+        value: userId,
+      },
+    ],
+  });
+
   return { code: 200, error: null, message: "success", data: true };
   return { code: 201, error: "系统管理员不能删除!", message: null, data: null };
 }
@@ -114,7 +124,7 @@ function login(payload) {
       "models.Department.find",
       userData.departmentId
     )?.name;
-    departmentId = `${departEntity.entityCode}-${userData.departmentId}`;
+    departmentId = userData.departmentId;
   }
   const teams = Process("models.team.get", {
     wheres: [{ column: "ownerUser", value: userData.userId }],
@@ -134,7 +144,7 @@ function login(payload) {
   const jwtClaims = { user_name: user.name };
   //需要注意的是在这里无法生成studio的token,因为这个处理器只接受3个参数，
   //而生成studio的token需要在第4个参数里传入secretkey
-  const jwt = Process("utils.jwt.Make", userData.userId, jwtClaims, jwtOptions);
+  const jwt = Process("utils.jwt.Make", userData.autoId, jwtClaims, jwtOptions);
 
   const userPayload = {
     departmentName: departmentName,
@@ -143,8 +153,8 @@ function login(payload) {
     jobTitle: userData.jobTitle,
     disabled: userData.disabled,
     userName: userData.userName,
-    userId: `${userEntity.entityCode}-${userData.userId}`,
-    ownerTeam: teams.map((t) => `${teamEntity.entityCode}-${t.teamId}`),
+    userId: userData.userId,
+    ownerTeam: teams,
     email: userData.email,
     token: jwt.token,
     expires_at: jwt.expires_at,
@@ -158,14 +168,36 @@ function login(payload) {
 }
 
 function updateLoginUser(formModel, idStr) {
-  console.log("updateLoginUser", formModel, idStr);
+  // console.log("updateLoginUser", formModel, idStr);
   if (formModel.avatar) {
     formModel.avatar = JSON.parse(formModel.avatar);
   }
-  const [_, id] = idStr.split("-");
-  Process("models.user.update", id, formModel);
+  // const [_, id] = idStr.split("-");
+  const [{ autoId }] = Process("models.user.get", {
+    wheres: [
+      {
+        column: "userId",
+        value: idStr,
+      },
+    ],
+  });
+  Process("models.user.update", autoId, formModel);
 }
-function addUserRole(body) {}
+
+function addUserRole(body) {
+  // body = { id: "21-1", nodeRoleList: [{ name: "test", id: "23-1" }] };
+  // const [entityCode, id] = body.id.split("-");
+  const [{ autoId }] = Process("models.user.get", {
+    wheres: [
+      {
+        column: "userId",
+        value: body.id,
+      },
+    ],
+  });
+
+  Process("models.user.update", autoId, { roles: body.nodeRoleList });
+}
 function getUserRole(userId) {}
 
 /**
@@ -181,6 +213,8 @@ function checkRight(id, rightType, entityName) {
 
 function getRightMap() {
   //todo根据用户信息进行权限信息处理。
+
+  const user_id = Process("session.get", "user_id");
 
   let rightMap = {
     r6000: true,
