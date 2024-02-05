@@ -27,7 +27,7 @@ function updateEntityToYao(entityName) {
  * @param {string} entityName
  */
 function entityToYaoModel(entityName) {
-  const entity = getEntityByNameCache(entityName);
+  const entity = getEntityByNameCache(entityName,true);
 
   if (!entity) {
     throw Error(`实体:${entityName} 不存在`);
@@ -47,7 +47,6 @@ function entityToYaoModel(entityName) {
         name: "autoId",
         label: "id",
         primary:true,
-
       },
     ],
   };
@@ -101,7 +100,9 @@ function getYaoColumnFromField(field) {
     case "PrimaryKey":
       column.type = "char";
       column.length = 40;
-      column.unique = true;
+      if (field.idFieldFlag) {
+        column.unique = true
+      }
       column.index = true;
       break;
     case "Url":

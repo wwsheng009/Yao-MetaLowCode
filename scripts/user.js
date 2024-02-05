@@ -38,21 +38,11 @@ function getLoginUser() {
   //   email: "",
   // };
 }
-function listUser(entity) {
-  return [
-    {
-      userName: "系统管理员",
-      userId: "0000021-00000000000000000000000000000001",
-    },
-    {
-      userName: "gaoyuhui",
-      userId: "0000021-2909a29a118a4a28b294cd410b460751",
-    },
-    {
-      userName: "体验",
-      userId: "0000021-4ad8495b30304b4b944afcbf748d982a",
-    },
-  ];
+function listUser() {
+  return Process("models.user.get", {
+    select: ["userId", "userName"],
+    limit: 10000,
+  });
 }
 function getRoleData(roleId) {}
 function deleteUser(userId) {
@@ -121,19 +111,16 @@ function login(payload) {
   let departmentId = "";
   if (userData.departmentId) {
     // const departEntity = getEntityByNameCache("Department");
-    const [dep] = Process(
-      "models.Department.get",
-      {
-        wheres:[
-          {
-            column:'departmentId',
-            value:userData.departmentId
-          }
-        ]
-      }
-    );
+    const [dep] = Process("models.Department.get", {
+      wheres: [
+        {
+          column: "departmentId",
+          value: userData.departmentId,
+        },
+      ],
+    });
     if (dep) {
-      departmentName  = dep.name;
+      departmentName = dep.name;
     }
     departmentId = userData.departmentId;
   }
@@ -377,7 +364,8 @@ function delTeamOrRoleUsersUser(id, userId) {
   const [entityCode, _] = id.split("-");
   const mapEntity = getEntityByNameCache("Role");
   if (userId == "0000021-00000000000000000000000000000001") {
-    throw Error("管理的权限请不要删除");
+    throw Error("管理员的权限请不要删除");
+   
   }
   let fieldName = "ownerTeam";
   // console.log("entityCode == mapEntity.entityCode",entityCode,mapEntity.entityCode)
@@ -396,4 +384,132 @@ function delTeamOrRoleUsersUser(id, userId) {
       },
     ],
   });
+}
+
+function removeDuplicates(stringArray) {
+  // The Set object lets you store unique values of any type, whether primitive values or object references.
+  const uniqueSet = new Set(stringArray);
+
+  // Spread operator (...) allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected.
+  const uniqueArray = [...uniqueSet];
+
+  return uniqueArray;
+}
+
+function teamOrRoleUsers(id) {
+  
+  // id = 0000024-3ce6b92d5b304babb6a8226ffe9360bd
+  const data = Process("models.ReferenceListMap.get", {
+    select: ["objectId"],
+    wheres: [
+      {
+        column: "toId",
+        value: id,
+      },
+      {
+        column: "entityName",
+        value: "User",
+      },
+      {
+        column: "fieldName",
+        op: "in",
+        value: ["roles", "ownerTeam"],
+      },
+    ],
+    limit: 10000,
+  });
+  console.log("data",data)
+  const userIds = removeDuplicates(data.map((f) => f.objectId));
+  return userIds.map((u) => {
+    const [userData] = Process("models.user.get", {
+      select:["userId","userName","avatar"],
+      wheres: [
+        {
+          column: "userId",
+          value: u,
+        },
+      ],
+    });
+    if (userData.avatar) {
+      userData.userAvatar = JSON.parse(userData.avatar)
+      delete userData.avatar;
+    }
+   
+    userData.roleIds = Process("models.ReferenceListMap.get", {
+      wheres: [
+        {
+          column: "entityName",
+          value: "User",
+        },
+        {
+          column: "fieldName",
+          value: "roles",
+        },
+        {
+          column: "objectId",
+          value: u,
+        },
+      ],
+    }).map((f) => f.toId);
+
+    userData.teamIds = Process("models.ReferenceListMap.get", {
+      wheres: [
+        {
+          column: "entityName",
+          value: "User",
+        },
+        {
+          column: "fieldName",
+          value: "ownerTeam",
+        },
+        {
+          column: "objectId",
+          value: u,
+        },
+      ],
+    }).map((f) => f.toId);
+    return userData;
+  });
+
+  // return [
+  //   {
+  //     userId: "0000021-00000000000000000000000000000001",
+  //     userName: "系统管理员",
+  //     teamIds: [
+  //       "0000024-4282ab63811645c483d1bff3318a013a",
+  //       "0000024-4f7cba893f494d699c519b19177b726a",
+  //     ],
+  //     roleIds: ["0000023-00000000000000000000000000000001"],
+  //     departmentName: "公司总部",
+  //     userAvatar: null,
+  //   },
+  // ];
+}
+
+// 添加团队成员
+function addTeamOrRoleUsers(body) {
+  Process("models.ReferenceListMap.deletewhere", {
+    wheres: [
+      {
+        column: "objectId",
+        value: body.id,
+      },
+      {
+        column: "fieldName",
+        value: "ownerTeam",
+      },
+    ],
+  });
+  const mapEntity = getEntityByNameCache("ReferenceListMap");
+  const data = body.nodeRoleList.reduce((list, user) => {
+    list.push({
+      mapId: getUUID(mapEntity.entityCode),
+      entityName: "User",
+      fieldName: "ownerTeam",
+      objectId: user.id, //用户id
+      toId: body.id, //team ID
+    });
+    return list;
+  }, []);
+  Process("models.ReferenceListMap.eachsave", data);
 }

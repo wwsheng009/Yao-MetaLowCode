@@ -1,8 +1,28 @@
 function listTeam(query) {}
 // 保存团队
-function saveTeam(entity, id, formModel) {}
+function saveTeam(entityName, id, formModel) {
+  return Process("scripts.curd.saveRecord", entityName, id, formModel);
+}
 // 删除团队
-function delTeam(teamId) {}
+function delTeam(teamId) {
+  Process("models.team.deletewhere", {
+    wheres: [
+      {
+        column: "teamId",
+        value: teamId,
+      },
+    ],
+  });
+
+  Process("models.ReferenceListMap.deletewhere", {
+    wheres: [
+      {
+        column: "toId",
+        value: teamId,
+      },
+    ],
+  });
+}
 // 删除团队成员
 function delTeamMembers(id, userId) {}
 // 添加团队成员

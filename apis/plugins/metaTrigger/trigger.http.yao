@@ -88,6 +88,13 @@
       "process": "scripts.plugins.trigger.getDataRevokeEntityList",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "/log",
+      "method": "post",
+      "process": "scripts.plugins.trigger.log",
+      "in": [":payload"],
+      "out": { "status": 200, "type": "application/json" }
     }
   ]
 }

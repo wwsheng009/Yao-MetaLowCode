@@ -61,12 +61,12 @@ function getRoleData(roleId) {
   // loadEntityToYao("Role");
   const role = Process("models.role.get", {
     select: ["roleId", "roleName", "disabled", "description", "rightJson"],
-    wheres:[
+    wheres: [
       {
-        column:'roleId',
-        value:roleId
-      }
-    ]
+        column: "roleId",
+        value: roleId,
+      },
+    ],
   });
   if (!role) {
     throw Error(`权限配置:${roleId}不存在`);
@@ -76,11 +76,11 @@ function getRoleData(roleId) {
     limit: 10000,
   });
   return {
-    roleId: role.roleId,//`${entityCode}-${role.roleId}`,
+    roleId: role.roleId, //`${entityCode}-${role.roleId}`,
     roleName: role.roleName,
     disabled: role.disabled,
     description: role.description,
-    rightValueMap: JSON.parse(role.rightJson),
+    rightValueMap: role.rightJson ? JSON.parse(role.rightJson) : {},
     rightEntityList,
   };
 }
@@ -101,10 +101,12 @@ function deleteRole(roleId) {
   // const [entityCode, id] = roleId.split("-");
   // loadEntityToYao("Role");
   const result = Process("models.role.deletewhere", {
-    wheres:[{
-      column:'roleId',
-      value:roleId,
-    }]
+    wheres: [
+      {
+        column: "roleId",
+        value: roleId,
+      },
+    ],
   });
   if (!result) {
     return true;

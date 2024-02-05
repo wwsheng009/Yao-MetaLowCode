@@ -202,6 +202,8 @@ function updateDataLineReference(refFieldsMap, line) {
 /**
  *
  * 通用查询接口
+ *
+ * yao run scripts.curd.listQuery
  * @param {*} mainEntity 实体名称
  * @param {*} fieldsList 要显示的字段列表
  * @param {*} filter { equation="AND", items:[{  "fieldName": "flowName", "op": "LK", "value": "修改"}] }  过滤
@@ -264,7 +266,7 @@ function listQuery({
   }
 
   if (filter != null && Array.isArray(filter.items) && filter.items.length) {
-    queryParam.wheres =  queryParam.wheres || []
+    queryParam.wheres = queryParam.wheres || [];
     filter.items.forEach((f1, idx) => {
       let condition = {
         column: f1.fieldName,
@@ -305,6 +307,15 @@ function listQuery({
       }
 
       queryParam.wheres.push(condition);
+    });
+  }
+  if (Array.isArray(sortFields) && sortFields.length) {
+    queryParam.orders = queryParam.orders || [];
+    sortFields.forEach((field) => {
+      queryParam.orders.push({
+        column: field.fieldName,
+        option: field.type.toLowerCase(), //DESC/ASC
+      });
     });
   }
 
@@ -457,7 +468,10 @@ function refFieldQuery(
   )?.name;
 
   // 引用设置中可能有多个配置。
-  let defaultFieldList = [];
+  let defaultFieldList = refEntity.fieldSet
+    .filter((f) => f.type === "Text")
+    .map((f) => f.name);
+    
   if (Array.isArray(refField.referenceSetting)) {
     let refConfig = refField.referenceSetting.find(
       (ref) => ref.entityName === refEntityName
@@ -848,7 +862,7 @@ function getEntityCodeList(entityName) {
  * @param {*} fieldsList 需要获取的字段名称
  */
 function queryById(entityId, fieldsList) {
-    const [entityCode, _] = entityId.split("-");
+  const [entityCode, _] = entityId.split("-");
 
   const entity = getEntityByCodeCache(entityCode);
   if (entity == null) {

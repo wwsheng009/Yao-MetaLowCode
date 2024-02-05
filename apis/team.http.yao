@@ -58,7 +58,7 @@
       "path": "saveTeam",
       "method": "post",
       "process": "scripts.team.saveTeam",
-      "in": ["$query.entity", "$query.entity", ":payload"],
+      "in": ["$query.entity", "$query.id", ":payload"],
       "out": {
         "status": 200,
         "type": "application/json"

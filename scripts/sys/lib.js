@@ -139,6 +139,12 @@ function getEntityByNameCache(entityName, bypass) {
         query: {
           // select: ["name", "label", "type"],
           limit: 10000,
+          orders: [
+            {
+              column: "fieldId",
+              option: "asc",
+            },
+          ],
         },
       },
     },

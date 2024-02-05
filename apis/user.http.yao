@@ -7,7 +7,7 @@
     {
       "path": "login",
       "method": "post",
-      "guard":"-",
+      "guard": "-",
       "process": "scripts.user.login",
       "in": [":payload"],
       "out": {
@@ -34,7 +34,8 @@
         "status": 200,
         "type": "application/json"
       }
-    },{
+    },
+    {
       "path": "delTeamOrRoleUsersUser",
       "method": "get",
       "process": "scripts.user.delTeamOrRoleUsersUser",
@@ -115,10 +116,30 @@
       }
     },
     {
+      "path": "teamOrRoleUsers",
+      "method": "get",
+      "process": "scripts.user.teamOrRoleUsers",
+      "in": ["$query.id"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "addTeamOrRoleUsers",
+      "method": "post",
+      "process": "scripts.user.addTeamOrRoleUsers",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
       "path": "avatar",
       "method": "get",
       "process": "flows.avatar",
-      "guard":"-",
+      "guard": "-",
       "in": ["$query.userId"],
       "out": {
         "status": 200,

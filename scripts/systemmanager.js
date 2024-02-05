@@ -18,7 +18,13 @@ function getAllTagsOfEntity() {
         column: "tags",
         op: "notnull",
       },
+      {
+        column: "tags",
+        op: "ne",
+        value: "",
+      },
     ],
+    limit:10000,
   });
 
   const uniqueTags = new Set();
@@ -990,7 +996,6 @@ function getFieldListOfFilter(entityName) {
       //   label: f.label,
       //   type: f.type,
       // });
-
       // refEntity.fieldSet.forEach((ref) => {
       //   if (ref.idFieldFlag !== true) {
       //   list.push({
@@ -1258,7 +1263,7 @@ function getRefFieldExtras(entityName, fieldName) {
     const item = referEntity.fieldSet?.find((f) => f.name == fieldName);
     return item?.label || "";
   }
-  referenceSetting.fieldList?.forEach((item) => {
+  referenceSetting?.fieldList?.forEach((item) => {
     let label = getLabel(item);
     selectedFieldItems.push({
       name: item,

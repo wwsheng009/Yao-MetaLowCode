@@ -171,7 +171,7 @@ function updateIdFieldName(entity) {
   }
   if (!entity.idFieldName) {
     if (Array.isArray(entity.fieldSet)) {
-      const primaryField = entity.fieldSet.find((f) => f.type == "PrimaryKey");
+      const primaryField = entity.fieldSet.find((f) => f.idFieldFlag == true);
       if (primaryField) {
         entity.idFieldName = primaryField.name;
       }
