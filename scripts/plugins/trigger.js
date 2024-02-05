@@ -1,3 +1,6 @@
+const { getEntityByNameCache, getEntityByCodeCache, getUUID } =
+  Require("sys.lib");
+
 function queryChartData({
   chartType,
   entityName,
@@ -9,9 +12,59 @@ function queryChartData({
 
 function dataUpdateEntityList(entityCode) {
   console.log(`dataUpdateEntityList no implement yet`);
+  return dataAutoCreateEntityList(entityCode);
 }
-function dataAutoCreate(entityCode) {
+function dataAutoCreateEntityList(entityCode) {
   console.log(`dataAutoCreate no implement yet`);
+
+  const entity = getEntityByCodeCache(entityCode, true);
+  let fields = entity.fieldSet.filter(
+    (f) => f.type === "Reference" && f.reserved == false
+  );
+
+  return fields.reduce((list, f) => {
+    let referTo = f.referTo.split(",")[0];
+    const refEntity = getEntityByNameCache(referTo);
+
+    if (refEntity.entityCode > 1000) {
+      list.push({
+        entityLabel: refEntity.label,
+        entityCode: refEntity.entityCode,
+        fieldName: f.name,
+        isReferenced: false,
+        entityName: refEntity.name,
+        label: `${refEntity.label}(${f.label})`,
+      });
+    }
+
+    return list;
+  }, []);
+  // return [
+  //   {
+  //     entityLabel: "销售订单",
+  //     entityCode: 1013,
+  //     fieldName: "xuanzexiaoshoudingdan",
+  //     isReferenced: false,
+  //     entityName: "Xiaoshoudingdan",
+  //     label: "销售订单(选择销售订单)",
+  //   },
+  //   {
+  //     entityLabel: "仓库管理",
+  //     entityCode: 1006,
+  //     fieldName: "chukucangku",
+  //     isReferenced: false,
+  //     entityName: "Cangkuguanli",
+  //     label: "仓库管理(出库仓库)",
+  //   },
+  //   {
+  //     entityLabel: "客户管理",
+  //     entityCode: 1008,
+  //     fieldName: "kehumingcheng",
+  //     isReferenced: false,
+  //     entityName: "Kehuguanli",
+  //     label: "客户管理(客户名称)",
+  //   },
+  // ];
 }
 function aggregationEntityList(entityCode) {
   console.log(`aggregationEntityList no implement yet`);
@@ -47,8 +100,7 @@ function aviatorValidate(payload) {
 function getEntityCode(query) {}
 
 function triggerSave(id, payload) {
-  console.log(`triggerSave no implement yet ${id}`);
-  console.log(payload);
+  Process("scripts.curd.saveRecord", "TriggerConfig", id, payload);
 }
 function log(payload) {
   // payload = {
@@ -63,7 +115,7 @@ function log(payload) {
   //   pageNo: 1,
   //   sortFields: [{ fieldName: "createdOn", type: "DESC" }],
   // };
-  return Process("scripts.curd.listQuery",payload)
+  return Process("scripts.curd.listQuery", payload);
   // return {
   //   dataList: [],
   //   pagination: {

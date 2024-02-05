@@ -82,6 +82,11 @@ function getEntitySingleFieldByname(entityName, fieldName) {
  * @returns
  */
 function getEntityByCodeCache(entityCode, bypass) {
+
+  const yao_env = Process("utils.env.get", "YAO_ENV");
+  if (yao_env === 'development') {
+    bypass = true;
+  }
   if (!bypass) {
     const entityC = Process("session.get", `MetaEntity:${entityCode}`);
     if (entityC) {
@@ -107,6 +112,11 @@ function getEntityByCodeCache(entityCode, bypass) {
   if (!entity?.fieldSet) {
     throw Error(`实体:${entityCode}配置不正确，字段列表不存在`);
   }
+  entity?.fieldSet.forEach((field) => {
+    if (!field.updatable || !field.creatable) {
+      field.reserved = true;
+    }
+  });
   // entityCache[entityName] = entity;
   Process("session.set", `MetaEntity:${entityCode}`, entity);
   Process("session.set", `MetaEntity:${entity.name}`, entity);

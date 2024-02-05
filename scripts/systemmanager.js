@@ -973,6 +973,31 @@ function getEntitySet() {
       "internalEntityFlag",
       "tags",
     ],
+    orders: [
+      {
+        column: "entityCode",
+        option: "asc",
+      },
+    ],
+    wheres: [
+      {
+        column: "detailEntityFlag",
+        value: false,
+      },
+      {
+        column: "systemEntityFlag",
+        value: false,
+      },
+      {
+        column: "internalEntityFlag",
+        value: false,
+      },
+      {
+        column: "entityCode",
+        value: 1000,
+        op: "ge",
+      },
+    ],
     limit: 10000,
   });
 }

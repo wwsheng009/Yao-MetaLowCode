@@ -15,7 +15,7 @@
     {
       "path": "/dataAutoCreate/entityList",
       "method": "get",
-      "process": "scripts.plugins.trigger.dataAutoCreate",
+      "process": "scripts.plugins.trigger.dataAutoCreateEntityList",
       "in": ["$query.entityCode"],
       "out": { "status": 200, "type": "application/json" }
     },

@@ -255,7 +255,7 @@ function listQuery({
   }
 
   // const entity = getEntityByName(mainEntity);
-  loadEntityToYao(mainEntity);
+  // loadEntityToYao(mainEntity);
 
   let queryParam = {};
   if (fieldsList) {
@@ -809,7 +809,7 @@ function deleteRecord({ recordIds, cascades }) {
   // data = { recordIds: [2, 3], cascades: [] };
   recordIds &&
     recordIds.forEach((idstr) => {
-      // const [entityCode, id] = idstr.split("-");
+      const [entityCode, _] = idstr.split("-");
       const entity = getEntityByCodeCache(entityCode);
       // Process("yao.model.Delete", model, id);
       const idFieldName = entity.fieldSet.find(

@@ -259,16 +259,10 @@ function getAllApprovalConfigEntity(data) {}
  * @param {*} quickFilter ""  快速查询
  * @param {*} sortFields [{   "fieldName": "entityCode","type": "desc" }] 排序
  */
-function listQuery({
-  mainEntity,
-  fieldsList,
-  filter,
-  pageSize,
-  pageNo,
-  sortFields,
-  advFilter,
-  quickFilter,
-}) {}
+function listQuery(payload) {
+  return Process("scripts.curd.listQuery", payload);
+
+}
 function getEntityApprovalTaskList(entity, type) {}
 
 function configList(payload) {

@@ -21,7 +21,7 @@ function getWebSite() {
 /**
  * 下载实体定义,并导入到系统
  *
- * yao run scripts.systemmanager_import.download
+ * yao run scripts.systemmanager_import.download 'TriggerConfig'
  *
  * yao run scripts.systemmanager_import.download 'LayoutConfig'
  *
@@ -92,7 +92,7 @@ function download(entityName) {
     const fname = `/entitys/${entity.name}.json`;
     if (Process("fs.system.Exists", fname)) {
       index++;
-      continue;
+      // continue;
     }
     const props = getEntityProps(entity.name, getCookie());
     Object.assign(entity, props);
@@ -116,7 +116,83 @@ function download(entityName) {
       f = fieldData;
       Process("utils.time.Sleep", 50);
     });
+    if (entity.name === "TriggerConfig") {
+      const field = fieldSet.find((f) => f.name === "actionType");
+      field.type = "Option";
+      field.optionList = [
+        {
+          label: "字段更新",
+          value: 1,
+          displayOrder: 1,
+        },
+        {
+          label: "字段聚合",
+          value: 2,
+          displayOrder: 2,
+        },
+        {
+          label: "分组聚合",
+          value: 3,
+          displayOrder: 3,
+        },
+        {
+          label: "自动创建",
+          value: 15,
+          displayOrder: 15,
+        },
+        {
+          label: "数据校验",
+          value: 4,
+          displayOrder: 4,
+        },
+        {
+          label: "发送通知",
+          value: 5,
+          displayOrder: 5,
+        },
+        {
+          label: "自动审批",
+          value: 6,
+          displayOrder: 6,
+        },
+        {
+          label: "自动撤销审批",
+          value: 7,
+          displayOrder: 7,
+        },
+        {
+          label: "自动分配",
+          value: 8,
+          displayOrder: 8,
+        },
+        {
+          label: "自动共享",
+          value: 9,
+          displayOrder: 9,
+        },
+        {
+          label: "自动取消共享",
+          value: 10,
+          displayOrder: 10,
+        },
+        {
+          label: "自动删除",
+          value: 12,
+          displayOrder: 12,
+        },
+        {
+          label: "回调URL",
+          value: 14,
+          displayOrder: 14,
+        },
+      ];
+    }
+    console.log("fieldSet",fieldSet)
     Object.assign(entity, { fieldSet: fieldSet });
+
+    if (entity.entityCode < 1001) {
+      entity.systemEntityFlag = true; //内部表
+    }
 
     entity = updateIdFieldName(entity);
     Process(
@@ -132,6 +208,7 @@ function download(entityName) {
 
   //update the entityModel with optionList
   downloadOptionFields(entityName); //字段的OptionList,需要单独下载
+
   //update the entityModel with tagList
   downloadTagFields(entityName); //字段的TagList，也需要单独的下载
 
@@ -551,6 +628,9 @@ function importEntity(entityName) {
     if (!entity.entityCode) {
       entity.entityCode = getSystemEntityCode(entity.name);
     }
+    if (entity.entityCode < 1001) {
+      entity.systemEntityFlag = true; //内部表
+    }
     // delete entity.entityCode;
     // let entityCode = getSystemEntityCode(entity.name);
     // if (entityCode) {
@@ -571,8 +651,8 @@ function importEntity(entityName) {
     });
     fieldSet.forEach((f) => {
       delete f.fieldId;
-      if (!field.updatable || !field.creatable) {
-        field.reserved = true;
+      if (!f.updatable || !f.creatable) {
+        f.reserved = true;
       }
     });
     var res = Process("models.sys.entity.field.EachSave", fieldSet, {
