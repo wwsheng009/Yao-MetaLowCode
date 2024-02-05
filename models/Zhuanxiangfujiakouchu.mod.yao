@@ -12,14 +12,6 @@
       "primary": true
     },
     {
-      "comment": "专项附加扣除总额（元）",
-      "label": "专项附加扣除总额（元）",
-      "name": "zhuanxiangfujiakouchuzonge",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
       "comment": "id主键",
       "label": "id主键",
       "name": "zhuanxiangfujiakouchuId",
@@ -151,6 +143,14 @@
       "comment": "婴幼儿照护",
       "label": "婴幼儿照护",
       "name": "yingyouerzhaohu",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "专项附加扣除总额（元）",
+      "label": "专项附加扣除总额（元）",
+      "name": "zhuanxiangfujiakouchuzonge",
       "nullable": true,
       "type": "decimal",
       "precision": 2

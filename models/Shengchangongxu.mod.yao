@@ -12,20 +12,6 @@
       "primary": true
     },
     {
-      "comment": "工序名称",
-      "label": "工序名称",
-      "name": "gongxumingcheng",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "工序技术附件",
-      "label": "工序技术附件",
-      "name": "gongxujishufujian",
-      "nullable": true,
-      "type": "json"
-    },
-    {
       "comment": "id主键",
       "label": "id主键",
       "name": "shengchangongxuId",
@@ -83,6 +69,20 @@
       "name": "gongxubianma",
       "nullable": true,
       "type": "string"
+    },
+    {
+      "comment": "工序名称",
+      "label": "工序名称",
+      "name": "gongxumingcheng",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "工序技术附件",
+      "label": "工序技术附件",
+      "name": "gongxujishufujian",
+      "nullable": true,
+      "type": "json"
     },
     {
       "comment": "生产班组",

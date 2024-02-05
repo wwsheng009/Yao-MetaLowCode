@@ -12,35 +12,6 @@
       "primary": true
     },
     {
-      "comment": "入库产品成本总额/元",
-      "label": "入库产品成本总额/元",
-      "name": "rukuchanpinchengbenzonge",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "入库确认",
-      "label": "入库确认",
-      "name": "rukuqueren",
-      "nullable": true,
-      "type": "boolean"
-    },
-    {
-      "comment": "拍照",
-      "label": "拍照",
-      "name": "paizhao",
-      "nullable": true,
-      "type": "json"
-    },
-    {
-      "comment": "入库时间",
-      "label": "入库时间",
-      "name": "rukushijian",
-      "nullable": true,
-      "type": "datetime"
-    },
-    {
       "comment": "id主键",
       "label": "id主键",
       "name": "qitarukudanId",
@@ -127,6 +98,35 @@
       "nullable": true,
       "type": "decimal",
       "precision": 2
+    },
+    {
+      "comment": "入库产品成本总额/元",
+      "label": "入库产品成本总额/元",
+      "name": "rukuchanpinchengbenzonge",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "入库确认",
+      "label": "入库确认",
+      "name": "rukuqueren",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "拍照",
+      "label": "拍照",
+      "name": "paizhao",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "入库时间",
+      "label": "入库时间",
+      "name": "rukushijian",
+      "nullable": true,
+      "type": "datetime"
     },
     {
       "comment": "入库员",

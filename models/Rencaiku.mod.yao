@@ -12,13 +12,6 @@
       "primary": true
     },
     {
-      "comment": "入库时间",
-      "label": "入库时间",
-      "name": "rukushijian",
-      "nullable": true,
-      "type": "date"
-    },
-    {
       "comment": "id主键",
       "label": "id主键",
       "name": "rencaikuId",
@@ -202,6 +195,13 @@
       "name": "hunyuqingkuang",
       "nullable": true,
       "type": "string"
+    },
+    {
+      "comment": "入库时间",
+      "label": "入库时间",
+      "name": "rukushijian",
+      "nullable": true,
+      "type": "date"
     },
     {
       "comment": "应聘类型",

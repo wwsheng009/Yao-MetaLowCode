@@ -12,6 +12,44 @@
       "primary": true
     },
     {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "reportConfigId",
+      "nullable": true,
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
       "comment": "模板名称",
       "label": "模板名称",
       "name": "reportName",
@@ -38,44 +76,6 @@
       "name": "isDisabled",
       "nullable": true,
       "type": "boolean"
-    },
-    {
-      "comment": "最近修改时间",
-      "label": "最近修改时间",
-      "name": "modifiedOn",
-      "nullable": true,
-      "type": "datetime"
-    },
-    {
-      "comment": "修改用户",
-      "label": "修改用户",
-      "name": "modifiedBy",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "id主键",
-      "label": "id主键",
-      "name": "reportConfigId",
-      "nullable": true,
-      "type": "char",
-      "length": 40,
-      "unique": true,
-      "index": true
-    },
-    {
-      "comment": "创建时间",
-      "label": "创建时间",
-      "name": "createdOn",
-      "nullable": true,
-      "type": "datetime"
-    },
-    {
-      "comment": "创建用户",
-      "label": "创建用户",
-      "name": "createdBy",
-      "nullable": true,
-      "type": "string"
     }
   ]
 }
