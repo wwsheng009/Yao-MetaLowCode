@@ -61,21 +61,24 @@
       "label": "仓位序号",
       "name": "cangweixuhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "仓位容量/立方",
       "label": "仓位容量/立方",
       "name": "cangweirongliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "仓位备注",
       "label": "仓位备注",
       "name": "cangweibeizhu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "仓位状态",

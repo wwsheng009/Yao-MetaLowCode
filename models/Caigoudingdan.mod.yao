@@ -82,7 +82,8 @@
       "label": "采购订单名称",
       "name": "caigoudingdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "订单交付日期",
@@ -163,14 +164,16 @@
       "label": "具体地址",
       "name": "jutidizhi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "结算期限",
       "label": "结算期限",
       "name": "jiesuanqixian",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

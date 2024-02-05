@@ -68,7 +68,8 @@
       "label": "进项发票编号",
       "name": "xiaoxiangfapiaobianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发票金额(含税)/元",
@@ -90,21 +91,24 @@
       "label": "发票抬头",
       "name": "fapiaotaitou",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发票税号",
       "label": "发票税号",
       "name": "fapiaoshuihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "税种",
       "label": "税种",
       "name": "shuizhong",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "增值税税率%",
@@ -132,7 +136,8 @@
       "label": "发票号码",
       "name": "fapiaohaoma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "收票时间",

@@ -68,35 +68,40 @@
       "label": "采购退货单编号",
       "name": "caigourukudanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "采购订单名称",
       "label": "采购订单名称",
       "name": "caigoudingdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "采购订单编号",
       "label": "采购订单编号",
       "name": "caigoudingdanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "供应商名称",
       "label": "供应商名称",
       "name": "gongyingshangmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "供应商编码",
       "label": "供应商编码",
       "name": "gongyingshangbianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "退货仓库",
@@ -124,63 +129,72 @@
       "label": "产品名称",
       "name": "chanpinmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品编号",
       "label": "产品编号",
       "name": "chanpinbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "品牌",
       "label": "品牌",
       "name": "pinpai",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "规格型号",
       "label": "规格型号",
       "name": "guigexinghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "单位",
       "label": "单位",
       "name": "danwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "采购数量",
       "label": "采购数量",
       "name": "zhijianhegeshuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "已开票数量",
       "label": "已开票数量",
       "name": "yikaipiaoshuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "已付款数量",
       "label": "已付款数量",
       "name": "yifukuanshuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "已入库-退货数量",
       "label": "已入库-退货数量",
       "name": "bencirukuzongshu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "实际采购价(含税)/元",
@@ -269,14 +283,16 @@
       "label": "未入库-退货数量",
       "name": "weirukuihuoshuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "本次退货总数",
       "label": "本次退货总数",
       "name": "bencituihuozongshu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

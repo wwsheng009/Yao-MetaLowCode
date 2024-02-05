@@ -30,7 +30,8 @@
       "label": "登出类型",
       "name": "logoutType",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 50
     },
     {
       "comment": "已登出",
@@ -44,21 +45,24 @@
       "label": "sessionId",
       "name": "sessionId",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 32
     },
     {
       "comment": "浏览器",
       "label": "浏览器",
       "name": "browserName",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 20
     },
     {
       "comment": "登录ip",
       "label": "登录ip",
       "name": "ip",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 20
     },
     {
       "comment": "修改用户",

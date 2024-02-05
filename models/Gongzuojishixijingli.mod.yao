@@ -82,21 +82,24 @@
       "label": "企业名称",
       "name": "qiyemingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "岗位名称",
       "label": "岗位名称",
       "name": "gangweimingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "工作描述",
       "label": "工作描述",
       "name": "gongzuomiaoshu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

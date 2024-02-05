@@ -75,7 +75,8 @@
       "label": "生产工单名称",
       "name": "shengchangongdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "报工总数",
@@ -89,7 +90,8 @@
       "label": "生产报工单编号",
       "name": "lingliaochukudanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "报工时间",

@@ -61,7 +61,8 @@
       "label": "指标名称",
       "name": "zhibiaomingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "权重（%）",
@@ -75,49 +76,56 @@
       "label": "定性/定量指标",
       "name": "dingxing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "评分标准",
       "label": "评分标准",
       "name": "pingfenbiaozhun",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "自评说明",
       "label": "自评说明",
       "name": "pingfenyiju",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "计量单位",
       "label": "计量单位",
       "name": "jiliangdanwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "目标值",
       "label": "目标值",
       "name": "mubiaozhi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "完成值",
       "label": "完成值",
       "name": "wanchengzhi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "评分依据",
       "label": "评分依据",
       "name": "pingfenyiju1",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "自评分",

@@ -82,28 +82,32 @@
       "label": "员工状态",
       "name": "yuangongzhuangtai",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "岗位",
       "label": "岗位",
       "name": "gangwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "聘用形式",
       "label": "聘用形式",
       "name": "pinyongxingshi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "合同编号",
       "label": "合同编号",
       "name": "hetongbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "主合同",

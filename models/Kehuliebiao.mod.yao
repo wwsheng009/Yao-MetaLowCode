@@ -68,14 +68,16 @@
       "label": "客户名称",
       "name": "kehumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "手机号",
       "label": "手机号",
       "name": "shoujihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "证件类型",
@@ -89,7 +91,8 @@
       "label": "证件号码",
       "name": "zhengjianhaoma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "驾驶证类型",
@@ -103,7 +106,8 @@
       "label": "驾驶证号码",
       "name": "jiashizhenghaoma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "证件图片（正）",

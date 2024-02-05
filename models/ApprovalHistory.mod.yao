@@ -47,7 +47,7 @@
       "label": "批注",
       "name": "remark",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "是否驳回",
@@ -61,14 +61,14 @@
       "label": "扩展属性 (JSON Map)",
       "name": "attrMore",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "步骤名称",
       "label": "步骤名称",
       "name": "stepName",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "节点类型",
@@ -124,7 +124,7 @@
       "label": "签名图片",
       "name": "signatureImage",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     }
   ]
 }

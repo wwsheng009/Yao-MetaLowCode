@@ -75,14 +75,16 @@
       "label": "姓名",
       "name": "xingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "手机号",
       "label": "手机号",
       "name": "shoujihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "预计入职日期",

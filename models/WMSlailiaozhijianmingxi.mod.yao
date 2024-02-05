@@ -68,14 +68,16 @@
       "label": "检验合格数量",
       "name": "shijishouhuoshuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "检验不合格数量",
       "label": "检验不合格数量",
       "name": "shishouqueshishuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

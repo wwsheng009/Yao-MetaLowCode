@@ -89,7 +89,8 @@
       "label": "应付对账单编号",
       "name": "yingfuduizhangdanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "预计付款方式",
@@ -110,14 +111,16 @@
       "label": "银行账户",
       "name": "yinhangzhanghu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "开户银行",
       "label": "开户银行",
       "name": "kaihuyinhang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "应付对账确认",
@@ -152,28 +155,32 @@
       "label": "发票抬头",
       "name": "fapiaotaitou",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发票税号",
       "label": "发票税号",
       "name": "fapiaoshuihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "税种",
       "label": "税种",
       "name": "shuizhong",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "增值税税率 %",
       "label": "增值税税率 %",
       "name": "zengzhishuishuil",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

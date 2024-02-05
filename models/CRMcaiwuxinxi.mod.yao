@@ -75,7 +75,8 @@
       "label": "手机号",
       "name": "shoujihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "抬头类型",
@@ -89,14 +90,16 @@
       "label": "开票抬头",
       "name": "kaipiaotaitou",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "税号",
       "label": "税号",
       "name": "shuihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "开户银行",
@@ -110,7 +113,8 @@
       "label": "银行账号",
       "name": "yinhangzhanghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "客户地址",

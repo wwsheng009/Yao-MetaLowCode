@@ -96,14 +96,16 @@
       "label": "服务单号",
       "name": "fuwudanhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "第几个服务单",
       "label": "第几个服务单",
       "name": "dijigefuwudan",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "服务开始时间",
@@ -124,7 +126,8 @@
       "label": "服务需求天数",
       "name": "fuwuxuqiutianshu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "售后技术人员",

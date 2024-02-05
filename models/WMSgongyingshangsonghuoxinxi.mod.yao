@@ -75,14 +75,16 @@
       "label": "发货人姓名",
       "name": "fahuorenxingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发货人联系方式",
       "label": "发货人联系方式",
       "name": "fahuorenlianxifangshi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发货地址",
@@ -103,21 +105,24 @@
       "label": "司机姓名",
       "name": "sijixingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "司机联系方式",
       "label": "司机联系方式",
       "name": "sijilianxifangshi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "送货车牌号",
       "label": "送货车牌号",
       "name": "songhuochepaihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

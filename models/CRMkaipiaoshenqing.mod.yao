@@ -89,7 +89,8 @@
       "label": "开票申请编号",
       "name": "kaipiaoshenqingbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "开票金额/元",
@@ -118,7 +119,8 @@
       "label": "发票号码",
       "name": "fapiaohaoma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "备注",
@@ -139,14 +141,16 @@
       "label": "联系人",
       "name": "lianxiren",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "联系方式",
       "label": "联系方式",
       "name": "lianxifangshi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "寄送地址",

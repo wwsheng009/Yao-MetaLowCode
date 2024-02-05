@@ -61,21 +61,24 @@
       "label": "姓名",
       "name": "xingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "手机",
       "label": "手机",
       "name": "shouji",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "职位",
       "label": "职位",
       "name": "zhiwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

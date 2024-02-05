@@ -82,14 +82,16 @@
       "label": "合同标题",
       "name": "hetongbiaoti",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "合同订单编号",
       "label": "合同订单编号",
       "name": "hetongdingdanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "合同签订日期",
@@ -155,7 +157,8 @@
       "label": "合同金额大写",
       "name": "hetongjinedaxie",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "合同联系人",

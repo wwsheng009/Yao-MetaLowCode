@@ -68,7 +68,8 @@
       "label": "简历编号",
       "name": "jianlibianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "简历上传",
@@ -103,7 +104,8 @@
       "label": "姓名",
       "name": "xingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "性别",
@@ -117,7 +119,8 @@
       "label": "民族",
       "name": "minzu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "籍贯",
@@ -138,14 +141,16 @@
       "label": "手机",
       "name": "shouji",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "邮箱",
       "label": "邮箱",
       "name": "youxiang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "出生年月日",
@@ -159,7 +164,8 @@
       "label": "年龄",
       "name": "nianling",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "最高学历",
@@ -173,14 +179,16 @@
       "label": "学校",
       "name": "xuexiao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "专业",
       "label": "专业",
       "name": "zhuanye",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "毕业时间",

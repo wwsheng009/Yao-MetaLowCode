@@ -75,14 +75,16 @@
       "label": "销售订单名称",
       "name": "xiaoshoudingdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "销售订单编号",
       "label": "销售订单编号",
       "name": "xiaoshoudingdanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "客户名称",
@@ -96,7 +98,8 @@
       "label": "生产计划名称",
       "name": "shengchanjihuamingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "计划开始日期",
@@ -124,7 +127,8 @@
       "label": "生产计划编号",
       "name": "shengchanjihuabianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

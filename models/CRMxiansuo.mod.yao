@@ -68,35 +68,40 @@
       "label": "客户名称",
       "name": "kehumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "手机号",
       "label": "手机号",
       "name": "shoujihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "联系人",
       "label": "联系人",
       "name": "lianxiren",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "部门",
       "label": "部门",
       "name": "bumen",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "职务",
       "label": "职务",
       "name": "zhiwu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "线索池",

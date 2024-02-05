@@ -68,14 +68,16 @@
       "label": "工号",
       "name": "gonghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "姓名",
       "label": "姓名",
       "name": "xingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "部门",
@@ -89,7 +91,8 @@
       "label": "岗位",
       "name": "gangwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "员工成员",
@@ -103,7 +106,8 @@
       "label": "身份证号",
       "name": "shenfenzhenghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "性别",
@@ -131,7 +135,8 @@
       "label": "户籍所在地",
       "name": "hujisuozaidi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "户籍类型",
@@ -145,7 +150,8 @@
       "label": "民族",
       "name": "minzu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "婚姻状态",
@@ -245,35 +251,40 @@
       "label": "社保账号",
       "name": "shebaozhanghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "公积金账号",
       "label": "公积金账号",
       "name": "gongjijinzhanghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "银行卡号",
       "label": "银行卡号",
       "name": "yinhangkahao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "开户行",
       "label": "开户行",
       "name": "kaihuxing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "手机号",
       "label": "手机号",
       "name": "shoujihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "常住地址",
@@ -287,7 +298,8 @@
       "label": "具体地址",
       "name": "jutidizhi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "最高学历",

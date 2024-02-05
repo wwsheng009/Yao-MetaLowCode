@@ -61,35 +61,40 @@
       "label": "关键结果标题",
       "name": "guanjianjieguobiaoti",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "进度单位",
       "label": "进度单位",
       "name": "jindudanwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "当前进度",
       "label": "当前进度",
       "name": "dangqianjindu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "起始进度",
       "label": "起始进度",
       "name": "qishijindu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "目标进度",
       "label": "目标进度",
       "name": "mubiaojindu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "进度完成情况",

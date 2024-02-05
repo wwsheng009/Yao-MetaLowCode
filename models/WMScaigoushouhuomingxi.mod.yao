@@ -68,14 +68,16 @@
       "label": "实际收货数量",
       "name": "shijishouhuoshuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "实收缺失数量",
       "label": "实收缺失数量",
       "name": "shishouqueshishuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

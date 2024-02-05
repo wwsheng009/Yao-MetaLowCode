@@ -75,14 +75,16 @@
       "label": "生产工单名称",
       "name": "shengchangongdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "退料入库单编号",
       "label": "退料入库单编号",
       "name": "tuiliaorukudanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "入库仓库",

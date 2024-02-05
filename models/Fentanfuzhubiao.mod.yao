@@ -82,21 +82,24 @@
       "label": "费用类型",
       "name": "feiyongleixing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "会计科目",
       "label": "会计科目",
       "name": "kuaijikemu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "单号",
       "label": "单号",
       "name": "danhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "提交时间",

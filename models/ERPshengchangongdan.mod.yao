@@ -103,21 +103,24 @@
       "label": "生产工单名称",
       "name": "shengchangongdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "生产工单编号",
       "label": "生产工单编号",
       "name": "shengchangongdanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产成品批次号",
       "label": "产成品批次号",
       "name": "chanchengpinpicihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

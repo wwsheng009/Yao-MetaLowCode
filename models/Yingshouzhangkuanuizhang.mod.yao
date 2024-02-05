@@ -89,7 +89,8 @@
       "label": "应收对账单编号",
       "name": "yingshouduizhangdanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "应收金额总额(含税)/元",
@@ -126,14 +127,16 @@
       "label": "银行账户",
       "name": "yinhangzhanghu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "开户银行",
       "label": "开户银行",
       "name": "kaihuyinhang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "应收对账确认",

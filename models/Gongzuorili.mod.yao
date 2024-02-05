@@ -75,7 +75,8 @@
       "label": "星期",
       "name": "xingqi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "工作状态",
@@ -89,21 +90,24 @@
       "label": "详情",
       "name": "xiangqing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "节日",
       "label": "节日",
       "name": "jieri",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "节假日加班补偿规定",
       "label": "节假日加班补偿规定",
       "name": "jiejiarijiabanbuchangguiding",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

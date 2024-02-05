@@ -82,14 +82,16 @@
       "label": "商机名称",
       "name": "shangjimingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "商机编号",
       "label": "商机编号",
       "name": "shangjibianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "销售阶段",

@@ -82,7 +82,8 @@
       "label": "仓位编码",
       "name": "cangweibianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "仓位容量/立方",
@@ -125,7 +126,8 @@
       "label": "联系电话",
       "name": "lianxidianhua",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

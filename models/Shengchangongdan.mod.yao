@@ -68,14 +68,16 @@
       "label": "生产工单号",
       "name": "shengchangongdanhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "车间编号",
       "label": "车间编号",
       "name": "chejianbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "生产负责人",

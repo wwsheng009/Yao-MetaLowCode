@@ -68,42 +68,48 @@
       "label": "品牌",
       "name": "pinpai",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "车型",
       "label": "车型",
       "name": "chexing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "车牌号",
       "label": "车牌号",
       "name": "chepaihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "行驶证号",
       "label": "行驶证号",
       "name": "xingshizhenghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "车身颜色",
       "label": "车身颜色",
       "name": "cheshenyanse",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发动机号",
       "label": "发动机号",
       "name": "fadongjihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "当前里程数",

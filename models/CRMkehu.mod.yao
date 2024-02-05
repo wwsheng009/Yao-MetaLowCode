@@ -68,28 +68,32 @@
       "label": "客户名称",
       "name": "kehumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "客户编号",
       "label": "客户编号",
       "name": "kehubianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "手机号",
       "label": "手机号",
       "name": "shoujihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "客户来源",
       "label": "客户来源",
       "name": "kehulaiyuan",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "客户状态",
@@ -124,7 +128,8 @@
       "label": "客户邮箱",
       "name": "kehuyouxiang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "客户地址",

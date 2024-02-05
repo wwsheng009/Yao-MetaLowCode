@@ -155,21 +155,24 @@
       "label": "具体地址",
       "name": "jutidizhi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "结算期限",
       "label": "结算期限",
       "name": "jiesuanqixian",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "销售订单名称",
       "label": "销售订单名称",
       "name": "xiaoshoudingdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品成本总价",

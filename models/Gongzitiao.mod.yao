@@ -68,14 +68,16 @@
       "label": "薪资归属月份",
       "name": "xinziguishuyuefen",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "薪资归属年份",
       "label": "薪资归属年份",
       "name": "xinziguishunianfen",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "员工",

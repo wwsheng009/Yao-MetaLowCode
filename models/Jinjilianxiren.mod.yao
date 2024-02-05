@@ -61,14 +61,16 @@
       "label": "手机",
       "name": "shouji",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "紧急联系人姓名",
       "label": "紧急联系人姓名",
       "name": "jinjilianxirenxingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

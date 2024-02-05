@@ -75,7 +75,8 @@
       "label": "生产工单名称",
       "name": "shengchangongdanmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "出库仓库",
@@ -124,7 +125,8 @@
       "label": "领料出库单编号",
       "name": "lingliaochukudanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

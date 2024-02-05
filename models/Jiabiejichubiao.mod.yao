@@ -68,21 +68,24 @@
       "label": "请假类型",
       "name": "qingjialeixing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "请假步长",
       "label": "请假步长",
       "name": "qingjiabuchang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "适用范围",
       "label": "适用范围",
       "name": "shiyongfanwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "请假说明",

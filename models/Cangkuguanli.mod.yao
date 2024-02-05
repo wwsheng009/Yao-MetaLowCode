@@ -68,14 +68,16 @@
       "label": "仓库名称",
       "name": "cangkumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "仓库编码",
       "label": "仓库编码",
       "name": "cangkubianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "仓库地区",
@@ -89,7 +91,8 @@
       "label": "仓库容量/立方",
       "name": "cangkurongliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "仓库性质",
@@ -117,7 +120,8 @@
       "label": "联系电话",
       "name": "lianxidianhua",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "备注信息",
@@ -131,7 +135,8 @@
       "label": "具体地址",
       "name": "jutidizhi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "总入库数量",

@@ -68,7 +68,8 @@
       "label": "配置名称",
       "name": "configName",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "配置",
@@ -89,7 +90,8 @@
       "label": "应用类型",
       "name": "applyType",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "实体Code",

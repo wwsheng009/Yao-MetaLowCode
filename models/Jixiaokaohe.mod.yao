@@ -68,14 +68,16 @@
       "label": "考核主题",
       "name": "kaohezhuti",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "年份",
       "label": "年份",
       "name": "nianfen",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "考核开始时间",

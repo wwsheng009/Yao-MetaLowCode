@@ -68,21 +68,24 @@
       "label": "备料通知单编号",
       "name": "beiliaotongzhidanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "生产工单编号",
       "label": "生产工单编号",
       "name": "shengchangongdanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "车间编号",
       "label": "车间编号",
       "name": "chejianbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "生产负责人",
@@ -124,7 +127,8 @@
       "label": "拣配备料单编号",
       "name": "jianpeibeiliaodanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "备料仓库",
@@ -138,56 +142,64 @@
       "label": "产品名称",
       "name": "chanpinmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品编号",
       "label": "产品编号",
       "name": "chanpinbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品属性",
       "label": "产品属性",
       "name": "chanpinshuxing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品类型",
       "label": "产品类型",
       "name": "chanpinleixing",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "规格型号",
       "label": "规格型号",
       "name": "guigexinghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "品牌",
       "label": "品牌",
       "name": "pinpai",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "单位",
       "label": "单位",
       "name": "danwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "拣配数量",
       "label": "拣配数量",
       "name": "jianpeishuliang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品成本合计/元",
@@ -210,14 +222,16 @@
       "label": "所属库位",
       "name": "suoshukuwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "领料情况",
       "label": "领料情况",
       "name": "lingliaoqingkuang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

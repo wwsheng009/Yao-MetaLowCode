@@ -68,7 +68,8 @@
       "label": "需求编号",
       "name": "xuqiubianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "需求提交人",
@@ -145,14 +146,16 @@
       "label": "薪资区间",
       "name": "xinziqujian",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发放模式",
       "label": "发放模式",
       "name": "fafangmoshi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "人员来源",
@@ -173,14 +176,16 @@
       "label": "工作年限要求",
       "name": "gongzuonianxianyaoqiu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "年龄要求",
       "label": "年龄要求",
       "name": "nianlingyaoqiu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "岗位职责",

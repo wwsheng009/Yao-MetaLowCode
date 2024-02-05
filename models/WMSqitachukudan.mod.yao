@@ -82,7 +82,8 @@
       "label": "其他出库单编号",
       "name": "qitachukudanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "收货地址",
@@ -103,7 +104,8 @@
       "label": "出库产品总数",
       "name": "chukuchanpinzongshu",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "出库产品成本总额/元",

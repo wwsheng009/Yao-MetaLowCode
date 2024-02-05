@@ -68,14 +68,16 @@
       "label": "工序编码",
       "name": "gongxubianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "工序名称",
       "label": "工序名称",
       "name": "gongxumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "工序技术附件",

@@ -82,7 +82,8 @@
       "label": "BOM编码",
       "name": "bianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "选择生产工序",
@@ -96,14 +97,16 @@
       "label": "工序编码",
       "name": "gongxubianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "工序名称",
       "label": "工序名称",
       "name": "gongxumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "工序技术附件",
@@ -124,14 +127,16 @@
       "label": "产品名称",
       "name": "chanpinmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品编码",
       "label": "产品编码",
       "name": "chanpinbianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "客户名称",
@@ -145,14 +150,16 @@
       "label": "客户编码",
       "name": "kehubianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "报价单编号",
       "label": "报价单编号",
       "name": "baojiadanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

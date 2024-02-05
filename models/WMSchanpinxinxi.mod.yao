@@ -68,7 +68,8 @@
       "label": "产品编号",
       "name": "chanpinbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品属性",
@@ -89,21 +90,24 @@
       "label": "产品名称",
       "name": "chanpinmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "品牌",
       "label": "品牌",
       "name": "pinpai",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "规格型号",
       "label": "规格型号",
       "name": "guigexinghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "单位",

@@ -89,7 +89,8 @@
       "label": "offer 状态",
       "name": "offerzhuangtai",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "选择候选人",
@@ -103,7 +104,8 @@
       "label": "offer岗位",
       "name": "offergangwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "入职部门",
@@ -140,14 +142,16 @@
       "label": "报道联系人",
       "name": "baodaolianxiren",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "联系人电话",
       "label": "联系人电话",
       "name": "lianxirendianhua",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "短信模板",

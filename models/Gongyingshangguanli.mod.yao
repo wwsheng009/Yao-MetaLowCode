@@ -68,14 +68,16 @@
       "label": "供应商编码",
       "name": "gongyingshangbianma",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "供应商名称",
       "label": "供应商名称",
       "name": "gongyingshangmingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "供应商分类",
@@ -139,7 +141,8 @@
       "label": "具体地址",
       "name": "jutidizhi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "合同附件",
@@ -153,14 +156,16 @@
       "label": "发票抬头",
       "name": "fapiaotaitou",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "发票税号",
       "label": "发票税号",
       "name": "fapiaoshuihao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "税种",
@@ -181,14 +186,16 @@
       "label": "开户银行",
       "name": "kaihuyinhang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "银行账号",
       "label": "银行账号",
       "name": "yinhangzhanghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ]
 }

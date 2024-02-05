@@ -68,7 +68,8 @@
       "label": "任务标题",
       "name": "renwubiaoti",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "选择关联项目",
@@ -82,7 +83,8 @@
       "label": "项目名称",
       "name": "xiangmumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "负责人",

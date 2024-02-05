@@ -103,14 +103,16 @@
       "label": "报价单编号",
       "name": "baojiadanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "第几次报价",
       "label": "第几次报价",
       "name": "dijicibaojia",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "产品价格合计/元",
@@ -148,7 +150,8 @@
       "label": "金额大写",
       "name": "jinedaxie",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "报价毛利率",

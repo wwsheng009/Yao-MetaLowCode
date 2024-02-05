@@ -89,35 +89,40 @@
       "label": "开户名称",
       "name": "kaihumingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "银行卡号",
       "label": "银行卡号",
       "name": "yinhangkahao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "开户网点",
       "label": "开户网点",
       "name": "kaihuwangdian",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "支付宝账号",
       "label": "支付宝账号",
       "name": "zhifubaozhanghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "支付宝名称",
       "label": "支付宝名称",
       "name": "zhifubaomingcheng",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "供应商",
@@ -131,28 +136,32 @@
       "label": "发票抬头",
       "name": "fapiaotaitou",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "开户银行",
       "label": "开户银行",
       "name": "kaihuyinhang",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "收款银行账号",
       "label": "收款银行账号",
       "name": "shoukuanyinhangzhanghao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "税种",
       "label": "税种",
       "name": "shuizhong",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "增值税税率",

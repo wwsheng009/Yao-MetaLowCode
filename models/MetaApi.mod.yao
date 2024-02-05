@@ -54,14 +54,14 @@
       "label": "APP_ID",
       "name": "appId",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "APP_SECRET",
       "label": "APP_SECRET",
       "name": "appSecret",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "绑定用户",
@@ -75,7 +75,8 @@
       "label": "IP 白名单",
       "name": "bindIps",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 300
     }
   ]
 }

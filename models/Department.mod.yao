@@ -33,7 +33,7 @@
       "label": "部门名称",
       "name": "departmentName",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "部门说明",
@@ -54,7 +54,8 @@
       "label": "钉钉部门ID",
       "name": "dingDepartmentId",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     }
   ],
   "values": [

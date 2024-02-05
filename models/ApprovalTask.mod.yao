@@ -47,21 +47,21 @@
       "label": "步骤名称",
       "name": "stepName",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "批注",
       "label": "批注",
       "name": "remark",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "扩展属性 (JSON Map)",
       "label": "扩展属性 (JSON Map)",
       "name": "attrMore",
       "nullable": true,
-      "type": "string"
+      "type": "text"
     },
     {
       "comment": "关联实体ID",

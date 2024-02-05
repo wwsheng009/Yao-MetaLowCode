@@ -75,7 +75,8 @@
       "label": "送货单编号",
       "name": "songhuodanbianhao",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "订单签订时间",
@@ -117,7 +118,8 @@
       "label": "收货人联系方式",
       "name": "shouhuorenlianxifangshi",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "收货人姓名",

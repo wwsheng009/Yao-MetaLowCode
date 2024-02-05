@@ -68,21 +68,24 @@
       "label": "出差城市类别",
       "name": "chuchaichengshileibie",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "机票标准",
       "label": "机票标准",
       "name": "jipiaobiaozhun",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "火车票标准",
       "label": "火车票标准",
       "name": "huochepiaobiaozhun",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "住宿补贴（元/人/晚）",

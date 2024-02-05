@@ -33,14 +33,16 @@
       "label": "相关实体Id",
       "name": "entityId",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 50
     },
     {
       "comment": "相关实体名称",
       "label": "相关实体名称",
       "name": "entityName",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "删除人",
@@ -61,7 +63,8 @@
       "label": "删除渠道",
       "name": "deletedWith",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "恢复人",

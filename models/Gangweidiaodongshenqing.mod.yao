@@ -96,21 +96,24 @@
       "label": "原岗位",
       "name": "yuangangwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "现岗位",
       "label": "现岗位",
       "name": "xiangangwei",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "调动原因",
       "label": "调动原因",
       "name": "diaodongyuanyin",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "岗位调动生效时间",
@@ -124,7 +127,8 @@
       "label": "姓名",
       "name": "xingming",
       "nullable": true,
-      "type": "string"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "审批流程",
