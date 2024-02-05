@@ -6,12 +6,27 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "入库时间",
+      "label": "入库时间",
+      "name": "rukushijian",
+      "nullable": true,
+      "type": "date"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "rencaikuId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -187,13 +202,6 @@
       "name": "hunyuqingkuang",
       "nullable": true,
       "type": "string"
-    },
-    {
-      "comment": "入库时间",
-      "label": "入库时间",
-      "name": "rukushijian",
-      "nullable": true,
-      "type": "date"
     },
     {
       "comment": "应聘类型",

@@ -6,6 +6,26 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "模板名称",
+      "label": "模板名称",
+      "name": "reportName",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "报表json",
+      "label": "报表json",
+      "name": "reportJson",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
       "comment": "实体Code",
       "label": "实体Code",
       "name": "entityCode",
@@ -18,28 +38,6 @@
       "name": "isDisabled",
       "nullable": true,
       "type": "boolean"
-    },
-    {
-      "comment": "id主键",
-      "label": "id主键",
-      "name": "reportConfigId",
-      "nullable": true,
-      "type": "id",
-      "primary": true
-    },
-    {
-      "comment": "创建时间",
-      "label": "创建时间",
-      "name": "createdOn",
-      "nullable": true,
-      "type": "datetime"
-    },
-    {
-      "comment": "创建用户",
-      "label": "创建用户",
-      "name": "createdBy",
-      "nullable": true,
-      "type": "string"
     },
     {
       "comment": "最近修改时间",
@@ -56,18 +54,28 @@
       "type": "string"
     },
     {
-      "comment": "模板名称",
-      "label": "模板名称",
-      "name": "reportName",
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "reportConfigId",
       "nullable": true,
-      "type": "string"
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
-      "comment": "报表json",
-      "label": "报表json",
-      "name": "reportJson",
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
       "nullable": true,
-      "type": "longText"
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
     }
   ]
 }

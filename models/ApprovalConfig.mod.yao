@@ -6,26 +6,20 @@
   },
   "columns": [
     {
-      "comment": "结束的流程统计",
-      "label": "结束的流程统计",
-      "name": "completeTotal",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "运行中的流程统计",
-      "label": "运行中的流程统计",
-      "name": "runningTotal",
-      "nullable": true,
-      "type": "integer"
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
     },
     {
       "comment": "流程配置id",
       "label": "流程配置id",
       "name": "approvalConfigId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "最新的流程定义id",
@@ -82,6 +76,20 @@
       "name": "modifiedBy",
       "nullable": true,
       "type": "string"
+    },
+    {
+      "comment": "运行中的流程统计",
+      "label": "运行中的流程统计",
+      "name": "runningTotal",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "结束的流程统计",
+      "label": "结束的流程统计",
+      "name": "completeTotal",
+      "nullable": true,
+      "type": "integer"
     }
   ]
 }

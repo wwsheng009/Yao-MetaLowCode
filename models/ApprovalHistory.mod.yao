@@ -6,6 +6,36 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "流程任务id",
+      "label": "流程任务id",
+      "name": "approvalHistoryId",
+      "nullable": true,
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
+    },
+    {
+      "comment": "审批流程id",
+      "label": "审批流程id",
+      "name": "approvalTaskId",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "审批人",
+      "label": "审批人",
+      "name": "approver",
+      "nullable": true,
+      "type": "string"
+    },
+    {
       "comment": "审批时间",
       "label": "审批时间",
       "name": "approvalOn",
@@ -74,28 +104,6 @@
       "name": "modifiedOn",
       "nullable": true,
       "type": "datetime"
-    },
-    {
-      "comment": "流程任务id",
-      "label": "流程任务id",
-      "name": "approvalHistoryId",
-      "nullable": true,
-      "type": "id",
-      "primary": true
-    },
-    {
-      "comment": "审批流程id",
-      "label": "审批流程id",
-      "name": "approvalTaskId",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "审批人",
-      "label": "审批人",
-      "name": "approver",
-      "nullable": true,
-      "type": "string"
     },
     {
       "comment": "步骤节点",

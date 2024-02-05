@@ -6,12 +6,20 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "zhoubaoId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",

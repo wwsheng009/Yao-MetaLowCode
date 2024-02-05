@@ -6,12 +6,27 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "当前可用库存数量",
+      "label": "当前可用库存数量",
+      "name": "dangqiankeyongkucunshuliang",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "wMScaigouchanpinmingxiId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -82,13 +97,6 @@
       "name": "danwei",
       "nullable": true,
       "type": "string"
-    },
-    {
-      "comment": "当前可用库存数量",
-      "label": "当前可用库存数量",
-      "name": "dangqiankeyongkucunshuliang",
-      "nullable": true,
-      "type": "integer"
     },
     {
       "comment": "采购数量需求",

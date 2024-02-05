@@ -6,12 +6,20 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "部门Id主键",
       "label": "部门Id主键",
       "name": "departmentId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "上级部门",
@@ -47,6 +55,12 @@
       "name": "dingDepartmentId",
       "nullable": true,
       "type": "string"
+    }
+  ],
+  "values": [
+    {
+      "departmentId": "0000022-00000000000000000000000000000001",
+      "departmentName": "公司总部"
     }
   ]
 }

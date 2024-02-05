@@ -1,8 +1,8 @@
 {
-  "name": "Shengchangongdan",
-  "label": "WMS生产工单",
+  "name": "Lxx",
+  "label": "lxx",
   "table": {
-    "name": "t_shengchangongdan"
+    "name": "t_lxx"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "shengchangongdanId",
+      "name": "lxxId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,25 +64,18 @@
       "type": "string"
     },
     {
-      "comment": "生产工单号",
-      "label": "生产工单号",
-      "name": "shengchangongdanhao",
+      "comment": "aaa",
+      "label": "aaa",
+      "name": "aaa",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "车间编号",
-      "label": "车间编号",
-      "name": "chejianbianhao",
+      "comment": "bbb",
+      "label": "bbb",
+      "name": "bbb",
       "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "生产负责人",
-      "label": "生产负责人",
-      "name": "shengchanfuzeren",
-      "nullable": true,
-      "type": "string"
+      "type": "integer"
     }
   ]
 }

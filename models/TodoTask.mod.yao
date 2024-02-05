@@ -6,11 +6,10 @@
   },
   "columns": [
     {
-      "comment": "提醒方式",
-      "label": "提醒方式",
-      "name": "remindType",
-      "nullable": true,
-      "type": "string"
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
     },
     {
       "comment": "创建用户",
@@ -62,6 +61,13 @@
       "type": "string"
     },
     {
+      "comment": "提醒方式",
+      "label": "提醒方式",
+      "name": "remindType",
+      "nullable": true,
+      "type": "string"
+    },
+    {
       "comment": "待办时间",
       "label": "待办时间",
       "name": "todoDate",
@@ -80,8 +86,10 @@
       "label": "id主键",
       "name": "todoTaskId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     }
   ]
 }

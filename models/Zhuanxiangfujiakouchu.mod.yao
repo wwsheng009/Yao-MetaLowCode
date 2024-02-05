@@ -6,17 +6,15 @@
   },
   "columns": [
     {
-      "comment": "继续教育",
-      "label": "继续教育",
-      "name": "jixiaoxinzi",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
     },
     {
-      "comment": "大病医疗",
-      "label": "大病医疗",
-      "name": "butie",
+      "comment": "专项附加扣除总额（元）",
+      "label": "专项附加扣除总额（元）",
+      "name": "zhuanxiangfujiakouchuzonge",
       "nullable": true,
       "type": "decimal",
       "precision": 2
@@ -26,8 +24,10 @@
       "label": "id主键",
       "name": "zhuanxiangfujiakouchuId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -108,6 +108,22 @@
       "precision": 2
     },
     {
+      "comment": "继续教育",
+      "label": "继续教育",
+      "name": "jixiaoxinzi",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "大病医疗",
+      "label": "大病医疗",
+      "name": "butie",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
       "comment": "住房贷款",
       "label": "住房贷款",
       "name": "zhufangdaikuan",
@@ -135,14 +151,6 @@
       "comment": "婴幼儿照护",
       "label": "婴幼儿照护",
       "name": "yingyouerzhaohu",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "专项附加扣除总额（元）",
-      "label": "专项附加扣除总额（元）",
-      "name": "zhuanxiangfujiakouchuzonge",
       "nullable": true,
       "type": "decimal",
       "precision": 2

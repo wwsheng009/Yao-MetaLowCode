@@ -6,6 +6,12 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "登录用户",
       "label": "登录用户",
       "name": "loginUser",
@@ -87,8 +93,10 @@
       "label": "id主键",
       "name": "loginLogId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     }
   ]
 }

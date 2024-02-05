@@ -6,6 +6,12 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "是否过期",
       "label": "是否过期",
       "name": "overdue",
@@ -73,8 +79,10 @@
       "label": "id主键",
       "name": "backupDatabaseId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     }
   ]
 }

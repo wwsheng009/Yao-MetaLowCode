@@ -6,6 +6,12 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "触发器",
       "label": "触发器",
       "name": "triggerConfigId",
@@ -73,8 +79,10 @@
       "label": "id主键",
       "name": "triggerLogId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "异常日志",

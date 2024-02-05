@@ -6,19 +6,20 @@
   },
   "columns": [
     {
-      "comment": "最近修改时间",
-      "label": "最近修改时间",
-      "name": "modifiedOn",
-      "nullable": true,
-      "type": "datetime"
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
     },
     {
       "comment": "id主键",
       "label": "id主键",
       "name": "wMSgongyingshangxinxiId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -33,6 +34,13 @@
       "name": "createdBy",
       "nullable": true,
       "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
     },
     {
       "comment": "修改用户",

@@ -6,6 +6,29 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "shoukuanjihuaId",
+      "nullable": true,
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
       "comment": "创建用户",
       "label": "创建用户",
       "name": "createdBy",
@@ -16,21 +39,6 @@
       "comment": "最近修改时间",
       "label": "最近修改时间",
       "name": "modifiedOn",
-      "nullable": true,
-      "type": "datetime"
-    },
-    {
-      "comment": "id主键",
-      "label": "id主键",
-      "name": "shoukuanjihuaId",
-      "nullable": true,
-      "type": "id",
-      "primary": true
-    },
-    {
-      "comment": "创建时间",
-      "label": "创建时间",
-      "name": "createdOn",
       "nullable": true,
       "type": "datetime"
     },

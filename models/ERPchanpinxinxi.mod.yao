@@ -6,19 +6,20 @@
   },
   "columns": [
     {
-      "comment": "产品权限",
-      "label": "产品权限",
-      "name": "chanpinquanxian",
-      "nullable": true,
-      "type": "string"
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
     },
     {
       "comment": "id主键",
       "label": "id主键",
       "name": "eRPchanpinxinxiId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -126,6 +127,13 @@
       "nullable": true,
       "type": "decimal",
       "precision": 2
+    },
+    {
+      "comment": "产品权限",
+      "label": "产品权限",
+      "name": "chanpinquanxian",
+      "nullable": true,
+      "type": "string"
     },
     {
       "comment": "产品图片",

@@ -6,12 +6,64 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "试用期薪酬（元）",
+      "label": "试用期薪酬（元）",
+      "name": "shiyongqixinchou",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "转正薪酬（元）",
+      "label": "转正薪酬（元）",
+      "name": "zhuanzhengxinchou",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "报到日期",
+      "label": "报到日期",
+      "name": "baodaoriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "报道联系人",
+      "label": "报道联系人",
+      "name": "baodaolianxiren",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "联系人电话",
+      "label": "联系人电话",
+      "name": "lianxirendianhua",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "短信模板",
+      "label": "短信模板",
+      "name": "duanxinmuban",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "offerguanliId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -103,50 +155,6 @@
       "name": "ruzhibumen",
       "nullable": true,
       "type": "string"
-    },
-    {
-      "comment": "试用期薪酬（元）",
-      "label": "试用期薪酬（元）",
-      "name": "shiyongqixinchou",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "转正薪酬（元）",
-      "label": "转正薪酬（元）",
-      "name": "zhuanzhengxinchou",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "报到日期",
-      "label": "报到日期",
-      "name": "baodaoriqi",
-      "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "报道联系人",
-      "label": "报道联系人",
-      "name": "baodaolianxiren",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "联系人电话",
-      "label": "联系人电话",
-      "name": "lianxirendianhua",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "短信模板",
-      "label": "短信模板",
-      "name": "duanxinmuban",
-      "nullable": true,
-      "type": "longText"
     }
   ]
 }

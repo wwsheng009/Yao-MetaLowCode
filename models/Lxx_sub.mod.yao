@@ -1,8 +1,8 @@
 {
-  "name": "Shengchangongdan",
-  "label": "WMS生产工单",
+  "name": "Lxx_sub",
+  "label": "lxx_sub",
   "table": {
-    "name": "t_shengchangongdan"
+    "name": "t_lxx_sub"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "shengchangongdanId",
+      "name": "lxx_subId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -50,39 +50,25 @@
       "type": "string"
     },
     {
-      "comment": "所属用户",
-      "label": "所属用户",
-      "name": "ownerUser",
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdLxxId",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "所属部门",
-      "label": "所属部门",
-      "name": "ownerDepartment",
+      "comment": "ccc",
+      "label": "ccc",
+      "name": "ccc",
       "nullable": true,
-      "type": "string"
+      "type": "integer"
     },
     {
-      "comment": "生产工单号",
-      "label": "生产工单号",
-      "name": "shengchangongdanhao",
+      "comment": "ddd",
+      "label": "ddd",
+      "name": "ddd",
       "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "车间编号",
-      "label": "车间编号",
-      "name": "chejianbianhao",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "生产负责人",
-      "label": "生产负责人",
-      "name": "shengchanfuzeren",
-      "nullable": true,
-      "type": "string"
+      "type": "integer"
     }
   ]
 }

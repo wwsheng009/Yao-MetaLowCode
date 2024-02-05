@@ -6,6 +6,41 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "规格型号",
+      "label": "规格型号",
+      "name": "guigexinghao",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "单位",
+      "label": "单位",
+      "name": "danwei",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "采购单价(含税)/元",
+      "label": "采购单价(含税)/元",
+      "name": "caigoudanjiahanshuiyuan",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "产品图片",
+      "label": "产品图片",
+      "name": "chanpintupian",
+      "nullable": true,
+      "type": "json"
+    },
+    {
       "comment": "产品权限",
       "label": "产品权限",
       "name": "chanpinquanxian",
@@ -17,8 +52,10 @@
       "label": "id主键",
       "name": "wMSchanpinxinxiId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -96,35 +133,6 @@
       "name": "pinpai",
       "nullable": true,
       "type": "string"
-    },
-    {
-      "comment": "规格型号",
-      "label": "规格型号",
-      "name": "guigexinghao",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "单位",
-      "label": "单位",
-      "name": "danwei",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "采购单价(含税)/元",
-      "label": "采购单价(含税)/元",
-      "name": "caigoudanjiahanshuiyuan",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "产品图片",
-      "label": "产品图片",
-      "name": "chanpintupian",
-      "nullable": true,
-      "type": "json"
     }
   ]
 }

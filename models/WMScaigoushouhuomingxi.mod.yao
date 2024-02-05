@@ -6,11 +6,9 @@
   },
   "columns": [
     {
-      "comment": "id主键",
-      "label": "id主键",
-      "name": "wMScaigoushouhuomingxiId",
-      "nullable": true,
       "type": "id",
+      "name": "autoId",
+      "label": "id",
       "primary": true
     },
     {
@@ -68,6 +66,16 @@
       "name": "shishouqueshishuliang",
       "nullable": true,
       "type": "string"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "wMScaigoushouhuomingxiId",
+      "nullable": true,
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     }
   ]
 }

@@ -6,6 +6,12 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "选项值",
       "label": "选项值",
       "name": "value",
@@ -17,8 +23,10 @@
       "label": "id主键",
       "name": "statusItemId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "显示值",

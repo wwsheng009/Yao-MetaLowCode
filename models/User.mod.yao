@@ -6,12 +6,20 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "用户Id主键",
       "label": "用户Id主键",
       "name": "userId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -143,6 +151,7 @@
   ],
   "values": [
     {
+      "userId": "0000021-00000000000000000000000000000001",
       "userName": "admin",
       "loginName": "admin",
       "loginPwd": "admin"

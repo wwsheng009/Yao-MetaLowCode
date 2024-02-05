@@ -6,12 +6,28 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "付款金额/元",
+      "label": "付款金额/元",
+      "name": "shoukuanjine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
       "comment": "id主键",
       "label": "id主键",
       "name": "yingfuzhangkuancaigourukuId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "创建时间",
@@ -141,14 +157,6 @@
       "name": "shoukuanzhuangtai",
       "nullable": true,
       "type": "boolean"
-    },
-    {
-      "comment": "付款金额/元",
-      "label": "付款金额/元",
-      "name": "shoukuanjine",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
     },
     {
       "comment": "付款时间",

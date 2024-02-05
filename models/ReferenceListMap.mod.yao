@@ -6,6 +6,12 @@
   },
   "columns": [
     {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
       "comment": "实体名称",
       "label": "实体名称",
       "name": "entityName",
@@ -24,24 +30,30 @@
       "label": "记录Id",
       "name": "objectId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "主键Id",
       "label": "主键Id",
       "name": "mapId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     },
     {
       "comment": "被引用记录Id",
       "label": "被引用记录Id",
       "name": "toId",
       "nullable": true,
-      "type": "id",
-      "primary": true
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
     }
   ]
 }
