@@ -24,7 +24,7 @@ function getAllTagsOfEntity() {
         value: "",
       },
     ],
-    limit:10000,
+    limit: 10000,
   });
 
   const uniqueTags = new Set();
@@ -174,6 +174,12 @@ function getFieldListOfEntity(entity) {
             "type",
             "mainDetailFieldFlag",
           ],
+          orders: [
+            {
+              column: "fieldId",
+              option: "asc",
+            },
+          ],
         },
       },
     },
@@ -181,11 +187,11 @@ function getFieldListOfEntity(entity) {
   if (row == null) {
     throw new Error(`Entity ${entity} 不存在`);
   }
-  // row.fieldSet.forEach((field) => {
-  //   if (field.referTo) {
-  //     field.referTo = JSON.parse(field.referTo);
-  //   }
-  // });
+  row.fieldSet.forEach((field) => {
+    if (!field.updatable || !field.creatable) {
+      field.reserved = true;
+    }
+  });
   return row.fieldSet;
 
   // /**
@@ -403,11 +409,12 @@ function hasDetailEntity(entity) {}
 
 /**
  * 增加一个新的字段
+ * yao run scripts.systemmanager.addField '::{}' 'User'
  * @param {object} field
  * @param {string} entityName
  * @returns
  */
-function addField(field, entityName) {
+function addField(field, entityName, notForce) {
   // field = {
   //   name: "check", //字段名称
   //   label: "检查", //显示名称
@@ -440,7 +447,7 @@ function addField(field, entityName) {
   //   label: row.label,
   // };
   const id = Process("models.sys.entity.field.create", field);
-  updateEntityToYao(entityName);
+  updateEntityToYao(entityName, notForce);
   getEntityByNameCache(entityName, true);
 
   // 返回值

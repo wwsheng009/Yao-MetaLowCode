@@ -13,10 +13,10 @@ function loadEntityToYao(entityName) {
  * yao run scripts.sys.yao.updateEntityToYao 'User'
  * @param {string} entityName
  */
-function updateEntityToYao(entityName) {
+function updateEntityToYao(entityName,notForce) {
   const yaoModel = entityToYaoModel(entityName);
   loadYaoModel(yaoModel);
-  migrateYaoModel(yaoModel);
+  migrateYaoModel(yaoModel,notForce);
   return yaoModel;
 }
 
@@ -108,8 +108,12 @@ function getYaoColumnFromField(field) {
     case "Url":
     case "Email":
     case "Text":
-      column.type = "string";
-      
+      if (field.fieldViewModel?.maxLength) {
+        column.type = "string";
+        column.length = field.fieldViewModel.maxLength;
+      }else{
+        column.type = "text";
+      }
       break;
     case "TextArea":
       column.type = "longText";
@@ -187,9 +191,7 @@ function getYaoColumnFromField(field) {
   if (field.index) {
     column.index = true;
   }
-  if (field.length) {
-    column.length = field.length;
-  }
+
 
   // if (field.scale) {
   //     column.scale = field.scale;
@@ -206,12 +208,11 @@ function loadYaoModel(model) {
   }
 }
 
-function migrateYaoModel(model) {
+function migrateYaoModel(model,notForce) {
   // console.log("modelYao", modelYao);
   const modelId = model.name;
-
   // delete all data
-  let err = Process(`models.${modelId}.migrate`, true);
+  let err = Process(`models.${modelId}.migrate`, !notForce);
   // console.log("migrate err:", err);
   if (err?.Message && err?.Number) {
     const sqlStateString = bytesToString(err.SQLState);

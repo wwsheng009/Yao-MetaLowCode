@@ -278,6 +278,9 @@ function listQuery({
       switch (f1.op) {
         case "LK":
           condition.op = "like";
+          if (condition.value == "") {
+            condition.value = "%%"
+          }
           break;
         case "EQ":
           condition.op = "eq";
@@ -305,7 +308,6 @@ function listQuery({
           throw Error(`操作符${f1.op}未支持`);
           break;
       }
-
       queryParam.wheres.push(condition);
     });
   }
@@ -471,7 +473,7 @@ function refFieldQuery(
   let defaultFieldList = refEntity.fieldSet
     .filter((f) => f.type === "Text")
     .map((f) => f.name);
-    
+
   if (Array.isArray(refField.referenceSetting)) {
     let refConfig = refField.referenceSetting.find(
       (ref) => ref.entityName === refEntityName
@@ -830,7 +832,16 @@ function initDataList(entity) {}
  */
 function getEntityCodeList(entityName) {
   // entityName = "ReportConfig";
-  const entityList = Process("models.sys.entity.get", {});
+  let query = {};
+  if (entityName) {
+    query.wheres = [
+      {
+        column: "name",
+        value: entityName,
+      },
+    ];
+  }
+  const entityList = Process("models.sys.entity.get", query);
   return entityList.map((entity) => {
     return {
       entityCode: entity.entityCode,

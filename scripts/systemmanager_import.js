@@ -156,7 +156,6 @@ function importData(entityName) {
   if (!entityName) {
     importNav(); //下载导航设置
   }
- 
 }
 
 /**
@@ -488,9 +487,9 @@ function checkRespone(response) {
 }
 /**
  * 从文件中导入实体的定义到数据库表sys.entity与sys.entity.field
- * 
+ *
  * 同时在数据库中创建与实体对应的数据库表定义
- * 
+ *
  * 注意：此操作不会创建yao dsl文件。
  *
  * yao run scripts.systemmanager_import.importEntity
@@ -570,7 +569,12 @@ function importEntity(entityName) {
         },
       ],
     });
-    fieldSet.forEach((f) => delete f.fieldId);
+    fieldSet.forEach((f) => {
+      delete f.fieldId;
+      if (!field.updatable || !field.creatable) {
+        field.reserved = true;
+      }
+    });
     var res = Process("models.sys.entity.field.EachSave", fieldSet, {
       entityCode: entityCode,
     });
@@ -903,7 +907,9 @@ function importLayoutList(entityName) {
     }
     index++;
     console.log(
-      `${index}/${fileList.length}:${entityContent.quickFilterLabel || ""} 列表布局 imported`
+      `${index}/${fileList.length}:${
+        entityContent.quickFilterLabel || ""
+      } 列表布局 imported`
     );
   }
 }
@@ -961,7 +967,7 @@ function downloadEntityData(entityName) {
   Process(
     "fs.system.writefile",
     `/download/${entityName}.json`,
-    JSON.stringify(response.data.data,null,2),
+    JSON.stringify(response.data.data, null, 2)
   );
   return response.data.data;
 }

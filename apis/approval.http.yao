@@ -8,14 +8,14 @@
       "path": "getFlowDefinitionByConfigId",
       "method": "get",
       "process": "scripts.approval.getFlowDefinitionByConfigId",
-      "in": [""],
+      "in": ["$query.approvalConfigId"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
       "path": "saveLastApprovalFlow",
       "method": "post",
       "process": "scripts.approval.saveLastApprovalFlow",
-      "in": [""],
+      "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
     },
     {
@@ -51,6 +51,12 @@
       "method": "get",
       "process": "scripts.approval.getEntityApprovalTaskList",
       "in": ["$query.entity", "$query.type"],
+      "out": { "status": 200, "type": "application/json" }
+    },{
+      "path": "configList",
+      "method": "post",
+      "process": "scripts.approval.configList",
+      "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
     }
   ]
