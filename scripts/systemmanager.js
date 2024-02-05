@@ -964,8 +964,47 @@ function getEntitySet() {
   });
 }
 
-function getFieldListOfFilter(entity) {
-  return [];
+function getFieldListOfFilter(entityName) {
+  const entity = getEntityByNameCache(entityName);
+
+  const list = [];
+  entity.fieldSet.forEach((f) => {
+    // 非关联表的信息
+    if (f.type !== "Reference") {
+      if (f.idFieldFlag !== true) {
+        list.push({
+          name: f.name,
+          label: f.label,
+          type: f.type,
+          optionData: f.optionList,
+        });
+      }
+    } else {
+      //关联表的比较麻烦，暂不处理
+      // // 关联表的字段信息
+      // const referto = f.referTo.split(",")[0];
+      // const refEntity = getEntityByNameCache(referto);
+      // list.push({
+      //   referTo: referto,
+      //   name: f.name,
+      //   label: f.label,
+      //   type: f.type,
+      // });
+
+      // refEntity.fieldSet.forEach((ref) => {
+      //   if (ref.idFieldFlag !== true) {
+      //   list.push({
+      //     referTo: referto,
+      //     name: `${referto}-${ref.name}`,
+      //     label: `${refEntity.label}-${ref.label}`,
+      //     type: ref.type,
+      //   });
+      // }
+      // });
+    }
+  });
+
+  return list;
 }
 ///-->
 /**
@@ -1292,7 +1331,7 @@ function getOptionItems(entityName, fieldName) {
   const fieldDef = getField(entityName, fieldName);
 
   return fieldDef?.optionList;
-  
+
   // entity = "User";
   // field = "jobTitle";
 

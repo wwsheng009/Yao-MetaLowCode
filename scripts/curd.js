@@ -1,6 +1,6 @@
 const { loadEntityToYao } = Require("sys.yao");
 
-const { getEntityByNameCache, getEntityByCodeCache, getCurrentTime,getUUID } =
+const { getEntityByNameCache, getEntityByCodeCache, getCurrentTime, getUUID } =
   Require("sys.lib");
 
 function getSelectFields(entity, fieldsList) {
@@ -178,17 +178,15 @@ function updateDataLineReference(refFieldsMap, line) {
       const refField = refFieldsMap[fieldKey];
       // 引用的对象的值
       let id = line[fieldKey];
-      // if (line[fieldKey].includes("-")) {
-      //   const [entityCode, ids] = line[fieldKey].split("-");
-      //   id = ids;
-      // }
 
-      const [refIdValue] = Process(`models.${refField.entityName}.get`,  {
+      const [refIdValue] = Process(`models.${refField.entityName}.get`, {
         select: [refField.idFieldName, refField.nameFieldName],
-        wheres:[{
-          column:fieldKey,
-          value:id
-        }]
+        wheres: [
+          {
+            column: refField.idFieldName,
+            value: id,
+          },
+        ],
       });
       if (refIdValue) {
         line[fieldKey] = {
@@ -263,6 +261,51 @@ function listQuery({
     if (!queryParam.select.includes(entity.idFieldName)) {
       queryParam.select.push(entity.idFieldName);
     }
+  }
+
+  if (filter != null && Array.isArray(filter.items) && filter.items.length) {
+    queryParam.wheres =  queryParam.wheres || []
+    filter.items.forEach((f1, idx) => {
+      let condition = {
+        column: f1.fieldName,
+        value: f1.value,
+      };
+      if (filter.equation == "OR" && idx != 0) {
+        condition.method = "orwhere";
+      }
+      switch (f1.op) {
+        case "LK":
+          condition.op = "like";
+          break;
+        case "EQ":
+          condition.op = "eq";
+          break;
+        case "NEQ":
+          condition.op = "ne";
+          break;
+        case "GT":
+          condition.op = "gt";
+          break;
+        case "GE":
+          condition.op = "ge";
+          break;
+        case "LE":
+          condition.op = "le";
+          break;
+        case "BW":
+          condition.op = "in";
+        case "NL":
+          condition.op = "null";
+        case "NT":
+          condition.op = "notnull";
+          break;
+        default:
+          throw Error(`操作符${f1.op}未支持`);
+          break;
+      }
+
+      queryParam.wheres.push(condition);
+    });
   }
 
   const selectFields = getSelectFields(entity, fieldsList);
@@ -617,21 +660,25 @@ function saveRecord(entityName, idstr, formModel) {
       return map;
     }, {});
 
-    const idFieldName = entity.fieldSet.find((f) => f.idFieldFlag == true)?.name;
+    const idFieldName = entity.fieldSet.find(
+      (f) => f.idFieldFlag == true
+    )?.name;
     // if (line[idField] != null && line[idField].includes("-")) {
     //   const [_, id] = line[idField].split("-");
     //   line[idField] = id;
     // }
     if (line[idFieldName] != null) {
-      console.log("line[idFieldName]",line[idFieldName])
-      const [{autoId}] = Process(`models.${entity.name}.get`,{wheres:[
-        {
-          column:idFieldName,
-          value:line[idFieldName]
-        }
-      ]})
+      console.log("line[idFieldName]", line[idFieldName]);
+      const [{ autoId }] = Process(`models.${entity.name}.get`, {
+        wheres: [
+          {
+            column: idFieldName,
+            value: line[idFieldName],
+          },
+        ],
+      });
       line.autoId = autoId;
-    }else{
+    } else {
       line[idFieldName] = getUUID(entity.entityCode);
     }
     for (const fieldName in line) {
@@ -678,28 +725,29 @@ function saveRecord(entityName, idstr, formModel) {
     return line;
   }
   formModel = updateFieldData(mainEntity, formModel);
-  const idFieldName = mainEntity.fieldSet.find((f) => f.idFieldFlag == true)?.name;
+  const idFieldName = mainEntity.fieldSet.find(
+    (f) => f.idFieldFlag == true
+  )?.name;
   const createdTime = getCurrentTime();
   if (!idstr) {
     formModel = { ...formModel, createdOn: createdTime };
     // 生成唯一ID
-    idstr = getUUID(mainEntity.entityCode)
-    formModel[idFieldName] = idstr
+    idstr = getUUID(mainEntity.entityCode);
+    formModel[idFieldName] = idstr;
     // console.log("mainEntity.name",mainEntity.name)
     // console.log("idstr",formModel)
     let id = Process(`models.${entityName}.Create`, formModel);
     // idstr = `${mainEntity.entityCode}-${id}`;
-
   } else {
     // const [_, id] = idstr.split("-");
-    const [{autoId}] = Process(`models.${entityName}.get`,{
-      wheres:[
+    const [{ autoId }] = Process(`models.${entityName}.get`, {
+      wheres: [
         {
-          column:idFieldName,
-          value:idstr
-        }
-      ]
-    })
+          column: idFieldName,
+          value: idstr,
+        },
+      ],
+    });
     formModel = { ...formModel, modifiedOn: createdTime };
     delete formModel.autoId;
     Process(`models.${entityName}.update`, autoId, formModel);
@@ -746,17 +794,19 @@ function deleteRecord({ recordIds, cascades }) {
   recordIds &&
     recordIds.forEach((idstr) => {
       // const [entityCode, id] = idstr.split("-");
-      const entity = getEntityByCodeCache(entityCode)
+      const entity = getEntityByCodeCache(entityCode);
       // Process("yao.model.Delete", model, id);
       const idFieldName = entity.fieldSet.find(
         (f) => f.idFieldFlag == true
       )?.name;
-      Process(`models.${entity.name}.Deletewhere`, {wheres:[
-        {
-          column:idFieldName,
-          value:idstr
-        }
-      ]});
+      Process(`models.${entity.name}.Deletewhere`, {
+        wheres: [
+          {
+            column: idFieldName,
+            value: idstr,
+          },
+        ],
+      });
     });
 }
 function initDataList(entity) {}
@@ -798,7 +848,7 @@ function getEntityCodeList(entityName) {
  * @param {*} fieldsList 需要获取的字段名称
  */
 function queryById(entityId, fieldsList) {
-  const [entityCode, _] = entityId.split("-");
+    const [entityCode, _] = entityId.split("-");
 
   const entity = getEntityByCodeCache(entityCode);
   if (entity == null) {
@@ -823,10 +873,10 @@ function queryById(entityId, fieldsList) {
     }
     queryParam.wheres = [
       {
-        column:idFieldName,
-        value:entityId
-      }
-    ]
+        column: idFieldName,
+        value: entityId,
+      },
+    ];
   }
   const selectFields = getSelectFields(entity, fieldsList);
 
@@ -840,14 +890,13 @@ function queryById(entityId, fieldsList) {
   let [data] = Process(`models.${entity.name}.get`, queryParam);
 
   if (!data) {
-    console.log("queryParam",queryParam)
-    data = {}
+    // console.log("queryParam", queryParam);
+    data = {};
   }
- 
-    data = updateDataLineReference(refFieldsMap, data);
-    data = updateDataLineOptions(fieldsOptionMap, data);
-    data = updateJsonFields(jsonFidlsMap, data);
 
+  data = updateDataLineReference(refFieldsMap, data);
+  data = updateDataLineOptions(fieldsOptionMap, data);
+  data = updateJsonFields(jsonFidlsMap, data);
 
   // 子表信息
   // 查找有哪些明细实体

@@ -121,10 +121,20 @@ function login(payload) {
   let departmentId = "";
   if (userData.departmentId) {
     // const departEntity = getEntityByNameCache("Department");
-    departmentName = Process(
-      "models.Department.find",
-      userData.departmentId
-    )?.name;
+    const [dep] = Process(
+      "models.Department.get",
+      {
+        wheres:[
+          {
+            column:'departmentId',
+            value:userData.departmentId
+          }
+        ]
+      }
+    );
+    if (dep) {
+      departmentName  = dep.name;
+    }
     departmentId = userData.departmentId;
   }
   const teams = Process("models.team.get", {
