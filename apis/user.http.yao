@@ -109,7 +109,7 @@
       "path": "getLoginUser",
       "method": "get",
       "process": "scripts.user.getLoginUser",
-      "in": [],
+      "in": ["$query.loginToken"],
       "out": {
         "status": 200,
         "type": "application/json"

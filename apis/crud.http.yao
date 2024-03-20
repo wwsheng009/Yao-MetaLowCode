@@ -165,6 +165,26 @@
         "status": 200,
         "type": "application/json"
       }
+    },
+    {
+      "path": "groupTreeQuery",
+      "method": "post",
+      "process": "scripts.curd.groupTreeQuery",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "updateRecordList",
+      "method": "post",
+      "process": "scripts.curd.updateRecordList",
+      "in": [":payload"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
     }
   ]
 }

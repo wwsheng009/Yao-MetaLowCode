@@ -45,6 +45,12 @@
       "process": "scripts.layout.exportExcel",
       "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
+    },{
+      "path": "getNavigationById",
+      "method": "post",
+      "process": "scripts.layout.getNavigationById",
+      "in": ["$query.layoutConfigId"],
+      "out": { "status": 200, "type": "application/json" }
     }
   ]
 }

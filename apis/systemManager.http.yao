@@ -406,6 +406,16 @@
       }
     },
     {
+      "path": "filterEntitySet",
+      "method": "post",
+      "process": "scripts.systemmanager.filterEntitySet",
+      "in": ["$query.keyword"],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
       "path": "queryEntityList",
       "method": "get",
       "process": "scripts.systemmanager.queryEntityList",

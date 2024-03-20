@@ -116,11 +116,11 @@ function updateFormLayout(layoutId, layoutJson) {
   //   return "0000008-64639fd4f57c435b94e0832240e51a8d";
 }
 
-function createFormLayout(entityName, layoutJson) {
+function createFormLayout(entityName, layoutName,layoutJson) {
   const entity = getEntityByNameCache(entityName)
-
+  layoutName = layoutName || "默认表单布局"
   const formLayoutId = Process("models.formlayout.save", {
-    layoutName: "默认表单布局",
+    layoutName: layoutName,
     layoutJson,
     entityCode: entity.entityCode,
     // formUploadParam: {
@@ -382,3 +382,10 @@ function getFormLayout(entityName) {
 }
 
 function previewLayout(entity) {}
+
+function updateName(layoutId, layoutName,{shareTo}){
+
+}
+function deleteLayout(layoutId){
+
+}

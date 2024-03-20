@@ -279,7 +279,7 @@ function listQuery({
         case "LK":
           condition.op = "like";
           if (condition.value == "") {
-            condition.value = "%%"
+            condition.value = "%%";
           }
           break;
         case "EQ":
@@ -1109,3 +1109,11 @@ function shareRecord(body) {}
  * 取消共享
  */
 function cancelShareRecord(body, userType) {}
+
+function groupTreeQuery(body) {
+  throw Error("not implemented yet");
+}
+
+function updateRecordList(body) {
+  throw Error("not implemented yet");
+}

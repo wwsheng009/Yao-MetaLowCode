@@ -1524,3 +1524,7 @@ function queryEntityList(
   querySystem,
   queryBuiltIn
 ) {}
+
+function filterEntitySet(keyword){
+
+}

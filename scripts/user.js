@@ -24,7 +24,7 @@ function getFilePath(userId) {
   throw Error(`用户:${idstr}头像未设置`);
 }
 function logout() {}
-function getLoginUser() {
+function getLoginUser(loginToken) {
   return Process("session.get", "user");
   // return {
   //   departmentName: "公司总部",

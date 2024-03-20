@@ -9,7 +9,7 @@
       "path": "save",
       "method": "post",
       "process": "scripts.formLayout.createFormLayout",
-      "in": ["$query.entity",":payload"],
+      "in": ["$query.entity","$query.layoutName",":payload"],
       "out": { "status": 200, "type": "application/json" }
     },{
       "path": "update",
@@ -37,6 +37,20 @@
       "method": "get",
       "process": "scripts.formLayout.getOptionFields",
       "in": ["$query.entity"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "updateName",
+      "method": "get",
+      "process": "scripts.formLayout.updateName",
+      "in": ["$query.layoutId","$query.layoutName",":payload"],
+      "out": { "status": 200, "type": "application/json" }
+    },
+    {
+      "path": "delete",
+      "method": "get",
+      "process": "scripts.formLayout.deleteLayout",
+      "in": ["$query.layoutId"],
       "out": { "status": 200, "type": "application/json" }
     }
   ]

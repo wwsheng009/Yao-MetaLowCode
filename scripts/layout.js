@@ -1,6 +1,11 @@
 const { loadEntityToYao } = Require("sys.yao");
 const { getEntityByNameCache } = Require("sys.lib");
 
+
+function getNavigationById(layoutConfigId){
+  throw Error("not implemented yet");
+
+}
 // 获取导航配置
 function getNavigationList() {
   loadEntityToYao("LayoutConfig");
