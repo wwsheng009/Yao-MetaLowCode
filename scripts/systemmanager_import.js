@@ -755,7 +755,7 @@ function downloadFormLayout(entityName) {
     getFormLayout(name);
 
     index++;
-    console.log(`${index}/${entiyList.length}:${name} form layout downlaod`);
+    console.log(`${index}/${entiyList.length}:${name} form layout processed`);
     Process("utils.time.Sleep", 1000);
   });
 }
@@ -777,7 +777,13 @@ function getFormLayout(entityName) {
       Cookie: getCookie(),
     }
   );
-  checkRespone(response);
+  try {
+    checkRespone(response);
+
+  } catch (err) {
+    console.log(`错误：` + err.code + err.message)
+    return
+  }
   const layoutData = response.data.data;
   // console.log(layoutData);
   if (!layoutData || typeof layoutData !== "object" || !layoutData.layoutJson) {
