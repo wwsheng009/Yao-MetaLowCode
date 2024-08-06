@@ -1,10 +1,8 @@
 const { loadEntityToYao } = Require("sys.yao");
 const { getEntityByNameCache } = Require("sys.lib");
 
-
-function getNavigationById(layoutConfigId){
+function getNavigationById(layoutConfigId) {
   throw Error("not implemented yet");
-
 }
 // 获取导航配置
 function getNavigationList() {
@@ -97,13 +95,14 @@ function getLayoutList(entityName) {
     };
   });
 
+  // default config
   const layoutSelfListConfig = {
     applyType: "LIST",
     entityCode: entity.entityCode,
     shareTo: "SELF",
     config: JSON.stringify(fields),
   };
-
+  //default config
   const layoutAllListConfig = {
     applyType: "LIST",
     entityCode: entity.entityCode,
@@ -135,7 +134,16 @@ function getLayoutList(entityName) {
   const TAB = layoutConfigs.find((config) => config.applyType === "TAB");
   const SEARCH = layoutConfigs.find((config) => config.applyType === "SEARCH");
   const ADD = layoutConfigs.find((config) => config.applyType === "ADD");
+  const STYLE = layoutConfigs.find((config) => config.applyType === "STYLE");
+  const TREE_GROUP = layoutConfigs.find((config) => config.applyType === "TREE_GROUP");
 
+  if (TREE_GROUP) {
+    data.TREE_GROUP = TREE_GROUP
+  }
+  if (STYLE) {
+    data.STYLE = data.STYLE;
+  }
+  // data.STYLE = STYLE || data.STYLE;
   data.TAB = TAB || data.TAB;
   data.SEARCH = SEARCH || data.SEARCH;
   data.ADD = ADD || data.ADD;

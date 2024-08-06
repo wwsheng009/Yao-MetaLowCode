@@ -935,7 +935,7 @@ function downloadLayoutList(entityName) {
   entiyList.forEach((name) => {
     getLayoutList(name);
     index++;
-    console.log(`${index}/${entiyList.length}:${name} layout list downlaod`);
+    console.log(`${index}/${entiyList.length}:${name} layout list processed`);
     Process("utils.time.Sleep", 500);
   });
 }
@@ -949,7 +949,13 @@ function getLayoutList(entityName) {
       Cookie: getCookie(),
     }
   );
-  checkRespone(response);
+  try {
+    checkRespone(response);
+
+  } catch (err) {
+    console.log("错误：",err.coce,err.message)
+    return null
+  }
 
   let data = response.data.data;
   Process(
@@ -1004,6 +1010,8 @@ function importLayoutList(entityName) {
     saveConfig(entityContent["SEARCH"]); //搜索字段
     saveConfig(entityContent["TAB"]); //加载页签
     saveConfig(entityContent["ADD"]); //创建相关
+    saveConfig(entityContent["STYLE"]); //样式
+    saveConfig(entityContent["TREE_GROUP"]); //树结构
     if (entityContent["LIST"]) {
       saveConfig(entityContent["LIST"]["ALL"]); //列表-默认
       saveConfig(entityContent["LIST"]["SELF"]); //列表-自定义

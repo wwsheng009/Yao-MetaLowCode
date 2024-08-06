@@ -41,7 +41,19 @@
 
 `yao run scripts.systemmanager_import.downloadFormLayout Jinxiangfapiao`
 
+## 下载列表布局
+
+`yao run scripts.systemmanager_import.downloadLayoutList`
+
+## 导入列表布局
+
+`yao run scripts.systemmanager_import.importLayoutList`
 
 ## 下载导航栏
 
 `yao run scripts.systemmanager_import.downlaodNav`
+
+## todo list
+
+- api /crud/queryEntityListFields
+- api /crud/queryEntityListableFields
