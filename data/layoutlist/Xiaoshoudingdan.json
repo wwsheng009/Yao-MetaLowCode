@@ -1,27 +1,29 @@
 {
-    "FILTER": [],
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "xiaoshoudingdanId",
-    "titleWidthForAll": null,
-    "nameFieldName": "xiaoshoudingdanId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "LIST": {
-        "ALL": {
-            "configName": null,
-            "entityCode": 1013,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-7d03ebf14f234310a44983fd30d0cf68",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"销售订单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbenzongjia\",\"isNameField\":false,\"fieldLabel\":\"产品成本总价\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshouguishubumen\",\"isNameField\":false,\"fieldLabel\":\"销售归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshouyuanjiazonge\",\"isNameField\":false,\"fieldLabel\":\"销售原价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhengdanzhekoulv\",\"isNameField\":false,\"fieldLabel\":\"整单折扣率 %\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"销售订单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbenzongjia\",\"isNameField\":false,\"fieldLabel\":\"产品成本总价\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
-            "applyType": "LIST",
-            "entityCode": 1013,
-            "shareTo": "SELF"
-        }
+  "mainDetailField": null,
+  "idFieldName": "xiaoshoudingdanId",
+  "LIST": {
+    "ALL": {
+      "configName": null,
+      "entityCode": 1013,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-7d03ebf14f234310a44983fd30d0cf68",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"销售订单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbenzongjia\",\"isNameField\":false,\"fieldLabel\":\"产品成本总价\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshouguishubumen\",\"isNameField\":false,\"fieldLabel\":\"销售归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshouyuanjiazonge\",\"isNameField\":false,\"fieldLabel\":\"销售原价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhengdanzhekoulv\",\"isNameField\":false,\"fieldLabel\":\"整单折扣率 %\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanjine\",\"isNameField\":false,\"fieldLabel\":\"销售订单金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanmaolilv\",\"isNameField\":false,\"fieldLabel\":\"订单毛利率%\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"hetongfujianshangchuan\",\"isNameField\":false,\"fieldLabel\":\"合同附件上传\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"File\"},{\"isUpdatable\":true,\"fieldName\":\"songhuodiqu\",\"isNameField\":false,\"fieldLabel\":\"送货地区\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"jutidizhi\",\"isNameField\":false,\"fieldLabel\":\"具体地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1013,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"销售订单名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchengbenzongjia\",\"isNameField\":false,\"fieldLabel\":\"产品成本总价\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
     }
+  },
+  "quickFilterLabel": "销售订单名称",
+  "chosenListType": null,
+  "advFilter": null,
+  "COM_TREE_GROUP": [],
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "xiaoshoudingdanmingcheng",
+  "titleWidthForSelf": null
 }

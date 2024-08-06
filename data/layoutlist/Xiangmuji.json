@@ -1,27 +1,29 @@
 {
-    "nameFieldName": "xiangmuji",
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "LIST": {
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmuji\",\"isNameField\":true,\"fieldLabel\":\"项目集\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "entityCode": 1199
-        },
-        "ALL": {
-            "entityCode": 1199,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-b9b0c695c633438f9ee5fdec3e359d44",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmuji\",\"isNameField\":true,\"fieldLabel\":\"项目集\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fengmiantuxuanze\",\"isNameField\":false,\"fieldLabel\":\"封面图选择\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Picture\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST",
-            "configName": null
-        }
+  "mainDetailField": null,
+  "idFieldName": "xiangmujiId",
+  "FILTER": [],
+  "nameFieldName": "xiangmuji",
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "quickFilterLabel": "项目集",
+  "chosenListType": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1199,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-b9b0c695c633438f9ee5fdec3e359d44",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmuji\",\"isNameField\":true,\"fieldLabel\":\"项目集\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "configName": null
     },
-    "FILTER": [],
-    "quickFilterLabel": "项目集",
-    "chosenListType": null,
-    "idFieldName": "xiangmujiId",
-    "titleWidthForAll": null
+    "SELF": {
+      "entityCode": 1199,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmuji\",\"isNameField\":true,\"fieldLabel\":\"项目集\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null
 }

@@ -1,33 +1,47 @@
 {
-    "ADD": {
-        "config": "[{\"entityLabel\":\"跟进\",\"entityCode\":54,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"FollowUp\"},{\"entityLabel\":\"待办\",\"entityCode\":55,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"TodoTask\"}]",
-        "applyType": "ADD",
-        "configName": null,
-        "entityCode": 1160,
-        "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
-        "layoutConfigId": "0000015-c7dcf64ee6904853be4b6ee2881a565f",
-        "shareTo": "ALL"
+  "ADD": {
+    "config": "[{\"entityLabel\":\"跟进\",\"entityCode\":54,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"FollowUp\"},{\"entityLabel\":\"待办\",\"entityCode\":55,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"TodoTask\"}]",
+    "applyType": "ADD",
+    "configName": null,
+    "entityCode": 1160,
+    "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
+    "layoutConfigId": "0000015-c7dcf64ee6904853be4b6ee2881a565f",
+    "shareTo": "ALL"
+  },
+  "quickFilterLabel": "客户名称",
+  "advFilter": null,
+  "BATCH_UPDATE": {
+    "applyType": "BATCH_UPDATE",
+    "configName": null,
+    "entityCode": 1160,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-2b2a5aba04384b4ab39b4c296f90a54b",
+    "shareTo": "ALL",
+    "config": "[{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+  },
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "nameFieldName": "kehumingcheng",
+  "idFieldName": "cRMxiansuoId",
+  "LIST": {
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1160,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
     },
-    "FILTER": [],
-    "nameFieldName": "kehumingcheng",
-    "quickFilterLabel": "客户名称",
-    "advFilter": null,
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "idFieldName": "cRMxiansuoId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1160,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"aaaa\",\"isNameField\":false,\"fieldLabel\":\"aa\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1160,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"aaaa\",\"isNameField\":false,\"fieldLabel\":\"aa\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        }
-    },
-    "titleWidthForAll": null
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuoxiangqing\",\"isNameField\":false,\"fieldLabel\":\"线索详情\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1160,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-44998d11ac134719962930d6b960490a",
+      "shareTo": "ALL"
+    }
+  },
+  "titleWidthForAll": null,
+  "chosenListType": null
 }

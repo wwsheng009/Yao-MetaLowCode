@@ -1,24 +1,26 @@
 {
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1162,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehubianhao\",\"isNameField\":false,\"fieldLabel\":\"客户编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"客户来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"客户状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehujibie\",\"isNameField\":false,\"fieldLabel\":\"客户级别\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshugonghai\",\"isNameField\":false,\"fieldLabel\":\"所属公海\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshuhangye\",\"isNameField\":false,\"fieldLabel\":\"所属行业\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehuyouxiang\",\"isNameField\":false,\"fieldLabel\":\"客户邮箱\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehudizhi\",\"isNameField\":false,\"fieldLabel\":\"客户地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kehurenling\",\"isNameField\":false,\"fieldLabel\":\"客户认领\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1162,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehubianhao\",\"isNameField\":false,\"fieldLabel\":\"客户编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"客户来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"客户状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehujibie\",\"isNameField\":false,\"fieldLabel\":\"客户级别\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshugonghai\",\"isNameField\":false,\"fieldLabel\":\"所属公海\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshuhangye\",\"isNameField\":false,\"fieldLabel\":\"所属行业\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehuyouxiang\",\"isNameField\":false,\"fieldLabel\":\"客户邮箱\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehudizhi\",\"isNameField\":false,\"fieldLabel\":\"客户地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kehurenling\",\"isNameField\":false,\"fieldLabel\":\"客户认领\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"}]"
-        }
+  "quickFilterLabel": "客户名称",
+  "chosenListType": null,
+  "mainDetailField": null,
+  "idFieldName": "cRMkehuId",
+  "FILTER": [],
+  "nameFieldName": "kehumingcheng",
+  "titleWidthForSelf": null,
+  "titleWidthForAll": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1162,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehubianhao\",\"isNameField\":false,\"fieldLabel\":\"客户编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"客户来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"客户状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehujibie\",\"isNameField\":false,\"fieldLabel\":\"客户级别\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshugonghai\",\"isNameField\":false,\"fieldLabel\":\"所属公海\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshuhangye\",\"isNameField\":false,\"fieldLabel\":\"所属行业\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehuyouxiang\",\"isNameField\":false,\"fieldLabel\":\"客户邮箱\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehudizhi\",\"isNameField\":false,\"fieldLabel\":\"客户地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kehurenling\",\"isNameField\":false,\"fieldLabel\":\"客户认领\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"}]",
+      "applyType": "LIST"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "kehumingcheng",
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "quickFilterLabel": "客户名称",
-    "idFieldName": "cRMkehuId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1162,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehubianhao\",\"isNameField\":false,\"fieldLabel\":\"客户编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"客户来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"客户状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehujibie\",\"isNameField\":false,\"fieldLabel\":\"客户级别\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshugonghai\",\"isNameField\":false,\"fieldLabel\":\"所属公海\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"suoshuhangye\",\"isNameField\":false,\"fieldLabel\":\"所属行业\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kehuyouxiang\",\"isNameField\":false,\"fieldLabel\":\"客户邮箱\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kehudizhi\",\"isNameField\":false,\"fieldLabel\":\"客户地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kehurenling\",\"isNameField\":false,\"fieldLabel\":\"客户认领\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"}]"
+    }
+  }
 }

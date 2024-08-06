@@ -1,0 +1,26 @@
+{
+  "FILTER": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1266,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuyueqingkuang\",\"isNameField\":false,\"fieldLabel\":\"预约情况\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Huiyishiyuyue\"},{\"isUpdatable\":true,\"fieldName\":\"huiyizhuti\",\"isNameField\":true,\"fieldLabel\":\"会议主题\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyididian\",\"isNameField\":false,\"fieldLabel\":\"会议地点\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishimingcheng\",\"isNameField\":false,\"fieldLabel\":\"会议室名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishibianhao\",\"isNameField\":false,\"fieldLabel\":\"会议室编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyikaishishijian\",\"isNameField\":false,\"fieldLabel\":\"会议开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"huiyijieshushijian\",\"isNameField\":false,\"fieldLabel\":\"会议结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"huiyiquxiaoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"会议取消原因\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1266,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuyueqingkuang\",\"isNameField\":false,\"fieldLabel\":\"预约情况\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Huiyishiyuyue\"},{\"isUpdatable\":true,\"fieldName\":\"huiyizhuti\",\"isNameField\":true,\"fieldLabel\":\"会议主题\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyididian\",\"isNameField\":false,\"fieldLabel\":\"会议地点\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishimingcheng\",\"isNameField\":false,\"fieldLabel\":\"会议室名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishibianhao\",\"isNameField\":false,\"fieldLabel\":\"会议室编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyikaishishijian\",\"isNameField\":false,\"fieldLabel\":\"会议开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"huiyijieshushijian\",\"isNameField\":false,\"fieldLabel\":\"会议结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"huiyiquxiaoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"会议取消原因\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "COM_TREE_GROUP": [],
+  "idFieldName": "huiyishiyuyuequxiaoId",
+  "titleWidthForAll": null,
+  "nameFieldName": "huiyizhuti",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "会议主题",
+  "chosenListType": null
+}

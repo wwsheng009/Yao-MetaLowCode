@@ -1,27 +1,29 @@
 {
-    "titleWidthForSelf": null,
-    "idFieldName": "followUpId",
-    "titleWidthForAll": null,
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "layoutConfigId": "0000015-2492dd9cd34a48209d7c52e920991d79",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"wayType\",\"isNameField\":false,\"fieldLabel\":\"跟进方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\",\"columnSort\":\"\"},{\"columnWidth\":480,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"content\",\"isNameField\":true,\"fieldLabel\":\"跟进内容\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\",\"columnEditInx\":1},{\"columnWidth\":240,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"picture\",\"isNameField\":false,\"fieldLabel\":\"图片\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Picture\",\"columnEditInx\":2},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\",\"columnSort\":\"\"}]",
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 54,
-            "createdBy": "0000021-00000000000000000000000000000001"
-        },
-        "SELF": {
-            "entityCode": 54,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"content\",\"isNameField\":true,\"fieldLabel\":\"跟进内容\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"wayType\",\"isNameField\":false,\"fieldLabel\":\"跟进方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
-            "applyType": "LIST"
-        }
+  "quickFilterLabel": "跟进内容",
+  "advFilter": null,
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "followUpId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 54,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-2492dd9cd34a48209d7c52e920991d79",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"wayType\",\"isNameField\":false,\"fieldLabel\":\"跟进方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\",\"columnSort\":\"\"},{\"columnWidth\":480,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"content\",\"isNameField\":true,\"fieldLabel\":\"跟进内容\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\",\"columnEditInx\":1},{\"columnWidth\":240,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"picture\",\"isNameField\":false,\"fieldLabel\":\"图片\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Picture\",\"columnEditInx\":2},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\",\"columnSort\":\"\"}]"
     },
-    "FILTER": [],
-    "nameFieldName": "content",
-    "quickFilterLabel": "跟进内容"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 54,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"content\",\"isNameField\":true,\"fieldLabel\":\"跟进内容\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"wayType\",\"isNameField\":false,\"fieldLabel\":\"跟进方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "content",
+  "titleWidthForAll": null
 }

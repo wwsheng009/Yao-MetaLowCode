@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "idFieldName": "wMSduizhangsrukumingxiId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1080,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSzhangkuanduizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSzhangkuanduizhang\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择入库明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigourukuzhangdan\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        },
-        "ALL": {
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSzhangkuanduizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSzhangkuanduizhang\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择入库明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigourukuzhangdan\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 1080,
-            "shareTo": "ALL"
-        }
+  "LIST": {
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1080,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSzhangkuanduizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSzhangkuanduizhang\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择入库明细\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigourukuzhangdan\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     },
-    "nameFieldName": "wMSduizhangsrukumingxiId",
-    "advFilter": null
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSzhangkuanduizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSzhangkuanduizhang\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerukumingxi\",\"isNameField\":false,\"fieldLabel\":\"选择入库明细\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigourukuzhangdan\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+      "applyType": "LIST",
+      "entityCode": 1080
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "nameFieldName": "wMSduizhangsrukumingxiId",
+  "titleWidthForSelf": null,
+  "mainDetailField": "mdWMSzhangkuanduizhangId",
+  "idFieldName": "wMSduizhangsrukumingxiId"
 }

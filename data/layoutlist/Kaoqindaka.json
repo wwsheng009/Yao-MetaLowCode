@@ -1,27 +1,29 @@
 {
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "补签事由说明",
-    "chosenListType": null,
-    "nameFieldName": "buqianshiyoushuoming",
-    "advFilter": null,
-    "idFieldName": "kaoqindakaId",
-    "LIST": {
-        "ALL": {
-            "entityCode": 1146,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-effd566156294d24987f72d2e59c25a5",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"buqianriqi\",\"isNameField\":false,\"fieldLabel\":\"补签日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"buqianshijianduan\",\"isNameField\":false,\"fieldLabel\":\"补签时间段\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"buqianshiyoushuoming\",\"isNameField\":true,\"fieldLabel\":\"补签事由说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST",
-            "configName": null
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1146,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"buqianriqi\",\"isNameField\":false,\"fieldLabel\":\"补签日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"buqianshijianduan\",\"isNameField\":false,\"fieldLabel\":\"补签时间段\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        }
+  "nameFieldName": "buqianshiyoushuoming",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "kaoqindakaId",
+  "LIST": {
+    "ALL": {
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-effd566156294d24987f72d2e59c25a5",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"buqianriqi\",\"isNameField\":false,\"fieldLabel\":\"补签日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"buqianshijianduan\",\"isNameField\":false,\"fieldLabel\":\"补签时间段\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"buqianshiyoushuoming\",\"isNameField\":true,\"fieldLabel\":\"补签事由说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1146
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1146,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"buqianriqi\",\"isNameField\":false,\"fieldLabel\":\"补签日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"buqianshijianduan\",\"isNameField\":false,\"fieldLabel\":\"补签时间段\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "补签事由说明",
+  "mainDetailField": null,
+  "titleWidthForAll": null
 }

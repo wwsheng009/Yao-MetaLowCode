@@ -1,27 +1,29 @@
 {
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "xingqi",
-    "quickFilterLabel": "星期",
-    "chosenListType": null,
-    "advFilter": null,
-    "titleWidthForSelf": null,
-    "idFieldName": "gongzuoriliId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1111,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-4468063a666d47699fd2aaa8ffcef3f1",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"riqishijian\",\"isNameField\":false,\"fieldLabel\":\"日期时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"工作状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xingqi\",\"isNameField\":true,\"fieldLabel\":\"星期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiangqing\",\"isNameField\":false,\"fieldLabel\":\"详情\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jieri\",\"isNameField\":false,\"fieldLabel\":\"节日\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiejiarijiabanbuchangguiding\",\"isNameField\":false,\"fieldLabel\":\"节假日加班补偿规定\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"riqishijian\",\"isNameField\":false,\"fieldLabel\":\"日期时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"工作状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
-            "applyType": "LIST",
-            "entityCode": 1111
-        }
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"riqishijian\",\"isNameField\":false,\"fieldLabel\":\"日期时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"工作状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xingqi\",\"isNameField\":true,\"fieldLabel\":\"星期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiangqing\",\"isNameField\":false,\"fieldLabel\":\"详情\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jieri\",\"isNameField\":false,\"fieldLabel\":\"节日\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiejiarijiabanbuchangguiding\",\"isNameField\":false,\"fieldLabel\":\"节假日加班补偿规定\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1111,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-4468063a666d47699fd2aaa8ffcef3f1"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1111,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"riqishijian\",\"isNameField\":false,\"fieldLabel\":\"日期时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"工作状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
     }
+  },
+  "titleWidthForAll": null,
+  "nameFieldName": "xingqi",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "星期",
+  "chosenListType": null,
+  "mainDetailField": null,
+  "idFieldName": "gongzuoriliId",
+  "FILTER": []
 }

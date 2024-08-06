@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "流程名称",
-    "chosenListType": null,
-    "nameFieldName": "flowName",
-    "advFilter": null,
-    "idFieldName": "approvalConfigId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 30,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"flowName\",\"isNameField\":true,\"fieldLabel\":\"流程名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 30,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"flowName\",\"isNameField\":true,\"fieldLabel\":\"流程名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]"
-        }
+  "chosenListType": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "流程名称",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "approvalConfigId",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"flowName\",\"isNameField\":true,\"fieldLabel\":\"流程名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
+      "applyType": "LIST",
+      "entityCode": 30,
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null,
-    "FILTER": []
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 30,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"flowName\",\"isNameField\":true,\"fieldLabel\":\"流程名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "flowName"
 }

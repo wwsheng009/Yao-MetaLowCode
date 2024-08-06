@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "采购入库单编号",
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1095,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezhijiandan\",\"isNameField\":false,\"fieldLabel\":\"选择质检单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlailiaozhijiandan\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpincaigoujiazon\",\"isNameField\":false,\"fieldLabel\":\"入库产品采购价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1095,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezhijiandan\",\"isNameField\":false,\"fieldLabel\":\"选择质检单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlailiaozhijiandan\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpincaigoujiazon\",\"isNameField\":false,\"fieldLabel\":\"入库产品采购价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "wMScaigourukuId",
+  "titleWidthForAll": null,
+  "nameFieldName": "shouhuodanbianhao",
+  "titleWidthForSelf": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1095,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezhijiandan\",\"isNameField\":false,\"fieldLabel\":\"选择质检单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlailiaozhijiandan\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpincaigoujiazon\",\"isNameField\":false,\"fieldLabel\":\"入库产品采购价总额(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "shouhuodanbianhao",
-    "idFieldName": "wMScaigourukuId"
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezhijiandan\",\"isNameField\":false,\"fieldLabel\":\"选择质检单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSlailiaozhijiandan\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpincaigoujiazon\",\"isNameField\":false,\"fieldLabel\":\"入库产品采购价总额(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST",
+      "entityCode": 1095,
+      "shareTo": "SELF"
+    }
+  },
+  "FILTER": [],
+  "quickFilterLabel": "采购入库单编号"
 }

@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "advFilter": null,
-    "idFieldName": "cacheId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 6,
-            "shareTo": "ALL",
-            "config": "[]"
-        },
-        "SELF": {
-            "config": "[]",
-            "applyType": "LIST",
-            "entityCode": 6,
-            "shareTo": "SELF"
-        }
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "cacheId",
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "config": "[]",
+      "applyType": "LIST",
+      "entityCode": 6,
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "cacheId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "chosenListType": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 6,
+      "shareTo": "SELF",
+      "config": "[]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "cacheId",
+  "quickFilterLabel": "",
+  "chosenListType": null
 }

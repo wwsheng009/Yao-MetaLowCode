@@ -1,24 +1,29 @@
 {
-    "nameFieldName": "tiaobodanbianhao",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "kucuntiaoboId",
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "调拨单编号",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1050,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tiaoboleixing\",\"isNameField\":false,\"fieldLabel\":\"调拨类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"调拨单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tiaochucangku\",\"isNameField\":false,\"fieldLabel\":\"调出仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tiaorucangku\",\"isNameField\":false,\"fieldLabel\":\"调入仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1050,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"tiaoboleixing\",\"isNameField\":false,\"fieldLabel\":\"调拨类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"调拨单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tiaochucangku\",\"isNameField\":false,\"fieldLabel\":\"调出仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tiaorucangku\",\"isNameField\":false,\"fieldLabel\":\"调入仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
-        }
+  "idFieldName": "kucuntiaoboId",
+  "FILTER": [],
+  "quickFilterLabel": "调拨单编号",
+  "advFilter": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1050,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-6b38805003a14cacb5aa0bd557e87a7b",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"tiaoboleixing\",\"isNameField\":false,\"fieldLabel\":\"调拨类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"调拨单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tiaochucangku\",\"isNameField\":false,\"fieldLabel\":\"调出仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tiaorucangku\",\"isNameField\":false,\"fieldLabel\":\"调入仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tiaoboshenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"调拨申请日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qiwangdaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"期望到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobochanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"调拨产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobochanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"调拨产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobochanpinchengbenzonge\",\"isNameField\":false,\"fieldLabel\":\"调拨产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1050,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"tiaoboleixing\",\"isNameField\":false,\"fieldLabel\":\"调拨类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tiaobodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"调拨单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tiaochucangku\",\"isNameField\":false,\"fieldLabel\":\"调出仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tiaorucangku\",\"isNameField\":false,\"fieldLabel\":\"调入仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "nameFieldName": "tiaobodanbianhao",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": []
 }

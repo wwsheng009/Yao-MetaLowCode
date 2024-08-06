@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "optionItemId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "optionItemId",
-    "quickFilterLabel": "",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 3,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"value\",\"isNameField\":false,\"fieldLabel\":\"选项值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"label\",\"isNameField\":false,\"fieldLabel\":\"显示值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"displayOrder\",\"isNameField\":false,\"fieldLabel\":\"显示顺序\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 3,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"value\",\"isNameField\":false,\"fieldLabel\":\"选项值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"label\",\"isNameField\":false,\"fieldLabel\":\"显示值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"displayOrder\",\"isNameField\":false,\"fieldLabel\":\"显示顺序\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        }
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"value\",\"isNameField\":false,\"fieldLabel\":\"选项值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"label\",\"isNameField\":false,\"fieldLabel\":\"显示值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"displayOrder\",\"isNameField\":false,\"fieldLabel\":\"显示顺序\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+      "applyType": "LIST",
+      "entityCode": 3,
+      "shareTo": "ALL"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 3,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"value\",\"isNameField\":false,\"fieldLabel\":\"选项值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"label\",\"isNameField\":false,\"fieldLabel\":\"显示值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"displayOrder\",\"isNameField\":false,\"fieldLabel\":\"显示顺序\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     }
+  },
+  "titleWidthForAll": null,
+  "nameFieldName": "optionItemId",
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "optionItemId"
 }

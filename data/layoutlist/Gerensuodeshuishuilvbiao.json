@@ -1,27 +1,29 @@
 {
-    "quickFilterLabel": "级数",
-    "chosenListType": null,
-    "advFilter": null,
-    "titleWidthForSelf": null,
-    "nameFieldName": "jishu",
-    "idFieldName": "gerensuodeshuishuilvbiaoId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1179,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-58bd38d94b0c40cd97cef7ddf392022a",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"jishu\",\"isNameField\":true,\"fieldLabel\":\"级数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeexiaxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额下限（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeeshangxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额上限（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"susuankouchushu\",\"isNameField\":false,\"fieldLabel\":\"速算扣除数（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shuilv\",\"isNameField\":false,\"fieldLabel\":\"税率（%）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1179,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"jishu\",\"isNameField\":true,\"fieldLabel\":\"级数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeexiaxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额下限（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeeshangxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额上限（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"susuankouchushu\",\"isNameField\":false,\"fieldLabel\":\"速算扣除数（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        }
+  "nameFieldName": "jishu",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "gerensuodeshuishuilvbiaoId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1179,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-58bd38d94b0c40cd97cef7ddf392022a",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"jishu\",\"isNameField\":true,\"fieldLabel\":\"级数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeexiaxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额下限（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeeshangxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额上限（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"susuankouchushu\",\"isNameField\":false,\"fieldLabel\":\"速算扣除数（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shuilv\",\"isNameField\":false,\"fieldLabel\":\"税率（%）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"}]",
+      "applyType": "LIST",
+      "configName": null
     },
-    "titleWidthForAll": null,
-    "FILTER": []
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1179,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"jishu\",\"isNameField\":true,\"fieldLabel\":\"级数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeexiaxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额下限（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yingnashuisuodeeshangxian\",\"isNameField\":false,\"fieldLabel\":\"应纳税所得额上限（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"susuankouchushu\",\"isNameField\":false,\"fieldLabel\":\"速算扣除数（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+    }
+  },
+  "quickFilterLabel": "级数"
 }

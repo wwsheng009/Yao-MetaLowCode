@@ -1,0 +1,38 @@
+{
+  "idFieldName": "huiyishiguanliId",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "会议室名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "FILTER": [],
+  "nameFieldName": "huiyishimingcheng",
+  "BATCH_UPDATE": {
+    "applyType": "BATCH_UPDATE",
+    "configName": null,
+    "entityCode": 1264,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-0f8f4b1a5c614abc83c7cd1d9d15627b",
+    "shareTo": "ALL",
+    "config": "[{\"isUpdatable\":true,\"fieldName\":\"zuidarongnarenshu\",\"isNameField\":false,\"fieldLabel\":\"最大容纳人数\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+  },
+  "LIST": {
+    "ALL": {
+      "entityCode": 1264,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-c688c1fbdbdd4dcd925e9aa1b2611936",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"huiyishimingcheng\",\"isNameField\":true,\"fieldLabel\":\"会议室名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishibianhao\",\"isNameField\":false,\"fieldLabel\":\"会议室编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishididian\",\"isNameField\":false,\"fieldLabel\":\"会议室地点\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zuidarongnarenshu\",\"isNameField\":false,\"fieldLabel\":\"最大容纳人数\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishibaohanshebei\",\"isNameField\":false,\"fieldLabel\":\"会议室包含设备\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"optionData\":[{\"value\":\"会议大屏\",\"displayOrder\":1},{\"value\":\"话筒\",\"displayOrder\":2},{\"value\":\"白板\",\"displayOrder\":3}],\"isCreatable\":true,\"fieldType\":\"Tag\"}]",
+      "applyType": "LIST",
+      "configName": null
+    },
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"huiyishimingcheng\",\"isNameField\":true,\"fieldLabel\":\"会议室名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishibianhao\",\"isNameField\":false,\"fieldLabel\":\"会议室编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishididian\",\"isNameField\":false,\"fieldLabel\":\"会议室地点\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zuidarongnarenshu\",\"isNameField\":false,\"fieldLabel\":\"最大容纳人数\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+      "applyType": "LIST",
+      "entityCode": 1264,
+      "shareTo": "SELF"
+    }
+  },
+  "titleWidthForAll": null
+}

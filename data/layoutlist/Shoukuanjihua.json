@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "idFieldName": "shoukuanjihuaId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "shoukuanjihuaId",
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1016,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"收款项\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanjine\",\"isNameField\":false,\"fieldLabel\":\"收款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"收款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuashoukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划收款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1016,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"收款项\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanjine\",\"isNameField\":false,\"fieldLabel\":\"收款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"收款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuashoukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划收款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        }
+  "quickFilterLabel": "",
+  "idFieldName": "shoukuanjihuaId",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": "mdXiaoshoudingdanId",
+  "LIST": {
+    "ALL": {
+      "entityCode": 1016,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"收款项\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanjine\",\"isNameField\":false,\"fieldLabel\":\"收款金额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"收款方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuashoukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划收款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST"
+    },
+    "SELF": {
+      "entityCode": 1016,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"收款项\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanjine\",\"isNameField\":false,\"fieldLabel\":\"收款金额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shoukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"收款方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuashoukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划收款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST"
     }
+  },
+  "FILTER": [],
+  "nameFieldName": "shoukuanjihuaId",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "titleWidthForAll": null
 }

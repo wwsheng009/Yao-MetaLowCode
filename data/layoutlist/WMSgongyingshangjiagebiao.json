@@ -1,30 +1,29 @@
 {
-    "chosenListType": "SELF",
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshang\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhuncaigoudanjyuan\",\"isNameField\":false,\"fieldLabel\":\"标准采购单价(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjiahanshyuan\",\"isNameField\":false,\"fieldLabel\":\"采购单价(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhekoul\",\"isNameField\":false,\"fieldLabel\":\"折扣率%\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"zengzhishuishuil\",\"isNameField\":false,\"fieldLabel\":\"增值税税率 %\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjiabuhanshuyuan\",\"isNameField\":false,\"fieldLabel\":\"采购单价(不含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shuieyuan\",\"isNameField\":false,\"fieldLabel\":\"税额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1039,
-            "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
-            "layoutConfigId": "0000015-a9805907e27a44e1b553dcd0c416b64b"
-        },
-        "SELF": {
-            "entityCode": 1039,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-df60a071c72c4bd4b747c5f866aea37a",
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshang.gongyingshangdengji\",\"isNameField\":false,\"fieldLabel\":\"供应商名称.供应商等级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshang.jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"供应商名称.结算期限\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
-            "applyType": "LIST",
-            "configName": null
-        }
+  "FILTER": [],
+  "advFilter": null,
+  "idFieldName": "wMSgongyingshangjiagebiaoId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1039,
+      "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
+      "layoutConfigId": "0000015-a9805907e27a44e1b553dcd0c416b64b",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshang\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhuncaigoudanjyuan\",\"isNameField\":false,\"fieldLabel\":\"标准采购单价(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjiahanshyuan\",\"isNameField\":false,\"fieldLabel\":\"采购单价(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhekoul\",\"isNameField\":false,\"fieldLabel\":\"折扣率%\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"zengzhishuishuil\",\"isNameField\":false,\"fieldLabel\":\"增值税税率 %\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjiabuhanshuyuan\",\"isNameField\":false,\"fieldLabel\":\"采购单价(不含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shuieyuan\",\"isNameField\":false,\"fieldLabel\":\"税额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     },
-    "titleWidthForAll": null,
-    "idFieldName": "wMSgongyingshangjiagebiaoId",
-    "FILTER": [],
-    "nameFieldName": "wMSgongyingshangjiagebiaoId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "advFilter": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1039,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshang\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhuncaigoudanjyuan\",\"isNameField\":false,\"fieldLabel\":\"标准采购单价(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjiahanshyuan\",\"isNameField\":false,\"fieldLabel\":\"采购单价(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudanjiabuhanshuyuan\",\"isNameField\":false,\"fieldLabel\":\"采购单价(不含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shuieyuan\",\"isNameField\":false,\"fieldLabel\":\"税额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+    }
+  },
+  "nameFieldName": "wMSgongyingshangjiagebiaoId",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "titleWidthForAll": null
 }

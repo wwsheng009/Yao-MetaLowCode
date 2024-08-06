@@ -1,24 +1,56 @@
 {
-    "chosenListType": null,
-    "idFieldName": "cRMxiansuochiId",
-    "nameFieldName": "kehumingcheng",
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "entityCode": 1143,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling\",\"isNameField\":false,\"fieldLabel\":\"线索认领\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMxiansuo\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling\",\"isNameField\":false,\"fieldLabel\":\"线索认领\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMxiansuo\"}]",
-            "applyType": "LIST",
-            "entityCode": 1143
-        }
+  "SEARCH": {
+    "applyType": "SEARCH",
+    "configName": null,
+    "entityCode": 1143,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-1c6e9b5cdd9148849d3dad6de1ff935e",
+    "shareTo": "ALL",
+    "config": "[{\"name\":\"kehumingcheng\",\"label\":\"客户名称\",\"type\":\"Text\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false},{\"name\":\"shoujihao\",\"label\":\"手机号\",\"type\":\"Text\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false}]"
+  },
+  "FILTER": [],
+  "TAB": {
+    "applyType": "TAB",
+    "configName": null,
+    "entityCode": 1143,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-817a9ebc4f2d440a9510f4041e41292a",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"跟进\",\"entityCode\":54,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"FollowUp\"},{\"entityLabel\":\"待办\",\"entityCode\":55,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"TodoTask\"}]"
+  },
+  "nameFieldName": "kehumingcheng",
+  "chosenListType": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "quickFilterLabel": "客户名称/手机号",
+  "BATCH_UPDATE": {
+    "applyType": "BATCH_UPDATE",
+    "configName": null,
+    "entityCode": 1143,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-120a5a2da2ea4275b3d687a9191b5f1a",
+    "shareTo": "ALL",
+    "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"optionData\":[{\"value\":1,\"label\":\"上海线索池\",\"displayOrder\":1},{\"value\":2,\"label\":\"山西线索池\",\"displayOrder\":2},{\"value\":3,\"label\":\"北京线索池\",\"displayOrder\":3},{\"value\":4,\"label\":\"江苏线索池\",\"displayOrder\":4}],\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+  },
+  "advFilter": null,
+  "idFieldName": "cRMxiansuochiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1143,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-54e294d28be24642b497421010d87ab0",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling\",\"isNameField\":false,\"fieldLabel\":\"线索认领\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMxiansuo\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuoxiangqing\",\"isNameField\":false,\"fieldLabel\":\"线索详情\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling.kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"线索认领.客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling.shoujihao\",\"isNameField\":false,\"fieldLabel\":\"线索认领.手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling.lianxiren\",\"isNameField\":false,\"fieldLabel\":\"线索认领.联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"xiansuorenling.fuzeren.createdOn\",\"isNameField\":false,\"fieldLabel\":\"线索认领.负责人.创建时间\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"xiansuorenling.fuzeren.modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"线索认领.负责人.最近修改时间\",\"isNullable\":true,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"xiansuorenling.fuzeren.createdBy\",\"isNameField\":false,\"fieldLabel\":\"线索认领.负责人.创建用户\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling.fuzeren.dingTalkUserId\",\"isNameField\":false,\"fieldLabel\":\"线索认领.负责人.钉钉用户ID\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "quickFilterLabel": "客户名称"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1143,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":true,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhiwu\",\"isNameField\":false,\"fieldLabel\":\"职务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuochi\",\"isNameField\":false,\"fieldLabel\":\"线索池\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuolaiyuan\",\"isNameField\":false,\"fieldLabel\":\"线索来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xiansuorenling\",\"isNameField\":false,\"fieldLabel\":\"线索认领\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMxiansuo\"}]"
+    }
+  }
 }

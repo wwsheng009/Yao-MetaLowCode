@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "FILTER": [],
-    "nameFieldName": "wMScaigoushouhuomingxiId",
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "idFieldName": "wMScaigoushouhuomingxiId",
-    "LIST": {
-        "SELF": {
-            "entityCode": 1092,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushouhuodanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushouhuodan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"实际收货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shishouqueshishuliang\",\"isNameField\":false,\"fieldLabel\":\"实收缺失数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST"
-        },
-        "ALL": {
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushouhuodanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushouhuodan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"实际收货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shishouqueshishuliang\",\"isNameField\":false,\"fieldLabel\":\"实收缺失数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "entityCode": 1092,
-            "shareTo": "ALL"
-        }
+  "quickFilterLabel": "",
+  "advFilter": null,
+  "idFieldName": "wMScaigoushouhuomingxiId",
+  "titleWidthForSelf": null,
+  "nameFieldName": "wMScaigoushouhuomingxiId",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": "mdWMScaigoushouhuodanId",
+  "LIST": {
+    "SELF": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushouhuodanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushouhuodan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"实际收货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shishouqueshishuliang\",\"isNameField\":false,\"fieldLabel\":\"实收缺失数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1092,
+      "shareTo": "SELF"
     },
-    "titleWidthForAll": null
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1092,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushouhuodanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushouhuodan\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingxi\",\"isNameField\":false,\"fieldLabel\":\"产品明细\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shijishouhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"实际收货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shishouqueshishuliang\",\"isNameField\":false,\"fieldLabel\":\"实收缺失数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": []
 }

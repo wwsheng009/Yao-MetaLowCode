@@ -1,0 +1,29 @@
+{
+  "nameFieldName": "baobiaomingcheng",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "报表名称",
+  "idFieldName": "baobiaoguanliId",
+  "LIST": {
+    "ALL": {
+      "createdBy": "0000021-00ec15ca45bc446f9fc36161281733d4",
+      "layoutConfigId": "0000015-39aff2681e3a45548ae00920b573ed8e",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"baobiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"报表名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baobiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报表类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"baobiaoshujuyuan\",\"isNameField\":false,\"fieldLabel\":\"报表数据源\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shujuji\"},{\"isUpdatable\":true,\"fieldName\":\"fabuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"发布状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Status\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1241
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1241,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"baobiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"报表名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baobiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报表类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"baobiaoshujuyuan\",\"isNameField\":false,\"fieldLabel\":\"报表数据源\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shujuji\"},{\"isUpdatable\":true,\"fieldName\":\"fabuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"发布状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "FILTER": [],
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "chosenListType": null
+}

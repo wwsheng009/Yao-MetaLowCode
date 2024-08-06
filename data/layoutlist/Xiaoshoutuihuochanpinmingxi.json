@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "advFilter": null,
-    "idFieldName": "xiaoshoutuihuochanpinmingxiId",
-    "nameFieldName": "xiaoshoutuihuochanpinmingxiId",
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1070,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingshouzhangkuanuizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujine\",\"isNameField\":false,\"fieldLabel\":\"应收金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzetuihuomingxi\",\"isNameField\":false,\"fieldLabel\":\"选择退货明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoutuihuo\"}]"
-        },
-        "SELF": {
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingshouzhangkuanuizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujine\",\"isNameField\":false,\"fieldLabel\":\"应收金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzetuihuomingxi\",\"isNameField\":false,\"fieldLabel\":\"选择退货明细\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoutuihuo\"}]",
-            "applyType": "LIST",
-            "entityCode": 1070,
-            "shareTo": "SELF"
-        }
+  "mainDetailField": "mdYingshouzhangkuanuizhangId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "xiaoshoutuihuochanpinmingxiId",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1070,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingshouzhangkuanuizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujine\",\"isNameField\":false,\"fieldLabel\":\"应收金额(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzetuihuomingxi\",\"isNameField\":false,\"fieldLabel\":\"选择退货明细\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoutuihuo\"}]"
     },
-    "titleWidthForAll": null,
-    "FILTER": []
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdYingshouzhangkuanuizhangId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangshuliang\",\"isNameField\":false,\"fieldLabel\":\"对账数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujine\",\"isNameField\":false,\"fieldLabel\":\"应收金额(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzetuihuomingxi\",\"isNameField\":false,\"fieldLabel\":\"选择退货明细\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoutuihuo\"}]",
+      "applyType": "LIST",
+      "entityCode": 1070
+    }
+  },
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "xiaoshoutuihuochanpinmingxiId"
 }

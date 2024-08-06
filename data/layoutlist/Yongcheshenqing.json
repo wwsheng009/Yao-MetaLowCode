@@ -1,0 +1,29 @@
+{
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "advFilter": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "yongcheshenqingId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1263,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-70d5ed4333c6450d9588c999c1be8202",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shenqingcheliang\",\"isNameField\":false,\"fieldLabel\":\"申请车辆\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi1\"},{\"isUpdatable\":true,\"fieldName\":\"cheliangleixing\",\"isNameField\":false,\"fieldLabel\":\"车辆类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuayongcheshijian\",\"isNameField\":false,\"fieldLabel\":\"计划用车时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"yujifanhuishijian\",\"isNameField\":false,\"fieldLabel\":\"预计返回时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"mudidi\",\"isNameField\":false,\"fieldLabel\":\"目的地\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"xiangxidizhi\",\"isNameField\":false,\"fieldLabel\":\"详细地址\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yongcheshiyou\",\"isNameField\":true,\"fieldLabel\":\"用车事由\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isReserved\":true,\"isUnique\":false,\"optionData\":[{\"value\":0,\"label\":\"未提交\",\"displayOrder\":1},{\"value\":1,\"label\":\"审核中\",\"displayOrder\":2},{\"value\":2,\"label\":\"已驳回\",\"displayOrder\":3},{\"value\":3,\"label\":\"已完成\",\"displayOrder\":4},{\"value\":4,\"label\":\"已撤销\",\"displayOrder\":5}],\"isCreatable\":false,\"fieldType\":\"Status\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1263,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"cheliangleixing\",\"isNameField\":false,\"fieldLabel\":\"车辆类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuayongcheshijian\",\"isNameField\":false,\"fieldLabel\":\"计划用车时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"yujifanhuishijian\",\"isNameField\":false,\"fieldLabel\":\"预计返回时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"mudidi\",\"isNameField\":false,\"fieldLabel\":\"目的地\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"xiangxidizhi\",\"isNameField\":false,\"fieldLabel\":\"详细地址\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yongcheshiyou\",\"isNameField\":true,\"fieldLabel\":\"用车事由\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingcheliang\",\"isNameField\":false,\"fieldLabel\":\"申请车辆\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi1\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "yongcheshiyou",
+  "quickFilterLabel": "用车事由"
+}

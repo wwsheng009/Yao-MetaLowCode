@@ -1,0 +1,29 @@
+{
+  "nameFieldName": "shujujimingcheng",
+  "LIST": {
+    "ALL": {
+      "createdBy": "0000021-00ec15ca45bc446f9fc36161281733d4",
+      "layoutConfigId": "0000015-71c6964abd00448c8c746ba253bc4cc3",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shujujimingcheng\",\"isNameField\":true,\"fieldLabel\":\"数据模型名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeshujuyuan\",\"isNameField\":false,\"fieldLabel\":\"选择数据源\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Zhuantishujumoxing\"},{\"isUpdatable\":true,\"fieldName\":\"sqlleixing\",\"isNameField\":false,\"fieldLabel\":\"sql类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fabuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"发布状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Status\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1242
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1242,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shujujimingcheng\",\"isNameField\":true,\"fieldLabel\":\"数据模型名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"sqlleixing\",\"isNameField\":false,\"fieldLabel\":\"sql类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"canshumingcheng\",\"isNameField\":false,\"fieldLabel\":\"参数名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"canshubianma\",\"isNameField\":false,\"fieldLabel\":\"参数编码\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"canshuleixing\",\"isNameField\":false,\"fieldLabel\":\"参数类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shifoubitian\",\"isNameField\":false,\"fieldLabel\":\"是否必填\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shifouyincang\",\"isNameField\":false,\"fieldLabel\":\"是否隐藏\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shujumoxingleixing\",\"isNameField\":false,\"fieldLabel\":\"数据模型类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fabuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"发布状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeshujuyuan\",\"isNameField\":false,\"fieldLabel\":\"选择数据源\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shujuyuanguanli\"}]"
+    }
+  },
+  "FILTER": [],
+  "quickFilterLabel": "数据模型名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "shujujiId",
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null
+}

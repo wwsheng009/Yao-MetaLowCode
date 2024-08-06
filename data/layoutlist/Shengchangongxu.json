@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "工序名称",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "shengchangongxuId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1187,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongxubianma\",\"isNameField\":false,\"fieldLabel\":\"工序编码\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":true,\"fieldLabel\":\"工序名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"banzuzhang\",\"isNameField\":false,\"fieldLabel\":\"班组长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"banzurenshu\",\"isNameField\":false,\"fieldLabel\":\"班组人数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"zhijianyuan\",\"isNameField\":false,\"fieldLabel\":\"质检员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1187,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongxubianma\",\"isNameField\":false,\"fieldLabel\":\"工序编码\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":true,\"fieldLabel\":\"工序名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"banzuzhang\",\"isNameField\":false,\"fieldLabel\":\"班组长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"banzurenshu\",\"isNameField\":false,\"fieldLabel\":\"班组人数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"zhijianyuan\",\"isNameField\":false,\"fieldLabel\":\"质检员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "titleWidthForSelf": null,
+  "nameFieldName": "gongxumingcheng",
+  "quickFilterLabel": "工序名称",
+  "mainDetailField": null,
+  "idFieldName": "shengchangongxuId",
+  "LIST": {
+    "ALL": {
+      "entityCode": 1187,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongxubianma\",\"isNameField\":false,\"fieldLabel\":\"工序编码\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":true,\"fieldLabel\":\"工序名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"banzuzhang\",\"isNameField\":false,\"fieldLabel\":\"班组长\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"banzurenshu\",\"isNameField\":false,\"fieldLabel\":\"班组人数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"zhijianyuan\",\"isNameField\":false,\"fieldLabel\":\"质检员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST"
     },
-    "titleWidthForSelf": null,
-    "nameFieldName": "gongxumingcheng",
-    "titleWidthForAll": null,
-    "FILTER": []
+    "SELF": {
+      "entityCode": 1187,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongxubianma\",\"isNameField\":false,\"fieldLabel\":\"工序编码\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongxumingcheng\",\"isNameField\":true,\"fieldLabel\":\"工序名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shengchanbanzu\",\"isNameField\":false,\"fieldLabel\":\"生产班组\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Team\"},{\"isUpdatable\":true,\"fieldName\":\"banzuzhang\",\"isNameField\":false,\"fieldLabel\":\"班组长\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"banzurenshu\",\"isNameField\":false,\"fieldLabel\":\"班组人数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"zhijianyuan\",\"isNameField\":false,\"fieldLabel\":\"质检员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": []
 }

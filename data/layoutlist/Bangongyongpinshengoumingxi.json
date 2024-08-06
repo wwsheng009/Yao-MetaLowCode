@@ -1,0 +1,26 @@
+{
+  "FILTER": [],
+  "nameFieldName": "bangongyongpinshengoumingxiId",
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "bangongyongpinshengoumingxiId",
+  "titleWidthForAll": null,
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": "mdBangongyongpinshengouId",
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBangongyongpinshengouId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpinshengou\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinleixing\",\"isNameField\":false,\"fieldLabel\":\"办公用品类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"peizhiyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"配置要求\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiushuliang\",\"isNameField\":false,\"fieldLabel\":\"需求数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"qiwangdaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"期望到货日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST",
+      "entityCode": 1253
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1253,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBangongyongpinshengouId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpinshengou\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinleixing\",\"isNameField\":false,\"fieldLabel\":\"办公用品类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"peizhiyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"配置要求\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiushuliang\",\"isNameField\":false,\"fieldLabel\":\"需求数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"qiwangdaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"期望到货日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  }
+}

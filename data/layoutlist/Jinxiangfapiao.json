@@ -1,24 +1,26 @@
 {
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1076,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"进项发票编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应付账款-对账单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1076,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"进项发票编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应付账款-对账单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"}]"
-        }
+  "mainDetailField": null,
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "进项发票编号",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "jinxiangfapiaoId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1076,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"进项发票编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应付账款-对账单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"}]"
     },
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "进项发票编号",
-    "chosenListType": null,
-    "idFieldName": "jinxiangfapiaoId",
-    "FILTER": [],
-    "nameFieldName": "xiaoxiangfapiaobianhao",
-    "advFilter": null,
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1076,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"进项发票编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应付账款-对账单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingfuzhangkuan\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "xiaoxiangfapiaobianhao",
+  "chosenListType": null
 }

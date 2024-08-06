@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "advFilter": null,
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1051,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKucuntiaoboId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kucuntiaobo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次调拨数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        },
-        "ALL": {
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKucuntiaoboId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kucuntiaobo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次调拨数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 1051,
-            "shareTo": "ALL"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "titleWidthForAll": null,
+  "nameFieldName": "tiaobochanpinmingxiId",
+  "titleWidthForSelf": null,
+  "mainDetailField": "mdKucuntiaoboId",
+  "idFieldName": "tiaobochanpinmingxiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1051,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKucuntiaoboId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kucuntiaobo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次调拨数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     },
-    "FILTER": [],
-    "nameFieldName": "tiaobochanpinmingxiId",
-    "titleWidthForAll": null,
-    "chosenListType": null,
-    "idFieldName": "tiaobochanpinmingxiId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1051,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKucuntiaoboId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kucuntiaobo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次调拨数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    }
+  },
+  "FILTER": [],
+  "quickFilterLabel": ""
 }

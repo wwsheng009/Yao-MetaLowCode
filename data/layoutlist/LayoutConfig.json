@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "layoutConfigId",
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "idFieldName": "layoutConfigId",
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"configName\",\"isNameField\":false,\"fieldLabel\":\"配置名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"applyType\",\"isNameField\":false,\"fieldLabel\":\"应用类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 15
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 15,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"configName\",\"isNameField\":false,\"fieldLabel\":\"配置名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"applyType\",\"isNameField\":false,\"fieldLabel\":\"应用类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        }
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "layoutConfigId",
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 15,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"configName\",\"isNameField\":false,\"fieldLabel\":\"配置名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"applyType\",\"isNameField\":false,\"fieldLabel\":\"应用类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 15,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"configName\",\"isNameField\":false,\"fieldLabel\":\"配置名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"applyType\",\"isNameField\":false,\"fieldLabel\":\"应用类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "nameFieldName": "layoutConfigId",
+  "titleWidthForSelf": null
 }

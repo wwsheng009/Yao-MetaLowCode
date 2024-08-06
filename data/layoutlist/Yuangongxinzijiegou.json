@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "岗位",
-    "chosenListType": null,
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "gangwei",
-    "advFilter": null,
-    "idFieldName": "yuangongxinzijiegouId",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1180,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhuangtai\",\"isNameField\":false,\"fieldLabel\":\"状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jibengongzi\",\"isNameField\":false,\"fieldLabel\":\"基本工资（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jixiaoxinzi\",\"isNameField\":false,\"fieldLabel\":\"绩效薪资（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"butie\",\"isNameField\":false,\"fieldLabel\":\"补贴（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "ALL": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhuangtai\",\"isNameField\":false,\"fieldLabel\":\"状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jibengongzi\",\"isNameField\":false,\"fieldLabel\":\"基本工资（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jixiaoxinzi\",\"isNameField\":false,\"fieldLabel\":\"绩效薪资（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"butie\",\"isNameField\":false,\"fieldLabel\":\"补贴（元）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
-            "applyType": "LIST",
-            "entityCode": 1180,
-            "shareTo": "ALL"
-        }
+  "COM_TREE_GROUP": [],
+  "LIST": {
+    "ALL": {
+      "entityCode": 1180,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhuangtai\",\"isNameField\":false,\"fieldLabel\":\"状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jibengongzi\",\"isNameField\":false,\"fieldLabel\":\"基本工资（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jixiaoxinzi\",\"isNameField\":false,\"fieldLabel\":\"绩效薪资（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"butie\",\"isNameField\":false,\"fieldLabel\":\"补贴（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST"
+    },
+    "SELF": {
+      "entityCode": 1180,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhuangtai\",\"isNameField\":false,\"fieldLabel\":\"状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jibengongzi\",\"isNameField\":false,\"fieldLabel\":\"基本工资（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jixiaoxinzi\",\"isNameField\":false,\"fieldLabel\":\"绩效薪资（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"butie\",\"isNameField\":false,\"fieldLabel\":\"补贴（元）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST"
     }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "岗位",
+  "chosenListType": null,
+  "nameFieldName": "gangwei",
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "yuangongxinzijiegouId"
 }

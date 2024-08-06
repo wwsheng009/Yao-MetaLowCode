@@ -1,24 +1,38 @@
 {
-    "FILTER": [],
-    "nameFieldName": "pandiandanbianhao",
-    "quickFilterLabel": "盘点单编号",
-    "chosenListType": null,
-    "LIST": {
-        "SELF": {
-            "entityCode": 1055,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"pandianleixing\",\"isNameField\":false,\"fieldLabel\":\"盘点类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pandiandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"盘点单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pandiankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandianjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandiancangku\",\"isNameField\":false,\"fieldLabel\":\"盘点仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]",
-            "applyType": "LIST"
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1055,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"pandianleixing\",\"isNameField\":false,\"fieldLabel\":\"盘点类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pandiandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"盘点单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pandiankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandianjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandiancangku\",\"isNameField\":false,\"fieldLabel\":\"盘点仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
-        }
+  "mainDetailField": null,
+  "idFieldName": "kucunpandianId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "盘点单编号",
+  "BATCH_UPDATE": {
+    "applyType": "BATCH_UPDATE",
+    "configName": null,
+    "entityCode": 1055,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-ce6425b083584a148b50683dddfb45da",
+    "shareTo": "ALL",
+    "config": "[{\"isUpdatable\":true,\"fieldName\":\"pandiancangku\",\"isNameField\":false,\"fieldLabel\":\"盘点仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
+  },
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1055,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-404b968812a4487a83608da837930486",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"pandianleixing\",\"isNameField\":false,\"fieldLabel\":\"盘点类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pandiandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"盘点单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pandiankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandianjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandiancangku\",\"isNameField\":false,\"fieldLabel\":\"盘点仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"pandianyuan\",\"isNameField\":false,\"fieldLabel\":\"盘点员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"pankuichanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"盘亏产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"pankuichanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"盘亏产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"panyingchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"盘盈产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"panyingchanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"盘盈产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]"
     },
-    "titleWidthForAll": null,
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "idFieldName": "kucunpandianId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1055,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"pandianleixing\",\"isNameField\":false,\"fieldLabel\":\"盘点类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pandiandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"盘点单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pandiankaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点开始日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandianjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"盘点结束日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"pandiancangku\",\"isNameField\":false,\"fieldLabel\":\"盘点仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
+    }
+  },
+  "nameFieldName": "pandiandanbianhao"
 }

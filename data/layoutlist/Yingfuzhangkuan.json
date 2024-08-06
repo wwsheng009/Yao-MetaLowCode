@@ -1,24 +1,32 @@
 {
-    "nameFieldName": "yingfuduizhangdanbianhao",
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "idFieldName": "yingfuzhangkuanId",
-    "LIST": {
-        "ALL": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应付对账单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingfujinezonge\",\"isNameField\":false,\"fieldLabel\":\"应付金额总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujifukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"预计付款方式\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangqueren\",\"isNameField\":false,\"fieldLabel\":\"应付对账确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
-            "applyType": "LIST",
-            "entityCode": 1073,
-            "shareTo": "ALL"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1073,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应付对账单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingfujinezonge\",\"isNameField\":false,\"fieldLabel\":\"应付金额总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujifukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"预计付款方式\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangqueren\",\"isNameField\":false,\"fieldLabel\":\"应付对账确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]"
-        }
+  "FILTER": [],
+  "nameFieldName": "yingfuduizhangdanbianhao",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1073,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-ffb44838f26b4c2eae5b4acacba2bcd1",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应付对账单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingfujinezonge\",\"isNameField\":false,\"fieldLabel\":\"应付金额总额(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujifukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"预计付款方式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangqueren\",\"isNameField\":false,\"fieldLabel\":\"应付对账确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"yingfujinezonge1\",\"isNameField\":false,\"fieldLabel\":\"应付金额总额(不含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujifukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计付款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangshijian\",\"isNameField\":false,\"fieldLabel\":\"应付对账时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangrenyuan\",\"isNameField\":false,\"fieldLabel\":\"应付对账人员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "configName": null
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "advFilter": null,
-    "quickFilterLabel": "应付对账单编号"
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应付对账单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingfujinezonge\",\"isNameField\":false,\"fieldLabel\":\"应付金额总额(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujifukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"预计付款方式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yingfuduizhangqueren\",\"isNameField\":false,\"fieldLabel\":\"应付对账确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1073,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-8d15c613849f481487b126a84105dd96",
+      "shareTo": "SELF"
+    }
+  },
+  "quickFilterLabel": "应付对账单编号",
+  "advFilter": null,
+  "idFieldName": "yingfuzhangkuanId",
+  "titleWidthForAll": null
 }

@@ -1,24 +1,29 @@
 {
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"izhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应收账款-对账单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"销项发票编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "entityCode": 1071,
-            "shareTo": "ALL"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1071,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"izhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应收账款-对账单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"销项发票编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"izhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应收账款-对账单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"销项发票编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zengzhishuishuilv\",\"isNameField\":false,\"fieldLabel\":\"增值税税率%\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1071,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-cd85217d5818413882f0804b3671c13d"
     },
-    "titleWidthForAll": null,
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "销项发票编号",
-    "chosenListType": null,
-    "idFieldName": "xiaoxiangfapiaoId",
-    "FILTER": [],
-    "nameFieldName": "xiaoxiangfapiaobianhao"
+    "SELF": {
+      "entityCode": 1071,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"izhangdan\",\"isNameField\":false,\"fieldLabel\":\"选择应收账款-对账单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yingshouzhangkuanuizhang\"},{\"isUpdatable\":true,\"fieldName\":\"kehumingcheng\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoxiangfapiaobianhao\",\"isNameField\":true,\"fieldLabel\":\"销项发票编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额(含税)/元\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null,
+  "nameFieldName": "xiaoxiangfapiaobianhao",
+  "quickFilterLabel": "销项发票编号",
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "xiaoxiangfapiaoId",
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": []
 }

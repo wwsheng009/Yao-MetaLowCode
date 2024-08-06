@@ -1,0 +1,26 @@
+{
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "transformId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 58,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"disabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"isPreview\",\"isNameField\":false,\"fieldLabel\":\"预览模式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"transformName\",\"isNameField\":false,\"fieldLabel\":\"转化名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"targetEntity\",\"isNameField\":false,\"fieldLabel\":\"目标实体\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"sourceEntity\",\"isNameField\":false,\"fieldLabel\":\"源实体\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 58,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"disabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"isPreview\",\"isNameField\":false,\"fieldLabel\":\"预览模式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"transformName\",\"isNameField\":false,\"fieldLabel\":\"转化名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"targetEntity\",\"isNameField\":false,\"fieldLabel\":\"目标实体\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"sourceEntity\",\"isNameField\":false,\"fieldLabel\":\"源实体\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "titleWidthForAll": null,
+  "nameFieldName": "transformId",
+  "quickFilterLabel": ""
+}

@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "产品名称",
-    "advFilter": null,
-    "idFieldName": "wMScaigouchanpinmingxiId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "chanpinmingcheng",
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushenqing\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dangqiankeyongkucunshuliang\",\"isNameField\":false,\"fieldLabel\":\"当前可用库存数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"caigoushuliangxuqiu\",\"isNameField\":false,\"fieldLabel\":\"采购数量需求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuchi\",\"isNameField\":false,\"fieldLabel\":\"需求池\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigouxuqiuchi\"}]",
-            "applyType": "LIST",
-            "entityCode": 1046,
-            "shareTo": "ALL"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushenqing\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dangqiankeyongkucunshuliang\",\"isNameField\":false,\"fieldLabel\":\"当前可用库存数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"caigoushuliangxuqiu\",\"isNameField\":false,\"fieldLabel\":\"采购数量需求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuchi\",\"isNameField\":false,\"fieldLabel\":\"需求池\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigouxuqiuchi\"}]",
-            "applyType": "LIST",
-            "entityCode": 1046
-        }
+  "mainDetailField": "mdWMScaigoushenqingId",
+  "idFieldName": "wMScaigouchanpinmingxiId",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushenqing\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dangqiankeyongkucunshuliang\",\"isNameField\":false,\"fieldLabel\":\"当前可用库存数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"caigoushuliangxuqiu\",\"isNameField\":false,\"fieldLabel\":\"采购数量需求\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuchi\",\"isNameField\":false,\"fieldLabel\":\"需求池\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigouxuqiuchi\"}]",
+      "applyType": "LIST",
+      "entityCode": 1046,
+      "shareTo": "ALL"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1046,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMScaigoushenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigoushenqing\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dangqiankeyongkucunshuliang\",\"isNameField\":false,\"fieldLabel\":\"当前可用库存数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"caigoushuliangxuqiu\",\"isNameField\":false,\"fieldLabel\":\"采购数量需求\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuchi\",\"isNameField\":false,\"fieldLabel\":\"需求池\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScaigouxuqiuchi\"}]"
     }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "产品名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "nameFieldName": "chanpinmingcheng",
+  "titleWidthForSelf": null
 }

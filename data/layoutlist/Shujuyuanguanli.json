@@ -1,0 +1,29 @@
+{
+  "FILTER": [],
+  "nameFieldName": "zhutimingcheng",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "数据源名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "shujuyuanguanliId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1243,
+      "createdBy": "0000021-00ec15ca45bc446f9fc36161281733d4",
+      "layoutConfigId": "0000015-c0dca744e5cf4ed5b38c377c9653750c",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhutimingcheng\",\"isNameField\":true,\"fieldLabel\":\"数据源名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bianma\",\"isNameField\":false,\"fieldLabel\":\"编码\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shujuyuanleixing\",\"isNameField\":false,\"fieldLabel\":\"数据源类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shujuyuanlianjie\",\"isNameField\":false,\"fieldLabel\":\"数据源链接\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Status\"},{\"isUpdatable\":true,\"fieldName\":\"zhanghao\",\"isNameField\":false,\"fieldLabel\":\"账号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhutimiaoshu\",\"isNameField\":false,\"fieldLabel\":\"描述\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1243,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhutimingcheng\",\"isNameField\":true,\"fieldLabel\":\"数据源名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhutimiaoshu\",\"isNameField\":false,\"fieldLabel\":\"描述\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"bianma\",\"isNameField\":false,\"fieldLabel\":\"编码\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shujuyuanleixing\",\"isNameField\":false,\"fieldLabel\":\"数据源类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shujuyuanlianjie\",\"isNameField\":false,\"fieldLabel\":\"数据源链接\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zhanghao\",\"isNameField\":false,\"fieldLabel\":\"账号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mima\",\"isNameField\":false,\"fieldLabel\":\"密码\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "titleWidthForAll": null
+}

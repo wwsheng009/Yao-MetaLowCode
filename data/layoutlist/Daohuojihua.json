@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "daohuojihuaId",
-    "chosenListType": null,
-    "idFieldName": "daohuojihuaId",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1032,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoneirongbeizhu\",\"isNameField\":false,\"fieldLabel\":\"计划到货内容备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1032,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoneirongbeizhu\",\"isNameField\":false,\"fieldLabel\":\"计划到货内容备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "nameFieldName": "daohuojihuaId",
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "advFilter": null,
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": "mdCaigoudingdanId",
+  "idFieldName": "daohuojihuaId",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoneirongbeizhu\",\"isNameField\":false,\"fieldLabel\":\"计划到货内容备注\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1032,
+      "shareTo": "ALL"
     },
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "advFilter": null,
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1032,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"daohuopici\",\"isNameField\":false,\"fieldLabel\":\"到货批次\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoneirongbeizhu\",\"isNameField\":false,\"fieldLabel\":\"计划到货内容备注\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  }
 }

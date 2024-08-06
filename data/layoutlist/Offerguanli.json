@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "baodaolianxiren",
-    "chosenListType": null,
-    "idFieldName": "offerguanliId",
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "报道联系人",
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1131,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhaopinfuzeren\",\"isNameField\":false,\"fieldLabel\":\"招聘负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fafangshijian\",\"isNameField\":false,\"fieldLabel\":\"发放时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzehouxuanren\",\"isNameField\":false,\"fieldLabel\":\"选择候选人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"},{\"isUpdatable\":true,\"fieldName\":\"offergangwei\",\"isNameField\":false,\"fieldLabel\":\"offer岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhibumen\",\"isNameField\":false,\"fieldLabel\":\"入职部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"zhuanzhengxinchou\",\"isNameField\":false,\"fieldLabel\":\"转正薪酬（元）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baodaoriqi\",\"isNameField\":false,\"fieldLabel\":\"报到日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhaopinfuzeren\",\"isNameField\":false,\"fieldLabel\":\"招聘负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fafangshijian\",\"isNameField\":false,\"fieldLabel\":\"发放时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzehouxuanren\",\"isNameField\":false,\"fieldLabel\":\"选择候选人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"},{\"isUpdatable\":true,\"fieldName\":\"offergangwei\",\"isNameField\":false,\"fieldLabel\":\"offer岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhibumen\",\"isNameField\":false,\"fieldLabel\":\"入职部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"zhuanzhengxinchou\",\"isNameField\":false,\"fieldLabel\":\"转正薪酬（元）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baodaoriqi\",\"isNameField\":false,\"fieldLabel\":\"报到日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
-            "applyType": "LIST",
-            "entityCode": 1131
-        }
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1131,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhaopinfuzeren\",\"isNameField\":false,\"fieldLabel\":\"招聘负责人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fafangshijian\",\"isNameField\":false,\"fieldLabel\":\"发放时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzehouxuanren\",\"isNameField\":false,\"fieldLabel\":\"选择候选人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"},{\"isUpdatable\":true,\"fieldName\":\"offergangwei\",\"isNameField\":false,\"fieldLabel\":\"offer岗位\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhibumen\",\"isNameField\":false,\"fieldLabel\":\"入职部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"zhuanzhengxinchou\",\"isNameField\":false,\"fieldLabel\":\"转正薪酬（元）\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baodaoriqi\",\"isNameField\":false,\"fieldLabel\":\"报到日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1131,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhaopinfuzeren\",\"isNameField\":false,\"fieldLabel\":\"招聘负责人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fafangshijian\",\"isNameField\":false,\"fieldLabel\":\"发放时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzehouxuanren\",\"isNameField\":false,\"fieldLabel\":\"选择候选人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"},{\"isUpdatable\":true,\"fieldName\":\"offergangwei\",\"isNameField\":false,\"fieldLabel\":\"offer岗位\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhibumen\",\"isNameField\":false,\"fieldLabel\":\"入职部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"zhuanzhengxinchou\",\"isNameField\":false,\"fieldLabel\":\"转正薪酬（元）\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baodaoriqi\",\"isNameField\":false,\"fieldLabel\":\"报到日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "baodaolianxiren",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "报道联系人",
+  "chosenListType": null,
+  "advFilter": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "offerguanliId",
+  "titleWidthForAll": null
 }

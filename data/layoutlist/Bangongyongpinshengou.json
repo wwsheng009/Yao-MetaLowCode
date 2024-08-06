@@ -1,0 +1,29 @@
+{
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "nameFieldName": "shengouyongtu",
+  "quickFilterLabel": "申购用途",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "bangongyongpinshengouId",
+  "LIST": {
+    "ALL": {
+      "layoutConfigId": "0000015-cf8e2fe207a44ed78fb3fc7a639213ca",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengouyongtu\",\"isNameField\":true,\"fieldLabel\":\"申购用途\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isReserved\":true,\"isUnique\":false,\"optionData\":[{\"value\":0,\"label\":\"未提交\",\"displayOrder\":1},{\"value\":1,\"label\":\"审核中\",\"displayOrder\":2},{\"value\":2,\"label\":\"已驳回\",\"displayOrder\":3},{\"value\":3,\"label\":\"已完成\",\"displayOrder\":4},{\"value\":4,\"label\":\"已撤销\",\"displayOrder\":5}],\"isCreatable\":false,\"fieldType\":\"Status\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1252,
+      "createdBy": "0000021-00000000000000000000000000000001"
+    },
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengouyongtu\",\"isNameField\":true,\"fieldLabel\":\"申购用途\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1252
+    }
+  },
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "chosenListType": null
+}

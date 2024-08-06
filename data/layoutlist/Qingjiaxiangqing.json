@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "advFilter": null,
-    "FILTER": [],
-    "nameFieldName": "qingjiaxiangqingId",
-    "idFieldName": "qingjiaxiangqingId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1228,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiangmurenwuguanliqingjiashId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmurenwuguanliqingjiash\"},{\"isUpdatable\":true,\"fieldName\":\"riqi\",\"isNameField\":false,\"fieldLabel\":\"日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiduan\",\"isNameField\":false,\"fieldLabel\":\"时段\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tianshu\",\"isNameField\":false,\"fieldLabel\":\"天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1228,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiangmurenwuguanliqingjiashId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmurenwuguanliqingjiash\"},{\"isUpdatable\":true,\"fieldName\":\"riqi\",\"isNameField\":false,\"fieldLabel\":\"日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiduan\",\"isNameField\":false,\"fieldLabel\":\"时段\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tianshu\",\"isNameField\":false,\"fieldLabel\":\"天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        }
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "FILTER": [],
+  "nameFieldName": "qingjiaxiangqingId",
+  "mainDetailField": "mdXiangmurenwuguanliqingjiashId",
+  "idFieldName": "qingjiaxiangqingId",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiangmurenwuguanliqingjiashId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmurenwuguanliqingjiash\"},{\"isUpdatable\":true,\"fieldName\":\"riqi\",\"isNameField\":false,\"fieldLabel\":\"日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiduan\",\"isNameField\":false,\"fieldLabel\":\"时段\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tianshu\",\"isNameField\":false,\"fieldLabel\":\"天数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+      "applyType": "LIST",
+      "entityCode": 1228,
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1228,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiangmurenwuguanliqingjiashId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmurenwuguanliqingjiash\"},{\"isUpdatable\":true,\"fieldName\":\"riqi\",\"isNameField\":false,\"fieldLabel\":\"日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiduan\",\"isNameField\":false,\"fieldLabel\":\"时段\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"tianshu\",\"isNameField\":false,\"fieldLabel\":\"天数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "quickFilterLabel": "",
+  "chosenListType": null
 }

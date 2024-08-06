@@ -1,24 +1,26 @@
 {
-    "chosenListType": null,
-    "idFieldName": "wMSbeiliaotongzhidanId",
-    "nameFieldName": "beiliaotongzhidanbianhao",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "备料通知单编号",
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1101,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhidanbianhao\",\"isNameField\":true,\"fieldLabel\":\"备料通知单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaofuzeren\",\"isNameField\":false,\"fieldLabel\":\"备料负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhishijian\",\"isNameField\":false,\"fieldLabel\":\"备料通知时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jihualingliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"计划领料时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"备料产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinchengbenzonn\",\"isNameField\":false,\"fieldLabel\":\"备料产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "SELF": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhidanbianhao\",\"isNameField\":true,\"fieldLabel\":\"备料通知单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaofuzeren\",\"isNameField\":false,\"fieldLabel\":\"备料负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhishijian\",\"isNameField\":false,\"fieldLabel\":\"备料通知时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jihualingliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"计划领料时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"备料产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinchengbenzonn\",\"isNameField\":false,\"fieldLabel\":\"备料产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
-            "applyType": "LIST",
-            "entityCode": 1101,
-            "shareTo": "SELF"
-        }
+  "idFieldName": "wMSbeiliaotongzhidanId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1101,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhidanbianhao\",\"isNameField\":true,\"fieldLabel\":\"备料通知单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaofuzeren\",\"isNameField\":false,\"fieldLabel\":\"备料负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhishijian\",\"isNameField\":false,\"fieldLabel\":\"备料通知时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jihualingliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"计划领料时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"备料产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinchengbenzonn\",\"isNameField\":false,\"fieldLabel\":\"备料产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
     },
-    "titleWidthForAll": null,
-    "FILTER": []
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1101,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhidanbianhao\",\"isNameField\":true,\"fieldLabel\":\"备料通知单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaofuzeren\",\"isNameField\":false,\"fieldLabel\":\"备料负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaotongzhishijian\",\"isNameField\":false,\"fieldLabel\":\"备料通知时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jihualingliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"计划领料时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"备料产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaochanpinchengbenzonn\",\"isNameField\":false,\"fieldLabel\":\"备料产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+    }
+  },
+  "nameFieldName": "beiliaotongzhidanbianhao",
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "备料通知单编号",
+  "chosenListType": null,
+  "mainDetailField": null
 }

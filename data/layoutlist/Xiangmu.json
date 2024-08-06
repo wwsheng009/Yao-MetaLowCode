@@ -1,27 +1,38 @@
 {
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "LIST": {
-        "ALL": {
-            "layoutConfigId": "0000015-7a252ac33ecc4930a8be2f7c7ae0001d",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":true,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmufuzeren\",\"isNameField\":false,\"fieldLabel\":\"项目负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"suoshufenzu\",\"isNameField\":false,\"fieldLabel\":\"所属分组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmuji\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmufengmiantu\",\"isNameField\":false,\"fieldLabel\":\"项目封面图\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Picture\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmumiaoshu\",\"isNameField\":false,\"fieldLabel\":\"项目描述\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1196,
-            "createdBy": "0000021-00000000000000000000000000000001"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1196,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":true,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmufuzeren\",\"isNameField\":false,\"fieldLabel\":\"项目负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"suoshufenzu\",\"isNameField\":false,\"fieldLabel\":\"所属分组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmuji\"}]"
-        }
+  "BATCH_UPDATE": {
+    "entityCode": 1196,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-0b8116097a3444e9bf140bcb301475d3",
+    "shareTo": "ALL",
+    "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmufuzeren\",\"isNameField\":false,\"fieldLabel\":\"项目负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"suoshufenzu\",\"isNameField\":false,\"fieldLabel\":\"所属分组\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmuji\"}]",
+    "applyType": "BATCH_UPDATE",
+    "configName": null
+  },
+  "chosenListType": null,
+  "idFieldName": "xiangmuId",
+  "FILTER": [],
+  "nameFieldName": "xiangmumingcheng",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "项目名称",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1196,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-7a252ac33ecc4930a8be2f7c7ae0001d",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":true,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\",\"columnSort\":\"\"},{\"columnWidth\":300,\"columnSort\":\"\",\"columnAliasName\":\"\",\"fontSize\":13,\"fontColor\":\"#606266\",\"fontWeight\":400,\"fieldType\":\"TextArea\",\"isUpdatable\":true,\"fieldName\":\"xiangmumiaoshu\",\"isNameField\":false,\"fieldLabel\":\"项目描述\",\"isNullable\":true,\"isCreatable\":true,\"columnEditInx\":1},{\"isUpdatable\":true,\"fieldName\":\"xiangmufuzeren\",\"isNameField\":false,\"fieldLabel\":\"项目负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"suoshufenzu\",\"isNameField\":false,\"fieldLabel\":\"所属分组\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmuji\",\"columnSort\":\"\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\",\"columnSort\":\"\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\",\"columnSort\":\"\"}]",
+      "applyType": "LIST",
+      "configName": null
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "xiangmumingcheng",
-    "quickFilterLabel": "项目名称",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "xiangmuId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1196,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":true,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmufuzeren\",\"isNameField\":false,\"fieldLabel\":\"项目负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"suoshufenzu\",\"isNameField\":false,\"fieldLabel\":\"所属分组\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmuji\"}]"
+    }
+  },
+  "titleWidthForAll": null
 }

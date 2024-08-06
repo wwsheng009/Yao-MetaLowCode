@@ -1,27 +1,29 @@
 {
-    "nameFieldName": "xuqiubianhao",
-    "quickFilterLabel": "需求编号",
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "entityCode": 1113,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-2426c869ea814063a8e42bf91ba6fbb0",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuqiubianhao\",\"isNameField\":true,\"fieldLabel\":\"需求编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuleixing\",\"isNameField\":false,\"fieldLabel\":\"需求类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"需求状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeJD\",\"isNameField\":false,\"fieldLabel\":\"选择JD\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"JDjichubiao\"},{\"isUpdatable\":true,\"fieldName\":\"gangweixingzhi\",\"isNameField\":false,\"fieldLabel\":\"岗位性质\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiutijiaoren\",\"isNameField\":false,\"fieldLabel\":\"需求提交人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"tijiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"提交日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhaopinfuzeren\",\"isNameField\":false,\"fieldLabel\":\"招聘负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiurenshu\",\"isNameField\":false,\"fieldLabel\":\"需求人数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuodidian\",\"isNameField\":false,\"fieldLabel\":\"工作地点\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"qiwangdaogangshijian\",\"isNameField\":false,\"fieldLabel\":\"期望到岗时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xinziqujian\",\"isNameField\":false,\"fieldLabel\":\"薪资区间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fafangmoshi\",\"isNameField\":false,\"fieldLabel\":\"发放模式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"renyuanlaiyuan\",\"isNameField\":false,\"fieldLabel\":\"人员来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xueliyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"学历要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuonianxianyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"工作年限要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"nianlingyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"年龄要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gangweizhize\",\"isNameField\":false,\"fieldLabel\":\"岗位职责\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"renzhiyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"任职要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
-            "applyType": "LIST",
-            "configName": null
-        },
-        "SELF": {
-            "entityCode": 1113,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuqiubianhao\",\"isNameField\":true,\"fieldLabel\":\"需求编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuleixing\",\"isNameField\":false,\"fieldLabel\":\"需求类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"需求状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeJD\",\"isNameField\":false,\"fieldLabel\":\"选择JD\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"JDjichubiao\"},{\"isUpdatable\":true,\"fieldName\":\"gangweixingzhi\",\"isNameField\":false,\"fieldLabel\":\"岗位性质\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
-            "applyType": "LIST"
-        }
+  "titleWidthForAll": null,
+  "quickFilterLabel": "需求编号",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "chosenListType": null,
+  "mainDetailField": null,
+  "idFieldName": "zhaopinxuqiuId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1113,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-2426c869ea814063a8e42bf91ba6fbb0",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuqiubianhao\",\"isNameField\":true,\"fieldLabel\":\"需求编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuleixing\",\"isNameField\":false,\"fieldLabel\":\"需求类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"需求状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeJD\",\"isNameField\":false,\"fieldLabel\":\"选择JD\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"JDjichubiao\"},{\"isUpdatable\":true,\"fieldName\":\"gangweixingzhi\",\"isNameField\":false,\"fieldLabel\":\"岗位性质\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiutijiaoren\",\"isNameField\":false,\"fieldLabel\":\"需求提交人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"tijiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"提交日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhaopinfuzeren\",\"isNameField\":false,\"fieldLabel\":\"招聘负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiurenshu\",\"isNameField\":false,\"fieldLabel\":\"需求人数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuodidian\",\"isNameField\":false,\"fieldLabel\":\"工作地点\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"qiwangdaogangshijian\",\"isNameField\":false,\"fieldLabel\":\"期望到岗时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xinziqujian\",\"isNameField\":false,\"fieldLabel\":\"薪资区间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fafangmoshi\",\"isNameField\":false,\"fieldLabel\":\"发放模式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"renyuanlaiyuan\",\"isNameField\":false,\"fieldLabel\":\"人员来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xueliyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"学历要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuonianxianyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"工作年限要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"nianlingyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"年龄要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gangweizhize\",\"isNameField\":false,\"fieldLabel\":\"岗位职责\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"renzhiyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"任职要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]"
     },
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "idFieldName": "zhaopinxuqiuId",
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1113,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuqiubianhao\",\"isNameField\":true,\"fieldLabel\":\"需求编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuleixing\",\"isNameField\":false,\"fieldLabel\":\"需求类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"需求状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeJD\",\"isNameField\":false,\"fieldLabel\":\"选择JD\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"JDjichubiao\"},{\"isUpdatable\":true,\"fieldName\":\"gangweixingzhi\",\"isNameField\":false,\"fieldLabel\":\"岗位性质\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "xuqiubianhao",
+  "titleWidthForSelf": null
 }

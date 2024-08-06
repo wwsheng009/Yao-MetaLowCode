@@ -1,0 +1,35 @@
+{
+  "quickFilterLabel": "印章名称",
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1260,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yinzhangmingcheng\",\"isNameField\":true,\"fieldLabel\":\"印章名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuoming\",\"isNameField\":false,\"fieldLabel\":\"说明\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yinzhangzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"印章状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinzhangfuzeren\",\"isNameField\":false,\"fieldLabel\":\"印章负责人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+    },
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yinzhangmingcheng\",\"isNameField\":true,\"fieldLabel\":\"印章名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuoming\",\"isNameField\":false,\"fieldLabel\":\"说明\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yinzhangzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"印章状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinzhangfuzeren\",\"isNameField\":false,\"fieldLabel\":\"印章负责人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "entityCode": 1260,
+      "shareTo": "SELF"
+    }
+  },
+  "ADD": {
+    "applyType": "ADD",
+    "configName": null,
+    "entityCode": 1260,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-2b2beacb357741a6bf7714a00d1cd12d",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"用印申请\",\"entityCode\":1261,\"fieldName\":\"yinzhangmingcheng\",\"isReferenced\":true,\"entityName\":\"Yongyinshenqing\",\"label\":\"用印申请(印章名称)(N)\"},{\"entityLabel\":\"待办\",\"entityCode\":55,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"TodoTask\"},{\"entityLabel\":\"跟进\",\"entityCode\":54,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"FollowUp\"}]"
+  },
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "yinzhangxinxiId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "yinzhangmingcheng"
+}

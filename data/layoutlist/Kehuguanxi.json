@@ -1,0 +1,26 @@
+{
+  "LIST": {
+    "SELF": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKehuguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"kehuguanxi\",\"isNameField\":false,\"fieldLabel\":\"客户关系\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"}]",
+      "applyType": "LIST",
+      "entityCode": 1247,
+      "shareTo": "SELF"
+    },
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1247,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdKehuguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"kehuguanxi\",\"isNameField\":false,\"fieldLabel\":\"客户关系\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"}]"
+    }
+  },
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "advFilter": null,
+  "mainDetailField": "mdKehuguanliId",
+  "idFieldName": "kehuguanxiId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "kehuguanxiId"
+}

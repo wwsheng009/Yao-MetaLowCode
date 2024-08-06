@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "cheliangbaoyangId",
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "cheliangbaoyangId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1235,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"cheliangxinxi\",\"isNameField\":false,\"fieldLabel\":\"车辆信息\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangdanhao\",\"isNameField\":false,\"fieldLabel\":\"保养单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangriqi\",\"isNameField\":false,\"fieldLabel\":\"保养日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"保养状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangfeiyong\",\"isNameField\":false,\"fieldLabel\":\"保养费用\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xiacibaoyanglichengshu\",\"isNameField\":false,\"fieldLabel\":\"下次保养里程数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangren\",\"isNameField\":false,\"fieldLabel\":\"保养人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1235,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"cheliangxinxi\",\"isNameField\":false,\"fieldLabel\":\"车辆信息\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangdanhao\",\"isNameField\":false,\"fieldLabel\":\"保养单号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangriqi\",\"isNameField\":false,\"fieldLabel\":\"保养日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"保养状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangfeiyong\",\"isNameField\":false,\"fieldLabel\":\"保养费用\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xiacibaoyanglichengshu\",\"isNameField\":false,\"fieldLabel\":\"下次保养里程数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangren\",\"isNameField\":false,\"fieldLabel\":\"保养人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        }
+  "idFieldName": "cheliangbaoyangId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1235,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"cheliangxinxi\",\"isNameField\":false,\"fieldLabel\":\"车辆信息\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangdanhao\",\"isNameField\":false,\"fieldLabel\":\"保养单号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangriqi\",\"isNameField\":false,\"fieldLabel\":\"保养日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"保养状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangfeiyong\",\"isNameField\":false,\"fieldLabel\":\"保养费用\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xiacibaoyanglichengshu\",\"isNameField\":false,\"fieldLabel\":\"下次保养里程数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangren\",\"isNameField\":false,\"fieldLabel\":\"保养人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1235,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"cheliangxinxi\",\"isNameField\":false,\"fieldLabel\":\"车辆信息\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangdanhao\",\"isNameField\":false,\"fieldLabel\":\"保养单号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangriqi\",\"isNameField\":false,\"fieldLabel\":\"保养日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"保养状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangfeiyong\",\"isNameField\":false,\"fieldLabel\":\"保养费用\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"xiacibaoyanglichengshu\",\"isNameField\":false,\"fieldLabel\":\"下次保养里程数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"baoyangren\",\"isNameField\":false,\"fieldLabel\":\"保养人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "nameFieldName": "cheliangbaoyangId",
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "COM_TREE_GROUP": []
 }

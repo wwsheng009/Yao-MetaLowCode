@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "nameFieldName": "qingjiariqiId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "advFilter": null,
-    "FILTER": [],
-    "idFieldName": "qingjiariqiId",
-    "LIST": {
-        "ALL": {
-            "entityCode": 1148,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdQingjiashenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Qingjiashenqing\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiariqi\",\"isNameField\":false,\"fieldLabel\":\"请假日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiashiduan\",\"isNameField\":false,\"fieldLabel\":\"请假时段\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1148,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdQingjiashenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Qingjiashenqing\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiariqi\",\"isNameField\":false,\"fieldLabel\":\"请假日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiashiduan\",\"isNameField\":false,\"fieldLabel\":\"请假时段\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "LIST": {
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1148,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdQingjiashenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Qingjiashenqing\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiariqi\",\"isNameField\":false,\"fieldLabel\":\"请假日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiashiduan\",\"isNameField\":false,\"fieldLabel\":\"请假时段\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    },
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1148,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdQingjiashenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Qingjiashenqing\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiariqi\",\"isNameField\":false,\"fieldLabel\":\"请假日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qingjiashiduan\",\"isNameField\":false,\"fieldLabel\":\"请假时段\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
     }
+  },
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "mainDetailField": "mdQingjiashenqingId",
+  "idFieldName": "qingjiariqiId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "qingjiariqiId"
 }

@@ -1,36 +1,66 @@
 {
-    "ADD": {
-        "applyType": "ADD",
-        "configName": null,
-        "entityCode": 1099,
-        "createdBy": "0000021-00000000000000000000000000000001",
-        "layoutConfigId": "0000015-da5f01fcb64949b18408ec042b3fac93",
-        "shareTo": "ALL",
-        "config": "[{\"entityLabel\":\"人事证明开具\",\"entityCode\":1107,\"fieldName\":\"shenqingyuangong\",\"isReferenced\":true,\"entityName\":\"Renshizhengmingkaiju\",\"label\":\"人事证明开具(申请员工)(N)\"}]"
+  "FILTER": [
+    {
+      "applyType": "FILTER",
+      "configName": "技术部",
+      "entityCode": 1099,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-6c7886dd63ad486b9fb9746589d9ad11",
+      "shareTo": "SELF",
+      "config": "{\"equation\":\"OR\",\"items\":[{\"fieldName\":\"gonghao\",\"op\":\"LK\",\"opCom\":\"textInput\",\"value\":\"1\",\"value2\":\"\",\"isError\":false,\"type\":\"Text\",\"label\":\"工号\"}]}"
     },
-    "idFieldName": "yuangongdanganId",
-    "LIST": {
-        "ALL": {
-            "configName": null,
-            "entityCode": 1099,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-1f5f310066a44354bb697c52851cba26",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingbie\",\"isNameField\":false,\"fieldLabel\":\"性别\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pinyongxingshi\",\"isNameField\":false,\"fieldLabel\":\"聘用形式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"员工状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhiriqi\",\"isNameField\":false,\"fieldLabel\":\"入职日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongqitianshu\",\"isNameField\":false,\"fieldLabel\":\"试用期天数（天）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"gonghao\",\"isNameField\":false,\"fieldLabel\":\"工号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongchengyuan\",\"isNameField\":false,\"fieldLabel\":\"员工成员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenfenzhenghao\",\"isNameField\":false,\"fieldLabel\":\"身份证号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chushengriqi\",\"isNameField\":false,\"fieldLabel\":\"出生日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiguan\",\"isNameField\":false,\"fieldLabel\":\"籍贯\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"hujileixing\",\"isNameField\":false,\"fieldLabel\":\"户籍类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"minzu\",\"isNameField\":false,\"fieldLabel\":\"民族\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"hunyinzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"婚姻状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zhengzhimianmao\",\"isNameField\":false,\"fieldLabel\":\"政治面貌\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"canjiagongzuoriqi\",\"isNameField\":false,\"fieldLabel\":\"参加工作日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhuanzhengriqi\",\"isNameField\":false,\"fieldLabel\":\"转正日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongqixinzi\",\"isNameField\":false,\"fieldLabel\":\"试用期薪资\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhengshixinzi\",\"isNameField\":false,\"fieldLabel\":\"正式薪资\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhijieshangji\",\"isNameField\":false,\"fieldLabel\":\"直接上级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeHR\",\"isNameField\":false,\"fieldLabel\":\"负责HR\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shebaozhanghao\",\"isNameField\":false,\"fieldLabel\":\"社保账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongjijinzhanghao\",\"isNameField\":false,\"fieldLabel\":\"公积金账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangkahao\",\"isNameField\":false,\"fieldLabel\":\"银行卡号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuxing\",\"isNameField\":false,\"fieldLabel\":\"开户行\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"changzhudizhi\",\"isNameField\":false,\"fieldLabel\":\"常住地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"zuigaoxueli\",\"isNameField\":false,\"fieldLabel\":\"最高学历\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"biyeshijian\",\"isNameField\":false,\"fieldLabel\":\"毕业时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingbie\",\"isNameField\":false,\"fieldLabel\":\"性别\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pinyongxingshi\",\"isNameField\":false,\"fieldLabel\":\"聘用形式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"员工状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhiriqi\",\"isNameField\":false,\"fieldLabel\":\"入职日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongqitianshu\",\"isNameField\":false,\"fieldLabel\":\"试用期天数（天）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 1099
-        }
+    {
+      "layoutConfigId": "0000015-dcb457cd844046b780fb657809c257eb",
+      "shareTo": "SELF",
+      "config": "{\"equation\":\"OR\",\"items\":[{\"fieldName\":\"gonghao\",\"op\":\"LK\",\"opCom\":\"textInput\",\"value\":\"1\",\"value2\":\"\",\"isError\":false,\"type\":\"Text\",\"label\":\"工号\"}]}",
+      "applyType": "FILTER",
+      "configName": "产品部",
+      "entityCode": 1099,
+      "createdBy": "0000021-00000000000000000000000000000001"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "xingming",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "姓名",
-    "chosenListType": null,
-    "advFilter": null
+    {
+      "configName": "市场部",
+      "entityCode": 1099,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-9fa2162a985349da945a4378afe62be2",
+      "shareTo": "SELF",
+      "config": "{\"equation\":\"OR\",\"items\":[{\"fieldName\":\"gonghao\",\"op\":\"LK\",\"opCom\":\"textInput\",\"value\":\"1\",\"value2\":\"\",\"isError\":false,\"type\":\"Text\",\"label\":\"工号\"}]}",
+      "applyType": "FILTER"
+    }
+  ],
+  "TAB": {
+    "layoutConfigId": "0000015-fa64caf341cd4398a6e4a021af95bae6",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"人事证明开具\",\"entityCode\":1107,\"fieldName\":\"shenqingyuangong\",\"isReferenced\":true,\"entityName\":\"Renshizhengmingkaiju\",\"label\":\"人事证明开具(申请员工)(N)\"},{\"entityLabel\":\"员工合同管理\",\"entityCode\":1134,\"fieldName\":\"yuangongxingming\",\"isReferenced\":true,\"entityName\":\"Yuangonghetongguanli\",\"label\":\"员工合同管理(员工姓名)(N)\"},{\"entityLabel\":\"转正申请\",\"entityCode\":1139,\"fieldName\":\"zhuanzhengyuangong\",\"isReferenced\":true,\"entityName\":\"Zhuanzhengshenqing\",\"label\":\"转正申请(转正员工)(N)\"},{\"entityLabel\":\"岗位调动申请\",\"entityCode\":1140,\"fieldName\":\"diaodongyuangong\",\"isReferenced\":true,\"entityName\":\"Gangweidiaodongshenqing\",\"label\":\"岗位调动申请(调动员工)(N)\"},{\"entityLabel\":\"离职申请\",\"entityCode\":1141,\"fieldName\":\"diaodongyuangong\",\"isReferenced\":true,\"entityName\":\"Lizhishenqing\",\"label\":\"离职申请(离职员工)(N)\"}]",
+    "applyType": "TAB",
+    "configName": null,
+    "entityCode": 1099,
+    "createdBy": "0000021-00000000000000000000000000000001"
+  },
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "advFilter": null,
+  "nameFieldName": "xingming",
+  "quickFilterLabel": "姓名",
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "yuangongdanganId",
+  "LIST": {
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingbie\",\"isNameField\":false,\"fieldLabel\":\"性别\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pinyongxingshi\",\"isNameField\":false,\"fieldLabel\":\"聘用形式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"员工状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhiriqi\",\"isNameField\":false,\"fieldLabel\":\"入职日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongqitianshu\",\"isNameField\":false,\"fieldLabel\":\"试用期天数（天）\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+      "applyType": "LIST",
+      "entityCode": 1099,
+      "shareTo": "SELF"
+    },
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"touxiang\",\"isNameField\":false,\"fieldLabel\":\"头像\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Picture\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingbie\",\"isNameField\":false,\"fieldLabel\":\"性别\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"pinyongxingshi\",\"isNameField\":false,\"fieldLabel\":\"聘用形式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"员工状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"ruzhiriqi\",\"isNameField\":false,\"fieldLabel\":\"入职日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongqitianshu\",\"isNameField\":false,\"fieldLabel\":\"试用期天数（天）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"gonghao\",\"isNameField\":false,\"fieldLabel\":\"工号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yuangongchengyuan\",\"isNameField\":false,\"fieldLabel\":\"员工成员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenfenzhenghao\",\"isNameField\":false,\"fieldLabel\":\"身份证号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chushengriqi\",\"isNameField\":false,\"fieldLabel\":\"出生日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiguan\",\"isNameField\":false,\"fieldLabel\":\"籍贯\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"hujileixing\",\"isNameField\":false,\"fieldLabel\":\"户籍类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"minzu\",\"isNameField\":false,\"fieldLabel\":\"民族\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"hunyinzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"婚姻状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zhengzhimianmao\",\"isNameField\":false,\"fieldLabel\":\"政治面貌\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"canjiagongzuoriqi\",\"isNameField\":false,\"fieldLabel\":\"参加工作日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhuanzhengriqi\",\"isNameField\":false,\"fieldLabel\":\"转正日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shiyongqixinzi\",\"isNameField\":false,\"fieldLabel\":\"试用期薪资\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhengshixinzi\",\"isNameField\":false,\"fieldLabel\":\"正式薪资\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhijieshangji\",\"isNameField\":false,\"fieldLabel\":\"直接上级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeHR\",\"isNameField\":false,\"fieldLabel\":\"负责HR\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shebaozhanghao\",\"isNameField\":false,\"fieldLabel\":\"社保账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongjijinzhanghao\",\"isNameField\":false,\"fieldLabel\":\"公积金账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangkahao\",\"isNameField\":false,\"fieldLabel\":\"银行卡号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuxing\",\"isNameField\":false,\"fieldLabel\":\"开户行\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"changzhudizhi\",\"isNameField\":false,\"fieldLabel\":\"常住地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"zuigaoxueli\",\"isNameField\":false,\"fieldLabel\":\"最高学历\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"biyeshijian\",\"isNameField\":false,\"fieldLabel\":\"毕业时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1099,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-1f5f310066a44354bb697c52851cba26"
+    }
+  },
+  "titleWidthForAll": null
 }

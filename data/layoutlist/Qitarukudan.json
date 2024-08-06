@@ -1,24 +1,29 @@
 {
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "qitarukudanId",
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "其他入库单编号",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1043,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
-        },
-        "SELF": {
-            "entityCode": 1043,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]",
-            "applyType": "LIST"
-        }
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "qitarukudanId",
+  "titleWidthForAll": null,
+  "chosenListType": null,
+  "nameFieldName": "qitarukudanbianhao",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "其他入库单编号",
+  "advFilter": null,
+  "LIST": {
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1043,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "qitarukudanbianhao"
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"入库产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinchengbenzonge\",\"isNameField\":false,\"fieldLabel\":\"入库产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rukuyuan\",\"isNameField\":false,\"fieldLabel\":\"入库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1043,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-21996959de564baa8cf466d49ce3719f",
+      "shareTo": "ALL"
+    }
+  },
+  "FILTER": []
 }

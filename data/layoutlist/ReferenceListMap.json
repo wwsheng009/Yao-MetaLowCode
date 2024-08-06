@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "nameFieldName": "mapId",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "mapId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 5,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"objectId\",\"isNameField\":false,\"fieldLabel\":\"记录Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"},{\"isUpdatable\":false,\"fieldName\":\"toId\",\"isNameField\":false,\"fieldLabel\":\"被引用记录Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"objectId\",\"isNameField\":false,\"fieldLabel\":\"记录Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"},{\"isUpdatable\":false,\"fieldName\":\"toId\",\"isNameField\":false,\"fieldLabel\":\"被引用记录Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"}]",
-            "applyType": "LIST",
-            "entityCode": 5
-        }
+  "nameFieldName": "mapId",
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "idFieldName": "mapId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 5,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"objectId\",\"isNameField\":false,\"fieldLabel\":\"记录Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"},{\"isUpdatable\":false,\"fieldName\":\"toId\",\"isNameField\":false,\"fieldLabel\":\"被引用记录Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"}]"
     },
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": ""
+    "SELF": {
+      "entityCode": 5,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"实体名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"fieldName\",\"isNameField\":false,\"fieldLabel\":\"字段名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"objectId\",\"isNameField\":false,\"fieldLabel\":\"记录Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"},{\"isUpdatable\":false,\"fieldName\":\"toId\",\"isNameField\":false,\"fieldLabel\":\"被引用记录Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"PrimaryKey\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null
 }

@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "nameFieldName": "fukuanjihuaId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "fukuanjihuaId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1033,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"付款项\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanjine\",\"isNameField\":false,\"fieldLabel\":\"付款金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuafukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划付款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1033,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"付款项\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanjine\",\"isNameField\":false,\"fieldLabel\":\"付款金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuafukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划付款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "LIST": {
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1033,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"付款项\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanjine\",\"isNameField\":false,\"fieldLabel\":\"付款金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuafukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划付款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
     },
-    "titleWidthForAll": null
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1033,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanxiang\",\"isNameField\":false,\"fieldLabel\":\"付款项\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanjine\",\"isNameField\":false,\"fieldLabel\":\"付款金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"fukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"付款方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jihuafukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"计划付款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "fukuanjihuaId",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "advFilter": null,
+  "idFieldName": "fukuanjihuaId",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": "mdCaigoudingdanId",
+  "titleWidthForAll": null
 }

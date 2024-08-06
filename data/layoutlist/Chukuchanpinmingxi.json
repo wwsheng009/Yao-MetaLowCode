@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "",
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1019,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshouchukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshouchuku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencichukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshouchukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshouchuku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencichukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 1019
-        }
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": "mdXiaoshouchukuId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "chukuchanpinmingxiId",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "idFieldName": "chukuchanpinmingxiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1019,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshouchukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshouchuku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencichukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     },
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "idFieldName": "chukuchanpinmingxiId",
-    "titleWidthForAll": null,
-    "nameFieldName": "chukuchanpinmingxiId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1019,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshouchukuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshouchuku\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencichukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    }
+  }
 }

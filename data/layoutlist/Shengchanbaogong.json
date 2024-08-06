@@ -1,24 +1,26 @@
 {
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1219,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"生产工单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"报工总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"生产报工单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baogongshijian\",\"isNameField\":false,\"fieldLabel\":\"报工时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1219,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"生产工单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"报工总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"生产报工单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baogongshijian\",\"isNameField\":false,\"fieldLabel\":\"报工时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
-        }
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "shengchanbaogongId",
+  "FILTER": [],
+  "nameFieldName": "lingliaochukudanbianhao",
+  "quickFilterLabel": "生产报工单编号",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1219,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"生产工单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"报工总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"生产报工单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baogongshijian\",\"isNameField\":false,\"fieldLabel\":\"报工时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
     },
-    "nameFieldName": "lingliaochukudanbianhao",
-    "titleWidthForSelf": null,
-    "idFieldName": "shengchanbaogongId",
-    "advFilter": null,
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "quickFilterLabel": "生产报工单编号",
-    "chosenListType": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1219,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"生产工单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPshengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"shengchangongdanmingcheng\",\"isNameField\":false,\"fieldLabel\":\"生产工单名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"报工总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"生产报工单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baogongshijian\",\"isNameField\":false,\"fieldLabel\":\"报工时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
+    }
+  },
+  "titleWidthForAll": null
 }

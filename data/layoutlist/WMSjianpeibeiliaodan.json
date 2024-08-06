@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "idFieldName": "wMSjianpeibeiliaodanId",
-    "nameFieldName": "jianpeibeiliaodanbianhao",
-    "quickFilterLabel": "拣配备料单编号",
-    "chosenListType": null,
-    "LIST": {
-        "SELF": {
-            "entityCode": 1104,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliaotongzhidan\",\"isNameField\":false,\"fieldLabel\":\"选择备料通知单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSbeiliaotongzhidan\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"拣配备料单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinjianpeiqueren\",\"isNameField\":false,\"fieldLabel\":\"产品拣配确认\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"拣配备料时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzeren\",\"isNameField\":false,\"fieldLabel\":\"拣配负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzebumen\",\"isNameField\":false,\"fieldLabel\":\"拣配负责部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST"
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1104,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliaotongzhidan\",\"isNameField\":false,\"fieldLabel\":\"选择备料通知单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSbeiliaotongzhidan\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"拣配备料单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinjianpeiqueren\",\"isNameField\":false,\"fieldLabel\":\"产品拣配确认\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"拣配备料时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzeren\",\"isNameField\":false,\"fieldLabel\":\"拣配负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzebumen\",\"isNameField\":false,\"fieldLabel\":\"拣配负责部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "wMSjianpeibeiliaodanId",
+  "FILTER": [],
+  "nameFieldName": "jianpeibeiliaodanbianhao",
+  "titleWidthForSelf": null,
+  "titleWidthForAll": null,
+  "quickFilterLabel": "拣配备料单编号",
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1104,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliaotongzhidan\",\"isNameField\":false,\"fieldLabel\":\"选择备料通知单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSbeiliaotongzhidan\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"拣配备料单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinjianpeiqueren\",\"isNameField\":false,\"fieldLabel\":\"产品拣配确认\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"拣配备料时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzeren\",\"isNameField\":false,\"fieldLabel\":\"拣配负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzebumen\",\"isNameField\":false,\"fieldLabel\":\"拣配负责部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1104,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebeiliaotongzhidan\",\"isNameField\":false,\"fieldLabel\":\"选择备料通知单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSbeiliaotongzhidan\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"拣配备料单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"beiliaocangku\",\"isNameField\":false,\"fieldLabel\":\"备料仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinjianpeiqueren\",\"isNameField\":false,\"fieldLabel\":\"产品拣配确认\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeibeiliaoshijian\",\"isNameField\":false,\"fieldLabel\":\"拣配备料时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzeren\",\"isNameField\":false,\"fieldLabel\":\"拣配负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"jianpeifuzebumen\",\"isNameField\":false,\"fieldLabel\":\"拣配负责部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
+    }
+  }
 }

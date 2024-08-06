@@ -1,27 +1,29 @@
 {
-    "idFieldName": "jDjichubiaoId",
-    "LIST": {
-        "ALL": {
-            "configName": null,
-            "entityCode": 1109,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-4c1445cbb5504ff38db47428568f165b",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegangwei\",\"isNameField\":false,\"fieldLabel\":\"选择岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gangweijichubiao\"},{\"isUpdatable\":true,\"fieldName\":\"gangweizhize\",\"isNameField\":true,\"fieldLabel\":\"岗位职责\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"renzhiyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"任职要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "entityCode": 1109,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegangwei\",\"isNameField\":false,\"fieldLabel\":\"选择岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gangweijichubiao\"}]",
-            "applyType": "LIST"
-        }
+  "FILTER": [],
+  "nameFieldName": "gangweizhize",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "岗位职责",
+  "idFieldName": "jDjichubiaoId",
+  "LIST": {
+    "ALL": {
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-4c1445cbb5504ff38db47428568f165b",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegangwei\",\"isNameField\":false,\"fieldLabel\":\"选择岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gangweijichubiao\"},{\"isUpdatable\":true,\"fieldName\":\"gangweizhize\",\"isNameField\":true,\"fieldLabel\":\"岗位职责\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"renzhiyaoqiu\",\"isNameField\":false,\"fieldLabel\":\"任职要求\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1109
     },
-    "FILTER": [],
-    "nameFieldName": "gangweizhize",
-    "quickFilterLabel": "岗位职责",
-    "chosenListType": null,
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1109,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegangwei\",\"isNameField\":false,\"fieldLabel\":\"选择岗位\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gangweijichubiao\"}]"
+    }
+  }
 }

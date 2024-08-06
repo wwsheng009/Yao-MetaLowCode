@@ -1,0 +1,29 @@
+{
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "yongyinshenqingId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1261,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-7e6f0896e44f4d8e957e276bfbd7c230",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yongyinshiyou\",\"isNameField\":true,\"fieldLabel\":\"用印事由\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"yinzhangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"印章名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yinzhangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"yongyinfangshi\",\"isNameField\":false,\"fieldLabel\":\"用印方式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"wenjianleibie\",\"isNameField\":false,\"fieldLabel\":\"文件类别\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"wenjianmingcheng\",\"isNameField\":false,\"fieldLabel\":\"文件名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yongyinfenshu\",\"isNameField\":false,\"fieldLabel\":\"用印份数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yujishiyongshijian\",\"isNameField\":false,\"fieldLabel\":\"预计使用时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isReserved\":true,\"isUnique\":false,\"optionData\":[{\"value\":0,\"label\":\"未提交\",\"displayOrder\":1},{\"value\":1,\"label\":\"审核中\",\"displayOrder\":2},{\"value\":2,\"label\":\"已驳回\",\"displayOrder\":3},{\"value\":3,\"label\":\"已完成\",\"displayOrder\":4},{\"value\":4,\"label\":\"已撤销\",\"displayOrder\":5}],\"isCreatable\":false,\"fieldType\":\"Status\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1261,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yinzhangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"印章名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yinzhangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"yongyinfangshi\",\"isNameField\":false,\"fieldLabel\":\"用印方式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"wenjianleibie\",\"isNameField\":false,\"fieldLabel\":\"文件类别\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"wenjianmingcheng\",\"isNameField\":false,\"fieldLabel\":\"文件名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yongyinfenshu\",\"isNameField\":false,\"fieldLabel\":\"用印份数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"yujishiyongshijian\",\"isNameField\":false,\"fieldLabel\":\"预计使用时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "yongyinshiyou",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "用印事由",
+  "titleWidthForAll": null
+}

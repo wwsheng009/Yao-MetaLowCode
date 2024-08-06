@@ -1,0 +1,26 @@
+{
+  "nameFieldName": "bangongyongpinguihuanId",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "bangongyongpinguihuanId",
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinleixing\",\"isNameField\":false,\"fieldLabel\":\"办公用品类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1257
+    },
+    "SELF": {
+      "entityCode": 1257,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinleixing\",\"isNameField\":false,\"fieldLabel\":\"办公用品类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "FILTER": [],
+  "titleWidthForAll": "{\"xuanzebangongyongpin\":111}",
+  "quickFilterLabel": "",
+  "titleWidthForSelf": null
+}

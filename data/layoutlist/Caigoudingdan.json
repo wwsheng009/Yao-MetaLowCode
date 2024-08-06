@@ -1,24 +1,29 @@
 {
-    "nameFieldName": "caigoudingdanmingcheng",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "采购订单名称",
-    "LIST": {
-        "ALL": {
-            "entityCode": 1030,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudingdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"采购订单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1030,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudingdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"采购订单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
-        }
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudingdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"采购订单名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"caigouyuanjiazonge\",\"isNameField\":false,\"fieldLabel\":\"采购原价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhengdanzhekoul\",\"isNameField\":false,\"fieldLabel\":\"整单折扣率\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudingdanjine\",\"isNameField\":false,\"fieldLabel\":\"采购订单金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoujineheji\",\"isNameField\":false,\"fieldLabel\":\"采购金额合计(不含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"hetongfujianshangchuan\",\"isNameField\":false,\"fieldLabel\":\"合同附件上传\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"File\"},{\"isUpdatable\":true,\"fieldName\":\"daohuodizhi\",\"isNameField\":false,\"fieldLabel\":\"到货地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"jutidizhi\",\"isNameField\":false,\"fieldLabel\":\"具体地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1030,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-2a97ab5102b84eceb6ad8b47546c0834",
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "caigoudingdanId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1030,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingriqi\",\"isNameField\":false,\"fieldLabel\":\"订单签订日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoudingdanmingcheng\",\"isNameField\":true,\"fieldLabel\":\"采购订单名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanjiaofuriqi\",\"isNameField\":false,\"fieldLabel\":\"订单交付日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "caigoudingdanmingcheng",
+  "quickFilterLabel": "采购订单名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "idFieldName": "caigoudingdanId"
 }

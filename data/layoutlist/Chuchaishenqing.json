@@ -1,27 +1,29 @@
 {
-    "advFilter": null,
-    "idFieldName": "chuchaishenqingId",
-    "FILTER": [],
-    "nameFieldName": "chuchaidanhao",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "出差单号",
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chuchaidanhao\",\"isNameField\":true,\"fieldLabel\":\"出差单号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaimudidi\",\"isNameField\":false,\"fieldLabel\":\"出差目的地\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaikaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"出差开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaijieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"出差结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaishiyou\",\"isNameField\":false,\"fieldLabel\":\"出差事由\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1151,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-2155584d175841ab93ebdadcb6d3b581"
-        },
-        "SELF": {
-            "entityCode": 1151,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chuchaidanhao\",\"isNameField\":true,\"fieldLabel\":\"出差单号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaimudidi\",\"isNameField\":false,\"fieldLabel\":\"出差目的地\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaikaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"出差开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaijieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"出差结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
-            "applyType": "LIST"
-        }
+  "quickFilterLabel": "出差单号",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "chuchaishenqingId",
+  "LIST": {
+    "ALL": {
+      "layoutConfigId": "0000015-2155584d175841ab93ebdadcb6d3b581",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"chuchaidanhao\",\"isNameField\":true,\"fieldLabel\":\"出差单号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaimudidi\",\"isNameField\":false,\"fieldLabel\":\"出差目的地\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaikaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"出差开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaijieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"出差结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaishiyou\",\"isNameField\":false,\"fieldLabel\":\"出差事由\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1151,
+      "createdBy": "0000021-00000000000000000000000000000001"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1151,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"chuchaidanhao\",\"isNameField\":true,\"fieldLabel\":\"出差单号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":false,\"fieldLabel\":\"姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaimudidi\",\"isNameField\":false,\"fieldLabel\":\"出差目的地\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaikaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"出差开始日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"chuchaijieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"出差结束日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "chuchaidanhao",
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null,
+  "advFilter": null
 }

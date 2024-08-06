@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "nameFieldName": "caigoutuihuochanpinmingxiId",
-    "quickFilterLabel": "",
-    "idFieldName": "caigoutuihuochanpinmingxiId",
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "entityCode": 1042,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoutuihuoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoutuihuo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"已入库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"weichukutuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"未入库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoutuihuoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoutuihuo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"已入库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"weichukutuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"未入库-退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 1042
-        }
+  "nameFieldName": "caigoutuihuochanpinmingxiId",
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1042,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoutuihuoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoutuihuo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"已入库-退货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"weichukutuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"未入库-退货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1042,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCaigoutuihuoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoutuihuo\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Chanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"已入库-退货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"weichukutuihuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"未入库-退货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    }
+  },
+  "idFieldName": "caigoutuihuochanpinmingxiId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": "mdCaigoutuihuoId"
 }

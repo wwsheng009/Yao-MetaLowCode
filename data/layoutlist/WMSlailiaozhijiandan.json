@@ -1,24 +1,26 @@
 {
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "wMSlailiaozhijiandanId",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1093,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"质检单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingshijian\",\"isNameField\":false,\"fieldLabel\":\"订单签订时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangsonghuoshijian\",\"isNameField\":false,\"fieldLabel\":\"实际收货时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangyujidaohuoshijian\",\"isNameField\":false,\"fieldLabel\":\"质检时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"收货仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"合格产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"不合格产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"合格产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinchengbenzong\",\"isNameField\":false,\"fieldLabel\":\"不合格产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "ALL": {
-            "entityCode": 1093,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"质检单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingshijian\",\"isNameField\":false,\"fieldLabel\":\"订单签订时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangsonghuoshijian\",\"isNameField\":false,\"fieldLabel\":\"实际收货时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangyujidaohuoshijian\",\"isNameField\":false,\"fieldLabel\":\"质检时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"收货仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"合格产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"不合格产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"合格产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinchengbenzong\",\"isNameField\":false,\"fieldLabel\":\"不合格产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
-            "applyType": "LIST"
-        }
+  "FILTER": [],
+  "titleWidthForAll": null,
+  "nameFieldName": "shouhuodanbianhao",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "质检单编号",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "wMSlailiaozhijiandanId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1093,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"质检单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingshijian\",\"isNameField\":false,\"fieldLabel\":\"订单签订时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangsonghuoshijian\",\"isNameField\":false,\"fieldLabel\":\"实际收货时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangyujidaohuoshijian\",\"isNameField\":false,\"fieldLabel\":\"质检时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"收货仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"合格产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"不合格产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"合格产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinchengbenzong\",\"isNameField\":false,\"fieldLabel\":\"不合格产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "shouhuodanbianhao",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "质检单编号"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1093,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzegongyingshang\",\"isNameField\":false,\"fieldLabel\":\"选择供应商\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"质检单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dingdanqiandingshijian\",\"isNameField\":false,\"fieldLabel\":\"订单签订时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangsonghuoshijian\",\"isNameField\":false,\"fieldLabel\":\"实际收货时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangyujidaohuoshijian\",\"isNameField\":false,\"fieldLabel\":\"质检时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuocangku\",\"isNameField\":false,\"fieldLabel\":\"收货仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"合格产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"不合格产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shishouchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"合格产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"queshichanpinchengbenzong\",\"isNameField\":false,\"fieldLabel\":\"不合格产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+    }
+  }
 }

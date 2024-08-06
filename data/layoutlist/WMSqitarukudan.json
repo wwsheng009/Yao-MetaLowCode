@@ -1,24 +1,26 @@
 {
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1120,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"}]"
-        },
-        "SELF": {
-            "entityCode": 1120,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"}]",
-            "applyType": "LIST"
-        }
+  "idFieldName": "wMSqitarukudanId",
+  "quickFilterLabel": "其他入库单编号",
+  "nameFieldName": "qitarukudanbianhao",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"}]",
+      "applyType": "LIST",
+      "entityCode": 1120,
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null,
-    "quickFilterLabel": "其他入库单编号",
-    "advFilter": null,
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "idFieldName": "wMSqitarukudanId",
-    "FILTER": [],
-    "nameFieldName": "qitarukudanbianhao"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1120,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"入库类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他入库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"入库确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"}]"
+    }
+  },
+  "FILTER": [],
+  "titleWidthForAll": null
 }

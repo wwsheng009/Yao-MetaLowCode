@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "canbaodi",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "参保地",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "wuxianyijinjiaonajishuId",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1181,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"canbaodi\",\"isNameField\":true,\"fieldLabel\":\"参保地\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shebaojishu\",\"isNameField\":false,\"fieldLabel\":\"社保基数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"gongjijinjishu\",\"isNameField\":false,\"fieldLabel\":\"公积金基数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "ALL": {
-            "entityCode": 1181,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"canbaodi\",\"isNameField\":true,\"fieldLabel\":\"参保地\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shebaojishu\",\"isNameField\":false,\"fieldLabel\":\"社保基数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"gongjijinjishu\",\"isNameField\":false,\"fieldLabel\":\"公积金基数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
-            "applyType": "LIST"
-        }
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"canbaodi\",\"isNameField\":true,\"fieldLabel\":\"参保地\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shebaojishu\",\"isNameField\":false,\"fieldLabel\":\"社保基数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"gongjijinjishu\",\"isNameField\":false,\"fieldLabel\":\"公积金基数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST",
+      "entityCode": 1181
+    },
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"yuangongxingming\",\"isNameField\":false,\"fieldLabel\":\"员工姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"suozaibumen\",\"isNameField\":false,\"fieldLabel\":\"所在部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":false,\"fieldLabel\":\"岗位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"canbaodi\",\"isNameField\":true,\"fieldLabel\":\"参保地\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shebaojishu\",\"isNameField\":false,\"fieldLabel\":\"社保基数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"gongjijinjishu\",\"isNameField\":false,\"fieldLabel\":\"公积金基数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST",
+      "entityCode": 1181,
+      "shareTo": "SELF"
     }
+  },
+  "titleWidthForAll": null,
+  "quickFilterLabel": "参保地",
+  "nameFieldName": "canbaodi",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "wuxianyijinjiaonajishuId",
+  "FILTER": []
 }

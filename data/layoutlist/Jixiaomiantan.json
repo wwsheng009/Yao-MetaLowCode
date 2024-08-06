@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "jixiaomiantanId",
-    "nameFieldName": "jixiaomiantanId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1161,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"beikaoherenxingming\",\"isNameField\":false,\"fieldLabel\":\"被考核人姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanren\",\"isNameField\":false,\"fieldLabel\":\"面谈人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanriqi\",\"isNameField\":false,\"fieldLabel\":\"面谈日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yejiwanchengjinzhanqingkuang\",\"isNameField\":false,\"fieldLabel\":\"业绩完成进展情况\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"wentifenxijigaijinjihua\",\"isNameField\":false,\"fieldLabel\":\"问题分析及改进计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xiwanghuodenafang\",\"isNameField\":false,\"fieldLabel\":\"希望获得哪方面资源支持\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"peiyangyufazhanjianyi\",\"isNameField\":false,\"fieldLabel\":\"培养与发展建议\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1161,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"beikaoherenxingming\",\"isNameField\":false,\"fieldLabel\":\"被考核人姓名\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanren\",\"isNameField\":false,\"fieldLabel\":\"面谈人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanriqi\",\"isNameField\":false,\"fieldLabel\":\"面谈日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yejiwanchengjinzhanqingkuang\",\"isNameField\":false,\"fieldLabel\":\"业绩完成进展情况\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"wentifenxijigaijinjihua\",\"isNameField\":false,\"fieldLabel\":\"问题分析及改进计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xiwanghuodenafang\",\"isNameField\":false,\"fieldLabel\":\"希望获得哪方面资源支持\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"peiyangyufazhanjianyi\",\"isNameField\":false,\"fieldLabel\":\"培养与发展建议\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]"
-        }
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "jixiaomiantanId",
+  "titleWidthForAll": null,
+  "nameFieldName": "jixiaomiantanId",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"beikaoherenxingming\",\"isNameField\":false,\"fieldLabel\":\"被考核人姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanren\",\"isNameField\":false,\"fieldLabel\":\"面谈人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanriqi\",\"isNameField\":false,\"fieldLabel\":\"面谈日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yejiwanchengjinzhanqingkuang\",\"isNameField\":false,\"fieldLabel\":\"业绩完成进展情况\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"wentifenxijigaijinjihua\",\"isNameField\":false,\"fieldLabel\":\"问题分析及改进计划\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xiwanghuodenafang\",\"isNameField\":false,\"fieldLabel\":\"希望获得哪方面资源支持\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"peiyangyufazhanjianyi\",\"isNameField\":false,\"fieldLabel\":\"培养与发展建议\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+      "applyType": "LIST",
+      "entityCode": 1161,
+      "shareTo": "ALL"
+    },
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"beikaoherenxingming\",\"isNameField\":false,\"fieldLabel\":\"被考核人姓名\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanren\",\"isNameField\":false,\"fieldLabel\":\"面谈人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Yuangongdangan\"},{\"isUpdatable\":true,\"fieldName\":\"miantanriqi\",\"isNameField\":false,\"fieldLabel\":\"面谈日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yejiwanchengjinzhanqingkuang\",\"isNameField\":false,\"fieldLabel\":\"业绩完成进展情况\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"wentifenxijigaijinjihua\",\"isNameField\":false,\"fieldLabel\":\"问题分析及改进计划\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xiwanghuodenafang\",\"isNameField\":false,\"fieldLabel\":\"希望获得哪方面资源支持\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"peiyangyufazhanjianyi\",\"isNameField\":false,\"fieldLabel\":\"培养与发展建议\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+      "applyType": "LIST",
+      "entityCode": 1161
     }
+  },
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "mainDetailField": null
 }

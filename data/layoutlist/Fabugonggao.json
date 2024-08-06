@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "nameFieldName": "gonggaobiaoti",
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "entityCode": 1206,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gonggaobiaoti\",\"isNameField\":true,\"fieldLabel\":\"公告标题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"faburiqi\",\"isNameField\":false,\"fieldLabel\":\"发布日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiajiariqi\",\"isNameField\":false,\"fieldLabel\":\"下架日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shifouxiajia\",\"isNameField\":false,\"fieldLabel\":\"是否下架\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1206,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gonggaobiaoti\",\"isNameField\":true,\"fieldLabel\":\"公告标题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"faburiqi\",\"isNameField\":false,\"fieldLabel\":\"发布日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiajiariqi\",\"isNameField\":false,\"fieldLabel\":\"下架日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shifouxiajia\",\"isNameField\":false,\"fieldLabel\":\"是否下架\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        }
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1206,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gonggaobiaoti\",\"isNameField\":true,\"fieldLabel\":\"公告标题\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"faburiqi\",\"isNameField\":false,\"fieldLabel\":\"发布日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiajiariqi\",\"isNameField\":false,\"fieldLabel\":\"下架日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shifouxiajia\",\"isNameField\":false,\"fieldLabel\":\"是否下架\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
     },
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "公告标题",
-    "chosenListType": null,
-    "idFieldName": "fabugonggaoId",
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1206,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gonggaobiaoti\",\"isNameField\":true,\"fieldLabel\":\"公告标题\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"faburiqi\",\"isNameField\":false,\"fieldLabel\":\"发布日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiajiariqi\",\"isNameField\":false,\"fieldLabel\":\"下架日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"shifouxiajia\",\"isNameField\":false,\"fieldLabel\":\"是否下架\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "公告标题",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "fabugonggaoId",
+  "nameFieldName": "gonggaobiaoti"
 }

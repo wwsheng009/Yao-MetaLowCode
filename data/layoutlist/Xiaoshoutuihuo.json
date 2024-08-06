@@ -1,27 +1,29 @@
 {
-    "FILTER": [],
-    "nameFieldName": "xiaoshoutuihuodanbianhao",
-    "chosenListType": null,
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "销售退货单编号",
-    "advFilter": null,
-    "idFieldName": "xiaoshoutuihuoId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1022,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-fb55da479c7e427b8c2876f337089aed",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"kehu\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"退货申请日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoutuihuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"销售退货单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"退货原因\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuocangku\",\"isNameField\":false,\"fieldLabel\":\"退货仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuocangku\",\"isNameField\":false,\"fieldLabel\":\"退货仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"yichukutuihuochanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"已出库-退货产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"uihuochanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"已出库-退货产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanren\",\"isNameField\":false,\"fieldLabel\":\"经办人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1022,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"kehu\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"退货申请日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoutuihuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"销售退货单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"kehu\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"退货申请日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoutuihuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"销售退货单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoyuanyin\",\"isNameField\":false,\"fieldLabel\":\"退货原因\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuocangku\",\"isNameField\":false,\"fieldLabel\":\"退货仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"yichukutuihuochanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"已出库-退货产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"uihuochanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"已出库-退货产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"jingbanren\",\"isNameField\":false,\"fieldLabel\":\"经办人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1022,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-fb55da479c7e427b8c2876f337089aed"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzexiaoshoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择销售订单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"kehu\",\"isNameField\":false,\"fieldLabel\":\"客户名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoshenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"退货申请日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoutuihuodanbianhao\",\"isNameField\":true,\"fieldLabel\":\"销售退货单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1022
+    }
+  },
+  "titleWidthForAll": null,
+  "nameFieldName": "xiaoshoutuihuodanbianhao",
+  "advFilter": null,
+  "mainDetailField": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "xiaoshoutuihuoId",
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "销售退货单编号"
 }

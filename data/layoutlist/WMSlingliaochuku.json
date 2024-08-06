@@ -1,24 +1,26 @@
 {
-    "chosenListType": null,
-    "idFieldName": "wMSlingliaochukuId",
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "领料出库单编号",
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"领料出库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpincnzongan\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品出库确认\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukushijian\",\"isNameField\":false,\"fieldLabel\":\"领料出库时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST",
-            "entityCode": 1108
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1108,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"领料出库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpincnzongan\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品出库确认\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukushijian\",\"isNameField\":false,\"fieldLabel\":\"领料出库时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "wMSlingliaochukuId",
+  "LIST": {
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"领料出库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpincnzongan\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品出库确认\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukushijian\",\"isNameField\":false,\"fieldLabel\":\"领料出库时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "entityCode": 1108,
+      "shareTo": "SELF"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "lingliaochukudanbianhao"
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1108,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzeshengchangongdan\",\"isNameField\":false,\"fieldLabel\":\"选择生产工单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchangongdan\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"领料出库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukuchanpincnzongan\",\"isNameField\":false,\"fieldLabel\":\"领料出库产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinchukuqueren\",\"isNameField\":false,\"fieldLabel\":\"产品出库确认\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"lingliaochukushijian\",\"isNameField\":false,\"fieldLabel\":\"领料出库时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "领料出库单编号",
+  "advFilter": null,
+  "mainDetailField": null,
+  "nameFieldName": "lingliaochukudanbianhao"
 }

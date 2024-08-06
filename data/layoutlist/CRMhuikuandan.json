@@ -1,24 +1,26 @@
 {
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1177,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianyingshoujihua\",\"isNameField\":false,\"fieldLabel\":\"关联应收计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMyingshoujihua\"},{\"isUpdatable\":true,\"fieldName\":\"bencihuikuanjineuan\",\"isNameField\":false,\"fieldLabel\":\"本次回款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"回款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanriqi\",\"isNameField\":false,\"fieldLabel\":\"回款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huikuandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"回款单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"回款状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1177,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianyingshoujihua\",\"isNameField\":false,\"fieldLabel\":\"关联应收计划\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMyingshoujihua\"},{\"isUpdatable\":true,\"fieldName\":\"bencihuikuanjineuan\",\"isNameField\":false,\"fieldLabel\":\"本次回款金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"回款方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanriqi\",\"isNameField\":false,\"fieldLabel\":\"回款日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huikuandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"回款单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"回款状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        }
+  "FILTER": [],
+  "quickFilterLabel": "回款单编号",
+  "COM_TREE_GROUP": [],
+  "idFieldName": "cRMhuikuandanId",
+  "titleWidthForAll": null,
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianyingshoujihua\",\"isNameField\":false,\"fieldLabel\":\"关联应收计划\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMyingshoujihua\"},{\"isUpdatable\":true,\"fieldName\":\"bencihuikuanjineuan\",\"isNameField\":false,\"fieldLabel\":\"本次回款金额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"回款方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanriqi\",\"isNameField\":false,\"fieldLabel\":\"回款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huikuandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"回款单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"回款状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
+      "applyType": "LIST",
+      "entityCode": 1177,
+      "shareTo": "ALL"
     },
-    "quickFilterLabel": "回款单编号",
-    "nameFieldName": "huikuandanbianhao",
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "idFieldName": "cRMhuikuandanId",
-    "titleWidthForAll": null,
-    "FILTER": []
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianyingshoujihua\",\"isNameField\":false,\"fieldLabel\":\"关联应收计划\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMyingshoujihua\"},{\"isUpdatable\":true,\"fieldName\":\"bencihuikuanjineuan\",\"isNameField\":false,\"fieldLabel\":\"本次回款金额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"回款方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanriqi\",\"isNameField\":false,\"fieldLabel\":\"回款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huikuandanbianhao\",\"isNameField\":true,\"fieldLabel\":\"回款单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huikuanzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"回款状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
+      "applyType": "LIST",
+      "entityCode": 1177,
+      "shareTo": "SELF"
+    }
+  },
+  "nameFieldName": "huikuandanbianhao",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null
 }

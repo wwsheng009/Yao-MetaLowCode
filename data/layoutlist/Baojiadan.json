@@ -1,27 +1,47 @@
 {
-    "quickFilterLabel": "报价单编号",
-    "advFilter": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "idFieldName": "baojiadanId",
-    "LIST": {
-        "ALL": {
-            "configName": null,
-            "entityCode": 1010,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-145dadf2b9984245b9875d35fe44cfab",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"baojiadanbianhao\",\"isNameField\":true,\"fieldLabel\":\"报价单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baojiariqi\",\"isNameField\":false,\"fieldLabel\":\"报价日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshouyuanjiazonge\",\"isNameField\":false,\"fieldLabel\":\"销售原价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhengdanzhekoulv\",\"isNameField\":false,\"fieldLabel\":\"整单折扣率%\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanjine\",\"isNameField\":false,\"fieldLabel\":\"销售订单金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baojiamaolilv\",\"isNameField\":false,\"fieldLabel\":\"报价毛利率%\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"chengbenzongjia\",\"isNameField\":false,\"fieldLabel\":\"成本总价\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "entityCode": 1010,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"baojiadanbianhao\",\"isNameField\":true,\"fieldLabel\":\"报价单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baojiariqi\",\"isNameField\":false,\"fieldLabel\":\"报价日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
-            "applyType": "LIST"
-        }
+  "titleWidthForSelf": null,
+  "STYLE": {
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-5158cd38f3d44f7b90debe2b59537ac5",
+    "shareTo": "ALL",
+    "config": "{\"actionConf\":{\"showFullScreen\":false,\"autoFullScreen\":false},\"detailConf\":{\"showFullScreen\":false,\"autoFullScreen\":false}}",
+    "applyType": "STYLE",
+    "configName": null,
+    "entityCode": 1010
+  },
+  "mainDetailField": null,
+  "nameFieldName": "baojiadanbianhao",
+  "advFilter": null,
+  "COM_TREE_GROUP": [],
+  "quickFilterLabel": "报价单编号",
+  "chosenListType": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1010,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-145dadf2b9984245b9875d35fe44cfab",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"baojiadanbianhao\",\"isNameField\":true,\"fieldLabel\":\"报价单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baojiariqi\",\"isNameField\":false,\"fieldLabel\":\"报价日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshouyuanjiazonge\",\"isNameField\":false,\"fieldLabel\":\"销售原价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhengdanzhekoulv\",\"isNameField\":false,\"fieldLabel\":\"整单折扣率%\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoudingdanjine\",\"isNameField\":false,\"fieldLabel\":\"销售订单金额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baojiamaolilv\",\"isNameField\":false,\"fieldLabel\":\"报价毛利率%\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"chengbenzongjia\",\"isNameField\":false,\"fieldLabel\":\"成本总价\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "baojiadanbianhao"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1010,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"baojiadanbianhao\",\"isNameField\":true,\"fieldLabel\":\"报价单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baojiariqi\",\"isNameField\":false,\"fieldLabel\":\"报价日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  },
+  "FILTER": [],
+  "TAB": {
+    "configName": null,
+    "entityCode": 1010,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-f5cf3199b0ba40f6b0dd20450b3e44d9",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"方案设计\",\"entityCode\":1184,\"fieldName\":\"xuanzebaojiadan\",\"isReferenced\":true,\"entityName\":\"Fangansheji\",\"label\":\"方案设计(选择报价单)(N)\"}]",
+    "applyType": "TAB"
+  },
+  "idFieldName": "baojiadanId",
+  "titleWidthForAll": null
 }

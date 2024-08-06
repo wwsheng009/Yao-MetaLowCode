@@ -1,0 +1,26 @@
+{
+  "idFieldName": "externalFormId",
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "FILTER": [],
+  "nameFieldName": "externalFormId",
+  "COM_TREE_GROUP": [],
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"externalFormName\",\"isNameField\":false,\"fieldLabel\":\"外置表单名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"bindUsers\",\"isNameField\":false,\"fieldLabel\":\"绑定用户\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "entityCode": 57
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 57,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"externalFormName\",\"isNameField\":false,\"fieldLabel\":\"外置表单名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"isDisabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"bindUsers\",\"isNameField\":false,\"fieldLabel\":\"绑定用户\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+    }
+  }
+}

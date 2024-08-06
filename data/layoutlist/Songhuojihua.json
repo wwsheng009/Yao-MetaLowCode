@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "",
-    "advFilter": null,
-    "idFieldName": "songhuojihuaId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1015,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1015,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"}]"
-        }
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "songhuojihuaId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "songhuojihuaId",
+  "quickFilterLabel": "",
+  "mainDetailField": "mdXiaoshoudingdanId",
+  "LIST": {
+    "ALL": {
+      "entityCode": 1015,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"}]",
+      "applyType": "LIST"
     },
-    "titleWidthForAll": null,
-    "titleWidthForSelf": null,
-    "nameFieldName": "songhuojihuaId",
-    "chosenListType": null,
-    "FILTER": []
+    "SELF": {
+      "entityCode": 1015,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdXiaoshoudingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiaoshoudingdan\"}]",
+      "applyType": "LIST"
+    }
+  }
 }

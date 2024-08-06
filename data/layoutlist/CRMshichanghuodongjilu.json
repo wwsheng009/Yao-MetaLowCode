@@ -1,24 +1,26 @@
 {
-    "chosenListType": null,
-    "advFilter": null,
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "活动名称",
-    "idFieldName": "cRMshichanghuodongjiluId",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1142,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"huodongmingcheng\",\"isNameField\":true,\"fieldLabel\":\"活动名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huodongkaishishijian\",\"isNameField\":false,\"fieldLabel\":\"活动开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"活动结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongleixing\",\"isNameField\":false,\"fieldLabel\":\"活动类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zerenren\",\"isNameField\":false,\"fieldLabel\":\"责任人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"zerenbumen\",\"isNameField\":false,\"fieldLabel\":\"责任部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yujitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"预计投入成本\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujichanchuxiansuoshu\",\"isNameField\":false,\"fieldLabel\":\"预计产出线索数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shijitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"实际投入成本\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1142,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"huodongmingcheng\",\"isNameField\":true,\"fieldLabel\":\"活动名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huodongkaishishijian\",\"isNameField\":false,\"fieldLabel\":\"活动开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"活动结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongleixing\",\"isNameField\":false,\"fieldLabel\":\"活动类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zerenren\",\"isNameField\":false,\"fieldLabel\":\"责任人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"zerenbumen\",\"isNameField\":false,\"fieldLabel\":\"责任部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yujitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"预计投入成本\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujichanchuxiansuoshu\",\"isNameField\":false,\"fieldLabel\":\"预计产出线索数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shijitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"实际投入成本\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        }
+  "FILTER": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "nameFieldName": "huodongmingcheng",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "活动名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "cRMshichanghuodongjiluId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1142,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"huodongmingcheng\",\"isNameField\":true,\"fieldLabel\":\"活动名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huodongkaishishijian\",\"isNameField\":false,\"fieldLabel\":\"活动开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"活动结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongleixing\",\"isNameField\":false,\"fieldLabel\":\"活动类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zerenren\",\"isNameField\":false,\"fieldLabel\":\"责任人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"zerenbumen\",\"isNameField\":false,\"fieldLabel\":\"责任部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yujitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"预计投入成本\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujichanchuxiansuoshu\",\"isNameField\":false,\"fieldLabel\":\"预计产出线索数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shijitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"实际投入成本\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
     },
-    "nameFieldName": "huodongmingcheng"
+    "SELF": {
+      "entityCode": 1142,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"huodongmingcheng\",\"isNameField\":true,\"fieldLabel\":\"活动名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huodongkaishishijian\",\"isNameField\":false,\"fieldLabel\":\"活动开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"活动结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"huodongleixing\",\"isNameField\":false,\"fieldLabel\":\"活动类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"zerenren\",\"isNameField\":false,\"fieldLabel\":\"责任人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"zerenbumen\",\"isNameField\":false,\"fieldLabel\":\"责任部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yujitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"预计投入成本\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujichanchuxiansuoshu\",\"isNameField\":false,\"fieldLabel\":\"预计产出线索数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shijitouruchengben\",\"isNameField\":false,\"fieldLabel\":\"实际投入成本\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST"
+    }
+  }
 }

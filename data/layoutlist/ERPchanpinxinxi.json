@@ -1,24 +1,29 @@
 {
-    "quickFilterLabel": "产品名称",
-    "chosenListType": null,
-    "advFilter": null,
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "chanpinmingcheng",
-    "titleWidthForSelf": null,
-    "idFieldName": "eRPchanpinxinxiId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1185,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinshuxing\",\"isNameField\":false,\"fieldLabel\":\"产品属性\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinleixing\",\"isNameField\":false,\"fieldLabel\":\"产品类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzefangansheji\",\"isNameField\":false,\"fieldLabel\":\"选择方案设计\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fangansheji\"},{\"isUpdatable\":true,\"fieldName\":\"huoqufangshi\",\"isNameField\":false,\"fieldLabel\":\"获取方式\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1185,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinshuxing\",\"isNameField\":false,\"fieldLabel\":\"产品属性\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinleixing\",\"isNameField\":false,\"fieldLabel\":\"产品类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzefangansheji\",\"isNameField\":false,\"fieldLabel\":\"选择方案设计\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fangansheji\"},{\"isUpdatable\":true,\"fieldName\":\"huoqufangshi\",\"isNameField\":false,\"fieldLabel\":\"获取方式\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        }
+  "quickFilterLabel": "产品名称",
+  "advFilter": null,
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "eRPchanpinxinxiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1185,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-b1ff21f6c59341bc808252fd1472e105",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinshuxing\",\"isNameField\":false,\"fieldLabel\":\"产品属性\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinleixing\",\"isNameField\":false,\"fieldLabel\":\"产品类型\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzefangansheji\",\"isNameField\":false,\"fieldLabel\":\"选择方案设计\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fangansheji\"},{\"isUpdatable\":true,\"fieldName\":\"huoqufangshi\",\"isNameField\":false,\"fieldLabel\":\"获取方式\",\"isNullable\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chengben\",\"isNameField\":false,\"fieldLabel\":\"成本（单价/元）\",\"isNullable\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhunshoujia\",\"isNameField\":false,\"fieldLabel\":\"标准售价(含税)/元\",\"isNullable\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinquanxian\",\"isNameField\":false,\"fieldLabel\":\"产品权限\",\"isNullable\":false,\"isUnique\":false,\"optionData\":[{\"value\":\"销售\",\"displayOrder\":1},{\"value\":\"采购\",\"displayOrder\":2},{\"value\":\"赠送\",\"displayOrder\":3}],\"isCreatable\":true,\"fieldType\":\"Tag\"},{\"isUpdatable\":true,\"fieldName\":\"dangqiankucunshu\",\"isNameField\":false,\"fieldLabel\":\"当前库存数\",\"isNullable\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"keyongkucunshu\",\"isNameField\":false,\"fieldLabel\":\"可用库存数\",\"isNullable\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1185,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"chanpinbianma\",\"isNameField\":false,\"fieldLabel\":\"产品编码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinshuxing\",\"isNameField\":false,\"fieldLabel\":\"产品属性\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinleixing\",\"isNameField\":false,\"fieldLabel\":\"产品类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":true,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pinpai\",\"isNameField\":false,\"fieldLabel\":\"品牌\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzefangansheji\",\"isNameField\":false,\"fieldLabel\":\"选择方案设计\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Fangansheji\"},{\"isUpdatable\":true,\"fieldName\":\"huoqufangshi\",\"isNameField\":false,\"fieldLabel\":\"获取方式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
     }
+  },
+  "nameFieldName": "chanpinmingcheng"
 }

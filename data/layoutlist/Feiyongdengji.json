@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1203,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"feiyongbianhao\",\"isNameField\":true,\"fieldLabel\":\"费用编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongdengjiriqi\",\"isNameField\":false,\"fieldLabel\":\"费用登记日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongfashengriqi\",\"isNameField\":false,\"fieldLabel\":\"费用发生日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongleixing\",\"isNameField\":false,\"fieldLabel\":\"费用类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongjine\",\"isNameField\":false,\"fieldLabel\":\"费用金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1203,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"feiyongbianhao\",\"isNameField\":true,\"fieldLabel\":\"费用编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongdengjiriqi\",\"isNameField\":false,\"fieldLabel\":\"费用登记日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongfashengriqi\",\"isNameField\":false,\"fieldLabel\":\"费用发生日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongleixing\",\"isNameField\":false,\"fieldLabel\":\"费用类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongjine\",\"isNameField\":false,\"fieldLabel\":\"费用金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        }
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1203,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"feiyongbianhao\",\"isNameField\":true,\"fieldLabel\":\"费用编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongdengjiriqi\",\"isNameField\":false,\"fieldLabel\":\"费用登记日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongfashengriqi\",\"isNameField\":false,\"fieldLabel\":\"费用发生日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongleixing\",\"isNameField\":false,\"fieldLabel\":\"费用类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongjine\",\"isNameField\":false,\"fieldLabel\":\"费用金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "feiyongbianhao",
-    "quickFilterLabel": "费用编号",
-    "idFieldName": "feiyongdengjiId"
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"feiyongbianhao\",\"isNameField\":true,\"fieldLabel\":\"费用编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongdengjiriqi\",\"isNameField\":false,\"fieldLabel\":\"费用登记日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongfashengriqi\",\"isNameField\":false,\"fieldLabel\":\"费用发生日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongleixing\",\"isNameField\":false,\"fieldLabel\":\"费用类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"feiyongjine\",\"isNameField\":false,\"fieldLabel\":\"费用金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "entityCode": 1203,
+      "shareTo": "SELF"
+    }
+  },
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "费用编号",
+  "chosenListType": null,
+  "advFilter": null,
+  "idFieldName": "feiyongdengjiId",
+  "titleWidthForAll": null,
+  "nameFieldName": "feiyongbianhao"
 }

@@ -1,24 +1,26 @@
 {
-    "idFieldName": "systemSettingId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 7,
-            "shareTo": "ALL",
-            "config": "[]"
-        },
-        "SELF": {
-            "config": "[]",
-            "applyType": "LIST",
-            "entityCode": 7,
-            "shareTo": "SELF"
-        }
+  "LIST": {
+    "ALL": {
+      "config": "[]",
+      "applyType": "LIST",
+      "entityCode": 7,
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "systemSettingId",
-    "chosenListType": null,
-    "advFilter": null,
-    "titleWidthForSelf": null,
-    "quickFilterLabel": ""
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 7,
+      "shareTo": "SELF",
+      "config": "[]"
+    }
+  },
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "systemSettingId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "systemSettingId",
+  "quickFilterLabel": "",
+  "mainDetailField": null
 }

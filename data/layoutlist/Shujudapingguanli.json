@@ -1,0 +1,29 @@
+{
+  "quickFilterLabel": "数据大屏名称",
+  "chosenListType": null,
+  "mainDetailField": null,
+  "nameFieldName": "shujudapingmingcheng",
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "idFieldName": "shujudapingguanliId",
+  "LIST": {
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shujudapingmingcheng\",\"isNameField\":true,\"fieldLabel\":\"数据大屏名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dapingkuandu\",\"isNameField\":false,\"fieldLabel\":\"大屏宽度\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"dapinggaodu\",\"isNameField\":false,\"fieldLabel\":\"大屏高度\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shujumoxing\",\"isNameField\":false,\"fieldLabel\":\"数据模型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shujuji\"}]",
+      "applyType": "LIST",
+      "entityCode": 1240
+    },
+    "ALL": {
+      "entityCode": 1240,
+      "createdBy": "0000021-00ec15ca45bc446f9fc36161281733d4",
+      "layoutConfigId": "0000015-f3055030df82473aaf5f790785d76bfc",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"shujudapingmingcheng\",\"isNameField\":true,\"fieldLabel\":\"数据大屏名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"dapingkuandu\",\"isNameField\":false,\"fieldLabel\":\"大屏宽度\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"dapinggaodu\",\"isNameField\":false,\"fieldLabel\":\"大屏高度\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shujumoxing\",\"isNameField\":false,\"fieldLabel\":\"数据模型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shujuji\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]",
+      "applyType": "LIST",
+      "configName": null
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "COM_TREE_GROUP": []
+}

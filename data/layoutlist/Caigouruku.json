@@ -1,24 +1,29 @@
 {
-    "idFieldName": "caigourukuId",
-    "LIST": {
-        "ALL": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzecaigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择采购订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"caigourukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shifoucunzaibuhegepin\",\"isNameField\":false,\"fieldLabel\":\"是否存在不合格品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hegepinrukuqueren\",\"isNameField\":false,\"fieldLabel\":\"合格品入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
-            "applyType": "LIST",
-            "entityCode": 1034,
-            "shareTo": "ALL"
-        },
-        "SELF": {
-            "entityCode": 1034,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzecaigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择采购订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"caigourukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shifoucunzaibuhegepin\",\"isNameField\":false,\"fieldLabel\":\"是否存在不合格品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hegepinrukuqueren\",\"isNameField\":false,\"fieldLabel\":\"合格品入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
-            "applyType": "LIST"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "采购入库单编号",
+  "idFieldName": "caigourukuId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1034,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-c1b40acaa1f7400e855842c7d2b39e29",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzecaigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择采购订单\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"caigourukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shifoucunzaibuhegepin\",\"isNameField\":false,\"fieldLabel\":\"是否存在不合格品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hegepinrukuqueren\",\"isNameField\":false,\"fieldLabel\":\"合格品入库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpincaigoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"入库产品采购价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"zhijianshijian\",\"isNameField\":false,\"fieldLabel\":\"质检时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"zhijianyuan\",\"isNameField\":false,\"fieldLabel\":\"质检员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"入库时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"rukuyuan\",\"isNameField\":false,\"fieldLabel\":\"入库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     },
-    "FILTER": [],
-    "nameFieldName": "caigourukudanbianhao",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "采购入库单编号",
-    "chosenListType": null,
-    "advFilter": null,
-    "titleWidthForAll": null
+    "SELF": {
+      "entityCode": 1034,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzecaigoudingdan\",\"isNameField\":false,\"fieldLabel\":\"选择采购订单\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Caigoudingdan\"},{\"isUpdatable\":true,\"fieldName\":\"caigourukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购入库单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"shifoucunzaibuhegepin\",\"isNameField\":false,\"fieldLabel\":\"是否存在不合格品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"hegepinrukuqueren\",\"isNameField\":false,\"fieldLabel\":\"合格品入库确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null,
+  "nameFieldName": "caigourukudanbianhao",
+  "advFilter": null,
+  "mainDetailField": null
 }

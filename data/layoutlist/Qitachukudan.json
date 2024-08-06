@@ -1,24 +1,29 @@
 {
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "其他出库单编号",
-    "idFieldName": "qitachukudanId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "qitarukudanbianhao",
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]",
-            "applyType": "LIST",
-            "entityCode": 1048
-        },
-        "SELF": {
-            "entityCode": 1048,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]",
-            "applyType": "LIST"
-        }
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "titleWidthForAll": null,
+  "idFieldName": "qitachukudanId",
+  "LIST": {
+    "ALL": {
+      "entityCode": 1048,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-d584aa2e99494b12b424b5ebce9c6e16",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinshoujiazonge\",\"isNameField\":false,\"fieldLabel\":\"出库产品售价总额(含税)/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinchengbenzonge\",\"isNameField\":false,\"fieldLabel\":\"出库产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]",
+      "applyType": "LIST",
+      "configName": null
+    },
+    "SELF": {
+      "entityCode": 1048,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitarukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"rukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]",
+      "applyType": "LIST"
     }
+  },
+  "nameFieldName": "qitarukudanbianhao",
+  "quickFilterLabel": "其他出库单编号",
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null
 }

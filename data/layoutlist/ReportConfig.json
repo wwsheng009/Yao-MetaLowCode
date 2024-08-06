@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "idFieldName": "reportConfigId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 45,
-            "shareTo": "ALL",
-            "config": "[]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 45,
-            "shareTo": "SELF",
-            "config": "[]"
-        }
+  "LIST": {
+    "ALL": {
+      "entityCode": 45,
+      "shareTo": "ALL",
+      "config": "[]",
+      "applyType": "LIST"
     },
-    "FILTER": [],
-    "nameFieldName": "reportConfigId",
-    "quickFilterLabel": "",
-    "chosenListType": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 45,
+      "shareTo": "SELF",
+      "config": "[]"
+    }
+  },
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "idFieldName": "reportConfigId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "reportConfigId",
+  "titleWidthForSelf": null
 }

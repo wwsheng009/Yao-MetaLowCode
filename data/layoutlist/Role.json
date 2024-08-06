@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "roleName",
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 23,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"description\",\"isNameField\":false,\"fieldLabel\":\"角色说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"roleName\",\"isNameField\":true,\"fieldLabel\":\"角色名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"disabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"description\",\"isNameField\":false,\"fieldLabel\":\"角色说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"roleName\",\"isNameField\":true,\"fieldLabel\":\"角色名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"disabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
-            "applyType": "LIST",
-            "entityCode": 23
-        }
+  "advFilter": null,
+  "idFieldName": "roleId",
+  "LIST": {
+    "ALL": {
+      "entityCode": 23,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"description\",\"isNameField\":false,\"fieldLabel\":\"角色说明\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"roleName\",\"isNameField\":true,\"fieldLabel\":\"角色名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"disabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"zsdn\",\"isNameField\":false,\"fieldLabel\":\"zsdn\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]",
+      "applyType": "LIST"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "角色名称",
-    "advFilter": null,
-    "idFieldName": "roleId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 23,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"description\",\"isNameField\":false,\"fieldLabel\":\"角色说明\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"roleName\",\"isNameField\":true,\"fieldLabel\":\"角色名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"disabled\",\"isNameField\":false,\"fieldLabel\":\"是否禁用\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"zsdn\",\"isNameField\":false,\"fieldLabel\":\"zsdn\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"}]"
+    }
+  },
+  "titleWidthForSelf": null,
+  "nameFieldName": "roleName",
+  "quickFilterLabel": "角色名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "FILTER": []
 }

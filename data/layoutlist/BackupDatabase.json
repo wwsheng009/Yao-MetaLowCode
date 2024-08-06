@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 56,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"overdue\",\"isNameField\":false,\"fieldLabel\":\"是否过期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"state\",\"isNameField\":false,\"fieldLabel\":\"备份状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"database\",\"isNameField\":false,\"fieldLabel\":\"库名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"overdue\",\"isNameField\":false,\"fieldLabel\":\"是否过期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"state\",\"isNameField\":false,\"fieldLabel\":\"备份状态\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"database\",\"isNameField\":false,\"fieldLabel\":\"库名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "entityCode": 56
-        }
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "backupDatabaseId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 56,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"overdue\",\"isNameField\":false,\"fieldLabel\":\"是否过期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"state\",\"isNameField\":false,\"fieldLabel\":\"备份状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"database\",\"isNameField\":false,\"fieldLabel\":\"库名\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "backupDatabaseId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "idFieldName": "backupDatabaseId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 56,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"overdue\",\"isNameField\":false,\"fieldLabel\":\"是否过期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"state\",\"isNameField\":false,\"fieldLabel\":\"备份状态\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"database\",\"isNameField\":false,\"fieldLabel\":\"库名\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "nameFieldName": "backupDatabaseId",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null
 }

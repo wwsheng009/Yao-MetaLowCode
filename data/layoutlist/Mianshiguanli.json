@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "nameFieldName": "xingming",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "姓名",
-    "titleWidthForAll": null,
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "mianshiguanliId",
-    "LIST": {
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzejianli\",\"isNameField\":false,\"fieldLabel\":\"选择简历\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jianlishoujijichushai\"},{\"isUpdatable\":true,\"fieldName\":\"xuyaojicimianshi\",\"isNameField\":false,\"fieldLabel\":\"需要几次面试\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "entityCode": 1130
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1130,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzejianli\",\"isNameField\":false,\"fieldLabel\":\"选择简历\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jianlishoujijichushai\"},{\"isUpdatable\":true,\"fieldName\":\"xuyaojicimianshi\",\"isNameField\":false,\"fieldLabel\":\"需要几次面试\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "姓名",
+  "advFilter": null,
+  "idFieldName": "mianshiguanliId",
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzejianli\",\"isNameField\":false,\"fieldLabel\":\"选择简历\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jianlishoujijichushai\"},{\"isUpdatable\":true,\"fieldName\":\"xuyaojicimianshi\",\"isNameField\":false,\"fieldLabel\":\"需要几次面试\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1130
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1130,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzejianli\",\"isNameField\":false,\"fieldLabel\":\"选择简历\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jianlishoujijichushai\"},{\"isUpdatable\":true,\"fieldName\":\"xuyaojicimianshi\",\"isNameField\":false,\"fieldLabel\":\"需要几次面试\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xingming\",\"isNameField\":true,\"fieldLabel\":\"姓名\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shoujihao\",\"isNameField\":false,\"fieldLabel\":\"手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
     }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "xingming",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null
 }

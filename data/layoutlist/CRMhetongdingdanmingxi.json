@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "idFieldName": "cRMhetongdingdanmingxiId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1172,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMhetongdingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1172,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMhetongdingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        }
+  "idFieldName": "cRMhetongdingdanmingxiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1172,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMhetongdingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "cRMhetongdingdanmingxiId",
-    "titleWidthForSelf": null,
-    "advFilter": null
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMhetongdingdanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"shuliang\",\"isNameField\":false,\"fieldLabel\":\"数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoji\",\"isNameField\":false,\"fieldLabel\":\"小计\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST",
+      "entityCode": 1172
+    }
+  },
+  "nameFieldName": "cRMhetongdingdanmingxiId",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "advFilter": null,
+  "mainDetailField": "mdCRMhetongdingdanId",
+  "FILTER": [],
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "titleWidthForAll": null
 }

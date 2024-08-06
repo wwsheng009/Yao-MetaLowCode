@@ -1,27 +1,29 @@
 {
-    "idFieldName": "todoTaskId",
-    "nameFieldName": "todoTaskId",
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"remindType\",\"isNameField\":false,\"fieldLabel\":\"提醒方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Tag\",\"columnSort\":\"\"},{\"columnWidth\":500,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"todoItem\",\"isNameField\":false,\"fieldLabel\":\"待办事项\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\",\"columnEditInx\":1},{\"columnWidth\":220,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"todoDate\",\"isNameField\":false,\"fieldLabel\":\"待办时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\",\"columnEditInx\":2},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\",\"columnSort\":\"\"}]",
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 55,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-c851159e202b421f8e0d676231f9ee4d"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 55,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"recordId\",\"isNameField\":false,\"fieldLabel\":\"关联记录\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":true,\"fieldName\":\"todoDate\",\"isNameField\":false,\"fieldLabel\":\"待办时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        }
+  "FILTER": [],
+  "chosenListType": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "nameFieldName": "todoTaskId",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "todoTaskId",
+  "LIST": {
+    "ALL": {
+      "layoutConfigId": "0000015-c851159e202b421f8e0d676231f9ee4d",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"remindType\",\"isNameField\":false,\"fieldLabel\":\"提醒方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Tag\",\"columnSort\":\"\"},{\"columnWidth\":500,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"todoItem\",\"isNameField\":false,\"fieldLabel\":\"待办事项\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\",\"columnEditInx\":1},{\"columnWidth\":220,\"columnSort\":\"\",\"columnAliasName\":\"\",\"isUpdatable\":true,\"fieldName\":\"todoDate\",\"isNameField\":false,\"fieldLabel\":\"待办时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\",\"columnEditInx\":2},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\",\"columnSort\":\"\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 55,
+      "createdBy": "0000021-00000000000000000000000000000001"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": ""
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 55,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"recordId\",\"isNameField\":false,\"fieldLabel\":\"关联记录\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AnyReference\"},{\"isUpdatable\":true,\"fieldName\":\"todoDate\",\"isNameField\":false,\"fieldLabel\":\"待办时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  }
 }

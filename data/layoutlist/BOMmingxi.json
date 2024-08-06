@@ -1,24 +1,26 @@
 {
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdChanpinBOMId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ChanpinBOM\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhunyongliang\",\"isNameField\":false,\"fieldLabel\":\"标准用量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"}]",
-            "applyType": "LIST",
-            "entityCode": 1191
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1191,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdChanpinBOMId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ChanpinBOM\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhunyongliang\",\"isNameField\":false,\"fieldLabel\":\"标准用量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"}]"
-        }
+  "nameFieldName": "bOMmingxiId",
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": "mdChanpinBOMId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "advFilter": null,
+  "idFieldName": "bOMmingxiId",
+  "LIST": {
+    "SELF": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdChanpinBOMId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ChanpinBOM\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhunyongliang\",\"isNameField\":false,\"fieldLabel\":\"标准用量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"}]",
+      "applyType": "LIST",
+      "entityCode": 1191,
+      "shareTo": "SELF"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "bOMmingxiId",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "",
-    "FILTER": [],
-    "chosenListType": null,
-    "idFieldName": "bOMmingxiId"
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1191,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdChanpinBOMId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ChanpinBOM\"},{\"isUpdatable\":true,\"fieldName\":\"biaozhunyongliang\",\"isNameField\":false,\"fieldLabel\":\"标准用量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"}]"
+    }
+  }
 }

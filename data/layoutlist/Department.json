@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "departmentName",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "部门名称",
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "entityCode": 22,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"parentDepartmentId\",\"isNameField\":false,\"fieldLabel\":\"上级部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"departmentName\",\"isNameField\":true,\"fieldLabel\":\"部门名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"departmentOwnerUser\",\"isNameField\":false,\"fieldLabel\":\"部门负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 22,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"parentDepartmentId\",\"isNameField\":false,\"fieldLabel\":\"上级部门\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"departmentName\",\"isNameField\":true,\"fieldLabel\":\"部门名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"departmentOwnerUser\",\"isNameField\":false,\"fieldLabel\":\"部门负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        }
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 22,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"parentDepartmentId\",\"isNameField\":false,\"fieldLabel\":\"上级部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"departmentName\",\"isNameField\":true,\"fieldLabel\":\"部门名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"departmentOwnerUser\",\"isNameField\":false,\"fieldLabel\":\"部门负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     },
-    "FILTER": [],
-    "chosenListType": null,
-    "idFieldName": "departmentId",
-    "titleWidthForAll": null
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"parentDepartmentId\",\"isNameField\":false,\"fieldLabel\":\"上级部门\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"departmentName\",\"isNameField\":true,\"fieldLabel\":\"部门名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"departmentOwnerUser\",\"isNameField\":false,\"fieldLabel\":\"部门负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "entityCode": 22,
+      "shareTo": "SELF"
+    }
+  },
+  "FILTER": [],
+  "nameFieldName": "departmentName",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "部门名称",
+  "mainDetailField": null,
+  "idFieldName": "departmentId",
+  "titleWidthForAll": null
 }

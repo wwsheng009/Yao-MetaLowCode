@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "zhibiaomingcheng",
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "idFieldName": "jixiaojieguokaohezhibiaoId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1159,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJixiaojieguokaoheId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaojieguokaohe\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"指标名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"quanzhong\",\"isNameField\":false,\"fieldLabel\":\"权重（%）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"dingxing\",\"isNameField\":false,\"fieldLabel\":\"定性/定量指标\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenbiaozhun\",\"isNameField\":false,\"fieldLabel\":\"评分标准\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju\",\"isNameField\":false,\"fieldLabel\":\"自评说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiliangdanwei\",\"isNameField\":false,\"fieldLabel\":\"计量单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhi\",\"isNameField\":false,\"fieldLabel\":\"目标值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"wanchengzhi\",\"isNameField\":false,\"fieldLabel\":\"完成值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju1\",\"isNameField\":false,\"fieldLabel\":\"评分依据\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zipingfen\",\"isNameField\":false,\"fieldLabel\":\"自评分\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJixiaojieguokaoheId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaojieguokaohe\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"指标名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"quanzhong\",\"isNameField\":false,\"fieldLabel\":\"权重（%）\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"dingxing\",\"isNameField\":false,\"fieldLabel\":\"定性/定量指标\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenbiaozhun\",\"isNameField\":false,\"fieldLabel\":\"评分标准\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju\",\"isNameField\":false,\"fieldLabel\":\"自评说明\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiliangdanwei\",\"isNameField\":false,\"fieldLabel\":\"计量单位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhi\",\"isNameField\":false,\"fieldLabel\":\"目标值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"wanchengzhi\",\"isNameField\":false,\"fieldLabel\":\"完成值\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju1\",\"isNameField\":false,\"fieldLabel\":\"评分依据\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zipingfen\",\"isNameField\":false,\"fieldLabel\":\"自评分\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]",
-            "applyType": "LIST",
-            "entityCode": 1159
-        }
+  "idFieldName": "jixiaojieguokaohezhibiaoId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "zhibiaomingcheng",
+  "quickFilterLabel": "指标名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": "mdJixiaojieguokaoheId",
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "entityCode": 1159,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJixiaojieguokaoheId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaojieguokaohe\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"指标名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"quanzhong\",\"isNameField\":false,\"fieldLabel\":\"权重（%）\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"dingxing\",\"isNameField\":false,\"fieldLabel\":\"定性/定量指标\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenbiaozhun\",\"isNameField\":false,\"fieldLabel\":\"评分标准\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju\",\"isNameField\":false,\"fieldLabel\":\"自评说明\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiliangdanwei\",\"isNameField\":false,\"fieldLabel\":\"计量单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhi\",\"isNameField\":false,\"fieldLabel\":\"目标值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"wanchengzhi\",\"isNameField\":false,\"fieldLabel\":\"完成值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju1\",\"isNameField\":false,\"fieldLabel\":\"评分依据\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zipingfen\",\"isNameField\":false,\"fieldLabel\":\"自评分\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]",
+      "applyType": "LIST"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "advFilter": null,
-    "quickFilterLabel": "指标名称"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1159,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJixiaojieguokaoheId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jixiaojieguokaohe\"},{\"isUpdatable\":true,\"fieldName\":\"zhibiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"指标名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"quanzhong\",\"isNameField\":false,\"fieldLabel\":\"权重（%）\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"},{\"isUpdatable\":true,\"fieldName\":\"dingxing\",\"isNameField\":false,\"fieldLabel\":\"定性/定量指标\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenbiaozhun\",\"isNameField\":false,\"fieldLabel\":\"评分标准\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju\",\"isNameField\":false,\"fieldLabel\":\"自评说明\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jiliangdanwei\",\"isNameField\":false,\"fieldLabel\":\"计量单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"mubiaozhi\",\"isNameField\":false,\"fieldLabel\":\"目标值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"wanchengzhi\",\"isNameField\":false,\"fieldLabel\":\"完成值\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"pingfenyiju1\",\"isNameField\":false,\"fieldLabel\":\"评分依据\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zipingfen\",\"isNameField\":false,\"fieldLabel\":\"自评分\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]"
+    }
+  }
 }

@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "titleWidthForAll": null,
-    "nameFieldName": "shengchanlingliaochukuId",
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "idFieldName": "shengchanlingliaochukuId",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1217,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdShengchanlingliaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanlingliao\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencipaigongshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        },
-        "ALL": {
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdShengchanlingliaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanlingliao\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencipaigongshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 1217,
-            "shareTo": "ALL"
-        }
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "idFieldName": "shengchanlingliaochukuId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1217,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdShengchanlingliaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanlingliao\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencipaigongshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1217,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdShengchanlingliaoId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Shengchanlingliao\"},{\"isUpdatable\":true,\"fieldName\":\"chanpinmingcheng\",\"isNameField\":false,\"fieldLabel\":\"产品名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"ERPchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"bencipaigongshuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     }
+  },
+  "nameFieldName": "shengchanlingliaochukuId",
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": "mdShengchanlingliaoId",
+  "titleWidthForAll": null
 }

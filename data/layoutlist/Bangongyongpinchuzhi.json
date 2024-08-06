@@ -1,0 +1,26 @@
+{
+  "FILTER": [],
+  "COM_TREE_GROUP": [],
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1259,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinbianhao\",\"isNameField\":true,\"fieldLabel\":\"办公用品编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chuzhifangshi\",\"isNameField\":false,\"fieldLabel\":\"处置方式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1259,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinbianhao\",\"isNameField\":true,\"fieldLabel\":\"办公用品编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chuzhifangshi\",\"isNameField\":false,\"fieldLabel\":\"处置方式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "bangongyongpinchuzhiId",
+  "nameFieldName": "bangongyongpinbianhao",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "办公用品编号",
+  "chosenListType": null
+}

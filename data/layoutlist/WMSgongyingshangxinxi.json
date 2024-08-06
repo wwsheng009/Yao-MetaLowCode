@@ -1,45 +1,56 @@
 {
-    "TAB": {
-        "applyType": "TAB",
-        "configName": null,
-        "entityCode": 1021,
-        "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
-        "layoutConfigId": "0000015-7b97451b699f416d97ba7165197b779a",
-        "shareTo": "ALL",
-        "config": "[{\"columnAliasName\":\"供应商价格表\",\"filter\":{\"equation\":\"OR\",\"items\":[]},\"entityLabel\":\"WMS供应商价格表\",\"entityCode\":1039,\"fieldName\":\"gongyingshang\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangjiagebiao\",\"label\":\"WMS供应商价格表(供应商名称)(N)\",\"columnEditInx\":0},{\"columnAliasName\":\"供应商送货信息\",\"filter\":{\"equation\":\"OR\",\"items\":[]},\"entityLabel\":\"WMS供应商送货信息\",\"entityCode\":1040,\"fieldName\":\"gongyingshangmingcheng\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangsonghuoxinxi\",\"label\":\"WMS供应商送货信息(供应商名称)(N)\",\"columnEditInx\":1}]"
+  "chosenListType": null,
+  "advFilter": null,
+  "ADD": {
+    "applyType": "ADD",
+    "configName": null,
+    "entityCode": 1021,
+    "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
+    "layoutConfigId": "0000015-9daf1ed823374b48ba6406bd19e6f299",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"WMS供应商价格表\",\"entityCode\":1039,\"fieldName\":\"gongyingshang\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangjiagebiao\",\"label\":\"WMS供应商价格表(供应商名称)(N)\"},{\"entityLabel\":\"WMS供应商送货信息\",\"entityCode\":1040,\"fieldName\":\"gongyingshangmingcheng\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangsonghuoxinxi\",\"label\":\"WMS供应商送货信息(供应商名称)(N)\"}]"
+  },
+  "FILTER": [],
+  "COM_TREE_GROUP": [],
+  "TAB": {
+    "layoutConfigId": "0000015-7b97451b699f416d97ba7165197b779a",
+    "shareTo": "ALL",
+    "config": "[{\"columnAliasName\":\"供应商价格表\",\"filter\":{\"equation\":\"OR\",\"items\":[]},\"entityLabel\":\"WMS供应商价格表\",\"entityCode\":1039,\"fieldName\":\"gongyingshang\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangjiagebiao\",\"label\":\"WMS供应商价格表(供应商名称)(N)\",\"columnEditInx\":0},{\"columnAliasName\":\"供应商送货信息\",\"filter\":{\"equation\":\"OR\",\"items\":[]},\"entityLabel\":\"WMS供应商送货信息\",\"entityCode\":1040,\"fieldName\":\"gongyingshangmingcheng\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangsonghuoxinxi\",\"label\":\"WMS供应商送货信息(供应商名称)(N)\",\"columnEditInx\":1}]",
+    "applyType": "TAB",
+    "configName": null,
+    "entityCode": 1021,
+    "createdBy": "0000021-2909a29a118a4a28b294cd410b460751"
+  },
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "quickFilterLabel": "供应商名称",
+  "LIST": {
+    "ALL": {
+      "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
+      "layoutConfigId": "0000015-c355f645ee7644d19dc47283a37915cb",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangbianma\",\"isNameField\":false,\"fieldLabel\":\"供应商编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangfenlei\",\"isNameField\":false,\"fieldLabel\":\"供应商分类\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdengji\",\"isNameField\":false,\"fieldLabel\":\"供应商等级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuekaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"签约开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuejieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"签约结束日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xinyongeduyuan\",\"isNameField\":false,\"fieldLabel\":\"信用额度/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"caigouguishubumen\",\"isNameField\":false,\"fieldLabel\":\"采购归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdizhi\",\"isNameField\":false,\"fieldLabel\":\"供应商地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangxiangxidizhi\",\"isNameField\":false,\"fieldLabel\":\"供应商详细地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuyinhang\",\"isNameField\":false,\"fieldLabel\":\"开户银行\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangzhanghao\",\"isNameField\":false,\"fieldLabel\":\"银行账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming\",\"isNameField\":false,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zengzhishuishuil\",\"isNameField\":false,\"fieldLabel\":\"增值税税率 %\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1021
     },
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "layoutConfigId": "0000015-c355f645ee7644d19dc47283a37915cb",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangbianma\",\"isNameField\":false,\"fieldLabel\":\"供应商编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":false,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangfenlei\",\"isNameField\":false,\"fieldLabel\":\"供应商分类\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdengji\",\"isNameField\":false,\"fieldLabel\":\"供应商等级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuekaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"签约开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuejieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"签约结束日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xinyongeduyuan\",\"isNameField\":false,\"fieldLabel\":\"信用额度/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"caigouguishubumen\",\"isNameField\":false,\"fieldLabel\":\"采购归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdizhi\",\"isNameField\":false,\"fieldLabel\":\"供应商地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangxiangxidizhi\",\"isNameField\":false,\"fieldLabel\":\"供应商详细地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuyinhang\",\"isNameField\":false,\"fieldLabel\":\"开户银行\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangzhanghao\",\"isNameField\":false,\"fieldLabel\":\"银行账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming\",\"isNameField\":false,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1021,
-            "createdBy": "0000021-2909a29a118a4a28b294cd410b460751"
-        },
-        "SELF": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangbianma\",\"isNameField\":false,\"fieldLabel\":\"供应商编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":true,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangfenlei\",\"isNameField\":false,\"fieldLabel\":\"供应商分类\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdengji\",\"isNameField\":false,\"fieldLabel\":\"供应商等级\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuekaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"签约开始日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuejieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"签约结束日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xinyongeduyuan\",\"isNameField\":false,\"fieldLabel\":\"信用额度/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"caigouguishubumen\",\"isNameField\":false,\"fieldLabel\":\"采购归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdizhi\",\"isNameField\":false,\"fieldLabel\":\"供应商地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuyinhang\",\"isNameField\":false,\"fieldLabel\":\"开户银行\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangzhanghao\",\"isNameField\":false,\"fieldLabel\":\"银行账号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming\",\"isNameField\":false,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "entityCode": 1021,
-            "shareTo": "SELF"
-        }
-    },
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "供应商名称",
-    "chosenListType": null,
-    "idFieldName": "wMSgongyingshangxinxiId",
-    "titleWidthForAll": null,
-    "ADD": {
-        "config": "[{\"entityLabel\":\"WMS供应商价格表\",\"entityCode\":1039,\"fieldName\":\"gongyingshang\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangjiagebiao\",\"label\":\"WMS供应商价格表(供应商名称)(N)\"},{\"entityLabel\":\"WMS供应商送货信息\",\"entityCode\":1040,\"fieldName\":\"gongyingshangmingcheng\",\"isReferenced\":true,\"entityName\":\"WMSgongyingshangsonghuoxinxi\",\"label\":\"WMS供应商送货信息(供应商名称)(N)\"}]",
-        "applyType": "ADD",
-        "configName": null,
-        "entityCode": 1021,
-        "createdBy": "0000021-2909a29a118a4a28b294cd410b460751",
-        "layoutConfigId": "0000015-9daf1ed823374b48ba6406bd19e6f299",
-        "shareTo": "ALL"
-    },
-    "FILTER": [],
-    "nameFieldName": "gongyingshangmingcheng"
+    "SELF": {
+      "entityCode": 1021,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gongyingshangbianma\",\"isNameField\":false,\"fieldLabel\":\"供应商编码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangmingcheng\",\"isNameField\":true,\"fieldLabel\":\"供应商名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangfenlei\",\"isNameField\":false,\"fieldLabel\":\"供应商分类\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdengji\",\"isNameField\":false,\"fieldLabel\":\"供应商等级\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuekaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"签约开始日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"qianyuejieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"签约结束日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiesuanqixian\",\"isNameField\":false,\"fieldLabel\":\"结算期限\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"xinyongeduyuan\",\"isNameField\":false,\"fieldLabel\":\"信用额度/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren\",\"isNameField\":false,\"fieldLabel\":\"采购负责人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"caigouguishubumen\",\"isNameField\":false,\"fieldLabel\":\"采购归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"gongyingshangdizhi\",\"isNameField\":false,\"fieldLabel\":\"供应商地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaotaitou\",\"isNameField\":false,\"fieldLabel\":\"发票抬头\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoshuihao\",\"isNameField\":false,\"fieldLabel\":\"发票税号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shuizhong\",\"isNameField\":false,\"fieldLabel\":\"税种\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuyinhang\",\"isNameField\":false,\"fieldLabel\":\"开户银行\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangzhanghao\",\"isNameField\":false,\"fieldLabel\":\"银行账号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming\",\"isNameField\":false,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForSelf": null,
+  "nameFieldName": "gongyingshangmingcheng",
+  "BATCH_UPDATE": {
+    "applyType": "BATCH_UPDATE",
+    "configName": null,
+    "entityCode": 1021,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-446044cb2d2646ac8c41115b94c30c69",
+    "shareTo": "ALL",
+    "config": "[{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"caigoufuzeren.mobilePhone\",\"isNameField\":false,\"fieldLabel\":\"采购负责人.手机号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+  },
+  "idFieldName": "wMSgongyingshangxinxiId"
 }

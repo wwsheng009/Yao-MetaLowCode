@@ -1,24 +1,26 @@
 {
-    "advFilter": null,
-    "idFieldName": "jixiaokaoheId",
-    "FILTER": [],
-    "nameFieldName": "kaohezhuti",
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kaohezhuti\",\"isNameField\":true,\"fieldLabel\":\"考核主题\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"nianfen\",\"isNameField\":false,\"fieldLabel\":\"年份\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaohekaishishijian\",\"isNameField\":false,\"fieldLabel\":\"考核开始时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"kaohejieshushijian\",\"isNameField\":false,\"fieldLabel\":\"考核结束时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
-            "applyType": "LIST",
-            "entityCode": 1154
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"kaohezhuti\",\"isNameField\":true,\"fieldLabel\":\"考核主题\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"nianfen\",\"isNameField\":false,\"fieldLabel\":\"年份\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaohekaishishijian\",\"isNameField\":false,\"fieldLabel\":\"考核开始时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"kaohejieshushijian\",\"isNameField\":false,\"fieldLabel\":\"考核结束时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
-            "applyType": "LIST",
-            "entityCode": 1154
-        }
+  "nameFieldName": "kaohezhuti",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "考核主题",
+  "chosenListType": null,
+  "idFieldName": "jixiaokaoheId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1154,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kaohezhuti\",\"isNameField\":true,\"fieldLabel\":\"考核主题\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"nianfen\",\"isNameField\":false,\"fieldLabel\":\"年份\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaohekaishishijian\",\"isNameField\":false,\"fieldLabel\":\"考核开始时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"kaohejieshushijian\",\"isNameField\":false,\"fieldLabel\":\"考核结束时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
     },
-    "titleWidthForAll": null,
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "考核主题"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1154,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"kaohezhuti\",\"isNameField\":true,\"fieldLabel\":\"考核主题\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"nianfen\",\"isNameField\":false,\"fieldLabel\":\"年份\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaohekaishishijian\",\"isNameField\":false,\"fieldLabel\":\"考核开始时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"kaohejieshushijian\",\"isNameField\":false,\"fieldLabel\":\"考核结束时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  },
+  "titleWidthForAll": null
 }

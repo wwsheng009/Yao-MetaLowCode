@@ -1,0 +1,26 @@
+{
+  "idFieldName": "piaojuxinxiId",
+  "nameFieldName": "piaojuxinxiId",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": "mdFeiyongbaoxiaodanId",
+  "FILTER": [],
+  "COM_TREE_GROUP": [],
+  "LIST": {
+    "SELF": {
+      "entityCode": 1250,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdFeiyongbaoxiaodanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Feiyongbaoxiaodan\"},{\"isUpdatable\":true,\"fieldName\":\"kuaijikemu\",\"isNameField\":false,\"fieldLabel\":\"会计科目\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaohaoma\",\"isNameField\":false,\"fieldLabel\":\"发票号码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额/元\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"开票日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST"
+    },
+    "ALL": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdFeiyongbaoxiaodanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Feiyongbaoxiaodan\"},{\"isUpdatable\":true,\"fieldName\":\"kuaijikemu\",\"isNameField\":false,\"fieldLabel\":\"会计科目\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"发票类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaohaoma\",\"isNameField\":false,\"fieldLabel\":\"发票号码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaojine\",\"isNameField\":false,\"fieldLabel\":\"发票金额/元\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"开票日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST",
+      "entityCode": 1250,
+      "shareTo": "ALL"
+    }
+  },
+  "titleWidthForAll": null
+}

@@ -1,27 +1,29 @@
 {
-    "LIST": {
-        "ALL": {
-            "configName": null,
-            "entityCode": 1110,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-aa51329e410b462ca768320a0d1cf73f",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
-            "applyType": "LIST"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1110,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "titleWidthForSelf": null,
+  "idFieldName": "gangweijichubiaoId",
+  "LIST": {
+    "ALL": {
+      "layoutConfigId": "0000015-aa51329e410b462ca768320a0d1cf73f",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bumen\",\"isNameField\":false,\"fieldLabel\":\"部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1110,
+      "createdBy": "0000021-00000000000000000000000000000001"
     },
-    "nameFieldName": "gangwei",
-    "quickFilterLabel": "岗位",
-    "idFieldName": "gangweijichubiaoId",
-    "advFilter": null,
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "chosenListType": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1110,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"gangwei\",\"isNameField\":true,\"fieldLabel\":\"岗位\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "岗位",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "nameFieldName": "gangwei"
 }

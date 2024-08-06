@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "",
-    "titleWidthForAll": null,
-    "titleWidthForSelf": null,
-    "nameFieldName": "wMSchukuchanpinId",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "wMSchukuchanpinId",
-    "LIST": {
-        "ALL": {
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSqitachukudanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSqitachukudan\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangwei\",\"isNameField\":false,\"fieldLabel\":\"出库仓位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"}]",
-            "applyType": "LIST",
-            "entityCode": 1126,
-            "shareTo": "ALL"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1126,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSqitachukudanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSqitachukudan\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangwei\",\"isNameField\":false,\"fieldLabel\":\"出库仓位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"}]"
-        }
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "wMSchukuchanpinId",
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "wMSchukuchanpinId",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "mainDetailField": "mdWMSqitachukudanId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1126,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSqitachukudanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSqitachukudan\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangwei\",\"isNameField\":false,\"fieldLabel\":\"出库仓位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"}]"
     },
-    "FILTER": []
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1126,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSqitachukudanId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSqitachukudan\"},{\"isUpdatable\":true,\"fieldName\":\"bencirukushuliang\",\"isNameField\":false,\"fieldLabel\":\"本次出库数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSchanpinxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangwei\",\"isNameField\":false,\"fieldLabel\":\"出库仓位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangweixinxi\"}]"
+    }
+  }
 }

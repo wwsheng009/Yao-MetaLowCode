@@ -1,24 +1,48 @@
 {
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1166,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianlianxiren\",\"isNameField\":false,\"fieldLabel\":\"关联联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMlianxiren\"},{\"isUpdatable\":true,\"fieldName\":\"shangjimingcheng\",\"isNameField\":true,\"fieldLabel\":\"商机名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shangjibianhao\",\"isNameField\":false,\"fieldLabel\":\"商机编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoujieduan\",\"isNameField\":false,\"fieldLabel\":\"销售阶段\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yuceshangjijineyuan\",\"isNameField\":false,\"fieldLabel\":\"预测商机金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujichengjiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"预计成交日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1166,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianlianxiren\",\"isNameField\":false,\"fieldLabel\":\"关联联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMlianxiren\"},{\"isUpdatable\":true,\"fieldName\":\"shangjimingcheng\",\"isNameField\":true,\"fieldLabel\":\"商机名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shangjibianhao\",\"isNameField\":false,\"fieldLabel\":\"商机编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoujieduan\",\"isNameField\":false,\"fieldLabel\":\"销售阶段\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yuceshangjijineyuan\",\"isNameField\":false,\"fieldLabel\":\"预测商机金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujichengjiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"预计成交日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        }
+  "LIST": {
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianlianxiren\",\"isNameField\":false,\"fieldLabel\":\"关联联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMlianxiren\"},{\"isUpdatable\":true,\"fieldName\":\"shangjimingcheng\",\"isNameField\":true,\"fieldLabel\":\"商机名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shangjibianhao\",\"isNameField\":false,\"fieldLabel\":\"商机编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoujieduan\",\"isNameField\":false,\"fieldLabel\":\"销售阶段\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"yuceshangjijineyuan\",\"isNameField\":false,\"fieldLabel\":\"预测商机金额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujichengjiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"预计成交日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST",
+      "entityCode": 1166,
+      "shareTo": "SELF"
     },
-    "nameFieldName": "shangjimingcheng",
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "idFieldName": "cRMshangjiId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "quickFilterLabel": "商机名称"
+    "ALL": {
+      "configName": null,
+      "entityCode": 1166,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-af089f68260c47859a8fac018e08295a",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianlianxiren\",\"isNameField\":false,\"fieldLabel\":\"关联联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMlianxiren\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"shangjimingcheng\",\"isNameField\":true,\"fieldLabel\":\"商机名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"shangjibianhao\",\"isNameField\":false,\"fieldLabel\":\"商机编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"xiaoshoujieduan\",\"isNameField\":false,\"fieldLabel\":\"销售阶段\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"guishubumen\",\"isNameField\":false,\"fieldLabel\":\"归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\",\"columnSort\":\"\"},{\"columnWidth\":0,\"columnSort\":\"\",\"columnAliasName\":\"\",\"fieldType\":\"Money\",\"dataStatistics\":true,\"statisticType\":\"sum\",\"statisticName\":\"合计\",\"isUpdatable\":true,\"fieldName\":\"yuceshangjijineyuan\",\"isNameField\":false,\"fieldLabel\":\"预测商机金额/元\",\"isNullable\":true,\"isCreatable\":true,\"referenceName\":\"CRMgonghaichi\",\"columnEditInx\":7},{\"isUpdatable\":true,\"fieldName\":\"yujichengjiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"预计成交日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"yingl\",\"isNameField\":false,\"fieldLabel\":\"赢率\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Percent\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "SEARCH": {
+    "config": "[{\"name\":\"shangjimingcheng\",\"label\":\"商机名称\",\"type\":\"Text\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false},{\"name\":\"shangjibianhao\",\"label\":\"商机编号\",\"type\":\"Text\",\"isSelected\":true,\"isEdit\":true,\"isRequired\":false}]",
+    "applyType": "SEARCH",
+    "configName": null,
+    "entityCode": 1166,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-b7484dcd450c4b2281692a79e4e9cbbc",
+    "shareTo": "ALL"
+  },
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "cRMshangjiId",
+  "titleWidthForAll": null,
+  "FILTER": [
+    {
+      "applyType": "FILTER",
+      "configName": "1",
+      "entityCode": 1166,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-3b9e906af6a94478a4aeb4b179d8a130",
+      "shareTo": "SELF",
+      "config": "{\"equation\":\"OR\",\"items\":[{\"fieldName\":\"createdBy\",\"op\":\"LK\",\"opCom\":\"userSelect\",\"value\":\"0000021-00000000000000000000000000000001\",\"value2\":\"\",\"isError\":false,\"referTo\":\"User\",\"type\":\"Reference\",\"label\":\"创建用户\"},{\"fieldName\":\"guanliankehu\",\"op\":\"NL\",\"value\":\"\",\"value2\":\"\",\"isError\":true,\"referTo\":\"CRMgonghaichi\",\"type\":\"Reference\",\"label\":\"关联客户\"}]}"
+    }
+  ],
+  "nameFieldName": "shangjimingcheng",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "商机名称/商机编号"
 }

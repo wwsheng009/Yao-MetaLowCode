@@ -1,0 +1,29 @@
+{
+  "nameFieldName": "bangongyongpinbianhao",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "办公用品编号",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "FILTER": [],
+  "idFieldName": "bangongyongpinlingyongshenqingId",
+  "LIST": {
+    "ALL": {
+      "layoutConfigId": "0000015-ba400fbb69d140fb8a382211c1b1c2b5",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinbianhao\",\"isNameField\":true,\"fieldLabel\":\"办公用品编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinleixing\",\"isNameField\":false,\"fieldLabel\":\"办公用品类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jieyongxingshi\",\"isNameField\":false,\"fieldLabel\":\"借用形式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isReserved\":true,\"isUnique\":false,\"optionData\":[{\"value\":0,\"label\":\"未提交\",\"displayOrder\":1},{\"value\":1,\"label\":\"审核中\",\"displayOrder\":2},{\"value\":2,\"label\":\"已驳回\",\"displayOrder\":3},{\"value\":3,\"label\":\"已完成\",\"displayOrder\":4},{\"value\":4,\"label\":\"已撤销\",\"displayOrder\":5}],\"isCreatable\":false,\"fieldType\":\"Status\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1256,
+      "createdBy": "0000021-00000000000000000000000000000001"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1256,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzebangongyongpin\",\"isNameField\":false,\"fieldLabel\":\"选择办公用品\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Bangongyongpin\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinbianhao\",\"isNameField\":true,\"fieldLabel\":\"办公用品编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"bangongyongpinleixing\",\"isNameField\":false,\"fieldLabel\":\"办公用品类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"guigexinghao\",\"isNameField\":false,\"fieldLabel\":\"规格型号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"danwei\",\"isNameField\":false,\"fieldLabel\":\"单位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jieyongxingshi\",\"isNameField\":false,\"fieldLabel\":\"借用形式\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "mainDetailField": null
+}

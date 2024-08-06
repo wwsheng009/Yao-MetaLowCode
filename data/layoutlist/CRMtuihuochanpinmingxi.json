@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "nameFieldName": "cRMtuihuochanpinmingxiId",
-    "quickFilterLabel": "",
-    "idFieldName": "cRMtuihuochanpinmingxiId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1195,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMtuihuoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMtuihuoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoxiaojiuan\",\"isNameField\":false,\"fieldLabel\":\"退货小计/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1195,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMtuihuoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMtuihuoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"退货数量\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoxiaojiuan\",\"isNameField\":false,\"fieldLabel\":\"退货小计/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
-        }
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1195,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMtuihuoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMtuihuoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"退货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoxiaojiuan\",\"isNameField\":false,\"fieldLabel\":\"退货小计/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
     },
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "advFilter": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1195,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdCRMtuihuoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMtuihuoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzechanpin\",\"isNameField\":false,\"fieldLabel\":\"选择产品\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMchanpinmingxi\"},{\"isUpdatable\":true,\"fieldName\":\"huanhuoshuliang\",\"isNameField\":false,\"fieldLabel\":\"退货数量\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"tuihuoxiaojiuan\",\"isNameField\":false,\"fieldLabel\":\"退货小计/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+    }
+  },
+  "mainDetailField": "mdCRMtuihuoshenqingId",
+  "idFieldName": "cRMtuihuochanpinmingxiId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "cRMtuihuochanpinmingxiId",
+  "quickFilterLabel": "",
+  "advFilter": null
 }

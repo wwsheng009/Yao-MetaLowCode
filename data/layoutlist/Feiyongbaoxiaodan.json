@@ -1,0 +1,29 @@
+{
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1249,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-45a6a0b8869649ed86156e284b537a5a",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"baoxiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报销类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"piaojujinehuizong\",\"isNameField\":false,\"fieldLabel\":\"票据金额汇总/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isReserved\":true,\"isUnique\":false,\"optionData\":[{\"value\":0,\"label\":\"未提交\",\"displayOrder\":1},{\"value\":1,\"label\":\"审核中\",\"displayOrder\":2},{\"value\":2,\"label\":\"已驳回\",\"displayOrder\":3},{\"value\":3,\"label\":\"已完成\",\"displayOrder\":4},{\"value\":4,\"label\":\"已撤销\",\"displayOrder\":5}],\"isCreatable\":false,\"fieldType\":\"Status\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1249,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"baoxiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报销类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"piaojujinehuizong\",\"isNameField\":false,\"fieldLabel\":\"票据金额汇总/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "mainDetailField": null,
+  "idFieldName": "feiyongbaoxiaodanId",
+  "nameFieldName": "feiyongbaoxiaodanId",
+  "titleWidthForSelf": null
+}

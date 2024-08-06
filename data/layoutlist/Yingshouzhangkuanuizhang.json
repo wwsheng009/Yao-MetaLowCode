@@ -1,24 +1,29 @@
 {
-    "titleWidthForAll": null,
-    "quickFilterLabel": "应收对账单编号",
-    "advFilter": null,
-    "idFieldName": "yingshouzhangkuanuizhangId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1066,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应收对账单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1066,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应收对账单编号\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "nameFieldName": "yingshouduizhangdanbianhao",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应收对账单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujinezonge\",\"isNameField\":false,\"fieldLabel\":\"应收金额总额(含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yingshoujinezon\",\"isNameField\":false,\"fieldLabel\":\"应收金额总额(不含税)/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujishoukuanfangshi\",\"isNameField\":false,\"fieldLabel\":\"预计收款方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"optionData\":[{\"value\":1,\"label\":\"银行转账\",\"displayOrder\":1},{\"value\":2,\"label\":\"现金支付\",\"displayOrder\":2},{\"value\":3,\"label\":\"支付宝支付\",\"displayOrder\":3},{\"value\":4,\"label\":\"微信支付\",\"displayOrder\":4},{\"value\":5,\"label\":\"银行支票\",\"displayOrder\":5}],\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"yujishoukuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计收款日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yinhangzhanghu\",\"isNameField\":false,\"fieldLabel\":\"银行账户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaihuyinhang\",\"isNameField\":false,\"fieldLabel\":\"开户银行\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangqueren\",\"isNameField\":false,\"fieldLabel\":\"应收对账确认\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Boolean\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangshijian\",\"isNameField\":false,\"fieldLabel\":\"应收对账时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangrenyuan\",\"isNameField\":false,\"fieldLabel\":\"应收对账人员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1066,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-ea829a3e6671427b9598c642f52c3294"
     },
-    "FILTER": [],
-    "nameFieldName": "yingshouduizhangdanbianhao",
-    "titleWidthForSelf": null,
-    "chosenListType": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1066,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangkaishiriqi\",\"isNameField\":false,\"fieldLabel\":\"对账开始日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"duizhangjieshuriqi\",\"isNameField\":false,\"fieldLabel\":\"对账结束日期\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"yingshouduizhangdanbianhao\",\"isNameField\":true,\"fieldLabel\":\"应收对账单编号\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "应收对账单编号",
+  "chosenListType": null,
+  "idFieldName": "yingshouzhangkuanuizhangId"
 }

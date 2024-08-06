@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "qitachukudanbianhao",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "其他出库单编号",
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1123,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitachukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodizhi\",\"isNameField\":false,\"fieldLabel\":\"收货地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"出库产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1123,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"chukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitachukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodizhi\",\"isNameField\":false,\"fieldLabel\":\"收货地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"出库产品成本总额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
-        }
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "qitachukudanbianhao",
+  "quickFilterLabel": "其他出库单编号",
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "wMSqitachukudanId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1123,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"chukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitachukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodizhi\",\"isNameField\":false,\"fieldLabel\":\"收货地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"出库产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
     },
-    "FILTER": [],
-    "advFilter": null,
-    "idFieldName": "wMSqitachukudanId",
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1123,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"chukuleixing\",\"isNameField\":false,\"fieldLabel\":\"出库类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukucangku\",\"isNameField\":false,\"fieldLabel\":\"出库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cangkuguanli\"},{\"isUpdatable\":true,\"fieldName\":\"qitachukudanbianhao\",\"isNameField\":true,\"fieldLabel\":\"其他出库单编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shouhuodizhi\",\"isNameField\":false,\"fieldLabel\":\"收货地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"出库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"chukuchanpinchengbenzon\",\"isNameField\":false,\"fieldLabel\":\"出库产品成本总额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"chukuqueren\",\"isNameField\":false,\"fieldLabel\":\"出库确认\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"chukushijian\",\"isNameField\":false,\"fieldLabel\":\"出库时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"chukuyuan\",\"isNameField\":false,\"fieldLabel\":\"出库员\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
+    }
+  }
 }

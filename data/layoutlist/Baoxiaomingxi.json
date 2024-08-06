@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "idFieldName": "baoxiaomingxiId",
-    "nameFieldName": "baoxiaomingxiId",
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1224,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBaoxiaoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Baoxiaoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaojine\",\"isNameField\":false,\"fieldLabel\":\"报销金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报销类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fashengriqi\",\"isNameField\":false,\"fieldLabel\":\"发生日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1224,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBaoxiaoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Baoxiaoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaojine\",\"isNameField\":false,\"fieldLabel\":\"报销金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报销类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fashengriqi\",\"isNameField\":false,\"fieldLabel\":\"发生日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        }
+  "mainDetailField": "mdBaoxiaoshenqingId",
+  "idFieldName": "baoxiaomingxiId",
+  "FILTER": [],
+  "nameFieldName": "baoxiaomingxiId",
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "titleWidthForSelf": null,
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBaoxiaoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Baoxiaoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaojine\",\"isNameField\":false,\"fieldLabel\":\"报销金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报销类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fashengriqi\",\"isNameField\":false,\"fieldLabel\":\"发生日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST",
+      "entityCode": 1224,
+      "shareTo": "ALL"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1224,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdBaoxiaoshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Baoxiaoshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaojine\",\"isNameField\":false,\"fieldLabel\":\"报销金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报销类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"fashengriqi\",\"isNameField\":false,\"fieldLabel\":\"发生日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
     }
+  },
+  "titleWidthForAll": null
 }

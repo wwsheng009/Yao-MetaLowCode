@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "idFieldName": "jiabanmingxiId",
-    "nameFieldName": "jiabanmingxiId",
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1150,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJiabanshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jiabanshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"jiabankaishishijian\",\"isNameField\":false,\"fieldLabel\":\"加班开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"加班结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanshichang\",\"isNameField\":false,\"fieldLabel\":\"加班时长（h）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"jiabantianshu\",\"isNameField\":false,\"fieldLabel\":\"加班天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        },
-        "SELF": {
-            "entityCode": 1150,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJiabanshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jiabanshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"jiabankaishishijian\",\"isNameField\":false,\"fieldLabel\":\"加班开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"加班结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanshichang\",\"isNameField\":false,\"fieldLabel\":\"加班时长（h）\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"jiabantianshu\",\"isNameField\":false,\"fieldLabel\":\"加班天数\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST"
-        }
+  "nameFieldName": "jiabanmingxiId",
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "jiabanmingxiId",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJiabanshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jiabanshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"jiabankaishishijian\",\"isNameField\":false,\"fieldLabel\":\"加班开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"加班结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanshichang\",\"isNameField\":false,\"fieldLabel\":\"加班时长（h）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"jiabantianshu\",\"isNameField\":false,\"fieldLabel\":\"加班天数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+      "applyType": "LIST",
+      "entityCode": 1150,
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1150,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdJiabanshenqingId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Jiabanshenqing\"},{\"isUpdatable\":true,\"fieldName\":\"jiabankaishishijian\",\"isNameField\":false,\"fieldLabel\":\"加班开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanjieshushijian\",\"isNameField\":false,\"fieldLabel\":\"加班结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jiabanshichang\",\"isNameField\":false,\"fieldLabel\":\"加班时长（h）\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"jiabantianshu\",\"isNameField\":false,\"fieldLabel\":\"加班天数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": "mdJiabanshenqingId"
 }

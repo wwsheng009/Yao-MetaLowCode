@@ -1,24 +1,26 @@
 {
-    "nameFieldName": "routerMenuId",
-    "titleWidthForSelf": null,
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "routerMenuId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 10,
-            "shareTo": "ALL",
-            "config": "[]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 10,
-            "shareTo": "SELF",
-            "config": "[]"
-        }
+  "quickFilterLabel": "",
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "nameFieldName": "routerMenuId",
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "idFieldName": "routerMenuId",
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[]",
+      "applyType": "LIST",
+      "entityCode": 10
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 10,
+      "shareTo": "SELF",
+      "config": "[]"
     }
+  },
+  "titleWidthForAll": null,
+  "FILTER": []
 }

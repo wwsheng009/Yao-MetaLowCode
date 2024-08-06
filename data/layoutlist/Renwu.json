@@ -1,27 +1,29 @@
 {
-    "idFieldName": "renwuId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1197,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-c100e52e9d49451eadedac00544b2aeb",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"renwubiaoti\",\"isNameField\":true,\"fieldLabel\":\"任务标题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":false,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiezhishijian\",\"isNameField\":false,\"fieldLabel\":\"截止时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"renwumiaoshu\",\"isNameField\":false,\"fieldLabel\":\"任务描述\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedOn\",\"isNameField\":false,\"fieldLabel\":\"最近修改时间\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"modifiedBy\",\"isNameField\":false,\"fieldLabel\":\"修改用户\",\"isNullable\":true,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1197,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"renwubiaoti\",\"isNameField\":true,\"fieldLabel\":\"任务标题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":false,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiezhishijian\",\"isNameField\":false,\"fieldLabel\":\"截止时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        }
+  "nameFieldName": "renwubiaoti",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "任务标题",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "idFieldName": "renwuId",
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"renwubiaoti\",\"isNameField\":true,\"fieldLabel\":\"任务标题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":false,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\",\"columnSort\":\"\"},{\"columnWidth\":300,\"columnSort\":\"\",\"columnAliasName\":\"\",\"fontSize\":13,\"fontColor\":\"#606266\",\"fontWeight\":400,\"fieldType\":\"TextArea\",\"isUpdatable\":true,\"fieldName\":\"renwumiaoshu\",\"isNameField\":false,\"fieldLabel\":\"任务描述\",\"isNullable\":true,\"isCreatable\":true,\"columnEditInx\":3},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"jiezhishijian\",\"isNameField\":false,\"fieldLabel\":\"截止时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\",\"columnSort\":\"\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\",\"columnSort\":\"\"},{\"isUpdatable\":false,\"fieldName\":\"ownerUser\",\"isNameField\":false,\"fieldLabel\":\"所属用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\",\"columnSort\":\"\"},{\"isUpdatable\":false,\"fieldName\":\"ownerDepartment\",\"isNameField\":false,\"fieldLabel\":\"所属部门\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"Department\",\"columnSort\":\"\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1197,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-c100e52e9d49451eadedac00544b2aeb"
     },
-    "nameFieldName": "renwubiaoti",
-    "quickFilterLabel": "任务标题",
-    "chosenListType": null
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1197,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"renwubiaoti\",\"isNameField\":true,\"fieldLabel\":\"任务标题\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzeguanlianxiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择关联项目\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xiangmumingcheng\",\"isNameField\":false,\"fieldLabel\":\"项目名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"fuzeren\",\"isNameField\":false,\"fieldLabel\":\"负责人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jiezhishijian\",\"isNameField\":false,\"fieldLabel\":\"截止时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  }
 }

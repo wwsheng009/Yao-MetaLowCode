@@ -1,27 +1,29 @@
 {
-    "nameFieldName": "richengzhuti",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "日程主题",
-    "advFilter": null,
-    "idFieldName": "richengId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "chosenListType": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1209,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-3ed1092bdf86409ca0fcb987c6cedb78",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"richengzhuti\",\"isNameField\":true,\"fieldLabel\":\"日程主题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"richengleixing\",\"isNameField\":false,\"fieldLabel\":\"日程类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shichang\",\"isNameField\":false,\"fieldLabel\":\"时长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"didian\",\"isNameField\":false,\"fieldLabel\":\"地点\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"richengmiaoshu\",\"isNameField\":false,\"fieldLabel\":\"日程描述\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1209,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"richengzhuti\",\"isNameField\":true,\"fieldLabel\":\"日程主题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"richengleixing\",\"isNameField\":false,\"fieldLabel\":\"日程类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shichang\",\"isNameField\":false,\"fieldLabel\":\"时长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]"
-        }
+  "nameFieldName": "richengzhuti",
+  "quickFilterLabel": "日程主题",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "idFieldName": "richengId",
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "configName": null,
+      "entityCode": 1209,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-3ed1092bdf86409ca0fcb987c6cedb78",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"richengzhuti\",\"isNameField\":true,\"fieldLabel\":\"日程主题\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"richengleixing\",\"isNameField\":false,\"fieldLabel\":\"日程类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shichang\",\"isNameField\":false,\"fieldLabel\":\"时长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"didian\",\"isNameField\":false,\"fieldLabel\":\"地点\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"richengmiaoshu\",\"isNameField\":false,\"fieldLabel\":\"日程描述\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+      "applyType": "LIST"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1209,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"richengzhuti\",\"isNameField\":true,\"fieldLabel\":\"日程主题\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"richengleixing\",\"isNameField\":false,\"fieldLabel\":\"日程类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"shichang\",\"isNameField\":false,\"fieldLabel\":\"时长\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"}]"
     }
+  },
+  "titleWidthForAll": null
 }

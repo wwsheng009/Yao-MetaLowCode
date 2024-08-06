@@ -1,24 +1,26 @@
 {
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "FILTER": [],
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "idFieldName": "recycleBinId",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 46,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"所属实体\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"相关实体名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"deletedBy\",\"isNameField\":false,\"fieldLabel\":\"删除人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"deletedOn\",\"isNameField\":false,\"fieldLabel\":\"删除时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"deletedWith\",\"isNameField\":false,\"fieldLabel\":\"删除渠道\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"restoreBy\",\"isNameField\":false,\"fieldLabel\":\"恢复人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"restoreOn\",\"isNameField\":false,\"fieldLabel\":\"恢复时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 46,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"所属实体\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"相关实体名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"deletedBy\",\"isNameField\":false,\"fieldLabel\":\"删除人\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"deletedOn\",\"isNameField\":false,\"fieldLabel\":\"删除时间\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"deletedWith\",\"isNameField\":false,\"fieldLabel\":\"删除渠道\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"restoreBy\",\"isNameField\":false,\"fieldLabel\":\"恢复人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"restoreOn\",\"isNameField\":false,\"fieldLabel\":\"恢复时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
-        }
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "nameFieldName": "recycleBinId",
+  "quickFilterLabel": "",
+  "chosenListType": null,
+  "advFilter": null,
+  "idFieldName": "recycleBinId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 46,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"所属实体\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"相关实体名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"deletedBy\",\"isNameField\":false,\"fieldLabel\":\"删除人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"deletedOn\",\"isNameField\":false,\"fieldLabel\":\"删除时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"deletedWith\",\"isNameField\":false,\"fieldLabel\":\"删除渠道\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"restoreBy\",\"isNameField\":false,\"fieldLabel\":\"恢复人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"restoreOn\",\"isNameField\":false,\"fieldLabel\":\"恢复时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "recycleBinId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 46,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"所属实体\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":false,\"fieldName\":\"entityName\",\"isNameField\":false,\"fieldLabel\":\"相关实体名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"deletedBy\",\"isNameField\":false,\"fieldLabel\":\"删除人\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"deletedOn\",\"isNameField\":false,\"fieldLabel\":\"删除时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"deletedWith\",\"isNameField\":false,\"fieldLabel\":\"删除渠道\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":false,\"fieldName\":\"restoreBy\",\"isNameField\":false,\"fieldLabel\":\"恢复人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"restoreOn\",\"isNameField\":false,\"fieldLabel\":\"恢复时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"}]"
+    }
+  }
 }

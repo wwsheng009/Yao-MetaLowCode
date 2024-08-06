@@ -1,0 +1,29 @@
+{
+  "advFilter": null,
+  "mainDetailField": null,
+  "COM_TREE_GROUP": [],
+  "nameFieldName": "huiyizhuti",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "会议主题",
+  "chosenListType": null,
+  "idFieldName": "huiyishiyuyueId",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"huiyizhuti\",\"isNameField\":true,\"fieldLabel\":\"会议主题\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yudinghuiyishi\",\"isNameField\":false,\"fieldLabel\":\"预定会议室\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Huiyishiguanli\"},{\"isUpdatable\":true,\"fieldName\":\"huiyididian\",\"isNameField\":false,\"fieldLabel\":\"会议室地点\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishibianhao\",\"isNameField\":false,\"fieldLabel\":\"会议室编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zuidarongnarenshu\",\"isNameField\":false,\"fieldLabel\":\"最大容纳人数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"huiyikaishishijian\",\"isNameField\":false,\"fieldLabel\":\"会议开始时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"huiyijieshushijian\",\"isNameField\":false,\"fieldLabel\":\"会议结束时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"approvalStatus\",\"isNameField\":false,\"fieldLabel\":\"审批状态\",\"isNullable\":true,\"isReserved\":true,\"isUnique\":false,\"optionData\":[{\"value\":0,\"label\":\"未提交\",\"displayOrder\":1},{\"value\":1,\"label\":\"审核中\",\"displayOrder\":2},{\"value\":2,\"label\":\"已驳回\",\"displayOrder\":3},{\"value\":3,\"label\":\"已完成\",\"displayOrder\":4},{\"value\":4,\"label\":\"已撤销\",\"displayOrder\":5}],\"isCreatable\":false,\"fieldType\":\"Status\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1265,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-9caf6fb8c0ce489c8625d7747806e54b",
+      "shareTo": "ALL"
+    },
+    "SELF": {
+      "entityCode": 1265,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"huiyizhuti\",\"isNameField\":true,\"fieldLabel\":\"会议主题\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"yudinghuiyishi\",\"isNameField\":false,\"fieldLabel\":\"预定会议室\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Huiyishiguanli\"},{\"isUpdatable\":true,\"fieldName\":\"huiyididian\",\"isNameField\":false,\"fieldLabel\":\"会议室地点\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishibianhao\",\"isNameField\":false,\"fieldLabel\":\"会议室编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"zuidarongnarenshu\",\"isNameField\":false,\"fieldLabel\":\"最大容纳人数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"huiyikaishishijian\",\"isNameField\":false,\"fieldLabel\":\"会议开始时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"huiyijieshushijian\",\"isNameField\":false,\"fieldLabel\":\"会议结束时间\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"DateTime\"},{\"isUpdatable\":true,\"fieldName\":\"huiyishimingcheng\",\"isNameField\":false,\"fieldLabel\":\"会议室名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": []
+}

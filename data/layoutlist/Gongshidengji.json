@@ -1,24 +1,26 @@
 {
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "gongshidengjiId",
-    "nameFieldName": "liushuihao",
-    "quickFilterLabel": "流水号",
-    "LIST": {
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1202,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"liushuihao\",\"isNameField\":true,\"fieldLabel\":\"流水号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzexiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"选择任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Renwu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezirenwu\",\"isNameField\":false,\"fieldLabel\":\"选择子任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Zirenwu\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuoshichang\",\"isNameField\":false,\"fieldLabel\":\"工作时长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"gongshileibie\",\"isNameField\":false,\"fieldLabel\":\"工时类别\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1202,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"liushuihao\",\"isNameField\":true,\"fieldLabel\":\"流水号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzexiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择项目\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"选择任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Renwu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezirenwu\",\"isNameField\":false,\"fieldLabel\":\"选择子任务\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Zirenwu\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuoshichang\",\"isNameField\":false,\"fieldLabel\":\"工作时长\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"gongshileibie\",\"isNameField\":false,\"fieldLabel\":\"工时类别\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        }
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1202,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"liushuihao\",\"isNameField\":true,\"fieldLabel\":\"流水号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzexiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择项目\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"选择任务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Renwu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezirenwu\",\"isNameField\":false,\"fieldLabel\":\"选择子任务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Zirenwu\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuoshichang\",\"isNameField\":false,\"fieldLabel\":\"工作时长\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"gongshileibie\",\"isNameField\":false,\"fieldLabel\":\"工时类别\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     },
-    "titleWidthForAll": null
+    "SELF": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"liushuihao\",\"isNameField\":true,\"fieldLabel\":\"流水号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzexiangmu\",\"isNameField\":false,\"fieldLabel\":\"选择项目\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Xiangmu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzerenwu\",\"isNameField\":false,\"fieldLabel\":\"选择任务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Renwu\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzezirenwu\",\"isNameField\":false,\"fieldLabel\":\"选择子任务\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Zirenwu\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"gongzuoshichang\",\"isNameField\":false,\"fieldLabel\":\"工作时长\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"gongshileibie\",\"isNameField\":false,\"fieldLabel\":\"工时类别\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"dengjiren\",\"isNameField\":false,\"fieldLabel\":\"登记人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
+      "applyType": "LIST",
+      "entityCode": 1202,
+      "shareTo": "SELF"
+    }
+  },
+  "quickFilterLabel": "流水号",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "gongshidengjiId",
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "liushuihao",
+  "titleWidthForSelf": null,
+  "advFilter": null
 }

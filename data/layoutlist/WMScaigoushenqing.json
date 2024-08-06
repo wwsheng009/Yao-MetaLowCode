@@ -1,24 +1,29 @@
 {
-    "nameFieldName": "caigoushenqingbianhao",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "采购申请编号",
-    "idFieldName": "wMScaigoushenqingId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1045,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoushenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购申请编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingrenguishubumen\",\"isNameField\":false,\"fieldLabel\":\"申请人归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"需求来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"daohuodizhi\",\"isNameField\":false,\"fieldLabel\":\"到货地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1045,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoushenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购申请编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingrenguishubumen\",\"isNameField\":false,\"fieldLabel\":\"申请人归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"需求来源\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"daohuodizhi\",\"isNameField\":false,\"fieldLabel\":\"到货地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"}]"
-        }
+  "chosenListType": null,
+  "advFilter": null,
+  "titleWidthForAll": null,
+  "titleWidthForSelf": null,
+  "nameFieldName": "caigoushenqingbianhao",
+  "quickFilterLabel": "采购申请编号",
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "idFieldName": "wMScaigoushenqingId",
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoushenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购申请编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingrenguishubumen\",\"isNameField\":false,\"fieldLabel\":\"申请人归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"需求来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"daohuodizhi\",\"isNameField\":false,\"fieldLabel\":\"到货地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"xiangxidizhi\",\"isNameField\":false,\"fieldLabel\":\"详细地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"beizhu\",\"isNameField\":false,\"fieldLabel\":\"备注\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiujutimiaoshu\",\"isNameField\":false,\"fieldLabel\":\"需求具体描述\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1045,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-2763f5701c6f4b7fa0f1e1ea1e79fe7e"
     },
-    "chosenListType": null
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"caigoushenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"采购申请编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingren\",\"isNameField\":false,\"fieldLabel\":\"申请人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingrenguishubumen\",\"isNameField\":false,\"fieldLabel\":\"申请人归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"shenqingriqi\",\"isNameField\":false,\"fieldLabel\":\"申请日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jihuadaohuoriqi\",\"isNameField\":false,\"fieldLabel\":\"计划到货日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"xuqiulaiyuan\",\"isNameField\":false,\"fieldLabel\":\"需求来源\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"rukucangku\",\"isNameField\":false,\"fieldLabel\":\"入库仓库\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMScangkuxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"daohuodizhi\",\"isNameField\":false,\"fieldLabel\":\"到货地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"}]",
+      "applyType": "LIST",
+      "entityCode": 1045
+    }
+  },
+  "FILTER": []
 }

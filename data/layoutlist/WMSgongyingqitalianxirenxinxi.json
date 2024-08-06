@@ -1,24 +1,26 @@
 {
-    "titleWidthForAll": null,
-    "nameFieldName": "lianxirenxingming1",
-    "quickFilterLabel": "联系人姓名",
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1038,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSgongyingshangxinxiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming1\",\"isNameField\":true,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei1\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji1\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1038,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSgongyingshangxinxiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming1\",\"isNameField\":true,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei1\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji1\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "nameFieldName": "lianxirenxingming1",
+  "quickFilterLabel": "联系人姓名",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "idFieldName": "wMSgongyingqitalianxirenxinxiId",
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "mainDetailField": "mdWMSgongyingshangxinxiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1038,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSgongyingshangxinxiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming1\",\"isNameField\":true,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei1\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji1\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
     },
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "idFieldName": "wMSgongyingqitalianxirenxinxiId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1038,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdWMSgongyingshangxinxiId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"WMSgongyingshangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenxingming1\",\"isNameField\":true,\"fieldLabel\":\"联系人姓名\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenzhiwei1\",\"isNameField\":false,\"fieldLabel\":\"联系人职位\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxirenshouji1\",\"isNameField\":false,\"fieldLabel\":\"联系人手机\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
+    }
+  },
+  "titleWidthForAll": null
 }

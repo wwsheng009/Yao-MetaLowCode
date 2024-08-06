@@ -1,0 +1,29 @@
+{
+  "quickFilterLabel": "报表名称",
+  "chosenListType": null,
+  "idFieldName": "baobiaochakanId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "mainDetailField": null,
+  "LIST": {
+    "ALL": {
+      "configName": null,
+      "entityCode": 1244,
+      "createdBy": "0000021-00ec15ca45bc446f9fc36161281733d4",
+      "layoutConfigId": "0000015-dd8255b385ae4ee7a35c65361ba5d2ce",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"baobiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"报表名称\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baobiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报表类型\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"}]",
+      "applyType": "LIST"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1244,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"baobiaomingcheng\",\"isNameField\":true,\"fieldLabel\":\"报表名称\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"baobiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"报表类型\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  },
+  "nameFieldName": "baobiaomingcheng"
+}

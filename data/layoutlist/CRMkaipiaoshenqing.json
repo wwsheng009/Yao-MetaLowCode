@@ -1,24 +1,35 @@
 {
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "开票申请编号",
-    "chosenListType": null,
-    "advFilter": null,
-    "LIST": {
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhuikuandan\",\"isNameField\":false,\"fieldLabel\":\"关联回款单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhuikuandan\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoshenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"开票申请编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaojinuan\",\"isNameField\":false,\"fieldLabel\":\"开票金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"开票类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"开票日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaohaoma\",\"isNameField\":false,\"fieldLabel\":\"发票号码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"联系方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jisongdizhi\",\"isNameField\":false,\"fieldLabel\":\"寄送地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]",
-            "applyType": "LIST",
-            "entityCode": 1178
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1178,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhuikuandan\",\"isNameField\":false,\"fieldLabel\":\"关联回款单\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhuikuandan\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoshenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"开票申请编号\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaojinuan\",\"isNameField\":false,\"fieldLabel\":\"开票金额/元\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"开票类型\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"开票日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaohaoma\",\"isNameField\":false,\"fieldLabel\":\"发票号码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"联系方式\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jisongdizhi\",\"isNameField\":false,\"fieldLabel\":\"寄送地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
-        }
+  "FILTER": [],
+  "TAB": {
+    "configName": null,
+    "entityCode": 1178,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-f81822d1e37441c382015c333c3e1c71",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"跟进\",\"entityCode\":54,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"FollowUp\"},{\"entityLabel\":\"待办\",\"entityCode\":55,\"fieldName\":\"recordId\",\"isReferenced\":false,\"entityName\":\"TodoTask\"}]",
+    "applyType": "TAB"
+  },
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "nameFieldName": "kaipiaoshenqingbianhao",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "开票申请编号",
+  "chosenListType": null,
+  "advFilter": null,
+  "idFieldName": "cRMkaipiaoshenqingId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1178,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhuikuandan\",\"isNameField\":false,\"fieldLabel\":\"关联回款单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhuikuandan\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoshenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"开票申请编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaojinuan\",\"isNameField\":false,\"fieldLabel\":\"开票金额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"开票类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"开票日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaohaoma\",\"isNameField\":false,\"fieldLabel\":\"发票号码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"联系方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jisongdizhi\",\"isNameField\":false,\"fieldLabel\":\"寄送地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "kaipiaoshenqingbianhao",
-    "idFieldName": "cRMkaipiaoshenqingId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1178,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"guanliankehu\",\"isNameField\":false,\"fieldLabel\":\"关联客户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMgonghaichi\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhetongdingdan\",\"isNameField\":false,\"fieldLabel\":\"关联合同订单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhetongdingdan\"},{\"isUpdatable\":true,\"fieldName\":\"guanlianhuikuandan\",\"isNameField\":false,\"fieldLabel\":\"关联回款单\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"CRMhuikuandan\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoshenqingbianhao\",\"isNameField\":true,\"fieldLabel\":\"开票申请编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaojinuan\",\"isNameField\":false,\"fieldLabel\":\"开票金额/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoleixing\",\"isNameField\":false,\"fieldLabel\":\"开票类型\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaoriqi\",\"isNameField\":false,\"fieldLabel\":\"开票日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"fapiaohaoma\",\"isNameField\":false,\"fieldLabel\":\"发票号码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxiren\",\"isNameField\":false,\"fieldLabel\":\"联系人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"lianxifangshi\",\"isNameField\":false,\"fieldLabel\":\"联系方式\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"jisongdizhi\",\"isNameField\":false,\"fieldLabel\":\"寄送地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"kaipiaozhuangtai\",\"isNameField\":false,\"fieldLabel\":\"开票状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"}]"
+    }
+  }
 }

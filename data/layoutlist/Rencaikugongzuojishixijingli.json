@@ -1,24 +1,26 @@
 {
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1127,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdRencaikuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1127,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdRencaikuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"}]"
-        }
+  "idFieldName": "rencaikugongzuojishixijingliId",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdRencaikuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"}]",
+      "applyType": "LIST",
+      "entityCode": 1127,
+      "shareTo": "ALL"
     },
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "企业名称",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "rencaikugongzuojishixijingliId",
-    "nameFieldName": "qiyemingcheng"
+    "SELF": {
+      "entityCode": 1127,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdRencaikuId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Rencaiku\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "qiyemingcheng",
+  "quickFilterLabel": "企业名称",
+  "chosenListType": null,
+  "advFilter": null,
+  "titleWidthForSelf": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": "mdRencaikuId"
 }

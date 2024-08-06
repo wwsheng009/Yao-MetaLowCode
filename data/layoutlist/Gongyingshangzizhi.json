@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "资质/证书名称",
-    "idFieldName": "gongyingshangzizhiId",
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1026,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdGongyingshangguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"zizhizhengshumingcheng\",\"isNameField\":true,\"fieldLabel\":\"资质/证书名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1026,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdGongyingshangguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"zizhizhengshumingcheng\",\"isNameField\":true,\"fieldLabel\":\"资质/证书名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        }
+  "nameFieldName": "zizhizhengshumingcheng",
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "资质/证书名称",
+  "COM_TREE_GROUP": [],
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": "mdGongyingshangguanliId",
+  "idFieldName": "gongyingshangzizhiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "entityCode": 1026,
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdGongyingshangguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"zizhizhengshumingcheng\",\"isNameField\":true,\"fieldLabel\":\"资质/证书名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
     },
-    "titleWidthForAll": null,
-    "nameFieldName": "zizhizhengshumingcheng",
-    "chosenListType": null
+    "SELF": {
+      "config": "[{\"isUpdatable\":false,\"fieldName\":\"mdGongyingshangguanliId\",\"isNameField\":false,\"fieldLabel\":\"主从关联Id\",\"isNullable\":false,\"isReserved\":true,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Gongyingshangguanli\"},{\"isUpdatable\":true,\"fieldName\":\"zizhizhengshumingcheng\",\"isNameField\":true,\"fieldLabel\":\"资质/证书名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1026,
+      "shareTo": "SELF"
+    }
+  }
 }

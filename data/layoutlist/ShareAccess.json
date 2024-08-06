@@ -1,24 +1,26 @@
 {
-    "quickFilterLabel": "",
-    "chosenListType": null,
-    "advFilter": null,
-    "idFieldName": "shareAccessId",
-    "titleWidthForAll": null,
-    "FILTER": [],
-    "titleWidthForSelf": null,
-    "nameFieldName": "shareAccessId",
-    "LIST": {
-        "ALL": {
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
-            "applyType": "LIST",
-            "entityCode": 50
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 50,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
-        }
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null,
+  "quickFilterLabel": "",
+  "LIST": {
+    "ALL": {
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]",
+      "applyType": "LIST",
+      "entityCode": 50,
+      "shareTo": "ALL"
+    },
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 50,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"entityCode\",\"isNameField\":false,\"fieldLabel\":\"实体Code\",\"isNullable\":false,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"}]"
     }
+  },
+  "nameFieldName": "shareAccessId",
+  "COM_TREE_GROUP": [],
+  "idFieldName": "shareAccessId"
 }

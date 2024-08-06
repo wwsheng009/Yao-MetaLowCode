@@ -1,24 +1,47 @@
 {
-    "idFieldName": "wMScangkuxinxiId",
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1017,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"cangkumingcheng\",\"isNameField\":true,\"fieldLabel\":\"仓库名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkubianma\",\"isNameField\":false,\"fieldLabel\":\"仓库编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkudizhi\",\"isNameField\":false,\"fieldLabel\":\"仓库地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuronglianglifang\",\"isNameField\":false,\"fieldLabel\":\"仓库容量/立方\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuxingzhi\",\"isNameField\":false,\"fieldLabel\":\"仓库性质\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"仓库状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuguan\",\"isNameField\":false,\"fieldLabel\":\"仓库主管\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"lianxidianhua\",\"isNameField\":false,\"fieldLabel\":\"联系电话\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
-        },
-        "SELF": {
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"cangkumingcheng\",\"isNameField\":true,\"fieldLabel\":\"仓库名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkubianma\",\"isNameField\":false,\"fieldLabel\":\"仓库编码\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkudizhi\",\"isNameField\":false,\"fieldLabel\":\"仓库地址\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuronglianglifang\",\"isNameField\":false,\"fieldLabel\":\"仓库容量/立方\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuxingzhi\",\"isNameField\":false,\"fieldLabel\":\"仓库性质\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"仓库状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuguan\",\"isNameField\":false,\"fieldLabel\":\"仓库主管\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"lianxidianhua\",\"isNameField\":false,\"fieldLabel\":\"联系电话\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
-            "applyType": "LIST",
-            "entityCode": 1017
-        }
+  "quickFilterLabel": "仓库名称",
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "COM_TREE_GROUP": [],
+  "nameFieldName": "cangkumingcheng",
+  "idFieldName": "wMScangkuxinxiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1017,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-31644b7f71624f60a36d5d212552c2c4",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"cangkumingcheng\",\"isNameField\":true,\"fieldLabel\":\"仓库名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkubianma\",\"isNameField\":false,\"fieldLabel\":\"仓库编码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkudizhi\",\"isNameField\":false,\"fieldLabel\":\"仓库地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"xiangxidizhi\",\"isNameField\":false,\"fieldLabel\":\"详细地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"TextArea\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuronglianglifang\",\"isNameField\":false,\"fieldLabel\":\"仓库容量/立方\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuxingzhi\",\"isNameField\":false,\"fieldLabel\":\"仓库性质\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"仓库状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuguan\",\"isNameField\":false,\"fieldLabel\":\"仓库主管\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"lianxidianhua\",\"isNameField\":false,\"fieldLabel\":\"联系电话\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]"
     },
-    "FILTER": [],
-    "nameFieldName": "cangkumingcheng",
-    "titleWidthForSelf": null,
-    "quickFilterLabel": "仓库名称",
-    "advFilter": null,
-    "chosenListType": null,
-    "titleWidthForAll": null
+    "SELF": {
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"cangkumingcheng\",\"isNameField\":true,\"fieldLabel\":\"仓库名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkubianma\",\"isNameField\":false,\"fieldLabel\":\"仓库编码\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"cangkudizhi\",\"isNameField\":false,\"fieldLabel\":\"仓库地址\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"AreaSelect\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuronglianglifang\",\"isNameField\":false,\"fieldLabel\":\"仓库容量/立方\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Decimal\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuxingzhi\",\"isNameField\":false,\"fieldLabel\":\"仓库性质\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuangtai\",\"isNameField\":false,\"fieldLabel\":\"仓库状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"cangkuzhuguan\",\"isNameField\":false,\"fieldLabel\":\"仓库主管\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":true,\"fieldName\":\"kuguanguishubumen\",\"isNameField\":false,\"fieldLabel\":\"库管归属部门\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Department\"},{\"isUpdatable\":true,\"fieldName\":\"lianxidianhua\",\"isNameField\":false,\"fieldLabel\":\"联系电话\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST",
+      "entityCode": 1017
+    }
+  },
+  "titleWidthForSelf": null,
+  "TAB": {
+    "configName": null,
+    "entityCode": 1017,
+    "createdBy": "0000021-00000000000000000000000000000001",
+    "layoutConfigId": "0000015-3c283b7a239e4b7fbe4366d06e169fae",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"WMS仓位信息\",\"entityCode\":1020,\"fieldName\":\"cangkumingcheng\",\"isReferenced\":true,\"entityName\":\"WMScangweixinxi\",\"label\":\"WMS仓位信息(仓库名称)(N)\"},{\"entityLabel\":\"WMS采购申请\",\"entityCode\":1045,\"fieldName\":\"rukucangku\",\"isReferenced\":true,\"entityName\":\"WMScaigoushenqing\",\"label\":\"WMS采购申请(入库仓库)(N)\"},{\"entityLabel\":\"WMS采购入库账单\",\"entityCode\":1058,\"fieldName\":\"rukucangku\",\"isReferenced\":true,\"entityName\":\"WMScaigourukuzhangdan\",\"label\":\"WMS采购入库账单(入库仓库)(N)\"},{\"entityLabel\":\"WMS采购退货账单\",\"entityCode\":1069,\"fieldName\":\"rukucangku\",\"isReferenced\":true,\"entityName\":\"WMScaigoutuihuozhangdan\",\"label\":\"WMS采购退货账单(退货仓库)(N)\"}]",
+    "applyType": "TAB"
+  },
+  "FILTER": [],
+  "titleWidthForAll": null,
+  "ADD": {
+    "layoutConfigId": "0000015-f0222c8bbe3a4ee192aea062ccc26048",
+    "shareTo": "ALL",
+    "config": "[{\"entityLabel\":\"WMS仓位信息\",\"entityCode\":1020,\"fieldName\":\"cangkumingcheng\",\"isReferenced\":true,\"entityName\":\"WMScangweixinxi\",\"label\":\"WMS仓位信息(仓库名称)(N)\"},{\"entityLabel\":\"WMS采购申请\",\"entityCode\":1045,\"fieldName\":\"rukucangku\",\"isReferenced\":true,\"entityName\":\"WMScaigoushenqing\",\"label\":\"WMS采购申请(入库仓库)(N)\"}]",
+    "applyType": "ADD",
+    "configName": null,
+    "entityCode": 1017,
+    "createdBy": "0000021-00000000000000000000000000000001"
+  }
 }

@@ -1,0 +1,29 @@
+{
+  "titleWidthForSelf": null,
+  "chosenListType": null,
+  "advFilter": null,
+  "mainDetailField": null,
+  "idFieldName": "bangongyongpinrukuId",
+  "LIST": {
+    "ALL": {
+      "layoutConfigId": "0000015-d1fe31f6467140d79206aa42b7c41895",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukubianhao\",\"isNameField\":false,\"fieldLabel\":\"入库编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"rukuzongjiazh\",\"isNameField\":false,\"fieldLabel\":\"入库总价值/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"}]",
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1254,
+      "createdBy": "0000021-00000000000000000000000000000001"
+    },
+    "SELF": {
+      "entityCode": 1254,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"rukuchanpinzongshu\",\"isNameField\":false,\"fieldLabel\":\"入库产品总数\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Integer\"},{\"isUpdatable\":true,\"fieldName\":\"rukuzongjiazh\",\"isNameField\":false,\"fieldLabel\":\"入库总价值/元\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rukubianhao\",\"isNameField\":true,\"fieldLabel\":\"入库编号\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"}]",
+      "applyType": "LIST"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "nameFieldName": "rukubianhao",
+  "quickFilterLabel": "入库编号",
+  "COM_TREE_GROUP": []
+}

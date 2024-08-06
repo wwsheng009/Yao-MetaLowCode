@@ -1,27 +1,29 @@
 {
-    "nameFieldName": "zhouqimingcheng",
-    "titleWidthForSelf": null,
-    "advFilter": null,
-    "titleWidthForAll": null,
-    "LIST": {
-        "SELF": {
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhouqimingcheng\",\"isNameField\":true,\"fieldLabel\":\"周期名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhouqizhuangtai\",\"isNameField\":false,\"fieldLabel\":\"周期状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"beitixingren\",\"isNameField\":false,\"fieldLabel\":\"被提醒人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]",
-            "applyType": "LIST",
-            "entityCode": 1204,
-            "shareTo": "SELF"
-        },
-        "ALL": {
-            "applyType": "LIST",
-            "configName": null,
-            "entityCode": 1204,
-            "createdBy": "0000021-00000000000000000000000000000001",
-            "layoutConfigId": "0000015-7bc8b99c1e3c483480bb74c8ded47fec",
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhouqimingcheng\",\"isNameField\":true,\"fieldLabel\":\"周期名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhouqizhuangtai\",\"isNameField\":false,\"fieldLabel\":\"周期状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"beitixingren\",\"isNameField\":false,\"fieldLabel\":\"被提醒人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
-        }
+  "nameFieldName": "zhouqimingcheng",
+  "titleWidthForSelf": null,
+  "advFilter": null,
+  "idFieldName": "mubiaozhouqiId",
+  "LIST": {
+    "ALL": {
+      "applyType": "LIST",
+      "configName": null,
+      "entityCode": 1204,
+      "createdBy": "0000021-00000000000000000000000000000001",
+      "layoutConfigId": "0000015-7bc8b99c1e3c483480bb74c8ded47fec",
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhouqimingcheng\",\"isNameField\":true,\"fieldLabel\":\"周期名称\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhouqizhuangtai\",\"isNameField\":false,\"fieldLabel\":\"周期状态\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"beitixingren\",\"isNameField\":false,\"fieldLabel\":\"被提醒人\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"},{\"isUpdatable\":false,\"fieldName\":\"createdOn\",\"isNameField\":false,\"fieldLabel\":\"创建时间\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"DateTime\"},{\"isUpdatable\":false,\"fieldName\":\"createdBy\",\"isNameField\":false,\"fieldLabel\":\"创建用户\",\"isNullable\":false,\"isCreatable\":false,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
     },
-    "FILTER": [],
-    "quickFilterLabel": "周期名称",
-    "chosenListType": null,
-    "idFieldName": "mubiaozhouqiId"
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1204,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"zhouqimingcheng\",\"isNameField\":true,\"fieldLabel\":\"周期名称\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Text\"},{\"isUpdatable\":true,\"fieldName\":\"kaishishijian\",\"isNameField\":false,\"fieldLabel\":\"开始时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"jieshushijian\",\"isNameField\":false,\"fieldLabel\":\"结束时间\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"},{\"isUpdatable\":true,\"fieldName\":\"zhouqizhuangtai\",\"isNameField\":false,\"fieldLabel\":\"周期状态\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Option\"},{\"isUpdatable\":true,\"fieldName\":\"beitixingren\",\"isNameField\":false,\"fieldLabel\":\"被提醒人\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"User\"}]"
+    }
+  },
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "quickFilterLabel": "周期名称",
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "mainDetailField": null
 }

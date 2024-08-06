@@ -1,24 +1,26 @@
 {
-    "LIST": {
-        "ALL": {
-            "applyType": "LIST",
-            "entityCode": 1233,
-            "shareTo": "ALL",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuliebiao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecheliang\",\"isNameField\":false,\"fieldLabel\":\"选择车辆\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"cheliangyajin\",\"isNameField\":false,\"fieldLabel\":\"车辆押金\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxianfei\",\"isNameField\":false,\"fieldLabel\":\"保险费\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shouxufei\",\"isNameField\":false,\"fieldLabel\":\"手续费\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shijizuchejine\",\"isNameField\":false,\"fieldLabel\":\"实际租车金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rizujin\",\"isNameField\":false,\"fieldLabel\":\"日租金\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujiguihuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计归还日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        },
-        "SELF": {
-            "applyType": "LIST",
-            "entityCode": 1233,
-            "shareTo": "SELF",
-            "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuliebiao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecheliang\",\"isNameField\":false,\"fieldLabel\":\"选择车辆\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"cheliangyajin\",\"isNameField\":false,\"fieldLabel\":\"车辆押金\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxianfei\",\"isNameField\":false,\"fieldLabel\":\"保险费\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shouxufei\",\"isNameField\":false,\"fieldLabel\":\"手续费\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shijizuchejine\",\"isNameField\":false,\"fieldLabel\":\"实际租车金额\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rizujin\",\"isNameField\":false,\"fieldLabel\":\"日租金\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujiguihuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计归还日期\",\"isNullable\":true,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
-        }
+  "chosenListType": null,
+  "COM_TREE_GROUP": [],
+  "advFilter": null,
+  "LIST": {
+    "ALL": {
+      "shareTo": "ALL",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuliebiao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecheliang\",\"isNameField\":false,\"fieldLabel\":\"选择车辆\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"cheliangyajin\",\"isNameField\":false,\"fieldLabel\":\"车辆押金\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxianfei\",\"isNameField\":false,\"fieldLabel\":\"保险费\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shouxufei\",\"isNameField\":false,\"fieldLabel\":\"手续费\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shijizuchejine\",\"isNameField\":false,\"fieldLabel\":\"实际租车金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rizujin\",\"isNameField\":false,\"fieldLabel\":\"日租金\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujiguihuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计归还日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]",
+      "applyType": "LIST",
+      "entityCode": 1233
     },
-    "titleWidthForAll": null,
-    "titleWidthForSelf": null,
-    "chosenListType": "SELF",
-    "advFilter": null,
-    "idFieldName": "dingdanliebiaoId",
-    "FILTER": [],
-    "nameFieldName": "dingdanliebiaoId",
-    "quickFilterLabel": ""
+    "SELF": {
+      "applyType": "LIST",
+      "entityCode": 1233,
+      "shareTo": "SELF",
+      "config": "[{\"isUpdatable\":true,\"fieldName\":\"xuanzekehu\",\"isNameField\":false,\"fieldLabel\":\"选择客户\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Kehuliebiao\"},{\"isUpdatable\":true,\"fieldName\":\"xuanzecheliang\",\"isNameField\":false,\"fieldLabel\":\"选择车辆\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Reference\",\"referenceName\":\"Cheliangxinxi\"},{\"isUpdatable\":true,\"fieldName\":\"cheliangyajin\",\"isNameField\":false,\"fieldLabel\":\"车辆押金\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"baoxianfei\",\"isNameField\":false,\"fieldLabel\":\"保险费\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"youhuijine\",\"isNameField\":false,\"fieldLabel\":\"优惠金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shouxufei\",\"isNameField\":false,\"fieldLabel\":\"手续费\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"shijizuchejine\",\"isNameField\":false,\"fieldLabel\":\"实际租车金额\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"rizujin\",\"isNameField\":false,\"fieldLabel\":\"日租金\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Money\"},{\"isUpdatable\":true,\"fieldName\":\"yujiguihuanriqi\",\"isNameField\":false,\"fieldLabel\":\"预计归还日期\",\"isNullable\":true,\"isReserved\":false,\"isUnique\":false,\"isCreatable\":true,\"fieldType\":\"Date\"}]"
+    }
+  },
+  "nameFieldName": "dingdanliebiaoId",
+  "quickFilterLabel": "",
+  "mainDetailField": null,
+  "idFieldName": "dingdanliebiaoId",
+  "titleWidthForAll": null,
+  "FILTER": [],
+  "titleWidthForSelf": null
 }
