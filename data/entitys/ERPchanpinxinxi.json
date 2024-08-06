@@ -1,679 +1,711 @@
 {
-    "entityCode": 1185,
-    "idFieldName": "eRPchanpinxinxiId",
-    "label": "ERP产品信息",
-    "systemEntityFlag": false,
-    "detailEntityFlag": false,
-    "layoutable": true,
-    "listable": true,
-    "internalEntityFlag": false,
-    "tags": "ERP(离散制造-MTO）",
-    "name": "ERPchanpinxinxi",
-    "shareable": false,
-    "mainEntity": null,
-    "assignable": false,
-    "authorizable": true,
-    "nameField": "产品名称",
-    "physicalName": "t_erpchanpinxinxi",
-    "fieldSet": [
+  "entityCode": 1185,
+  "systemEntityFlag": false,
+  "idFieldName": "eRPchanpinxinxiId",
+  "internalEntityFlag": false,
+  "name": "ERPchanpinxinxi",
+  "label": "ERP产品信息",
+  "detailEntityFlag": false,
+  "layoutable": true,
+  "listable": true,
+  "tags": "ERP(离散制造-MTO）",
+  "assignable": false,
+  "shareable": false,
+  "authorizable": true,
+  "nameField": "产品名称",
+  "physicalName": "t_erpchanpinxinxi",
+  "mainEntity": null,
+  "fieldSet": [
+    {
+      "nullable": false,
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldViewModel": {},
+      "extraAttrs": null,
+      "referTo": null,
+      "fieldId": "0000002-a3e3e50ab745459fbaf81bd5d11e02ef",
+      "name": "eRPchanpinxinxiId",
+      "physicalName": "eRPchanpinxinxiId",
+      "description": null,
+      "idFieldFlag": true,
+      "mainDetailFieldFlag": false,
+      "label": "id主键",
+      "type": "PrimaryKey",
+      "creatable": false,
+      "updatable": false,
+      "referenceSetting": null,
+      "entityCode": 1185,
+      "displayOrder": 0
+    },
+    {
+      "name": "createdOn",
+      "nullable": false,
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldViewModel": {},
+      "fieldId": "0000002-6a97e68fa60c46cd967492171e6bd68c",
+      "idFieldFlag": false,
+      "displayOrder": 0,
+      "physicalName": "createdOn",
+      "referenceSetting": null,
+      "label": "创建时间",
+      "type": "DateTime",
+      "description": null,
+      "creatable": false,
+      "updatable": false,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "referTo": null,
+      "entityCode": 1185
+    },
+    {
+      "nullable": false,
+      "mainDetailFieldFlag": false,
+      "referenceSetting": null,
+      "fieldId": "0000002-99d9f20eafe44e7ebd4eaf9e353bf30a",
+      "physicalName": "createdBy",
+      "displayOrder": 0,
+      "defaultMemberOfListFlag": false,
+      "fieldViewModel": {},
+      "name": "createdBy",
+      "label": "创建用户",
+      "type": "Reference",
+      "idFieldFlag": false,
+      "entityCode": 1185,
+      "description": null,
+      "extraAttrs": null,
+      "referTo": "User,",
+      "creatable": false,
+      "updatable": false,
+      "nameFieldFlag": false
+    },
+    {
+      "displayOrder": 0,
+      "label": "最近修改时间",
+      "physicalName": "modifiedOn",
+      "fieldViewModel": {},
+      "referenceSetting": null,
+      "type": "DateTime",
+      "creatable": false,
+      "updatable": false,
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "referTo": null,
+      "fieldId": "0000002-6d786b7a3d7c46c68c5be32a43ee45cb",
+      "name": "modifiedOn",
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "entityCode": 1185,
+      "description": null,
+      "nullable": true
+    },
+    {
+      "extraAttrs": null,
+      "creatable": false,
+      "type": "Reference",
+      "description": null,
+      "defaultMemberOfListFlag": false,
+      "name": "modifiedBy",
+      "nameFieldFlag": false,
+      "referenceSetting": null,
+      "idFieldFlag": false,
+      "entityCode": 1185,
+      "label": "修改用户",
+      "physicalName": "modifiedBy",
+      "displayOrder": 0,
+      "nullable": true,
+      "updatable": false,
+      "mainDetailFieldFlag": false,
+      "fieldId": "0000002-1e20b740cab24c9b9744dfcdb1b7786a",
+      "fieldViewModel": {},
+      "referTo": "User,"
+    },
+    {
+      "label": "所属用户",
+      "physicalName": "ownerUser",
+      "nullable": false,
+      "extraAttrs": null,
+      "fieldViewModel": {},
+      "referenceSetting": null,
+      "name": "ownerUser",
+      "type": "Reference",
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "description": null,
+      "displayOrder": 0,
+      "updatable": false,
+      "mainDetailFieldFlag": false,
+      "fieldId": "0000002-c926272509f740569c885ef96a3a67e5",
+      "entityCode": 1185,
+      "creatable": false,
+      "idFieldFlag": false,
+      "referTo": "User,"
+    },
+    {
+      "updatable": false,
+      "nameFieldFlag": false,
+      "fieldId": "0000002-dfd7bb22e4c0403289fce00fdba016f6",
+      "physicalName": "ownerDepartment",
+      "nullable": false,
+      "defaultMemberOfListFlag": false,
+      "fieldViewModel": {},
+      "name": "ownerDepartment",
+      "displayOrder": 0,
+      "creatable": false,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "referTo": "Department,",
+      "referenceSetting": null,
+      "type": "Reference",
+      "description": null,
+      "idFieldFlag": false,
+      "entityCode": 1185,
+      "label": "所属部门"
+    },
+    {
+      "entityCode": 1185,
+      "name": "chanpinbianma",
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "label": "产品编码",
+      "physicalName": "c_chanpinbianma",
+      "updatable": true,
+      "referenceSetting": null,
+      "fieldId": "0000002-6b859d0c05e8483799b7d8eb66e46b08",
+      "type": "Text",
+      "description": null,
+      "creatable": true,
+      "referTo": null,
+      "displayOrder": 0,
+      "nullable": true,
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 200,
+        "validators": []
+      }
+    },
+    {
+      "entityCode": 1185,
+      "name": "chanpinshuxing",
+      "description": null,
+      "updatable": true,
+      "defaultMemberOfListFlag": true,
+      "referTo": null,
+      "referenceSetting": null,
+      "nullable": false,
+      "fieldViewModel": {},
+      "type": "Option",
+      "displayOrder": 0,
+      "creatable": true,
+      "idFieldFlag": false,
+      "extraAttrs": null,
+      "fieldId": "0000002-5371e8f5697d46e0a03641e49a890b3f",
+      "label": "产品属性",
+      "physicalName": "c_chanpinshuxing",
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "optionList": [
         {
-            "updatable": false,
-            "idFieldFlag": true,
-            "defaultMemberOfListFlag": false,
-            "entityCode": 1185,
-            "name": "eRPchanpinxinxiId",
-            "physicalName": "eRPchanpinxinxiId",
-            "type": "PrimaryKey",
-            "nullable": false,
-            "referTo": null,
-            "referenceSetting": null,
-            "label": "id主键",
-            "creatable": false,
-            "description": null,
-            "nameFieldFlag": false,
-            "fieldViewModel": null,
-            "fieldId": "0000002-a3e3e50ab745459fbaf81bd5d11e02ef",
-            "displayOrder": 0,
-            "mainDetailFieldFlag": false
+          "label": "成品",
+          "value": 1,
+          "displayOrder": 1
         },
         {
-            "displayOrder": 0,
-            "creatable": false,
-            "physicalName": "createdOn",
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referTo": null,
-            "nullable": false,
-            "updatable": false,
-            "nameFieldFlag": false,
-            "fieldViewModel": null,
-            "referenceSetting": null,
-            "description": null,
-            "entityCode": 1185,
-            "name": "createdOn",
-            "label": "创建时间",
-            "type": "DateTime",
-            "idFieldFlag": false,
-            "fieldId": "0000002-6a97e68fa60c46cd967492171e6bd68c"
+          "label": "零件",
+          "value": 2,
+          "displayOrder": 2
         },
         {
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "name": "createdBy",
-            "label": "创建用户",
-            "creatable": false,
-            "updatable": false,
-            "referenceSetting": null,
-            "entityCode": 1185,
-            "nullable": false,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": null,
-            "description": null,
-            "idFieldFlag": false,
-            "fieldId": "0000002-99d9f20eafe44e7ebd4eaf9e353bf30a",
-            "physicalName": "createdBy",
-            "type": "Reference",
-            "displayOrder": 0,
-            "referTo": "User,"
-        },
-        {
-            "description": null,
-            "nullable": true,
-            "creatable": false,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "name": "modifiedOn",
-            "displayOrder": 0,
-            "fieldViewModel": null,
-            "referenceSetting": null,
-            "fieldId": "0000002-6d786b7a3d7c46c68c5be32a43ee45cb",
-            "entityCode": 1185,
-            "type": "DateTime",
-            "nameFieldFlag": false,
-            "referTo": null,
-            "label": "最近修改时间",
-            "physicalName": "modifiedOn",
-            "updatable": false,
-            "defaultMemberOfListFlag": false
-        },
-        {
-            "referTo": "User,",
-            "fieldViewModel": null,
-            "fieldId": "0000002-1e20b740cab24c9b9744dfcdb1b7786a",
-            "physicalName": "modifiedBy",
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "creatable": false,
-            "updatable": false,
-            "entityCode": 1185,
-            "name": "modifiedBy",
-            "nullable": true,
-            "label": "修改用户",
-            "displayOrder": 0,
-            "defaultMemberOfListFlag": false,
-            "type": "Reference",
-            "description": null,
-            "idFieldFlag": false,
-            "referenceSetting": null
-        },
-        {
-            "name": "ownerUser",
-            "description": null,
-            "nameFieldFlag": false,
-            "referTo": "User,",
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": null,
-            "fieldId": "0000002-c926272509f740569c885ef96a3a67e5",
-            "label": "所属用户",
-            "displayOrder": 0,
-            "creatable": false,
-            "idFieldFlag": false,
-            "entityCode": 1185,
-            "nullable": false,
-            "updatable": false,
-            "defaultMemberOfListFlag": false,
-            "referenceSetting": null,
-            "physicalName": "ownerUser",
-            "type": "Reference"
-        },
-        {
-            "displayOrder": 0,
-            "mainDetailFieldFlag": false,
-            "referTo": "Department,",
-            "referenceSetting": null,
-            "fieldId": "0000002-dfd7bb22e4c0403289fce00fdba016f6",
-            "label": "所属部门",
-            "entityCode": 1185,
-            "creatable": false,
-            "updatable": false,
-            "idFieldFlag": false,
-            "nullable": false,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": null,
-            "name": "ownerDepartment",
-            "physicalName": "ownerDepartment",
-            "type": "Reference",
-            "description": null
-        },
-        {
-            "name": "chanpinbianma",
-            "description": null,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "entityCode": 1185,
-            "label": "产品编码",
-            "displayOrder": 0,
-            "updatable": true,
-            "referTo": null,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 200,
-                "validators": []
-            },
-            "fieldId": "0000002-6b859d0c05e8483799b7d8eb66e46b08",
-            "physicalName": "c_chanpinbianma",
-            "type": "Text",
-            "nullable": true,
-            "creatable": true,
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "referenceSetting": null
-        },
-        {
-            "type": "Option",
-            "nameFieldFlag": false,
-            "fieldId": "0000002-5371e8f5697d46e0a03641e49a890b3f",
-            "name": "chanpinshuxing",
-            "label": "产品属性",
-            "physicalName": "c_chanpinshuxing",
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "entityCode": 1185,
-            "description": null,
-            "nullable": false,
-            "creatable": true,
-            "updatable": true,
-            "referTo": null,
-            "displayOrder": 0,
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": null,
-            "referenceSetting": null,
-            "optionList": [
-                {
-                    "label": "成品",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "零件",
-                    "value": 2,
-                    "displayOrder": 2
-                }
-            ]
-        },
-        {
-            "creatable": true,
-            "nameFieldFlag": false,
-            "fieldViewModel": null,
-            "name": "chanpinleixing",
-            "label": "产品类型",
-            "description": null,
-            "referTo": null,
-            "entityCode": 1185,
-            "physicalName": "c_chanpinleixing",
-            "defaultMemberOfListFlag": true,
-            "nullable": false,
-            "updatable": true,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-0fe5ec1c2368493388fd5f9c5b3596b4",
-            "type": "Option",
-            "displayOrder": 0,
-            "idFieldFlag": false,
-            "referenceSetting": null,
-            "optionList": [
-                {
-                    "label": "办公用品",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "固定资产",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "礼品",
-                    "value": 3,
-                    "displayOrder": 3
-                },
-                {
-                    "label": "路由器",
-                    "value": 4,
-                    "displayOrder": 4
-                },
-                {
-                    "label": "交换机",
-                    "value": 5,
-                    "displayOrder": 5
-                },
-                {
-                    "label": "网关",
-                    "value": 6,
-                    "displayOrder": 6
-                },
-                {
-                    "label": "网关CPU芯片",
-                    "value": 7,
-                    "displayOrder": 7
-                },
-                {
-                    "label": "交换机电源",
-                    "value": 8,
-                    "displayOrder": 8
-                }
-            ]
-        },
-        {
-            "physicalName": "c_chanpinmingcheng",
-            "description": null,
-            "displayOrder": 0,
-            "nameFieldFlag": true,
-            "fieldViewModel": {
-                "maxLength": 200,
-                "validators": [],
-                "minLength": 0
-            },
-            "referenceSetting": null,
-            "fieldId": "0000002-91f66d47a1514857820eecc7ad080d59",
-            "entityCode": 1185,
-            "nullable": false,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "label": "产品名称",
-            "updatable": true,
-            "referTo": null,
-            "name": "chanpinmingcheng",
-            "type": "Text",
-            "creatable": true
-        },
-        {
-            "physicalName": "c_pinpai",
-            "nullable": false,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "referTo": null,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 200,
-                "validators": []
-            },
-            "label": "品牌",
-            "type": "Text",
-            "displayOrder": 0,
-            "referenceSetting": null,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-d7a99c94ac5b4a8db47a7b31f2672467",
-            "entityCode": 1185,
-            "name": "pinpai",
-            "description": null,
-            "creatable": true,
-            "defaultMemberOfListFlag": true
-        },
-        {
-            "defaultMemberOfListFlag": true,
-            "referTo": null,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 200,
-                "validators": []
-            },
-            "referenceSetting": null,
-            "label": "规格型号",
-            "physicalName": "c_guigexinghao",
-            "mainDetailFieldFlag": false,
-            "displayOrder": 0,
-            "creatable": true,
-            "updatable": true,
-            "nullable": false,
-            "nameFieldFlag": false,
-            "type": "Text",
-            "description": null,
-            "idFieldFlag": false,
-            "fieldId": "0000002-e62a0c619f8449ffa06b461a8045cdf6",
-            "entityCode": 1185,
-            "name": "guigexinghao"
-        },
-        {
-            "idFieldFlag": false,
-            "referTo": null,
-            "physicalName": "c_danwei",
-            "description": null,
-            "displayOrder": 0,
-            "nullable": false,
-            "creatable": true,
-            "referenceSetting": null,
-            "entityCode": 1185,
-            "label": "单位",
-            "updatable": true,
-            "fieldViewModel": null,
-            "fieldId": "0000002-f2097f9d43d04ff6a63e40f15ee17584",
-            "name": "danwei",
-            "type": "Option",
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "optionList": [
-                {
-                    "label": "台",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "套",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "件",
-                    "value": 3,
-                    "displayOrder": 3
-                },
-                {
-                    "label": "个",
-                    "value": 4,
-                    "displayOrder": 4
-                },
-                {
-                    "label": "盒",
-                    "value": 5,
-                    "displayOrder": 5
-                },
-                {
-                    "label": "箱",
-                    "value": 6,
-                    "displayOrder": 6
-                },
-                {
-                    "label": "片",
-                    "value": 7,
-                    "displayOrder": 7
-                }
-            ]
-        },
-        {
-            "nullable": true,
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "updatable": true,
-            "physicalName": "c_chengben",
-            "nameFieldFlag": false,
-            "referTo": null,
-            "fieldViewModel": {
-                "precision": 2,
-                "maxValue": 999999999,
-                "minValue": -999999999,
-                "validators": []
-            },
-            "fieldId": "0000002-086b2e0a47a3466db27b9f338951b228",
-            "entityCode": 1185,
-            "name": "chengben",
-            "label": "成本（单价/元）",
-            "type": "Money",
-            "description": null,
-            "displayOrder": 0,
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referenceSetting": null
-        },
-        {
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": {
-                "precision": 2,
-                "maxValue": 999999999,
-                "minValue": -999999999,
-                "validators": []
-            },
-            "fieldId": "0000002-1f7f8551adfe4d1e959b0f6756046fe6",
-            "nullable": true,
-            "creatable": true,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "physicalName": "c_biaozhunshoujia",
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referTo": null,
-            "label": "标准售价(含税)/元",
-            "type": "Money",
-            "description": null,
-            "entityCode": 1185,
-            "name": "biaozhunshoujia",
-            "displayOrder": 0,
-            "referenceSetting": null
-        },
-        {
-            "name": "chanpinquanxian",
-            "displayOrder": 0,
-            "referTo": null,
-            "referenceSetting": null,
-            "physicalName": "c_chanpinquanxian",
-            "updatable": true,
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": {
-                "validators": []
-            },
-            "fieldId": "0000002-5e7cc50bbf1e4a28bda300abbbbe7f9f",
-            "entityCode": 1185,
-            "type": "Tag",
-            "nullable": false,
-            "idFieldFlag": false,
-            "label": "产品权限",
-            "description": null,
-            "creatable": true,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "tagList": [
-                {
-                    "label": "销售",
-                    "value": "销售",
-                    "displayOrder": 1
-                },
-                {
-                    "label": "采购",
-                    "value": "采购",
-                    "displayOrder": 2
-                },
-                {
-                    "label": "赠送",
-                    "value": "赠送",
-                    "displayOrder": 3
-                }
-            ]
-        },
-        {
-            "physicalName": "c_chanpintupian",
-            "displayOrder": 0,
-            "nameFieldFlag": false,
-            "label": "产品图片",
-            "referenceSetting": null,
-            "nullable": true,
-            "creatable": true,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": {
-                "maxFileCount": 1,
-                "fileMaxSize": 20,
-                "uploadFileTypes": [
-                    "jpeg",
-                    "png",
-                    "gif"
-                ],
-                "uploadHint": "单张20M以内",
-                "validators": []
-            },
-            "description": null,
-            "entityCode": 1185,
-            "name": "chanpintupian",
-            "type": "Picture",
-            "updatable": true,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-b9520477a7624809b8c0a6f4a5f69129",
-            "referTo": null
-        },
-        {
-            "name": "dangqiankucunshu",
-            "physicalName": "c_dangqiankucunshu",
-            "displayOrder": 0,
-            "creatable": true,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "referTo": null,
-            "referenceSetting": null,
-            "fieldId": "0000002-7baedf18e57e4769a938119078631de8",
-            "type": "Integer",
-            "description": null,
-            "nullable": true,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": {
-                "maxValue": 999999999,
-                "minValue": -999999999,
-                "validators": []
-            },
-            "entityCode": 1185,
-            "label": "当前库存数"
-        },
-        {
-            "referTo": null,
-            "entityCode": 1185,
-            "nameFieldFlag": false,
-            "updatable": true,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": {
-                "minValue": -999999999,
-                "validators": [],
-                "maxValue": 999999999
-            },
-            "label": "可用库存数",
-            "creatable": true,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "referenceSetting": null,
-            "fieldId": "0000002-de6307c3c73844c2a134a48744ccc2bc",
-            "physicalName": "c_keyongkucunshu",
-            "description": null,
-            "displayOrder": 0,
-            "nullable": true,
-            "name": "keyongkucunshu",
-            "type": "Integer"
-        },
-        {
-            "entityCode": 1185,
-            "name": "xuanzefangansheji",
-            "label": "选择方案设计",
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "referenceSetting": [
-                {
-                    "entityName": "Fangansheji",
-                    "fieldList": [
-                        "xuanzebaojiadan",
-                        "tuzhifujian",
-                        "shejiwangongxuqiuriqi"
-                    ]
-                }
-            ],
-            "nullable": false,
-            "updatable": true,
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": {
-                "searchDialogWidth": 520,
-                "validators": []
-            },
-            "fieldId": "0000002-26a24aad60394413acdd5082aa112f0f",
-            "physicalName": "c_xuanzefangansheji",
-            "type": "Reference",
-            "creatable": true,
-            "referTo": "Fangansheji,",
-            "description": null,
-            "displayOrder": 0
-        },
-        {
-            "updatable": true,
-            "idFieldFlag": false,
-            "referenceSetting": null,
-            "name": "chanpinjishufujian",
-            "description": null,
-            "displayOrder": 0,
-            "nullable": true,
-            "fieldId": "0000002-3457d5516a7740f8a1f06b998464e268",
-            "label": "产品技术附件",
-            "creatable": true,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "referTo": null,
-            "fieldViewModel": {
-                "uploadFileTypes": [],
-                "uploadHint": "单个20M以内",
-                "validators": [],
-                "maxFileCount": 9,
-                "fileMaxSize": 20
-            },
-            "entityCode": 1185,
-            "physicalName": "c_chanpinjishufujian",
-            "type": "File",
-            "defaultMemberOfListFlag": false
-        },
-        {
-            "entityCode": 1185,
-            "nullable": false,
-            "idFieldFlag": false,
-            "referTo": null,
-            "label": "获取方式",
-            "type": "Option",
-            "description": null,
-            "creatable": true,
-            "updatable": true,
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": null,
-            "name": "huoqufangshi",
-            "displayOrder": 0,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "referenceSetting": null,
-            "fieldId": "0000002-a2423a7ed8314d05ac184648758b5e40",
-            "physicalName": "c_huoqufangshi",
-            "optionList": [
-                {
-                    "label": "生产",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "采购",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "委外",
-                    "value": 3,
-                    "displayOrder": 3
-                },
-                {
-                    "label": "生产或委外",
-                    "value": 4,
-                    "displayOrder": 4
-                },
-                {
-                    "label": "生产或采购",
-                    "value": 5,
-                    "displayOrder": 5
-                }
-            ]
+          "label": "组件",
+          "value": 3,
+          "displayOrder": 3
         }
-    ]
+      ]
+    },
+    {
+      "fieldViewModel": {},
+      "referenceSetting": null,
+      "fieldId": "0000002-0fe5ec1c2368493388fd5f9c5b3596b4",
+      "entityCode": 1185,
+      "displayOrder": 0,
+      "idFieldFlag": false,
+      "updatable": true,
+      "extraAttrs": null,
+      "referTo": null,
+      "nullable": false,
+      "creatable": true,
+      "defaultMemberOfListFlag": true,
+      "name": "chanpinleixing",
+      "label": "产品类型",
+      "physicalName": "c_chanpinleixing",
+      "description": null,
+      "type": "Option",
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "optionList": [
+        {
+          "label": "办公用品",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "固定资产",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "礼品",
+          "value": 3,
+          "displayOrder": 3
+        },
+        {
+          "label": "路由器",
+          "value": 4,
+          "displayOrder": 4
+        },
+        {
+          "label": "交换机",
+          "value": 5,
+          "displayOrder": 5
+        },
+        {
+          "label": "网关",
+          "value": 6,
+          "displayOrder": 6
+        },
+        {
+          "label": "网关CPU芯片",
+          "value": 7,
+          "displayOrder": 7
+        },
+        {
+          "label": "交换机电源",
+          "value": 8,
+          "displayOrder": 8
+        }
+      ]
+    },
+    {
+      "entityCode": 1185,
+      "physicalName": "c_chanpinmingcheng",
+      "extraAttrs": null,
+      "type": "Text",
+      "nullable": false,
+      "updatable": true,
+      "nameFieldFlag": true,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "name": "chanpinmingcheng",
+      "description": null,
+      "displayOrder": 0,
+      "idFieldFlag": false,
+      "referTo": null,
+      "referenceSetting": null,
+      "fieldId": "0000002-91f66d47a1514857820eecc7ad080d59",
+      "label": "产品名称",
+      "creatable": true,
+      "fieldViewModel": {
+        "maxLength": 200,
+        "validators": [],
+        "minLength": 0
+      }
+    },
+    {
+      "name": "pinpai",
+      "physicalName": "c_pinpai",
+      "displayOrder": 0,
+      "nullable": false,
+      "creatable": true,
+      "updatable": true,
+      "defaultMemberOfListFlag": true,
+      "fieldId": "0000002-d7a99c94ac5b4a8db47a7b31f2672467",
+      "referenceSetting": null,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "type": "Text",
+      "label": "品牌",
+      "idFieldFlag": false,
+      "referTo": null,
+      "fieldViewModel": {
+        "maxLength": 200,
+        "validators": [],
+        "minLength": 0
+      },
+      "entityCode": 1185,
+      "nameFieldFlag": false,
+      "description": null
+    },
+    {
+      "nullable": false,
+      "creatable": true,
+      "mainDetailFieldFlag": false,
+      "referenceSetting": null,
+      "displayOrder": 0,
+      "physicalName": "c_guigexinghao",
+      "description": null,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 200,
+        "validators": []
+      },
+      "fieldId": "0000002-e62a0c619f8449ffa06b461a8045cdf6",
+      "name": "guigexinghao",
+      "label": "规格型号",
+      "type": "Text",
+      "updatable": true,
+      "defaultMemberOfListFlag": true,
+      "extraAttrs": null,
+      "referTo": null,
+      "entityCode": 1185
+    },
+    {
+      "name": "danwei",
+      "displayOrder": 0,
+      "idFieldFlag": false,
+      "physicalName": "c_danwei",
+      "creatable": true,
+      "updatable": true,
+      "label": "单位",
+      "description": null,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "nameFieldFlag": false,
+      "extraAttrs": null,
+      "referTo": null,
+      "fieldId": "0000002-f2097f9d43d04ff6a63e40f15ee17584",
+      "entityCode": 1185,
+      "type": "Option",
+      "nullable": false,
+      "fieldViewModel": {},
+      "referenceSetting": null,
+      "optionList": [
+        {
+          "label": "台",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "套",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "件",
+          "value": 3,
+          "displayOrder": 3
+        },
+        {
+          "label": "个",
+          "value": 4,
+          "displayOrder": 4
+        },
+        {
+          "label": "盒",
+          "value": 5,
+          "displayOrder": 5
+        },
+        {
+          "label": "箱",
+          "value": 6,
+          "displayOrder": 6
+        },
+        {
+          "label": "片",
+          "value": 7,
+          "displayOrder": 7
+        }
+      ]
+    },
+    {
+      "description": null,
+      "displayOrder": 0,
+      "defaultMemberOfListFlag": false,
+      "referTo": null,
+      "fieldViewModel": {
+        "precision": 2,
+        "maxValue": 999999999,
+        "minValue": -999999999,
+        "validators": []
+      },
+      "entityCode": 1185,
+      "name": "chengben",
+      "label": "成本（单价/元）",
+      "creatable": true,
+      "updatable": true,
+      "idFieldFlag": false,
+      "referenceSetting": null,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "fieldId": "0000002-086b2e0a47a3466db27b9f338951b228",
+      "physicalName": "c_chengben",
+      "type": "Money",
+      "nullable": true,
+      "extraAttrs": null
+    },
+    {
+      "name": "biaozhunshoujia",
+      "physicalName": "c_biaozhunshoujia",
+      "description": null,
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "fieldViewModel": {
+        "precision": 2,
+        "maxValue": 999999999,
+        "minValue": -999999999,
+        "validators": []
+      },
+      "fieldId": "0000002-1f7f8551adfe4d1e959b0f6756046fe6",
+      "entityCode": 1185,
+      "type": "Money",
+      "displayOrder": 0,
+      "updatable": true,
+      "extraAttrs": null,
+      "label": "标准售价(含税)/元",
+      "nullable": true,
+      "defaultMemberOfListFlag": false,
+      "referenceSetting": null,
+      "creatable": true,
+      "nameFieldFlag": false,
+      "referTo": null
+    },
+    {
+      "fieldViewModel": {
+        "validators": []
+      },
+      "type": "Tag",
+      "referTo": null,
+      "creatable": true,
+      "updatable": true,
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "entityCode": 1185,
+      "physicalName": "c_chanpinquanxian",
+      "label": "产品权限",
+      "displayOrder": 0,
+      "nameFieldFlag": false,
+      "extraAttrs": null,
+      "referenceSetting": null,
+      "fieldId": "0000002-5e7cc50bbf1e4a28bda300abbbbe7f9f",
+      "name": "chanpinquanxian",
+      "mainDetailFieldFlag": false,
+      "description": null,
+      "nullable": false,
+      "tagList": [
+        {
+          "label": "销售",
+          "value": "销售",
+          "displayOrder": 1
+        },
+        {
+          "label": "采购",
+          "value": "采购",
+          "displayOrder": 2
+        },
+        {
+          "label": "赠送",
+          "value": "赠送",
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "fieldId": "0000002-b9520477a7624809b8c0a6f4a5f69129",
+      "name": "chanpintupian",
+      "physicalName": "c_chanpintupian",
+      "creatable": true,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "entityCode": 1185,
+      "description": null,
+      "referenceSetting": null,
+      "defaultMemberOfListFlag": false,
+      "label": "产品图片",
+      "type": "Picture",
+      "displayOrder": 0,
+      "nullable": true,
+      "updatable": true,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "referTo": null,
+      "fieldViewModel": {
+        "maxFileCount": 1,
+        "fileMaxSize": 20,
+        "uploadFileTypes": [
+          "jpeg",
+          "png",
+          "gif"
+        ],
+        "uploadHint": "单张20M以内",
+        "validators": []
+      }
+    },
+    {
+      "description": null,
+      "creatable": true,
+      "extraAttrs": null,
+      "referTo": null,
+      "referenceSetting": null,
+      "name": "dangqiankucunshu",
+      "label": "当前库存数",
+      "physicalName": "c_dangqiankucunshu",
+      "type": "Integer",
+      "displayOrder": 0,
+      "updatable": true,
+      "mainDetailFieldFlag": false,
+      "nameFieldFlag": false,
+      "fieldId": "0000002-7baedf18e57e4769a938119078631de8",
+      "entityCode": 1185,
+      "nullable": true,
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldViewModel": {
+        "maxValue": 999999999,
+        "minValue": -999999999,
+        "validators": []
+      }
+    },
+    {
+      "updatable": true,
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "entityCode": 1185,
+      "label": "可用库存数",
+      "displayOrder": 0,
+      "nullable": true,
+      "name": "keyongkucunshu",
+      "description": null,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "referenceSetting": null,
+      "fieldId": "0000002-de6307c3c73844c2a134a48744ccc2bc",
+      "fieldViewModel": {
+        "maxValue": 999999999,
+        "minValue": -999999999,
+        "validators": []
+      },
+      "physicalName": "c_keyongkucunshu",
+      "type": "Integer",
+      "creatable": true,
+      "extraAttrs": null,
+      "referTo": null
+    },
+    {
+      "nullable": false,
+      "referenceSetting": [
+        {
+          "filterJson": null,
+          "refDetailEntityFlag": null,
+          "mainEntityRefFieldOfSelf": null,
+          "mainEntityRefFieldOfParent": null,
+          "entityName": "Fangansheji",
+          "fieldList": [
+            "xuanzebaojiadan",
+            "tuzhifujian",
+            "shejiwangongxuqiuriqi"
+          ]
+        }
+      ],
+      "label": "选择方案设计",
+      "type": "Reference",
+      "updatable": true,
+      "extraAttrs": null,
+      "fieldViewModel": {
+        "searchDialogWidth": 520,
+        "validators": []
+      },
+      "fieldId": "0000002-26a24aad60394413acdd5082aa112f0f",
+      "creatable": true,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "referTo": "Fangansheji,",
+      "name": "xuanzefangansheji",
+      "description": null,
+      "displayOrder": 0,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "entityCode": 1185,
+      "physicalName": "c_xuanzefangansheji"
+    },
+    {
+      "fieldId": "0000002-3457d5516a7740f8a1f06b998464e268",
+      "name": "chanpinjishufujian",
+      "mainDetailFieldFlag": false,
+      "nullable": true,
+      "creatable": true,
+      "nameFieldFlag": false,
+      "extraAttrs": null,
+      "fieldViewModel": {
+        "maxFileCount": 9,
+        "fileMaxSize": 20,
+        "uploadFileTypes": [],
+        "uploadHint": "单个20M以内",
+        "validators": []
+      },
+      "physicalName": "c_chanpinjishufujian",
+      "type": "File",
+      "referenceSetting": null,
+      "referTo": null,
+      "entityCode": 1185,
+      "updatable": true,
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "label": "产品技术附件",
+      "description": null,
+      "displayOrder": 0
+    },
+    {
+      "updatable": true,
+      "nameFieldFlag": false,
+      "referenceSetting": null,
+      "label": "获取方式",
+      "type": "Option",
+      "description": null,
+      "nullable": false,
+      "idFieldFlag": false,
+      "entityCode": 1185,
+      "name": "huoqufangshi",
+      "creatable": true,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "extraAttrs": null,
+      "referTo": null,
+      "fieldId": "0000002-a2423a7ed8314d05ac184648758b5e40",
+      "physicalName": "c_huoqufangshi",
+      "displayOrder": 0,
+      "fieldViewModel": {},
+      "optionList": [
+        {
+          "label": "生产",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "采购",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "委外",
+          "value": 3,
+          "displayOrder": 3
+        },
+        {
+          "label": "生产或委外",
+          "value": 4,
+          "displayOrder": 4
+        },
+        {
+          "label": "生产或采购",
+          "value": 5,
+          "displayOrder": 5
+        }
+      ]
+    }
+  ]
 }

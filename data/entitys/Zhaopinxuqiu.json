@@ -1,755 +1,794 @@
 {
-    "name": "Zhaopinxuqiu",
-    "label": "招聘需求",
-    "listable": true,
-    "entityCode": 1113,
-    "systemEntityFlag": false,
-    "detailEntityFlag": false,
-    "layoutable": true,
-    "idFieldName": "zhaopinxuqiuId",
-    "internalEntityFlag": false,
-    "tags": "HRM人事",
-    "shareable": false,
-    "nameField": "需求编号",
-    "assignable": false,
-    "authorizable": true,
-    "physicalName": "t_zhaopinxuqiu",
-    "mainEntity": null,
-    "fieldSet": [
+  "name": "Zhaopinxuqiu",
+  "entityCode": 1113,
+  "listable": true,
+  "idFieldName": "zhaopinxuqiuId",
+  "internalEntityFlag": false,
+  "tags": "HRM人事",
+  "label": "招聘需求",
+  "systemEntityFlag": false,
+  "detailEntityFlag": false,
+  "layoutable": true,
+  "physicalName": "t_zhaopinxuqiu",
+  "mainEntity": null,
+  "assignable": false,
+  "shareable": false,
+  "authorizable": true,
+  "nameField": "需求编号",
+  "fieldSet": [
+    {
+      "type": "PrimaryKey",
+      "displayOrder": 0,
+      "referenceSetting": null,
+      "label": "id主键",
+      "defaultMemberOfListFlag": false,
+      "referTo": null,
+      "fieldViewModel": {},
+      "entityCode": 1113,
+      "name": "zhaopinxuqiuId",
+      "physicalName": "zhaopinxuqiuId",
+      "description": null,
+      "updatable": false,
+      "idFieldFlag": true,
+      "fieldId": "0000002-157394170a9940feacec95a66b58c66c",
+      "nullable": false,
+      "creatable": false,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null
+    },
+    {
+      "creatable": false,
+      "nameFieldFlag": false,
+      "referenceSetting": null,
+      "name": "createdOn",
+      "displayOrder": 0,
+      "nullable": false,
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldViewModel": {},
+      "entityCode": 1113,
+      "type": "DateTime",
+      "updatable": false,
+      "mainDetailFieldFlag": false,
+      "referTo": null,
+      "extraAttrs": null,
+      "fieldId": "0000002-a330c65d1ccb4da5ac881e0f8ffc987c",
+      "label": "创建时间",
+      "physicalName": "createdOn",
+      "description": null
+    },
+    {
+      "label": "创建用户",
+      "physicalName": "createdBy",
+      "creatable": false,
+      "updatable": false,
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldId": "0000002-944b0e49739d4ee4b9c82d2ce180b2c1",
+      "entityCode": 1113,
+      "extraAttrs": null,
+      "type": "Reference",
+      "nullable": false,
+      "referTo": "User,",
+      "referenceSetting": null,
+      "name": "createdBy",
+      "nameFieldFlag": false,
+      "displayOrder": 0,
+      "mainDetailFieldFlag": false,
+      "fieldViewModel": {},
+      "description": null
+    },
+    {
+      "label": "最近修改时间",
+      "physicalName": "modifiedOn",
+      "type": "DateTime",
+      "mainDetailFieldFlag": false,
+      "fieldViewModel": {},
+      "referenceSetting": null,
+      "name": "modifiedOn",
+      "description": null,
+      "displayOrder": 0,
+      "creatable": false,
+      "updatable": false,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "extraAttrs": null,
+      "fieldId": "0000002-c434f5ac068841cd84e3508a830d2545",
+      "nullable": true,
+      "defaultMemberOfListFlag": false,
+      "referTo": null,
+      "entityCode": 1113
+    },
+    {
+      "physicalName": "modifiedBy",
+      "description": null,
+      "updatable": false,
+      "name": "modifiedBy",
+      "displayOrder": 0,
+      "defaultMemberOfListFlag": false,
+      "extraAttrs": null,
+      "entityCode": 1113,
+      "idFieldFlag": false,
+      "referTo": "User,",
+      "fieldViewModel": {},
+      "referenceSetting": null,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "fieldId": "0000002-532d39978795462aae0c48b96874c1a1",
+      "label": "修改用户",
+      "type": "Reference",
+      "nullable": true,
+      "creatable": false
+    },
+    {
+      "entityCode": 1113,
+      "type": "Reference",
+      "nullable": false,
+      "nameFieldFlag": false,
+      "referTo": "User,",
+      "fieldId": "0000002-dba2e1773a4842c9a4bd71a826df799f",
+      "description": null,
+      "idFieldFlag": false,
+      "extraAttrs": null,
+      "physicalName": "ownerUser",
+      "creatable": false,
+      "defaultMemberOfListFlag": false,
+      "referenceSetting": null,
+      "name": "ownerUser",
+      "displayOrder": 0,
+      "updatable": false,
+      "mainDetailFieldFlag": false,
+      "fieldViewModel": {},
+      "label": "所属用户"
+    },
+    {
+      "displayOrder": 0,
+      "nameFieldFlag": false,
+      "referTo": "Department,",
+      "creatable": false,
+      "fieldViewModel": {},
+      "fieldId": "0000002-7b5d1d3882d54e7d902e563469e05a95",
+      "name": "ownerDepartment",
+      "physicalName": "ownerDepartment",
+      "nullable": false,
+      "updatable": false,
+      "extraAttrs": null,
+      "entityCode": 1113,
+      "label": "所属部门",
+      "type": "Reference",
+      "defaultMemberOfListFlag": false,
+      "referenceSetting": null,
+      "description": null,
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false
+    },
+    {
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 200,
+        "validators": []
+      },
+      "label": "需求编号",
+      "physicalName": "c_xuqiubianhao",
+      "referenceSetting": null,
+      "description": null,
+      "displayOrder": 0,
+      "mainDetailFieldFlag": false,
+      "updatable": true,
+      "idFieldFlag": false,
+      "extraAttrs": null,
+      "fieldId": "0000002-92ce274dd3c94056acb9efdb2ea06caa",
+      "nullable": false,
+      "creatable": true,
+      "nameFieldFlag": true,
+      "defaultMemberOfListFlag": true,
+      "referTo": null,
+      "entityCode": 1113,
+      "name": "xuqiubianhao",
+      "type": "Text"
+    },
+    {
+      "creatable": true,
+      "fieldViewModel": {
+        "searchDialogWidth": 520,
+        "validators": []
+      },
+      "displayOrder": 0,
+      "updatable": true,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "extraAttrs": null,
+      "label": "需求提交人",
+      "nullable": true,
+      "idFieldFlag": false,
+      "referenceSetting": [
         {
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referTo": null,
-            "displayOrder": 0,
-            "creatable": false,
-            "physicalName": "zhaopinxuqiuId",
-            "updatable": false,
-            "nameFieldFlag": false,
-            "entityCode": 1113,
-            "name": "zhaopinxuqiuId",
-            "description": null,
-            "nullable": false,
-            "idFieldFlag": true,
-            "fieldId": "0000002-157394170a9940feacec95a66b58c66c",
-            "fieldViewModel": null,
-            "referenceSetting": null,
-            "label": "id主键",
-            "type": "PrimaryKey"
-        },
-        {
-            "type": "DateTime",
-            "description": null,
-            "displayOrder": 0,
-            "nullable": false,
-            "fieldId": "0000002-a330c65d1ccb4da5ac881e0f8ffc987c",
-            "entityCode": 1113,
-            "label": "创建时间",
-            "updatable": false,
-            "fieldViewModel": null,
-            "referTo": null,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referenceSetting": null,
-            "name": "createdOn",
-            "physicalName": "createdOn",
-            "creatable": false,
-            "idFieldFlag": false
-        },
-        {
-            "referTo": "User,",
-            "entityCode": 1113,
-            "type": "Reference",
-            "description": null,
-            "idFieldFlag": false,
-            "fieldViewModel": null,
-            "name": "createdBy",
-            "creatable": false,
-            "updatable": false,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-944b0e49739d4ee4b9c82d2ce180b2c1",
-            "label": "创建用户",
-            "physicalName": "createdBy",
-            "nullable": false,
-            "referenceSetting": null,
-            "displayOrder": 0,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false
-        },
-        {
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "referTo": null,
-            "fieldViewModel": null,
-            "referenceSetting": null,
-            "displayOrder": 0,
-            "creatable": false,
-            "nullable": true,
-            "name": "modifiedOn",
-            "type": "DateTime",
-            "nameFieldFlag": false,
-            "entityCode": 1113,
-            "physicalName": "modifiedOn",
-            "description": null,
-            "updatable": false,
-            "defaultMemberOfListFlag": false,
-            "fieldId": "0000002-c434f5ac068841cd84e3508a830d2545",
-            "label": "最近修改时间"
-        },
-        {
-            "fieldViewModel": null,
-            "entityCode": 1113,
-            "type": "Reference",
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "nullable": true,
-            "creatable": false,
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "fieldId": "0000002-532d39978795462aae0c48b96874c1a1",
-            "name": "modifiedBy",
-            "label": "修改用户",
-            "description": null,
-            "physicalName": "modifiedBy",
-            "referTo": "User,",
-            "displayOrder": 0,
-            "updatable": false,
-            "referenceSetting": null
-        },
-        {
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "entityCode": 1113,
-            "name": "ownerUser",
-            "description": null,
-            "updatable": false,
-            "referenceSetting": null,
-            "nullable": false,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": null,
-            "creatable": false,
-            "referTo": "User,",
-            "fieldId": "0000002-dba2e1773a4842c9a4bd71a826df799f",
-            "label": "所属用户",
-            "physicalName": "ownerUser",
-            "type": "Reference",
-            "displayOrder": 0
-        },
-        {
-            "referTo": "Department,",
-            "referenceSetting": null,
-            "fieldId": "0000002-7b5d1d3882d54e7d902e563469e05a95",
-            "label": "所属部门",
-            "nameFieldFlag": false,
-            "creatable": false,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "name": "ownerDepartment",
-            "description": null,
-            "type": "Reference",
-            "displayOrder": 0,
-            "nullable": false,
-            "updatable": false,
-            "defaultMemberOfListFlag": false,
-            "entityCode": 1113,
-            "physicalName": "ownerDepartment",
-            "fieldViewModel": null
-        },
-        {
-            "physicalName": "c_xuqiubianhao",
-            "displayOrder": 0,
-            "nameFieldFlag": true,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 200,
-                "validators": []
-            },
-            "type": "Text",
-            "description": null,
-            "creatable": true,
-            "referTo": null,
-            "referenceSetting": null,
-            "fieldId": "0000002-92ce274dd3c94056acb9efdb2ea06caa",
-            "label": "需求编号",
-            "nullable": false,
-            "updatable": true,
-            "idFieldFlag": false,
-            "entityCode": 1113,
-            "name": "xuqiubianhao"
-        },
-        {
-            "displayOrder": 0,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-3ef9473fc24147d0896f2154b1934845",
-            "label": "需求提交人",
-            "physicalName": "c_xuqiutijiaoren",
-            "creatable": true,
-            "name": "xuqiutijiaoren",
-            "nullable": true,
-            "defaultMemberOfListFlag": false,
-            "referenceSetting": [
-                {
-                    "entityName": "User",
-                    "fieldList": [
-                        "departmentId",
-                        "userName"
-                    ]
-                }
-            ],
-            "fieldViewModel": {
-                "searchDialogWidth": 520,
-                "validators": []
-            },
-            "entityCode": 1113,
-            "type": "Reference",
-            "description": null,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "referTo": "User,"
-        },
-        {
-            "fieldId": "0000002-da16a1d7702f4b6e83821ea85705d46d",
-            "entityCode": 1113,
-            "physicalName": "c_tijiaoriqi",
-            "defaultMemberOfListFlag": false,
-            "nullable": true,
-            "updatable": true,
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "referTo": null,
-            "type": "Date",
-            "description": null,
-            "displayOrder": 0,
-            "name": "tijiaoriqi",
-            "label": "提交日期",
-            "creatable": true,
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": {
-                "validators": []
-            },
-            "referenceSetting": null
-        },
-        {
-            "type": "Option",
-            "displayOrder": 0,
-            "referTo": null,
-            "fieldId": "0000002-e964145a8d1248dc8aaea34416ab6338",
-            "name": "xuqiuleixing",
-            "label": "需求类型",
-            "updatable": true,
-            "referenceSetting": null,
-            "entityCode": 1113,
-            "description": null,
-            "nullable": false,
-            "physicalName": "c_xuqiuleixing",
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "fieldViewModel": null,
-            "creatable": true,
-            "optionList": [
-                {
-                    "label": "新增需求",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "替换需求",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "储备需求",
-                    "value": 3,
-                    "displayOrder": 3
-                }
-            ]
-        },
-        {
-            "creatable": true,
-            "updatable": true,
-            "defaultMemberOfListFlag": true,
-            "referenceSetting": null,
-            "name": "xuqiuzhuangtai",
-            "type": "Option",
-            "nullable": false,
-            "referTo": null,
-            "fieldViewModel": null,
-            "fieldId": "0000002-d3da7d50b97e47e2a02d88aa88e8fa94",
-            "physicalName": "c_xuqiuzhuangtai",
-            "displayOrder": 0,
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "entityCode": 1113,
-            "description": null,
-            "label": "需求状态",
-            "optionList": [
-                {
-                    "label": "开启",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "关闭",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "完成",
-                    "value": 3,
-                    "displayOrder": 3
-                }
-            ]
-        },
-        {
-            "label": "招聘负责人",
-            "updatable": true,
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "entityCode": 1113,
-            "nullable": true,
-            "type": "Reference",
-            "description": null,
-            "creatable": true,
-            "referTo": "User,",
-            "name": "zhaopinfuzeren",
-            "physicalName": "c_zhaopinfuzeren",
-            "displayOrder": 0,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": {
-                "searchDialogWidth": 520,
-                "validators": []
-            },
-            "referenceSetting": [
-                {
-                    "entityName": "User",
-                    "fieldList": [
-                        "departmentId",
-                        "userName"
-                    ]
-                }
-            ],
-            "fieldId": "0000002-331c0b89af454bff83583ce22c76aef4"
-        },
-        {
-            "name": "xuanzeJD",
-            "nullable": false,
-            "fieldId": "0000002-320cdd3ec1d04d8287c09a37aa492c44",
-            "label": "选择JD",
-            "physicalName": "c_xuanzeJD",
-            "displayOrder": 0,
-            "updatable": true,
-            "entityCode": 1113,
-            "description": null,
-            "creatable": true,
-            "idFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": true,
-            "referTo": "JDjichubiao,",
-            "fieldViewModel": {
-                "searchDialogWidth": 520,
-                "validators": []
-            },
-            "type": "Reference",
-            "referenceSetting": [
-                {
-                    "entityName": "JDjichubiao",
-                    "fieldList": [
-                        "xuanzegangwei",
-                        "gangweizhize",
-                        "renzhiyaoqiu"
-                    ]
-                }
-            ],
-            "nameFieldFlag": false
-        },
-        {
-            "nullable": false,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-59152b33b8d24751a9e4247c6ac8bad8",
-            "displayOrder": 0,
-            "type": "Option",
-            "idFieldFlag": false,
-            "entityCode": 1113,
-            "name": "gangweixingzhi",
-            "referTo": null,
-            "fieldViewModel": null,
-            "physicalName": "c_gangweixingzhi",
-            "nameFieldFlag": false,
-            "creatable": true,
-            "updatable": true,
-            "defaultMemberOfListFlag": true,
-            "referenceSetting": null,
-            "label": "岗位性质",
-            "description": null,
-            "optionList": [
-                {
-                    "label": "正式",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "实习",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "兼职",
-                    "value": 3,
-                    "displayOrder": 3
-                },
-                {
-                    "label": "劳务派遣",
-                    "value": 4,
-                    "displayOrder": 4
-                },
-                {
-                    "label": "其他",
-                    "value": 5,
-                    "displayOrder": 5
-                }
-            ]
-        },
-        {
-            "name": "xuqiurenshu",
-            "label": "需求人数",
-            "updatable": true,
-            "referTo": null,
-            "fieldId": "0000002-f6fd978919a04741bbbccbfe3145ce95",
-            "creatable": true,
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": {
-                "maxValue": 999999999,
-                "minValue": -999999999,
-                "validators": []
-            },
-            "description": null,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "physicalName": "c_xuqiurenshu",
-            "type": "Integer",
-            "displayOrder": 0,
-            "nullable": true,
-            "referenceSetting": null,
-            "entityCode": 1113
-        },
-        {
-            "referenceSetting": null,
-            "fieldId": "0000002-e66098e1c00446cea7bf9e0861f00eb0",
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "name": "gongzuodidian",
-            "description": null,
-            "physicalName": "c_gongzuodidian",
-            "type": "AreaSelect",
-            "updatable": true,
-            "referTo": null,
-            "fieldViewModel": {
-                "validators": [],
-                "areaDataType": 1
-            },
-            "entityCode": 1113,
-            "label": "工作地点",
-            "nullable": true,
-            "creatable": true,
-            "displayOrder": 0
-        },
-        {
-            "creatable": true,
-            "nameFieldFlag": false,
-            "entityCode": 1113,
-            "nullable": true,
-            "fieldId": "0000002-03ccb664182246cb9a5ca590432b63b7",
-            "updatable": true,
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referTo": null,
-            "referenceSetting": null,
-            "description": null,
-            "label": "期望到岗时间",
-            "physicalName": "c_qiwangdaogangshijian",
-            "type": "Date",
-            "displayOrder": 0,
-            "idFieldFlag": false,
-            "fieldViewModel": {
-                "validators": []
-            },
-            "name": "qiwangdaogangshijian"
-        },
-        {
-            "displayOrder": 0,
-            "creatable": true,
-            "updatable": true,
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "entityCode": 1113,
-            "name": "xinziqujian",
-            "description": null,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-1d3ba6f7f2f84ca4a5af9b0df3bb8839",
-            "label": "薪资区间",
-            "physicalName": "c_xinziqujian",
-            "nameFieldFlag": false,
-            "referTo": null,
-            "referenceSetting": null,
-            "type": "Text",
-            "nullable": true,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 200,
-                "validators": []
-            }
-        },
-        {
-            "mainDetailFieldFlag": false,
-            "referTo": null,
-            "description": null,
-            "updatable": true,
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "fieldId": "0000002-f9662670ef414834ac0e554d9875011c",
-            "label": "发放模式",
-            "displayOrder": 0,
-            "referenceSetting": null,
-            "entityCode": 1113,
-            "name": "fafangmoshi",
-            "creatable": true,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 200,
-                "validators": []
-            },
-            "physicalName": "c_fafangmoshi",
-            "type": "Text",
-            "nullable": true
-        },
-        {
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referTo": null,
-            "idFieldFlag": false,
-            "physicalName": "c_renyuanlaiyuan",
-            "displayOrder": 0,
-            "creatable": true,
-            "fieldViewModel": null,
-            "entityCode": 1113,
-            "nullable": true,
-            "referenceSetting": null,
-            "type": "Option",
-            "name": "renyuanlaiyuan",
-            "label": "人员来源",
-            "description": null,
-            "updatable": true,
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-9113bf5c816543ac84a0e2564dd2cad1",
-            "optionList": [
-                {
-                    "label": "内聘",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "社招",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "校招",
-                    "value": 3,
-                    "displayOrder": 3
-                }
-            ]
-        },
-        {
-            "mainDetailFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referTo": null,
-            "type": "Option",
-            "nullable": true,
-            "nameFieldFlag": false,
-            "description": null,
-            "updatable": true,
-            "fieldViewModel": null,
-            "fieldId": "0000002-e145a850e31b4539baa83fc9a409156f",
-            "name": "xueliyaoqiu",
-            "idFieldFlag": false,
-            "entityCode": 1113,
-            "physicalName": "c_xueliyaoqiu",
-            "displayOrder": 0,
-            "label": "学历要求",
-            "creatable": true,
-            "referenceSetting": null,
-            "optionList": [
-                {
-                    "label": "小学",
-                    "value": 1,
-                    "displayOrder": 1
-                },
-                {
-                    "label": "初中",
-                    "value": 2,
-                    "displayOrder": 2
-                },
-                {
-                    "label": "高中、中专、中职",
-                    "value": 3,
-                    "displayOrder": 3
-                },
-                {
-                    "label": "大专、高职",
-                    "value": 4,
-                    "displayOrder": 4
-                },
-                {
-                    "label": "本科",
-                    "value": 5,
-                    "displayOrder": 5
-                },
-                {
-                    "label": "硕士",
-                    "value": 6,
-                    "displayOrder": 6
-                },
-                {
-                    "label": "博士",
-                    "value": 7,
-                    "displayOrder": 7
-                }
-            ]
-        },
-        {
-            "name": "gongzuonianxianyaoqiu",
-            "physicalName": "c_gongzuonianxianyaoqiu",
-            "type": "Text",
-            "mainDetailFieldFlag": false,
-            "fieldId": "0000002-b168aeb767e4414b9d851ac7002ed0c7",
-            "label": "工作年限要求",
-            "displayOrder": 0,
-            "nullable": true,
-            "creatable": true,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "referenceSetting": null,
-            "entityCode": 1113,
-            "updatable": true,
-            "idFieldFlag": false,
-            "referTo": null,
-            "fieldViewModel": {
-                "validators": [],
-                "minLength": 0,
-                "maxLength": 200
-            },
-            "description": null
-        },
-        {
-            "name": "nianlingyaoqiu",
-            "type": "Text",
-            "updatable": true,
-            "nameFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "label": "年龄要求",
-            "description": null,
-            "displayOrder": 0,
-            "referTo": null,
-            "fieldId": "0000002-21235a4f322e4fdfa5e353252d06fefd",
-            "nullable": true,
-            "creatable": true,
-            "idFieldFlag": false,
-            "referenceSetting": null,
-            "entityCode": 1113,
-            "physicalName": "c_nianlingyaoqiu",
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 200,
-                "validators": []
-            }
-        },
-        {
-            "creatable": true,
-            "referTo": null,
-            "referenceSetting": null,
-            "type": "TextArea",
-            "physicalName": "c_gangweizhize",
-            "updatable": true,
-            "label": "岗位职责",
-            "name": "gangweizhize",
-            "displayOrder": 0,
-            "idFieldFlag": false,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "entityCode": 1113,
-            "description": null,
-            "nullable": true,
-            "defaultMemberOfListFlag": false,
-            "fieldViewModel": {
-                "maxLength": 1000,
-                "rows": 3,
-                "validators": [],
-                "minLength": 0
-            },
-            "fieldId": "0000002-bb6b696f044d43b881a52fedc4571f24"
-        },
-        {
-            "type": "TextArea",
-            "displayOrder": 0,
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "nullable": true,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "entityCode": 1113,
-            "label": "任职要求",
-            "physicalName": "c_renzhiyaoqiu",
-            "description": null,
-            "referTo": null,
-            "fieldViewModel": {
-                "minLength": 0,
-                "maxLength": 1000,
-                "rows": 3,
-                "validators": []
-            },
-            "fieldId": "0000002-5045e85c532f46fb8f16ed591228db4e",
-            "name": "renzhiyaoqiu",
-            "creatable": true,
-            "referenceSetting": null
-        },
-        {
-            "fieldId": "0000002-caebec3943f64a13beae76d09e4be8f2",
-            "referTo": null,
-            "updatable": true,
-            "nameFieldFlag": false,
-            "mainDetailFieldFlag": false,
-            "fieldViewModel": {
-                "validators": [],
-                "minLength": 0,
-                "maxLength": 1000,
-                "rows": 3
-            },
-            "entityCode": 1113,
-            "label": "备注",
-            "physicalName": "c_beizhu",
-            "referenceSetting": null,
-            "description": null,
-            "displayOrder": 0,
-            "creatable": true,
-            "idFieldFlag": false,
-            "defaultMemberOfListFlag": false,
-            "name": "beizhu",
-            "type": "TextArea",
-            "nullable": true
+          "entityName": "User",
+          "fieldList": [
+            "departmentId",
+            "userName"
+          ],
+          "filterJson": null,
+          "refDetailEntityFlag": null,
+          "mainEntityRefFieldOfSelf": null,
+          "mainEntityRefFieldOfParent": null
         }
-    ]
+      ],
+      "entityCode": 1113,
+      "name": "xuqiutijiaoren",
+      "type": "Reference",
+      "description": null,
+      "referTo": "User,",
+      "fieldId": "0000002-3ef9473fc24147d0896f2154b1934845",
+      "physicalName": "c_xuqiutijiaoren"
+    },
+    {
+      "fieldId": "0000002-da16a1d7702f4b6e83821ea85705d46d",
+      "nameFieldFlag": false,
+      "extraAttrs": null,
+      "type": "Date",
+      "creatable": true,
+      "updatable": true,
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "referenceSetting": null,
+      "name": "tijiaoriqi",
+      "label": "提交日期",
+      "referTo": null,
+      "fieldViewModel": {
+        "validators": []
+      },
+      "entityCode": 1113,
+      "physicalName": "c_tijiaoriqi",
+      "description": null,
+      "displayOrder": 0,
+      "nullable": true,
+      "defaultMemberOfListFlag": false
+    },
+    {
+      "updatable": true,
+      "fieldViewModel": {},
+      "name": "xuqiuleixing",
+      "physicalName": "c_xuqiuleixing",
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "referenceSetting": null,
+      "description": null,
+      "displayOrder": 0,
+      "nullable": false,
+      "fieldId": "0000002-e964145a8d1248dc8aaea34416ab6338",
+      "entityCode": 1113,
+      "label": "需求类型",
+      "type": "Option",
+      "creatable": true,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "referTo": null,
+      "optionList": [
+        {
+          "label": "新增需求",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "替换需求",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "储备需求",
+          "value": 3,
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "fieldId": "0000002-d3da7d50b97e47e2a02d88aa88e8fa94",
+      "name": "xuqiuzhuangtai",
+      "label": "需求状态",
+      "nullable": false,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "referTo": null,
+      "physicalName": "c_xuqiuzhuangtai",
+      "entityCode": 1113,
+      "description": null,
+      "extraAttrs": null,
+      "type": "Option",
+      "displayOrder": 0,
+      "creatable": true,
+      "updatable": true,
+      "idFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "fieldViewModel": {},
+      "referenceSetting": null,
+      "optionList": [
+        {
+          "label": "开启",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "关闭",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "完成",
+          "value": 3,
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "fieldId": "0000002-331c0b89af454bff83583ce22c76aef4",
+      "entityCode": 1113,
+      "name": "zhaopinfuzeren",
+      "description": null,
+      "updatable": true,
+      "nameFieldFlag": false,
+      "referenceSetting": [
+        {
+          "filterJson": null,
+          "refDetailEntityFlag": null,
+          "mainEntityRefFieldOfSelf": null,
+          "mainEntityRefFieldOfParent": null,
+          "entityName": "User",
+          "fieldList": [
+            "departmentId",
+            "userName"
+          ]
+        }
+      ],
+      "physicalName": "c_zhaopinfuzeren",
+      "displayOrder": 0,
+      "creatable": true,
+      "idFieldFlag": false,
+      "referTo": "User,",
+      "fieldViewModel": {
+        "searchDialogWidth": 520,
+        "validators": []
+      },
+      "nullable": true,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "extraAttrs": null,
+      "label": "招聘负责人",
+      "type": "Reference"
+    },
+    {
+      "referenceSetting": [
+        {
+          "entityName": "JDjichubiao",
+          "fieldList": [
+            "xuanzegangwei",
+            "gangweizhize",
+            "renzhiyaoqiu"
+          ],
+          "filterJson": null,
+          "refDetailEntityFlag": null,
+          "mainEntityRefFieldOfSelf": null,
+          "mainEntityRefFieldOfParent": null
+        }
+      ],
+      "fieldId": "0000002-320cdd3ec1d04d8287c09a37aa492c44",
+      "extraAttrs": null,
+      "referTo": "JDjichubiao,",
+      "physicalName": "c_xuanzeJD",
+      "type": "Reference",
+      "creatable": true,
+      "updatable": true,
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "entityCode": 1113,
+      "label": "选择JD",
+      "description": null,
+      "displayOrder": 0,
+      "nullable": false,
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "fieldViewModel": {
+        "searchDialogWidth": 520,
+        "validators": []
+      },
+      "name": "xuanzeJD"
+    },
+    {
+      "entityCode": 1113,
+      "description": null,
+      "creatable": true,
+      "updatable": true,
+      "fieldViewModel": {},
+      "name": "gangweixingzhi",
+      "type": "Option",
+      "displayOrder": 0,
+      "referenceSetting": null,
+      "fieldId": "0000002-59152b33b8d24751a9e4247c6ac8bad8",
+      "label": "岗位性质",
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": true,
+      "extraAttrs": null,
+      "referTo": null,
+      "physicalName": "c_gangweixingzhi",
+      "nullable": false,
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "optionList": [
+        {
+          "label": "正式",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "实习",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "兼职",
+          "value": 3,
+          "displayOrder": 3
+        },
+        {
+          "label": "劳务派遣",
+          "value": 4,
+          "displayOrder": 4
+        },
+        {
+          "label": "其他",
+          "value": 5,
+          "displayOrder": 5
+        }
+      ]
+    },
+    {
+      "creatable": true,
+      "fieldId": "0000002-f6fd978919a04741bbbccbfe3145ce95",
+      "nullable": true,
+      "physicalName": "c_xuqiurenshu",
+      "description": null,
+      "updatable": true,
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "name": "xuqiurenshu",
+      "label": "需求人数",
+      "defaultMemberOfListFlag": false,
+      "referenceSetting": null,
+      "type": "Integer",
+      "extraAttrs": null,
+      "nameFieldFlag": false,
+      "referTo": null,
+      "fieldViewModel": {
+        "minValue": -999999999,
+        "validators": [],
+        "maxValue": 999999999
+      },
+      "entityCode": 1113,
+      "displayOrder": 0
+    },
+    {
+      "entityCode": 1113,
+      "name": "gongzuodidian",
+      "extraAttrs": null,
+      "referTo": null,
+      "label": "工作地点",
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "referenceSetting": null,
+      "displayOrder": 0,
+      "nullable": true,
+      "creatable": true,
+      "fieldViewModel": {
+        "validators": [],
+        "areaDataType": 1
+      },
+      "fieldId": "0000002-e66098e1c00446cea7bf9e0861f00eb0",
+      "physicalName": "c_gongzuodidian",
+      "type": "AreaSelect",
+      "description": null,
+      "updatable": true,
+      "defaultMemberOfListFlag": false
+    },
+    {
+      "description": null,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "referenceSetting": null,
+      "fieldId": "0000002-03ccb664182246cb9a5ca590432b63b7",
+      "physicalName": "c_qiwangdaogangshijian",
+      "type": "Date",
+      "creatable": true,
+      "mainDetailFieldFlag": false,
+      "entityCode": 1113,
+      "name": "qiwangdaogangshijian",
+      "nullable": true,
+      "updatable": true,
+      "defaultMemberOfListFlag": false,
+      "label": "期望到岗时间",
+      "displayOrder": 0,
+      "extraAttrs": null,
+      "referTo": null,
+      "fieldViewModel": {
+        "validators": []
+      }
+    },
+    {
+      "nullable": true,
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "name": "xinziqujian",
+      "displayOrder": 0,
+      "creatable": true,
+      "extraAttrs": null,
+      "fieldId": "0000002-1d3ba6f7f2f84ca4a5af9b0df3bb8839",
+      "entityCode": 1113,
+      "physicalName": "c_xinziqujian",
+      "type": "Text",
+      "updatable": true,
+      "mainDetailFieldFlag": false,
+      "label": "薪资区间",
+      "description": null,
+      "idFieldFlag": false,
+      "referTo": null,
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 200,
+        "validators": []
+      },
+      "referenceSetting": null
+    },
+    {
+      "nameFieldFlag": false,
+      "referTo": null,
+      "idFieldFlag": false,
+      "referenceSetting": null,
+      "name": "fafangmoshi",
+      "label": "发放模式",
+      "displayOrder": 0,
+      "creatable": true,
+      "extraAttrs": null,
+      "description": null,
+      "nullable": true,
+      "updatable": true,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldId": "0000002-f9662670ef414834ac0e554d9875011c",
+      "entityCode": 1113,
+      "physicalName": "c_fafangmoshi",
+      "type": "Text",
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 200,
+        "validators": []
+      }
+    },
+    {
+      "type": "Option",
+      "description": null,
+      "defaultMemberOfListFlag": false,
+      "extraAttrs": null,
+      "referenceSetting": null,
+      "entityCode": 1113,
+      "name": "renyuanlaiyuan",
+      "label": "人员来源",
+      "fieldViewModel": {},
+      "physicalName": "c_renyuanlaiyuan",
+      "creatable": true,
+      "mainDetailFieldFlag": false,
+      "referTo": null,
+      "fieldId": "0000002-9113bf5c816543ac84a0e2564dd2cad1",
+      "displayOrder": 0,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "nullable": true,
+      "updatable": true,
+      "optionList": [
+        {
+          "label": "内聘",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "社招",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "校招",
+          "value": 3,
+          "displayOrder": 3
+        }
+      ]
+    },
+    {
+      "referenceSetting": null,
+      "fieldId": "0000002-e145a850e31b4539baa83fc9a409156f",
+      "name": "xueliyaoqiu",
+      "label": "学历要求",
+      "description": null,
+      "referTo": null,
+      "displayOrder": 0,
+      "creatable": true,
+      "defaultMemberOfListFlag": false,
+      "updatable": true,
+      "mainDetailFieldFlag": false,
+      "fieldViewModel": {},
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "extraAttrs": null,
+      "entityCode": 1113,
+      "physicalName": "c_xueliyaoqiu",
+      "type": "Option",
+      "nullable": true,
+      "optionList": [
+        {
+          "label": "小学",
+          "value": 1,
+          "displayOrder": 1
+        },
+        {
+          "label": "初中",
+          "value": 2,
+          "displayOrder": 2
+        },
+        {
+          "label": "高中、中专、中职",
+          "value": 3,
+          "displayOrder": 3
+        },
+        {
+          "label": "大专、高职",
+          "value": 4,
+          "displayOrder": 4
+        },
+        {
+          "label": "本科",
+          "value": 5,
+          "displayOrder": 5
+        },
+        {
+          "label": "硕士",
+          "value": 6,
+          "displayOrder": 6
+        },
+        {
+          "label": "博士",
+          "value": 7,
+          "displayOrder": 7
+        }
+      ]
+    },
+    {
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldId": "0000002-b168aeb767e4414b9d851ac7002ed0c7",
+      "entityCode": 1113,
+      "name": "gongzuonianxianyaoqiu",
+      "displayOrder": 0,
+      "nullable": true,
+      "idFieldFlag": false,
+      "label": "工作年限要求",
+      "description": null,
+      "updatable": true,
+      "extraAttrs": null,
+      "creatable": true,
+      "referTo": null,
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 200,
+        "validators": []
+      },
+      "referenceSetting": null,
+      "physicalName": "c_gongzuonianxianyaoqiu",
+      "type": "Text",
+      "mainDetailFieldFlag": false
+    },
+    {
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "description": null,
+      "updatable": true,
+      "referTo": null,
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 200,
+        "validators": []
+      },
+      "displayOrder": 0,
+      "nullable": true,
+      "creatable": true,
+      "extraAttrs": null,
+      "fieldId": "0000002-21235a4f322e4fdfa5e353252d06fefd",
+      "label": "年龄要求",
+      "physicalName": "c_nianlingyaoqiu",
+      "type": "Text",
+      "referenceSetting": null,
+      "entityCode": 1113,
+      "name": "nianlingyaoqiu",
+      "nameFieldFlag": false,
+      "defaultMemberOfListFlag": false
+    },
+    {
+      "name": "gangweizhize",
+      "physicalName": "c_gangweizhize",
+      "description": null,
+      "defaultMemberOfListFlag": false,
+      "entityCode": 1113,
+      "label": "岗位职责",
+      "creatable": true,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "referenceSetting": null,
+      "fieldViewModel": {
+        "minLength": 0,
+        "maxLength": 1000,
+        "rows": 3,
+        "validators": []
+      },
+      "type": "TextArea",
+      "displayOrder": 0,
+      "nullable": true,
+      "updatable": true,
+      "mainDetailFieldFlag": false,
+      "extraAttrs": null,
+      "fieldId": "0000002-bb6b696f044d43b881a52fedc4571f24",
+      "referTo": null
+    },
+    {
+      "physicalName": "c_renzhiyaoqiu",
+      "type": "TextArea",
+      "referTo": null,
+      "idFieldFlag": false,
+      "mainDetailFieldFlag": false,
+      "defaultMemberOfListFlag": false,
+      "fieldViewModel": {
+        "maxLength": 1000,
+        "rows": 3,
+        "validators": [],
+        "minLength": 0
+      },
+      "referenceSetting": null,
+      "description": null,
+      "nullable": true,
+      "updatable": true,
+      "fieldId": "0000002-5045e85c532f46fb8f16ed591228db4e",
+      "entityCode": 1113,
+      "displayOrder": 0,
+      "creatable": true,
+      "nameFieldFlag": false,
+      "extraAttrs": null,
+      "name": "renzhiyaoqiu",
+      "label": "任职要求"
+    },
+    {
+      "defaultMemberOfListFlag": false,
+      "referenceSetting": null,
+      "fieldId": "0000002-caebec3943f64a13beae76d09e4be8f2",
+      "entityCode": 1113,
+      "type": "TextArea",
+      "creatable": true,
+      "mainDetailFieldFlag": false,
+      "name": "beizhu",
+      "nullable": true,
+      "updatable": true,
+      "extraAttrs": null,
+      "description": null,
+      "idFieldFlag": false,
+      "nameFieldFlag": false,
+      "fieldViewModel": {
+        "maxLength": 1000,
+        "rows": 3,
+        "validators": [],
+        "minLength": 0
+      },
+      "label": "备注",
+      "physicalName": "c_beizhu",
+      "displayOrder": 0,
+      "referTo": null
+    }
+  ]
 }
