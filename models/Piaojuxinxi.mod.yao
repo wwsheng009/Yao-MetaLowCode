@@ -1,8 +1,8 @@
 {
-  "name": "LayoutConfig",
-  "label": "布局设置",
+  "name": "Piaojuxinxi",
+  "label": "票据信息",
   "table": {
-    "name": "t_layout_config"
+    "name": "t_piaojuxinxi"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "layoutConfigId",
+      "name": "piaojuxinxiId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -50,63 +50,55 @@
       "type": "string"
     },
     {
-      "comment": "所属用户",
-      "label": "所属用户",
-      "name": "ownerUser",
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdFeiyongbaoxiaodanId",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "所属部门",
-      "label": "所属部门",
-      "name": "ownerDepartment",
+      "comment": "会计科目",
+      "label": "会计科目",
+      "name": "kuaijikemu",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "配置名称",
-      "label": "配置名称",
-      "name": "configName",
+      "comment": "发票类型",
+      "label": "发票类型",
+      "name": "fapiaoleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "发票号码",
+      "label": "发票号码",
+      "name": "fapiaohaoma",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "配置",
-      "label": "配置",
-      "name": "config",
+      "comment": "发票金额/元",
+      "label": "发票金额/元",
+      "name": "fapiaojine",
       "nullable": true,
-      "type": "longText"
+      "type": "decimal",
+      "precision": 2
     },
     {
-      "comment": "分享给谁",
-      "label": "分享给谁",
-      "name": "shareTo",
+      "comment": "开票日期",
+      "label": "开票日期",
+      "name": "kaipiaoriqi",
       "nullable": true,
-      "type": "longText"
+      "type": "date"
     },
     {
-      "comment": "应用类型",
-      "label": "应用类型",
-      "name": "applyType",
+      "comment": "票据附件上传",
+      "label": "票据附件上传",
+      "name": "piaojufujianshangchuan",
       "nullable": true,
-      "type": "string",
-      "length": 200
-    },
-    {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "模组名称",
-      "label": "模组名称",
-      "name": "modelName",
-      "nullable": true,
-      "type": "string",
-      "length": 200
+      "type": "json"
     }
   ]
 }

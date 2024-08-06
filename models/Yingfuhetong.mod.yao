@@ -1,0 +1,151 @@
+{
+  "name": "Yingfuhetong",
+  "label": "应付合同",
+  "table": {
+    "name": "t_yingfuhetong"
+  },
+  "columns": [
+    {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "yingfuhetongId",
+      "nullable": true,
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属用户",
+      "label": "所属用户",
+      "name": "ownerUser",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "所属部门",
+      "label": "所属部门",
+      "name": "ownerDepartment",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "选择供应商",
+      "label": "选择供应商",
+      "name": "xuanzegongyingshang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "供应商名称",
+      "label": "供应商名称",
+      "name": "gongyingshangmingcheng",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "供应商编码",
+      "label": "供应商编码",
+      "name": "gongyingshangbianma",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "合同名称",
+      "label": "合同名称",
+      "name": "hetongmingcheng",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "合同签订日期",
+      "label": "合同签订日期",
+      "name": "hetongqiandingriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "合同结束日期",
+      "label": "合同结束日期",
+      "name": "hetongjieshuriqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "合同金额/元",
+      "label": "合同金额/元",
+      "name": "hetongjine",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "合同附件上传",
+      "label": "合同附件上传",
+      "name": "hetongfujianshangchuan",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "发票抬头",
+      "label": "发票抬头",
+      "name": "fapiaotaitou",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "发票税号",
+      "label": "发票税号",
+      "name": "fapiaoshuihao",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "增值税税率 %",
+      "label": "增值税税率 %",
+      "name": "zengzhishuishuilv",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    }
+  ]
+}

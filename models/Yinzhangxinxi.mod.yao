@@ -1,8 +1,8 @@
 {
-  "name": "LayoutConfig",
-  "label": "布局设置",
+  "name": "Yinzhangxinxi",
+  "label": "印章信息",
   "table": {
-    "name": "t_layout_config"
+    "name": "t_yinzhangxinxi"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "layoutConfigId",
+      "name": "yinzhangxinxiId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,49 +64,34 @@
       "type": "string"
     },
     {
-      "comment": "配置名称",
-      "label": "配置名称",
-      "name": "configName",
+      "comment": "印章名称",
+      "label": "印章名称",
+      "name": "yinzhangmingcheng",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "配置",
-      "label": "配置",
-      "name": "config",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "分享给谁",
-      "label": "分享给谁",
-      "name": "shareTo",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "应用类型",
-      "label": "应用类型",
-      "name": "applyType",
+      "comment": "说明",
+      "label": "说明",
+      "name": "shuoming",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
+      "comment": "印章状态",
+      "label": "印章状态",
+      "name": "yinzhangzhuangtai",
       "nullable": true,
-      "type": "integer"
+      "type": "string"
     },
     {
-      "comment": "模组名称",
-      "label": "模组名称",
-      "name": "modelName",
+      "comment": "印章负责人",
+      "label": "印章负责人",
+      "name": "yinzhangfuzeren",
       "nullable": true,
-      "type": "string",
-      "length": 200
+      "type": "string"
     }
   ]
 }

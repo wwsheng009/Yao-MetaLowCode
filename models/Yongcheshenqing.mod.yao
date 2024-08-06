@@ -1,8 +1,8 @@
 {
-  "name": "CRMshichanghuodongjilu",
-  "label": "CRM市场活动记录",
+  "name": "Yongcheshenqing",
+  "label": "用车申请",
   "table": {
-    "name": "t_crmshichanghuodongjilu"
+    "name": "t_yongcheshenqing"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "cRMshichanghuodongjiluId",
+      "name": "yongcheshenqingId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,84 +64,48 @@
       "type": "string"
     },
     {
-      "comment": "活动名称",
-      "label": "活动名称",
-      "name": "huodongmingcheng",
+      "comment": "车辆类型",
+      "label": "车辆类型",
+      "name": "cheliangleixing",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "计划用车时间",
+      "label": "计划用车时间",
+      "name": "jihuayongcheshijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "预计返回时间",
+      "label": "预计返回时间",
+      "name": "yujifanhuishijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "目的地",
+      "label": "目的地",
+      "name": "mudidi",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "详细地址",
+      "label": "详细地址",
+      "name": "xiangxidizhi",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "活动开始时间",
-      "label": "活动开始时间",
-      "name": "huodongkaishishijian",
+      "comment": "用车事由",
+      "label": "用车事由",
+      "name": "yongcheshiyou",
       "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "活动结束时间",
-      "label": "活动结束时间",
-      "name": "huodongjieshushijian",
-      "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "活动类型",
-      "label": "活动类型",
-      "name": "huodongleixing",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "责任人",
-      "label": "责任人",
-      "name": "zerenren",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "责任部门",
-      "label": "责任部门",
-      "name": "zerenbumen",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "预计投入成本",
-      "label": "预计投入成本",
-      "name": "yujitouruchengben",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "预计产出线索数",
-      "label": "预计产出线索数",
-      "name": "yujichanchuxiansuoshu",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "活动计划",
-      "label": "活动计划",
-      "name": "huodongjihua",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "实际投入成本",
-      "label": "实际投入成本",
-      "name": "shijitouruchengben",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "活动总结",
-      "label": "活动总结",
-      "name": "huodongzongjie",
-      "nullable": true,
-      "type": "longText"
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "审批流程",
@@ -177,6 +141,13 @@
       "name": "lastApprovalRemark",
       "nullable": true,
       "type": "longText"
+    },
+    {
+      "comment": "申请车辆",
+      "label": "申请车辆",
+      "name": "shenqingcheliang",
+      "nullable": true,
+      "type": "string"
     }
   ]
 }

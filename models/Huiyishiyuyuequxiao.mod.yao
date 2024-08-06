@@ -1,8 +1,8 @@
 {
-  "name": "Chanpinxinxi",
-  "label": "产品信息",
+  "name": "Huiyishiyuyuequxiao",
+  "label": "会议室预约取消",
   "table": {
-    "name": "t_chanpinxinxi"
+    "name": "t_huiyishiyuyuequxiao"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "chanpinxinxiId",
+      "name": "huiyishiyuyuequxiaoId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,115 +64,100 @@
       "type": "string"
     },
     {
-      "comment": "产品编码",
-      "label": "产品编码",
-      "name": "chanpinbianma",
+      "comment": "预约情况",
+      "label": "预约情况",
+      "name": "yuyueqingkuang",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "会议主题",
+      "label": "会议主题",
+      "name": "huiyizhuti",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "产品属性",
-      "label": "产品属性",
-      "name": "chanpinshuxing",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "产品类型",
-      "label": "产品类型",
-      "name": "chanpinleixing",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "产品名称",
-      "label": "产品名称",
-      "name": "chanpinmingcheng",
+      "comment": "会议地点",
+      "label": "会议地点",
+      "name": "huiyididian",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "品牌",
-      "label": "品牌",
-      "name": "pinpai",
+      "comment": "会议室名称",
+      "label": "会议室名称",
+      "name": "huiyishimingcheng",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "规格型号",
-      "label": "规格型号",
-      "name": "guigexinghao",
+      "comment": "会议室编号",
+      "label": "会议室编号",
+      "name": "huiyishibianhao",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "单位",
-      "label": "单位",
-      "name": "danwei",
+      "comment": "会议开始时间",
+      "label": "会议开始时间",
+      "name": "huiyikaishishijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "会议结束时间",
+      "label": "会议结束时间",
+      "name": "huiyijieshushijian",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "会议取消原因",
+      "label": "会议取消原因",
+      "name": "huiyiquxiaoyuanyin",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "审批流程",
+      "label": "审批流程",
+      "name": "approvalConfigId",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "成本（单价/元）",
-      "label": "成本（单价/元）",
-      "name": "chengben",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "标准售价(含税)/元",
-      "label": "标准售价(含税)/元",
-      "name": "biaozhunshoujia",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "产品权限",
-      "label": "产品权限",
-      "name": "chanpinquanxian",
+      "comment": "审批状态",
+      "label": "审批状态",
+      "name": "approvalStatus",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "产品图片",
-      "label": "产品图片",
-      "name": "chanpintupian",
-      "nullable": true,
-      "type": "json"
-    },
-    {
-      "comment": "当前库存数",
-      "label": "当前库存数",
-      "name": "dangqiankucunshu",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "可用库存数",
-      "label": "可用库存数",
-      "name": "keyongkucunshu",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "仓库",
-      "label": "仓库",
-      "name": "cangku",
+      "comment": "最近审批人",
+      "label": "最近审批人",
+      "name": "lastApprovedBy",
       "nullable": true,
       "type": "string"
     },
     {
-      "comment": "仓位",
-      "label": "仓位",
-      "name": "cangwei",
+      "comment": "最近审批时间",
+      "label": "最近审批时间",
+      "name": "lastApprovedOn",
       "nullable": true,
-      "type": "string"
+      "type": "datetime"
+    },
+    {
+      "comment": "最近审批批注",
+      "label": "最近审批批注",
+      "name": "lastApprovalRemark",
+      "nullable": true,
+      "type": "longText"
     }
   ]
 }

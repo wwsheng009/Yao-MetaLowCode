@@ -1,0 +1,82 @@
+{
+  "name": "ExternalForm",
+  "label": "外置表单",
+  "table": {
+    "name": "t_external_form"
+  },
+  "columns": [
+    {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "外置表单名称",
+      "label": "外置表单名称",
+      "name": "externalFormName",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "实体Code",
+      "label": "实体Code",
+      "name": "entityCode",
+      "nullable": true,
+      "type": "integer"
+    },
+    {
+      "comment": "是否禁用",
+      "label": "是否禁用",
+      "name": "isDisabled",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "绑定用户",
+      "label": "绑定用户",
+      "name": "bindUsers",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "externalFormId",
+      "nullable": true,
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
+    }
+  ]
+}

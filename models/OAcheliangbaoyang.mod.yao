@@ -1,8 +1,8 @@
 {
-  "name": "LayoutConfig",
-  "label": "布局设置",
+  "name": "OAcheliangbaoyang",
+  "label": "OA车辆保养",
   "table": {
-    "name": "t_layout_config"
+    "name": "t_oacheliangbaoyang"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "layoutConfigId",
+      "name": "oAcheliangbaoyangId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,49 +64,56 @@
       "type": "string"
     },
     {
-      "comment": "配置名称",
-      "label": "配置名称",
-      "name": "configName",
+      "comment": "保养单号",
+      "label": "保养单号",
+      "name": "baoyangdanhao",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "配置",
-      "label": "配置",
-      "name": "config",
+      "comment": "保养日期",
+      "label": "保养日期",
+      "name": "baoyangriqi",
       "nullable": true,
-      "type": "longText"
+      "type": "date"
     },
     {
-      "comment": "分享给谁",
-      "label": "分享给谁",
-      "name": "shareTo",
+      "comment": "保养状态",
+      "label": "保养状态",
+      "name": "baoyangzhuangtai",
       "nullable": true,
-      "type": "longText"
+      "type": "string"
     },
     {
-      "comment": "应用类型",
-      "label": "应用类型",
-      "name": "applyType",
+      "comment": "保养费用",
+      "label": "保养费用",
+      "name": "baoyangfeiyong",
       "nullable": true,
-      "type": "string",
-      "length": 200
+      "type": "decimal",
+      "precision": 2
     },
     {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
+      "comment": "下次保养里程数",
+      "label": "下次保养里程数",
+      "name": "xiacibaoyanglichengshu",
       "nullable": true,
-      "type": "integer"
+      "type": "decimal",
+      "precision": 2
     },
     {
-      "comment": "模组名称",
-      "label": "模组名称",
-      "name": "modelName",
+      "comment": "保养人",
+      "label": "保养人",
+      "name": "baoyangren",
       "nullable": true,
-      "type": "string",
-      "length": 200
+      "type": "string"
+    },
+    {
+      "comment": "车辆信息",
+      "label": "车辆信息",
+      "name": "cheliangxinxi",
+      "nullable": true,
+      "type": "string"
     }
   ]
 }

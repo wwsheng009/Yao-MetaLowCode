@@ -139,6 +139,20 @@
       "name": "approvalUser",
       "nullable": true,
       "type": "string"
+    },
+    {
+      "comment": "wf实例Id",
+      "label": "wf实例Id",
+      "name": "wfProcInsId",
+      "nullable": true,
+      "type": "text"
+    },
+    {
+      "comment": "wf任务Id",
+      "label": "wf任务Id",
+      "name": "wfTaskId",
+      "nullable": true,
+      "type": "text"
     }
   ]
 }

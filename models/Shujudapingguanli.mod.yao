@@ -1,8 +1,8 @@
 {
-  "name": "LayoutConfig",
-  "label": "布局设置",
+  "name": "Shujudapingguanli",
+  "label": "数据大屏管理",
   "table": {
-    "name": "t_layout_config"
+    "name": "t_shujudapingguanli"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "layoutConfigId",
+      "name": "shujudapingguanliId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,49 +64,33 @@
       "type": "string"
     },
     {
-      "comment": "配置名称",
-      "label": "配置名称",
-      "name": "configName",
+      "comment": "数据大屏名称",
+      "label": "数据大屏名称",
+      "name": "shujudapingmingcheng",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "配置",
-      "label": "配置",
-      "name": "config",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "分享给谁",
-      "label": "分享给谁",
-      "name": "shareTo",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "应用类型",
-      "label": "应用类型",
-      "name": "applyType",
-      "nullable": true,
-      "type": "string",
-      "length": 200
-    },
-    {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
+      "comment": "大屏宽度",
+      "label": "大屏宽度",
+      "name": "dapingkuandu",
       "nullable": true,
       "type": "integer"
     },
     {
-      "comment": "模组名称",
-      "label": "模组名称",
-      "name": "modelName",
+      "comment": "大屏高度",
+      "label": "大屏高度",
+      "name": "dapinggaodu",
       "nullable": true,
-      "type": "string",
-      "length": 200
+      "type": "integer"
+    },
+    {
+      "comment": "数据模型",
+      "label": "数据模型",
+      "name": "shujumoxing",
+      "nullable": true,
+      "type": "string"
     }
   ]
 }

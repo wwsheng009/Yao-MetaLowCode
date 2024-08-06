@@ -48,6 +48,20 @@
       "name": "flowDefinition",
       "nullable": true,
       "type": "text"
+    },
+    {
+      "comment": "logicFlow的Json对象",
+      "label": "logicFlow的Json对象",
+      "name": "wfLogicFlow",
+      "nullable": true,
+      "type": "text"
+    },
+    {
+      "comment": "wf定义Id",
+      "label": "wf定义Id",
+      "name": "wfProcDefId",
+      "nullable": true,
+      "type": "text"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "name": "FormLayout",
-  "label": "表单布局",
+  "name": "Kehuguanxi",
+  "label": "客户关系",
   "table": {
-    "name": "t_form_layout"
+    "name": "t_kehuguanxi"
   },
   "columns": [
     {
@@ -12,9 +12,9 @@
       "primary": true
     },
     {
-      "comment": "布局Id主键",
-      "label": "布局Id主键",
-      "name": "formLayoutId",
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "kehuguanxiId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -50,33 +50,18 @@
       "type": "string"
     },
     {
-      "comment": "布局名称",
-      "label": "布局名称",
-      "name": "layoutName",
+      "comment": "主从关联Id",
+      "label": "主从关联Id",
+      "name": "mdKehuguanliId",
       "nullable": true,
-      "type": "text"
+      "type": "string"
     },
     {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
+      "comment": "客户关系",
+      "label": "客户关系",
+      "name": "kehuguanxi",
       "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "布局Json",
-      "label": "布局Json",
-      "name": "layoutJson",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "分享给谁",
-      "label": "分享给谁",
-      "name": "shareTo",
-      "nullable": true,
-      "type": "string",
-      "length": 200
+      "type": "string"
     }
   ]
 }

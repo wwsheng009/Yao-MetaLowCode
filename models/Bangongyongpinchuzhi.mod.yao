@@ -1,8 +1,8 @@
 {
-  "name": "LayoutConfig",
-  "label": "布局设置",
+  "name": "Bangongyongpinchuzhi",
+  "label": "办公用品处置",
   "table": {
-    "name": "t_layout_config"
+    "name": "t_bangongyongpinchuzhi"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "layoutConfigId",
+      "name": "bangongyongpinchuzhiId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,49 +64,41 @@
       "type": "string"
     },
     {
-      "comment": "配置名称",
-      "label": "配置名称",
-      "name": "configName",
+      "comment": "选择办公用品",
+      "label": "选择办公用品",
+      "name": "xuanzebangongyongpin",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "办公用品编号",
+      "label": "办公用品编号",
+      "name": "bangongyongpinbianhao",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "配置",
-      "label": "配置",
-      "name": "config",
+      "comment": "规格型号",
+      "label": "规格型号",
+      "name": "guigexinghao",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "处置原因",
+      "label": "处置原因",
+      "name": "guzhangjianshu",
       "nullable": true,
       "type": "longText"
     },
     {
-      "comment": "分享给谁",
-      "label": "分享给谁",
-      "name": "shareTo",
+      "comment": "处置方式",
+      "label": "处置方式",
+      "name": "chuzhifangshi",
       "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "应用类型",
-      "label": "应用类型",
-      "name": "applyType",
-      "nullable": true,
-      "type": "string",
-      "length": 200
-    },
-    {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "模组名称",
-      "label": "模组名称",
-      "name": "modelName",
-      "nullable": true,
-      "type": "string",
-      "length": 200
+      "type": "string"
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
-  "name": "LayoutConfig",
-  "label": "布局设置",
+  "name": "Bangongyongpin",
+  "label": "办公用品",
   "table": {
-    "name": "t_layout_config"
+    "name": "t_bangongyongpin"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "layoutConfigId",
+      "name": "bangongyongpinId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,49 +64,72 @@
       "type": "string"
     },
     {
-      "comment": "配置名称",
-      "label": "配置名称",
-      "name": "configName",
+      "comment": "名称",
+      "label": "名称",
+      "name": "mingcheng",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "配置",
-      "label": "配置",
-      "name": "config",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "分享给谁",
-      "label": "分享给谁",
-      "name": "shareTo",
-      "nullable": true,
-      "type": "longText"
-    },
-    {
-      "comment": "应用类型",
-      "label": "应用类型",
-      "name": "applyType",
+      "comment": "办公用品编号",
+      "label": "办公用品编号",
+      "name": "bangongyongpinbianhao",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "实体Code",
-      "label": "实体Code",
-      "name": "entityCode",
+      "comment": "办公用品类型",
+      "label": "办公用品类型",
+      "name": "bangongyongpinleixing",
       "nullable": true,
-      "type": "integer"
+      "type": "string"
     },
     {
-      "comment": "模组名称",
-      "label": "模组名称",
-      "name": "modelName",
+      "comment": "规格型号",
+      "label": "规格型号",
+      "name": "guigexinghao",
       "nullable": true,
       "type": "string",
       "length": 200
+    },
+    {
+      "comment": "单位",
+      "label": "单位",
+      "name": "danwei",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "图片",
+      "label": "图片",
+      "name": "tupian",
+      "nullable": true,
+      "type": "json"
+    },
+    {
+      "comment": "购入日期",
+      "label": "购入日期",
+      "name": "goururiqi",
+      "nullable": true,
+      "type": "date"
+    },
+    {
+      "comment": "成本单价/元",
+      "label": "成本单价/元",
+      "name": "chengbendanjia",
+      "nullable": true,
+      "type": "decimal",
+      "precision": 2
+    },
+    {
+      "comment": "资产状态",
+      "label": "资产状态",
+      "name": "zichanzhuangtai",
+      "nullable": true,
+      "type": "string"
     }
   ]
 }

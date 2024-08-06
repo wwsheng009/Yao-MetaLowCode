@@ -1,8 +1,8 @@
 {
-  "name": "CRMshichanghuodongjilu",
-  "label": "CRM市场活动记录",
+  "name": "Zhutishujumoxing",
+  "label": "主题数据模型",
   "table": {
-    "name": "t_crmshichanghuodongjilu"
+    "name": "t_zhutishujumoxing"
   },
   "columns": [
     {
@@ -14,7 +14,7 @@
     {
       "comment": "id主键",
       "label": "id主键",
-      "name": "cRMshichanghuodongjiluId",
+      "name": "zhutishujumoxingId",
       "nullable": true,
       "type": "char",
       "length": 40,
@@ -64,84 +64,58 @@
       "type": "string"
     },
     {
-      "comment": "活动名称",
-      "label": "活动名称",
-      "name": "huodongmingcheng",
+      "comment": "主题名称",
+      "label": "主题名称",
+      "name": "zhutimingcheng",
       "nullable": true,
       "type": "string",
       "length": 200
     },
     {
-      "comment": "活动开始时间",
-      "label": "活动开始时间",
-      "name": "huodongkaishishijian",
-      "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "活动结束时间",
-      "label": "活动结束时间",
-      "name": "huodongjieshushijian",
-      "nullable": true,
-      "type": "date"
-    },
-    {
-      "comment": "活动类型",
-      "label": "活动类型",
-      "name": "huodongleixing",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "责任人",
-      "label": "责任人",
-      "name": "zerenren",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "责任部门",
-      "label": "责任部门",
-      "name": "zerenbumen",
-      "nullable": true,
-      "type": "string"
-    },
-    {
-      "comment": "预计投入成本",
-      "label": "预计投入成本",
-      "name": "yujitouruchengben",
-      "nullable": true,
-      "type": "decimal",
-      "precision": 2
-    },
-    {
-      "comment": "预计产出线索数",
-      "label": "预计产出线索数",
-      "name": "yujichanchuxiansuoshu",
-      "nullable": true,
-      "type": "integer"
-    },
-    {
-      "comment": "活动计划",
-      "label": "活动计划",
-      "name": "huodongjihua",
+      "comment": "主题描述",
+      "label": "主题描述",
+      "name": "zhutimiaoshu",
       "nullable": true,
       "type": "longText"
     },
     {
-      "comment": "实际投入成本",
-      "label": "实际投入成本",
-      "name": "shijitouruchengben",
+      "comment": "编码",
+      "label": "编码",
+      "name": "bianma",
       "nullable": true,
-      "type": "decimal",
-      "precision": 2
+      "type": "string",
+      "length": 200
     },
     {
-      "comment": "活动总结",
-      "label": "活动总结",
-      "name": "huodongzongjie",
+      "comment": "数据源类型",
+      "label": "数据源类型",
+      "name": "shujuyuanleixing",
       "nullable": true,
-      "type": "longText"
+      "type": "string"
+    },
+    {
+      "comment": "数据源链接",
+      "label": "数据源链接",
+      "name": "shujuyuanlianjie",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "账号",
+      "label": "账号",
+      "name": "zhanghao",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "密码",
+      "label": "密码",
+      "name": "mima",
+      "nullable": true,
+      "type": "string",
+      "length": 200
     },
     {
       "comment": "审批流程",

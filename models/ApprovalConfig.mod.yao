@@ -90,6 +90,20 @@
       "name": "completeTotal",
       "nullable": true,
       "type": "integer"
+    },
+    {
+      "comment": "wf定义Id",
+      "label": "wf定义Id",
+      "name": "wfProcDefId",
+      "nullable": true,
+      "type": "text"
+    },
+    {
+      "comment": "工作流类型",
+      "label": "工作流类型",
+      "name": "flowType",
+      "nullable": true,
+      "type": "integer"
     }
   ]
 }

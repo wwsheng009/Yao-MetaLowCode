@@ -1,0 +1,105 @@
+{
+  "name": "Transform",
+  "label": "数据转化",
+  "table": {
+    "name": "t_transform"
+  },
+  "columns": [
+    {
+      "type": "id",
+      "name": "autoId",
+      "label": "id",
+      "primary": true
+    },
+    {
+      "comment": "是否禁用",
+      "label": "是否禁用",
+      "name": "disabled",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "预览模式",
+      "label": "预览模式",
+      "name": "isPreview",
+      "nullable": true,
+      "type": "boolean"
+    },
+    {
+      "comment": "转化名称",
+      "label": "转化名称",
+      "name": "transformName",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "字段回填",
+      "label": "字段回填",
+      "name": "backfill",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "字段映射",
+      "label": "字段映射",
+      "name": "fieldMapping",
+      "nullable": true,
+      "type": "longText"
+    },
+    {
+      "comment": "目标实体",
+      "label": "目标实体",
+      "name": "targetEntity",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "源实体",
+      "label": "源实体",
+      "name": "sourceEntity",
+      "nullable": true,
+      "type": "string",
+      "length": 200
+    },
+    {
+      "comment": "修改用户",
+      "label": "修改用户",
+      "name": "modifiedBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "最近修改时间",
+      "label": "最近修改时间",
+      "name": "modifiedOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "创建用户",
+      "label": "创建用户",
+      "name": "createdBy",
+      "nullable": true,
+      "type": "string"
+    },
+    {
+      "comment": "创建时间",
+      "label": "创建时间",
+      "name": "createdOn",
+      "nullable": true,
+      "type": "datetime"
+    },
+    {
+      "comment": "id主键",
+      "label": "id主键",
+      "name": "transformId",
+      "nullable": true,
+      "type": "char",
+      "length": 40,
+      "unique": true,
+      "index": true
+    }
+  ]
+}
