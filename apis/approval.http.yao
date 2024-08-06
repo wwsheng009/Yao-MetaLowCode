@@ -58,6 +58,27 @@
       "process": "scripts.approval.configList",
       "in": [":payload"],
       "out": { "status": 200, "type": "application/json" }
+    },{
+      // 获取审批历史流程配置
+      "path": "getHisActivityIns",
+      "method": "get",
+      "process": "scripts.approval.getHisActivityIns",
+      "in": ["$query.entityId"],
+      "out": { "status": 200, "type": "application/json" }
+    },{
+      // 获取审批信息
+      "path": "recordApprovalState",
+      "method": "get",
+      "process": "scripts.approval.recordApprovalState",
+      "in": ["$query.recordId"],
+      "out": { "status": 200, "type": "application/json" }
+    },{
+      // 获取审批信息
+      "path": "createApprovalSystemFields",
+      "method": "post",
+      "process": "scripts.approval.createApprovalSystemFields",
+      "in": ["$query.entityName"],
+      "out": { "status": 200, "type": "application/json" }
     }
   ]
 }

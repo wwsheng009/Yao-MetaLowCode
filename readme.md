@@ -10,6 +10,13 @@
 `yao run scripts.systemmanager_import.importData`
 
 
+## 生成dsl文件
+
+把所有metacode模型转换成yao dsl文件并保存到目录models目录。
+
+`yao studio run convert.convertMetaModel`
+
+`yao migrate`
 
 ## 下载模型
 
@@ -29,6 +36,10 @@
 每一个表单都可以配置显示的关联布局
 
 `yao run scripts.systemmanager_import.downloadFormLayout`
+
+下载指定form的布局。
+
+`yao run scripts.systemmanager_import.downloadFormLayout Jinxiangfapiao`
 
 
 ## 下载导航栏

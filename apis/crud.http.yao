@@ -6,7 +6,7 @@
   "paths": [
     {
       "path": "refFieldQuery",
-      "method": "get",
+      "method": "post",
       "process": "scripts.curd.refFieldQuery",
       "in": [
         "$query.entity",
@@ -14,7 +14,26 @@
         "$query.pageNo",
         "$query.pageSize",
         "$query.queryText",
-        "$query.extraFilter"
+        "$query.extraFilter",
+        "$payload.formFilter"
+      ],
+      "out": {
+        "status": 200,
+        "type": "application/json"
+      }
+    },
+    {
+      "path": "refFieldQuery2",
+      "method": "post",
+      "process": "scripts.curd.refFieldQuery2",
+      "in": [
+        "$query.entity",
+        "$query.refField",
+        "$query.pageNo",
+        "$query.pageSize",
+        "$query.extraFilter",
+        "$payload.formFilter",
+        "$payload.formFilter2"
       ],
       "out": {
         "status": 200,

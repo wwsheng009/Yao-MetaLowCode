@@ -280,3 +280,17 @@ function configList(payload) {
   // };
   return Process("scripts.curd.listQuery", payload);
 }
+
+
+function getHisActivityIns(entityId){
+
+  return {}
+}
+
+function recordApprovalState(recordId){
+  return {}
+}
+
+function createApprovalSystemFields(entityName){
+  return {}
+}

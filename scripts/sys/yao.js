@@ -21,7 +21,7 @@ function updateEntityToYao(entityName,notForce) {
 }
 
 /**
- * convert entity to yao model
+ * convert metacode entity to yao model
  *
  * yao run scripts.sys.yao.entityToYaoModel 'User'
  * @param {string} entityName

@@ -221,7 +221,7 @@ function createFormLayout(entityName, layoutName,layoutJson) {
 /**
  * get form layout
  *
- * yao run scripts.formlayout.getFormLayout 'WMSchanpinxinxi'
+ * yao run scripts.formlayout.getFormLayout 'Gongyingshangguanli'
  * @param {string} entityName
  * @returns
  */
@@ -257,8 +257,22 @@ function getFormLayout(entityName) {
   if (!entity) {
     throw Error(`实体 ${entityName} 不存在`);
   }
-
-  let [formLayout] = Process("models.formlayout.get", {
+  let optionData = {};
+  let formLayout = {
+    formLayoutId: null,
+    layoutName: null,
+    entityCode: null,
+    layoutJson: null,
+    createdOn: null,
+    createdBy: null,
+    modifiedOn: null,
+    modifiedBy: null,
+    optionData: {},
+    entityRecord: {
+      layoutJson: null,
+    },
+  };
+  let [formLayout1] = Process("models.formlayout.get", {
     wheres: [
       {
         column: "entityCode",
@@ -270,23 +284,10 @@ function getFormLayout(entityName) {
       },
     ],
   });
-  if (formLayout == null) {
-    formLayout = {
-      formLayoutId: null,
-      layoutName: null,
-      entityCode: null,
-      layoutJson: null,
-      createdOn: null,
-      createdBy: null,
-      modifiedOn: null,
-      modifiedBy: null,
-      optionData: {},
-      entityRecord: {
-        layoutJson: null,
-      },
-    };
+  console.log("formLayout",formLayout1)
+  if (formLayout1 != undefined) {
+    formLayout = formLayout1;
   } else {
-    let optionData = {};
     entity.fieldSet &&
       entity.fieldSet.forEach((field) => {
         if (Array.isArray(field.optionList)) {
@@ -311,12 +312,13 @@ function getFormLayout(entityName) {
       fileDownloadPrefix: "/file/get/",
     };
     // console.log("optionData",optionData)
-    return {
-      ...formLayout,
-      entityRecord: formLayout,
-      optionData,
-    };
+    
   }
+  return {
+    ...formLayout,
+    entityRecord: formLayout,
+    optionData,
+  };
 
   //   return {
   //     formLayoutId: "0000008-6182dacd9f344a0b959b0cc03f7f0791",

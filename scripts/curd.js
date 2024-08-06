@@ -256,7 +256,7 @@ function listQuery({
 
   // const entity = getEntityByName(mainEntity);
   // loadEntityToYao(mainEntity);
-
+  
   let queryParam = {};
   if (fieldsList) {
     queryParam.select = fieldsList.split(",");
@@ -435,7 +435,8 @@ function refFieldQuery(
   pageNo,
   pageSize,
   queryText,
-  extraFilter
+  extraFilter,
+  formFilter
 ) {
   // entity=User&refField=departmentId&pageNo=1&pageSize=10&queryText=&extraFilter=&_=1706449697186
 
@@ -570,6 +571,11 @@ function refFieldQuery(
     //   total: 3,
     // },
   };
+}
+
+function refFieldQuery2(entityName,refField,pageNo,pageSize,extraFilter,formFilter,formFilter2){
+
+  return refFieldQuery(entityName,refField,pageNo,pageSize,"",extraFilter,formFilter)
 }
 
 function getEntity(entityName) {
@@ -1117,3 +1123,4 @@ function groupTreeQuery(body) {
 function updateRecordList(body) {
   throw Error("not implemented yet");
 }
+

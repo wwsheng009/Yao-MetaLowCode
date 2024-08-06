@@ -760,7 +760,7 @@ function downloadFormLayout(entityName) {
   });
 }
 /**
- * yao run scripts.systemmanager_import.getFormLayout 'User'
+ * yao run scripts.systemmanager_import.getFormLayout 'Gongyingshangguanli'
  * @param {string} entityName
  * @returns
  */
