@@ -812,7 +812,7 @@ function deleteRecord({ recordIds, cascades }) {
       const [entityCode, _] = idstr.split("-");
       const entity = getEntityByCodeCache(entityCode);
       // Process("yao.model.Delete", model, id);
-      const idFieldName = entity.fieldSet.find(
+      const idFieldName = entity?.fieldSet.find(
         (f) => f.idFieldFlag == true
       )?.name;
       Process(`models.${entity.name}.Deletewhere`, {

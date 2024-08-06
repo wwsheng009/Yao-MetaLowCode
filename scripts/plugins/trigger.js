@@ -18,7 +18,7 @@ function dataAutoCreateEntityList(entityCode) {
   console.log(`dataAutoCreate no implement yet`);
 
   const entity = getEntityByCodeCache(entityCode, true);
-  let fields = entity.fieldSet.filter(
+  let fields = entity?.fieldSet.filter(
     (f) => f.type === "Reference" && f.reserved == false
   );
 

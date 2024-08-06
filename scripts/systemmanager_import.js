@@ -92,7 +92,7 @@ function download(entityName) {
     const fname = `/entitys/${entity.name}.json`;
     if (Process("fs.system.Exists", fname)) {
       index++;
-      // continue;
+      continue;
     }
     const props = getEntityProps(entity.name, getCookie());
     Object.assign(entity, props);
@@ -324,6 +324,7 @@ function getFieldList(entityName) {
  * @param {string|null} entityName
  */
 function downloadOptionFields(entityName) {
+  console.log("downloadOptionFields:" + entityName)
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
@@ -605,6 +606,15 @@ function importEntity(entityName) {
       ],
     });
     if (entity.entityCode) {
+      Process("models.sys.entity.deletewhere", {
+        wheres: [
+          {
+            column: "entityCode",
+            value: entity.entityCode,
+          },
+        ],
+      });
+
       Process("models.sys.entity.field.deletewhere", {
         wheres: [
           {
@@ -636,10 +646,17 @@ function importEntity(entityName) {
     // if (entityCode) {
     //   entity.entityCode = entityCode;
     // }
-    entityCode = Process("models.sys.entity.create", entity);
+    let entityCode = ""
+    try {
+      entityCode = Process("models.sys.entity.create", entity);
     if (!entityCode) {
       throw Error(`创建失败:${entity.name}`);
     }
+    } catch (error) {
+      console.log(`创建失败:${entity.name}`)
+      throw error
+    }
+    
     //防止存在同名的字段列表
     Process("models.sys.entity.field.deletewhere", {
       wheres: [

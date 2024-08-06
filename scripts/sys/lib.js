@@ -71,7 +71,7 @@ function toCamelCase(str) {
  */
 function getEntitySingleFieldByname(entityName, fieldName) {
   const entity = getEntityByNameCache(entityName);
-  const field = entity.fieldSet.find((f) => f.name === fieldName);
+  const field = entity?.fieldSet.find((f) => f.name === fieldName);
   return field || {};
 }
 
@@ -105,12 +105,15 @@ function getEntityByCodeCache(entityCode, bypass) {
     },
   });
   if (!entity) {
-    Process("session.del", `MetaEntity:${entityCode}`);
-    Process("session.del", `MetaEntity:${entity.name}`);
-    throw Error(`实体:${entityCode}不存在`);
+    // Process("session.del", `MetaEntity:${entityCode}`);
+    // Process("session.del", `MetaEntity:${entity.name}`);
+    // throw Error(`实体:${entityCode}不存在`);
+    console.log(`实体:${entityCode}不存在`)
   }
   if (!entity?.fieldSet) {
-    throw Error(`实体:${entityCode}配置不正确，字段列表不存在`);
+    // throw Error(`实体:${entityCode}配置不正确，字段列表不存在`);
+    console.log(`实体:${entityCode}配置不正确，字段列表不存在`)
+    return null
   }
   entity?.fieldSet.forEach((field) => {
     if (!field.updatable || !field.creatable) {
@@ -160,12 +163,17 @@ function getEntityByNameCache(entityName, bypass) {
     },
   });
   if (!entity) {
-    Process("session.del", `MetaEntity:${entityName}`);
-    Process("session.del", `MetaEntity:${entity.entityCode}`);
-    throw Error(`实体:${entityName}不存在`);
+    // Process("session.del", `MetaEntity:${entityName}`);
+    // Process("session.del", `MetaEntity:${entity.entityCode}`);
+    // throw Error(`实体:${entityName}不存在`);
+    console.log(`实体:${entityName}不存在`)
+    return null;
   }
   if (!entity?.fieldSet) {
-    throw Error(`实体:${entityName}配置不正确，字段列表不存在`);
+    console.log(`实体:${entityName}配置不正确，字段列表不存在`)
+
+    // throw Error(`实体:${entityName}配置不正确，字段列表不存在`);
+    return null;
   }
   // entityCache[entityName] = entity;
   Process("session.set", `MetaEntity:${entityName}`, entity);

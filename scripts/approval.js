@@ -117,7 +117,7 @@ function saveLastApprovalFlow(payload) {
   });
   if (config?.entityCode) {
     const entity = getEntityByCodeCache(config.entityCode);
-    const field = entity.fieldSet.find((f) => f.name === "approvalStatus");
+    const field = entity?.fieldSet.find((f) => f.name === "approvalStatus");
     if (!field) {
       [
         {

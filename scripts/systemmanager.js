@@ -891,8 +891,8 @@ function deleteEntity(entityName) {
   });
   Process("models.sys.entity.delete", entity.entityCode);
 
-  Process("session.del", `MetaEntity:${entityName}`);
-  Process("session.del", `MetaEntity:${entity.entityCode}`);
+  // Process("session.del", `MetaEntity:${entityName}`);
+  // Process("session.del", `MetaEntity:${entity.entityCode}`);
 }
 
 function getTextFieldListOfEntity(entity) {
