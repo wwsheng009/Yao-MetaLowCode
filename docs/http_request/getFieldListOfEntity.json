@@ -1,0 +1,170 @@
+[
+  {
+    "type": "xhr",
+    "time": "2026-01-10T12:46:53.444Z",
+    "url": "/systemManager/getFieldListOfEntity?entity=Department&_=1768049213426",
+    "method": "GET",
+    "status": 200,
+    "duration": 16,
+    "requestHeaders": {},
+    "responseHeaders": {
+      "connection": "keep-alive",
+      "content-encoding": "gzip",
+      "content-type": "application/json",
+      "date": "Sat, 10 Jan 2026 12:46:52 GMT",
+      "keep-alive": "timeout=60",
+      "transfer-encoding": "chunked",
+      "vary": "accept-encoding"
+    },
+    "body": {
+      "code": 200,
+      "error": null,
+      "message": "success",
+      "data": [
+        {
+          "nameFieldFlag": false,
+          "physicalName": "departmentId",
+          "reserved": true,
+          "referTo": null,
+          "name": "departmentId",
+          "updatable": false,
+          "idFieldFlag": true,
+          "label": "部门Id主键",
+          "creatable": false,
+          "type": "PrimaryKey",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "parentDepartmentId",
+          "reserved": false,
+          "referTo": "Department,",
+          "name": "parentDepartmentId",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "上级部门",
+          "creatable": true,
+          "type": "Reference",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": true,
+          "physicalName": "departmentName",
+          "reserved": false,
+          "referTo": null,
+          "name": "departmentName",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "部门名称",
+          "creatable": true,
+          "type": "Text",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "description",
+          "reserved": false,
+          "referTo": null,
+          "name": "description",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "部门说明",
+          "creatable": true,
+          "type": "TextArea",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "departmentOwnerUser",
+          "reserved": false,
+          "referTo": "User,",
+          "name": "departmentOwnerUser",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "部门负责人",
+          "creatable": true,
+          "type": "Reference",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "dingDepartmentId",
+          "reserved": false,
+          "referTo": null,
+          "name": "dingDepartmentId",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "钉钉部门ID",
+          "creatable": true,
+          "type": "Text",
+          "mainDetailFieldFlag": false
+        }
+      ]
+    },
+    "id": 186
+  },
+  {
+    "type": "xhr",
+    "time": "2026-01-10T12:46:53.456Z",
+    "url": "/systemManager/getEntityProps?entity=Department&_=1768049213426",
+    "method": "GET",
+    "status": 200,
+    "duration": 28,
+    "requestHeaders": {},
+    "responseHeaders": {
+      "connection": "keep-alive",
+      "content-encoding": "gzip",
+      "content-type": "application/json",
+      "date": "Sat, 10 Jan 2026 12:46:52 GMT",
+      "keep-alive": "timeout=60",
+      "transfer-encoding": "chunked",
+      "vary": "accept-encoding"
+    },
+    "body": {
+      "code": 200,
+      "error": null,
+      "message": "success",
+      "data": {
+        "shareable": false,
+        "mainEntity": null,
+        "listable": true,
+        "entityCode": 22,
+        "layoutable": true,
+        "nameField": "部门名称",
+        "label": "部门",
+        "detailEntityFlag": false,
+        "assignable": false,
+        "tags": null,
+        "authorizable": false,
+        "physicalName": "t_department",
+        "name": "Department"
+      }
+    },
+    "id": 187
+  },
+  {
+    "type": "xhr",
+    "time": "2026-01-10T12:46:53.470Z",
+    "url": "/systemManager/getAllTagsOfEntity?_=1768049213459",
+    "method": "GET",
+    "status": 200,
+    "duration": 11,
+    "requestHeaders": {},
+    "responseHeaders": {
+      "connection": "keep-alive",
+      "content-encoding": "gzip",
+      "content-type": "application/json",
+      "date": "Sat, 10 Jan 2026 12:46:52 GMT",
+      "keep-alive": "timeout=60",
+      "transfer-encoding": "chunked",
+      "vary": "accept-encoding"
+    },
+    "body": {
+      "code": 200,
+      "error": null,
+      "message": "success",
+      "data": []
+    },
+    "id": 188
+  }
+]
