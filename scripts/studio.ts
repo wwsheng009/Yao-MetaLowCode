@@ -30,7 +30,7 @@ function convertMetaModel(entityName){
     return
   }
 
-  const entityList =  Process("models.sys.entity.get",{
+  const entityList =  Process("models.meta.entity.get",{
     select:["name"],
     limit:10000,
   })
@@ -39,6 +39,7 @@ function convertMetaModel(entityName){
   });
 }
 
+//把entitys目录下的所有实体模型转换为yao模型
 //yao run scripts.studio.convertMLModelToYaoModels
 function convertMLModelToYaoModels(){
   const fileList = Process("fs.system.ReadDir", "/entitys/");

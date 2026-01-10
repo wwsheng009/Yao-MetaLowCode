@@ -1,9 +1,11 @@
+import { entityCodeInput } from "@scripts/sys/lib";
 import { Process } from "@yao/runtime";
 
 function getEntityList(reportConfigId) {
   const [entityCode, id] = reportConfigId.split("-");
 
-  const row = Process("models.sys.entity.find", entityCode, {
+  const [row] = Process("models.meta.entity.get", {
+    wheres: [{ column: "entityCode", value: entityCodeInput(entityCode) }],
     select: ["label"],
     withs: {
       fieldSet: {

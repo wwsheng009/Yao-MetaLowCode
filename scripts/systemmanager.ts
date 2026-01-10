@@ -1,6 +1,6 @@
 import { Process } from "@yao/runtime";
 import { updateEntityToYao } from "./sys/entity";
-import { getEntitySingleFieldByname, getEntityByNameCache, UnderscoreName, toCamelCase } from "./sys/lib";
+import { getEntitySingleFieldByname, getEntityByNameCache, UnderscoreName, toCamelCase, newUUID } from "./sys/lib";
 
 /**
  * get all tags of entitys
@@ -9,7 +9,7 @@ import { getEntitySingleFieldByname, getEntityByNameCache, UnderscoreName, toCam
  * @returns
  */
 function getAllTagsOfEntity() {
-  const data = Process("models.sys.entity.get", {
+  const data = Process("models.meta.entity.get", {
     select: ["tags"],
     wheres: [
       {
@@ -49,7 +49,7 @@ function getAllTagsOfEntity() {
 }
 
 function filterEntitySet(keyword) {
-  return Process("models.sys.entity.get", {
+  return Process("models.meta.entity.get", {
     select: [
       "name",
       "label",
@@ -112,7 +112,7 @@ function filterEntitySet(keyword) {
  * @returns
  */
 function getFieldSet(entity) {
-  const [row] = Process("models.sys.entity.get", {
+  const [row] = Process("models.meta.entity.get", {
     wheres: [
       {
         column: "name",
@@ -154,7 +154,7 @@ function getFieldSet(entity) {
 function getFieldListOfEntity(entity) {
   const wheres = [];
   wheres.push({ column: "name", value: entity });
-  const [row] = Process("models.sys.entity.get", {
+  const [row] = Process("models.meta.entity.get", {
     wheres: wheres,
     withs: {
       fieldSet: {
@@ -292,7 +292,7 @@ function getFieldListOfEntity(entity) {
 }
 
 function getMDFieldList(entityName) {
-  const [entity] = Process("models.sys.entity.get", {
+  const [entity] = Process("models.meta.entity.get", {
     select: ["name"],
     wheres: [
       {
@@ -376,7 +376,7 @@ function getMDFieldList(entityName) {
 function getEntityProps(entity) {
   const wheres = [];
   wheres.push({ column: "name", value: entity });
-  const [row] = Process("models.sys.entity.get", {
+  const [row] = Process("models.meta.entity.get", {
     wheres: wheres,
     withs: {},
   });
@@ -425,7 +425,7 @@ function addField(field, entityName, notForce?: boolean) {
   // };
   const wheres = [];
   wheres.push({ column: "name", value: entityName });
-  const [row] = Process("models.sys.entity.get", {
+  const [row] = Process("models.meta.entity.get", {
     wheres: wheres,
     withs: {},
   });
@@ -444,7 +444,8 @@ function addField(field, entityName, notForce?: boolean) {
   //   name: row.name,
   //   label: row.label,
   // };
-  const id = Process("models.sys.entity.field.create", field);
+  field.fieldId = newUUID("2");
+  const id = Process("models.meta.field.create", field);
   updateEntityToYao(entityName, notForce);
   getEntityByNameCache(entityName, true);
 
@@ -498,7 +499,7 @@ function updateField(fieldName, entityName) {
 
   const Field = getEntitySingleFieldByname(entityName, fieldName.name);
   if (Field.fieldId) {
-    Process("models.sys.entity.field.update", Field.fieldId, fieldName);
+    Process("models.meta.field.update", Field.fieldId, fieldName);
     updateEntityToYao(entityName);
     getEntityByNameCache(entityName, true);
     return true;
@@ -541,7 +542,7 @@ function createEntity(entity, mainEntity) {
 
   const wheres = [];
   wheres.push({ column: "name", value: entityName });
-  const [one] = Process("models.sys.entity.get", {
+  const [one] = Process("models.meta.entity.get", {
     wheres: wheres,
     withs: {},
   });
@@ -558,7 +559,7 @@ function createEntity(entity, mainEntity) {
 
   entity.physicalName = tableName;
 
-  const entityCode = Process("models.sys.entity.create", entity);
+  const entityCode = Process("models.meta.entity.create", entity);
 
   const owner = {
     name: entityName,
@@ -768,7 +769,7 @@ function createEntity(entity, mainEntity) {
   }
 
   // 先这样处理
-  var res = Process("models.sys.entity.field.EachSave", fieldSet, {
+  var res = Process("models.meta.field.EachSave", fieldSet, {
     entityCode: entityCode,
   });
   if (res?.code && res.message) {
@@ -832,7 +833,7 @@ function copyEntity(entity) {
 function updateEntityLabel(entity, entityLabel) {
   // tags = "CRM,WMS,学习,预算费控";
   Process(
-    "models.sys.entity.updatewhere",
+    "models.meta.entity.updatewhere",
     {
       wheres: [{ column: "name", value: entity }],
     },
@@ -852,7 +853,7 @@ function updateEntityLabel(entity, entityLabel) {
 function updateEntityTags(entity, tags) {
   // tags = "CRM,WMS,学习,预算费控";
   Process(
-    "models.sys.entity.updatewhere",
+    "models.meta.entity.updatewhere",
     {
       wheres: [{ column: "name", value: entity }],
     },
@@ -864,7 +865,7 @@ function updateEntityTags(entity, tags) {
 }
 
 function entityCanBeDeleted(entity) {
-  const [{ systemEntityFlag }] = Process("models.sys.entity.get", {
+  const [{ systemEntityFlag }] = Process("models.meta.entity.get", {
     wheres: [{ column: "name", value: entity }],
   });
   if (systemEntityFlag == true) {
@@ -874,7 +875,7 @@ function entityCanBeDeleted(entity) {
 }
 
 function getEntityByName(entity) {
-  const [row] = Process("models.sys.entity.get", {
+  const [row] = Process("models.meta.entity.get", {
     wheres: [{ column: "name", value: entity }],
   });
 
@@ -884,17 +885,17 @@ function getEntityByName(entity) {
 function deleteEntity(entityName) {
   const entity = getEntityByNameCache(entityName, true);
 
-  Process("models.sys.entity.field.deletewhere", {
+  Process("models.meta.field.deletewhere", {
     wheres: [{ column: "entityCode", value: entity.entityCode }],
   });
-  Process("models.sys.entity.delete", entity.entityCode);
+  Process("models.meta.entity.delete", entity.entityCode);
 
   // Process("session.del", `MetaEntity:${entityName}`);
   // Process("session.del", `MetaEntity:${entity.entityCode}`);
 }
 
 function getTextFieldListOfEntity(entity) {
-  const [row] = Process("models.sys.entity.get", {
+  const [row] = Process("models.meta.entity.get", {
     wheres: [
       {
         column: "name",
@@ -938,7 +939,7 @@ function getTextFieldListOfEntity(entity) {
  */
 function updateEntityNameField(entityName, nameField) {
   Process(
-    "models.sys.entity.updatewhere",
+    "models.meta.entity.updatewhere",
     {
       wheres: [{ column: "name", value: entityName }],
     },
@@ -958,7 +959,7 @@ function updateEntityNameField(entityName, nameField) {
  * @returns
  */
 function getEntitySet() {
-  return Process("models.sys.entity.get", {
+  return Process("models.meta.entity.get", {
     select: [
       "name",
       "label",
@@ -1066,7 +1067,7 @@ function fieldCanBeDeleted(entity, field) {
 function deleteField(entityName, fieldName) {
   const fieldData = getField(entityName, fieldName);
   if (fieldData) {
-    Process("models.sys.entity.field.delete", fieldData.fieldId);
+    Process("models.meta.field.delete", fieldData.fieldId);
     updateEntityToYao(entityName);
     getEntityByNameCache(entityName, true);
   }
@@ -1277,7 +1278,7 @@ function getRefFieldExtras(entityName, fieldName) {
   let referenceSetting = fieldData.referenceSetting?.find(
     (item) => item.entityName === refEntityName
   );
-  const [referEntity] = Process("models.sys.entity.get", {
+  const [referEntity] = Process("models.meta.entity.get", {
     wheres: [{ column: "name", value: refEntityName }],
     withs: {
       fieldSet: {
@@ -1321,7 +1322,7 @@ function getRefFieldExtras(entityName, fieldName) {
  * @returns
  */
 function getOptionFields() {
-  const optionList = Process("models.sys.entity.get", {
+  const optionList = Process("models.meta.entity.get", {
     select: ["name", "label"],
     withs: {
       fieldSet: {
@@ -1409,7 +1410,7 @@ function saveOptionItems(entityName, field, optionItems) {
         value: item.value,
       };
     });
-    Process("models.sys.entity.field.update", Field.fieldId, {
+    Process("models.meta.field.update", Field.fieldId, {
       optionList: options,
     });
     // flush the cache
@@ -1425,7 +1426,7 @@ function saveOptionItems(entityName, field, optionItems) {
  * @returns
  */
 function getTagFields() {
-  const entityList = Process("models.sys.entity.get", {
+  const entityList = Process("models.meta.entity.get", {
     select: ["name", "label"],
     withs: {
       fieldSet: {
@@ -1490,7 +1491,7 @@ function saveTagItems(entityName, fieldName, tagItems) {
     const options = tagItems.items.map((item) => {
       return item.value;
     });
-    Process("models.sys.entity.field.update", Field.fieldId, {
+    Process("models.meta.field.update", Field.fieldId, {
       tagList: options,
     });
     getEntityByNameCache(entityName, true);

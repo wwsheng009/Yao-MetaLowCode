@@ -1,6 +1,7 @@
-import { Process, http } from "@yao/runtime";
-import { updateEntityToYao, loadEntityToYao, getSystemEntityCode, updateIdFieldName } from "./sys/entity";
-import { getEntitySingleFieldByname, getEntityByName } from "./sys/lib";
+import { FS, Process, http } from "@yao/runtime";
+import { loadEntityToYao, updateIdFieldName, completeEntity, entityToYaoModel, loadYaoModel, migrateYaoModel } from "./sys/entity";
+import { getEntitySingleFieldByname, getEntityByName, newUUID, entityCodeInput } from "./sys/lib";
+import { saveLayoutConfig } from "./layout";
 
 
 function getCookie() {
@@ -41,8 +42,10 @@ function download(entityName) {
       name: entityName,
     });
   } else {
+    const url = `${getWebSite()}/systemManager/getEntitySet?_=${currentTimestamp}`;
+    console.log()
     const response = http.Get(
-      `${getWebSite()}/systemManager/getEntitySet?_=${currentTimestamp}`,
+      url,
       {},
       {
         Cookie: getCookie(),
@@ -52,6 +55,8 @@ function download(entityName) {
     list = response.data.data;
     // 系统模型
     [
+      "MetaEntity",
+      "MetaField",
       "OptionItem",
       "TagItem",
       "ReferenceListMap",
@@ -339,7 +344,7 @@ function downloadOptionFields(entityName) {
         field.fieldName
       );
       if (fieldData.fieldId) {
-        Process("models.sys.entity.field.update", fieldData.fieldId, {
+        Process("models.meta.field.update", fieldData.fieldId, {
           optionList: options,
         });
       }
@@ -452,7 +457,7 @@ function downloadTagFields(entityName) {
         field.fieldName
       );
       if (fieldData.fieldId) {
-        Process("models.sys.entity.field.update", fieldData.fieldId, {
+        Process("models.meta.field.update", fieldData.fieldId, {
           tagList: tags,
         });
       }
@@ -563,17 +568,18 @@ function importEntity(entityName) {
 
   let index = 0;
   for (const f of fileList) {
+    if (f.indexOf(".json") < 0) {
+      continue;
+    }
     let entityContent = Process("fs.system.ReadFile", f);
+    console.log("entityFile>>>>>>>>>", f);
     entityContent = JSON.parse(entityContent);
 
     let fieldSet = [...entityContent.fieldSet];
 
     let entity = { ...entityContent };
-    delete entity.fieldSet;
-
-    // console.log("entity>>>>>>>>", entity);
-
-    Process("models.sys.entity.deletewhere", {
+    entity = completeEntity(entity);
+    Process("models.meta.entity.deletewhere", {
       wheres: [
         {
           column: "name",
@@ -582,7 +588,7 @@ function importEntity(entityName) {
       ],
     });
     if (entity.entityCode) {
-      Process("models.sys.entity.deletewhere", {
+      Process("models.meta.entity.deletewhere", {
         wheres: [
           {
             column: "entityCode",
@@ -591,7 +597,7 @@ function importEntity(entityName) {
         ],
       });
 
-      Process("models.sys.entity.field.deletewhere", {
+      Process("models.meta.field.deletewhere", {
         wheres: [
           {
             column: "entityCode",
@@ -601,31 +607,11 @@ function importEntity(entityName) {
       });
     }
 
-    if (
-      typeof entity.mainEntity === "object" &&
-      entity.mainEntity &&
-      entity.mainEntity.name
-    ) {
-      entity.mainEntity = entity.mainEntity.name;
-    }
-
-    entity = updateIdFieldName(entity);
-    // check if is the system entity
-    if (!entity.entityCode) {
-      entity.entityCode = getSystemEntityCode(entity.name);
-    }
-    if (entity.entityCode < 1001) {
-      entity.systemEntityFlag = true; //内部表
-    }
-    // delete entity.entityCode;
-    // let entityCode = getSystemEntityCode(entity.name);
-    // if (entityCode) {
-    //   entity.entityCode = entityCode;
-    // }
-    let entityCode = ""
+    let entityCode = entityCodeInput(entity.entityCode)
     try {
-      entityCode = Process("models.sys.entity.create", entity);
-    if (!entityCode) {
+      entity.entityId = newUUID("1");
+      const idStr = Process("models.meta.entity.create", entity);
+    if (!idStr) {
       throw Error(`创建失败:${entity.name}`);
     }
     } catch (error) {
@@ -634,7 +620,7 @@ function importEntity(entityName) {
     }
     
     //防止存在同名的字段列表
-    Process("models.sys.entity.field.deletewhere", {
+    Process("models.meta.field.deletewhere", {
       wheres: [
         {
           column: "entityCode",
@@ -642,13 +628,13 @@ function importEntity(entityName) {
         },
       ],
     });
-    fieldSet.forEach((f) => {
-      delete f.fieldId;
-      if (!f.updatable || !f.creatable) {
-        f.reserved = true;
+    fieldSet.forEach((field) => {
+      field.fieldId = newUUID("2");
+      if (!field.updatable || !field.creatable) {
+        field.reserved = true;
       }
     });
-    var res = Process("models.sys.entity.field.EachSave", fieldSet, {
+    var res = Process("models.meta.field.EachSave", fieldSet, {
       entityCode: entityCode,
     });
 
@@ -656,11 +642,13 @@ function importEntity(entityName) {
       throw Error(`${entity.name}>>|Exception:${res?.code}|${res.message}`);
     }
 
-    // create database table for entity
-    const yaoModel = updateEntityToYao(entity.name);
-    if (entityName) {
-      console.log("yaoModel>>>>>>>>>", yaoModel);
-    }
+    const yaoModel = entityToYaoModel(entity);
+    const dslFile = `/models/${entity.name}.mod.yao`;
+    let fs = new FS("app");
+    const dslFileContent = JSON.stringify(yaoModel, null, 2);
+    fs.WriteFile(dslFile, dslFileContent);
+    loadYaoModel(yaoModel);
+    migrateYaoModel(yaoModel,true);
     index++;
     console.log(`${index}/${fileList.length}:${entity.name} imported`);
   }
@@ -676,7 +664,7 @@ function downloadFormLayout(entityName) {
   if (entityName) {
     entiyList.push(entityName);
   } else {
-    const list = Process("models.sys.entity.get", {
+    const list = Process("models.meta.entity.get", {
       select: ["name"],
       limit: 10000,
     });
@@ -749,40 +737,38 @@ function getFormLayout(entityName) {
  * 有了表单布局才能使用表单创建数据。
  *
  * 单独导入表单布局
- * yao run scripts.systemmanager_import.importFormLayout
- * @param {string|null} entityName
+ * yao run scripts.systemmanager_import.importFormLayout Bangongyongpin
+ * @param {string|null} layoutName
  */
-function importFormLayout(entityName) {
+function importFormLayout(layoutName) {
   let fileList = [];
-  if (entityName) {
-    fileList.push(`/formlayout/${entityName}.json`);
+  if (layoutName) {
+    fileList.push(`/formlayout/${layoutName}.json`);
   } else {
     fileList = Process("fs.system.ReadDir", "/formlayout/");
   }
 
   let index = 0;
   for (const f of fileList) {
-    let entityContent = Process("fs.system.ReadFile", f);
-    entityContent = JSON.parse(entityContent);
-    console.log(entityContent)
-    
+    let formContent = Process("fs.system.ReadFile", f);
+    formContent = JSON.parse(formContent);
 
     const [layout] = Process("models.formlayout.get", {
       wheres: [
         {
           column: "entityCode",
-          value: entityContent.entityCode,
+          value: formContent.entityCode,
         },
       ],
     });
     if (layout?.formLayoutId) {
-      entityContent.formLayoutId = layout?.formLayoutId;
+      formContent.formLayoutId = layout?.formLayoutId;
     }
-    Process("models.formlayout.save", entityContent);
-    return;
+    console.log("formContent", typeof formContent);
+    Process("models.formlayout.save", formContent);
     index++;
     console.log(
-      `${index}/${fileList.length}:${entityContent.entityLabel} 表单布局 imported`
+      `${index}/${fileList.length}:${formContent.entityLabel} 表单布局 imported`
     );
   }
 }
@@ -828,7 +814,7 @@ function importNav() {
   const navList = JSON.parse(demoData.topNavigation.config).navList;
   demoData.navigationList.forEach((nav) => {
     nav.applyType = "NAV";
-    const { formData } = Process("scripts.layout.saveConfig", null, null, nav);
+    const { formData } = saveLayoutConfig(null, null, nav);
 
     navList.forEach((n) => {
       if (n.layoutConfigId === nav.layoutConfigId) {
@@ -845,7 +831,7 @@ function importNav() {
       navList,
     }),
   };
-  const { formData } = Process("scripts.layout.saveConfig", null, null, topNav);
+  const { formData } = saveLayoutConfig(null, null, topNav);
 
   console.log(formData);
 }
@@ -859,7 +845,7 @@ function downloadLayoutList(entityName) {
   if (entityName) {
     entiyList.push(entityName);
   } else {
-    const list = Process("models.sys.entity.get", {
+    const list = Process("models.meta.entity.get", {
       select: ["name"],
       limit: 10000,
     });
@@ -969,7 +955,7 @@ function importLayoutList(entityName) {
 function downloadEntityData(entityName) {
   var currentTimestamp = new Date().getTime();
 
-  const [entity] = Process("models.sys.entity.get", {
+  const [entity] = Process("models.meta.entity.get", {
     select: ["name"],
     wheres: [
       {

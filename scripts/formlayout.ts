@@ -227,7 +227,7 @@ function createFormLayout(entityName, layoutName,layoutJson) {
  * @returns
  */
 function getFormLayout(entityName) {
-  // const [entity] = Process("models.sys.entity.get", {
+  // const [entity] = Process("models.meta.entity.get", {
   //   select: ["name", "entityCode"],
   //   wheres: [
   //     {

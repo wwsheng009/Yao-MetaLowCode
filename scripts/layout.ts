@@ -1,6 +1,7 @@
 import { Process } from "@yao/runtime";
 import { loadEntityToYao } from "./sys/entity";
 import { getEntityByNameCache } from "./sys/lib";
+import { saveCurdRecord } from "./curd";
 
 function getNavigationById(layoutConfigId) {
   throw Error("not implemented yet");
@@ -153,12 +154,12 @@ function getLayoutList(entityName) {
 /**
  * 创建或是更新布局配置
  *
- * yao run scripts.layout.saveConfig
+ * yao run scripts.layout.saveLayoutConfig
  * @param {string|null} recordId
  * @param {string} applyType
  * @param {*} formModel
  */
-function saveConfig(recordId, applyType2, formData) {
+export function saveLayoutConfig(recordId, applyType2, formData) {
   const entityLayoutConfig = getEntityByNameCache("LayoutConfig");
 
   // console.log("recordId:", recordId);
@@ -192,7 +193,7 @@ function saveConfig(recordId, applyType2, formData) {
   loadEntityToYao("LayoutConfig");
   // 自定义列表显示，shareTo = SELF
   // 默认列表显示，shareTo = ALL
-  const data = Process("scripts.curd.saveRecord", "LayoutConfig", idstr, {
+  const data = saveCurdRecord("LayoutConfig", idstr, {
     configName,
     config,
     applyType,

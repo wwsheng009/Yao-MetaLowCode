@@ -1,5 +1,5 @@
 import { Process } from "@yao/runtime";
-import { getEntityByCodeCache, getEntityByNameCache, getUUID } from "./sys/lib";
+import { getEntityByCodeCache, getEntityByNameCache, newUUID } from "./sys/lib";
 
 function getFlowDefinitionByConfigId(approvalConfigId) {
   const [config] = Process("models.ApprovalConfig.get", {
@@ -195,7 +195,7 @@ function saveLastApprovalFlow(payload) {
   const entity = getEntityByNameCache("ApprovalFlow");
   let flowId = payload.approvalFlowId;
   if (!flowId) {
-    flowId = getUUID(entity.entityCode);
+    flowId = newUUID(entity.entityCode);
     Process("models.ApprovalFlow.save", {
       approvalConfigId: payload.approvalConfigId,
       approvalFlowId: flowId,

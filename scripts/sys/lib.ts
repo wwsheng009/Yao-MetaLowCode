@@ -3,16 +3,21 @@ import { Process } from "@yao/runtime";
 /**
  * get database uuid
  *
- * yao run scripts.sys.lib.getUUID
+ * yao run scripts.sys.lib.newUUID
  * @param {number} entityCode
  * @returns uuid code with length 40
  */
-export function getUUID(entityCode) {
+export function newUUID(entityCode) {
   const uuid = Process("utils.str.UUID").replace(/-/g, "");
 
   return `${String(entityCode).padStart(7, "0")}-${uuid}`;
 }
-
+export function entityCodeInput(entityCode) { 
+  return String(entityCode).replace(/^0+/, '');
+}
+export function entityCodeOutput(entityCode) { 
+  return String(entityCode).padStart(7, "0");
+}
 /**
  * 处理数据库表名分隔符，把模型标识转换化成表名，在这里一般会有一个命名规范的约束
  *
@@ -34,7 +39,7 @@ export function UnderscoreName(pathname) {
 }
 
 export function getEntityByName(entityName) {
-  const [row] = Process("models.sys.entity.get", {
+  const [row] = Process("models.meta.entity.get", {
     wheres: [{ column: "name", value: entityName }],
   });
   if (row == null) {
@@ -43,10 +48,12 @@ export function getEntityByName(entityName) {
   return row;
 }
 
-export function getEntityByCode(entityName) {
-  const row = Process("models.sys.entity.find", entityName, {});
+export function getEntityByCode(entityCode) {
+  const [row] = Process("models.meta.entity.get", {
+    wheres: [{ column: "entityCode", value: entityCode }],
+  });
   if (row == null) {
-    throw new Error(`实体 ${entityName} 不存在`);
+    throw new Error(`实体 ${entityCode} 不存在`);
   }
   return row;
 }
@@ -79,11 +86,12 @@ export function getEntitySingleFieldByname(entityName, fieldName) {
 
 /**
  * 从缓存中读取实体定义
+ * yao run scripts.sys.lib.getEntityByCodeCache "3"
  * @param {number} entityCode
  * @param {boolean} bypass true=忽略缓存
  * @returns
  */
-export function getEntityByCodeCache(entityCode: any, bypass?: boolean) {
+export function getEntityByCodeCache(entityCode: number, bypass?: boolean) {
 
   const yao_env = Process("utils.env.get", "YAO_ENV");
   if (yao_env === 'development') {
@@ -96,7 +104,13 @@ export function getEntityByCodeCache(entityCode: any, bypass?: boolean) {
       return entityC;
     }
   }
-  const entity = Process("models.sys.entity.find", entityCode, {
+  const [entity] = Process("models.meta.entity.get", {
+    wheres: [
+      {
+        column: "entityCode",
+        value: entityCode,
+      },
+    ],
     withs: {
       fieldSet: {
         query: {
@@ -107,9 +121,6 @@ export function getEntityByCodeCache(entityCode: any, bypass?: boolean) {
     },
   });
   if (!entity) {
-    // Process("session.del", `MetaEntity:${entityCode}`);
-    // Process("session.del", `MetaEntity:${entity.name}`);
-    // throw Error(`实体:${entityCode}不存在`);
     console.log(`实体:${entityCode}不存在`)
   }
   if (!entity?.fieldSet) {
@@ -142,7 +153,7 @@ export function getEntityByNameCache(entityName: string, bypass?: boolean) {
     }
   }
 
-  const [entity] = Process("models.sys.entity.get", {
+  const [entity] = Process("models.meta.entity.get", {
     wheres: [
       {
         column: "name",
@@ -165,9 +176,7 @@ export function getEntityByNameCache(entityName: string, bypass?: boolean) {
     },
   });
   if (!entity) {
-    // Process("session.del", `MetaEntity:${entityName}`);
-    // Process("session.del", `MetaEntity:${entity.entityCode}`);
-    // throw Error(`实体:${entityName}不存在`);
+    
     console.log(`实体:${entityName}不存在`)
     return null;
   }

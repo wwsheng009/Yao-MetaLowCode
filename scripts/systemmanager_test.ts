@@ -7,7 +7,7 @@ import { Process } from "@yao/runtime";
  * @returns
  */
 function getEntitySet() {
-  return Process("models.sys.entity.get", {
+  return Process("models.meta.entity.get", {
     select: [
       "name",
       "label",

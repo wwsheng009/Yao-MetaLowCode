@@ -1,5 +1,5 @@
 import { Process } from "@yao/runtime";
-import { getEntityByNameCache, getUUID } from "./sys/lib";
+import { getEntityByNameCache, newUUID } from "./sys/lib";
 
 // yao run scripts.department.treeData
 function treeData() {
@@ -90,7 +90,7 @@ function saveDepartment(formModel, entityName, idstr) {
     // obj.departmentId = id;
     obj.departmentId = idstr;
   } else {
-    obj.departmentId = getUUID;
+    obj.departmentId = newUUID;
   }
   Process(`models.Department.save`, obj);
 }
@@ -111,7 +111,7 @@ function deleteDepartment(departmentId) {
     subItems.push(item); //删除自己
   }
   subItems.forEach((item) => {
-    Process(`models.Department.delete`, item.autoId);
+    Process(`models.Department.delete`, item.departmentId);
   });
   return true;
 }

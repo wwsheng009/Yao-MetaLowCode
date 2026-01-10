@@ -1,3 +1,4 @@
+import { saveCurdRecord } from "@scripts/curd";
 import { getEntityByCodeCache, getEntityByNameCache } from "@scripts/sys/lib";
 import { Process } from "@yao/runtime";
 
@@ -100,7 +101,7 @@ function aviatorValidate(payload) {
 function getEntityCode(query) {}
 
 function triggerSave(id, payload) {
-  Process("scripts.curd.saveRecord", "TriggerConfig", id, payload);
+  saveCurdRecord("TriggerConfig", id, payload);
 }
 function log(payload) {
   // payload = {

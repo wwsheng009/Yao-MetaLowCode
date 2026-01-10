@@ -3,7 +3,8 @@
 // }
 
 import { Process } from "@yao/runtime";
-import { getEntityByNameCache, getUUID } from "./sys/lib";
+import { getEntityByNameCache, newUUID } from "./sys/lib";
+import { saveCurdRecord } from "./curd";
 
 function getFilePath(userId) {
   let idstr = userId;
@@ -48,7 +49,7 @@ function listUser() {
 function getRoleData(roleId) {}
 function deleteUser(userId) {
   // const [entityCode, id] = userId.split("-");
-  if (userId === "0000021-00000000000000000000000000000001") {
+  if (userId === "00000000000000000000000000000001") {
     throw Error(`系统管理员不能删除!`);
   }
   Process("models.User.deletewhere", {
@@ -77,11 +78,12 @@ function saveUser(formModel, entityName, idstr) {
   //   loginPwd: "123456",
   //   avatar: null,
   // };
-  return Process("scripts.curd.saveRecord", entityName, idstr, formModel);
+  return saveCurdRecord(entityName, idstr, formModel);
 }
 
 /**
  * 用户登录
+ * yao run scripts.user.login '::{"user":"admin","password":"admin"}'
  * @param {object} payload
  * @returns
  */
@@ -143,7 +145,7 @@ function login(payload) {
   const jwtClaims = { user_name: user.name };
   //需要注意的是在这里无法生成studio的token,因为这个处理器只接受3个参数，
   //而生成studio的token需要在第4个参数里传入secretkey
-  const jwt = Process("utils.jwt.Make", userData.autoId, jwtClaims, jwtOptions);
+  const jwt = Process("utils.jwt.Make", userData.userId, jwtClaims, jwtOptions);
 
   const userPayload = {
     departmentName: departmentName,
@@ -171,29 +173,10 @@ function updateLoginUser(formModel, idStr) {
   if (formModel.avatar) {
     formModel.avatar = JSON.parse(formModel.avatar);
   }
-  // const [_, id] = idStr.split("-");
-  const [{ autoId }] = Process("models.user.get", {
-    wheres: [
-      {
-        column: "userId",
-        value: idStr,
-      },
-    ],
-  });
-  Process("models.user.update", autoId, formModel);
+  Process("models.user.update", idStr, formModel);
 }
 
 function addUserRole(body) {
-  // body = { id: "21-1", nodeRoleList: [{ name: "test", id: "23-1" }] };
-  // const [entityCode, id] = body.id.split("-");
-  // const [{ autoId }] = Process("models.user.get", {
-  //   wheres: [
-  //     {
-  //       column: "userId",
-  //       value: body.id,
-  //     },
-  //   ],
-  // });
 
   Process("models.ReferenceListMap.deletewhere", {
     wheres: [
@@ -210,7 +193,7 @@ function addUserRole(body) {
   const mapEntity = getEntityByNameCache("ReferenceListMap");
   const data = body.nodeRoleList.reduce((list, role) => {
     list.push({
-      mapId: getUUID(mapEntity.entityCode),
+      mapId: newUUID(mapEntity.entityCode),
       entityName: "User",
       fieldName: "roles",
       objectId: body.id, //用户id
@@ -292,7 +275,7 @@ function getRightMap() {
       r6017: true,
     };
 
-    const codelist = Process("models.sys.entity.get", {
+    const codelist = Process("models.meta.entity.get", {
       select: ["entityCode"],
       limit: 10000,
     });
@@ -504,7 +487,7 @@ function addTeamOrRoleUsers(body) {
   const mapEntity = getEntityByNameCache("ReferenceListMap");
   const data = body.nodeRoleList.reduce((list, user) => {
     list.push({
-      mapId: getUUID(mapEntity.entityCode),
+      mapId: newUUID(mapEntity.entityCode),
       entityName: "User",
       fieldName: "ownerTeam",
       objectId: user.id, //用户id

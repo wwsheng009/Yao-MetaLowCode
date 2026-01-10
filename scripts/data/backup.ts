@@ -9,7 +9,7 @@ import { Process } from "@yao/runtime";
  * @returns 
  */
 function backup(entityName) {
-  let entityList = Process("models.sys.entity.get", {
+  let entityList = Process("models.meta.entity.get", {
     select: ["name"],
     limit: 1000000,
   });

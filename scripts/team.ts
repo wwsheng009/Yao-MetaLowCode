@@ -1,9 +1,10 @@
 import { Process } from "@yao/runtime";
+import { saveCurdRecord } from "./curd";
 
 function listTeam(query) {}
 // 保存团队
 function saveTeam(entityName, id, formModel) {
-  return Process("scripts.curd.saveRecord", entityName, id, formModel);
+  return saveCurdRecord(entityName, id, formModel);
 }
 // 删除团队
 function delTeam(teamId) {

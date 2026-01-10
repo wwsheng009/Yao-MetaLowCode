@@ -1,4 +1,4 @@
-import { Exception, Process } from "@yao/runtime";
+import { Exception, FS, Process } from "@yao/runtime";
 import { getEntityByNameCache, toCamelCase } from "./lib";
 
 /**
@@ -235,7 +235,7 @@ export function loadYaoModel(model) {
   }
 }
 
-export function migrateYaoModel(model,notForce) {
+export function migrateYaoModel(model,notForce?:boolean) {
   // console.log("modelYao", modelYao);
   const modelId = model.name;
   // delete all data
@@ -327,3 +327,12 @@ export function updateIdFieldName(entity) {
   }
   return entity;
 }
+export function saveEntityToYaoModel(entity){
+  const yaoModel = entityToYaoModel(entity);
+  const dslFile = `/models/${entity.name}.mod.yao`;
+
+  let fs = new FS("app");
+  const dslFileContent = JSON.stringify(yaoModel, null, 2);
+  fs.WriteFile(dslFile, dslFileContent);
+}
+

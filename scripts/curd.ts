@@ -1,5 +1,5 @@
 import { Process } from "@yao/runtime";
-import { getEntityByNameCache, getUUID, getCurrentTime, getEntityByCodeCache } from "./sys/lib";
+import { getEntityByNameCache, newUUID, getCurrentTime, getEntityByCodeCache } from "./sys/lib";
 
 function getSelectFields(entity, fieldsList) {
   let fields = [];
@@ -641,20 +641,20 @@ function formUpdateQuery(entityName, idstr) {
 /**
  * create or update a entity record
  *
- * yao run scripts.curd.saveRecord
+ * yao run scripts.curd.saveCurdRecord
  * @param {string} entityName
  * @param {string} idstr
- * @param {object} formModel
+ * @param {object} formValue
  * @returns
  */
-function saveRecord(entityName, idstr, formModel) {
-  if (!formModel || typeof formModel !== "object") {
+export function saveCurdRecord(entityName, idstr, formValue) {
+  if (!formValue || typeof formValue !== "object") {
     throw Error(`更新数据，不正确的数据格式：${entityName}`);
   }
   const mainEntity = getEntity(entityName);
 
   // 查找有哪些明细实体
-  const detailEntitys = Process("models.sys.entity.get", {
+  const detailEntitys = Process("models.meta.entity.get", {
     wheres: [
       {
         column: "mainEntity",
@@ -665,6 +665,9 @@ function saveRecord(entityName, idstr, formModel) {
   const detailEntityMap = {};
   detailEntitys.forEach((e) => {
     detailEntityMap[e.name] = getEntity(e.name);
+    if(! detailEntityMap[e.name] ){
+      console.log('明细实体不存在:',e.name)
+    }
   });
 
   // loadEntityToYao(entityName);
@@ -683,94 +686,68 @@ function saveRecord(entityName, idstr, formModel) {
     const idFieldName = entity.fieldSet.find(
       (f) => f.idFieldFlag == true
     )?.name;
-    // if (line[idField] != null && line[idField].includes("-")) {
-    //   const [_, id] = line[idField].split("-");
-    //   line[idField] = id;
-    // }
-    if (line[idFieldName] != null) {
-      console.log("line[idFieldName]", line[idFieldName]);
-      const [{ autoId }] = Process(`models.${entity.name}.get`, {
-        wheres: [
-          {
-            column: idFieldName,
-            value: line[idFieldName],
-          },
-        ],
-      });
-      line.autoId = autoId;
-    } else {
-      line[idFieldName] = getUUID(entity.entityCode);
+    if (line[idFieldName] == null) {
+      line[idFieldName] = newUUID(entity.entityCode);
     }
     for (const fieldName in line) {
       if (Object.hasOwnProperty.call(line, fieldName)) {
-        const field = line[fieldName];
-
+        const fieldValue = line[fieldName];
+        
+        // 是明细表单，是数组
+        if (Array.isArray(fieldValue) && fieldValue.length && detailEntityMap[fieldName]) {
+            const subTables = [...line[fieldName]]
+            const detailEntity = detailEntityMap[fieldName];
+            subTables.forEach((line) => {
+              line = updateFieldData(detailEntity, line);
+            });
+          detailNeedUpdateMap[fieldName] = subTables;
+          delete line[fieldName];
+        }
         // 更新Option类对象
-        if (field != null) {
-          if (typeof field == "object") {
+        if (fieldValue != null) {
+          if (typeof fieldValue == "object") {
             if (
               fieldsMap[fieldName]?.type === "Option" &&
-              field.value != null
+              fieldValue.value != null
             ) {
-              line[fieldName] = field.value;
+              line[fieldName] = fieldValue.value;
             }
             if (
               fieldsMap[fieldName]?.type === "Reference" &&
-              field.id != null
+              fieldValue.id != null
             ) {
-              line[fieldName] = field.id;
+              line[fieldName] = fieldValue.id;
             }
             if (
               ["Picture", "File"].includes(fieldsMap[fieldName]?.type) &&
-              typeof field == "string"
+              typeof fieldValue == "string"
             ) {
-              line[fieldName] = JSON.parse(field);
+              line[fieldName] = JSON.parse(fieldValue);
             }
           }
         }
-        // 是明细表单，是数组
-        if (
-          Array.isArray(field) &&
-          field.length &&
-          detailEntityMap[fieldName]
-        ) {
-          const detailEntity = detailEntityMap[fieldName];
-          field.forEach((l) => {
-            l = updateFieldData(detailEntity, l);
-          });
-          detailNeedUpdateMap[fieldName] = field;
-        }
+        
       }
     }
     return line;
   }
-  formModel = updateFieldData(mainEntity, formModel);
+  formValue = updateFieldData(mainEntity, formValue);
   const idFieldName = mainEntity.fieldSet.find(
     (f) => f.idFieldFlag == true
   )?.name;
   const createdTime = getCurrentTime();
   if (!idstr) {
-    formModel = { ...formModel, createdOn: createdTime };
+    formValue = { ...formValue, createdOn: createdTime };
     // 生成唯一ID
-    idstr = getUUID(mainEntity.entityCode);
-    formModel[idFieldName] = idstr;
+    idstr = newUUID(mainEntity.entityCode);
+    formValue[idFieldName] = idstr;
     // console.log("mainEntity.name",mainEntity.name)
     // console.log("idstr",formModel)
-    let id = Process(`models.${entityName}.Create`, formModel);
+    let id = Process(`models.${entityName}.Create`, formValue);
     // idstr = `${mainEntity.entityCode}-${id}`;
   } else {
-    // const [_, id] = idstr.split("-");
-    const [{ autoId }] = Process(`models.${entityName}.get`, {
-      wheres: [
-        {
-          column: idFieldName,
-          value: idstr,
-        },
-      ],
-    });
-    formModel = { ...formModel, modifiedOn: createdTime };
-    delete formModel.autoId;
-    Process(`models.${entityName}.update`, autoId, formModel);
+    formValue = { ...formValue, modifiedOn: createdTime };
+    Process(`models.${entityName}.update`, idstr, formValue);
   }
 
   // 在保存主表数据后，再保存子表的数据
@@ -845,7 +822,7 @@ function getEntityCodeList(entityName) {
       },
     ];
   }
-  const entityList = Process("models.sys.entity.get", query);
+  const entityList = Process("models.meta.entity.get", query);
   return entityList.map((entity) => {
     return {
       entityCode: entity.entityCode,
@@ -929,7 +906,7 @@ function queryById(entityId: string, fieldsList?: string) {
 
   // 子表信息
   // 查找有哪些明细实体
-  const detailEntitys = Process("models.sys.entity.get", {
+  const detailEntitys = Process("models.meta.entity.get", {
     wheres: [
       {
         column: "mainEntity",
@@ -983,7 +960,7 @@ function queryEntityFields(
   queryReserved = queryReserved && queryReserved !== "false";
   firstReference = firstReference && firstReference !== "false";
   // entityCode=1066&queryReference=true&queryReserved=true&_=1706357808358
-  // const entity = Process("models.sys.entity.find", entityCode, {
+  // const entity = Process("models.meta.entity.find", entityCode, {
   //   select: ["label", "name"],
   //   withs: {
   //     fieldSet: {

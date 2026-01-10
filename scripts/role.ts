@@ -1,11 +1,12 @@
 import { Process } from "@yao/runtime";
+import { saveCurdRecord } from "./curd";
 
 /**
  * 创建权限时的空白模板数据
  * @returns
  */
 function getBlankRoleData() {
-  const rightEntityList = Process("models.sys.entity.get", {
+  const rightEntityList = Process("models.meta.entity.get", {
     select: ["entityCode", "authorizable", "name", "label"],
     limit: 10000,
   });
@@ -70,7 +71,7 @@ function getRoleData(roleId) {
   if (!role) {
     throw Error(`权限配置:${roleId}不存在`);
   }
-  const rightEntityList = Process("models.sys.entity.get", {
+  const rightEntityList = Process("models.meta.entity.get", {
     select: ["entityCode", "authorizable", "name", "label"],
     limit: 10000,
   });
@@ -87,7 +88,7 @@ function getRoleData(roleId) {
 function saveRole(roleDTO) {
   const { description, disabled, roleId, roleName, rightValueMap } = roleDTO;
 
-  let result = Process("scripts.curd.saveRecord", "Role", roleId, {
+  let result = saveCurdRecord("Role", roleId, {
     description,
     disabled,
     roleName,
