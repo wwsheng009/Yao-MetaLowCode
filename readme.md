@@ -7,6 +7,12 @@
 
 执行以下命令把目录data/entitys下所有的json文件转换成yao 模型数据与默认的表单布局，导航栏配置导入到数据。
 
+然后执行以下命令把目录data下所有的json文件导入到系统中。
+
+```sh
+yao run scripts.studio.convertMLModelToYaoModels
+```
+
 `yao run scripts.systemmanager_import.importData`
 
 

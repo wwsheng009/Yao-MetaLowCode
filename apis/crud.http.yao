@@ -53,7 +53,7 @@
     {
       "path": "saveRecord",
       "method": "post",
-      "process": "scripts.curd.saveRecord",
+      "process": "scripts.curd.saveCurdRecord",
       "in": ["$query.entity", "$query.id", ":payload"],
       "out": {
         "status": 200,
