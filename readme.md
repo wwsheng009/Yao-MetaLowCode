@@ -5,7 +5,7 @@
 
 处理器systemmanager_import是一个工具类，用于初始化系统。
 
-执行以下命令把模型数据与默认的表单布局，导航栏配置导入到数据。
+执行以下命令把目录data/entitys下所有的json文件转换成yao 模型数据与默认的表单布局，导航栏配置导入到数据。
 
 `yao run scripts.systemmanager_import.importData`
 
@@ -14,7 +14,7 @@
 
 把所有metacode模型转换成yao dsl文件并保存到目录models目录。
 
-`yao studio run convert.convertMetaModel`
+`yao run scripts.studio.convertMetaModel`
 
 `yao migrate`
 

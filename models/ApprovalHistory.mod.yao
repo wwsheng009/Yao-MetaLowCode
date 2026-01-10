@@ -6,20 +6,13 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "流程任务id",
       "label": "流程任务id",
       "name": "approvalHistoryId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     },
     {
       "comment": "审批流程id",

@@ -6,20 +6,13 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "布局Id主键",
       "label": "布局Id主键",
       "name": "formLayoutId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     },
     {
       "comment": "创建时间",

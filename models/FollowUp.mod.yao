@@ -6,12 +6,6 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "附件上传",
       "label": "附件上传",
       "name": "attachment",
@@ -44,10 +38,9 @@
       "label": "id主键",
       "name": "followUpId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     },
     {
       "comment": "修改用户",

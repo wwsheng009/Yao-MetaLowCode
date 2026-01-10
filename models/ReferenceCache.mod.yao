@@ -6,29 +6,22 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "缓存Id主键",
       "label": "缓存Id主键",
       "name": "cacheId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     },
     {
       "comment": "实体记录Id",
       "label": "实体记录Id",
       "name": "referenceId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "index": true
+      "primary": true
     },
     {
       "comment": "实体名称值",

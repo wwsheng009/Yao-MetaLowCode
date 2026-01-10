@@ -6,12 +6,6 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "创建用户",
       "label": "创建用户",
       "name": "createdBy",
@@ -86,10 +80,9 @@
       "label": "id主键",
       "name": "todoTaskId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     }
   ]
 }

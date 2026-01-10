@@ -6,20 +6,13 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "部门Id主键",
       "label": "部门Id主键",
       "name": "departmentId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     },
     {
       "comment": "上级部门",

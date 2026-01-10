@@ -6,12 +6,6 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "是否禁用",
       "label": "是否禁用",
       "name": "disabled",
@@ -96,10 +90,9 @@
       "label": "id主键",
       "name": "transformId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     }
   ]
 }

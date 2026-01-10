@@ -1,4 +1,4 @@
-{
+ {
   "name": "User",
   "label": "用户",
   "table": {
@@ -6,20 +6,13 @@
   },
   "columns": [
     {
-      "type": "id",
-      "name": "autoId",
-      "label": "id",
-      "primary": true
-    },
-    {
       "comment": "用户Id主键",
       "label": "用户Id主键",
       "name": "userId",
       "nullable": true,
-      "type": "char",
+      "type": "uuid",
       "length": 40,
-      "unique": true,
-      "index": true
+      "primary": true
     },
     {
       "comment": "创建时间",

@@ -1,0 +1,154 @@
+{
+  "columns": [
+    // {
+    //   "comment": "id",
+    //   "label": "id",
+    //   "name": "id",
+    //   "type": "id"
+    // },
+    {
+      "comment": "实体ID",
+      "label": "实体ID",
+      "name": "entityId",
+      "primary": true,
+      "type": "uuid"
+    },
+    {
+      "comment": "实体编码",
+      "label": "实体编码",
+      "name": "entityCode",
+      "type": "integer",
+      "unique": true
+    },
+    {
+      "comment": "name",
+      "label": "实体名称",
+      "name": "name",
+      "type": "string",
+      "unique": true
+    },
+    {
+      "comment": "显示名称",
+      "label": "显示名称",
+      "name": "label",
+      "type": "string"
+    },
+    {
+      "comment": "名称字段",
+      "label": "名称字段",
+      "name": "nameField",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "comment": "数据库表名",
+      "label": "数据库表名",
+      "name": "physicalName",
+      "type": "string"
+    },
+    {
+      "comment": "是否明细实体",
+      "label": "明细实体",
+      "name": "detailEntityFlag",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "所属主实体",
+      "label": "所属主实体",
+      "name": "mainEntity",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "comment": "是否允许设计表单",
+      "label": "是否允许设计表单",
+      "name": "layoutable",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "是否允许设计列表",
+      "label": "是否允许设计列表",
+      "name": "listable",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "authorizable",
+      "label": "是否开启记录级权限",
+      "name": "authorizable",
+      "type": "boolean",
+      "default": false
+    },{
+      "comment": "是否允许共享记录",
+      "label": "是否允许共享记录",
+      "name": "shareable",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "是否允许分配记录",
+      "label": "是否允许分配记录",
+      "name": "assignable",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "明细实体",
+      "label": "明细实体",
+      "name": "detailEntitySet",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "comment": "是否系统实体",
+      "label": "系统实体",
+      "name": "systemEntityFlag",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "是否内部实体",
+      "label": "内部实体",
+      "name": "internalEntityFlag",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "comment": "激活类型",
+      "label": "激活类型",
+      "name": "activeType",
+      "type": "integer",
+      "default": 1 //1新建，2复制
+    },
+    {
+      "comment": "标签，以逗号分隔",
+      "label": "标签",
+      "name": "tags",
+      "type": "string",
+      "nullable": true
+    },
+    {
+      "comment": "实体ID字段",
+      "label": "实体ID字段",
+      "name": "idFieldName", //ID字段
+      "type": "string"
+    }
+  ],
+  "relations": {
+    "fieldSet": {
+      "label": "字段列表",
+      "type": "hasMany",
+      "key": "entityCode",
+      "model": "meta.field",
+      "foreign": "entityCode",
+      "query": {}
+    }
+  },
+  "name": "meta.entity",
+  "table": {
+    "name": "t_meta_entity"
+  }
+}
+// yao migrate -n meta.entity --reset
