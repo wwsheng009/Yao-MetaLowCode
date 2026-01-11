@@ -117,7 +117,7 @@ function saveLastApprovalFlow(payload) {
     if (!field) {
       [
         {
-          entityCode:entity.entityCode,
+          entityCode: entity.entityCode,
           nameFieldFlag: false,
           physicalName: "approvalConfigId",
           reserved: true,
@@ -131,7 +131,7 @@ function saveLastApprovalFlow(payload) {
           mainDetailFieldFlag: false,
         },
         {
-          entityCode:entity.entityCode,
+          entityCode: entity.entityCode,
           nameFieldFlag: false,
           physicalName: "approvalStatus",
           reserved: true,
@@ -145,7 +145,7 @@ function saveLastApprovalFlow(payload) {
           mainDetailFieldFlag: false,
         },
         {
-          entityCode:entity.entityCode,
+          entityCode: entity.entityCode,
           nameFieldFlag: false,
           physicalName: "lastApprovedBy",
           reserved: true,
@@ -159,7 +159,7 @@ function saveLastApprovalFlow(payload) {
           mainDetailFieldFlag: false,
         },
         {
-          entityCode:entity.entityCode,
+          entityCode: entity.entityCode,
           nameFieldFlag: false,
           physicalName: "lastApprovedOn",
           reserved: true,
@@ -173,7 +173,7 @@ function saveLastApprovalFlow(payload) {
           mainDetailFieldFlag: false,
         },
         {
-          entityCode:entity.entityCode,
+          entityCode: entity.entityCode,
           nameFieldFlag: false,
           physicalName: "lastApprovalRemark",
           reserved: true,
@@ -187,7 +187,7 @@ function saveLastApprovalFlow(payload) {
           mainDetailFieldFlag: false,
         },
       ].forEach((f) => {
-        Process("scripts.systemmanager.addField", f,entity.name, true);
+        Process("scripts.systemmanager.addField", f, entity.name, true);
       });
     }
   }
@@ -257,7 +257,6 @@ function getAllApprovalConfigEntity(data) {}
  */
 function listQuery(payload) {
   return Process("scripts.curd.listQuery", payload);
-
 }
 function getEntityApprovalTaskList(entity, type) {}
 
@@ -277,16 +276,14 @@ function configList(payload) {
   return Process("scripts.curd.listQuery", payload);
 }
 
-
-function getHisActivityIns(entityId){
-
-  return {}
+function getHisActivityIns(entityId) {
+  return {};
 }
 
-function recordApprovalState(recordId){
-  return {}
+function recordApprovalState(recordId) {
+  return {};
 }
 
-function createApprovalSystemFields(entityName){
-  return {}
+function createApprovalSystemFields(entityName) {
+  return {};
 }

@@ -1,8 +1,19 @@
 import { FS, Process, http } from "@yao/runtime";
-import { loadEntityToYao, updateIdFieldName, completeEntity, entityToYaoModel, loadYaoModel, migrateYaoModel } from "./sys/entity";
-import { getEntitySingleFieldByname, getEntityByName, newUUID, entityCodeInput } from "./sys/lib";
+import {
+  loadEntityToYao,
+  updateIdFieldName,
+  completeEntity,
+  entityToYaoModel,
+  loadYaoModel,
+  migrateYaoModel,
+} from "./sys/entity";
+import {
+  getEntitySingleFieldByname,
+  getEntityByName,
+  newUUID,
+  entityCodeInput,
+} from "./sys/lib";
 import { saveLayoutConfig } from "./layout";
-
 
 function getCookie() {
   const cookie = Process("utils.env.Get", "METALOWCODE_COOKIE");
@@ -43,7 +54,7 @@ function download(entityName) {
     });
   } else {
     const url = `${getWebSite()}/systemManager/getEntitySet?_=${currentTimestamp}`;
-    console.log()
+    console.log();
     const response = http.Get(
       url,
       {},
@@ -192,7 +203,7 @@ function download(entityName) {
         },
       ];
     }
-    console.log("fieldSet",fieldSet)
+    console.log("fieldSet", fieldSet);
     Object.assign(entity, { fieldSet: fieldSet });
 
     if (entity.entityCode < 1001) {
@@ -305,7 +316,7 @@ function getFieldList(entityName) {
  * @param {string|null} entityName
  */
 function downloadOptionFields(entityName) {
-  console.log("downloadOptionFields:" + entityName)
+  console.log("downloadOptionFields:" + entityName);
   var currentTimestamp = new Date().getTime();
 
   const response = http.Get(
@@ -551,14 +562,13 @@ function checkRespone(response) {
  *
  * 注意：此操作不会创建yao dsl文件。
  *
- * yao run scripts.systemmanager_import.importEntity
  *
  * yao run scripts.systemmanager_import.importEntity 'User'
  *
  * yao run scripts.systemmanager_import.importEntity 'TriggerConfig'
  * @param {string|null} entityName
  */
-function importEntity(entityName) {
+function importEntity(entityName, savelModel?: boolean) {
   let fileList = [];
   if (entityName) {
     fileList.push(`/entitys/${entityName}.json`);
@@ -572,7 +582,6 @@ function importEntity(entityName) {
       continue;
     }
     let entityContent = Process("fs.system.ReadFile", f);
-    console.log("entityFile>>>>>>>>>", f);
     entityContent = JSON.parse(entityContent);
 
     let fieldSet = [...entityContent.fieldSet];
@@ -607,18 +616,18 @@ function importEntity(entityName) {
       });
     }
 
-    let entityCode = entityCodeInput(entity.entityCode)
+    let entityCode = entityCodeInput(entity.entityCode);
     try {
       entity.entityId = newUUID("1");
       const idStr = Process("models.meta.entity.create", entity);
-    if (!idStr) {
-      throw Error(`创建失败:${entity.name}`);
-    }
+      if (!idStr) {
+        throw Error(`创建失败:${entity.name}`);
+      }
     } catch (error) {
-      console.log(`创建失败:${entity.name}`)
-      throw error
+      console.log(`创建失败:${entity.name}`);
+      throw error;
     }
-    
+
     //防止存在同名的字段列表
     Process("models.meta.field.deletewhere", {
       wheres: [
@@ -634,6 +643,7 @@ function importEntity(entityName) {
         field.reserved = true;
       }
     });
+
     var res = Process("models.meta.field.EachSave", fieldSet, {
       entityCode: entityCode,
     });
@@ -641,19 +651,21 @@ function importEntity(entityName) {
     if (res?.code && res.message) {
       throw Error(`${entity.name}>>|Exception:${res?.code}|${res.message}`);
     }
-
+    // continue;
+    if (!savelModel) {
+      continue;
+    }
     const yaoModel = entityToYaoModel(entity);
     const dslFile = `/models/${entity.name}.mod.yao`;
     let fs = new FS("app");
     const dslFileContent = JSON.stringify(yaoModel, null, 2);
     fs.WriteFile(dslFile, dslFileContent);
     loadYaoModel(yaoModel);
-    migrateYaoModel(yaoModel,true);
+    migrateYaoModel(yaoModel, true);
     index++;
     console.log(`${index}/${fileList.length}:${entity.name} imported`);
   }
 }
-
 
 /**
  * yao run scripts.systemmanager_import.downloadFormLayout
@@ -700,10 +712,9 @@ function getFormLayout(entityName) {
   );
   try {
     checkRespone(response);
-
   } catch (err) {
-    console.log(`错误：` + err.code + err.message)
-    return
+    console.log(`错误：` + err.code + err.message);
+    return;
   }
   const layoutData = response.data.data;
   // console.log(layoutData);
@@ -718,6 +729,10 @@ function getFormLayout(entityName) {
       },
     ],
   });
+  //check layoutData.layoutJson is string parse to json
+  if (typeof layoutData.layoutJson === "string") {
+    layoutData.layoutJson = JSON.parse(layoutData.layoutJson);
+  }
   const layoutForm = {
     layoutName: layoutData.layoutName,
     entityCode: entity.entityCode,
@@ -872,10 +887,9 @@ function getLayoutList(entityName) {
   );
   try {
     checkRespone(response);
-
   } catch (err) {
-    console.log("错误：",err.coce,err.message)
-    return null
+    console.log("错误：", err.coce, err.message);
+    return null;
   }
 
   let data = response.data.data;

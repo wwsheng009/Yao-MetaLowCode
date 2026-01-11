@@ -1,0 +1,299 @@
+[
+  {
+    "type": "xhr",
+    "time": "2026-01-10T13:20:20.081Z",
+    "url": "/systemManager/addField?entity=Ceshi",
+    "method": "POST",
+    "status": 200,
+    "duration": 88,
+    "requestHeaders": {
+      "Accept": "application/json, text/plain, */*",
+      "Content-Type": "application/json",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAxIiwic2lkIjoiZTQwOWYwMTctMWIyNS00OTAzLTkzNDgtYWFkMGJlMzI3MmQ5IiwiZGF0YSI6e30sImlzcyI6InhpYW9uZzowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInN1YiI6IlVzZXIgVG9rZW4iLCJhdWQiOlsiWWFvIFByb2Nlc3MgdXRpbHMuand0Lk1ha2UiXSwiZXhwIjoxNzY4MDYzOTE5LCJuYmYiOjE3NjgwMzUxMTksImlhdCI6MTc2ODAzNTExOSwianRpIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEifQ.XR5BY5CX7x4g6dKSsW8zLPjKYMKTQAaxep-KlXrwjY0",
+      "ruId": "undefined"
+    },
+    "requestBody": {
+      "name": "u1",
+      "label": "u1",
+      "type": "Integer",
+      "defaultMemberOfListFlag": true,
+      "nullable": false,
+      "creatable": true,
+      "updatable": true,
+      "fieldViewModel": {
+        "minValue": -999999999,
+        "maxValue": 999999999,
+        "validators": []
+      }
+    },
+    "responseHeaders": {
+      "connection": "keep-alive",
+      "content-encoding": "gzip",
+      "content-type": "application/json",
+      "date": "Sat, 10 Jan 2026 13:20:20 GMT",
+      "keep-alive": "timeout=60",
+      "transfer-encoding": "chunked",
+      "vary": "accept-encoding"
+    },
+    "responseBody": {
+      "code": 200,
+      "error": null,
+      "message": "success",
+      "data": {
+        "fieldId": null,
+        "entityCode": 1004,
+        "name": "u1",
+        "label": "u1",
+        "physicalName": "c_u1",
+        "owner": {
+          "name": "Ceshi",
+          "label": "测试"
+        },
+        "type": "Integer",
+        "description": null,
+        "displayOrder": 0,
+        "nullable": false,
+        "creatable": true,
+        "updatable": true,
+        "idFieldFlag": false,
+        "nameFieldFlag": false,
+        "mainDetailFieldFlag": false,
+        "defaultMemberOfListFlag": true,
+        "referTo": null,
+        "fieldViewModel": {
+          "maxValue": 999999999,
+          "minValue": -999999999,
+          "validators": []
+        },
+        "referenceSetting": null
+      }
+    },
+    "id": 284
+  },
+  {
+    "type": "xhr",
+    "time": "2026-01-10T13:20:20.109Z",
+    "url": "/systemManager/getFieldListOfEntity?entity=Ceshi&_=1768051220086",
+    "method": "GET",
+    "status": 200,
+    "duration": 23,
+    "requestHeaders": {
+      "Accept": "application/json, text/plain, */*",
+      "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAxIiwic2lkIjoiZTQwOWYwMTctMWIyNS00OTAzLTkzNDgtYWFkMGJlMzI3MmQ5IiwiZGF0YSI6e30sImlzcyI6InhpYW9uZzowMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsInN1YiI6IlVzZXIgVG9rZW4iLCJhdWQiOlsiWWFvIFByb2Nlc3MgdXRpbHMuand0Lk1ha2UiXSwiZXhwIjoxNzY4MDYzOTE5LCJuYmYiOjE3NjgwMzUxMTksImlhdCI6MTc2ODAzNTExOSwianRpIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDEifQ.XR5BY5CX7x4g6dKSsW8zLPjKYMKTQAaxep-KlXrwjY0",
+      "ruId": "undefined"
+    },
+    "requestBody": null,
+    "responseHeaders": {
+      "connection": "keep-alive",
+      "content-encoding": "gzip",
+      "content-type": "application/json",
+      "date": "Sat, 10 Jan 2026 13:20:20 GMT",
+      "keep-alive": "timeout=60",
+      "transfer-encoding": "chunked",
+      "vary": "accept-encoding"
+    },
+    "responseBody": {
+      "code": 200,
+      "error": null,
+      "message": "success",
+      "data": [
+        {
+          "nameFieldFlag": false,
+          "physicalName": "ceshiId",
+          "reserved": true,
+          "referTo": null,
+          "name": "ceshiId",
+          "updatable": false,
+          "idFieldFlag": true,
+          "label": "id主键",
+          "creatable": false,
+          "type": "PrimaryKey",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "createdOn",
+          "reserved": true,
+          "referTo": null,
+          "name": "createdOn",
+          "updatable": false,
+          "idFieldFlag": false,
+          "label": "创建时间",
+          "creatable": false,
+          "type": "DateTime",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "createdBy",
+          "reserved": true,
+          "referTo": "User,",
+          "name": "createdBy",
+          "updatable": false,
+          "idFieldFlag": false,
+          "label": "创建用户",
+          "creatable": false,
+          "type": "Reference",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "modifiedOn",
+          "reserved": true,
+          "referTo": null,
+          "name": "modifiedOn",
+          "updatable": false,
+          "idFieldFlag": false,
+          "label": "最近修改时间",
+          "creatable": false,
+          "type": "DateTime",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "modifiedBy",
+          "reserved": true,
+          "referTo": "User,",
+          "name": "modifiedBy",
+          "updatable": false,
+          "idFieldFlag": false,
+          "label": "修改用户",
+          "creatable": false,
+          "type": "Reference",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "ownerUser",
+          "reserved": true,
+          "referTo": "User,",
+          "name": "ownerUser",
+          "updatable": false,
+          "idFieldFlag": false,
+          "label": "所属用户",
+          "creatable": false,
+          "type": "Reference",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "ownerDepartment",
+          "reserved": true,
+          "referTo": "Department,",
+          "name": "ownerDepartment",
+          "updatable": false,
+          "idFieldFlag": false,
+          "label": "所属部门",
+          "creatable": false,
+          "type": "Reference",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_wenjian",
+          "reserved": false,
+          "referTo": null,
+          "name": "wenjian",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "文件",
+          "creatable": true,
+          "type": "File",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_xinziduan",
+          "reserved": false,
+          "referTo": null,
+          "name": "xinziduan",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "新字段",
+          "creatable": true,
+          "type": "Text",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_ceshiziduan2",
+          "reserved": false,
+          "referTo": null,
+          "name": "ceshiziduan2",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "测试字段2",
+          "creatable": true,
+          "type": "Text",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_ziduan3",
+          "reserved": false,
+          "referTo": null,
+          "name": "ziduan3",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "字段3",
+          "creatable": true,
+          "type": "Boolean",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_xxx",
+          "reserved": false,
+          "referTo": null,
+          "name": "xxx",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "xxx",
+          "creatable": true,
+          "type": "Tag",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_jinyong",
+          "reserved": false,
+          "referTo": null,
+          "name": "jinyong",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "禁用",
+          "creatable": true,
+          "type": "Boolean",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_b2",
+          "reserved": false,
+          "referTo": null,
+          "name": "b2",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "b2",
+          "creatable": true,
+          "type": "Boolean",
+          "mainDetailFieldFlag": false
+        },
+        {
+          "nameFieldFlag": false,
+          "physicalName": "c_u1",
+          "reserved": false,
+          "referTo": null,
+          "name": "u1",
+          "updatable": true,
+          "idFieldFlag": false,
+          "label": "u1",
+          "creatable": true,
+          "type": "Integer",
+          "mainDetailFieldFlag": false
+        }
+      ]
+    },
+    "id": 285
+  }
+]

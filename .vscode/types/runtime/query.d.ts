@@ -175,7 +175,7 @@ export interface Table {
  */
 export interface QueryDSL {
   /** List of fields to select */
-  select: (Expression | string)[];
+  select?: (Expression | string)[];
   /** Main table or model to select from */
   from?: Table | string;
   /** A list of where clauses */
@@ -222,7 +222,7 @@ export declare class Query {
    * Create a new Query instance
    * @param connector - The connector ID to use for the query
    */
-  constructor(connector: string);
+  constructor(connector?: string);
 
   /**
    * Execute a SELECT query with provided QueryDSL.
